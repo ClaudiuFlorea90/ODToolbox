@@ -1112,7 +1112,7 @@ Public Class VirusScanForm
         Panel_ViewScanReport.Hide()
     End Sub
 
-    Private Sub TimerSlideShow_Tick(sender As Object, e As EventArgs) Handles TimerSlideShow.Tick
+    Private Sub TimerSlideShow_Tick(sender As Object, e As EventArgs)
 
 
 
@@ -1120,7 +1120,7 @@ Public Class VirusScanForm
 
     Sub SlideShow()
 
-        Dim DummyLocation As New Point(131, 53)
+        Dim DummyLocation As New Point(88, 60)
 
 
         Dim Time As Integer = 0
@@ -1175,7 +1175,7 @@ Public Class VirusScanForm
 
                 If Time > 25 Then
 
-                        Time = 0
+                    Time = 0
 
                     PanelLastScan.Hide()
                     Panel12.Hide()
@@ -1183,7 +1183,7 @@ Public Class VirusScanForm
                     PanelProtection.Show()
                 End If
 
-                End If
+            End If
 
 
 
@@ -1196,7 +1196,9 @@ Public Class VirusScanForm
 
     End Sub
 
+    Private Sub Panel_Scanner_Paint(sender As Object, e As PaintEventArgs) Handles Panel_Scanner.Paint
 
+    End Sub
 End Class
 
 

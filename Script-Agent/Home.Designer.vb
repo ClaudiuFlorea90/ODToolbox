@@ -24,8 +24,8 @@ Partial Class Home
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Home))
-        Dim ChartArea12 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Series12 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.Lbl_CPU = New System.Windows.Forms.Label()
         Me.Lbl_RAM = New System.Windows.Forms.Label()
         Me.Lbl_Disk = New System.Windows.Forms.Label()
@@ -89,6 +89,7 @@ Partial Class Home
         Me.Label47 = New System.Windows.Forms.Label()
         Me.Label49 = New System.Windows.Forms.Label()
         Me.Pnl_User = New System.Windows.Forms.Panel()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.PictureBox34 = New System.Windows.Forms.PictureBox()
         Me.PictureBox38 = New System.Windows.Forms.PictureBox()
@@ -189,7 +190,6 @@ Partial Class Home
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Timer_ExpandLiveStatus = New System.Windows.Forms.Timer(Me.components)
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.Pnl_Windows.SuspendLayout()
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -211,6 +211,7 @@ Partial Class Home
         CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox26, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Pnl_User.SuspendLayout()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel6.SuspendLayout()
         CType(Me.PictureBox34, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox38, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -225,7 +226,6 @@ Partial Class Home
         CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Lbl_CPU
@@ -636,16 +636,16 @@ Partial Class Home
         Me.Chart_Network.BorderlineColor = System.Drawing.Color.Crimson
         Me.Chart_Network.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid
         Me.Chart_Network.BorderlineWidth = 2
-        ChartArea12.Name = "ChartArea1"
-        Me.Chart_Network.ChartAreas.Add(ChartArea12)
+        ChartArea1.Name = "ChartArea1"
+        Me.Chart_Network.ChartAreas.Add(ChartArea1)
         Me.Chart_Network.Location = New System.Drawing.Point(296, 59)
         Me.Chart_Network.Margin = New System.Windows.Forms.Padding(2)
         Me.Chart_Network.Name = "Chart_Network"
         Me.Chart_Network.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate
-        Series12.ChartArea = "ChartArea1"
-        Series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline
-        Series12.Name = "Series1"
-        Me.Chart_Network.Series.Add(Series12)
+        Series1.ChartArea = "ChartArea1"
+        Series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline
+        Series1.Name = "Series1"
+        Me.Chart_Network.Series.Add(Series1)
         Me.Chart_Network.Size = New System.Drawing.Size(286, 192)
         Me.Chart_Network.TabIndex = 24
         Me.Chart_Network.Text = "Chart1"
@@ -968,6 +968,15 @@ Partial Class Home
         Me.Pnl_User.Name = "Pnl_User"
         Me.Pnl_User.Size = New System.Drawing.Size(309, 39)
         Me.Pnl_User.TabIndex = 20
+        '
+        'PictureBox6
+        '
+        Me.PictureBox6.Location = New System.Drawing.Point(33, 5)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(27, 29)
+        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox6.TabIndex = 22
+        Me.PictureBox6.TabStop = False
         '
         'Panel6
         '
@@ -2231,21 +2240,12 @@ Partial Class Home
         '
         Me.Timer_ExpandLiveStatus.Interval = 10
         '
-        'PictureBox6
-        '
-        Me.PictureBox6.Location = New System.Drawing.Point(33, 5)
-        Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(27, 29)
-        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox6.TabIndex = 22
-        Me.PictureBox6.TabStop = False
-        '
         'Home
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(686, 663)
+        Me.ClientSize = New System.Drawing.Size(1243, 663)
         Me.Controls.Add(Me.Label25)
         Me.Controls.Add(Me.PictureBox11)
         Me.Controls.Add(Me.PictureBox2)
@@ -2289,6 +2289,7 @@ Partial Class Home
         CType(Me.PictureBox26, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Pnl_User.ResumeLayout(False)
         Me.Pnl_User.PerformLayout()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel6.ResumeLayout(False)
         Me.Panel6.PerformLayout()
         CType(Me.PictureBox34, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2309,7 +2310,6 @@ Partial Class Home
         CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

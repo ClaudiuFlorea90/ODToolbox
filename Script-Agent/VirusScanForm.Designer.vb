@@ -24,18 +24,18 @@ Partial Class VirusScanForm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(VirusScanForm))
-        Dim DataGridViewCellStyle121 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle122 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle123 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle124 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle125 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle126 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle127 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle128 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle129 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle130 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle131 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle132 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ImageList_ScanSteps = New System.Windows.Forms.ImageList(Me.components)
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -130,25 +130,27 @@ Partial Class VirusScanForm
         Me.Label67 = New System.Windows.Forms.Label()
         Me.Label66 = New System.Windows.Forms.Label()
         Me.Panel_Scanner = New System.Windows.Forms.Panel()
-        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
         Me.PanelLastScan = New System.Windows.Forms.Panel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label72 = New System.Windows.Forms.Label()
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.Label70 = New System.Windows.Forms.Label()
         Me.Label71 = New System.Windows.Forms.Label()
-        Me.Panel12 = New System.Windows.Forms.Panel()
-        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
-        Me.Label89 = New System.Windows.Forms.Label()
-        Me.IconButton3 = New FontAwesome.Sharp.IconButton()
-        Me.Label83 = New System.Windows.Forms.Label()
-        Me.Label76 = New System.Windows.Forms.Label()
         Me.PanelProtection = New System.Windows.Forms.Panel()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.Label95 = New System.Windows.Forms.Label()
         Me.Label96 = New System.Windows.Forms.Label()
         Me.Label97 = New System.Windows.Forms.Label()
         Me.IconButton2 = New FontAwesome.Sharp.IconButton()
+        Me.PanelVirusScanSlideshow = New System.Windows.Forms.Panel()
+        Me.PictureBox10 = New System.Windows.Forms.PictureBox()
+        Me.Label100 = New System.Windows.Forms.Label()
+        Me.Panel12 = New System.Windows.Forms.Panel()
+        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
+        Me.Label89 = New System.Windows.Forms.Label()
+        Me.IconButton3 = New FontAwesome.Sharp.IconButton()
+        Me.Label83 = New System.Windows.Forms.Label()
+        Me.Label76 = New System.Windows.Forms.Label()
         Me.Panel_Expand_Scanner = New System.Windows.Forms.Panel()
         Me.Label73 = New System.Windows.Forms.Label()
         Me.Label53 = New System.Windows.Forms.Label()
@@ -182,9 +184,7 @@ Partial Class VirusScanForm
         Me.Btn_StartScan = New System.Windows.Forms.Button()
         Me.Label31 = New System.Windows.Forms.Label()
         Me.Label54 = New System.Windows.Forms.Label()
-        Me.PanelVirusScanSlideshow = New System.Windows.Forms.Panel()
-        Me.PictureBox10 = New System.Windows.Forms.PictureBox()
-        Me.Label100 = New System.Windows.Forms.Label()
+        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
         Me.Timer_Expand_History = New System.Windows.Forms.Timer(Me.components)
         Me.Timer_Expand_ScanPnl = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
@@ -245,13 +245,14 @@ Partial Class VirusScanForm
         Me.Label75 = New System.Windows.Forms.Label()
         Me.Label40 = New System.Windows.Forms.Label()
         Me.Label39 = New System.Windows.Forms.Label()
-        Me.TimerSlideShow = New System.Windows.Forms.Timer(Me.components)
         Me.Toggle5 = New Script_Agent.Toggle()
         Me.Toggle4 = New Script_Agent.Toggle()
         Me.Toggle1 = New Script_Agent.Toggle()
         Me.Toggle3 = New Script_Agent.Toggle()
         Me.Toggle6 = New Script_Agent.Toggle()
         Me.Toggle2 = New Script_Agent.Toggle()
+        Me.ProgressBarVirusScan = New System.Windows.Forms.ProgressBar()
+        Me.Label98 = New System.Windows.Forms.Label()
         Me.Panel_Scheduler.SuspendLayout()
         Me.Panel9.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -265,19 +266,19 @@ Partial Class VirusScanForm
         Me.Panel_Protection.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel_Scanner.SuspendLayout()
-        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelLastScan.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel12.SuspendLayout()
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelProtection.SuspendLayout()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelVirusScanSlideshow.SuspendLayout()
+        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel12.SuspendLayout()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel_Expand_Scanner.SuspendLayout()
         CType(Me.PicBox_ScanPng, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel6.SuspendLayout()
         Me.Panel7.SuspendLayout()
-        Me.PanelVirusScanSlideshow.SuspendLayout()
-        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Pnl_ScanCompleted.SuspendLayout()
         Me.Panel8.SuspendLayout()
         Me.Pnl_IsScanning.SuspendLayout()
@@ -569,43 +570,43 @@ Partial Class VirusScanForm
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle121.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle121.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        DataGridViewCellStyle121.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle121.ForeColor = System.Drawing.SystemColors.Menu
-        DataGridViewCellStyle121.SelectionBackColor = System.Drawing.Color.IndianRed
-        DataGridViewCellStyle121.SelectionForeColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle121.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle121
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Menu
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.IndianRed
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeight = 35
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Edit, Me.Delete})
-        DataGridViewCellStyle122.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle122.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        DataGridViewCellStyle122.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle122.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
-        DataGridViewCellStyle122.SelectionBackColor = System.Drawing.Color.DarkOrange
-        DataGridViewCellStyle122.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle122.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle122
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkOrange
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView1.EnableHeadersVisualStyles = False
         Me.DataGridView1.GridColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
         Me.DataGridView1.Location = New System.Drawing.Point(1, 250)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle123.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle123.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        DataGridViewCellStyle123.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle123.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle123.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle123.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle123.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle123
-        DataGridViewCellStyle124.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        DataGridViewCellStyle124.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle124.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle124
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle4
         Me.DataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.DataGridView1.Size = New System.Drawing.Size(662, 179)
         Me.DataGridView1.TabIndex = 2
@@ -689,7 +690,7 @@ Partial Class VirusScanForm
         Me.Panel_Scheduler_Edit.Controls.Add(Me.Label42)
         Me.Panel_Scheduler_Edit.Controls.Add(Me.ComboBox4)
         Me.Panel_Scheduler_Edit.Controls.Add(Me.ComboBox5)
-        Me.Panel_Scheduler_Edit.Location = New System.Drawing.Point(1387, 647)
+        Me.Panel_Scheduler_Edit.Location = New System.Drawing.Point(1386, 413)
         Me.Panel_Scheduler_Edit.Name = "Panel_Scheduler_Edit"
         Me.Panel_Scheduler_Edit.Size = New System.Drawing.Size(668, 417)
         Me.Panel_Scheduler_Edit.TabIndex = 8
@@ -868,43 +869,43 @@ Partial Class VirusScanForm
         Me.DataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.DataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle125.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle125.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        DataGridViewCellStyle125.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle125.ForeColor = System.Drawing.SystemColors.Menu
-        DataGridViewCellStyle125.SelectionBackColor = System.Drawing.Color.IndianRed
-        DataGridViewCellStyle125.SelectionForeColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle125.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle125
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Menu
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.IndianRed
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.DataGridView2.ColumnHeadersHeight = 35
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.Column5, Me.Column4, Me.DataGridViewImageColumn3})
-        DataGridViewCellStyle126.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle126.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        DataGridViewCellStyle126.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle126.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
-        DataGridViewCellStyle126.SelectionBackColor = System.Drawing.Color.DarkOrange
-        DataGridViewCellStyle126.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle126.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView2.DefaultCellStyle = DataGridViewCellStyle126
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.DarkOrange
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView2.DefaultCellStyle = DataGridViewCellStyle6
         Me.DataGridView2.EnableHeadersVisualStyles = False
         Me.DataGridView2.GridColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
         Me.DataGridView2.Location = New System.Drawing.Point(3, 41)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.ReadOnly = True
         Me.DataGridView2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle127.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle127.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        DataGridViewCellStyle127.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle127.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle127.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle127.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle127.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView2.RowHeadersDefaultCellStyle = DataGridViewCellStyle127
-        DataGridViewCellStyle128.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        DataGridViewCellStyle128.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle128.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.DataGridView2.RowsDefaultCellStyle = DataGridViewCellStyle128
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView2.RowHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.DataGridView2.RowsDefaultCellStyle = DataGridViewCellStyle8
         Me.DataGridView2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.DataGridView2.Size = New System.Drawing.Size(653, 179)
         Me.DataGridView2.TabIndex = 2
@@ -969,7 +970,7 @@ Partial Class VirusScanForm
         Me.Pnl_VirusFound.Controls.Add(Me.Panel2)
         Me.Pnl_VirusFound.Controls.Add(Me.Label43)
         Me.Pnl_VirusFound.Controls.Add(Me.Label44)
-        Me.Pnl_VirusFound.Location = New System.Drawing.Point(1501, 554)
+        Me.Pnl_VirusFound.Location = New System.Drawing.Point(705, 516)
         Me.Pnl_VirusFound.Name = "Pnl_VirusFound"
         Me.Pnl_VirusFound.Size = New System.Drawing.Size(641, 287)
         Me.Pnl_VirusFound.TabIndex = 10
@@ -1132,43 +1133,43 @@ Partial Class VirusScanForm
         Me.DataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridView3.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.DataGridView3.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle129.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle129.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        DataGridViewCellStyle129.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle129.ForeColor = System.Drawing.SystemColors.Menu
-        DataGridViewCellStyle129.SelectionBackColor = System.Drawing.Color.IndianRed
-        DataGridViewCellStyle129.SelectionForeColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle129.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView3.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle129
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.Menu
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.IndianRed
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView3.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle9
         Me.DataGridView3.ColumnHeadersHeight = 35
         Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewImageColumn4})
-        DataGridViewCellStyle130.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle130.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        DataGridViewCellStyle130.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle130.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
-        DataGridViewCellStyle130.SelectionBackColor = System.Drawing.Color.DarkOrange
-        DataGridViewCellStyle130.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle130.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView3.DefaultCellStyle = DataGridViewCellStyle130
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.DarkOrange
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView3.DefaultCellStyle = DataGridViewCellStyle10
         Me.DataGridView3.EnableHeadersVisualStyles = False
         Me.DataGridView3.GridColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
         Me.DataGridView3.Location = New System.Drawing.Point(3, 264)
         Me.DataGridView3.Name = "DataGridView3"
         Me.DataGridView3.ReadOnly = True
         Me.DataGridView3.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle131.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle131.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        DataGridViewCellStyle131.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle131.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle131.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle131.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle131.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView3.RowHeadersDefaultCellStyle = DataGridViewCellStyle131
-        DataGridViewCellStyle132.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        DataGridViewCellStyle132.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle132.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.DataGridView3.RowsDefaultCellStyle = DataGridViewCellStyle132
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView3.RowHeadersDefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.DataGridView3.RowsDefaultCellStyle = DataGridViewCellStyle12
         Me.DataGridView3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.DataGridView3.Size = New System.Drawing.Size(646, 310)
         Me.DataGridView3.TabIndex = 2
@@ -1446,24 +1447,13 @@ Partial Class VirusScanForm
         Me.Panel_Scanner.Controls.Add(Me.PanelLastScan)
         Me.Panel_Scanner.Controls.Add(Me.Panel_history)
         Me.Panel_Scanner.Controls.Add(Me.PanelProtection)
-        Me.Panel_Scanner.Controls.Add(Me.PanelVirusScanSlideshow)
-        Me.Panel_Scanner.Controls.Add(Me.Panel12)
         Me.Panel_Scanner.Controls.Add(Me.Panel_Protection)
+        Me.Panel_Scanner.Controls.Add(Me.Panel12)
         Me.Panel_Scanner.Controls.Add(Me.Panel_Expand_Scanner)
-        Me.Panel_Scanner.Location = New System.Drawing.Point(20, 40)
+        Me.Panel_Scanner.Location = New System.Drawing.Point(2, 40)
         Me.Panel_Scanner.Name = "Panel_Scanner"
         Me.Panel_Scanner.Size = New System.Drawing.Size(669, 634)
         Me.Panel_Scanner.TabIndex = 17
-        '
-        'PictureBox11
-        '
-        Me.PictureBox11.Image = Global.Script_Agent.My.Resources.Resources.ezgif_2_bb09e2ffee
-        Me.PictureBox11.Location = New System.Drawing.Point(149, 9)
-        Me.PictureBox11.Name = "PictureBox11"
-        Me.PictureBox11.Size = New System.Drawing.Size(399, 131)
-        Me.PictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox11.TabIndex = 18
-        Me.PictureBox11.TabStop = False
         '
         'PanelLastScan
         '
@@ -1472,7 +1462,7 @@ Partial Class VirusScanForm
         Me.PanelLastScan.Controls.Add(Me.IconButton1)
         Me.PanelLastScan.Controls.Add(Me.Label70)
         Me.PanelLastScan.Controls.Add(Me.Label71)
-        Me.PanelLastScan.Location = New System.Drawing.Point(638, 74)
+        Me.PanelLastScan.Location = New System.Drawing.Point(638, 159)
         Me.PanelLastScan.Name = "PanelLastScan"
         Me.PanelLastScan.Size = New System.Drawing.Size(471, 143)
         Me.PanelLastScan.TabIndex = 22
@@ -1480,7 +1470,7 @@ Partial Class VirusScanForm
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.Script_Agent.My.Resources.Resources.tracking
-        Me.PictureBox2.Location = New System.Drawing.Point(7, 8)
+        Me.PictureBox2.Location = New System.Drawing.Point(80, 10)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(118, 122)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -1492,7 +1482,7 @@ Partial Class VirusScanForm
         Me.Label72.AutoSize = True
         Me.Label72.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!)
         Me.Label72.ForeColor = System.Drawing.Color.LightGray
-        Me.Label72.Location = New System.Drawing.Point(132, 57)
+        Me.Label72.Location = New System.Drawing.Point(208, 66)
         Me.Label72.Name = "Label72"
         Me.Label72.Size = New System.Drawing.Size(91, 17)
         Me.Label72.TabIndex = 5
@@ -1504,7 +1494,7 @@ Partial Class VirusScanForm
         Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.None
         Me.IconButton1.IconColor = System.Drawing.Color.Black
         Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton1.Location = New System.Drawing.Point(136, 80)
+        Me.IconButton1.Location = New System.Drawing.Point(212, 89)
         Me.IconButton1.Name = "IconButton1"
         Me.IconButton1.Size = New System.Drawing.Size(75, 23)
         Me.IconButton1.TabIndex = 17
@@ -1516,7 +1506,7 @@ Partial Class VirusScanForm
         Me.Label70.AutoSize = True
         Me.Label70.Font = New System.Drawing.Font("Microsoft PhagsPa", 24.0!, System.Drawing.FontStyle.Bold)
         Me.Label70.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.Label70.Location = New System.Drawing.Point(246, 18)
+        Me.Label70.Location = New System.Drawing.Point(320, 26)
         Me.Label70.Name = "Label70"
         Me.Label70.Size = New System.Drawing.Size(74, 42)
         Me.Label70.TabIndex = 5
@@ -1527,79 +1517,11 @@ Partial Class VirusScanForm
         Me.Label71.AutoSize = True
         Me.Label71.Font = New System.Drawing.Font("Microsoft PhagsPa", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label71.ForeColor = System.Drawing.Color.LightGray
-        Me.Label71.Location = New System.Drawing.Point(140, 31)
+        Me.Label71.Location = New System.Drawing.Point(208, 30)
         Me.Label71.Name = "Label71"
         Me.Label71.Size = New System.Drawing.Size(115, 21)
         Me.Label71.TabIndex = 5
         Me.Label71.Text = "Your last scan"
-        '
-        'Panel12
-        '
-        Me.Panel12.Controls.Add(Me.PictureBox9)
-        Me.Panel12.Controls.Add(Me.Label89)
-        Me.Panel12.Controls.Add(Me.IconButton3)
-        Me.Panel12.Controls.Add(Me.Label83)
-        Me.Panel12.Controls.Add(Me.Label76)
-        Me.Panel12.Location = New System.Drawing.Point(664, 13)
-        Me.Panel12.Name = "Panel12"
-        Me.Panel12.Size = New System.Drawing.Size(471, 143)
-        Me.Panel12.TabIndex = 22
-        '
-        'PictureBox9
-        '
-        Me.PictureBox9.Image = Global.Script_Agent.My.Resources.Resources.schedule
-        Me.PictureBox9.Location = New System.Drawing.Point(7, 8)
-        Me.PictureBox9.Name = "PictureBox9"
-        Me.PictureBox9.Size = New System.Drawing.Size(118, 122)
-        Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox9.TabIndex = 18
-        Me.PictureBox9.TabStop = False
-        '
-        'Label89
-        '
-        Me.Label89.AutoSize = True
-        Me.Label89.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!)
-        Me.Label89.ForeColor = System.Drawing.Color.LightGray
-        Me.Label89.Location = New System.Drawing.Point(132, 57)
-        Me.Label89.Name = "Label89"
-        Me.Label89.Size = New System.Drawing.Size(149, 17)
-        Me.Label89.TabIndex = 5
-        Me.Label89.Text = "Last Threat Scan sumary"
-        '
-        'IconButton3
-        '
-        Me.IconButton3.ForeColor = System.Drawing.Color.Black
-        Me.IconButton3.IconChar = FontAwesome.Sharp.IconChar.None
-        Me.IconButton3.IconColor = System.Drawing.Color.Black
-        Me.IconButton3.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton3.Location = New System.Drawing.Point(132, 94)
-        Me.IconButton3.Name = "IconButton3"
-        Me.IconButton3.Size = New System.Drawing.Size(75, 23)
-        Me.IconButton3.TabIndex = 17
-        Me.IconButton3.Text = "View Details"
-        Me.IconButton3.UseVisualStyleBackColor = True
-        '
-        'Label83
-        '
-        Me.Label83.AutoSize = True
-        Me.Label83.Font = New System.Drawing.Font("Microsoft PhagsPa", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Label83.ForeColor = System.Drawing.Color.LightGray
-        Me.Label83.Location = New System.Drawing.Point(140, 31)
-        Me.Label83.Name = "Label83"
-        Me.Label83.Size = New System.Drawing.Size(131, 21)
-        Me.Label83.TabIndex = 5
-        Me.Label83.Text = "Schedule a scan"
-        '
-        'Label76
-        '
-        Me.Label76.AutoSize = True
-        Me.Label76.Font = New System.Drawing.Font("Microsoft PhagsPa", 24.0!, System.Drawing.FontStyle.Bold)
-        Me.Label76.ForeColor = System.Drawing.Color.Yellow
-        Me.Label76.Location = New System.Drawing.Point(268, 18)
-        Me.Label76.Name = "Label76"
-        Me.Label76.Size = New System.Drawing.Size(79, 42)
-        Me.Label76.TabIndex = 5
-        Me.Label76.Text = "task"
         '
         'PanelProtection
         '
@@ -1608,7 +1530,7 @@ Partial Class VirusScanForm
         Me.PanelProtection.Controls.Add(Me.Label96)
         Me.PanelProtection.Controls.Add(Me.Label97)
         Me.PanelProtection.Controls.Add(Me.IconButton2)
-        Me.PanelProtection.Location = New System.Drawing.Point(115, 82)
+        Me.PanelProtection.Location = New System.Drawing.Point(88, 60)
         Me.PanelProtection.Name = "PanelProtection"
         Me.PanelProtection.Size = New System.Drawing.Size(471, 143)
         Me.PanelProtection.TabIndex = 22
@@ -1616,7 +1538,7 @@ Partial Class VirusScanForm
         'PictureBox7
         '
         Me.PictureBox7.Image = Global.Script_Agent.My.Resources.Resources.shield__1_
-        Me.PictureBox7.Location = New System.Drawing.Point(7, 8)
+        Me.PictureBox7.Location = New System.Drawing.Point(80, 10)
         Me.PictureBox7.Name = "PictureBox7"
         Me.PictureBox7.Size = New System.Drawing.Size(118, 122)
         Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -1628,7 +1550,7 @@ Partial Class VirusScanForm
         Me.Label95.AutoSize = True
         Me.Label95.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label95.ForeColor = System.Drawing.Color.LightGray
-        Me.Label95.Location = New System.Drawing.Point(132, 57)
+        Me.Label95.Location = New System.Drawing.Point(204, 74)
         Me.Label95.Name = "Label95"
         Me.Label95.Size = New System.Drawing.Size(149, 17)
         Me.Label95.TabIndex = 5
@@ -1639,7 +1561,7 @@ Partial Class VirusScanForm
         Me.Label96.AutoSize = True
         Me.Label96.Font = New System.Drawing.Font("Microsoft PhagsPa", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label96.ForeColor = System.Drawing.Color.LightGray
-        Me.Label96.Location = New System.Drawing.Point(140, 31)
+        Me.Label96.Location = New System.Drawing.Point(201, 44)
         Me.Label96.Name = "Label96"
         Me.Label96.Size = New System.Drawing.Size(120, 21)
         Me.Label96.TabIndex = 5
@@ -1650,7 +1572,7 @@ Partial Class VirusScanForm
         Me.Label97.AutoSize = True
         Me.Label97.Font = New System.Drawing.Font("Microsoft PhagsPa", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label97.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(113, Byte), Integer))
-        Me.Label97.Location = New System.Drawing.Point(251, 18)
+        Me.Label97.Location = New System.Drawing.Point(316, 30)
         Me.Label97.Name = "Label97"
         Me.Label97.Size = New System.Drawing.Size(164, 42)
         Me.Label97.TabIndex = 5
@@ -1662,12 +1584,112 @@ Partial Class VirusScanForm
         Me.IconButton2.IconChar = FontAwesome.Sharp.IconChar.None
         Me.IconButton2.IconColor = System.Drawing.Color.Black
         Me.IconButton2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton2.Location = New System.Drawing.Point(136, 80)
+        Me.IconButton2.Location = New System.Drawing.Point(208, 97)
         Me.IconButton2.Name = "IconButton2"
         Me.IconButton2.Size = New System.Drawing.Size(75, 23)
         Me.IconButton2.TabIndex = 17
         Me.IconButton2.Text = "View Details"
         Me.IconButton2.UseVisualStyleBackColor = True
+        '
+        'PanelVirusScanSlideshow
+        '
+        Me.PanelVirusScanSlideshow.Controls.Add(Me.Label98)
+        Me.PanelVirusScanSlideshow.Controls.Add(Me.ProgressBarVirusScan)
+        Me.PanelVirusScanSlideshow.Controls.Add(Me.PictureBox10)
+        Me.PanelVirusScanSlideshow.Controls.Add(Me.Label100)
+        Me.PanelVirusScanSlideshow.Location = New System.Drawing.Point(752, 100)
+        Me.PanelVirusScanSlideshow.Name = "PanelVirusScanSlideshow"
+        Me.PanelVirusScanSlideshow.Size = New System.Drawing.Size(471, 197)
+        Me.PanelVirusScanSlideshow.TabIndex = 22
+        '
+        'PictureBox10
+        '
+        Me.PictureBox10.Image = Global.Script_Agent.My.Resources.Resources.ezgif_2_bb09e2ffee
+        Me.PictureBox10.Location = New System.Drawing.Point(155, 10)
+        Me.PictureBox10.Name = "PictureBox10"
+        Me.PictureBox10.Size = New System.Drawing.Size(169, 98)
+        Me.PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox10.TabIndex = 18
+        Me.PictureBox10.TabStop = False
+        '
+        'Label100
+        '
+        Me.Label100.AutoSize = True
+        Me.Label100.Font = New System.Drawing.Font("Microsoft PhagsPa", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label100.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(113, Byte), Integer))
+        Me.Label100.Location = New System.Drawing.Point(104, 111)
+        Me.Label100.Name = "Label100"
+        Me.Label100.Size = New System.Drawing.Size(255, 32)
+        Me.Label100.TabIndex = 5
+        Me.Label100.Text = "Virus scan is running"
+        '
+        'Panel12
+        '
+        Me.Panel12.Controls.Add(Me.PictureBox9)
+        Me.Panel12.Controls.Add(Me.Label89)
+        Me.Panel12.Controls.Add(Me.IconButton3)
+        Me.Panel12.Controls.Add(Me.Label83)
+        Me.Panel12.Controls.Add(Me.Label76)
+        Me.Panel12.Location = New System.Drawing.Point(621, 6)
+        Me.Panel12.Name = "Panel12"
+        Me.Panel12.Size = New System.Drawing.Size(471, 143)
+        Me.Panel12.TabIndex = 22
+        '
+        'PictureBox9
+        '
+        Me.PictureBox9.Image = Global.Script_Agent.My.Resources.Resources.schedule
+        Me.PictureBox9.Location = New System.Drawing.Point(80, 10)
+        Me.PictureBox9.Name = "PictureBox9"
+        Me.PictureBox9.Size = New System.Drawing.Size(118, 122)
+        Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox9.TabIndex = 18
+        Me.PictureBox9.TabStop = False
+        '
+        'Label89
+        '
+        Me.Label89.AutoSize = True
+        Me.Label89.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!)
+        Me.Label89.ForeColor = System.Drawing.Color.LightGray
+        Me.Label89.Location = New System.Drawing.Point(207, 56)
+        Me.Label89.Name = "Label89"
+        Me.Label89.Size = New System.Drawing.Size(149, 17)
+        Me.Label89.TabIndex = 5
+        Me.Label89.Text = "Last Threat Scan sumary"
+        '
+        'IconButton3
+        '
+        Me.IconButton3.ForeColor = System.Drawing.Color.Black
+        Me.IconButton3.IconChar = FontAwesome.Sharp.IconChar.None
+        Me.IconButton3.IconColor = System.Drawing.Color.Black
+        Me.IconButton3.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton3.Location = New System.Drawing.Point(207, 93)
+        Me.IconButton3.Name = "IconButton3"
+        Me.IconButton3.Size = New System.Drawing.Size(75, 23)
+        Me.IconButton3.TabIndex = 17
+        Me.IconButton3.Text = "View Details"
+        Me.IconButton3.UseVisualStyleBackColor = True
+        '
+        'Label83
+        '
+        Me.Label83.AutoSize = True
+        Me.Label83.Font = New System.Drawing.Font("Microsoft PhagsPa", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label83.ForeColor = System.Drawing.Color.LightGray
+        Me.Label83.Location = New System.Drawing.Point(206, 34)
+        Me.Label83.Name = "Label83"
+        Me.Label83.Size = New System.Drawing.Size(131, 21)
+        Me.Label83.TabIndex = 5
+        Me.Label83.Text = "Schedule a scan"
+        '
+        'Label76
+        '
+        Me.Label76.AutoSize = True
+        Me.Label76.Font = New System.Drawing.Font("Microsoft PhagsPa", 24.0!, System.Drawing.FontStyle.Bold)
+        Me.Label76.ForeColor = System.Drawing.Color.Yellow
+        Me.Label76.Location = New System.Drawing.Point(343, 17)
+        Me.Label76.Name = "Label76"
+        Me.Label76.Size = New System.Drawing.Size(79, 42)
+        Me.Label76.TabIndex = 5
+        Me.Label76.Text = "task"
         '
         'Panel_Expand_Scanner
         '
@@ -2075,35 +2097,15 @@ Partial Class VirusScanForm
         Me.Label54.TabIndex = 18
         Me.Label54.Text = "Scan Completed!"
         '
-        'PanelVirusScanSlideshow
+        'PictureBox11
         '
-        Me.PanelVirusScanSlideshow.Controls.Add(Me.PictureBox10)
-        Me.PanelVirusScanSlideshow.Controls.Add(Me.Label100)
-        Me.PanelVirusScanSlideshow.Location = New System.Drawing.Point(626, 3)
-        Me.PanelVirusScanSlideshow.Name = "PanelVirusScanSlideshow"
-        Me.PanelVirusScanSlideshow.Size = New System.Drawing.Size(620, 226)
-        Me.PanelVirusScanSlideshow.TabIndex = 22
-        '
-        'PictureBox10
-        '
-        Me.PictureBox10.Image = Global.Script_Agent.My.Resources.Resources.ezgif_2_bb09e2ffee
-        Me.PictureBox10.Location = New System.Drawing.Point(192, 5)
-        Me.PictureBox10.Name = "PictureBox10"
-        Me.PictureBox10.Size = New System.Drawing.Size(272, 176)
-        Me.PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox10.TabIndex = 18
-        Me.PictureBox10.TabStop = False
-        '
-        'Label100
-        '
-        Me.Label100.AutoSize = True
-        Me.Label100.Font = New System.Drawing.Font("Microsoft PhagsPa", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label100.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(113, Byte), Integer))
-        Me.Label100.Location = New System.Drawing.Point(200, 174)
-        Me.Label100.Name = "Label100"
-        Me.Label100.Size = New System.Drawing.Size(230, 32)
-        Me.Label100.TabIndex = 5
-        Me.Label100.Text = "Virus scan running"
+        Me.PictureBox11.Image = Global.Script_Agent.My.Resources.Resources.ezgif_2_bb09e2ffee
+        Me.PictureBox11.Location = New System.Drawing.Point(149, 9)
+        Me.PictureBox11.Name = "PictureBox11"
+        Me.PictureBox11.Size = New System.Drawing.Size(399, 131)
+        Me.PictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox11.TabIndex = 18
+        Me.PictureBox11.TabStop = False
         '
         'Timer_Expand_History
         '
@@ -2137,14 +2139,13 @@ Partial Class VirusScanForm
         '
         'Pnl_ScanCompleted
         '
-        Me.Pnl_ScanCompleted.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Pnl_ScanCompleted.BackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(130, Byte), Integer))
         Me.Pnl_ScanCompleted.Controls.Add(Me.PictureBox11)
         Me.Pnl_ScanCompleted.Controls.Add(Me.Label7)
         Me.Pnl_ScanCompleted.Controls.Add(Me.Panel8)
-        Me.Pnl_ScanCompleted.Location = New System.Drawing.Point(-33, -217)
+        Me.Pnl_ScanCompleted.Location = New System.Drawing.Point(709, 345)
         Me.Pnl_ScanCompleted.Name = "Pnl_ScanCompleted"
-        Me.Pnl_ScanCompleted.Size = New System.Drawing.Size(641, 266)
+        Me.Pnl_ScanCompleted.Size = New System.Drawing.Size(641, 271)
         Me.Pnl_ScanCompleted.TabIndex = 19
         '
         'Label7
@@ -2211,7 +2212,7 @@ Partial Class VirusScanForm
         Me.Pnl_IsScanning.Controls.Add(Me.Lbl_Pas3)
         Me.Pnl_IsScanning.Controls.Add(Me.Lbl_Pas1)
         Me.Pnl_IsScanning.Controls.Add(Me.Lbl_Pas5)
-        Me.Pnl_IsScanning.Location = New System.Drawing.Point(324, -234)
+        Me.Pnl_IsScanning.Location = New System.Drawing.Point(1226, 260)
         Me.Pnl_IsScanning.Name = "Pnl_IsScanning"
         Me.Pnl_IsScanning.Size = New System.Drawing.Size(641, 266)
         Me.Pnl_IsScanning.TabIndex = 18
@@ -2460,9 +2461,9 @@ Partial Class VirusScanForm
         Me.Panel5.Controls.Add(Me.Panel_2)
         Me.Panel5.Controls.Add(Me.Panel_3)
         Me.Panel5.Controls.Add(Me.Panel_1)
-        Me.Panel5.Location = New System.Drawing.Point(20, 2)
+        Me.Panel5.Location = New System.Drawing.Point(2, 1)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(652, 33)
+        Me.Panel5.Size = New System.Drawing.Size(669, 33)
         Me.Panel5.TabIndex = 20
         '
         'Panel_ViewScanReport
@@ -2768,11 +2769,6 @@ Partial Class VirusScanForm
         Me.Label39.Text = "View  Report"
         Me.Label39.Visible = False
         '
-        'TimerSlideShow
-        '
-        Me.TimerSlideShow.Enabled = True
-        Me.TimerSlideShow.Interval = 1000
-        '
         'Toggle5
         '
         Me.Toggle5.Checked = False
@@ -2835,15 +2831,34 @@ Partial Class VirusScanForm
         Me.Toggle2.Size = New System.Drawing.Size(25, 14)
         Me.Toggle2.TabIndex = 17
         '
+        'ProgressBarVirusScan
+        '
+        Me.ProgressBarVirusScan.Location = New System.Drawing.Point(81, 149)
+        Me.ProgressBarVirusScan.Name = "ProgressBarVirusScan"
+        Me.ProgressBarVirusScan.Size = New System.Drawing.Size(280, 3)
+        Me.ProgressBarVirusScan.TabIndex = 19
+        '
+        'Label98
+        '
+        Me.Label98.AutoSize = True
+        Me.Label98.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label98.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Label98.Location = New System.Drawing.Point(367, 141)
+        Me.Label98.Name = "Label98"
+        Me.Label98.Size = New System.Drawing.Size(38, 16)
+        Me.Label98.TabIndex = 20
+        Me.Label98.Text = "100%"
+        '
         'VirusScanForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(686, 663)
+        Me.ClientSize = New System.Drawing.Size(1666, 663)
         Me.Controls.Add(Me.Panel_ViewScanReport)
         Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.Pnl_ScanCompleted)
+        Me.Controls.Add(Me.PanelVirusScanSlideshow)
         Me.Controls.Add(Me.Pnl_Reports)
         Me.Controls.Add(Me.Pnl_IsScanning)
         Me.Controls.Add(Me.Panel_Scanner)
@@ -2875,16 +2890,18 @@ Partial Class VirusScanForm
         Me.Panel_Protection.PerformLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel_Scanner.ResumeLayout(False)
-        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelLastScan.ResumeLayout(False)
         Me.PanelLastScan.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel12.ResumeLayout(False)
-        Me.Panel12.PerformLayout()
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelProtection.ResumeLayout(False)
         Me.PanelProtection.PerformLayout()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelVirusScanSlideshow.ResumeLayout(False)
+        Me.PanelVirusScanSlideshow.PerformLayout()
+        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel12.ResumeLayout(False)
+        Me.Panel12.PerformLayout()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel_Expand_Scanner.ResumeLayout(False)
         Me.Panel_Expand_Scanner.PerformLayout()
         CType(Me.PicBox_ScanPng, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2892,9 +2909,7 @@ Partial Class VirusScanForm
         Me.Panel6.PerformLayout()
         Me.Panel7.ResumeLayout(False)
         Me.Panel7.PerformLayout()
-        Me.PanelVirusScanSlideshow.ResumeLayout(False)
-        Me.PanelVirusScanSlideshow.PerformLayout()
-        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Pnl_ScanCompleted.ResumeLayout(False)
         Me.Pnl_ScanCompleted.PerformLayout()
         Me.Panel8.ResumeLayout(False)
@@ -3127,7 +3142,6 @@ Partial Class VirusScanForm
     Friend WithEvents Label71 As Label
     Friend WithEvents Label72 As Label
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents TimerSlideShow As Timer
     Friend WithEvents PictureBox9 As PictureBox
     Friend WithEvents Label89 As Label
     Friend WithEvents IconButton3 As FontAwesome.Sharp.IconButton
@@ -3137,4 +3151,6 @@ Partial Class VirusScanForm
     Friend WithEvents PictureBox10 As PictureBox
     Friend WithEvents Label100 As Label
     Friend WithEvents PictureBox11 As PictureBox
+    Friend WithEvents Label98 As Label
+    Friend WithEvents ProgressBarVirusScan As ProgressBar
 End Class

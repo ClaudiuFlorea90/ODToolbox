@@ -78,7 +78,11 @@ Public Class Home
 
         System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls = False
 
-        T1 = New System.Threading.Thread(AddressOf LiveUsage)
+        '  T1 = New System.Threading.Thread(AddressOf LiveUsage)
+        'prea mult cpu usage
+
+
+
         T2 = New System.Threading.Thread(AddressOf DeviceInfo)
         'T3 = New System.Threading.Thread(AddressOf GPUInfo)
         'T4 = New System.Threading.Thread(AddressOf OsInfo)
@@ -91,7 +95,7 @@ Public Class Home
 
 
 
-        T1.Start()
+        ' T1.Start()
         T2.Start()
         'T3.Start()
         'T4.Start()
