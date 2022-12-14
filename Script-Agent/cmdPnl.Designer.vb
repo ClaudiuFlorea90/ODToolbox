@@ -34,6 +34,22 @@ Partial Class cmdPnl
         Me.ImageList_CommandButton = New System.Windows.Forms.ImageList(Me.components)
         Me.Btn_Icon = New System.Windows.Forms.ImageList(Me.components)
         Me.Pnl_Windows = New System.Windows.Forms.Panel()
+        Me.Panel23 = New System.Windows.Forms.Panel()
+        Me.TextBox29 = New System.Windows.Forms.TextBox()
+        Me.Label42 = New System.Windows.Forms.Label()
+        Me.Label43 = New System.Windows.Forms.Label()
+        Me.ProgressBar14 = New System.Windows.Forms.ProgressBar()
+        Me.Label71 = New System.Windows.Forms.Label()
+        Me.Button13 = New System.Windows.Forms.Button()
+        Me.PictureBox14 = New System.Windows.Forms.PictureBox()
+        Me.Panel17 = New System.Windows.Forms.Panel()
+        Me.TextBox23 = New System.Windows.Forms.TextBox()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.ProgressBar7 = New System.Windows.Forms.ProgressBar()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.Panel11 = New System.Windows.Forms.Panel()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.Lbl_RestorePoint = New System.Windows.Forms.Label()
@@ -45,12 +61,40 @@ Partial Class cmdPnl
         Me.PictureBox34 = New System.Windows.Forms.PictureBox()
         Me.CheckBox11 = New System.Windows.Forms.CheckBox()
         Me.CheckBox12 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox7 = New System.Windows.Forms.CheckBox()
         Me.CheckBox13 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox19 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox6 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox18 = New System.Windows.Forms.CheckBox()
         Me.CheckBox14 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox5 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox17 = New System.Windows.Forms.CheckBox()
         Me.CheckBox15 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox9 = New System.Windows.Forms.CheckBox()
         Me.CheckBox16 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox20 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox8 = New System.Windows.Forms.CheckBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.CheckBox25 = New System.Windows.Forms.CheckBox()
+        Me.Panel22 = New System.Windows.Forms.Panel()
+        Me.TextBox28 = New System.Windows.Forms.TextBox()
+        Me.Label39 = New System.Windows.Forms.Label()
+        Me.Label40 = New System.Windows.Forms.Label()
+        Me.ProgressBar13 = New System.Windows.Forms.ProgressBar()
+        Me.Label41 = New System.Windows.Forms.Label()
+        Me.PictureBox13 = New System.Windows.Forms.PictureBox()
+        Me.Button12 = New System.Windows.Forms.Button()
+        Me.Panel16 = New System.Windows.Forms.Panel()
+        Me.TextBox22 = New System.Windows.Forms.TextBox()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.ProgressBar6 = New System.Windows.Forms.ProgressBar()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.Label27 = New System.Windows.Forms.Label()
@@ -59,6 +103,22 @@ Partial Class cmdPnl
         Me.Lbl_MoreTempFiles = New System.Windows.Forms.Label()
         Me.PicBox_Temp = New System.Windows.Forms.PictureBox()
         Me.Btn_TempFiles = New System.Windows.Forms.Button()
+        Me.Panel21 = New System.Windows.Forms.Panel()
+        Me.TextBox27 = New System.Windows.Forms.TextBox()
+        Me.Label36 = New System.Windows.Forms.Label()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.ProgressBar12 = New System.Windows.Forms.ProgressBar()
+        Me.PictureBox12 = New System.Windows.Forms.PictureBox()
+        Me.Button11 = New System.Windows.Forms.Button()
+        Me.Label38 = New System.Windows.Forms.Label()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.TextBox21 = New System.Windows.Forms.TextBox()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.ProgressBar5 = New System.Windows.Forms.ProgressBar()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Label17 = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.TextBox9 = New System.Windows.Forms.TextBox()
         Me.Label46 = New System.Windows.Forms.Label()
@@ -75,6 +135,22 @@ Partial Class cmdPnl
         Me.PicBox_WinUpdate = New System.Windows.Forms.PictureBox()
         Me.Btn_WinUpdate = New System.Windows.Forms.Button()
         Me.Lbl_MoreWinUpdate = New System.Windows.Forms.Label()
+        Me.Panel20 = New System.Windows.Forms.Panel()
+        Me.TextBox26 = New System.Windows.Forms.TextBox()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.ProgressBar11 = New System.Windows.Forms.ProgressBar()
+        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
+        Me.Button10 = New System.Windows.Forms.Button()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.TextBox20 = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.ProgressBar4 = New System.Windows.Forms.ProgressBar()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.Panel10 = New System.Windows.Forms.Panel()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.Label47 = New System.Windows.Forms.Label()
@@ -91,6 +167,40 @@ Partial Class cmdPnl
         Me.PicBox_DrvUp = New System.Windows.Forms.PictureBox()
         Me.Btn_DriverUpdates = New System.Windows.Forms.Button()
         Me.Lbl_MoreDrvUp = New System.Windows.Forms.Label()
+        Me.Panel19 = New System.Windows.Forms.Panel()
+        Me.TextBox25 = New System.Windows.Forms.TextBox()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.ProgressBar9 = New System.Windows.Forms.ProgressBar()
+        Me.ProgressBar10 = New System.Windows.Forms.ProgressBar()
+        Me.Button9 = New System.Windows.Forms.Button()
+        Me.Label32 = New System.Windows.Forms.Label()
+        Me.PictureBox10 = New System.Windows.Forms.PictureBox()
+        Me.Panel18 = New System.Windows.Forms.Panel()
+        Me.TextBox24 = New System.Windows.Forms.TextBox()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.ProgressBar8 = New System.Windows.Forms.ProgressBar()
+        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
+        Me.Button8 = New System.Windows.Forms.Button()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.TextBox19 = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.ProgressBar2 = New System.Windows.Forms.ProgressBar()
+        Me.ProgressBar3 = New System.Windows.Forms.ProgressBar()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.TextBox18 = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -109,12 +219,11 @@ Partial Class cmdPnl
         Me.Btn_DISM = New System.Windows.Forms.Button()
         Me.Lbl_MoreDism = New System.Windows.Forms.Label()
         Me.NotifyIcon = New System.Windows.Forms.NotifyIcon(Me.components)
-        Me.ListView_Cmd = New System.Windows.Forms.ListView()
+        Me.ListView_Cmd2 = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Colapse_Events = New System.Windows.Forms.Timer(Me.components)
-        Me.Button30 = New System.Windows.Forms.Button()
         Me.Button29 = New System.Windows.Forms.Button()
         Me.ImageList_Events = New System.Windows.Forms.ImageList(Me.components)
         Me.Btn_Browser = New System.Windows.Forms.Button()
@@ -126,7 +235,6 @@ Partial Class cmdPnl
         Me.Btn_Windows = New System.Windows.Forms.Button()
         Me.Btn_Privacy = New System.Windows.Forms.Button()
         Me.Timer_LetterByLetter = New System.Windows.Forms.Timer(Me.components)
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Timer_ExpPnl = New System.Windows.Forms.Timer(Me.components)
         Me.Pnl_Network = New System.Windows.Forms.Panel()
         Me.Panel12 = New System.Windows.Forms.Panel()
@@ -202,23 +310,50 @@ Partial Class cmdPnl
         Me.PictureBox37 = New System.Windows.Forms.PictureBox()
         Me.Button37 = New System.Windows.Forms.Button()
         Me.Label70 = New System.Windows.Forms.Label()
+        Me.ListView_Cmd = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Btn_Test = New System.Windows.Forms.Button()
         Me.Pnl_CommandAnimation.SuspendLayout()
         CType(Me.PicBox_CmdRun, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Pb1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Pnl_Windows.SuspendLayout()
+        Me.Panel23.SuspendLayout()
+        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel17.SuspendLayout()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel11.SuspendLayout()
         CType(Me.PictureBox34, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel22.SuspendLayout()
+        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel16.SuspendLayout()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel9.SuspendLayout()
         CType(Me.PicBox_Temp, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel21.SuspendLayout()
+        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel4.SuspendLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel7.SuspendLayout()
         CType(Me.PicBox_DiskCleanUp, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Pnl_WindowsUpdate.SuspendLayout()
         CType(Me.PicBox_WinUpdate, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel20.SuspendLayout()
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel3.SuspendLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel10.SuspendLayout()
         CType(Me.PictureBox32, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel5.SuspendLayout()
         CType(Me.PicBox_DrvUp, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel19.SuspendLayout()
+        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel18.SuspendLayout()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel8.SuspendLayout()
         CType(Me.PicBox_TuneUp, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel6.SuspendLayout()
@@ -240,6 +375,7 @@ Partial Class cmdPnl
         CType(Me.PictureBox36, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel54.SuspendLayout()
         CType(Me.PictureBox37, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ListView_Cmd.SuspendLayout()
         Me.SuspendLayout()
         '
         'Pnl_CommandAnimation
@@ -253,7 +389,7 @@ Partial Class cmdPnl
         Me.Pnl_CommandAnimation.Controls.Add(Me.Pb1)
         Me.Pnl_CommandAnimation.Location = New System.Drawing.Point(9, 5)
         Me.Pnl_CommandAnimation.Name = "Pnl_CommandAnimation"
-        Me.Pnl_CommandAnimation.Size = New System.Drawing.Size(679, 290)
+        Me.Pnl_CommandAnimation.Size = New System.Drawing.Size(665, 290)
         Me.Pnl_CommandAnimation.TabIndex = 15
         '
         'TB_Cmd
@@ -262,7 +398,7 @@ Partial Class cmdPnl
         Me.TB_Cmd.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TB_Cmd.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TB_Cmd.ForeColor = System.Drawing.SystemColors.Window
-        Me.TB_Cmd.Location = New System.Drawing.Point(11, 148)
+        Me.TB_Cmd.Location = New System.Drawing.Point(32, 167)
         Me.TB_Cmd.Name = "TB_Cmd"
         Me.TB_Cmd.ReadOnly = True
         Me.TB_Cmd.ShortcutsEnabled = False
@@ -277,11 +413,11 @@ Partial Class cmdPnl
         Me.TB_CmdResponse.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TB_CmdResponse.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TB_CmdResponse.ForeColor = System.Drawing.Color.Gainsboro
-        Me.TB_CmdResponse.Location = New System.Drawing.Point(122, 204)
+        Me.TB_CmdResponse.Location = New System.Drawing.Point(57, 215)
         Me.TB_CmdResponse.Multiline = True
         Me.TB_CmdResponse.Name = "TB_CmdResponse"
         Me.TB_CmdResponse.ReadOnly = True
-        Me.TB_CmdResponse.Size = New System.Drawing.Size(374, 75)
+        Me.TB_CmdResponse.Size = New System.Drawing.Size(567, 64)
         Me.TB_CmdResponse.TabIndex = 10
         Me.TB_CmdResponse.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -289,16 +425,16 @@ Partial Class cmdPnl
         '
         Me.PicBox_CmdRun.Image = Global.Script_Agent.My.Resources.Resources.NoCmdRunning
         Me.PicBox_CmdRun.InitialImage = Global.Script_Agent.My.Resources.Resources.NoCmdRunning
-        Me.PicBox_CmdRun.Location = New System.Drawing.Point(166, 4)
+        Me.PicBox_CmdRun.Location = New System.Drawing.Point(210, 56)
         Me.PicBox_CmdRun.Name = "PicBox_CmdRun"
-        Me.PicBox_CmdRun.Size = New System.Drawing.Size(275, 139)
+        Me.PicBox_CmdRun.Size = New System.Drawing.Size(252, 106)
         Me.PicBox_CmdRun.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PicBox_CmdRun.TabIndex = 5
         Me.PicBox_CmdRun.TabStop = False
         '
         'PB_Cmd
         '
-        Me.PB_Cmd.Location = New System.Drawing.Point(189, 185)
+        Me.PB_Cmd.Location = New System.Drawing.Point(210, 204)
         Me.PB_Cmd.Name = "PB_Cmd"
         Me.PB_Cmd.Size = New System.Drawing.Size(250, 3)
         Me.PB_Cmd.TabIndex = 6
@@ -308,7 +444,7 @@ Partial Class cmdPnl
         Me.Lbl_Procent.AutoSize = True
         Me.Lbl_Procent.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lbl_Procent.ForeColor = System.Drawing.SystemColors.Control
-        Me.Lbl_Procent.Location = New System.Drawing.Point(445, 177)
+        Me.Lbl_Procent.Location = New System.Drawing.Point(458, 177)
         Me.Lbl_Procent.Name = "Lbl_Procent"
         Me.Lbl_Procent.Size = New System.Drawing.Size(24, 16)
         Me.Lbl_Procent.TabIndex = 7
@@ -318,7 +454,7 @@ Partial Class cmdPnl
         '
         Me.Pb1.Image = CType(resources.GetObject("Pb1.Image"), System.Drawing.Image)
         Me.Pb1.InitialImage = Nothing
-        Me.Pb1.Location = New System.Drawing.Point(154, 168)
+        Me.Pb1.Location = New System.Drawing.Point(162, 187)
         Me.Pb1.Name = "Pb1"
         Me.Pb1.Size = New System.Drawing.Size(29, 22)
         Me.Pb1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -352,26 +488,262 @@ Partial Class cmdPnl
         Me.Pnl_Windows.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
         Me.Pnl_Windows.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Pnl_Windows.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Pnl_Windows.Controls.Add(Me.Panel23)
+        Me.Pnl_Windows.Controls.Add(Me.Panel17)
         Me.Pnl_Windows.Controls.Add(Me.Panel11)
         Me.Pnl_Windows.Controls.Add(Me.CheckBox11)
         Me.Pnl_Windows.Controls.Add(Me.CheckBox12)
+        Me.Pnl_Windows.Controls.Add(Me.CheckBox7)
         Me.Pnl_Windows.Controls.Add(Me.CheckBox13)
+        Me.Pnl_Windows.Controls.Add(Me.CheckBox19)
+        Me.Pnl_Windows.Controls.Add(Me.CheckBox6)
+        Me.Pnl_Windows.Controls.Add(Me.CheckBox18)
         Me.Pnl_Windows.Controls.Add(Me.CheckBox14)
+        Me.Pnl_Windows.Controls.Add(Me.CheckBox5)
+        Me.Pnl_Windows.Controls.Add(Me.CheckBox17)
         Me.Pnl_Windows.Controls.Add(Me.CheckBox15)
+        Me.Pnl_Windows.Controls.Add(Me.CheckBox4)
+        Me.Pnl_Windows.Controls.Add(Me.CheckBox9)
         Me.Pnl_Windows.Controls.Add(Me.CheckBox16)
+        Me.Pnl_Windows.Controls.Add(Me.CheckBox3)
+        Me.Pnl_Windows.Controls.Add(Me.CheckBox20)
+        Me.Pnl_Windows.Controls.Add(Me.CheckBox8)
         Me.Pnl_Windows.Controls.Add(Me.CheckBox1)
+        Me.Pnl_Windows.Controls.Add(Me.CheckBox2)
         Me.Pnl_Windows.Controls.Add(Me.CheckBox25)
+        Me.Pnl_Windows.Controls.Add(Me.Panel22)
+        Me.Pnl_Windows.Controls.Add(Me.Panel16)
         Me.Pnl_Windows.Controls.Add(Me.Panel9)
+        Me.Pnl_Windows.Controls.Add(Me.Panel21)
+        Me.Pnl_Windows.Controls.Add(Me.Panel4)
         Me.Pnl_Windows.Controls.Add(Me.Panel7)
         Me.Pnl_Windows.Controls.Add(Me.Pnl_WindowsUpdate)
+        Me.Pnl_Windows.Controls.Add(Me.Panel20)
+        Me.Pnl_Windows.Controls.Add(Me.Panel3)
         Me.Pnl_Windows.Controls.Add(Me.Panel10)
         Me.Pnl_Windows.Controls.Add(Me.Panel5)
+        Me.Pnl_Windows.Controls.Add(Me.Panel19)
+        Me.Pnl_Windows.Controls.Add(Me.Panel18)
+        Me.Pnl_Windows.Controls.Add(Me.Panel2)
+        Me.Pnl_Windows.Controls.Add(Me.Panel1)
         Me.Pnl_Windows.Controls.Add(Me.Panel8)
         Me.Pnl_Windows.Controls.Add(Me.Panel6)
-        Me.Pnl_Windows.Location = New System.Drawing.Point(2, 351)
+        Me.Pnl_Windows.Location = New System.Drawing.Point(6, 351)
         Me.Pnl_Windows.Name = "Pnl_Windows"
-        Me.Pnl_Windows.Size = New System.Drawing.Size(683, 277)
+        Me.Pnl_Windows.Size = New System.Drawing.Size(703, 279)
         Me.Pnl_Windows.TabIndex = 23
+        '
+        'Panel23
+        '
+        Me.Panel23.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.Panel23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel23.Controls.Add(Me.TextBox29)
+        Me.Panel23.Controls.Add(Me.Label42)
+        Me.Panel23.Controls.Add(Me.Label43)
+        Me.Panel23.Controls.Add(Me.ProgressBar14)
+        Me.Panel23.Controls.Add(Me.Label71)
+        Me.Panel23.Controls.Add(Me.Button13)
+        Me.Panel23.Controls.Add(Me.PictureBox14)
+        Me.Panel23.Location = New System.Drawing.Point(6, 653)
+        Me.Panel23.MaximumSize = New System.Drawing.Size(680, 28)
+        Me.Panel23.MinimumSize = New System.Drawing.Size(651, 28)
+        Me.Panel23.Name = "Panel23"
+        Me.Panel23.Size = New System.Drawing.Size(651, 28)
+        Me.Panel23.TabIndex = 33
+        '
+        'TextBox29
+        '
+        Me.TextBox29.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.TextBox29.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox29.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox29.ForeColor = System.Drawing.Color.FromArgb(CType(CType(209, Byte), Integer), CType(CType(216, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.TextBox29.Location = New System.Drawing.Point(12, 51)
+        Me.TextBox29.Multiline = True
+        Me.TextBox29.Name = "TextBox29"
+        Me.TextBox29.ReadOnly = True
+        Me.TextBox29.Size = New System.Drawing.Size(557, 50)
+        Me.TextBox29.TabIndex = 36
+        Me.TextBox29.Text = "Command output here!"
+        '
+        'Label42
+        '
+        Me.Label42.AutoSize = True
+        Me.Label42.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label42.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label42.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label42.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label42.ImageIndex = 1
+        Me.Label42.Location = New System.Drawing.Point(569, 6)
+        Me.Label42.Name = "Label42"
+        Me.Label42.Size = New System.Drawing.Size(63, 13)
+        Me.Label42.TabIndex = 35
+        Me.Label42.Text = "More       "
+        Me.Label42.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label43
+        '
+        Me.Label43.AutoSize = True
+        Me.Label43.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label43.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
+        Me.Label43.Location = New System.Drawing.Point(16, 34)
+        Me.Label43.Name = "Label43"
+        Me.Label43.Size = New System.Drawing.Size(103, 13)
+        Me.Label43.TabIndex = 25
+        Me.Label43.Text = "Command response:"
+        '
+        'ProgressBar14
+        '
+        Me.ProgressBar14.Location = New System.Drawing.Point(291, 13)
+        Me.ProgressBar14.Name = "ProgressBar14"
+        Me.ProgressBar14.Size = New System.Drawing.Size(200, 2)
+        Me.ProgressBar14.TabIndex = 2
+        '
+        'Label71
+        '
+        Me.Label71.AutoSize = True
+        Me.Label71.Font = New System.Drawing.Font("Comic Sans MS", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label71.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label71.Location = New System.Drawing.Point(193, 6)
+        Me.Label71.Name = "Label71"
+        Me.Label71.Size = New System.Drawing.Size(23, 16)
+        Me.Label71.TabIndex = 3
+        Me.Label71.Text = "0%"
+        '
+        'Button13
+        '
+        Me.Button13.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(158, Byte), Integer))
+        Me.Button13.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button13.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Button13.FlatAppearance.BorderSize = 0
+        Me.Button13.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.Button13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(140, Byte), Integer), CType(CType(163, Byte), Integer))
+        Me.Button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button13.Font = New System.Drawing.Font("Yu Gothic UI", 9.99!)
+        Me.Button13.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.Button13.Location = New System.Drawing.Point(30, 0)
+        Me.Button13.Name = "Button13"
+        Me.Button13.Size = New System.Drawing.Size(150, 28)
+        Me.Button13.TabIndex = 0
+        Me.Button13.Text = "Create Restore point"
+        Me.Button13.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Button13.UseVisualStyleBackColor = False
+        '
+        'PictureBox14
+        '
+        Me.PictureBox14.Image = CType(resources.GetObject("PictureBox14.Image"), System.Drawing.Image)
+        Me.PictureBox14.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox14.Name = "PictureBox14"
+        Me.PictureBox14.Size = New System.Drawing.Size(26, 24)
+        Me.PictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox14.TabIndex = 24
+        Me.PictureBox14.TabStop = False
+        '
+        'Panel17
+        '
+        Me.Panel17.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.Panel17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel17.Controls.Add(Me.TextBox23)
+        Me.Panel17.Controls.Add(Me.Label21)
+        Me.Panel17.Controls.Add(Me.Label22)
+        Me.Panel17.Controls.Add(Me.ProgressBar7)
+        Me.Panel17.Controls.Add(Me.Label24)
+        Me.Panel17.Controls.Add(Me.Button7)
+        Me.Panel17.Controls.Add(Me.PictureBox7)
+        Me.Panel17.Location = New System.Drawing.Point(6, 448)
+        Me.Panel17.MaximumSize = New System.Drawing.Size(680, 28)
+        Me.Panel17.MinimumSize = New System.Drawing.Size(651, 28)
+        Me.Panel17.Name = "Panel17"
+        Me.Panel17.Size = New System.Drawing.Size(651, 28)
+        Me.Panel17.TabIndex = 33
+        '
+        'TextBox23
+        '
+        Me.TextBox23.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.TextBox23.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox23.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox23.ForeColor = System.Drawing.Color.FromArgb(CType(CType(209, Byte), Integer), CType(CType(216, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.TextBox23.Location = New System.Drawing.Point(12, 51)
+        Me.TextBox23.Multiline = True
+        Me.TextBox23.Name = "TextBox23"
+        Me.TextBox23.ReadOnly = True
+        Me.TextBox23.Size = New System.Drawing.Size(557, 50)
+        Me.TextBox23.TabIndex = 36
+        Me.TextBox23.Text = "Command output here!"
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label21.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label21.ImageIndex = 1
+        Me.Label21.Location = New System.Drawing.Point(569, 6)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(63, 13)
+        Me.Label21.TabIndex = 35
+        Me.Label21.Text = "More       "
+        Me.Label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
+        Me.Label22.Location = New System.Drawing.Point(16, 34)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(103, 13)
+        Me.Label22.TabIndex = 25
+        Me.Label22.Text = "Command response:"
+        '
+        'ProgressBar7
+        '
+        Me.ProgressBar7.Location = New System.Drawing.Point(291, 13)
+        Me.ProgressBar7.Name = "ProgressBar7"
+        Me.ProgressBar7.Size = New System.Drawing.Size(200, 2)
+        Me.ProgressBar7.TabIndex = 2
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Font = New System.Drawing.Font("Comic Sans MS", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label24.Location = New System.Drawing.Point(193, 6)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(23, 16)
+        Me.Label24.TabIndex = 3
+        Me.Label24.Text = "0%"
+        '
+        'Button7
+        '
+        Me.Button7.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(158, Byte), Integer))
+        Me.Button7.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Button7.FlatAppearance.BorderSize = 0
+        Me.Button7.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.Button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(140, Byte), Integer), CType(CType(163, Byte), Integer))
+        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button7.Font = New System.Drawing.Font("Yu Gothic UI", 9.99!)
+        Me.Button7.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.Button7.Location = New System.Drawing.Point(30, 0)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(150, 28)
+        Me.Button7.TabIndex = 0
+        Me.Button7.Text = "Create Restore point"
+        Me.Button7.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Button7.UseVisualStyleBackColor = False
+        '
+        'PictureBox7
+        '
+        Me.PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), System.Drawing.Image)
+        Me.PictureBox7.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox7.Name = "PictureBox7"
+        Me.PictureBox7.Size = New System.Drawing.Size(26, 24)
+        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox7.TabIndex = 24
+        Me.PictureBox7.TabStop = False
         '
         'Panel11
         '
@@ -414,7 +786,7 @@ Partial Class cmdPnl
         Me.Lbl_RestorePoint.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Lbl_RestorePoint.ImageIndex = 1
         Me.Lbl_RestorePoint.ImageList = Me.ImageList_ExpandBtns
-        Me.Lbl_RestorePoint.Location = New System.Drawing.Point(514, 8)
+        Me.Lbl_RestorePoint.Location = New System.Drawing.Point(569, 6)
         Me.Lbl_RestorePoint.Name = "Lbl_RestorePoint"
         Me.Lbl_RestorePoint.Size = New System.Drawing.Size(63, 13)
         Me.Lbl_RestorePoint.TabIndex = 35
@@ -441,7 +813,7 @@ Partial Class cmdPnl
         '
         'ProgressBar19
         '
-        Me.ProgressBar19.Location = New System.Drawing.Point(265, 13)
+        Me.ProgressBar19.Location = New System.Drawing.Point(291, 13)
         Me.ProgressBar19.Name = "ProgressBar19"
         Me.ProgressBar19.Size = New System.Drawing.Size(200, 2)
         Me.ProgressBar19.TabIndex = 2
@@ -489,7 +861,6 @@ Partial Class cmdPnl
         '
         'CheckBox11
         '
-        Me.CheckBox11.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.CheckBox11.AutoSize = True
         Me.CheckBox11.Cursor = System.Windows.Forms.Cursors.Hand
         Me.CheckBox11.Location = New System.Drawing.Point(663, 10)
@@ -500,7 +871,6 @@ Partial Class cmdPnl
         '
         'CheckBox12
         '
-        Me.CheckBox12.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.CheckBox12.AutoSize = True
         Me.CheckBox12.Cursor = System.Windows.Forms.Cursors.Hand
         Me.CheckBox12.Location = New System.Drawing.Point(663, 46)
@@ -509,9 +879,18 @@ Partial Class cmdPnl
         Me.CheckBox12.TabIndex = 32
         Me.CheckBox12.UseVisualStyleBackColor = True
         '
+        'CheckBox7
+        '
+        Me.CheckBox7.AutoSize = True
+        Me.CheckBox7.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.CheckBox7.Location = New System.Drawing.Point(663, 282)
+        Me.CheckBox7.Name = "CheckBox7"
+        Me.CheckBox7.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox7.TabIndex = 32
+        Me.CheckBox7.UseVisualStyleBackColor = True
+        '
         'CheckBox13
         '
-        Me.CheckBox13.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.CheckBox13.AutoSize = True
         Me.CheckBox13.Cursor = System.Windows.Forms.Cursors.Hand
         Me.CheckBox13.Location = New System.Drawing.Point(663, 78)
@@ -520,9 +899,38 @@ Partial Class cmdPnl
         Me.CheckBox13.TabIndex = 32
         Me.CheckBox13.UseVisualStyleBackColor = True
         '
+        'CheckBox19
+        '
+        Me.CheckBox19.AutoSize = True
+        Me.CheckBox19.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.CheckBox19.Location = New System.Drawing.Point(663, 490)
+        Me.CheckBox19.Name = "CheckBox19"
+        Me.CheckBox19.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox19.TabIndex = 32
+        Me.CheckBox19.UseVisualStyleBackColor = True
+        '
+        'CheckBox6
+        '
+        Me.CheckBox6.AutoSize = True
+        Me.CheckBox6.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.CheckBox6.Location = New System.Drawing.Point(663, 315)
+        Me.CheckBox6.Name = "CheckBox6"
+        Me.CheckBox6.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox6.TabIndex = 32
+        Me.CheckBox6.UseVisualStyleBackColor = True
+        '
+        'CheckBox18
+        '
+        Me.CheckBox18.AutoSize = True
+        Me.CheckBox18.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.CheckBox18.Location = New System.Drawing.Point(663, 525)
+        Me.CheckBox18.Name = "CheckBox18"
+        Me.CheckBox18.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox18.TabIndex = 32
+        Me.CheckBox18.UseVisualStyleBackColor = True
+        '
         'CheckBox14
         '
-        Me.CheckBox14.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.CheckBox14.AutoSize = True
         Me.CheckBox14.Cursor = System.Windows.Forms.Cursors.Hand
         Me.CheckBox14.Location = New System.Drawing.Point(663, 111)
@@ -531,9 +939,28 @@ Partial Class cmdPnl
         Me.CheckBox14.TabIndex = 32
         Me.CheckBox14.UseVisualStyleBackColor = True
         '
+        'CheckBox5
+        '
+        Me.CheckBox5.AutoSize = True
+        Me.CheckBox5.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.CheckBox5.Location = New System.Drawing.Point(663, 350)
+        Me.CheckBox5.Name = "CheckBox5"
+        Me.CheckBox5.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox5.TabIndex = 32
+        Me.CheckBox5.UseVisualStyleBackColor = True
+        '
+        'CheckBox17
+        '
+        Me.CheckBox17.AutoSize = True
+        Me.CheckBox17.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.CheckBox17.Location = New System.Drawing.Point(663, 559)
+        Me.CheckBox17.Name = "CheckBox17"
+        Me.CheckBox17.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox17.TabIndex = 32
+        Me.CheckBox17.UseVisualStyleBackColor = True
+        '
         'CheckBox15
         '
-        Me.CheckBox15.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.CheckBox15.AutoSize = True
         Me.CheckBox15.Cursor = System.Windows.Forms.Cursors.Hand
         Me.CheckBox15.Location = New System.Drawing.Point(663, 146)
@@ -542,9 +969,28 @@ Partial Class cmdPnl
         Me.CheckBox15.TabIndex = 32
         Me.CheckBox15.UseVisualStyleBackColor = True
         '
+        'CheckBox4
+        '
+        Me.CheckBox4.AutoSize = True
+        Me.CheckBox4.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.CheckBox4.Location = New System.Drawing.Point(663, 384)
+        Me.CheckBox4.Name = "CheckBox4"
+        Me.CheckBox4.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox4.TabIndex = 32
+        Me.CheckBox4.UseVisualStyleBackColor = True
+        '
+        'CheckBox9
+        '
+        Me.CheckBox9.AutoSize = True
+        Me.CheckBox9.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.CheckBox9.Location = New System.Drawing.Point(663, 592)
+        Me.CheckBox9.Name = "CheckBox9"
+        Me.CheckBox9.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox9.TabIndex = 32
+        Me.CheckBox9.UseVisualStyleBackColor = True
+        '
         'CheckBox16
         '
-        Me.CheckBox16.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.CheckBox16.AutoSize = True
         Me.CheckBox16.Cursor = System.Windows.Forms.Cursors.Hand
         Me.CheckBox16.Location = New System.Drawing.Point(663, 180)
@@ -553,9 +999,38 @@ Partial Class cmdPnl
         Me.CheckBox16.TabIndex = 32
         Me.CheckBox16.UseVisualStyleBackColor = True
         '
+        'CheckBox3
+        '
+        Me.CheckBox3.AutoSize = True
+        Me.CheckBox3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.CheckBox3.Location = New System.Drawing.Point(663, 417)
+        Me.CheckBox3.Name = "CheckBox3"
+        Me.CheckBox3.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox3.TabIndex = 32
+        Me.CheckBox3.UseVisualStyleBackColor = True
+        '
+        'CheckBox20
+        '
+        Me.CheckBox20.AutoSize = True
+        Me.CheckBox20.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.CheckBox20.Location = New System.Drawing.Point(663, 659)
+        Me.CheckBox20.Name = "CheckBox20"
+        Me.CheckBox20.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox20.TabIndex = 32
+        Me.CheckBox20.UseVisualStyleBackColor = True
+        '
+        'CheckBox8
+        '
+        Me.CheckBox8.AutoSize = True
+        Me.CheckBox8.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.CheckBox8.Location = New System.Drawing.Point(663, 625)
+        Me.CheckBox8.Name = "CheckBox8"
+        Me.CheckBox8.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox8.TabIndex = 32
+        Me.CheckBox8.UseVisualStyleBackColor = True
+        '
         'CheckBox1
         '
-        Me.CheckBox1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.CheckBox1.Location = New System.Drawing.Point(663, 213)
@@ -564,9 +1039,18 @@ Partial Class cmdPnl
         Me.CheckBox1.TabIndex = 32
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
+        'CheckBox2
+        '
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.CheckBox2.Location = New System.Drawing.Point(663, 450)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox2.TabIndex = 32
+        Me.CheckBox2.UseVisualStyleBackColor = True
+        '
         'CheckBox25
         '
-        Me.CheckBox25.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.CheckBox25.AutoSize = True
         Me.CheckBox25.Cursor = System.Windows.Forms.Cursors.Hand
         Me.CheckBox25.Location = New System.Drawing.Point(663, 246)
@@ -574,6 +1058,218 @@ Partial Class cmdPnl
         Me.CheckBox25.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox25.TabIndex = 32
         Me.CheckBox25.UseVisualStyleBackColor = True
+        '
+        'Panel22
+        '
+        Me.Panel22.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.Panel22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel22.Controls.Add(Me.TextBox28)
+        Me.Panel22.Controls.Add(Me.Label39)
+        Me.Panel22.Controls.Add(Me.Label40)
+        Me.Panel22.Controls.Add(Me.ProgressBar13)
+        Me.Panel22.Controls.Add(Me.Label41)
+        Me.Panel22.Controls.Add(Me.PictureBox13)
+        Me.Panel22.Controls.Add(Me.Button12)
+        Me.Panel22.Location = New System.Drawing.Point(6, 619)
+        Me.Panel22.MaximumSize = New System.Drawing.Size(680, 28)
+        Me.Panel22.MinimumSize = New System.Drawing.Size(651, 28)
+        Me.Panel22.Name = "Panel22"
+        Me.Panel22.Size = New System.Drawing.Size(651, 28)
+        Me.Panel22.TabIndex = 33
+        '
+        'TextBox28
+        '
+        Me.TextBox28.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.TextBox28.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox28.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox28.ForeColor = System.Drawing.Color.FromArgb(CType(CType(209, Byte), Integer), CType(CType(216, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.TextBox28.Location = New System.Drawing.Point(12, 51)
+        Me.TextBox28.Multiline = True
+        Me.TextBox28.Name = "TextBox28"
+        Me.TextBox28.ReadOnly = True
+        Me.TextBox28.Size = New System.Drawing.Size(557, 50)
+        Me.TextBox28.TabIndex = 36
+        Me.TextBox28.Text = "Command output here!"
+        '
+        'Label39
+        '
+        Me.Label39.AutoSize = True
+        Me.Label39.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label39.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
+        Me.Label39.Location = New System.Drawing.Point(16, 34)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(103, 13)
+        Me.Label39.TabIndex = 25
+        Me.Label39.Text = "Command response:"
+        '
+        'Label40
+        '
+        Me.Label40.AutoSize = True
+        Me.Label40.Font = New System.Drawing.Font("Comic Sans MS", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label40.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label40.Location = New System.Drawing.Point(193, 6)
+        Me.Label40.Name = "Label40"
+        Me.Label40.Size = New System.Drawing.Size(23, 16)
+        Me.Label40.TabIndex = 3
+        Me.Label40.Text = "0%"
+        '
+        'ProgressBar13
+        '
+        Me.ProgressBar13.Location = New System.Drawing.Point(291, 13)
+        Me.ProgressBar13.Name = "ProgressBar13"
+        Me.ProgressBar13.Size = New System.Drawing.Size(200, 2)
+        Me.ProgressBar13.TabIndex = 2
+        '
+        'Label41
+        '
+        Me.Label41.AutoSize = True
+        Me.Label41.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label41.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label41.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label41.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label41.ImageIndex = 1
+        Me.Label41.Location = New System.Drawing.Point(569, 6)
+        Me.Label41.Name = "Label41"
+        Me.Label41.Size = New System.Drawing.Size(63, 13)
+        Me.Label41.TabIndex = 35
+        Me.Label41.Text = "More       "
+        Me.Label41.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'PictureBox13
+        '
+        Me.PictureBox13.Image = CType(resources.GetObject("PictureBox13.Image"), System.Drawing.Image)
+        Me.PictureBox13.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox13.Name = "PictureBox13"
+        Me.PictureBox13.Size = New System.Drawing.Size(26, 24)
+        Me.PictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox13.TabIndex = 24
+        Me.PictureBox13.TabStop = False
+        '
+        'Button12
+        '
+        Me.Button12.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(158, Byte), Integer))
+        Me.Button12.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button12.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Button12.FlatAppearance.BorderSize = 0
+        Me.Button12.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.Button12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.Button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(140, Byte), Integer), CType(CType(163, Byte), Integer))
+        Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button12.Font = New System.Drawing.Font("Yu Gothic UI", 9.99!)
+        Me.Button12.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.Button12.Location = New System.Drawing.Point(30, 0)
+        Me.Button12.Name = "Button12"
+        Me.Button12.Size = New System.Drawing.Size(150, 28)
+        Me.Button12.TabIndex = 0
+        Me.Button12.Text = "Temp Files"
+        Me.Button12.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Button12.UseVisualStyleBackColor = False
+        '
+        'Panel16
+        '
+        Me.Panel16.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.Panel16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel16.Controls.Add(Me.TextBox22)
+        Me.Panel16.Controls.Add(Me.Label18)
+        Me.Panel16.Controls.Add(Me.Label19)
+        Me.Panel16.Controls.Add(Me.ProgressBar6)
+        Me.Panel16.Controls.Add(Me.Label20)
+        Me.Panel16.Controls.Add(Me.PictureBox6)
+        Me.Panel16.Controls.Add(Me.Button5)
+        Me.Panel16.Location = New System.Drawing.Point(6, 414)
+        Me.Panel16.MaximumSize = New System.Drawing.Size(680, 28)
+        Me.Panel16.MinimumSize = New System.Drawing.Size(651, 28)
+        Me.Panel16.Name = "Panel16"
+        Me.Panel16.Size = New System.Drawing.Size(651, 28)
+        Me.Panel16.TabIndex = 33
+        '
+        'TextBox22
+        '
+        Me.TextBox22.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.TextBox22.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox22.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox22.ForeColor = System.Drawing.Color.FromArgb(CType(CType(209, Byte), Integer), CType(CType(216, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.TextBox22.Location = New System.Drawing.Point(12, 51)
+        Me.TextBox22.Multiline = True
+        Me.TextBox22.Name = "TextBox22"
+        Me.TextBox22.ReadOnly = True
+        Me.TextBox22.Size = New System.Drawing.Size(557, 50)
+        Me.TextBox22.TabIndex = 36
+        Me.TextBox22.Text = "Command output here!"
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
+        Me.Label18.Location = New System.Drawing.Point(16, 34)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(103, 13)
+        Me.Label18.TabIndex = 25
+        Me.Label18.Text = "Command response:"
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Font = New System.Drawing.Font("Comic Sans MS", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label19.Location = New System.Drawing.Point(193, 6)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(23, 16)
+        Me.Label19.TabIndex = 3
+        Me.Label19.Text = "0%"
+        '
+        'ProgressBar6
+        '
+        Me.ProgressBar6.Location = New System.Drawing.Point(291, 13)
+        Me.ProgressBar6.Name = "ProgressBar6"
+        Me.ProgressBar6.Size = New System.Drawing.Size(200, 2)
+        Me.ProgressBar6.TabIndex = 2
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label20.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label20.ImageIndex = 1
+        Me.Label20.Location = New System.Drawing.Point(569, 6)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(63, 13)
+        Me.Label20.TabIndex = 35
+        Me.Label20.Text = "More       "
+        Me.Label20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'PictureBox6
+        '
+        Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
+        Me.PictureBox6.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(26, 24)
+        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox6.TabIndex = 24
+        Me.PictureBox6.TabStop = False
+        '
+        'Button5
+        '
+        Me.Button5.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(158, Byte), Integer))
+        Me.Button5.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Button5.FlatAppearance.BorderSize = 0
+        Me.Button5.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.Button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.Button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(140, Byte), Integer), CType(CType(163, Byte), Integer))
+        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button5.Font = New System.Drawing.Font("Yu Gothic UI", 9.99!)
+        Me.Button5.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.Button5.Location = New System.Drawing.Point(30, 0)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(150, 28)
+        Me.Button5.TabIndex = 0
+        Me.Button5.Text = "Temp Files"
+        Me.Button5.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Button5.UseVisualStyleBackColor = False
         '
         'Panel9
         '
@@ -631,7 +1327,7 @@ Partial Class cmdPnl
         '
         'Pb_Temp
         '
-        Me.Pb_Temp.Location = New System.Drawing.Point(265, 13)
+        Me.Pb_Temp.Location = New System.Drawing.Point(291, 13)
         Me.Pb_Temp.Name = "Pb_Temp"
         Me.Pb_Temp.Size = New System.Drawing.Size(200, 2)
         Me.Pb_Temp.TabIndex = 2
@@ -645,7 +1341,7 @@ Partial Class cmdPnl
         Me.Lbl_MoreTempFiles.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Lbl_MoreTempFiles.ImageIndex = 1
         Me.Lbl_MoreTempFiles.ImageList = Me.ImageList_ExpandBtns
-        Me.Lbl_MoreTempFiles.Location = New System.Drawing.Point(514, 8)
+        Me.Lbl_MoreTempFiles.Location = New System.Drawing.Point(569, 6)
         Me.Lbl_MoreTempFiles.Name = "Lbl_MoreTempFiles"
         Me.Lbl_MoreTempFiles.Size = New System.Drawing.Size(63, 13)
         Me.Lbl_MoreTempFiles.TabIndex = 35
@@ -681,6 +1377,218 @@ Partial Class cmdPnl
         Me.Btn_TempFiles.Text = "Temp Files"
         Me.Btn_TempFiles.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.Btn_TempFiles.UseVisualStyleBackColor = False
+        '
+        'Panel21
+        '
+        Me.Panel21.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.Panel21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel21.Controls.Add(Me.TextBox27)
+        Me.Panel21.Controls.Add(Me.Label36)
+        Me.Panel21.Controls.Add(Me.Label37)
+        Me.Panel21.Controls.Add(Me.ProgressBar12)
+        Me.Panel21.Controls.Add(Me.PictureBox12)
+        Me.Panel21.Controls.Add(Me.Button11)
+        Me.Panel21.Controls.Add(Me.Label38)
+        Me.Panel21.Location = New System.Drawing.Point(6, 517)
+        Me.Panel21.MaximumSize = New System.Drawing.Size(680, 28)
+        Me.Panel21.MinimumSize = New System.Drawing.Size(651, 28)
+        Me.Panel21.Name = "Panel21"
+        Me.Panel21.Size = New System.Drawing.Size(651, 28)
+        Me.Panel21.TabIndex = 33
+        '
+        'TextBox27
+        '
+        Me.TextBox27.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.TextBox27.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox27.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox27.ForeColor = System.Drawing.Color.FromArgb(CType(CType(209, Byte), Integer), CType(CType(216, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.TextBox27.Location = New System.Drawing.Point(12, 51)
+        Me.TextBox27.Multiline = True
+        Me.TextBox27.Name = "TextBox27"
+        Me.TextBox27.ReadOnly = True
+        Me.TextBox27.Size = New System.Drawing.Size(557, 50)
+        Me.TextBox27.TabIndex = 36
+        Me.TextBox27.Text = "Command output here!"
+        '
+        'Label36
+        '
+        Me.Label36.AutoSize = True
+        Me.Label36.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label36.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
+        Me.Label36.Location = New System.Drawing.Point(16, 34)
+        Me.Label36.Name = "Label36"
+        Me.Label36.Size = New System.Drawing.Size(103, 13)
+        Me.Label36.TabIndex = 25
+        Me.Label36.Text = "Command response:"
+        '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.Font = New System.Drawing.Font("Comic Sans MS", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label37.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label37.Location = New System.Drawing.Point(193, 6)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(23, 16)
+        Me.Label37.TabIndex = 3
+        Me.Label37.Text = "0%"
+        '
+        'ProgressBar12
+        '
+        Me.ProgressBar12.Location = New System.Drawing.Point(291, 13)
+        Me.ProgressBar12.Name = "ProgressBar12"
+        Me.ProgressBar12.Size = New System.Drawing.Size(200, 2)
+        Me.ProgressBar12.TabIndex = 2
+        '
+        'PictureBox12
+        '
+        Me.PictureBox12.Image = CType(resources.GetObject("PictureBox12.Image"), System.Drawing.Image)
+        Me.PictureBox12.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox12.Name = "PictureBox12"
+        Me.PictureBox12.Size = New System.Drawing.Size(26, 24)
+        Me.PictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox12.TabIndex = 24
+        Me.PictureBox12.TabStop = False
+        '
+        'Button11
+        '
+        Me.Button11.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(158, Byte), Integer))
+        Me.Button11.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button11.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Button11.FlatAppearance.BorderSize = 0
+        Me.Button11.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.Button11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.Button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(140, Byte), Integer), CType(CType(163, Byte), Integer))
+        Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button11.Font = New System.Drawing.Font("Yu Gothic UI", 9.99!)
+        Me.Button11.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.Button11.Location = New System.Drawing.Point(30, 0)
+        Me.Button11.Name = "Button11"
+        Me.Button11.Size = New System.Drawing.Size(150, 28)
+        Me.Button11.TabIndex = 0
+        Me.Button11.Text = "Disk Clean-up"
+        Me.Button11.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Button11.UseVisualStyleBackColor = False
+        '
+        'Label38
+        '
+        Me.Label38.AutoSize = True
+        Me.Label38.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label38.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label38.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label38.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label38.ImageIndex = 1
+        Me.Label38.Location = New System.Drawing.Point(569, 6)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(63, 13)
+        Me.Label38.TabIndex = 35
+        Me.Label38.Text = "More       "
+        Me.Label38.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Panel4
+        '
+        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel4.Controls.Add(Me.TextBox21)
+        Me.Panel4.Controls.Add(Me.Label15)
+        Me.Panel4.Controls.Add(Me.Label16)
+        Me.Panel4.Controls.Add(Me.ProgressBar5)
+        Me.Panel4.Controls.Add(Me.PictureBox5)
+        Me.Panel4.Controls.Add(Me.Button4)
+        Me.Panel4.Controls.Add(Me.Label17)
+        Me.Panel4.Location = New System.Drawing.Point(6, 312)
+        Me.Panel4.MaximumSize = New System.Drawing.Size(680, 28)
+        Me.Panel4.MinimumSize = New System.Drawing.Size(651, 28)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(651, 28)
+        Me.Panel4.TabIndex = 33
+        '
+        'TextBox21
+        '
+        Me.TextBox21.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.TextBox21.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox21.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox21.ForeColor = System.Drawing.Color.FromArgb(CType(CType(209, Byte), Integer), CType(CType(216, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.TextBox21.Location = New System.Drawing.Point(12, 51)
+        Me.TextBox21.Multiline = True
+        Me.TextBox21.Name = "TextBox21"
+        Me.TextBox21.ReadOnly = True
+        Me.TextBox21.Size = New System.Drawing.Size(557, 50)
+        Me.TextBox21.TabIndex = 36
+        Me.TextBox21.Text = "Command output here!"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
+        Me.Label15.Location = New System.Drawing.Point(16, 34)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(103, 13)
+        Me.Label15.TabIndex = 25
+        Me.Label15.Text = "Command response:"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Comic Sans MS", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label16.Location = New System.Drawing.Point(193, 6)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(23, 16)
+        Me.Label16.TabIndex = 3
+        Me.Label16.Text = "0%"
+        '
+        'ProgressBar5
+        '
+        Me.ProgressBar5.Location = New System.Drawing.Point(291, 13)
+        Me.ProgressBar5.Name = "ProgressBar5"
+        Me.ProgressBar5.Size = New System.Drawing.Size(200, 2)
+        Me.ProgressBar5.TabIndex = 2
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
+        Me.PictureBox5.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(26, 24)
+        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox5.TabIndex = 24
+        Me.PictureBox5.TabStop = False
+        '
+        'Button4
+        '
+        Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(158, Byte), Integer))
+        Me.Button4.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Button4.FlatAppearance.BorderSize = 0
+        Me.Button4.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.Button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.Button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(140, Byte), Integer), CType(CType(163, Byte), Integer))
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.Font = New System.Drawing.Font("Yu Gothic UI", 9.99!)
+        Me.Button4.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.Button4.Location = New System.Drawing.Point(30, 0)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(150, 28)
+        Me.Button4.TabIndex = 0
+        Me.Button4.Text = "Disk Clean-up"
+        Me.Button4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Button4.UseVisualStyleBackColor = False
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label17.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label17.ImageIndex = 1
+        Me.Label17.Location = New System.Drawing.Point(569, 6)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(63, 13)
+        Me.Label17.TabIndex = 35
+        Me.Label17.Text = "More       "
+        Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Panel7
         '
@@ -738,7 +1646,7 @@ Partial Class cmdPnl
         '
         'PB_DiskCleanUp
         '
-        Me.PB_DiskCleanUp.Location = New System.Drawing.Point(265, 13)
+        Me.PB_DiskCleanUp.Location = New System.Drawing.Point(291, 13)
         Me.PB_DiskCleanUp.Name = "PB_DiskCleanUp"
         Me.PB_DiskCleanUp.Size = New System.Drawing.Size(200, 2)
         Me.PB_DiskCleanUp.TabIndex = 2
@@ -782,7 +1690,7 @@ Partial Class cmdPnl
         Me.Lbl_More_DiskC.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Lbl_More_DiskC.ImageIndex = 1
         Me.Lbl_More_DiskC.ImageList = Me.ImageList_ExpandBtns
-        Me.Lbl_More_DiskC.Location = New System.Drawing.Point(514, 8)
+        Me.Lbl_More_DiskC.Location = New System.Drawing.Point(569, 6)
         Me.Lbl_More_DiskC.Name = "Lbl_More_DiskC"
         Me.Lbl_More_DiskC.Size = New System.Drawing.Size(63, 13)
         Me.Lbl_More_DiskC.TabIndex = 35
@@ -834,7 +1742,7 @@ Partial Class cmdPnl
         '
         'Pb_WinUpdate
         '
-        Me.Pb_WinUpdate.Location = New System.Drawing.Point(265, 13)
+        Me.Pb_WinUpdate.Location = New System.Drawing.Point(291, 13)
         Me.Pb_WinUpdate.Name = "Pb_WinUpdate"
         Me.Pb_WinUpdate.Size = New System.Drawing.Size(200, 2)
         Me.Pb_WinUpdate.TabIndex = 2
@@ -892,12 +1800,224 @@ Partial Class cmdPnl
         Me.Lbl_MoreWinUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Lbl_MoreWinUpdate.ImageIndex = 1
         Me.Lbl_MoreWinUpdate.ImageList = Me.ImageList_ExpandBtns
-        Me.Lbl_MoreWinUpdate.Location = New System.Drawing.Point(514, 8)
+        Me.Lbl_MoreWinUpdate.Location = New System.Drawing.Point(569, 6)
         Me.Lbl_MoreWinUpdate.Name = "Lbl_MoreWinUpdate"
         Me.Lbl_MoreWinUpdate.Size = New System.Drawing.Size(63, 13)
         Me.Lbl_MoreWinUpdate.TabIndex = 35
         Me.Lbl_MoreWinUpdate.Text = "More       "
         Me.Lbl_MoreWinUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Panel20
+        '
+        Me.Panel20.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.Panel20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel20.Controls.Add(Me.TextBox26)
+        Me.Panel20.Controls.Add(Me.Label33)
+        Me.Panel20.Controls.Add(Me.Label34)
+        Me.Panel20.Controls.Add(Me.Label35)
+        Me.Panel20.Controls.Add(Me.ProgressBar11)
+        Me.Panel20.Controls.Add(Me.PictureBox11)
+        Me.Panel20.Controls.Add(Me.Button10)
+        Me.Panel20.Location = New System.Drawing.Point(6, 585)
+        Me.Panel20.MaximumSize = New System.Drawing.Size(680, 28)
+        Me.Panel20.MinimumSize = New System.Drawing.Size(651, 28)
+        Me.Panel20.Name = "Panel20"
+        Me.Panel20.Size = New System.Drawing.Size(651, 28)
+        Me.Panel20.TabIndex = 33
+        '
+        'TextBox26
+        '
+        Me.TextBox26.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.TextBox26.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox26.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox26.ForeColor = System.Drawing.Color.FromArgb(CType(CType(209, Byte), Integer), CType(CType(216, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.TextBox26.Location = New System.Drawing.Point(12, 51)
+        Me.TextBox26.Multiline = True
+        Me.TextBox26.Name = "TextBox26"
+        Me.TextBox26.ReadOnly = True
+        Me.TextBox26.Size = New System.Drawing.Size(557, 50)
+        Me.TextBox26.TabIndex = 36
+        Me.TextBox26.Text = "Command output here!"
+        '
+        'Label33
+        '
+        Me.Label33.AutoSize = True
+        Me.Label33.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label33.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
+        Me.Label33.Location = New System.Drawing.Point(16, 34)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(103, 13)
+        Me.Label33.TabIndex = 25
+        Me.Label33.Text = "Command response:"
+        '
+        'Label34
+        '
+        Me.Label34.AutoSize = True
+        Me.Label34.Font = New System.Drawing.Font("Comic Sans MS", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label34.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label34.Location = New System.Drawing.Point(193, 6)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(23, 16)
+        Me.Label34.TabIndex = 3
+        Me.Label34.Text = "0%"
+        '
+        'Label35
+        '
+        Me.Label35.AutoSize = True
+        Me.Label35.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label35.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label35.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label35.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label35.ImageIndex = 1
+        Me.Label35.Location = New System.Drawing.Point(569, 6)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(63, 13)
+        Me.Label35.TabIndex = 35
+        Me.Label35.Text = "More       "
+        Me.Label35.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'ProgressBar11
+        '
+        Me.ProgressBar11.Location = New System.Drawing.Point(291, 13)
+        Me.ProgressBar11.Name = "ProgressBar11"
+        Me.ProgressBar11.Size = New System.Drawing.Size(200, 2)
+        Me.ProgressBar11.TabIndex = 2
+        '
+        'PictureBox11
+        '
+        Me.PictureBox11.Image = CType(resources.GetObject("PictureBox11.Image"), System.Drawing.Image)
+        Me.PictureBox11.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox11.Name = "PictureBox11"
+        Me.PictureBox11.Size = New System.Drawing.Size(26, 24)
+        Me.PictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox11.TabIndex = 24
+        Me.PictureBox11.TabStop = False
+        '
+        'Button10
+        '
+        Me.Button10.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(158, Byte), Integer))
+        Me.Button10.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button10.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.Button10.FlatAppearance.BorderSize = 0
+        Me.Button10.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.Button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.Button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(140, Byte), Integer), CType(CType(163, Byte), Integer))
+        Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button10.Font = New System.Drawing.Font("Yu Gothic UI", 9.99!)
+        Me.Button10.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.Button10.Location = New System.Drawing.Point(30, 0)
+        Me.Button10.Name = "Button10"
+        Me.Button10.Size = New System.Drawing.Size(150, 28)
+        Me.Button10.TabIndex = 0
+        Me.Button10.Text = "Activate Windows"
+        Me.Button10.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Button10.UseVisualStyleBackColor = False
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel3.Controls.Add(Me.TextBox20)
+        Me.Panel3.Controls.Add(Me.Label12)
+        Me.Panel3.Controls.Add(Me.Label13)
+        Me.Panel3.Controls.Add(Me.Label14)
+        Me.Panel3.Controls.Add(Me.ProgressBar4)
+        Me.Panel3.Controls.Add(Me.PictureBox4)
+        Me.Panel3.Controls.Add(Me.Button3)
+        Me.Panel3.Location = New System.Drawing.Point(6, 380)
+        Me.Panel3.MaximumSize = New System.Drawing.Size(680, 28)
+        Me.Panel3.MinimumSize = New System.Drawing.Size(651, 28)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(651, 28)
+        Me.Panel3.TabIndex = 33
+        '
+        'TextBox20
+        '
+        Me.TextBox20.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.TextBox20.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox20.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox20.ForeColor = System.Drawing.Color.FromArgb(CType(CType(209, Byte), Integer), CType(CType(216, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.TextBox20.Location = New System.Drawing.Point(12, 51)
+        Me.TextBox20.Multiline = True
+        Me.TextBox20.Name = "TextBox20"
+        Me.TextBox20.ReadOnly = True
+        Me.TextBox20.Size = New System.Drawing.Size(557, 50)
+        Me.TextBox20.TabIndex = 36
+        Me.TextBox20.Text = "Command output here!"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
+        Me.Label12.Location = New System.Drawing.Point(16, 34)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(103, 13)
+        Me.Label12.TabIndex = 25
+        Me.Label12.Text = "Command response:"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Comic Sans MS", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label13.Location = New System.Drawing.Point(193, 6)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(23, 16)
+        Me.Label13.TabIndex = 3
+        Me.Label13.Text = "0%"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label14.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label14.ImageIndex = 1
+        Me.Label14.Location = New System.Drawing.Point(569, 6)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(63, 13)
+        Me.Label14.TabIndex = 35
+        Me.Label14.Text = "More       "
+        Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'ProgressBar4
+        '
+        Me.ProgressBar4.Location = New System.Drawing.Point(291, 13)
+        Me.ProgressBar4.Name = "ProgressBar4"
+        Me.ProgressBar4.Size = New System.Drawing.Size(200, 2)
+        Me.ProgressBar4.TabIndex = 2
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
+        Me.PictureBox4.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(26, 24)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox4.TabIndex = 24
+        Me.PictureBox4.TabStop = False
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(158, Byte), Integer))
+        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.Button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(140, Byte), Integer), CType(CType(163, Byte), Integer))
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Yu Gothic UI", 9.99!)
+        Me.Button3.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.Button3.Location = New System.Drawing.Point(30, 0)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(150, 28)
+        Me.Button3.TabIndex = 0
+        Me.Button3.Text = "Activate Windows"
+        Me.Button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Button3.UseVisualStyleBackColor = False
         '
         'Panel10
         '
@@ -962,7 +2082,7 @@ Partial Class cmdPnl
         Me.Lbl_MoreActiveWin.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Lbl_MoreActiveWin.ImageIndex = 1
         Me.Lbl_MoreActiveWin.ImageList = Me.ImageList_ExpandBtns
-        Me.Lbl_MoreActiveWin.Location = New System.Drawing.Point(514, 8)
+        Me.Lbl_MoreActiveWin.Location = New System.Drawing.Point(569, 6)
         Me.Lbl_MoreActiveWin.Name = "Lbl_MoreActiveWin"
         Me.Lbl_MoreActiveWin.Size = New System.Drawing.Size(63, 13)
         Me.Lbl_MoreActiveWin.TabIndex = 35
@@ -971,7 +2091,7 @@ Partial Class cmdPnl
         '
         'ProgressBar17
         '
-        Me.ProgressBar17.Location = New System.Drawing.Point(265, 13)
+        Me.ProgressBar17.Location = New System.Drawing.Point(291, 13)
         Me.ProgressBar17.Name = "ProgressBar17"
         Me.ProgressBar17.Size = New System.Drawing.Size(200, 2)
         Me.ProgressBar17.TabIndex = 2
@@ -1062,7 +2182,7 @@ Partial Class cmdPnl
         '
         'PB_DrvUp
         '
-        Me.PB_DrvUp.Location = New System.Drawing.Point(265, 13)
+        Me.PB_DrvUp.Location = New System.Drawing.Point(291, 13)
         Me.PB_DrvUp.Name = "PB_DrvUp"
         Me.PB_DrvUp.Size = New System.Drawing.Size(200, 2)
         Me.PB_DrvUp.TabIndex = 2
@@ -1108,12 +2228,460 @@ Partial Class cmdPnl
         Me.Lbl_MoreDrvUp.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Lbl_MoreDrvUp.ImageIndex = 1
         Me.Lbl_MoreDrvUp.ImageList = Me.ImageList_ExpandBtns
-        Me.Lbl_MoreDrvUp.Location = New System.Drawing.Point(514, 8)
+        Me.Lbl_MoreDrvUp.Location = New System.Drawing.Point(569, 6)
         Me.Lbl_MoreDrvUp.Name = "Lbl_MoreDrvUp"
         Me.Lbl_MoreDrvUp.Size = New System.Drawing.Size(63, 13)
         Me.Lbl_MoreDrvUp.TabIndex = 35
         Me.Lbl_MoreDrvUp.Text = "More       "
         Me.Lbl_MoreDrvUp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Panel19
+        '
+        Me.Panel19.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.Panel19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel19.Controls.Add(Me.TextBox25)
+        Me.Panel19.Controls.Add(Me.Label30)
+        Me.Panel19.Controls.Add(Me.Label31)
+        Me.Panel19.Controls.Add(Me.ProgressBar9)
+        Me.Panel19.Controls.Add(Me.ProgressBar10)
+        Me.Panel19.Controls.Add(Me.Button9)
+        Me.Panel19.Controls.Add(Me.Label32)
+        Me.Panel19.Controls.Add(Me.PictureBox10)
+        Me.Panel19.Location = New System.Drawing.Point(6, 483)
+        Me.Panel19.MaximumSize = New System.Drawing.Size(680, 28)
+        Me.Panel19.MinimumSize = New System.Drawing.Size(651, 28)
+        Me.Panel19.Name = "Panel19"
+        Me.Panel19.Size = New System.Drawing.Size(651, 28)
+        Me.Panel19.TabIndex = 33
+        '
+        'TextBox25
+        '
+        Me.TextBox25.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.TextBox25.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox25.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox25.ForeColor = System.Drawing.Color.FromArgb(CType(CType(209, Byte), Integer), CType(CType(216, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.TextBox25.Location = New System.Drawing.Point(12, 51)
+        Me.TextBox25.Multiline = True
+        Me.TextBox25.Name = "TextBox25"
+        Me.TextBox25.ReadOnly = True
+        Me.TextBox25.Size = New System.Drawing.Size(557, 50)
+        Me.TextBox25.TabIndex = 36
+        Me.TextBox25.Text = "Command output here!"
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label30.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
+        Me.Label30.Location = New System.Drawing.Point(16, 34)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(103, 13)
+        Me.Label30.TabIndex = 25
+        Me.Label30.Text = "Command response:"
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.Font = New System.Drawing.Font("Comic Sans MS", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label31.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label31.Location = New System.Drawing.Point(193, 6)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(23, 16)
+        Me.Label31.TabIndex = 3
+        Me.Label31.Text = "0%"
+        '
+        'ProgressBar9
+        '
+        Me.ProgressBar9.Location = New System.Drawing.Point(291, 13)
+        Me.ProgressBar9.Name = "ProgressBar9"
+        Me.ProgressBar9.Size = New System.Drawing.Size(200, 2)
+        Me.ProgressBar9.TabIndex = 2
+        Me.ProgressBar9.Visible = False
+        '
+        'ProgressBar10
+        '
+        Me.ProgressBar10.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.ProgressBar10.Location = New System.Drawing.Point(299, -40)
+        Me.ProgressBar10.Name = "ProgressBar10"
+        Me.ProgressBar10.Size = New System.Drawing.Size(200, 2)
+        Me.ProgressBar10.TabIndex = 2
+        '
+        'Button9
+        '
+        Me.Button9.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(158, Byte), Integer))
+        Me.Button9.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button9.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.Button9.FlatAppearance.BorderSize = 0
+        Me.Button9.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.Button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.Button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(140, Byte), Integer), CType(CType(163, Byte), Integer))
+        Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button9.Font = New System.Drawing.Font("Yu Gothic UI", 9.99!)
+        Me.Button9.ForeColor = System.Drawing.SystemColors.HighlightText
+        Me.Button9.Location = New System.Drawing.Point(30, 0)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(150, 28)
+        Me.Button9.TabIndex = 0
+        Me.Button9.Text = "Tune-up"
+        Me.Button9.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Button9.UseVisualStyleBackColor = False
+        '
+        'Label32
+        '
+        Me.Label32.AutoSize = True
+        Me.Label32.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label32.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label32.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label32.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label32.ImageIndex = 1
+        Me.Label32.Location = New System.Drawing.Point(569, 6)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(63, 13)
+        Me.Label32.TabIndex = 35
+        Me.Label32.Text = "More       "
+        Me.Label32.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'PictureBox10
+        '
+        Me.PictureBox10.Image = CType(resources.GetObject("PictureBox10.Image"), System.Drawing.Image)
+        Me.PictureBox10.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox10.Name = "PictureBox10"
+        Me.PictureBox10.Size = New System.Drawing.Size(26, 24)
+        Me.PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox10.TabIndex = 24
+        Me.PictureBox10.TabStop = False
+        '
+        'Panel18
+        '
+        Me.Panel18.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.Panel18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel18.Controls.Add(Me.TextBox24)
+        Me.Panel18.Controls.Add(Me.Label25)
+        Me.Panel18.Controls.Add(Me.Label28)
+        Me.Panel18.Controls.Add(Me.ProgressBar8)
+        Me.Panel18.Controls.Add(Me.PictureBox8)
+        Me.Panel18.Controls.Add(Me.Button8)
+        Me.Panel18.Controls.Add(Me.Label29)
+        Me.Panel18.Location = New System.Drawing.Point(6, 551)
+        Me.Panel18.MaximumSize = New System.Drawing.Size(680, 28)
+        Me.Panel18.MinimumSize = New System.Drawing.Size(651, 28)
+        Me.Panel18.Name = "Panel18"
+        Me.Panel18.Size = New System.Drawing.Size(651, 28)
+        Me.Panel18.TabIndex = 33
+        '
+        'TextBox24
+        '
+        Me.TextBox24.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.TextBox24.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox24.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox24.ForeColor = System.Drawing.Color.FromArgb(CType(CType(209, Byte), Integer), CType(CType(216, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.TextBox24.Location = New System.Drawing.Point(12, 51)
+        Me.TextBox24.Multiline = True
+        Me.TextBox24.Name = "TextBox24"
+        Me.TextBox24.ReadOnly = True
+        Me.TextBox24.Size = New System.Drawing.Size(557, 50)
+        Me.TextBox24.TabIndex = 36
+        Me.TextBox24.Text = "Command output here!"
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
+        Me.Label25.Location = New System.Drawing.Point(16, 34)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(103, 13)
+        Me.Label25.TabIndex = 25
+        Me.Label25.Text = "Command response:"
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Font = New System.Drawing.Font("Comic Sans MS", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label28.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label28.Location = New System.Drawing.Point(193, 6)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(23, 16)
+        Me.Label28.TabIndex = 3
+        Me.Label28.Text = "0%"
+        '
+        'ProgressBar8
+        '
+        Me.ProgressBar8.Location = New System.Drawing.Point(291, 13)
+        Me.ProgressBar8.Name = "ProgressBar8"
+        Me.ProgressBar8.Size = New System.Drawing.Size(200, 2)
+        Me.ProgressBar8.TabIndex = 2
+        '
+        'PictureBox8
+        '
+        Me.PictureBox8.Image = CType(resources.GetObject("PictureBox8.Image"), System.Drawing.Image)
+        Me.PictureBox8.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox8.Name = "PictureBox8"
+        Me.PictureBox8.Size = New System.Drawing.Size(26, 24)
+        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox8.TabIndex = 24
+        Me.PictureBox8.TabStop = False
+        '
+        'Button8
+        '
+        Me.Button8.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(158, Byte), Integer))
+        Me.Button8.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.Button8.FlatAppearance.BorderSize = 0
+        Me.Button8.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.Button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.Button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(140, Byte), Integer), CType(CType(163, Byte), Integer))
+        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button8.Font = New System.Drawing.Font("Yu Gothic UI", 9.99!)
+        Me.Button8.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.Button8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button8.ImageIndex = 0
+        Me.Button8.Location = New System.Drawing.Point(30, 0)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(150, 28)
+        Me.Button8.TabIndex = 0
+        Me.Button8.Text = "DISM Repair"
+        Me.Button8.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Button8.UseVisualStyleBackColor = False
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label29.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label29.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label29.ImageIndex = 1
+        Me.Label29.Location = New System.Drawing.Point(569, 6)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(63, 13)
+        Me.Label29.TabIndex = 35
+        Me.Label29.Text = "More       "
+        Me.Label29.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.TextBox19)
+        Me.Panel2.Controls.Add(Me.Label7)
+        Me.Panel2.Controls.Add(Me.Label9)
+        Me.Panel2.Controls.Add(Me.ProgressBar2)
+        Me.Panel2.Controls.Add(Me.ProgressBar3)
+        Me.Panel2.Controls.Add(Me.Button2)
+        Me.Panel2.Controls.Add(Me.Label11)
+        Me.Panel2.Controls.Add(Me.PictureBox3)
+        Me.Panel2.Location = New System.Drawing.Point(6, 278)
+        Me.Panel2.MaximumSize = New System.Drawing.Size(680, 28)
+        Me.Panel2.MinimumSize = New System.Drawing.Size(651, 28)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(651, 28)
+        Me.Panel2.TabIndex = 33
+        '
+        'TextBox19
+        '
+        Me.TextBox19.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.TextBox19.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox19.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox19.ForeColor = System.Drawing.Color.FromArgb(CType(CType(209, Byte), Integer), CType(CType(216, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.TextBox19.Location = New System.Drawing.Point(12, 51)
+        Me.TextBox19.Multiline = True
+        Me.TextBox19.Name = "TextBox19"
+        Me.TextBox19.ReadOnly = True
+        Me.TextBox19.Size = New System.Drawing.Size(557, 50)
+        Me.TextBox19.TabIndex = 36
+        Me.TextBox19.Text = "Command output here!"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
+        Me.Label7.Location = New System.Drawing.Point(16, 34)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(103, 13)
+        Me.Label7.TabIndex = 25
+        Me.Label7.Text = "Command response:"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Comic Sans MS", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label9.Location = New System.Drawing.Point(193, 6)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(23, 16)
+        Me.Label9.TabIndex = 3
+        Me.Label9.Text = "0%"
+        '
+        'ProgressBar2
+        '
+        Me.ProgressBar2.Location = New System.Drawing.Point(291, 13)
+        Me.ProgressBar2.Name = "ProgressBar2"
+        Me.ProgressBar2.Size = New System.Drawing.Size(200, 2)
+        Me.ProgressBar2.TabIndex = 2
+        Me.ProgressBar2.Visible = False
+        '
+        'ProgressBar3
+        '
+        Me.ProgressBar3.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.ProgressBar3.Location = New System.Drawing.Point(299, -40)
+        Me.ProgressBar3.Name = "ProgressBar3"
+        Me.ProgressBar3.Size = New System.Drawing.Size(200, 2)
+        Me.ProgressBar3.TabIndex = 2
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(158, Byte), Integer))
+        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(140, Byte), Integer), CType(CType(163, Byte), Integer))
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Yu Gothic UI", 9.99!)
+        Me.Button2.ForeColor = System.Drawing.SystemColors.HighlightText
+        Me.Button2.Location = New System.Drawing.Point(30, 0)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(150, 28)
+        Me.Button2.TabIndex = 0
+        Me.Button2.Text = "Tune-up"
+        Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label11.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label11.ImageIndex = 1
+        Me.Label11.Location = New System.Drawing.Point(569, 6)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(63, 13)
+        Me.Label11.TabIndex = 35
+        Me.Label11.Text = "More       "
+        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
+        Me.PictureBox3.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(26, 24)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox3.TabIndex = 24
+        Me.PictureBox3.TabStop = False
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.TextBox18)
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.Label5)
+        Me.Panel1.Controls.Add(Me.ProgressBar1)
+        Me.Panel1.Controls.Add(Me.PictureBox2)
+        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.Label6)
+        Me.Panel1.Location = New System.Drawing.Point(6, 346)
+        Me.Panel1.MaximumSize = New System.Drawing.Size(680, 28)
+        Me.Panel1.MinimumSize = New System.Drawing.Size(651, 28)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(651, 28)
+        Me.Panel1.TabIndex = 33
+        '
+        'TextBox18
+        '
+        Me.TextBox18.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.TextBox18.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox18.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox18.ForeColor = System.Drawing.Color.FromArgb(CType(CType(209, Byte), Integer), CType(CType(216, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.TextBox18.Location = New System.Drawing.Point(12, 51)
+        Me.TextBox18.Multiline = True
+        Me.TextBox18.Name = "TextBox18"
+        Me.TextBox18.ReadOnly = True
+        Me.TextBox18.Size = New System.Drawing.Size(557, 50)
+        Me.TextBox18.TabIndex = 36
+        Me.TextBox18.Text = "Command output here!"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(16, 34)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(103, 13)
+        Me.Label3.TabIndex = 25
+        Me.Label3.Text = "Command response:"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Comic Sans MS", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label5.Location = New System.Drawing.Point(193, 6)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(23, 16)
+        Me.Label5.TabIndex = 3
+        Me.Label5.Text = "0%"
+        '
+        'ProgressBar1
+        '
+        Me.ProgressBar1.Location = New System.Drawing.Point(291, 13)
+        Me.ProgressBar1.Name = "ProgressBar1"
+        Me.ProgressBar1.Size = New System.Drawing.Size(200, 2)
+        Me.ProgressBar1.TabIndex = 2
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(26, 24)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 24
+        Me.PictureBox2.TabStop = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(158, Byte), Integer))
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(140, Byte), Integer), CType(CType(163, Byte), Integer))
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Yu Gothic UI", 9.99!)
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button1.ImageIndex = 0
+        Me.Button1.Location = New System.Drawing.Point(30, 0)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(150, 28)
+        Me.Button1.TabIndex = 0
+        Me.Button1.Text = "DISM Repair"
+        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label6.ImageIndex = 1
+        Me.Label6.Location = New System.Drawing.Point(569, 6)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(63, 13)
+        Me.Label6.TabIndex = 35
+        Me.Label6.Text = "More       "
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Panel8
         '
@@ -1172,7 +2740,7 @@ Partial Class cmdPnl
         '
         'ProgressBar31
         '
-        Me.ProgressBar31.Location = New System.Drawing.Point(265, 13)
+        Me.ProgressBar31.Location = New System.Drawing.Point(291, 13)
         Me.ProgressBar31.Name = "ProgressBar31"
         Me.ProgressBar31.Size = New System.Drawing.Size(200, 2)
         Me.ProgressBar31.TabIndex = 2
@@ -1215,7 +2783,7 @@ Partial Class cmdPnl
         Me.Lbl_MoreTuneUp.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Lbl_MoreTuneUp.ImageIndex = 1
         Me.Lbl_MoreTuneUp.ImageList = Me.ImageList_ExpandBtns
-        Me.Lbl_MoreTuneUp.Location = New System.Drawing.Point(514, 8)
+        Me.Lbl_MoreTuneUp.Location = New System.Drawing.Point(569, 6)
         Me.Lbl_MoreTuneUp.Name = "Lbl_MoreTuneUp"
         Me.Lbl_MoreTuneUp.Size = New System.Drawing.Size(63, 13)
         Me.Lbl_MoreTuneUp.TabIndex = 35
@@ -1288,7 +2856,7 @@ Partial Class cmdPnl
         '
         'PB_DISM
         '
-        Me.PB_DISM.Location = New System.Drawing.Point(265, 13)
+        Me.PB_DISM.Location = New System.Drawing.Point(291, 13)
         Me.PB_DISM.Name = "PB_DISM"
         Me.PB_DISM.Size = New System.Drawing.Size(200, 2)
         Me.PB_DISM.TabIndex = 2
@@ -1334,7 +2902,7 @@ Partial Class cmdPnl
         Me.Lbl_MoreDism.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Lbl_MoreDism.ImageIndex = 1
         Me.Lbl_MoreDism.ImageList = Me.ImageList_ExpandBtns
-        Me.Lbl_MoreDism.Location = New System.Drawing.Point(514, 8)
+        Me.Lbl_MoreDism.Location = New System.Drawing.Point(569, 6)
         Me.Lbl_MoreDism.Name = "Lbl_MoreDism"
         Me.Lbl_MoreDism.Size = New System.Drawing.Size(63, 13)
         Me.Lbl_MoreDism.TabIndex = 35
@@ -1347,22 +2915,22 @@ Partial Class cmdPnl
         Me.NotifyIcon.Text = "Script Agent"
         Me.NotifyIcon.Visible = True
         '
-        'ListView_Cmd
+        'ListView_Cmd2
         '
-        Me.ListView_Cmd.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
-        Me.ListView_Cmd.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.ListView_Cmd.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3})
-        Me.ListView_Cmd.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ListView_Cmd.ForeColor = System.Drawing.SystemColors.GrayText
-        Me.ListView_Cmd.GridLines = True
-        Me.ListView_Cmd.HideSelection = False
-        Me.ListView_Cmd.Location = New System.Drawing.Point(4, 716)
-        Me.ListView_Cmd.Margin = New System.Windows.Forms.Padding(2)
-        Me.ListView_Cmd.Name = "ListView_Cmd"
-        Me.ListView_Cmd.Size = New System.Drawing.Size(618, 275)
-        Me.ListView_Cmd.TabIndex = 32
-        Me.ListView_Cmd.UseCompatibleStateImageBehavior = False
-        Me.ListView_Cmd.View = System.Windows.Forms.View.Details
+        Me.ListView_Cmd2.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.ListView_Cmd2.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.ListView_Cmd2.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3})
+        Me.ListView_Cmd2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListView_Cmd2.ForeColor = System.Drawing.SystemColors.GrayText
+        Me.ListView_Cmd2.GridLines = True
+        Me.ListView_Cmd2.HideSelection = False
+        Me.ListView_Cmd2.Location = New System.Drawing.Point(30, 68)
+        Me.ListView_Cmd2.Margin = New System.Windows.Forms.Padding(2)
+        Me.ListView_Cmd2.Name = "ListView_Cmd2"
+        Me.ListView_Cmd2.Size = New System.Drawing.Size(610, 439)
+        Me.ListView_Cmd2.TabIndex = 32
+        Me.ListView_Cmd2.UseCompatibleStateImageBehavior = False
+        Me.ListView_Cmd2.View = System.Windows.Forms.View.Details
         '
         'ColumnHeader1
         '
@@ -1382,24 +2950,16 @@ Partial Class cmdPnl
         'Colapse_Events
         '
         '
-        'Button30
-        '
-        Me.Button30.Location = New System.Drawing.Point(539, 670)
-        Me.Button30.Name = "Button30"
-        Me.Button30.Size = New System.Drawing.Size(82, 23)
-        Me.Button30.TabIndex = 34
-        Me.Button30.Text = "Run Multimple"
-        Me.Button30.UseVisualStyleBackColor = True
-        '
         'Button29
         '
-        Me.Button29.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button29.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Button29.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button29.ForeColor = System.Drawing.SystemColors.ActiveCaption
         Me.Button29.ImageIndex = 0
         Me.Button29.ImageList = Me.ImageList_Events
-        Me.Button29.Location = New System.Drawing.Point(363, 649)
+        Me.Button29.Location = New System.Drawing.Point(593, 634)
         Me.Button29.Name = "Button29"
-        Me.Button29.Size = New System.Drawing.Size(108, 39)
+        Me.Button29.Size = New System.Drawing.Size(81, 22)
         Me.Button29.TabIndex = 34
         Me.Button29.Text = "Events"
         Me.Button29.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -1591,19 +3151,6 @@ Partial Class cmdPnl
         '
         Me.Timer_LetterByLetter.Interval = 1000
         '
-        'TextBox1
-        '
-        Me.TextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox1.ForeColor = System.Drawing.SystemColors.Control
-        Me.TextBox1.Location = New System.Drawing.Point(6, 642)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(121, 22)
-        Me.TextBox1.TabIndex = 35
-        Me.TextBox1.Text = "Search"
-        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
         'Timer_ExpPnl
         '
         Me.Timer_ExpPnl.Interval = 15
@@ -1629,7 +3176,7 @@ Partial Class cmdPnl
         Me.Pnl_Network.Controls.Add(Me.Panel52)
         Me.Pnl_Network.Controls.Add(Me.Panel53)
         Me.Pnl_Network.Controls.Add(Me.Panel54)
-        Me.Pnl_Network.Location = New System.Drawing.Point(907, 97)
+        Me.Pnl_Network.Location = New System.Drawing.Point(1485, 71)
         Me.Pnl_Network.Name = "Pnl_Network"
         Me.Pnl_Network.Size = New System.Drawing.Size(618, 277)
         Me.Pnl_Network.TabIndex = 23
@@ -2594,9 +4141,42 @@ Partial Class cmdPnl
         Me.Label70.Text = "More       "
         Me.Label70.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'ListView_Cmd
+        '
+        Me.ListView_Cmd.Controls.Add(Me.Label2)
+        Me.ListView_Cmd.Controls.Add(Me.ListView_Cmd2)
+        Me.ListView_Cmd.Location = New System.Drawing.Point(1110, 780)
+        Me.ListView_Cmd.Name = "ListView_Cmd"
+        Me.ListView_Cmd.Size = New System.Drawing.Size(680, 620)
+        Me.ListView_Cmd.TabIndex = 37
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.CornflowerBlue
+        Me.Label2.Location = New System.Drawing.Point(26, 15)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(157, 24)
+        Me.Label2.TabIndex = 33
+        Me.Label2.Text = "Command history"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox1.ForeColor = System.Drawing.SystemColors.Control
+        Me.TextBox1.Location = New System.Drawing.Point(6, 633)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(121, 22)
+        Me.TextBox1.TabIndex = 35
+        Me.TextBox1.Text = "Search"
+        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
         'Btn_Test
         '
-        Me.Btn_Test.Location = New System.Drawing.Point(11, 674)
+        Me.Btn_Test.Location = New System.Drawing.Point(12, 725)
         Me.Btn_Test.Name = "Btn_Test"
         Me.Btn_Test.Size = New System.Drawing.Size(75, 23)
         Me.Btn_Test.TabIndex = 36
@@ -2608,12 +4188,11 @@ Partial Class cmdPnl
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1425, 663)
+        Me.ClientSize = New System.Drawing.Size(994, 663)
+        Me.Controls.Add(Me.ListView_Cmd)
         Me.Controls.Add(Me.Btn_Test)
         Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Button30)
         Me.Controls.Add(Me.Button29)
-        Me.Controls.Add(Me.ListView_Cmd)
         Me.Controls.Add(Me.Pnl_CommandAnimation)
         Me.Controls.Add(Me.Pnl_Network)
         Me.Controls.Add(Me.Pnl_Windows)
@@ -2634,24 +4213,60 @@ Partial Class cmdPnl
         CType(Me.Pb1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Pnl_Windows.ResumeLayout(False)
         Me.Pnl_Windows.PerformLayout()
+        Me.Panel23.ResumeLayout(False)
+        Me.Panel23.PerformLayout()
+        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel17.ResumeLayout(False)
+        Me.Panel17.PerformLayout()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel11.ResumeLayout(False)
         Me.Panel11.PerformLayout()
         CType(Me.PictureBox34, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel22.ResumeLayout(False)
+        Me.Panel22.PerformLayout()
+        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel16.ResumeLayout(False)
+        Me.Panel16.PerformLayout()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel9.ResumeLayout(False)
         Me.Panel9.PerformLayout()
         CType(Me.PicBox_Temp, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel21.ResumeLayout(False)
+        Me.Panel21.PerformLayout()
+        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel7.ResumeLayout(False)
         Me.Panel7.PerformLayout()
         CType(Me.PicBox_DiskCleanUp, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Pnl_WindowsUpdate.ResumeLayout(False)
         Me.Pnl_WindowsUpdate.PerformLayout()
         CType(Me.PicBox_WinUpdate, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel20.ResumeLayout(False)
+        Me.Panel20.PerformLayout()
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel10.ResumeLayout(False)
         Me.Panel10.PerformLayout()
         CType(Me.PictureBox32, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
         CType(Me.PicBox_DrvUp, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel19.ResumeLayout(False)
+        Me.Panel19.PerformLayout()
+        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel18.ResumeLayout(False)
+        Me.Panel18.PerformLayout()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel8.ResumeLayout(False)
         Me.Panel8.PerformLayout()
         CType(Me.PicBox_TuneUp, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2684,6 +4299,8 @@ Partial Class cmdPnl
         Me.Panel54.ResumeLayout(False)
         Me.Panel54.PerformLayout()
         CType(Me.PictureBox37, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ListView_Cmd.ResumeLayout(False)
+        Me.ListView_Cmd.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -2753,14 +4370,13 @@ Partial Class cmdPnl
     Friend WithEvents Btn_Security As Button
     Friend WithEvents Btn_Icon As ImageList
     Friend WithEvents NotifyIcon As NotifyIcon
-    Friend WithEvents ListView_Cmd As ListView
+    Friend WithEvents ListView_Cmd2 As ListView
     Friend WithEvents ColumnHeader1 As ColumnHeader
     Friend WithEvents ColumnHeader2 As ColumnHeader
     Friend WithEvents ColumnHeader3 As ColumnHeader
     Friend WithEvents Colapse_Events As Timer
     Friend WithEvents ImageList_CommandButton As ImageList
     Friend WithEvents Button29 As Button
-    Friend WithEvents Button30 As Button
     Friend WithEvents ImageList_Events As ImageList
     Friend WithEvents Timer_LetterByLetter As Timer
     Friend WithEvents Label1 As Label
@@ -2773,7 +4389,6 @@ Partial Class cmdPnl
     Friend WithEvents Lbl_More_DiskC As Label
     Friend WithEvents Lbl_MoreDism As Label
     Friend WithEvents Lbl_MoreDrvUp As Label
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents CheckBox1 As CheckBox
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox5 As TextBox
@@ -2866,5 +4481,118 @@ Partial Class cmdPnl
     Friend WithEvents PictureBox37 As PictureBox
     Friend WithEvents Button37 As Button
     Friend WithEvents Label70 As Label
+    Friend WithEvents ListView_Cmd As Panel
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Panel17 As Panel
+    Friend WithEvents TextBox23 As TextBox
+    Friend WithEvents Label21 As Label
+    Friend WithEvents Label22 As Label
+    Friend WithEvents ProgressBar7 As ProgressBar
+    Friend WithEvents Label24 As Label
+    Friend WithEvents Button7 As Button
+    Friend WithEvents PictureBox7 As PictureBox
+    Friend WithEvents CheckBox7 As CheckBox
+    Friend WithEvents CheckBox6 As CheckBox
+    Friend WithEvents CheckBox5 As CheckBox
+    Friend WithEvents CheckBox4 As CheckBox
+    Friend WithEvents CheckBox3 As CheckBox
+    Friend WithEvents CheckBox2 As CheckBox
+    Friend WithEvents Panel16 As Panel
+    Friend WithEvents TextBox22 As TextBox
+    Friend WithEvents Label18 As Label
+    Friend WithEvents Label19 As Label
+    Friend WithEvents ProgressBar6 As ProgressBar
+    Friend WithEvents Label20 As Label
+    Friend WithEvents PictureBox6 As PictureBox
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents TextBox21 As TextBox
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Label16 As Label
+    Friend WithEvents ProgressBar5 As ProgressBar
+    Friend WithEvents PictureBox5 As PictureBox
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Label17 As Label
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents TextBox20 As TextBox
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents ProgressBar4 As ProgressBar
+    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents TextBox19 As TextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents ProgressBar2 As ProgressBar
+    Friend WithEvents ProgressBar3 As ProgressBar
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Label11 As Label
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents TextBox18 As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents ProgressBar1 As ProgressBar
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Panel23 As Panel
+    Friend WithEvents TextBox29 As TextBox
+    Friend WithEvents Label42 As Label
+    Friend WithEvents Label43 As Label
+    Friend WithEvents ProgressBar14 As ProgressBar
+    Friend WithEvents Label71 As Label
+    Friend WithEvents Button13 As Button
+    Friend WithEvents PictureBox14 As PictureBox
+    Friend WithEvents CheckBox19 As CheckBox
+    Friend WithEvents CheckBox18 As CheckBox
+    Friend WithEvents CheckBox17 As CheckBox
+    Friend WithEvents CheckBox9 As CheckBox
+    Friend WithEvents CheckBox20 As CheckBox
+    Friend WithEvents CheckBox8 As CheckBox
+    Friend WithEvents Panel22 As Panel
+    Friend WithEvents TextBox28 As TextBox
+    Friend WithEvents Label39 As Label
+    Friend WithEvents Label40 As Label
+    Friend WithEvents ProgressBar13 As ProgressBar
+    Friend WithEvents Label41 As Label
+    Friend WithEvents PictureBox13 As PictureBox
+    Friend WithEvents Button12 As Button
+    Friend WithEvents Panel21 As Panel
+    Friend WithEvents TextBox27 As TextBox
+    Friend WithEvents Label36 As Label
+    Friend WithEvents Label37 As Label
+    Friend WithEvents ProgressBar12 As ProgressBar
+    Friend WithEvents PictureBox12 As PictureBox
+    Friend WithEvents Button11 As Button
+    Friend WithEvents Label38 As Label
+    Friend WithEvents Panel20 As Panel
+    Friend WithEvents TextBox26 As TextBox
+    Friend WithEvents Label33 As Label
+    Friend WithEvents Label34 As Label
+    Friend WithEvents Label35 As Label
+    Friend WithEvents ProgressBar11 As ProgressBar
+    Friend WithEvents PictureBox11 As PictureBox
+    Friend WithEvents Button10 As Button
+    Friend WithEvents Panel19 As Panel
+    Friend WithEvents TextBox25 As TextBox
+    Friend WithEvents Label30 As Label
+    Friend WithEvents Label31 As Label
+    Friend WithEvents ProgressBar9 As ProgressBar
+    Friend WithEvents ProgressBar10 As ProgressBar
+    Friend WithEvents Button9 As Button
+    Friend WithEvents Label32 As Label
+    Friend WithEvents PictureBox10 As PictureBox
+    Friend WithEvents Panel18 As Panel
+    Friend WithEvents TextBox24 As TextBox
+    Friend WithEvents Label25 As Label
+    Friend WithEvents Label28 As Label
+    Friend WithEvents ProgressBar8 As ProgressBar
+    Friend WithEvents PictureBox8 As PictureBox
+    Friend WithEvents Button8 As Button
+    Friend WithEvents Label29 As Label
+    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Btn_Test As Button
 End Class

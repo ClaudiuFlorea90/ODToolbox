@@ -82,6 +82,10 @@ Partial Class VirusScanForm
         Me.ComboBox4 = New System.Windows.Forms.ComboBox()
         Me.ComboBox5 = New System.Windows.Forms.ComboBox()
         Me.Pnl_Reports = New System.Windows.Forms.Panel()
+        Me.Panel11 = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label102 = New System.Windows.Forms.Label()
+        Me.Label101 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -126,31 +130,19 @@ Partial Class VirusScanForm
         Me.Label55 = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label69 = New System.Windows.Forms.Label()
+        Me.Label66 = New System.Windows.Forms.Label()
         Me.Label68 = New System.Windows.Forms.Label()
         Me.Label67 = New System.Windows.Forms.Label()
-        Me.Label66 = New System.Windows.Forms.Label()
+        Me.CheckBox7 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox9 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox8 = New System.Windows.Forms.CheckBox()
         Me.Panel_Scanner = New System.Windows.Forms.Panel()
         Me.PanelLastScan = New System.Windows.Forms.Panel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label72 = New System.Windows.Forms.Label()
-        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
+        Me.Btn_ViewRaportSlideS = New FontAwesome.Sharp.IconButton()
         Me.Label70 = New System.Windows.Forms.Label()
         Me.Label71 = New System.Windows.Forms.Label()
-        Me.PanelProtection = New System.Windows.Forms.Panel()
-        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
-        Me.Label95 = New System.Windows.Forms.Label()
-        Me.Label96 = New System.Windows.Forms.Label()
-        Me.Label97 = New System.Windows.Forms.Label()
-        Me.IconButton2 = New FontAwesome.Sharp.IconButton()
-        Me.PanelVirusScanSlideshow = New System.Windows.Forms.Panel()
-        Me.PictureBox10 = New System.Windows.Forms.PictureBox()
-        Me.Label100 = New System.Windows.Forms.Label()
-        Me.Panel12 = New System.Windows.Forms.Panel()
-        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
-        Me.Label89 = New System.Windows.Forms.Label()
-        Me.IconButton3 = New FontAwesome.Sharp.IconButton()
-        Me.Label83 = New System.Windows.Forms.Label()
-        Me.Label76 = New System.Windows.Forms.Label()
         Me.Panel_Expand_Scanner = New System.Windows.Forms.Panel()
         Me.Label73 = New System.Windows.Forms.Label()
         Me.Label53 = New System.Windows.Forms.Label()
@@ -184,7 +176,24 @@ Partial Class VirusScanForm
         Me.Btn_StartScan = New System.Windows.Forms.Button()
         Me.Label31 = New System.Windows.Forms.Label()
         Me.Label54 = New System.Windows.Forms.Label()
-        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
+        Me.PanelProtection = New System.Windows.Forms.Panel()
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+        Me.Label95 = New System.Windows.Forms.Label()
+        Me.Label96 = New System.Windows.Forms.Label()
+        Me.Label97 = New System.Windows.Forms.Label()
+        Me.Btn_protec_sh = New FontAwesome.Sharp.IconButton()
+        Me.Panel12 = New System.Windows.Forms.Panel()
+        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
+        Me.Label89 = New System.Windows.Forms.Label()
+        Me.Btn_scTask_Slideshow = New FontAwesome.Sharp.IconButton()
+        Me.Label83 = New System.Windows.Forms.Label()
+        Me.Label76 = New System.Windows.Forms.Label()
+        Me.PanelVirusScanSlideshow = New System.Windows.Forms.Panel()
+        Me.Label99 = New System.Windows.Forms.Label()
+        Me.Label98 = New System.Windows.Forms.Label()
+        Me.ProgressBarVirusScan = New System.Windows.Forms.ProgressBar()
+        Me.PictureBox10 = New System.Windows.Forms.PictureBox()
+        Me.Label100 = New System.Windows.Forms.Label()
         Me.Timer_Expand_History = New System.Windows.Forms.Timer(Me.components)
         Me.Timer_Expand_ScanPnl = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
@@ -192,6 +201,7 @@ Partial Class VirusScanForm
         Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.DataGridViewImageColumn2 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Pnl_ScanCompleted = New System.Windows.Forms.Panel()
+        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.Btn_OK = New System.Windows.Forms.Button()
@@ -231,10 +241,8 @@ Partial Class VirusScanForm
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label90 = New System.Windows.Forms.Label()
         Me.Label81 = New System.Windows.Forms.Label()
-        Me.Label88 = New System.Windows.Forms.Label()
         Me.LblScannedItems = New System.Windows.Forms.Label()
         Me.Label87 = New System.Windows.Forms.Label()
-        Me.Label86 = New System.Windows.Forms.Label()
         Me.Label80 = New System.Windows.Forms.Label()
         Me.Label85 = New System.Windows.Forms.Label()
         Me.Label79 = New System.Windows.Forms.Label()
@@ -245,19 +253,19 @@ Partial Class VirusScanForm
         Me.Label75 = New System.Windows.Forms.Label()
         Me.Label40 = New System.Windows.Forms.Label()
         Me.Label39 = New System.Windows.Forms.Label()
-        Me.Toggle5 = New Script_Agent.Toggle()
-        Me.Toggle4 = New Script_Agent.Toggle()
-        Me.Toggle1 = New Script_Agent.Toggle()
-        Me.Toggle3 = New Script_Agent.Toggle()
         Me.Toggle6 = New Script_Agent.Toggle()
         Me.Toggle2 = New Script_Agent.Toggle()
-        Me.ProgressBarVirusScan = New System.Windows.Forms.ProgressBar()
-        Me.Label98 = New System.Windows.Forms.Label()
+        Me.ToggleAntiRansom = New Script_Agent.Toggle()
+        Me.ToggleAntispy = New Script_Agent.Toggle()
+        Me.ToggleRealTime = New Script_Agent.Toggle()
+        Me.ToggleWebProtection = New Script_Agent.Toggle()
         Me.Panel_Scheduler.SuspendLayout()
         Me.Panel9.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel_Scheduler_Edit.SuspendLayout()
         Me.Pnl_Reports.SuspendLayout()
+        Me.Panel11.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Pnl_VirusFound.SuspendLayout()
         Me.Panel_history.SuspendLayout()
@@ -268,18 +276,18 @@ Partial Class VirusScanForm
         Me.Panel_Scanner.SuspendLayout()
         Me.PanelLastScan.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.PanelProtection.SuspendLayout()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.PanelVirusScanSlideshow.SuspendLayout()
-        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel12.SuspendLayout()
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel_Expand_Scanner.SuspendLayout()
         CType(Me.PicBox_ScanPng, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel6.SuspendLayout()
         Me.Panel7.SuspendLayout()
-        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelProtection.SuspendLayout()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel12.SuspendLayout()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelVirusScanSlideshow.SuspendLayout()
+        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Pnl_ScanCompleted.SuspendLayout()
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel8.SuspendLayout()
         Me.Pnl_IsScanning.SuspendLayout()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -412,7 +420,7 @@ Partial Class VirusScanForm
         Me.Panel_Scheduler.Controls.Add(Me.DataGridView1)
         Me.Panel_Scheduler.Controls.Add(Me.Label41)
         Me.Panel_Scheduler.Controls.Add(Me.Label21)
-        Me.Panel_Scheduler.Location = New System.Drawing.Point(745, 1070)
+        Me.Panel_Scheduler.Location = New System.Drawing.Point(1472, 633)
         Me.Panel_Scheduler.Name = "Panel_Scheduler"
         Me.Panel_Scheduler.Size = New System.Drawing.Size(668, 599)
         Me.Panel_Scheduler.TabIndex = 7
@@ -677,7 +685,7 @@ Partial Class VirusScanForm
         '
         'Panel_Scheduler_Edit
         '
-        Me.Panel_Scheduler_Edit.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.Panel_Scheduler_Edit.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(140, Byte), Integer), CType(CType(116, Byte), Integer))
         Me.Panel_Scheduler_Edit.Controls.Add(Me.Label38)
         Me.Panel_Scheduler_Edit.Controls.Add(Me.CheckBox6)
         Me.Panel_Scheduler_Edit.Controls.Add(Me.Button5)
@@ -690,9 +698,9 @@ Partial Class VirusScanForm
         Me.Panel_Scheduler_Edit.Controls.Add(Me.Label42)
         Me.Panel_Scheduler_Edit.Controls.Add(Me.ComboBox4)
         Me.Panel_Scheduler_Edit.Controls.Add(Me.ComboBox5)
-        Me.Panel_Scheduler_Edit.Location = New System.Drawing.Point(1386, 413)
+        Me.Panel_Scheduler_Edit.Location = New System.Drawing.Point(1320, 215)
         Me.Panel_Scheduler_Edit.Name = "Panel_Scheduler_Edit"
-        Me.Panel_Scheduler_Edit.Size = New System.Drawing.Size(668, 417)
+        Me.Panel_Scheduler_Edit.Size = New System.Drawing.Size(668, 222)
         Me.Panel_Scheduler_Edit.TabIndex = 8
         '
         'Label38
@@ -806,7 +814,7 @@ Partial Class VirusScanForm
         Me.Label42.AutoSize = True
         Me.Label42.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label42.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label42.Location = New System.Drawing.Point(359, 9)
+        Me.Label42.Location = New System.Drawing.Point(302, 190)
         Me.Label42.Name = "Label42"
         Me.Label42.Size = New System.Drawing.Size(92, 19)
         Me.Label42.TabIndex = 1
@@ -844,22 +852,67 @@ Partial Class VirusScanForm
         'Pnl_Reports
         '
         Me.Pnl_Reports.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Pnl_Reports.Controls.Add(Me.Panel11)
         Me.Pnl_Reports.Controls.Add(Me.Label2)
         Me.Pnl_Reports.Controls.Add(Me.DataGridView2)
-        Me.Pnl_Reports.Location = New System.Drawing.Point(684, 871)
+        Me.Pnl_Reports.Location = New System.Drawing.Point(1472, 515)
         Me.Pnl_Reports.Name = "Pnl_Reports"
         Me.Pnl_Reports.Size = New System.Drawing.Size(697, 651)
         Me.Pnl_Reports.TabIndex = 9
+        '
+        'Panel11
+        '
+        Me.Panel11.Controls.Add(Me.PictureBox1)
+        Me.Panel11.Controls.Add(Me.Label102)
+        Me.Panel11.Controls.Add(Me.Label101)
+        Me.Panel11.Location = New System.Drawing.Point(13, 215)
+        Me.Panel11.Name = "Panel11"
+        Me.Panel11.Size = New System.Drawing.Size(673, 164)
+        Me.Panel11.TabIndex = 3
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Script_Agent.My.Resources.Resources.leaf
+        Me.PictureBox1.Location = New System.Drawing.Point(169, 3)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(143, 120)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 2
+        Me.PictureBox1.TabStop = False
+        '
+        'Label102
+        '
+        Me.Label102.AutoSize = True
+        Me.Label102.Font = New System.Drawing.Font("Microsoft PhagsPa", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label102.ForeColor = System.Drawing.Color.Silver
+        Me.Label102.Image = Global.Script_Agent.My.Resources.Resources.play
+        Me.Label102.Location = New System.Drawing.Point(329, 55)
+        Me.Label102.Name = "Label102"
+        Me.Label102.Size = New System.Drawing.Size(150, 36)
+        Me.Label102.TabIndex = 1
+        Me.Label102.Text = "Run a scan"
+        '
+        'Label101
+        '
+        Me.Label101.AutoSize = True
+        Me.Label101.Font = New System.Drawing.Font("Microsoft PhagsPa", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label101.ForeColor = System.Drawing.Color.Silver
+        Me.Label101.Location = New System.Drawing.Point(172, 127)
+        Me.Label101.Name = "Label101"
+        Me.Label101.Size = New System.Drawing.Size(135, 27)
+        Me.Label101.TabIndex = 0
+        Me.Label101.Text = "Nothing here"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(18, 7)
+        Me.Label2.Location = New System.Drawing.Point(642, 298)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(44, 13)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Reports"
+        Me.Label2.Visible = False
         '
         'DataGridView2
         '
@@ -890,7 +943,7 @@ Partial Class VirusScanForm
         Me.DataGridView2.DefaultCellStyle = DataGridViewCellStyle6
         Me.DataGridView2.EnableHeadersVisualStyles = False
         Me.DataGridView2.GridColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        Me.DataGridView2.Location = New System.Drawing.Point(3, 41)
+        Me.DataGridView2.Location = New System.Drawing.Point(3, 2)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.ReadOnly = True
         Me.DataGridView2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
@@ -907,7 +960,7 @@ Partial Class VirusScanForm
         DataGridViewCellStyle8.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.DataGridView2.RowsDefaultCellStyle = DataGridViewCellStyle8
         Me.DataGridView2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.DataGridView2.Size = New System.Drawing.Size(653, 179)
+        Me.DataGridView2.Size = New System.Drawing.Size(673, 151)
         Me.DataGridView2.TabIndex = 2
         '
         'DataGridViewTextBoxColumn1
@@ -955,7 +1008,7 @@ Partial Class VirusScanForm
         '
         'Pnl_VirusFound
         '
-        Me.Pnl_VirusFound.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Pnl_VirusFound.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
         Me.Pnl_VirusFound.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Pnl_VirusFound.Controls.Add(Me.Button1)
         Me.Pnl_VirusFound.Controls.Add(Me.Label36)
@@ -970,9 +1023,9 @@ Partial Class VirusScanForm
         Me.Pnl_VirusFound.Controls.Add(Me.Panel2)
         Me.Pnl_VirusFound.Controls.Add(Me.Label43)
         Me.Pnl_VirusFound.Controls.Add(Me.Label44)
-        Me.Pnl_VirusFound.Location = New System.Drawing.Point(705, 516)
+        Me.Pnl_VirusFound.Location = New System.Drawing.Point(1677, 170)
         Me.Pnl_VirusFound.Name = "Pnl_VirusFound"
-        Me.Pnl_VirusFound.Size = New System.Drawing.Size(641, 287)
+        Me.Pnl_VirusFound.Size = New System.Drawing.Size(648, 572)
         Me.Pnl_VirusFound.TabIndex = 10
         '
         'Button1
@@ -1096,7 +1149,7 @@ Partial Class VirusScanForm
         Me.Panel_history.Controls.Add(Me.Label46)
         Me.Panel_history.Controls.Add(Me.Label57)
         Me.Panel_history.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Panel_history.Location = New System.Drawing.Point(12, 319)
+        Me.Panel_history.Location = New System.Drawing.Point(10, 315)
         Me.Panel_history.MaximumSize = New System.Drawing.Size(654, 579)
         Me.Panel_history.MinimumSize = New System.Drawing.Size(199, 263)
         Me.Panel_history.Name = "Panel_history"
@@ -1108,7 +1161,7 @@ Partial Class VirusScanForm
         Me.Label63.AutoSize = True
         Me.Label63.Font = New System.Drawing.Font("Calibri", 11.0!)
         Me.Label63.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.Label63.Location = New System.Drawing.Point(492, 83)
+        Me.Label63.Location = New System.Drawing.Point(179, 227)
         Me.Label63.Name = "Label63"
         Me.Label63.Size = New System.Drawing.Size(15, 18)
         Me.Label63.TabIndex = 19
@@ -1119,7 +1172,7 @@ Partial Class VirusScanForm
         Me.Label65.AutoSize = True
         Me.Label65.Font = New System.Drawing.Font("Calibri", 11.0!)
         Me.Label65.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.Label65.Location = New System.Drawing.Point(176, 226)
+        Me.Label65.Location = New System.Drawing.Point(488, 100)
         Me.Label65.Name = "Label65"
         Me.Label65.Size = New System.Drawing.Size(15, 18)
         Me.Label65.TabIndex = 19
@@ -1129,7 +1182,7 @@ Partial Class VirusScanForm
         '
         Me.DataGridView3.AllowUserToAddRows = False
         Me.DataGridView3.AllowUserToDeleteRows = False
-        Me.DataGridView3.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.DataGridView3.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(130, Byte), Integer))
         Me.DataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridView3.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.DataGridView3.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
@@ -1154,7 +1207,7 @@ Partial Class VirusScanForm
         Me.DataGridView3.DefaultCellStyle = DataGridViewCellStyle10
         Me.DataGridView3.EnableHeadersVisualStyles = False
         Me.DataGridView3.GridColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        Me.DataGridView3.Location = New System.Drawing.Point(3, 264)
+        Me.DataGridView3.Location = New System.Drawing.Point(21, 345)
         Me.DataGridView3.Name = "DataGridView3"
         Me.DataGridView3.ReadOnly = True
         Me.DataGridView3.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
@@ -1171,7 +1224,7 @@ Partial Class VirusScanForm
         DataGridViewCellStyle12.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.DataGridView3.RowsDefaultCellStyle = DataGridViewCellStyle12
         Me.DataGridView3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.DataGridView3.Size = New System.Drawing.Size(646, 310)
+        Me.DataGridView3.Size = New System.Drawing.Size(602, 225)
         Me.DataGridView3.TabIndex = 2
         '
         'DataGridViewTextBoxColumn4
@@ -1222,7 +1275,7 @@ Partial Class VirusScanForm
         Me.Label62.AutoSize = True
         Me.Label62.Font = New System.Drawing.Font("Calibri", 11.0!)
         Me.Label62.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.Label62.Location = New System.Drawing.Point(492, 62)
+        Me.Label62.Location = New System.Drawing.Point(179, 206)
         Me.Label62.Name = "Label62"
         Me.Label62.Size = New System.Drawing.Size(15, 18)
         Me.Label62.TabIndex = 19
@@ -1233,7 +1286,7 @@ Partial Class VirusScanForm
         Me.Label60.AutoSize = True
         Me.Label60.Font = New System.Drawing.Font("Calibri", 11.0!)
         Me.Label60.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.Label60.Location = New System.Drawing.Point(176, 205)
+        Me.Label60.Location = New System.Drawing.Point(488, 79)
         Me.Label60.Name = "Label60"
         Me.Label60.Size = New System.Drawing.Size(15, 18)
         Me.Label60.TabIndex = 19
@@ -1244,7 +1297,7 @@ Partial Class VirusScanForm
         Me.Label61.AutoSize = True
         Me.Label61.Font = New System.Drawing.Font("Calibri", 11.0!)
         Me.Label61.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.Label61.Location = New System.Drawing.Point(492, 40)
+        Me.Label61.Location = New System.Drawing.Point(179, 184)
         Me.Label61.Name = "Label61"
         Me.Label61.Size = New System.Drawing.Size(15, 18)
         Me.Label61.TabIndex = 19
@@ -1255,7 +1308,7 @@ Partial Class VirusScanForm
         Me.Label59.AutoSize = True
         Me.Label59.Font = New System.Drawing.Font("Calibri", 11.0!)
         Me.Label59.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.Label59.Location = New System.Drawing.Point(176, 183)
+        Me.Label59.Location = New System.Drawing.Point(488, 57)
         Me.Label59.Name = "Label59"
         Me.Label59.Size = New System.Drawing.Size(15, 18)
         Me.Label59.TabIndex = 19
@@ -1290,7 +1343,7 @@ Partial Class VirusScanForm
         Me.Label49.AutoSize = True
         Me.Label49.Font = New System.Drawing.Font("Calibri", 11.0!)
         Me.Label49.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.Label49.Location = New System.Drawing.Point(319, 85)
+        Me.Label49.Location = New System.Drawing.Point(6, 229)
         Me.Label49.Name = "Label49"
         Me.Label49.Size = New System.Drawing.Size(161, 18)
         Me.Label49.TabIndex = 5
@@ -1301,7 +1354,7 @@ Partial Class VirusScanForm
         Me.Label64.AutoSize = True
         Me.Label64.Font = New System.Drawing.Font("Calibri", 11.0!)
         Me.Label64.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.Label64.Location = New System.Drawing.Point(3, 228)
+        Me.Label64.Location = New System.Drawing.Point(315, 102)
         Me.Label64.Name = "Label64"
         Me.Label64.Size = New System.Drawing.Size(161, 18)
         Me.Label64.TabIndex = 5
@@ -1312,7 +1365,7 @@ Partial Class VirusScanForm
         Me.Label47.AutoSize = True
         Me.Label47.Font = New System.Drawing.Font("Calibri", 11.0!)
         Me.Label47.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.Label47.Location = New System.Drawing.Point(319, 62)
+        Me.Label47.Location = New System.Drawing.Point(6, 206)
         Me.Label47.Name = "Label47"
         Me.Label47.Size = New System.Drawing.Size(161, 18)
         Me.Label47.TabIndex = 5
@@ -1323,7 +1376,7 @@ Partial Class VirusScanForm
         Me.Label58.AutoSize = True
         Me.Label58.Font = New System.Drawing.Font("Calibri", 11.0!)
         Me.Label58.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.Label58.Location = New System.Drawing.Point(3, 205)
+        Me.Label58.Location = New System.Drawing.Point(315, 79)
         Me.Label58.Name = "Label58"
         Me.Label58.Size = New System.Drawing.Size(161, 18)
         Me.Label58.TabIndex = 5
@@ -1334,7 +1387,7 @@ Partial Class VirusScanForm
         Me.Label46.AutoSize = True
         Me.Label46.Font = New System.Drawing.Font("Calibri", 11.0!)
         Me.Label46.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.Label46.Location = New System.Drawing.Point(319, 38)
+        Me.Label46.Location = New System.Drawing.Point(6, 182)
         Me.Label46.Name = "Label46"
         Me.Label46.Size = New System.Drawing.Size(121, 18)
         Me.Label46.TabIndex = 5
@@ -1345,7 +1398,7 @@ Partial Class VirusScanForm
         Me.Label57.AutoSize = True
         Me.Label57.Font = New System.Drawing.Font("Calibri", 11.0!)
         Me.Label57.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.Label57.Location = New System.Drawing.Point(3, 181)
+        Me.Label57.Location = New System.Drawing.Point(315, 55)
         Me.Label57.Name = "Label57"
         Me.Label57.Size = New System.Drawing.Size(121, 18)
         Me.Label57.TabIndex = 5
@@ -1356,17 +1409,17 @@ Partial Class VirusScanForm
         Me.Panel_Protection.BackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(130, Byte), Integer))
         Me.Panel_Protection.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel_Protection.Controls.Add(Me.Label55)
-        Me.Panel_Protection.Controls.Add(Me.Toggle5)
-        Me.Panel_Protection.Controls.Add(Me.Toggle4)
+        Me.Panel_Protection.Controls.Add(Me.ToggleAntiRansom)
         Me.Panel_Protection.Controls.Add(Me.PictureBox3)
-        Me.Panel_Protection.Controls.Add(Me.Toggle1)
+        Me.Panel_Protection.Controls.Add(Me.ToggleAntispy)
+        Me.Panel_Protection.Controls.Add(Me.ToggleRealTime)
+        Me.Panel_Protection.Controls.Add(Me.ToggleWebProtection)
         Me.Panel_Protection.Controls.Add(Me.Label69)
-        Me.Panel_Protection.Controls.Add(Me.Label68)
-        Me.Panel_Protection.Controls.Add(Me.Toggle3)
-        Me.Panel_Protection.Controls.Add(Me.Label67)
         Me.Panel_Protection.Controls.Add(Me.Label66)
+        Me.Panel_Protection.Controls.Add(Me.Label68)
+        Me.Panel_Protection.Controls.Add(Me.Label67)
         Me.Panel_Protection.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Panel_Protection.Location = New System.Drawing.Point(456, 319)
+        Me.Panel_Protection.Location = New System.Drawing.Point(453, 315)
         Me.Panel_Protection.MaximumSize = New System.Drawing.Size(654, 579)
         Me.Panel_Protection.MinimumSize = New System.Drawing.Size(199, 263)
         Me.Panel_Protection.Name = "Panel_Protection"
@@ -1400,56 +1453,93 @@ Partial Class VirusScanForm
         'Label69
         '
         Me.Label69.AutoSize = True
-        Me.Label69.Font = New System.Drawing.Font("Calibri", 11.0!)
+        Me.Label69.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label69.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.Label69.Location = New System.Drawing.Point(49, 227)
+        Me.Label69.Location = New System.Drawing.Point(44, 238)
         Me.Label69.Name = "Label69"
-        Me.Label69.Size = New System.Drawing.Size(118, 18)
+        Me.Label69.Size = New System.Drawing.Size(99, 17)
         Me.Label69.TabIndex = 5
-        Me.Label69.Text = "Anti-Ransomware"
+        Me.Label69.Text = "Web protection"
+        '
+        'Label66
+        '
+        Me.Label66.AutoSize = True
+        Me.Label66.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label66.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
+        Me.Label66.Location = New System.Drawing.Point(44, 171)
+        Me.Label66.Name = "Label66"
+        Me.Label66.Size = New System.Drawing.Size(129, 17)
+        Me.Label66.TabIndex = 5
+        Me.Label66.Text = "Antispyware enabled"
         '
         'Label68
         '
         Me.Label68.AutoSize = True
-        Me.Label68.Font = New System.Drawing.Font("Calibri", 11.0!)
+        Me.Label68.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label68.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.Label68.Location = New System.Drawing.Point(49, 208)
+        Me.Label68.Location = New System.Drawing.Point(44, 215)
         Me.Label68.Name = "Label68"
-        Me.Label68.Size = New System.Drawing.Size(103, 18)
+        Me.Label68.Size = New System.Drawing.Size(99, 17)
         Me.Label68.TabIndex = 5
         Me.Label68.Text = "Web protection"
         '
         'Label67
         '
         Me.Label67.AutoSize = True
-        Me.Label67.Font = New System.Drawing.Font("Calibri", 11.0!)
+        Me.Label67.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label67.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.Label67.Location = New System.Drawing.Point(49, 185)
+        Me.Label67.Location = New System.Drawing.Point(42, 193)
         Me.Label67.Name = "Label67"
-        Me.Label67.Size = New System.Drawing.Size(156, 18)
+        Me.Label67.Size = New System.Drawing.Size(154, 17)
         Me.Label67.TabIndex = 5
         Me.Label67.Text = "Real-Time protection      "
         '
-        'Label66
+        'CheckBox7
         '
-        Me.Label66.AutoSize = True
-        Me.Label66.Font = New System.Drawing.Font("Calibri", 11.0!)
-        Me.Label66.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.Label66.Location = New System.Drawing.Point(49, 167)
-        Me.Label66.Name = "Label66"
-        Me.Label66.Size = New System.Drawing.Size(139, 18)
-        Me.Label66.TabIndex = 5
-        Me.Label66.Text = "Antispyware enabled"
+        Me.CheckBox7.AutoSize = True
+        Me.CheckBox7.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!)
+        Me.CheckBox7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
+        Me.CheckBox7.Location = New System.Drawing.Point(943, 635)
+        Me.CheckBox7.Name = "CheckBox7"
+        Me.CheckBox7.Size = New System.Drawing.Size(148, 21)
+        Me.CheckBox7.TabIndex = 22
+        Me.CheckBox7.Text = "Antispyware enabled"
+        Me.CheckBox7.UseVisualStyleBackColor = True
+        '
+        'CheckBox9
+        '
+        Me.CheckBox9.AutoSize = True
+        Me.CheckBox9.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!)
+        Me.CheckBox9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
+        Me.CheckBox9.Location = New System.Drawing.Point(943, 681)
+        Me.CheckBox9.Name = "CheckBox9"
+        Me.CheckBox9.Size = New System.Drawing.Size(118, 21)
+        Me.CheckBox9.TabIndex = 22
+        Me.CheckBox9.Text = "Web protection"
+        Me.CheckBox9.UseVisualStyleBackColor = True
+        '
+        'CheckBox8
+        '
+        Me.CheckBox8.AutoSize = True
+        Me.CheckBox8.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!)
+        Me.CheckBox8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
+        Me.CheckBox8.Location = New System.Drawing.Point(943, 658)
+        Me.CheckBox8.Name = "CheckBox8"
+        Me.CheckBox8.Size = New System.Drawing.Size(173, 21)
+        Me.CheckBox8.TabIndex = 22
+        Me.CheckBox8.Text = "Real-Time protection      "
+        Me.CheckBox8.UseVisualStyleBackColor = True
         '
         'Panel_Scanner
         '
         Me.Panel_Scanner.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
         Me.Panel_Scanner.Controls.Add(Me.PanelLastScan)
         Me.Panel_Scanner.Controls.Add(Me.Panel_history)
-        Me.Panel_Scanner.Controls.Add(Me.PanelProtection)
-        Me.Panel_Scanner.Controls.Add(Me.Panel_Protection)
-        Me.Panel_Scanner.Controls.Add(Me.Panel12)
         Me.Panel_Scanner.Controls.Add(Me.Panel_Expand_Scanner)
+        Me.Panel_Scanner.Controls.Add(Me.Panel_Protection)
+        Me.Panel_Scanner.Controls.Add(Me.PanelProtection)
+        Me.Panel_Scanner.Controls.Add(Me.Panel12)
+        Me.Panel_Scanner.Controls.Add(Me.PanelVirusScanSlideshow)
         Me.Panel_Scanner.Location = New System.Drawing.Point(2, 40)
         Me.Panel_Scanner.Name = "Panel_Scanner"
         Me.Panel_Scanner.Size = New System.Drawing.Size(669, 634)
@@ -1459,10 +1549,10 @@ Partial Class VirusScanForm
         '
         Me.PanelLastScan.Controls.Add(Me.PictureBox2)
         Me.PanelLastScan.Controls.Add(Me.Label72)
-        Me.PanelLastScan.Controls.Add(Me.IconButton1)
+        Me.PanelLastScan.Controls.Add(Me.Btn_ViewRaportSlideS)
         Me.PanelLastScan.Controls.Add(Me.Label70)
         Me.PanelLastScan.Controls.Add(Me.Label71)
-        Me.PanelLastScan.Location = New System.Drawing.Point(638, 159)
+        Me.PanelLastScan.Location = New System.Drawing.Point(578, 189)
         Me.PanelLastScan.Name = "PanelLastScan"
         Me.PanelLastScan.Size = New System.Drawing.Size(471, 143)
         Me.PanelLastScan.TabIndex = 22
@@ -1488,18 +1578,18 @@ Partial Class VirusScanForm
         Me.Label72.TabIndex = 5
         Me.Label72.Text = "Last scan date"
         '
-        'IconButton1
+        'Btn_ViewRaportSlideS
         '
-        Me.IconButton1.ForeColor = System.Drawing.Color.Black
-        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.None
-        Me.IconButton1.IconColor = System.Drawing.Color.Black
-        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton1.Location = New System.Drawing.Point(212, 89)
-        Me.IconButton1.Name = "IconButton1"
-        Me.IconButton1.Size = New System.Drawing.Size(75, 23)
-        Me.IconButton1.TabIndex = 17
-        Me.IconButton1.Text = "View raport"
-        Me.IconButton1.UseVisualStyleBackColor = True
+        Me.Btn_ViewRaportSlideS.ForeColor = System.Drawing.Color.Black
+        Me.Btn_ViewRaportSlideS.IconChar = FontAwesome.Sharp.IconChar.None
+        Me.Btn_ViewRaportSlideS.IconColor = System.Drawing.Color.Black
+        Me.Btn_ViewRaportSlideS.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.Btn_ViewRaportSlideS.Location = New System.Drawing.Point(212, 89)
+        Me.Btn_ViewRaportSlideS.Name = "Btn_ViewRaportSlideS"
+        Me.Btn_ViewRaportSlideS.Size = New System.Drawing.Size(75, 23)
+        Me.Btn_ViewRaportSlideS.TabIndex = 17
+        Me.Btn_ViewRaportSlideS.Text = "View raport"
+        Me.Btn_ViewRaportSlideS.UseVisualStyleBackColor = True
         '
         'Label70
         '
@@ -1523,174 +1613,6 @@ Partial Class VirusScanForm
         Me.Label71.TabIndex = 5
         Me.Label71.Text = "Your last scan"
         '
-        'PanelProtection
-        '
-        Me.PanelProtection.Controls.Add(Me.PictureBox7)
-        Me.PanelProtection.Controls.Add(Me.Label95)
-        Me.PanelProtection.Controls.Add(Me.Label96)
-        Me.PanelProtection.Controls.Add(Me.Label97)
-        Me.PanelProtection.Controls.Add(Me.IconButton2)
-        Me.PanelProtection.Location = New System.Drawing.Point(88, 60)
-        Me.PanelProtection.Name = "PanelProtection"
-        Me.PanelProtection.Size = New System.Drawing.Size(471, 143)
-        Me.PanelProtection.TabIndex = 22
-        '
-        'PictureBox7
-        '
-        Me.PictureBox7.Image = Global.Script_Agent.My.Resources.Resources.shield__1_
-        Me.PictureBox7.Location = New System.Drawing.Point(80, 10)
-        Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(118, 122)
-        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox7.TabIndex = 18
-        Me.PictureBox7.TabStop = False
-        '
-        'Label95
-        '
-        Me.Label95.AutoSize = True
-        Me.Label95.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label95.ForeColor = System.Drawing.Color.LightGray
-        Me.Label95.Location = New System.Drawing.Point(204, 74)
-        Me.Label95.Name = "Label95"
-        Me.Label95.Size = New System.Drawing.Size(149, 17)
-        Me.Label95.TabIndex = 5
-        Me.Label95.Text = "Last Threat Scan sumary"
-        '
-        'Label96
-        '
-        Me.Label96.AutoSize = True
-        Me.Label96.Font = New System.Drawing.Font("Microsoft PhagsPa", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label96.ForeColor = System.Drawing.Color.LightGray
-        Me.Label96.Location = New System.Drawing.Point(201, 44)
-        Me.Label96.Name = "Label96"
-        Me.Label96.Size = New System.Drawing.Size(120, 21)
-        Me.Label96.TabIndex = 5
-        Me.Label96.Text = "Your device is "
-        '
-        'Label97
-        '
-        Me.Label97.AutoSize = True
-        Me.Label97.Font = New System.Drawing.Font("Microsoft PhagsPa", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label97.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(113, Byte), Integer))
-        Me.Label97.Location = New System.Drawing.Point(316, 30)
-        Me.Label97.Name = "Label97"
-        Me.Label97.Size = New System.Drawing.Size(164, 42)
-        Me.Label97.TabIndex = 5
-        Me.Label97.Text = "protected"
-        '
-        'IconButton2
-        '
-        Me.IconButton2.ForeColor = System.Drawing.Color.Black
-        Me.IconButton2.IconChar = FontAwesome.Sharp.IconChar.None
-        Me.IconButton2.IconColor = System.Drawing.Color.Black
-        Me.IconButton2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton2.Location = New System.Drawing.Point(208, 97)
-        Me.IconButton2.Name = "IconButton2"
-        Me.IconButton2.Size = New System.Drawing.Size(75, 23)
-        Me.IconButton2.TabIndex = 17
-        Me.IconButton2.Text = "View Details"
-        Me.IconButton2.UseVisualStyleBackColor = True
-        '
-        'PanelVirusScanSlideshow
-        '
-        Me.PanelVirusScanSlideshow.Controls.Add(Me.Label98)
-        Me.PanelVirusScanSlideshow.Controls.Add(Me.ProgressBarVirusScan)
-        Me.PanelVirusScanSlideshow.Controls.Add(Me.PictureBox10)
-        Me.PanelVirusScanSlideshow.Controls.Add(Me.Label100)
-        Me.PanelVirusScanSlideshow.Location = New System.Drawing.Point(752, 100)
-        Me.PanelVirusScanSlideshow.Name = "PanelVirusScanSlideshow"
-        Me.PanelVirusScanSlideshow.Size = New System.Drawing.Size(471, 197)
-        Me.PanelVirusScanSlideshow.TabIndex = 22
-        '
-        'PictureBox10
-        '
-        Me.PictureBox10.Image = Global.Script_Agent.My.Resources.Resources.ezgif_2_bb09e2ffee
-        Me.PictureBox10.Location = New System.Drawing.Point(155, 10)
-        Me.PictureBox10.Name = "PictureBox10"
-        Me.PictureBox10.Size = New System.Drawing.Size(169, 98)
-        Me.PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox10.TabIndex = 18
-        Me.PictureBox10.TabStop = False
-        '
-        'Label100
-        '
-        Me.Label100.AutoSize = True
-        Me.Label100.Font = New System.Drawing.Font("Microsoft PhagsPa", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label100.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(113, Byte), Integer))
-        Me.Label100.Location = New System.Drawing.Point(104, 111)
-        Me.Label100.Name = "Label100"
-        Me.Label100.Size = New System.Drawing.Size(255, 32)
-        Me.Label100.TabIndex = 5
-        Me.Label100.Text = "Virus scan is running"
-        '
-        'Panel12
-        '
-        Me.Panel12.Controls.Add(Me.PictureBox9)
-        Me.Panel12.Controls.Add(Me.Label89)
-        Me.Panel12.Controls.Add(Me.IconButton3)
-        Me.Panel12.Controls.Add(Me.Label83)
-        Me.Panel12.Controls.Add(Me.Label76)
-        Me.Panel12.Location = New System.Drawing.Point(621, 6)
-        Me.Panel12.Name = "Panel12"
-        Me.Panel12.Size = New System.Drawing.Size(471, 143)
-        Me.Panel12.TabIndex = 22
-        '
-        'PictureBox9
-        '
-        Me.PictureBox9.Image = Global.Script_Agent.My.Resources.Resources.schedule
-        Me.PictureBox9.Location = New System.Drawing.Point(80, 10)
-        Me.PictureBox9.Name = "PictureBox9"
-        Me.PictureBox9.Size = New System.Drawing.Size(118, 122)
-        Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox9.TabIndex = 18
-        Me.PictureBox9.TabStop = False
-        '
-        'Label89
-        '
-        Me.Label89.AutoSize = True
-        Me.Label89.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!)
-        Me.Label89.ForeColor = System.Drawing.Color.LightGray
-        Me.Label89.Location = New System.Drawing.Point(207, 56)
-        Me.Label89.Name = "Label89"
-        Me.Label89.Size = New System.Drawing.Size(149, 17)
-        Me.Label89.TabIndex = 5
-        Me.Label89.Text = "Last Threat Scan sumary"
-        '
-        'IconButton3
-        '
-        Me.IconButton3.ForeColor = System.Drawing.Color.Black
-        Me.IconButton3.IconChar = FontAwesome.Sharp.IconChar.None
-        Me.IconButton3.IconColor = System.Drawing.Color.Black
-        Me.IconButton3.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton3.Location = New System.Drawing.Point(207, 93)
-        Me.IconButton3.Name = "IconButton3"
-        Me.IconButton3.Size = New System.Drawing.Size(75, 23)
-        Me.IconButton3.TabIndex = 17
-        Me.IconButton3.Text = "View Details"
-        Me.IconButton3.UseVisualStyleBackColor = True
-        '
-        'Label83
-        '
-        Me.Label83.AutoSize = True
-        Me.Label83.Font = New System.Drawing.Font("Microsoft PhagsPa", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Label83.ForeColor = System.Drawing.Color.LightGray
-        Me.Label83.Location = New System.Drawing.Point(206, 34)
-        Me.Label83.Name = "Label83"
-        Me.Label83.Size = New System.Drawing.Size(131, 21)
-        Me.Label83.TabIndex = 5
-        Me.Label83.Text = "Schedule a scan"
-        '
-        'Label76
-        '
-        Me.Label76.AutoSize = True
-        Me.Label76.Font = New System.Drawing.Font("Microsoft PhagsPa", 24.0!, System.Drawing.FontStyle.Bold)
-        Me.Label76.ForeColor = System.Drawing.Color.Yellow
-        Me.Label76.Location = New System.Drawing.Point(343, 17)
-        Me.Label76.Name = "Label76"
-        Me.Label76.Size = New System.Drawing.Size(79, 42)
-        Me.Label76.TabIndex = 5
-        Me.Label76.Text = "task"
-        '
         'Panel_Expand_Scanner
         '
         Me.Panel_Expand_Scanner.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -1713,7 +1635,7 @@ Partial Class VirusScanForm
         Me.Panel_Expand_Scanner.Controls.Add(Me.Label31)
         Me.Panel_Expand_Scanner.Controls.Add(Me.Label54)
         Me.Panel_Expand_Scanner.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Panel_Expand_Scanner.Location = New System.Drawing.Point(235, 319)
+        Me.Panel_Expand_Scanner.Location = New System.Drawing.Point(228, 315)
         Me.Panel_Expand_Scanner.MaximumSize = New System.Drawing.Size(648, 572)
         Me.Panel_Expand_Scanner.MinimumSize = New System.Drawing.Size(199, 263)
         Me.Panel_Expand_Scanner.Name = "Panel_Expand_Scanner"
@@ -1725,7 +1647,7 @@ Partial Class VirusScanForm
         Me.Label73.AutoSize = True
         Me.Label73.Font = New System.Drawing.Font("Microsoft PhagsPa", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label73.ForeColor = System.Drawing.Color.Silver
-        Me.Label73.Location = New System.Drawing.Point(201, 391)
+        Me.Label73.Location = New System.Drawing.Point(206, 339)
         Me.Label73.Name = "Label73"
         Me.Label73.Size = New System.Drawing.Size(29, 20)
         Me.Label73.TabIndex = 22
@@ -1736,7 +1658,7 @@ Partial Class VirusScanForm
         Me.Label53.AutoSize = True
         Me.Label53.Font = New System.Drawing.Font("Microsoft PhagsPa", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label53.ForeColor = System.Drawing.Color.Silver
-        Me.Label53.Location = New System.Drawing.Point(34, 391)
+        Me.Label53.Location = New System.Drawing.Point(39, 339)
         Me.Label53.Name = "Label53"
         Me.Label53.Size = New System.Drawing.Size(53, 20)
         Me.Label53.TabIndex = 22
@@ -1747,7 +1669,7 @@ Partial Class VirusScanForm
         Me.LabelRealTimeProtection.AutoSize = True
         Me.LabelRealTimeProtection.Font = New System.Drawing.Font("Microsoft PhagsPa", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelRealTimeProtection.ForeColor = System.Drawing.Color.Silver
-        Me.LabelRealTimeProtection.Location = New System.Drawing.Point(201, 370)
+        Me.LabelRealTimeProtection.Location = New System.Drawing.Point(206, 318)
         Me.LabelRealTimeProtection.Name = "LabelRealTimeProtection"
         Me.LabelRealTimeProtection.Size = New System.Drawing.Size(29, 20)
         Me.LabelRealTimeProtection.TabIndex = 22
@@ -1758,7 +1680,7 @@ Partial Class VirusScanForm
         Me.Label50.AutoSize = True
         Me.Label50.Font = New System.Drawing.Font("Microsoft PhagsPa", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label50.ForeColor = System.Drawing.Color.Silver
-        Me.Label50.Location = New System.Drawing.Point(34, 370)
+        Me.Label50.Location = New System.Drawing.Point(39, 318)
         Me.Label50.Name = "Label50"
         Me.Label50.Size = New System.Drawing.Size(145, 20)
         Me.Label50.TabIndex = 22
@@ -1769,7 +1691,7 @@ Partial Class VirusScanForm
         Me.LblAntispyware.AutoSize = True
         Me.LblAntispyware.Font = New System.Drawing.Font("Microsoft PhagsPa", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblAntispyware.ForeColor = System.Drawing.Color.Silver
-        Me.LblAntispyware.Location = New System.Drawing.Point(201, 348)
+        Me.LblAntispyware.Location = New System.Drawing.Point(206, 296)
         Me.LblAntispyware.Name = "LblAntispyware"
         Me.LblAntispyware.Size = New System.Drawing.Size(29, 20)
         Me.LblAntispyware.TabIndex = 22
@@ -1780,7 +1702,7 @@ Partial Class VirusScanForm
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft PhagsPa", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.Silver
-        Me.Label9.Location = New System.Drawing.Point(34, 348)
+        Me.Label9.Location = New System.Drawing.Point(39, 296)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(90, 20)
         Me.Label9.TabIndex = 22
@@ -1791,7 +1713,7 @@ Partial Class VirusScanForm
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft PhagsPa", 11.25!)
         Me.Label6.ForeColor = System.Drawing.Color.Silver
-        Me.Label6.Location = New System.Drawing.Point(33, 423)
+        Me.Label6.Location = New System.Drawing.Point(38, 371)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(153, 20)
         Me.Label6.TabIndex = 22
@@ -1802,7 +1724,7 @@ Partial Class VirusScanForm
         Me.Label45.AutoSize = True
         Me.Label45.Font = New System.Drawing.Font("Microsoft PhagsPa", 11.25!, System.Drawing.FontStyle.Bold)
         Me.Label45.ForeColor = System.Drawing.Color.FromArgb(CType(CType(164, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(190, Byte), Integer))
-        Me.Label45.Location = New System.Drawing.Point(32, 450)
+        Me.Label45.Location = New System.Drawing.Point(37, 398)
         Me.Label45.Name = "Label45"
         Me.Label45.Size = New System.Drawing.Size(64, 20)
         Me.Label45.TabIndex = 15
@@ -1833,8 +1755,7 @@ Partial Class VirusScanForm
         '
         'Panel6
         '
-        Me.Panel6.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(130, Byte), Integer))
+        Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
         Me.Panel6.Controls.Add(Me.Panel7)
         Me.Panel6.Controls.Add(Me.ComboBox_ScanType)
         Me.Panel6.Controls.Add(Me.Label52)
@@ -1842,9 +1763,9 @@ Partial Class VirusScanForm
         Me.Panel6.Controls.Add(Me.Toggle2)
         Me.Panel6.Controls.Add(Me.Label48)
         Me.Panel6.Controls.Add(Me.Label51)
-        Me.Panel6.Location = New System.Drawing.Point(-303, -351)
+        Me.Panel6.Location = New System.Drawing.Point(217, 4)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(460, 251)
+        Me.Panel6.Size = New System.Drawing.Size(426, 251)
         Me.Panel6.TabIndex = 21
         '
         'Panel7
@@ -1864,14 +1785,14 @@ Partial Class VirusScanForm
         Me.Panel7.Controls.Add(Me.Label19)
         Me.Panel7.Controls.Add(Me.Label34)
         Me.Panel7.Controls.Add(Me.Label25)
-        Me.Panel7.Location = New System.Drawing.Point(198, 3)
+        Me.Panel7.Location = New System.Drawing.Point(201, 6)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(259, 245)
+        Me.Panel7.Size = New System.Drawing.Size(222, 236)
         Me.Panel7.TabIndex = 20
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(97, 216)
+        Me.Button2.Location = New System.Drawing.Point(85, 209)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(85, 23)
         Me.Button2.TabIndex = 15
@@ -2016,7 +1937,7 @@ Partial Class VirusScanForm
         Me.ComboBox_ScanType.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
         Me.ComboBox_ScanType.FormattingEnabled = True
         Me.ComboBox_ScanType.Items.AddRange(New Object() {"Quick Scan", "Full Scan"})
-        Me.ComboBox_ScanType.Location = New System.Drawing.Point(43, 76)
+        Me.ComboBox_ScanType.Location = New System.Drawing.Point(45, 74)
         Me.ComboBox_ScanType.Name = "ComboBox_ScanType"
         Me.ComboBox_ScanType.Size = New System.Drawing.Size(96, 24)
         Me.ComboBox_ScanType.TabIndex = 3
@@ -2028,7 +1949,7 @@ Partial Class VirusScanForm
         Me.Label52.AutoSize = True
         Me.Label52.Font = New System.Drawing.Font("Calibri", 8.0!)
         Me.Label52.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.Label52.Location = New System.Drawing.Point(40, 60)
+        Me.Label52.Location = New System.Drawing.Point(42, 58)
         Me.Label52.Name = "Label52"
         Me.Label52.Size = New System.Drawing.Size(66, 13)
         Me.Label52.TabIndex = 1
@@ -2040,7 +1961,7 @@ Partial Class VirusScanForm
         Me.Label48.AutoSize = True
         Me.Label48.Font = New System.Drawing.Font("Calibri", 12.0!)
         Me.Label48.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.Label48.Location = New System.Drawing.Point(45, 126)
+        Me.Label48.Location = New System.Drawing.Point(47, 124)
         Me.Label48.Name = "Label48"
         Me.Label48.Size = New System.Drawing.Size(126, 19)
         Me.Label48.TabIndex = 0
@@ -2052,7 +1973,7 @@ Partial Class VirusScanForm
         Me.Label51.AutoSize = True
         Me.Label51.Font = New System.Drawing.Font("Calibri", 12.0!)
         Me.Label51.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.Label51.Location = New System.Drawing.Point(43, 145)
+        Me.Label51.Location = New System.Drawing.Point(45, 143)
         Me.Label51.Name = "Label51"
         Me.Label51.Size = New System.Drawing.Size(149, 19)
         Me.Label51.TabIndex = 0
@@ -2097,15 +2018,203 @@ Partial Class VirusScanForm
         Me.Label54.TabIndex = 18
         Me.Label54.Text = "Scan Completed!"
         '
-        'PictureBox11
+        'PanelProtection
         '
-        Me.PictureBox11.Image = Global.Script_Agent.My.Resources.Resources.ezgif_2_bb09e2ffee
-        Me.PictureBox11.Location = New System.Drawing.Point(149, 9)
-        Me.PictureBox11.Name = "PictureBox11"
-        Me.PictureBox11.Size = New System.Drawing.Size(399, 131)
-        Me.PictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox11.TabIndex = 18
-        Me.PictureBox11.TabStop = False
+        Me.PanelProtection.Controls.Add(Me.PictureBox7)
+        Me.PanelProtection.Controls.Add(Me.Label95)
+        Me.PanelProtection.Controls.Add(Me.Label96)
+        Me.PanelProtection.Controls.Add(Me.Label97)
+        Me.PanelProtection.Controls.Add(Me.Btn_protec_sh)
+        Me.PanelProtection.Location = New System.Drawing.Point(88, 60)
+        Me.PanelProtection.Name = "PanelProtection"
+        Me.PanelProtection.Size = New System.Drawing.Size(471, 143)
+        Me.PanelProtection.TabIndex = 22
+        '
+        'PictureBox7
+        '
+        Me.PictureBox7.Image = Global.Script_Agent.My.Resources.Resources.shield__1_
+        Me.PictureBox7.Location = New System.Drawing.Point(80, 10)
+        Me.PictureBox7.Name = "PictureBox7"
+        Me.PictureBox7.Size = New System.Drawing.Size(118, 122)
+        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox7.TabIndex = 18
+        Me.PictureBox7.TabStop = False
+        '
+        'Label95
+        '
+        Me.Label95.AutoSize = True
+        Me.Label95.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label95.ForeColor = System.Drawing.Color.LightGray
+        Me.Label95.Location = New System.Drawing.Point(204, 74)
+        Me.Label95.Name = "Label95"
+        Me.Label95.Size = New System.Drawing.Size(149, 17)
+        Me.Label95.TabIndex = 5
+        Me.Label95.Text = "Last Threat Scan sumary"
+        '
+        'Label96
+        '
+        Me.Label96.AutoSize = True
+        Me.Label96.Font = New System.Drawing.Font("Microsoft PhagsPa", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label96.ForeColor = System.Drawing.Color.LightGray
+        Me.Label96.Location = New System.Drawing.Point(201, 44)
+        Me.Label96.Name = "Label96"
+        Me.Label96.Size = New System.Drawing.Size(120, 21)
+        Me.Label96.TabIndex = 5
+        Me.Label96.Text = "Your device is "
+        '
+        'Label97
+        '
+        Me.Label97.AutoSize = True
+        Me.Label97.Font = New System.Drawing.Font("Microsoft PhagsPa", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label97.ForeColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(113, Byte), Integer))
+        Me.Label97.Location = New System.Drawing.Point(316, 30)
+        Me.Label97.Name = "Label97"
+        Me.Label97.Size = New System.Drawing.Size(164, 42)
+        Me.Label97.TabIndex = 5
+        Me.Label97.Text = "protected"
+        '
+        'Btn_protec_sh
+        '
+        Me.Btn_protec_sh.ForeColor = System.Drawing.Color.Black
+        Me.Btn_protec_sh.IconChar = FontAwesome.Sharp.IconChar.None
+        Me.Btn_protec_sh.IconColor = System.Drawing.Color.Black
+        Me.Btn_protec_sh.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.Btn_protec_sh.Location = New System.Drawing.Point(208, 97)
+        Me.Btn_protec_sh.Name = "Btn_protec_sh"
+        Me.Btn_protec_sh.Size = New System.Drawing.Size(75, 23)
+        Me.Btn_protec_sh.TabIndex = 17
+        Me.Btn_protec_sh.Text = "View Details"
+        Me.Btn_protec_sh.UseVisualStyleBackColor = True
+        '
+        'Panel12
+        '
+        Me.Panel12.Controls.Add(Me.PictureBox9)
+        Me.Panel12.Controls.Add(Me.Label89)
+        Me.Panel12.Controls.Add(Me.Btn_scTask_Slideshow)
+        Me.Panel12.Controls.Add(Me.Label83)
+        Me.Panel12.Controls.Add(Me.Label76)
+        Me.Panel12.Location = New System.Drawing.Point(608, 8)
+        Me.Panel12.Name = "Panel12"
+        Me.Panel12.Size = New System.Drawing.Size(471, 143)
+        Me.Panel12.TabIndex = 22
+        '
+        'PictureBox9
+        '
+        Me.PictureBox9.Image = Global.Script_Agent.My.Resources.Resources.schedule
+        Me.PictureBox9.Location = New System.Drawing.Point(80, 10)
+        Me.PictureBox9.Name = "PictureBox9"
+        Me.PictureBox9.Size = New System.Drawing.Size(118, 122)
+        Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox9.TabIndex = 18
+        Me.PictureBox9.TabStop = False
+        '
+        'Label89
+        '
+        Me.Label89.AutoSize = True
+        Me.Label89.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!)
+        Me.Label89.ForeColor = System.Drawing.Color.LightGray
+        Me.Label89.Location = New System.Drawing.Point(207, 56)
+        Me.Label89.Name = "Label89"
+        Me.Label89.Size = New System.Drawing.Size(149, 17)
+        Me.Label89.TabIndex = 5
+        Me.Label89.Text = "Last Threat Scan sumary"
+        '
+        'Btn_scTask_Slideshow
+        '
+        Me.Btn_scTask_Slideshow.ForeColor = System.Drawing.Color.Black
+        Me.Btn_scTask_Slideshow.IconChar = FontAwesome.Sharp.IconChar.None
+        Me.Btn_scTask_Slideshow.IconColor = System.Drawing.Color.Black
+        Me.Btn_scTask_Slideshow.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.Btn_scTask_Slideshow.Location = New System.Drawing.Point(207, 93)
+        Me.Btn_scTask_Slideshow.Name = "Btn_scTask_Slideshow"
+        Me.Btn_scTask_Slideshow.Size = New System.Drawing.Size(75, 23)
+        Me.Btn_scTask_Slideshow.TabIndex = 17
+        Me.Btn_scTask_Slideshow.Text = "View Details"
+        Me.Btn_scTask_Slideshow.UseVisualStyleBackColor = True
+        '
+        'Label83
+        '
+        Me.Label83.AutoSize = True
+        Me.Label83.Font = New System.Drawing.Font("Microsoft PhagsPa", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label83.ForeColor = System.Drawing.Color.LightGray
+        Me.Label83.Location = New System.Drawing.Point(206, 34)
+        Me.Label83.Name = "Label83"
+        Me.Label83.Size = New System.Drawing.Size(131, 21)
+        Me.Label83.TabIndex = 5
+        Me.Label83.Text = "Schedule a scan"
+        '
+        'Label76
+        '
+        Me.Label76.AutoSize = True
+        Me.Label76.Font = New System.Drawing.Font("Microsoft PhagsPa", 24.0!, System.Drawing.FontStyle.Bold)
+        Me.Label76.ForeColor = System.Drawing.Color.Yellow
+        Me.Label76.Location = New System.Drawing.Point(330, 17)
+        Me.Label76.Name = "Label76"
+        Me.Label76.Size = New System.Drawing.Size(79, 42)
+        Me.Label76.TabIndex = 5
+        Me.Label76.Text = "task"
+        '
+        'PanelVirusScanSlideshow
+        '
+        Me.PanelVirusScanSlideshow.Controls.Add(Me.Label99)
+        Me.PanelVirusScanSlideshow.Controls.Add(Me.Label98)
+        Me.PanelVirusScanSlideshow.Controls.Add(Me.ProgressBarVirusScan)
+        Me.PanelVirusScanSlideshow.Controls.Add(Me.PictureBox10)
+        Me.PanelVirusScanSlideshow.Controls.Add(Me.Label100)
+        Me.PanelVirusScanSlideshow.Location = New System.Drawing.Point(624, 50)
+        Me.PanelVirusScanSlideshow.Name = "PanelVirusScanSlideshow"
+        Me.PanelVirusScanSlideshow.Size = New System.Drawing.Size(471, 197)
+        Me.PanelVirusScanSlideshow.TabIndex = 22
+        '
+        'Label99
+        '
+        Me.Label99.AutoSize = True
+        Me.Label99.Font = New System.Drawing.Font("Microsoft PhagsPa", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label99.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
+        Me.Label99.Location = New System.Drawing.Point(139, 171)
+        Me.Label99.Name = "Label99"
+        Me.Label99.Size = New System.Drawing.Size(68, 22)
+        Me.Label99.TabIndex = 21
+        Me.Label99.Text = "Label99"
+        '
+        'Label98
+        '
+        Me.Label98.AutoSize = True
+        Me.Label98.Font = New System.Drawing.Font("Microsoft PhagsPa", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label98.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Label98.Location = New System.Drawing.Point(288, 171)
+        Me.Label98.Name = "Label98"
+        Me.Label98.Size = New System.Drawing.Size(61, 25)
+        Me.Label98.TabIndex = 20
+        Me.Label98.Text = "100%"
+        '
+        'ProgressBarVirusScan
+        '
+        Me.ProgressBarVirusScan.Location = New System.Drawing.Point(99, 167)
+        Me.ProgressBarVirusScan.Name = "ProgressBarVirusScan"
+        Me.ProgressBarVirusScan.Size = New System.Drawing.Size(280, 2)
+        Me.ProgressBarVirusScan.TabIndex = 19
+        '
+        'PictureBox10
+        '
+        Me.PictureBox10.Image = Global.Script_Agent.My.Resources.Resources.ezgif_2_bb09e2ffee
+        Me.PictureBox10.Location = New System.Drawing.Point(120, 10)
+        Me.PictureBox10.Name = "PictureBox10"
+        Me.PictureBox10.Size = New System.Drawing.Size(238, 127)
+        Me.PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox10.TabIndex = 18
+        Me.PictureBox10.TabStop = False
+        '
+        'Label100
+        '
+        Me.Label100.AutoSize = True
+        Me.Label100.Font = New System.Drawing.Font("Microsoft PhagsPa", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label100.ForeColor = System.Drawing.Color.Red
+        Me.Label100.Location = New System.Drawing.Point(114, 132)
+        Me.Label100.Name = "Label100"
+        Me.Label100.Size = New System.Drawing.Size(255, 32)
+        Me.Label100.TabIndex = 5
+        Me.Label100.Text = "Virus scan is running"
         '
         'Timer_Expand_History
         '
@@ -2143,21 +2252,31 @@ Partial Class VirusScanForm
         Me.Pnl_ScanCompleted.Controls.Add(Me.PictureBox11)
         Me.Pnl_ScanCompleted.Controls.Add(Me.Label7)
         Me.Pnl_ScanCompleted.Controls.Add(Me.Panel8)
-        Me.Pnl_ScanCompleted.Location = New System.Drawing.Point(709, 345)
+        Me.Pnl_ScanCompleted.Location = New System.Drawing.Point(1771, 934)
         Me.Pnl_ScanCompleted.Name = "Pnl_ScanCompleted"
         Me.Pnl_ScanCompleted.Size = New System.Drawing.Size(641, 271)
         Me.Pnl_ScanCompleted.TabIndex = 19
+        '
+        'PictureBox11
+        '
+        Me.PictureBox11.Image = Global.Script_Agent.My.Resources.Resources._372103860_CHECK_MARK_400px
+        Me.PictureBox11.Location = New System.Drawing.Point(243, 53)
+        Me.PictureBox11.Name = "PictureBox11"
+        Me.PictureBox11.Size = New System.Drawing.Size(187, 94)
+        Me.PictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox11.TabIndex = 3
+        Me.PictureBox11.TabStop = False
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft YaHei UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(147, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(192, 157)
+        Me.Label7.ForeColor = System.Drawing.Color.White
+        Me.Label7.Location = New System.Drawing.Point(243, 158)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(301, 28)
+        Me.Label7.Size = New System.Drawing.Size(189, 28)
         Me.Label7.TabIndex = 1
-        Me.Label7.Text = "Awesome! No threads found"
+        Me.Label7.Text = "No threads found"
         '
         'Panel8
         '
@@ -2187,7 +2306,7 @@ Partial Class VirusScanForm
         Me.Label74.AutoSize = True
         Me.Label74.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label74.ForeColor = System.Drawing.Color.LightGray
-        Me.Label74.Location = New System.Drawing.Point(532, 19)
+        Me.Label74.Location = New System.Drawing.Point(509, 19)
         Me.Label74.Name = "Label74"
         Me.Label74.Size = New System.Drawing.Size(106, 16)
         Me.Label74.TabIndex = 8
@@ -2212,7 +2331,7 @@ Partial Class VirusScanForm
         Me.Pnl_IsScanning.Controls.Add(Me.Lbl_Pas3)
         Me.Pnl_IsScanning.Controls.Add(Me.Lbl_Pas1)
         Me.Pnl_IsScanning.Controls.Add(Me.Lbl_Pas5)
-        Me.Pnl_IsScanning.Location = New System.Drawing.Point(1226, 260)
+        Me.Pnl_IsScanning.Location = New System.Drawing.Point(1949, 771)
         Me.Pnl_IsScanning.Name = "Pnl_IsScanning"
         Me.Pnl_IsScanning.Size = New System.Drawing.Size(641, 266)
         Me.Pnl_IsScanning.TabIndex = 18
@@ -2473,10 +2592,8 @@ Partial Class VirusScanForm
         Me.Panel_ViewScanReport.Controls.Add(Me.Button3)
         Me.Panel_ViewScanReport.Controls.Add(Me.Label90)
         Me.Panel_ViewScanReport.Controls.Add(Me.Label81)
-        Me.Panel_ViewScanReport.Controls.Add(Me.Label88)
         Me.Panel_ViewScanReport.Controls.Add(Me.LblScannedItems)
         Me.Panel_ViewScanReport.Controls.Add(Me.Label87)
-        Me.Panel_ViewScanReport.Controls.Add(Me.Label86)
         Me.Panel_ViewScanReport.Controls.Add(Me.Label80)
         Me.Panel_ViewScanReport.Controls.Add(Me.Label85)
         Me.Panel_ViewScanReport.Controls.Add(Me.Label79)
@@ -2487,9 +2604,9 @@ Partial Class VirusScanForm
         Me.Panel_ViewScanReport.Controls.Add(Me.Label75)
         Me.Panel_ViewScanReport.Controls.Add(Me.Label40)
         Me.Panel_ViewScanReport.Controls.Add(Me.Label39)
-        Me.Panel_ViewScanReport.Location = New System.Drawing.Point(1804, 93)
+        Me.Panel_ViewScanReport.Location = New System.Drawing.Point(1767, 111)
         Me.Panel_ViewScanReport.Name = "Panel_ViewScanReport"
-        Me.Panel_ViewScanReport.Size = New System.Drawing.Size(668, 447)
+        Me.Panel_ViewScanReport.Size = New System.Drawing.Size(669, 634)
         Me.Panel_ViewScanReport.TabIndex = 21
         '
         'Panel10
@@ -2614,23 +2731,12 @@ Partial Class VirusScanForm
         Me.Label81.TabIndex = 2
         Me.Label81.Text = "Text"
         '
-        'Label88
-        '
-        Me.Label88.AutoSize = True
-        Me.Label88.Font = New System.Drawing.Font("Microsoft PhagsPa", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label88.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Label88.Location = New System.Drawing.Point(408, 274)
-        Me.Label88.Name = "Label88"
-        Me.Label88.Size = New System.Drawing.Size(43, 21)
-        Me.Label88.TabIndex = 2
-        Me.Label88.Text = "Text"
-        '
         'LblScannedItems
         '
         Me.LblScannedItems.AutoSize = True
         Me.LblScannedItems.Font = New System.Drawing.Font("Microsoft PhagsPa", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblScannedItems.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.LblScannedItems.Location = New System.Drawing.Point(41, 330)
+        Me.LblScannedItems.Location = New System.Drawing.Point(408, 266)
         Me.LblScannedItems.Name = "LblScannedItems"
         Me.LblScannedItems.Size = New System.Drawing.Size(43, 21)
         Me.LblScannedItems.TabIndex = 2
@@ -2646,17 +2752,6 @@ Partial Class VirusScanForm
         Me.Label87.Size = New System.Drawing.Size(107, 20)
         Me.Label87.TabIndex = 2
         Me.Label87.Text = "Process threats"
-        '
-        'Label86
-        '
-        Me.Label86.AutoSize = True
-        Me.Label86.Font = New System.Drawing.Font("Microsoft PhagsPa", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label86.ForeColor = System.Drawing.Color.Silver
-        Me.Label86.Location = New System.Drawing.Point(408, 251)
-        Me.Label86.Name = "Label86"
-        Me.Label86.Size = New System.Drawing.Size(103, 20)
-        Me.Label86.TabIndex = 2
-        Me.Label86.Text = "Items scanned"
         '
         'Label80
         '
@@ -2685,7 +2780,7 @@ Partial Class VirusScanForm
         Me.Label79.AutoSize = True
         Me.Label79.Font = New System.Drawing.Font("Microsoft PhagsPa", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label79.ForeColor = System.Drawing.Color.Silver
-        Me.Label79.Location = New System.Drawing.Point(41, 308)
+        Me.Label79.Location = New System.Drawing.Point(408, 244)
         Me.Label79.Name = "Label79"
         Me.Label79.Size = New System.Drawing.Size(103, 20)
         Me.Label79.TabIndex = 2
@@ -2762,52 +2857,12 @@ Partial Class VirusScanForm
         Me.Label39.AutoSize = True
         Me.Label39.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label39.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label39.Location = New System.Drawing.Point(275, 418)
+        Me.Label39.Location = New System.Drawing.Point(524, 589)
         Me.Label39.Name = "Label39"
         Me.Label39.Size = New System.Drawing.Size(87, 19)
         Me.Label39.TabIndex = 1
         Me.Label39.Text = "View  Report"
         Me.Label39.Visible = False
-        '
-        'Toggle5
-        '
-        Me.Toggle5.Checked = False
-        Me.Toggle5.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Toggle5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        Me.Toggle5.Location = New System.Drawing.Point(13, 231)
-        Me.Toggle5.Name = "Toggle5"
-        Me.Toggle5.Size = New System.Drawing.Size(30, 15)
-        Me.Toggle5.TabIndex = 17
-        '
-        'Toggle4
-        '
-        Me.Toggle4.Checked = False
-        Me.Toggle4.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Toggle4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        Me.Toggle4.Location = New System.Drawing.Point(13, 189)
-        Me.Toggle4.Name = "Toggle4"
-        Me.Toggle4.Size = New System.Drawing.Size(30, 15)
-        Me.Toggle4.TabIndex = 17
-        '
-        'Toggle1
-        '
-        Me.Toggle1.Checked = False
-        Me.Toggle1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Toggle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        Me.Toggle1.Location = New System.Drawing.Point(13, 210)
-        Me.Toggle1.Name = "Toggle1"
-        Me.Toggle1.Size = New System.Drawing.Size(30, 15)
-        Me.Toggle1.TabIndex = 17
-        '
-        'Toggle3
-        '
-        Me.Toggle3.Checked = False
-        Me.Toggle3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Toggle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        Me.Toggle3.Location = New System.Drawing.Point(13, 168)
-        Me.Toggle3.Name = "Toggle3"
-        Me.Toggle3.Size = New System.Drawing.Size(30, 15)
-        Me.Toggle3.TabIndex = 17
         '
         'Toggle6
         '
@@ -2815,7 +2870,7 @@ Partial Class VirusScanForm
         Me.Toggle6.Checked = False
         Me.Toggle6.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Toggle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.Toggle6.Location = New System.Drawing.Point(14, 150)
+        Me.Toggle6.Location = New System.Drawing.Point(16, 148)
         Me.Toggle6.Name = "Toggle6"
         Me.Toggle6.Size = New System.Drawing.Size(25, 14)
         Me.Toggle6.TabIndex = 17
@@ -2826,45 +2881,70 @@ Partial Class VirusScanForm
         Me.Toggle2.Checked = False
         Me.Toggle2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Toggle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.Toggle2.Location = New System.Drawing.Point(14, 126)
+        Me.Toggle2.Location = New System.Drawing.Point(16, 124)
         Me.Toggle2.Name = "Toggle2"
         Me.Toggle2.Size = New System.Drawing.Size(25, 14)
         Me.Toggle2.TabIndex = 17
         '
-        'ProgressBarVirusScan
+        'ToggleAntiRansom
         '
-        Me.ProgressBarVirusScan.Location = New System.Drawing.Point(81, 149)
-        Me.ProgressBarVirusScan.Name = "ProgressBarVirusScan"
-        Me.ProgressBarVirusScan.Size = New System.Drawing.Size(280, 3)
-        Me.ProgressBarVirusScan.TabIndex = 19
+        Me.ToggleAntiRansom.Checked = True
+        Me.ToggleAntiRansom.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ToggleAntiRansom.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.ToggleAntiRansom.Location = New System.Drawing.Point(7, 235)
+        Me.ToggleAntiRansom.Name = "ToggleAntiRansom"
+        Me.ToggleAntiRansom.Size = New System.Drawing.Size(31, 17)
+        Me.ToggleAntiRansom.TabIndex = 17
         '
-        'Label98
+        'ToggleAntispy
         '
-        Me.Label98.AutoSize = True
-        Me.Label98.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label98.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Label98.Location = New System.Drawing.Point(367, 141)
-        Me.Label98.Name = "Label98"
-        Me.Label98.Size = New System.Drawing.Size(38, 16)
-        Me.Label98.TabIndex = 20
-        Me.Label98.Text = "100%"
+        Me.ToggleAntispy.Checked = False
+        Me.ToggleAntispy.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ToggleAntispy.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(130, Byte), Integer))
+        Me.ToggleAntispy.Location = New System.Drawing.Point(7, 171)
+        Me.ToggleAntispy.Name = "ToggleAntispy"
+        Me.ToggleAntispy.Size = New System.Drawing.Size(31, 17)
+        Me.ToggleAntispy.TabIndex = 17
+        '
+        'ToggleRealTime
+        '
+        Me.ToggleRealTime.Checked = False
+        Me.ToggleRealTime.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ToggleRealTime.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.ToggleRealTime.Location = New System.Drawing.Point(7, 193)
+        Me.ToggleRealTime.Name = "ToggleRealTime"
+        Me.ToggleRealTime.Size = New System.Drawing.Size(31, 17)
+        Me.ToggleRealTime.TabIndex = 17
+        '
+        'ToggleWebProtection
+        '
+        Me.ToggleWebProtection.Checked = False
+        Me.ToggleWebProtection.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ToggleWebProtection.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.ToggleWebProtection.Location = New System.Drawing.Point(7, 214)
+        Me.ToggleWebProtection.Name = "ToggleWebProtection"
+        Me.ToggleWebProtection.Size = New System.Drawing.Size(31, 17)
+        Me.ToggleWebProtection.TabIndex = 17
         '
         'VirusScanForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1666, 663)
+        Me.ClientSize = New System.Drawing.Size(1940, 1100)
         Me.Controls.Add(Me.Panel_ViewScanReport)
         Me.Controls.Add(Me.Panel5)
+        Me.Controls.Add(Me.CheckBox7)
+        Me.Controls.Add(Me.CheckBox9)
+        Me.Controls.Add(Me.CheckBox8)
         Me.Controls.Add(Me.Pnl_ScanCompleted)
-        Me.Controls.Add(Me.PanelVirusScanSlideshow)
         Me.Controls.Add(Me.Pnl_Reports)
         Me.Controls.Add(Me.Pnl_IsScanning)
         Me.Controls.Add(Me.Panel_Scanner)
         Me.Controls.Add(Me.Pnl_VirusFound)
         Me.Controls.Add(Me.Panel_Scheduler_Edit)
         Me.Controls.Add(Me.Panel_Scheduler)
+        Me.DoubleBuffered = True
         Me.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "VirusScanForm"
@@ -2879,6 +2959,9 @@ Partial Class VirusScanForm
         Me.Panel_Scheduler_Edit.PerformLayout()
         Me.Pnl_Reports.ResumeLayout(False)
         Me.Pnl_Reports.PerformLayout()
+        Me.Panel11.ResumeLayout(False)
+        Me.Panel11.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Pnl_VirusFound.ResumeLayout(False)
         Me.Pnl_VirusFound.PerformLayout()
@@ -2893,15 +2976,6 @@ Partial Class VirusScanForm
         Me.PanelLastScan.ResumeLayout(False)
         Me.PanelLastScan.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.PanelProtection.ResumeLayout(False)
-        Me.PanelProtection.PerformLayout()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.PanelVirusScanSlideshow.ResumeLayout(False)
-        Me.PanelVirusScanSlideshow.PerformLayout()
-        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel12.ResumeLayout(False)
-        Me.Panel12.PerformLayout()
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel_Expand_Scanner.ResumeLayout(False)
         Me.Panel_Expand_Scanner.PerformLayout()
         CType(Me.PicBox_ScanPng, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2909,9 +2983,18 @@ Partial Class VirusScanForm
         Me.Panel6.PerformLayout()
         Me.Panel7.ResumeLayout(False)
         Me.Panel7.PerformLayout()
-        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelProtection.ResumeLayout(False)
+        Me.PanelProtection.PerformLayout()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel12.ResumeLayout(False)
+        Me.Panel12.PerformLayout()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelVirusScanSlideshow.ResumeLayout(False)
+        Me.PanelVirusScanSlideshow.PerformLayout()
+        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Pnl_ScanCompleted.ResumeLayout(False)
         Me.Pnl_ScanCompleted.PerformLayout()
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel8.ResumeLayout(False)
         Me.Panel8.PerformLayout()
         Me.Pnl_IsScanning.ResumeLayout(False)
@@ -2933,6 +3016,7 @@ Partial Class VirusScanForm
         Me.Panel10.PerformLayout()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents Label1 As Label
@@ -2979,10 +3063,10 @@ Partial Class VirusScanForm
     Friend WithEvents Panel_history As Panel
     Friend WithEvents Panel_Protection As Panel
     Public WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Toggle1 As Toggle
-    Friend WithEvents Toggle4 As Toggle
-    Friend WithEvents Toggle3 As Toggle
-    Friend WithEvents Toggle5 As Toggle
+    Friend WithEvents ToggleWebProtection As Toggle
+    Friend WithEvents ToggleRealTime As Toggle
+    Friend WithEvents ToggleAntispy As Toggle
+    Friend WithEvents ToggleAntiRansom As Toggle
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents Label56 As Label
@@ -3088,10 +3172,8 @@ Partial Class VirusScanForm
     Friend WithEvents Button3 As Button
     Friend WithEvents Label90 As Label
     Friend WithEvents Label81 As Label
-    Friend WithEvents Label88 As Label
     Friend WithEvents LblScannedItems As Label
     Friend WithEvents Label87 As Label
-    Friend WithEvents Label86 As Label
     Friend WithEvents Label80 As Label
     Friend WithEvents Label85 As Label
     Friend WithEvents Label79 As Label
@@ -3116,7 +3198,7 @@ Partial Class VirusScanForm
     Friend WithEvents DataGridViewImageColumn3 As DataGridViewImageColumn
     Friend WithEvents Panel10 As Panel
     Friend WithEvents PictureBox6 As PictureBox
-    Friend WithEvents IconButton2 As FontAwesome.Sharp.IconButton
+    Friend WithEvents Btn_protec_sh As FontAwesome.Sharp.IconButton
     Friend WithEvents Label95 As Label
     Friend WithEvents Label96 As Label
     Friend WithEvents Label97 As Label
@@ -3137,20 +3219,28 @@ Partial Class VirusScanForm
     Friend WithEvents PanelProtection As Panel
     Friend WithEvents Panel12 As Panel
     Friend WithEvents PanelLastScan As Panel
-    Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
+    Friend WithEvents Btn_ViewRaportSlideS As FontAwesome.Sharp.IconButton
     Friend WithEvents Label70 As Label
     Friend WithEvents Label71 As Label
     Friend WithEvents Label72 As Label
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox9 As PictureBox
     Friend WithEvents Label89 As Label
-    Friend WithEvents IconButton3 As FontAwesome.Sharp.IconButton
+    Friend WithEvents Btn_scTask_Slideshow As FontAwesome.Sharp.IconButton
     Friend WithEvents Label83 As Label
     Friend WithEvents Label76 As Label
     Friend WithEvents PanelVirusScanSlideshow As Panel
     Friend WithEvents PictureBox10 As PictureBox
     Friend WithEvents Label100 As Label
-    Friend WithEvents PictureBox11 As PictureBox
     Friend WithEvents Label98 As Label
     Friend WithEvents ProgressBarVirusScan As ProgressBar
+    Friend WithEvents Label99 As Label
+    Friend WithEvents Panel11 As Panel
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label102 As Label
+    Friend WithEvents Label101 As Label
+    Friend WithEvents PictureBox11 As PictureBox
+    Friend WithEvents CheckBox8 As CheckBox
+    Friend WithEvents CheckBox7 As CheckBox
+    Friend WithEvents CheckBox9 As CheckBox
 End Class

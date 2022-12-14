@@ -41,17 +41,17 @@ Public Class VirusScanForm
     Public VS_PUPs As Integer
     Public VS_Detection_Ignored As Integer
     Public VS_Detection_Removed As Integer
-
     Public virusScanType As String
     Dim isScanning As Boolean = False
-
-
+    Dim isScanCompleted As Boolean = False
     Dim FakeScannedFiles As Integer = 0
 
 
-    Public VirusScanThread As New System.Threading.Thread(AddressOf VirusScan)
 
     Public regKey As String = "HKEY_CURRENT_USER\SOFTWARE\TEST"
+
+    Public VirusScanThread As New System.Threading.Thread(AddressOf VirusScan)
+
 
     Public Structure propietatiDeSalvat
 
@@ -102,59 +102,22 @@ Public Class VirusScanForm
 
     End Sub
 
-    Sub Settings()
-
-
-
-
-
-
-
-
-        Label45.Text = PowerShell("(Get-MpComputerStatus).AntispywareSignatureLastUpdated")
-
-
-        LblAntispyware.Text = PowerShell("(Get-MpComputerStatus).AntispywareEnabled")
-        LabelRealTimeProtection.Text = PowerShell("(Get-MpComputerStatus).RealTimeProtectionEnabled")
-
-
-
-
-
-
-
-
-
-    End Sub
-
 
 
     Private Sub VirusScanForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        'Me.Hide()
 
+
+
+        Panel11.Hide()
         PanelLastScan.Hide()
         Panel12.Hide()
         PanelVirusScanSlideshow.Hide()
 
         LoadJson()
 
-
-
-
-
         swichPanel(Panel_Scanner, Panel_1, Lbl_Scanner)
-
-
-
-
-
-        Dim T As New System.Threading.Thread(AddressOf Settings)
-        T.Start()
-
-        Dim T2 As New System.Threading.Thread(AddressOf SlideShow)
-        T2.Start()
-
-
 
 
         'Default size and location
@@ -168,8 +131,21 @@ Public Class VirusScanForm
         Panel_Protection.Location = New Point(456, 319)
 
 
+        'Me.Show()
+
+        Dim T1 As New System.Threading.Thread(AddressOf Command.SlideShow)
+        Dim T2 As New System.Threading.Thread(AddressOf Command.Protection)
+        Dim T3 As New System.Threading.Thread(AddressOf Command.Settings)
+
+        T1.Start()
+        T2.Start()
+        T3.Start()
+
 
     End Sub
+
+
+
 
 
 
@@ -312,9 +288,20 @@ Public Class VirusScanForm
 
 
         Do Until p.HasExited = True
+            If VS_Time > 99 Then
+                VS_Time = 99
+            End If
+
             VS_Time = VS_Time + 1
             Lbl_Scanduration.Text = VS_Time & " sec"
-            Label54.Text = VS_Time & "%  " & virusScanStepName
+            ProgressBarVirusScan.Value = VS_Time + 1
+            Label98.Text = ProgressBarVirusScan.Value & "%"
+            ' Label100.ForeColor = Color.Orange
+
+
+            ' Label54.Text = VS_Time & "%  " & virusScanStepName
+            Label99.Text = virusScanStepName
+
             Label54.Location = New Point(2, 174)
             Thread.Sleep(1000)
         Loop
@@ -349,7 +336,7 @@ Public Class VirusScanForm
 
             Label54.Location = New Point(4, 174)
             Label54.Text = VS_Time & "%  " & virusScanStepName
-
+            Label99.Text = virusScanStepName
 
             If VS_Time >= 5 Then
                 PicBox2.Image = My.Resources.check_mark__3_
@@ -360,6 +347,9 @@ Public Class VirusScanForm
                 virusScanStepName = "Startup Items"
                 Label54.Location = New Point(22, 174)
                 Label54.Text = VS_Time & "%  " & virusScanStepName
+                Label99.Text = virusScanStepName
+                ' Label100.ForeColor = Color.Yellow
+
 
 
             End If
@@ -372,7 +362,8 @@ Public Class VirusScanForm
                 virusScanStepName = "Scanning Registry"
                 Label54.Location = New Point(2, 174)
                 Label54.Text = VS_Time & "%  " & virusScanStepName
-
+                Label99.Text = virusScanStepName
+                'Label100.ForeColor = Color.Blue
             End If
 
 
@@ -388,10 +379,19 @@ Public Class VirusScanForm
                 virusScanStepName = "File system"
                 Label54.Location = New Point(27, 174)
                 Label54.Text = VS_Time & "%  " & virusScanStepName
-
-
+                Label99.Text = virusScanStepName
+                ' Label100.ForeColor = Color.Green
             End If
             Thread.Sleep(1000)
+
+
+
+
+            If VS_Time > 99 Then
+                VS_Time = 99
+            End If
+            ProgressBarVirusScan.Value = VS_Time
+            Label98.Text = ProgressBarVirusScan.Value & "%"
         Loop
 
 
@@ -431,11 +431,29 @@ Public Class VirusScanForm
 
 
 
+
         If VS_Threads = 0 Then
             swichPanel(Panel_Scanner, Panel_1, Lbl_Scanner)
             Command.ChangeScanningPanel(Pnl_ScanCompleted)
 
+        Else
+            Command.ChangeScanningPanel(Pnl_VirusFound)
+
+
         End If
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         ' tmrGetTimeSpan()
         ''getDetections()
@@ -460,10 +478,14 @@ Public Class VirusScanForm
 
         Me.DataGridView2.Rows.Add(X.scanType, X.scanThreads, X.scanItems, X.scanDuration, X.scanLastDate)
 
+        isScanCompleted = True
 
         ''Send to scan report
 
         Btn_StartScan.Text = "Start"
+
+        Label94.Text = VS_Threads & " threads found"
+        Label93.Text = VS_Threads & " threads found"
 
         'Label43.Text = ps_detect_count
         'Label44.Text = ps_detect_file
@@ -481,15 +503,16 @@ Public Class VirusScanForm
 
 
         LblScanDate.Text = X.scanLastDate
-        LblScannedItems.Text = X.scanItems
+        LblScannedItems.Text = X.scanItems & " items"
 
 
         'The Black Mini raport
         Label17.Text = X.scanDuration
-        Label19.Text = X.scanItems
+        Label19.Text = X.scanItems & " items"
         Label18.Text = X.scanThreads
         Label25.Text = X.scanThreadsRemoved
-
+        LblScanType.Text = X.scanType
+        Label90.Text = X.scanThreadsRemoved
 
         Label70.Text = ps_detect_file
 
@@ -503,10 +526,6 @@ Public Class VirusScanForm
         Label54.Location = New Point(63, 174)
 
         VS_Time = 0
-
-
-
-
 
 
 
@@ -684,7 +703,20 @@ Public Class VirusScanForm
     End Sub
 
     Private Sub Lbl_Reports_Click(sender As Object, e As EventArgs) Handles Lbl_Reports.Click
-        swichPanel(Pnl_Reports, Panel_3, Lbl_Reports)
+
+        If isScanCompleted = True Then
+            Panel11.Hide()
+            DataGridView2.Show()
+            swichPanel(Pnl_Reports, Panel_3, Lbl_Reports)
+        Else
+            DataGridView2.Hide()
+            Panel11.Show()
+            swichPanel(Pnl_Reports, Panel_3, Lbl_Reports)
+        End If
+
+
+
+
     End Sub
     Private Sub Lbl_Scanner_Click(sender As Object, e As EventArgs) Handles Lbl_Scanner.Click
 
@@ -995,7 +1027,7 @@ Public Class VirusScanForm
     End Sub
 
 
-    Private Sub Panel_history_click(sender As Object, e As EventArgs) Handles Panel_history.Click, PictureBox4.Click, Label56.Click
+    Private Sub Panel_history_click(sender As Object, e As EventArgs) Handles Panel_history.Click, PictureBox4.Click, Label56.Click, DataGridView3.Click
 
         Timer_Expand_History.Start()
 
@@ -1034,8 +1066,24 @@ Public Class VirusScanForm
 
     End Sub
 
-    Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton2.Click, IconButton1.Click, IconButton3.Click
-        Timer_Expand_Protection.Start()
+    Private Sub Btn_ViewRaportSlideS_Click(sender As Object, e As EventArgs) Handles Btn_ViewRaportSlideS.Click
+
+
+        'Timer_Expand_Protection.Start()
+
+
+        If isScanCompleted = True Then
+
+            Panel_ViewScanReport.Show()
+            swichPanel(Panel_ViewScanReport, Panel_3, Lbl_Reports)
+
+        Else
+
+            MsgBox("Please run a scan first")
+
+
+        End If
+
 
     End Sub
 
@@ -1110,6 +1158,7 @@ Public Class VirusScanForm
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Panel_ViewScanReport.Hide()
+        swichPanel(Panel_Scanner, Panel_1, Lbl_Scanner)
     End Sub
 
     Private Sub TimerSlideShow_Tick(sender As Object, e As EventArgs)
@@ -1197,6 +1246,68 @@ Public Class VirusScanForm
     End Sub
 
     Private Sub Panel_Scanner_Paint(sender As Object, e As PaintEventArgs) Handles Panel_Scanner.Paint
+
+    End Sub
+
+    Private Sub ProgressBarVirusScan_Click(sender As Object, e As EventArgs) Handles ProgressBarVirusScan.Click
+
+    End Sub
+
+    Private Sub Btn_scTask_Slideshow_Click(sender As Object, e As EventArgs) Handles Btn_scTask_Slideshow.Click
+        swichPanel(Panel_Scheduler, Panel_2, Lbl_Scheduler)
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+
+        If isScanCompleted = True Then
+
+            Panel_ViewScanReport.Show()
+            swichPanel(Panel_ViewScanReport, Panel_3, Lbl_Reports)
+
+        Else
+
+            MsgBox("Please run a scan first")
+
+
+        End If
+
+    End Sub
+
+    Private Sub Label74_Click(sender As Object, e As EventArgs) Handles Label74.Click
+        Panel_ViewScanReport.Show()
+        swichPanel(Panel_ViewScanReport, Panel_3, Lbl_Reports)
+
+    End Sub
+
+    Private Sub Btn_protec_sh_Click(sender As Object, e As EventArgs) Handles Btn_protec_sh.Click
+        Timer_Expand_Protection.Start()
+
+    End Sub
+
+    Private Sub ToggleAntispy_Click(sender As Object, e As EventArgs) Handles ToggleAntispy.Click
+
+        If ToggleAntispy.Checked = True Then
+
+            Command.PowerShell("echo ok")
+
+
+        Else
+            MsgBox("Enable This")
+
+        End If
+
+
+    End Sub
+
+    Private Sub ToggleAntispy_Load(sender As Object, e As EventArgs) Handles ToggleAntispy.Load
+
+    End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+
+    End Sub
+
+    Private Sub Panel_history_Paint(sender As Object, e As PaintEventArgs) Handles Panel_history.Paint
 
     End Sub
 End Class

@@ -58,7 +58,6 @@ Partial Class Frame
         Me.Label6 = New System.Windows.Forms.Label()
         Me.ExpandAccount = New System.Windows.Forms.Timer(Me.components)
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Panel5 = New System.Windows.Forms.Panel()
         Me.ContextMenuNotify = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
@@ -69,6 +68,8 @@ Partial Class Frame
         Me.PixBox_Top = New System.Windows.Forms.PictureBox()
         Me.Lbl_NotifyCount = New System.Windows.Forms.Label()
         Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.ExpandLeftMenuCooldown = New System.Windows.Forms.Timer(Me.components)
+        Me.Panel5 = New System.Windows.Forms.Panel()
         Me.PnlMenu.SuspendLayout()
         Me.PnlMain.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -492,14 +493,6 @@ Partial Class Frame
         Me.Panel4.Size = New System.Drawing.Size(1, 25)
         Me.Panel4.TabIndex = 33
         '
-        'Panel5
-        '
-        Me.Panel5.BackColor = System.Drawing.Color.Gray
-        Me.Panel5.Location = New System.Drawing.Point(61, 3)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(1, 25)
-        Me.Panel5.TabIndex = 33
-        '
         'ContextMenuNotify
         '
         Me.ContextMenuNotify.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
@@ -534,9 +527,9 @@ Partial Class Frame
         '
         Me.PictureBoxSettings.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBoxSettings.Image = Global.Script_Agent.My.Resources.Resources.settings__1_
-        Me.PictureBoxSettings.Location = New System.Drawing.Point(75, 3)
+        Me.PictureBoxSettings.Location = New System.Drawing.Point(82, 3)
         Me.PictureBoxSettings.Name = "PictureBoxSettings"
-        Me.PictureBoxSettings.Size = New System.Drawing.Size(34, 30)
+        Me.PictureBoxSettings.Size = New System.Drawing.Size(28, 24)
         Me.PictureBoxSettings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBoxSettings.TabIndex = 17
         Me.PictureBoxSettings.TabStop = False
@@ -545,9 +538,9 @@ Partial Class Frame
         '
         Me.PictureBoxAccount.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBoxAccount.Image = Global.Script_Agent.My.Resources.Resources.user
-        Me.PictureBoxAccount.Location = New System.Drawing.Point(39, 3)
+        Me.PictureBoxAccount.Location = New System.Drawing.Point(41, 3)
         Me.PictureBoxAccount.Name = "PictureBoxAccount"
-        Me.PictureBoxAccount.Size = New System.Drawing.Size(30, 27)
+        Me.PictureBoxAccount.Size = New System.Drawing.Size(28, 24)
         Me.PictureBoxAccount.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBoxAccount.TabIndex = 16
         Me.PictureBoxAccount.TabStop = False
@@ -568,9 +561,9 @@ Partial Class Frame
         '
         Me.PictureBoxNotifications.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBoxNotifications.Image = Global.Script_Agent.My.Resources.Resources.bell
-        Me.PictureBoxNotifications.Location = New System.Drawing.Point(3, 3)
+        Me.PictureBoxNotifications.Location = New System.Drawing.Point(5, 3)
         Me.PictureBoxNotifications.Name = "PictureBoxNotifications"
-        Me.PictureBoxNotifications.Size = New System.Drawing.Size(30, 27)
+        Me.PictureBoxNotifications.Size = New System.Drawing.Size(28, 24)
         Me.PictureBoxNotifications.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBoxNotifications.TabIndex = 16
         Me.PictureBoxNotifications.TabStop = False
@@ -608,13 +601,26 @@ Partial Class Frame
         Me.Panel6.Size = New System.Drawing.Size(113, 33)
         Me.Panel6.TabIndex = 23
         '
+        'ExpandLeftMenuCooldown
+        '
+        Me.ExpandLeftMenuCooldown.Enabled = True
+        Me.ExpandLeftMenuCooldown.Interval = 6000
+        '
+        'Panel5
+        '
+        Me.Panel5.BackColor = System.Drawing.Color.Gray
+        Me.Panel5.Location = New System.Drawing.Point(75, 3)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(1, 25)
+        Me.Panel5.TabIndex = 33
+        '
         'Frame
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(753, 738)
+        Me.ClientSize = New System.Drawing.Size(861, 738)
         Me.Controls.Add(Me.PanelExpandAccount)
         Me.Controls.Add(Me.PanelExpandNotifications)
         Me.Controls.Add(Me.Panel6)
@@ -690,7 +696,6 @@ Partial Class Frame
     Friend WithEvents ExpandAccount As Timer
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Label6 As Label
-    Friend WithEvents Panel5 As Panel
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Btn_NotifyOptions As Button
     Friend WithEvents ContextMenuNotify As ContextMenuStrip
@@ -699,4 +704,6 @@ Partial Class Frame
     Friend WithEvents Lbl_NotifyCount As Label
     Friend WithEvents Panel6 As Panel
     Friend WithEvents Btn_Browser As Button
+    Friend WithEvents ExpandLeftMenuCooldown As Timer
+    Friend WithEvents Panel5 As Panel
 End Class

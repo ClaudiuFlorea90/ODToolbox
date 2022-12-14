@@ -205,7 +205,7 @@ Public Class cmdPnl
 
     End Sub
 
-    Private Sub Btn_DISM_Click(sender As Object, e As EventArgs) Handles Btn_DISM.Click, Button37.Click
+    Private Sub Btn_DISM_Click(sender As Object, e As EventArgs) Handles Btn_DISM.Click, Button37.Click, Button1.Click, Button8.Click
 
 
 
@@ -219,7 +219,7 @@ Public Class cmdPnl
 
     End Sub
 
-    Private Sub Btn_DiskCleanup_Click(sender As Object, e As EventArgs) Handles Btn_DiskCleanup.Click, Button32.Click
+    Private Sub Btn_DiskCleanup_Click(sender As Object, e As EventArgs) Handles Btn_DiskCleanup.Click, Button32.Click, Button4.Click, Button11.Click
 
 
         Dim btn As Button = CType(sender, Button)
@@ -233,7 +233,7 @@ Public Class cmdPnl
 
     End Sub
 
-    Private Sub Btn_TuneUp_Click(sender As Object, e As EventArgs) Handles Btn_TuneUp.Click, Button36.Click
+    Private Sub Btn_TuneUp_Click(sender As Object, e As EventArgs) Handles Btn_TuneUp.Click, Button36.Click, Button2.Click, Button9.Click
 
 
         Dim btn As Button = CType(sender, Button)
@@ -247,7 +247,7 @@ Public Class cmdPnl
 
     End Sub
 
-    Private Sub Btn_TempFiles_Click(sender As Object, e As EventArgs) Handles Btn_TempFiles.Click, Button31.Click
+    Private Sub Btn_TempFiles_Click(sender As Object, e As EventArgs) Handles Btn_TempFiles.Click, Button31.Click, Button5.Click, Button12.Click
 
 
         Dim btn As Button = CType(sender, Button)
@@ -259,7 +259,7 @@ Public Class cmdPnl
 
     End Sub
 
-    Private Sub Btn_ActivateWindows_Click(sender As Object, e As EventArgs) Handles Btn_ActivateWindows.Click, Button34.Click
+    Private Sub Btn_ActivateWindows_Click(sender As Object, e As EventArgs) Handles Btn_ActivateWindows.Click, Button34.Click, Button3.Click, Button10.Click
 
         Dim btn As Button = CType(sender, Button)
 
@@ -272,7 +272,7 @@ Public Class cmdPnl
 
 
 
-    Private Sub Btn_RestorePoint_Click(sender As Object, e As EventArgs) Handles Btn_RestorePoint.Click, Button6.Click
+    Private Sub Btn_RestorePoint_Click(sender As Object, e As EventArgs) Handles Btn_RestorePoint.Click, Button6.Click, Button7.Click, Button13.Click
 
         Dim btn As Button = CType(sender, Button)
 
@@ -502,7 +502,7 @@ Public Class cmdPnl
 
     End Sub
 
-    Private Sub DISM_MouseHover(sender As Object, e As EventArgs) Handles Btn_DISM.MouseHover, Button37.MouseHover
+    Private Sub DISM_MouseHover(sender As Object, e As EventArgs) Handles Btn_DISM.MouseHover, Button37.MouseHover, Button1.MouseHover, Button8.MouseHover
 
         Dim Title As String = "DISM Repair"
         Dim Button As Button = Btn_DISM
@@ -513,7 +513,7 @@ Public Class cmdPnl
 
     End Sub
 
-    Private Sub DiskClean_MouseHover(sender As Object, e As EventArgs) Handles Btn_DiskCleanup.MouseHover, Button32.MouseHover
+    Private Sub DiskClean_MouseHover(sender As Object, e As EventArgs) Handles Btn_DiskCleanup.MouseHover, Button32.MouseHover, Button4.MouseHover, Button11.MouseHover
 
 
         Dim Title As String = "Disk Clean-up"
@@ -523,7 +523,7 @@ Public Class cmdPnl
         ButtonToolTip(Title, Button, Text)
     End Sub
 
-    Private Sub Btn_TuneUp_MouseHover(sender As Object, e As EventArgs) Handles Btn_TuneUp.MouseHover, Button36.MouseHover
+    Private Sub Btn_TuneUp_MouseHover(sender As Object, e As EventArgs) Handles Btn_TuneUp.MouseHover, Button36.MouseHover, Button2.MouseHover, Button9.MouseHover
 
 
 
@@ -587,20 +587,18 @@ Public Class cmdPnl
     End Sub
 
 
-    Private Sub Button29_Click(sender As Object, e As EventArgs) Handles Button29.Click, Button30.Click
+    Private Sub Button29_Click(sender As Object, e As EventArgs) Handles Button29.Click
 
 
         If IsEventsCollapsed = True Then
             ListView_Cmd.Show()
-            ListView_Cmd.Location = New Point(2, 351)
+            ListView_Cmd.Location = Pnl_CommandAnimation.Location
             ListView_Cmd.BringToFront()
             IsEventsCollapsed = False
         Else
             ListView_Cmd.Hide()
             IsEventsCollapsed = True
         End If
-
-
 
 
 
@@ -643,7 +641,7 @@ Public Class cmdPnl
 
     End Sub
 
-    Private Sub CheckBox25_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox25.CheckedChanged, CheckBox1.CheckedChanged, CheckBox43.CheckedChanged, CheckBox42.CheckedChanged
+    Private Sub CheckBox25_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox25.CheckedChanged, CheckBox1.CheckedChanged, CheckBox43.CheckedChanged, CheckBox42.CheckedChanged, CheckBox3.CheckedChanged, CheckBox2.CheckedChanged, CheckBox9.CheckedChanged, CheckBox8.CheckedChanged, CheckBox20.CheckedChanged
 
     End Sub
 
@@ -786,7 +784,7 @@ Public Class cmdPnl
     'End Sub
 
 
-    Private Sub Temp_MouseHover(sender As Object, e As EventArgs) Handles Lbl_Temp.MouseHover, Btn_TempFiles.MouseHover, Label51.MouseHover, Button31.MouseHover
+    Private Sub Temp_MouseHover(sender As Object, e As EventArgs) Handles Lbl_Temp.MouseHover, Btn_TempFiles.MouseHover, Label51.MouseHover, Button31.MouseHover, Label19.MouseHover, Button5.MouseHover, Label40.MouseHover, Button12.MouseHover
 
 
         Dim Title As String = "Delete Temp Files"
@@ -814,7 +812,7 @@ Public Class cmdPnl
 
     End Sub
 
-    Private Sub Lbl_MoreActiveWin_Click(sender As Object, e As EventArgs) Handles Lbl_MoreActiveWin.Click, Panel10.Click, Label23.Click, Panel51.Click, Label61.Click, Label60.Click
+    Private Sub Lbl_MoreActiveWin_Click(sender As Object, e As EventArgs) Handles Lbl_MoreActiveWin.Click, Panel10.Click, Label23.Click, Panel51.Click, Label61.Click, Label60.Click, Panel3.Click, Label14.Click, Label13.Click, Panel20.Click, Label35.Click, Label34.Click
 
         PnlExtended = Panel10
         ExpandCmdPnl(Panel10, Lbl_MoreActiveWin)
@@ -829,13 +827,7 @@ Public Class cmdPnl
 
     End Sub
 
-    Private Sub Timer_ExpPnl_Tick(sender As Object, e As EventArgs) Handles Timer_ExpPnl.Tick
 
-
-
-
-
-    End Sub
 
 
 
@@ -853,7 +845,7 @@ Public Class cmdPnl
 
     'End Function
 
-    Private Sub Lbl_More_DiskC_Click(sender As Object, e As EventArgs) Handles Lbl_More_DiskC.Click, Panel7.Click, Lbl_DiskCleanUp.Click, Panel14.Click, Label55.Click, Label54.Click
+    Private Sub Lbl_More_DiskC_Click(sender As Object, e As EventArgs) Handles Lbl_More_DiskC.Click, Panel7.Click, Lbl_DiskCleanUp.Click, Panel14.Click, Label55.Click, Label54.Click, Panel4.Click, Label17.Click, Label16.Click, Panel21.Click, Label38.Click, Label37.Click
 
         ExpandCmdPnl(Panel7, Lbl_More_DiskC)
 
@@ -1158,7 +1150,7 @@ Public Class cmdPnl
             LI.ImageIndex = Img_Status
             LI.SubItems.Add(cmdMsg)
             LI.SubItems.Add(DateTime.Now)
-            ListView_Cmd.Items.Add(LI)
+            ListView_Cmd2.Items.Add(LI)
 
             ''JSON Serialize
 
@@ -1539,8 +1531,17 @@ Public Class cmdPnl
 
     End Function
 
+    Private Sub Panel5_Paint(sender As Object, e As PaintEventArgs) Handles Panel5.Paint
 
+    End Sub
 
+    Private Sub ListView_Cmd2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListView_Cmd2.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub Btn_Test_Click(sender As Object, e As EventArgs) Handles Btn_Test.Click
+
+    End Sub
 End Class
 
 

@@ -85,7 +85,7 @@ Public Class Frame
         PnlMenu.Size = PnlMenu.MinimumSize
         PnlMenu.Location = New Point(0, 71)
 
-        Panel6.Location = New Point(660, 38)
+        Panel6.Location = New Point(612, 38)
 
 
 
@@ -258,7 +258,7 @@ Public Class Frame
 
                 Btn_Exit.Location = New Point(754, 3)
 
-                Panel6.Location = New Point(768, 38)
+                Panel6.Location = New Point(736, 38)
 
             End If
         Else
@@ -294,7 +294,8 @@ Public Class Frame
 
                 Btn_Minimize.Location = New Point(602, 3)
                 Btn_Exit.Location = New Point(643, 3)
-                Panel6.Location = New Point(660, 38)
+                Panel6.Location = New Point(612, 38)
+
 
             End If
         End If
@@ -405,10 +406,10 @@ Public Class Frame
 
     End Sub
 
-    Private Sub PictureBoxAccount_Hover(sender As Object, e As EventArgs) Handles PictureBoxAccount.MouseHover
-        ExpandAccount.Start()
+    'Private Sub PictureBoxAccount_Hover(sender As Object, e As EventArgs) Handles PictureBoxAccount.MouseHover
+    '    ExpandAccount.Start()
 
-    End Sub
+    'End Sub
 
     Private Sub Btn_NitifyOptions_Hover(sender As Object, e As EventArgs) Handles Btn_NotifyOptions.MouseHover
 
@@ -517,6 +518,16 @@ Public Class Frame
 
         Dim Browser As New BrowserForm
         Browser.Show()
+
+    End Sub
+
+    Private Sub ExpandLeftMenuCooldown_Tick(sender As Object, e As EventArgs) Handles ExpandLeftMenuCooldown.Tick
+
+        If isCollapsed = False Then
+            ExpandLeftMenu.Start()
+        End If
+
+
 
     End Sub
 

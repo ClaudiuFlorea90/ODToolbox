@@ -24,8 +24,18 @@ Imports System.Security.Cryptography
 
 Public Class BrowserForm
 
-
+    Dim LastUrl As String
     Dim Chrome As New ChromiumWebBrowser("us.optimumdesk.com")
+
+
+    Public Structure History
+
+        Dim lastUrl As String
+
+
+
+    End Structure
+
 
 
 
@@ -35,6 +45,8 @@ Public Class BrowserForm
 
 
         ChromeBrowser("us.optimumdesk.com")
+
+
 
 
 
@@ -49,20 +61,24 @@ Public Class BrowserForm
 
     Public Sub ChromeBrowser(url As String)
 
+
+
+
+
         PanelChromeBrowser.Controls.Clear()
 
         Dim Chrome As New ChromiumWebBrowser(url)
         PanelChromeBrowser.Controls.Add(Chrome)
         Chrome.Dock = DockStyle.Fill
 
-
+        LastUrl = Chrome.Address
         Chrome.Refresh()
 
 
 
 
-        TextBoxUrl.Text = Chrome.Address
 
+        TextBoxUrl.Text = Chrome.Address
 
 
 
@@ -91,9 +107,8 @@ Public Class BrowserForm
 
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
 
-        'WebBrowser1.Refresh()
-        Chrome.Refresh()
-
+        ' Chrome.Refresh()
+        ChromeBrowser(TextBoxUrl.Text)
 
     End Sub
 
@@ -105,8 +120,8 @@ Public Class BrowserForm
     End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-        'WebBrowser1.GoBack()
 
+        ChromeBrowser(LastUrl)
     End Sub
 
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint

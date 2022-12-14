@@ -217,9 +217,9 @@ Public Class Ticket
     Function AdamChatMessages(txt As String)
 
 
+        Tb_AdamChat.TextAlign = HorizontalAlignment.Left
 
-
-        Tb_AdamChat.Text &= Environment.NewLine & "Me: " & txt
+        Tb_AdamChat.Text &= Environment.NewLine & txt & ": Me"
 
 
         'Random message
@@ -233,7 +233,8 @@ Public Class Ticket
 
         ' Adam Welcome Output
 
-        Tb_AdamChat.TextAlign = HorizontalAlignment.Left
+
+
 
         If num_msg = 1 Then
 
@@ -251,6 +252,7 @@ Public Class Ticket
 
         End If
 
+        Tb_AdamChat.TextAlign = HorizontalAlignment.Right
 
         TextBox1.Clear()
         TextBox1.Text = "Message"
