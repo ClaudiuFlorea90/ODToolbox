@@ -106,43 +106,13 @@ Public Class Frame
 
     Public Sub logger(log As String, logType As String)
 
-
-
         Dim file As System.IO.StreamWriter
 
         file = My.Computer.FileSystem.OpenTextFileWriter("log.log", True)
-        'Dim LogFile As String = My.Application.Info.DirectoryPath + "log.log"
         file.WriteLine("[" & logType & "] - " & DateTime.Now & ": -> " & log)
         file.Close()
 
-
-
-
-
     End Sub
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Btn_Ticket.Click
 

@@ -52,49 +52,102 @@ Public Class Home
         Do
 
             'CPU
-            Dim CpuLoad As Double
-            Dim cpu As New PerformanceCounter()
-            With cpu
-                .CategoryName = "Processor"
-                .CounterName = "% Processor Time"
-                .InstanceName = "_Total"
-            End With
+            Dim CpuLoad As Integer
+            Dim _nameSpace$ = "root\CIMV2"
+            Dim wql = "SELECT * FROM WIN32_Processor"
+            Dim _strBuilder As New StringBuilder
+            Using _moSearcher As New ManagementObjectSearcher(_nameSpace, wql)
 
-            Application.DoEvents()
-            CpuLoad = Math.Round(cpu.NextValue())
+                For Each _mobject As ManagementObject In _moSearcher.Get
 
-
-            Try
-
-                If CpuLoad >= 0 Then
-                    CircularProgressBar1.ProgressColor = Color.Green
-                End If
-                If CpuLoad > 10 Then
-                    CircularProgressBar1.ProgressColor = Color.Yellow
-                End If
-                If CpuLoad > 25 Then
-                    CircularProgressBar1.ProgressColor = Color.Orange
-                End If
-
-                If CpuLoad > 40 Then
-                    CircularProgressBar1.ProgressColor = Color.OrangeRed
-                End If
-
-                If CpuLoad > 60 Then
-                    CircularProgressBar1.ProgressColor = Color.Red
-                End If
-
-            Catch ex As Exception
-
-                Frame.logger(ex.Message, "Error")
-            End Try
+                    Try
+                        CpuLoad = ($"{_mobject("LoadPercentage")}")
 
 
+                        CircularProgressBar1.Maximum = 100
+                        CircularProgressBar1.Value = CpuLoad
+                        CircularProgressBar1.Text = CpuLoad & "%"
 
+                        If CpuLoad >= 0 Then
+                            CircularProgressBar1.ProgressColor = Color.Green
+                        End If
+                        If CpuLoad > 10 Then
+                            CircularProgressBar1.ProgressColor = Color.Yellow
+                        End If
+                        If CpuLoad > 25 Then
+                            CircularProgressBar1.ProgressColor = Color.Orange
+                        End If
 
+                        If CpuLoad > 40 Then
+                            CircularProgressBar1.ProgressColor = Color.OrangeRed
+                        End If
+
+                        If CpuLoad > 60 Then
+                            CircularProgressBar1.ProgressColor = Color.Red
+                        End If
+
+                    Catch ex As Exception
+                        Frame.logger(ex.Message, "Error. Cpu Load")
+                    End Try
+
+                    Thread.Sleep(1000)
+                Next
+            End Using
         Loop
 
     End Sub
+
+
+    Sub Thermal()
+
+        Do
+            'CPU amd GPU TEMP
+
+            Dim CpuTemp As Integer
+            Dim GpuTemp As Integer
+
+            Dim computer As New Computer()
+            computer.Open()
+            computer.CPUEnabled = True
+            computer.GPUEnabled = True
+            Dim cpuT = computer.Hardware.Where(Function(h) h.HardwareType = HardwareType.CPU).FirstOrDefault()
+            Dim gpuT = computer.Hardware.Where(Function(h) h.HardwareType = HardwareType.GpuAti).FirstOrDefault()
+
+
+            If cpuT IsNot Nothing Then
+                cpuT.Update()
+
+                Dim tempSensors = cpuT.Sensors.Where(Function(s) s.SensorType = SensorType.Temperature)
+                'tempSensors.ToList.ForEach(Sub(s) Console.WriteLine(s.Value))
+                tempSensors.ToList.ForEach(Sub(s) CpuTemp = (s.Value))
+
+                CircularProgressBar4.Maximum = 100
+                CircularProgressBar4.Value = CpuTemp
+                CircularProgressBar4.Text = CpuTemp & "c'"
+
+
+
+                If CpuTemp >= 0 Then
+                    CircularProgressBar4.ProgressColor = Color.Blue
+                End If
+                If CpuTemp > 40 Then
+                    CircularProgressBar4.ProgressColor = Color.Green
+                End If
+                If CpuTemp > 55 Then
+                    CircularProgressBar4.ProgressColor = Color.Orange
+                End If
+                If CpuTemp > 65 Then
+                    CircularProgressBar4.ProgressColor = Color.Red
+                End If
+
+            End If
+
+
+            Thread.Sleep(1000)
+        Loop
+
+    End Sub
+
 
 
 
@@ -194,11 +247,6 @@ Public Class Home
 
                 Dim Procent As Integer = UsedSpace / TotalSize * 100
 
-
-
-
-
-
                 Label55.Text = FreeSpace & " GB"
                 Label48.Text = TotalSize & " GB"
                 Label57.Text = UsedSpace & " GB"
@@ -212,24 +260,11 @@ Public Class Home
                 Label40.Text = curDrive.Name
 
 
-
-
-
-
-
                 CircularProgressBar5.Maximum = TotalSize
                 CircularProgressBar5.SubscriptText = curDrive.Name
                 CircularProgressBar5.Text = Procent & "%"
 
-
-
                 Me.Invoke(Sub() CircularProgressBar5.Value = UsedSpace)
-
-
-
-
-
-
 
 
             Else
@@ -247,15 +282,8 @@ Public Class Home
                 Me.Invoke(Sub() CircularProgressBar6.Value = UsedSpace2)
 
 
-
-
             End If
         Next
-
-
-
-
-
 
     End Sub
 
@@ -411,6 +439,9 @@ Public Class Home
 
         T6 = New System.Threading.Thread(AddressOf NetworkData)
         T7 = New System.Threading.Thread(AddressOf JustCpuLoad)
+        T8 = New System.Threading.Thread(AddressOf Thermal)
+
+
 
         T1.Start()
         T2.Start()
@@ -419,7 +450,7 @@ Public Class Home
         T5.Start()
         T6.Start()
         T7.Start()
-
+        T8.Start()
 
 
         Me.Show()
@@ -615,56 +646,6 @@ Public Class Home
             strResult &= (Environment.TickCount / 120000 Mod 60).ToString("n0") + " minutes, "
 
             Lbl_UpTime.Text = strResult
-
-
-
-
-            'CPU amd GPU TEMP
-
-            Dim CpuTemp As Integer
-            Dim GpuTemp As Integer
-
-            Dim computer As New Computer()
-            computer.Open()
-            computer.CPUEnabled = True
-            computer.GPUEnabled = True
-            Dim cpuT = computer.Hardware.Where(Function(h) h.HardwareType = HardwareType.CPU).FirstOrDefault()
-            Dim gpuT = computer.Hardware.Where(Function(h) h.HardwareType = HardwareType.GpuAti).FirstOrDefault()
-
-
-            If cpuT IsNot Nothing Then
-                cpuT.Update()
-
-                Dim tempSensors = cpuT.Sensors.Where(Function(s) s.SensorType = SensorType.Temperature)
-                'tempSensors.ToList.ForEach(Sub(s) Console.WriteLine(s.Value))
-                tempSensors.ToList.ForEach(Sub(s) CpuTemp = (s.Value))
-
-                CircularProgressBar4.Maximum = 100
-                CircularProgressBar4.Value = CpuTemp
-                CircularProgressBar4.Text = CpuTemp & "c'"
-                Label80.Text = GpuTemp
-
-
-                If CpuTemp >= 0 Then
-                    CircularProgressBar4.ProgressColor = Color.Blue
-                End If
-                If CpuTemp > 40 Then
-                    CircularProgressBar4.ProgressColor = Color.Green
-                End If
-                If CpuTemp > 55 Then
-                    CircularProgressBar4.ProgressColor = Color.Orange
-                End If
-                If CpuTemp > 65 Then
-                    CircularProgressBar4.ProgressColor = Color.Red
-                End If
-
-            End If
-
-
-
-
-
-
 
 
             Thread.Sleep(1000)
@@ -1101,12 +1082,14 @@ Public Class Home
 
             PanelNetwork.Location = PanelCPU.Location
             PanelNetwork.Size = PanelNetwork.MaximumSize
+            CircularProgressBar3.Location = New Point(555, 13)
+
             PanelNetwork.BringToFront()
 
         Else
             PanelNetwork.Size = PanelNetwork.MinimumSize
             PanelNetwork.Location = New Point(3, 393)
-
+            CircularProgressBar3.Location = New Point(230, 12)
         End If
 
 
@@ -1121,11 +1104,15 @@ Public Class Home
 
             PanelGpu.Location = PanelCPU.Location
             PanelGpu.Size = PanelGpu.MaximumSize
+            CircularProgressBar7.Location = New Point(555, 13)
+
             PanelGpu.BringToFront()
 
         Else
             PanelGpu.Size = PanelGpu.MinimumSize
             PanelGpu.Location = New Point(348, 393)
+
+            CircularProgressBar7.Location = New Point(230, 12)
 
         End If
 
@@ -1298,6 +1285,10 @@ Public Class Home
     End Sub
 
     Private Sub Label119_Click(sender As Object, e As EventArgs) Handles Label119.Click, Label111.Click
+
+    End Sub
+
+    Private Sub PanelNetwork_Paint(sender As Object, e As PaintEventArgs) Handles PanelNetwork.Paint
 
     End Sub
 
