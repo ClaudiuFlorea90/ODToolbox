@@ -206,18 +206,6 @@ Partial Class Home
         Me.Lbl_GpuTotalMemory = New System.Windows.Forms.Label()
         Me.LblGpuUsage = New System.Windows.Forms.Label()
         Me.Label95 = New System.Windows.Forms.Label()
-        Me.PanelNetwork = New System.Windows.Forms.Panel()
-        Me.Label61 = New System.Windows.Forms.Label()
-        Me.Label63 = New System.Windows.Forms.Label()
-        Me.Label67 = New System.Windows.Forms.Label()
-        Me.CircularProgressBar3 = New CircularProgressBar.CircularProgressBar()
-        Me.Label68 = New System.Windows.Forms.Label()
-        Me.Label69 = New System.Windows.Forms.Label()
-        Me.Label70 = New System.Windows.Forms.Label()
-        Me.Label72 = New System.Windows.Forms.Label()
-        Me.Label73 = New System.Windows.Forms.Label()
-        Me.Label77 = New System.Windows.Forms.Label()
-        Me.Label78 = New System.Windows.Forms.Label()
         Me.PanelDisk = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label170 = New System.Windows.Forms.Label()
@@ -269,6 +257,42 @@ Partial Class Home
         Me.Label55 = New System.Windows.Forms.Label()
         Me.Label57 = New System.Windows.Forms.Label()
         Me.Label59 = New System.Windows.Forms.Label()
+        Me.PanelNetwork = New System.Windows.Forms.Panel()
+        Me.Label61 = New System.Windows.Forms.Label()
+        Me.Label191 = New System.Windows.Forms.Label()
+        Me.Label190 = New System.Windows.Forms.Label()
+        Me.Label179 = New System.Windows.Forms.Label()
+        Me.Label189 = New System.Windows.Forms.Label()
+        Me.Label173 = New System.Windows.Forms.Label()
+        Me.Label178 = New System.Windows.Forms.Label()
+        Me.Label188 = New System.Windows.Forms.Label()
+        Me.Label63 = New System.Windows.Forms.Label()
+        Me.Label172 = New System.Windows.Forms.Label()
+        Me.Label67 = New System.Windows.Forms.Label()
+        Me.Label187 = New System.Windows.Forms.Label()
+        Me.CircularProgressBar3 = New CircularProgressBar.CircularProgressBar()
+        Me.Label177 = New System.Windows.Forms.Label()
+        Me.Label186 = New System.Windows.Forms.Label()
+        Me.Label68 = New System.Windows.Forms.Label()
+        Me.Label185 = New System.Windows.Forms.Label()
+        Me.Label176 = New System.Windows.Forms.Label()
+        Me.Label184 = New System.Windows.Forms.Label()
+        Me.Label171 = New System.Windows.Forms.Label()
+        Me.Label183 = New System.Windows.Forms.Label()
+        Me.Label75 = New System.Windows.Forms.Label()
+        Me.Label175 = New System.Windows.Forms.Label()
+        Me.Label182 = New System.Windows.Forms.Label()
+        Me.Label69 = New System.Windows.Forms.Label()
+        Me.Label181 = New System.Windows.Forms.Label()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.Label174 = New System.Windows.Forms.Label()
+        Me.Label180 = New System.Windows.Forms.Label()
+        Me.Label70 = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Label72 = New System.Windows.Forms.Label()
+        Me.Label73 = New System.Windows.Forms.Label()
+        Me.Label77 = New System.Windows.Forms.Label()
+        Me.Label78 = New System.Windows.Forms.Label()
         Me.Label80 = New System.Windows.Forms.Label()
         Me.Label81 = New System.Windows.Forms.Label()
         Me.Label82 = New System.Windows.Forms.Label()
@@ -277,30 +301,6 @@ Partial Class Home
         Me.PictureBox11 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.Label29 = New System.Windows.Forms.Label()
-        Me.Label75 = New System.Windows.Forms.Label()
-        Me.Label171 = New System.Windows.Forms.Label()
-        Me.Label172 = New System.Windows.Forms.Label()
-        Me.Label173 = New System.Windows.Forms.Label()
-        Me.Label174 = New System.Windows.Forms.Label()
-        Me.Label175 = New System.Windows.Forms.Label()
-        Me.Label176 = New System.Windows.Forms.Label()
-        Me.Label177 = New System.Windows.Forms.Label()
-        Me.Label178 = New System.Windows.Forms.Label()
-        Me.Label179 = New System.Windows.Forms.Label()
-        Me.Label180 = New System.Windows.Forms.Label()
-        Me.Label181 = New System.Windows.Forms.Label()
-        Me.Label182 = New System.Windows.Forms.Label()
-        Me.Label183 = New System.Windows.Forms.Label()
-        Me.Label184 = New System.Windows.Forms.Label()
-        Me.Label185 = New System.Windows.Forms.Label()
-        Me.Label186 = New System.Windows.Forms.Label()
-        Me.Label187 = New System.Windows.Forms.Label()
-        Me.Label188 = New System.Windows.Forms.Label()
-        Me.Label189 = New System.Windows.Forms.Label()
-        Me.Label190 = New System.Windows.Forms.Label()
-        Me.Label191 = New System.Windows.Forms.Label()
         Me.Pnl_Windows.SuspendLayout()
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -332,9 +332,9 @@ Partial Class Home
         Me.PanelCPU.SuspendLayout()
         Me.PanelRam.SuspendLayout()
         Me.PanelGpu.SuspendLayout()
-        Me.PanelNetwork.SuspendLayout()
         Me.PanelDisk.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        Me.PanelNetwork.SuspendLayout()
         CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1296,6 +1296,7 @@ Partial Class Home
         Me.PanelLiveStats.Controls.Add(Me.PanelCPU)
         Me.PanelLiveStats.Controls.Add(Me.PanelRam)
         Me.PanelLiveStats.Controls.Add(Me.PanelGpu)
+        Me.PanelLiveStats.Controls.Add(Me.PanelNetwork)
         Me.PanelLiveStats.Controls.Add(Me.PanelDisk)
         Me.PanelLiveStats.Location = New System.Drawing.Point(736, 274)
         Me.PanelLiveStats.MaximumSize = New System.Drawing.Size(683, 527)
@@ -2548,194 +2549,6 @@ Partial Class Home
         Me.Label95.TabIndex = 2
         Me.Label95.Text = "In use"
         '
-        'PanelNetwork
-        '
-        Me.PanelNetwork.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
-        Me.PanelNetwork.Controls.Add(Me.Label61)
-        Me.PanelNetwork.Controls.Add(Me.Label191)
-        Me.PanelNetwork.Controls.Add(Me.Label190)
-        Me.PanelNetwork.Controls.Add(Me.Label179)
-        Me.PanelNetwork.Controls.Add(Me.Label189)
-        Me.PanelNetwork.Controls.Add(Me.Label173)
-        Me.PanelNetwork.Controls.Add(Me.Label178)
-        Me.PanelNetwork.Controls.Add(Me.Label188)
-        Me.PanelNetwork.Controls.Add(Me.Label63)
-        Me.PanelNetwork.Controls.Add(Me.Label172)
-        Me.PanelNetwork.Controls.Add(Me.Label67)
-        Me.PanelNetwork.Controls.Add(Me.Label187)
-        Me.PanelNetwork.Controls.Add(Me.CircularProgressBar3)
-        Me.PanelNetwork.Controls.Add(Me.Label177)
-        Me.PanelNetwork.Controls.Add(Me.Label186)
-        Me.PanelNetwork.Controls.Add(Me.Label68)
-        Me.PanelNetwork.Controls.Add(Me.Label185)
-        Me.PanelNetwork.Controls.Add(Me.Label176)
-        Me.PanelNetwork.Controls.Add(Me.Label184)
-        Me.PanelNetwork.Controls.Add(Me.Label171)
-        Me.PanelNetwork.Controls.Add(Me.Label183)
-        Me.PanelNetwork.Controls.Add(Me.Label75)
-        Me.PanelNetwork.Controls.Add(Me.Label175)
-        Me.PanelNetwork.Controls.Add(Me.Label182)
-        Me.PanelNetwork.Controls.Add(Me.Label69)
-        Me.PanelNetwork.Controls.Add(Me.Label181)
-        Me.PanelNetwork.Controls.Add(Me.Label29)
-        Me.PanelNetwork.Controls.Add(Me.Label174)
-        Me.PanelNetwork.Controls.Add(Me.Label180)
-        Me.PanelNetwork.Controls.Add(Me.Label70)
-        Me.PanelNetwork.Controls.Add(Me.Label25)
-        Me.PanelNetwork.Controls.Add(Me.Label72)
-        Me.PanelNetwork.Controls.Add(Me.Label73)
-        Me.PanelNetwork.Controls.Add(Me.Label77)
-        Me.PanelNetwork.Controls.Add(Me.Label78)
-        Me.PanelNetwork.Location = New System.Drawing.Point(56, 421)
-        Me.PanelNetwork.MaximumSize = New System.Drawing.Size(676, 515)
-        Me.PanelNetwork.MinimumSize = New System.Drawing.Size(339, 124)
-        Me.PanelNetwork.Name = "PanelNetwork"
-        Me.PanelNetwork.Size = New System.Drawing.Size(676, 515)
-        Me.PanelNetwork.TabIndex = 24
-        '
-        'Label61
-        '
-        Me.Label61.AutoSize = True
-        Me.Label61.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label61.ForeColor = System.Drawing.SystemColors.ControlDark
-        Me.Label61.Location = New System.Drawing.Point(2, 1)
-        Me.Label61.Name = "Label61"
-        Me.Label61.Size = New System.Drawing.Size(48, 12)
-        Me.Label61.TabIndex = 3
-        Me.Label61.Text = "Network"
-        '
-        'Label63
-        '
-        Me.Label63.AutoSize = True
-        Me.Label63.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label63.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.Label63.Location = New System.Drawing.Point(176, 77)
-        Me.Label63.Name = "Label63"
-        Me.Label63.Size = New System.Drawing.Size(46, 17)
-        Me.Label63.TabIndex = 2
-        Me.Label63.Text = "Label2"
-        '
-        'Label67
-        '
-        Me.Label67.AutoSize = True
-        Me.Label67.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label67.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.Label67.Location = New System.Drawing.Point(176, 59)
-        Me.Label67.Name = "Label67"
-        Me.Label67.Size = New System.Drawing.Size(46, 17)
-        Me.Label67.TabIndex = 2
-        Me.Label67.Text = "Label2"
-        '
-        'CircularProgressBar3
-        '
-        Me.CircularProgressBar3.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner
-        Me.CircularProgressBar3.AnimationSpeed = 500
-        Me.CircularProgressBar3.BackColor = System.Drawing.Color.Transparent
-        Me.CircularProgressBar3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CircularProgressBar3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
-        Me.CircularProgressBar3.InnerColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.CircularProgressBar3.InnerMargin = 2
-        Me.CircularProgressBar3.InnerWidth = -1
-        Me.CircularProgressBar3.Location = New System.Drawing.Point(230, 12)
-        Me.CircularProgressBar3.MarqueeAnimationSpeed = 2000
-        Me.CircularProgressBar3.Name = "CircularProgressBar3"
-        Me.CircularProgressBar3.OuterColor = System.Drawing.SystemColors.HotTrack
-        Me.CircularProgressBar3.OuterMargin = -25
-        Me.CircularProgressBar3.OuterWidth = 26
-        Me.CircularProgressBar3.ProgressColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.CircularProgressBar3.ProgressWidth = 25
-        Me.CircularProgressBar3.SecondaryFont = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Bold)
-        Me.CircularProgressBar3.Size = New System.Drawing.Size(100, 100)
-        Me.CircularProgressBar3.StartAngle = 270
-        Me.CircularProgressBar3.Style = System.Windows.Forms.ProgressBarStyle.Marquee
-        Me.CircularProgressBar3.SubscriptColor = System.Drawing.Color.DimGray
-        Me.CircularProgressBar3.SubscriptMargin = New System.Windows.Forms.Padding(-23, 0, 0, 0)
-        Me.CircularProgressBar3.SubscriptText = "Disk"
-        Me.CircularProgressBar3.SuperscriptColor = System.Drawing.Color.FromArgb(CType(CType(166, Byte), Integer), CType(CType(166, Byte), Integer), CType(CType(166, Byte), Integer))
-        Me.CircularProgressBar3.SuperscriptMargin = New System.Windows.Forms.Padding(0)
-        Me.CircularProgressBar3.SuperscriptText = ""
-        Me.CircularProgressBar3.TabIndex = 23
-        Me.CircularProgressBar3.TextMargin = New System.Windows.Forms.Padding(0)
-        Me.CircularProgressBar3.Value = 68
-        '
-        'Label68
-        '
-        Me.Label68.AutoSize = True
-        Me.Label68.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label68.Font = New System.Drawing.Font("Microsoft PhagsPa", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Label68.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label68.Location = New System.Drawing.Point(20, 13)
-        Me.Label68.Name = "Label68"
-        Me.Label68.Size = New System.Drawing.Size(57, 21)
-        Me.Label68.TabIndex = 22
-        Me.Label68.Text = "Usage"
-        '
-        'Label69
-        '
-        Me.Label69.AutoSize = True
-        Me.Label69.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label69.ForeColor = System.Drawing.Color.Silver
-        Me.Label69.Location = New System.Drawing.Point(125, 42)
-        Me.Label69.Name = "Label69"
-        Me.Label69.Size = New System.Drawing.Size(45, 17)
-        Me.Label69.TabIndex = 2
-        Me.Label69.Text = "Speed"
-        '
-        'Label70
-        '
-        Me.Label70.AutoSize = True
-        Me.Label70.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label70.ForeColor = System.Drawing.Color.Silver
-        Me.Label70.Location = New System.Drawing.Point(125, 59)
-        Me.Label70.Name = "Label70"
-        Me.Label70.Size = New System.Drawing.Size(46, 17)
-        Me.Label70.TabIndex = 2
-        Me.Label70.Text = "Label2"
-        '
-        'Label72
-        '
-        Me.Label72.AutoSize = True
-        Me.Label72.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label72.ForeColor = System.Drawing.Color.Silver
-        Me.Label72.Location = New System.Drawing.Point(125, 77)
-        Me.Label72.Name = "Label72"
-        Me.Label72.Size = New System.Drawing.Size(46, 17)
-        Me.Label72.TabIndex = 2
-        Me.Label72.Text = "Label2"
-        '
-        'Label73
-        '
-        Me.Label73.AutoSize = True
-        Me.Label73.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label73.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.Label73.Location = New System.Drawing.Point(176, 42)
-        Me.Label73.Name = "Label73"
-        Me.Label73.Size = New System.Drawing.Size(46, 17)
-        Me.Label73.TabIndex = 2
-        Me.Label73.Text = "Label2"
-        '
-        'Label77
-        '
-        Me.Label77.AutoSize = True
-        Me.Label77.Font = New System.Drawing.Font("Microsoft PhagsPa", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Label77.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.Label77.Location = New System.Drawing.Point(15, 77)
-        Me.Label77.Name = "Label77"
-        Me.Label77.Size = New System.Drawing.Size(65, 21)
-        Me.Label77.TabIndex = 2
-        Me.Label77.Text = "XX GHz"
-        '
-        'Label78
-        '
-        Me.Label78.AutoSize = True
-        Me.Label78.Font = New System.Drawing.Font("Verdana", 6.75!)
-        Me.Label78.ForeColor = System.Drawing.Color.Silver
-        Me.Label78.Location = New System.Drawing.Point(29, 60)
-        Me.Label78.Name = "Label78"
-        Me.Label78.Size = New System.Drawing.Size(37, 12)
-        Me.Label78.TabIndex = 2
-        Me.Label78.Text = "In use"
-        '
         'PanelDisk
         '
         Me.PanelDisk.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
@@ -3383,6 +3196,458 @@ Partial Class Home
         Me.Label59.TabIndex = 2
         Me.Label59.Text = "In use"
         '
+        'PanelNetwork
+        '
+        Me.PanelNetwork.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.PanelNetwork.Controls.Add(Me.Label61)
+        Me.PanelNetwork.Controls.Add(Me.Label191)
+        Me.PanelNetwork.Controls.Add(Me.Label190)
+        Me.PanelNetwork.Controls.Add(Me.Label179)
+        Me.PanelNetwork.Controls.Add(Me.Label189)
+        Me.PanelNetwork.Controls.Add(Me.Label173)
+        Me.PanelNetwork.Controls.Add(Me.Label178)
+        Me.PanelNetwork.Controls.Add(Me.Label188)
+        Me.PanelNetwork.Controls.Add(Me.Label63)
+        Me.PanelNetwork.Controls.Add(Me.Label172)
+        Me.PanelNetwork.Controls.Add(Me.Label67)
+        Me.PanelNetwork.Controls.Add(Me.Label187)
+        Me.PanelNetwork.Controls.Add(Me.CircularProgressBar3)
+        Me.PanelNetwork.Controls.Add(Me.Label177)
+        Me.PanelNetwork.Controls.Add(Me.Label186)
+        Me.PanelNetwork.Controls.Add(Me.Label68)
+        Me.PanelNetwork.Controls.Add(Me.Label185)
+        Me.PanelNetwork.Controls.Add(Me.Label176)
+        Me.PanelNetwork.Controls.Add(Me.Label184)
+        Me.PanelNetwork.Controls.Add(Me.Label171)
+        Me.PanelNetwork.Controls.Add(Me.Label183)
+        Me.PanelNetwork.Controls.Add(Me.Label75)
+        Me.PanelNetwork.Controls.Add(Me.Label175)
+        Me.PanelNetwork.Controls.Add(Me.Label182)
+        Me.PanelNetwork.Controls.Add(Me.Label69)
+        Me.PanelNetwork.Controls.Add(Me.Label181)
+        Me.PanelNetwork.Controls.Add(Me.Label29)
+        Me.PanelNetwork.Controls.Add(Me.Label174)
+        Me.PanelNetwork.Controls.Add(Me.Label180)
+        Me.PanelNetwork.Controls.Add(Me.Label70)
+        Me.PanelNetwork.Controls.Add(Me.Label25)
+        Me.PanelNetwork.Controls.Add(Me.Label72)
+        Me.PanelNetwork.Controls.Add(Me.Label73)
+        Me.PanelNetwork.Controls.Add(Me.Label77)
+        Me.PanelNetwork.Controls.Add(Me.Label78)
+        Me.PanelNetwork.Location = New System.Drawing.Point(5, 393)
+        Me.PanelNetwork.MaximumSize = New System.Drawing.Size(676, 515)
+        Me.PanelNetwork.MinimumSize = New System.Drawing.Size(339, 124)
+        Me.PanelNetwork.Name = "PanelNetwork"
+        Me.PanelNetwork.Size = New System.Drawing.Size(339, 124)
+        Me.PanelNetwork.TabIndex = 24
+        '
+        'Label61
+        '
+        Me.Label61.AutoSize = True
+        Me.Label61.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label61.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.Label61.Location = New System.Drawing.Point(2, 1)
+        Me.Label61.Name = "Label61"
+        Me.Label61.Size = New System.Drawing.Size(48, 12)
+        Me.Label61.TabIndex = 3
+        Me.Label61.Text = "Network"
+        '
+        'Label191
+        '
+        Me.Label191.AutoSize = True
+        Me.Label191.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label191.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.Label191.Location = New System.Drawing.Point(157, 341)
+        Me.Label191.Name = "Label191"
+        Me.Label191.Size = New System.Drawing.Size(46, 17)
+        Me.Label191.TabIndex = 2
+        Me.Label191.Text = "Label2"
+        '
+        'Label190
+        '
+        Me.Label190.AutoSize = True
+        Me.Label190.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label190.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.Label190.Location = New System.Drawing.Point(157, 287)
+        Me.Label190.Name = "Label190"
+        Me.Label190.Size = New System.Drawing.Size(46, 17)
+        Me.Label190.TabIndex = 2
+        Me.Label190.Text = "Label2"
+        '
+        'Label179
+        '
+        Me.Label179.AutoSize = True
+        Me.Label179.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label179.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.Label179.Location = New System.Drawing.Point(157, 236)
+        Me.Label179.Name = "Label179"
+        Me.Label179.Size = New System.Drawing.Size(46, 17)
+        Me.Label179.TabIndex = 2
+        Me.Label179.Text = "Label2"
+        '
+        'Label189
+        '
+        Me.Label189.AutoSize = True
+        Me.Label189.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label189.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.Label189.Location = New System.Drawing.Point(157, 323)
+        Me.Label189.Name = "Label189"
+        Me.Label189.Size = New System.Drawing.Size(46, 17)
+        Me.Label189.TabIndex = 2
+        Me.Label189.Text = "Label2"
+        '
+        'Label173
+        '
+        Me.Label173.AutoSize = True
+        Me.Label173.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label173.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.Label173.Location = New System.Drawing.Point(157, 182)
+        Me.Label173.Name = "Label173"
+        Me.Label173.Size = New System.Drawing.Size(46, 17)
+        Me.Label173.TabIndex = 2
+        Me.Label173.Text = "Label2"
+        '
+        'Label178
+        '
+        Me.Label178.AutoSize = True
+        Me.Label178.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label178.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.Label178.Location = New System.Drawing.Point(157, 218)
+        Me.Label178.Name = "Label178"
+        Me.Label178.Size = New System.Drawing.Size(46, 17)
+        Me.Label178.TabIndex = 2
+        Me.Label178.Text = "Label2"
+        '
+        'Label188
+        '
+        Me.Label188.AutoSize = True
+        Me.Label188.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label188.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.Label188.Location = New System.Drawing.Point(157, 269)
+        Me.Label188.Name = "Label188"
+        Me.Label188.Size = New System.Drawing.Size(46, 17)
+        Me.Label188.TabIndex = 2
+        Me.Label188.Text = "Label2"
+        '
+        'Label63
+        '
+        Me.Label63.AutoSize = True
+        Me.Label63.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label63.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.Label63.Location = New System.Drawing.Point(176, 77)
+        Me.Label63.Name = "Label63"
+        Me.Label63.Size = New System.Drawing.Size(46, 17)
+        Me.Label63.TabIndex = 2
+        Me.Label63.Text = "Label2"
+        '
+        'Label172
+        '
+        Me.Label172.AutoSize = True
+        Me.Label172.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label172.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.Label172.Location = New System.Drawing.Point(157, 164)
+        Me.Label172.Name = "Label172"
+        Me.Label172.Size = New System.Drawing.Size(46, 17)
+        Me.Label172.TabIndex = 2
+        Me.Label172.Text = "Label2"
+        '
+        'Label67
+        '
+        Me.Label67.AutoSize = True
+        Me.Label67.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label67.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.Label67.Location = New System.Drawing.Point(176, 59)
+        Me.Label67.Name = "Label67"
+        Me.Label67.Size = New System.Drawing.Size(46, 17)
+        Me.Label67.TabIndex = 2
+        Me.Label67.Text = "Label2"
+        '
+        'Label187
+        '
+        Me.Label187.AutoSize = True
+        Me.Label187.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label187.ForeColor = System.Drawing.Color.Silver
+        Me.Label187.Location = New System.Drawing.Point(28, 306)
+        Me.Label187.Name = "Label187"
+        Me.Label187.Size = New System.Drawing.Size(45, 17)
+        Me.Label187.TabIndex = 2
+        Me.Label187.Text = "Speed"
+        '
+        'CircularProgressBar3
+        '
+        Me.CircularProgressBar3.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner
+        Me.CircularProgressBar3.AnimationSpeed = 500
+        Me.CircularProgressBar3.BackColor = System.Drawing.Color.Transparent
+        Me.CircularProgressBar3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CircularProgressBar3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.CircularProgressBar3.InnerColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.CircularProgressBar3.InnerMargin = 2
+        Me.CircularProgressBar3.InnerWidth = -1
+        Me.CircularProgressBar3.Location = New System.Drawing.Point(230, 12)
+        Me.CircularProgressBar3.MarqueeAnimationSpeed = 2000
+        Me.CircularProgressBar3.Name = "CircularProgressBar3"
+        Me.CircularProgressBar3.OuterColor = System.Drawing.SystemColors.HotTrack
+        Me.CircularProgressBar3.OuterMargin = -25
+        Me.CircularProgressBar3.OuterWidth = 26
+        Me.CircularProgressBar3.ProgressColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.CircularProgressBar3.ProgressWidth = 25
+        Me.CircularProgressBar3.SecondaryFont = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Bold)
+        Me.CircularProgressBar3.Size = New System.Drawing.Size(100, 100)
+        Me.CircularProgressBar3.StartAngle = 270
+        Me.CircularProgressBar3.Style = System.Windows.Forms.ProgressBarStyle.Marquee
+        Me.CircularProgressBar3.SubscriptColor = System.Drawing.Color.DimGray
+        Me.CircularProgressBar3.SubscriptMargin = New System.Windows.Forms.Padding(-23, 0, 0, 0)
+        Me.CircularProgressBar3.SubscriptText = "Disk"
+        Me.CircularProgressBar3.SuperscriptColor = System.Drawing.Color.FromArgb(CType(CType(166, Byte), Integer), CType(CType(166, Byte), Integer), CType(CType(166, Byte), Integer))
+        Me.CircularProgressBar3.SuperscriptMargin = New System.Windows.Forms.Padding(0)
+        Me.CircularProgressBar3.SuperscriptText = ""
+        Me.CircularProgressBar3.TabIndex = 23
+        Me.CircularProgressBar3.TextMargin = New System.Windows.Forms.Padding(0)
+        Me.CircularProgressBar3.Value = 68
+        '
+        'Label177
+        '
+        Me.Label177.AutoSize = True
+        Me.Label177.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label177.ForeColor = System.Drawing.Color.Silver
+        Me.Label177.Location = New System.Drawing.Point(28, 201)
+        Me.Label177.Name = "Label177"
+        Me.Label177.Size = New System.Drawing.Size(45, 17)
+        Me.Label177.TabIndex = 2
+        Me.Label177.Text = "Speed"
+        '
+        'Label186
+        '
+        Me.Label186.AutoSize = True
+        Me.Label186.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label186.ForeColor = System.Drawing.Color.Silver
+        Me.Label186.Location = New System.Drawing.Point(28, 323)
+        Me.Label186.Name = "Label186"
+        Me.Label186.Size = New System.Drawing.Size(46, 17)
+        Me.Label186.TabIndex = 2
+        Me.Label186.Text = "Label2"
+        '
+        'Label68
+        '
+        Me.Label68.AutoSize = True
+        Me.Label68.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label68.Font = New System.Drawing.Font("Microsoft PhagsPa", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label68.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label68.Location = New System.Drawing.Point(20, 13)
+        Me.Label68.Name = "Label68"
+        Me.Label68.Size = New System.Drawing.Size(57, 21)
+        Me.Label68.TabIndex = 22
+        Me.Label68.Text = "Usage"
+        '
+        'Label185
+        '
+        Me.Label185.AutoSize = True
+        Me.Label185.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label185.ForeColor = System.Drawing.Color.Silver
+        Me.Label185.Location = New System.Drawing.Point(28, 252)
+        Me.Label185.Name = "Label185"
+        Me.Label185.Size = New System.Drawing.Size(45, 17)
+        Me.Label185.TabIndex = 2
+        Me.Label185.Text = "Speed"
+        '
+        'Label176
+        '
+        Me.Label176.AutoSize = True
+        Me.Label176.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label176.ForeColor = System.Drawing.Color.Silver
+        Me.Label176.Location = New System.Drawing.Point(28, 218)
+        Me.Label176.Name = "Label176"
+        Me.Label176.Size = New System.Drawing.Size(46, 17)
+        Me.Label176.TabIndex = 2
+        Me.Label176.Text = "Label2"
+        '
+        'Label184
+        '
+        Me.Label184.AutoSize = True
+        Me.Label184.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label184.ForeColor = System.Drawing.Color.Silver
+        Me.Label184.Location = New System.Drawing.Point(28, 269)
+        Me.Label184.Name = "Label184"
+        Me.Label184.Size = New System.Drawing.Size(46, 17)
+        Me.Label184.TabIndex = 2
+        Me.Label184.Text = "Label2"
+        '
+        'Label171
+        '
+        Me.Label171.AutoSize = True
+        Me.Label171.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label171.ForeColor = System.Drawing.Color.Silver
+        Me.Label171.Location = New System.Drawing.Point(28, 147)
+        Me.Label171.Name = "Label171"
+        Me.Label171.Size = New System.Drawing.Size(45, 17)
+        Me.Label171.TabIndex = 2
+        Me.Label171.Text = "Speed"
+        '
+        'Label183
+        '
+        Me.Label183.AutoSize = True
+        Me.Label183.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label183.ForeColor = System.Drawing.Color.Silver
+        Me.Label183.Location = New System.Drawing.Point(28, 341)
+        Me.Label183.Name = "Label183"
+        Me.Label183.Size = New System.Drawing.Size(46, 17)
+        Me.Label183.TabIndex = 2
+        Me.Label183.Text = "Label2"
+        '
+        'Label75
+        '
+        Me.Label75.AutoSize = True
+        Me.Label75.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label75.ForeColor = System.Drawing.Color.Silver
+        Me.Label75.Location = New System.Drawing.Point(28, 164)
+        Me.Label75.Name = "Label75"
+        Me.Label75.Size = New System.Drawing.Size(46, 17)
+        Me.Label75.TabIndex = 2
+        Me.Label75.Text = "Label2"
+        '
+        'Label175
+        '
+        Me.Label175.AutoSize = True
+        Me.Label175.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label175.ForeColor = System.Drawing.Color.Silver
+        Me.Label175.Location = New System.Drawing.Point(28, 236)
+        Me.Label175.Name = "Label175"
+        Me.Label175.Size = New System.Drawing.Size(46, 17)
+        Me.Label175.TabIndex = 2
+        Me.Label175.Text = "Label2"
+        '
+        'Label182
+        '
+        Me.Label182.AutoSize = True
+        Me.Label182.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label182.ForeColor = System.Drawing.Color.Silver
+        Me.Label182.Location = New System.Drawing.Point(28, 287)
+        Me.Label182.Name = "Label182"
+        Me.Label182.Size = New System.Drawing.Size(46, 17)
+        Me.Label182.TabIndex = 2
+        Me.Label182.Text = "Label2"
+        '
+        'Label69
+        '
+        Me.Label69.AutoSize = True
+        Me.Label69.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label69.ForeColor = System.Drawing.Color.Silver
+        Me.Label69.Location = New System.Drawing.Point(125, 42)
+        Me.Label69.Name = "Label69"
+        Me.Label69.Size = New System.Drawing.Size(45, 17)
+        Me.Label69.TabIndex = 2
+        Me.Label69.Text = "Speed"
+        '
+        'Label181
+        '
+        Me.Label181.AutoSize = True
+        Me.Label181.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label181.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.Label181.Location = New System.Drawing.Point(157, 306)
+        Me.Label181.Name = "Label181"
+        Me.Label181.Size = New System.Drawing.Size(46, 17)
+        Me.Label181.TabIndex = 2
+        Me.Label181.Text = "Label2"
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label29.ForeColor = System.Drawing.Color.Silver
+        Me.Label29.Location = New System.Drawing.Point(28, 182)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(46, 17)
+        Me.Label29.TabIndex = 2
+        Me.Label29.Text = "Label2"
+        '
+        'Label174
+        '
+        Me.Label174.AutoSize = True
+        Me.Label174.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label174.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.Label174.Location = New System.Drawing.Point(157, 201)
+        Me.Label174.Name = "Label174"
+        Me.Label174.Size = New System.Drawing.Size(46, 17)
+        Me.Label174.TabIndex = 2
+        Me.Label174.Text = "Label2"
+        '
+        'Label180
+        '
+        Me.Label180.AutoSize = True
+        Me.Label180.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label180.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.Label180.Location = New System.Drawing.Point(157, 252)
+        Me.Label180.Name = "Label180"
+        Me.Label180.Size = New System.Drawing.Size(46, 17)
+        Me.Label180.TabIndex = 2
+        Me.Label180.Text = "Label2"
+        '
+        'Label70
+        '
+        Me.Label70.AutoSize = True
+        Me.Label70.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label70.ForeColor = System.Drawing.Color.Silver
+        Me.Label70.Location = New System.Drawing.Point(125, 59)
+        Me.Label70.Name = "Label70"
+        Me.Label70.Size = New System.Drawing.Size(46, 17)
+        Me.Label70.TabIndex = 2
+        Me.Label70.Text = "Label2"
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.Label25.Location = New System.Drawing.Point(157, 147)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(46, 17)
+        Me.Label25.TabIndex = 2
+        Me.Label25.Text = "Label2"
+        '
+        'Label72
+        '
+        Me.Label72.AutoSize = True
+        Me.Label72.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label72.ForeColor = System.Drawing.Color.Silver
+        Me.Label72.Location = New System.Drawing.Point(125, 77)
+        Me.Label72.Name = "Label72"
+        Me.Label72.Size = New System.Drawing.Size(46, 17)
+        Me.Label72.TabIndex = 2
+        Me.Label72.Text = "Label2"
+        '
+        'Label73
+        '
+        Me.Label73.AutoSize = True
+        Me.Label73.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label73.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.Label73.Location = New System.Drawing.Point(176, 42)
+        Me.Label73.Name = "Label73"
+        Me.Label73.Size = New System.Drawing.Size(46, 17)
+        Me.Label73.TabIndex = 2
+        Me.Label73.Text = "Label2"
+        '
+        'Label77
+        '
+        Me.Label77.AutoSize = True
+        Me.Label77.Font = New System.Drawing.Font("Microsoft PhagsPa", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label77.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.Label77.Location = New System.Drawing.Point(15, 77)
+        Me.Label77.Name = "Label77"
+        Me.Label77.Size = New System.Drawing.Size(65, 21)
+        Me.Label77.TabIndex = 2
+        Me.Label77.Text = "XX GHz"
+        '
+        'Label78
+        '
+        Me.Label78.AutoSize = True
+        Me.Label78.Font = New System.Drawing.Font("Verdana", 6.75!)
+        Me.Label78.ForeColor = System.Drawing.Color.Silver
+        Me.Label78.Location = New System.Drawing.Point(29, 60)
+        Me.Label78.Name = "Label78"
+        Me.Label78.Size = New System.Drawing.Size(37, 12)
+        Me.Label78.TabIndex = 2
+        Me.Label78.Text = "In use"
+        '
         'Label80
         '
         Me.Label80.AutoSize = True
@@ -3457,270 +3722,6 @@ Partial Class Home
         Me.PictureBox1.TabIndex = 24
         Me.PictureBox1.TabStop = False
         '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.Label25.Location = New System.Drawing.Point(157, 147)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(46, 17)
-        Me.Label25.TabIndex = 2
-        Me.Label25.Text = "Label2"
-        '
-        'Label29
-        '
-        Me.Label29.AutoSize = True
-        Me.Label29.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.ForeColor = System.Drawing.Color.Silver
-        Me.Label29.Location = New System.Drawing.Point(28, 182)
-        Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(46, 17)
-        Me.Label29.TabIndex = 2
-        Me.Label29.Text = "Label2"
-        '
-        'Label75
-        '
-        Me.Label75.AutoSize = True
-        Me.Label75.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label75.ForeColor = System.Drawing.Color.Silver
-        Me.Label75.Location = New System.Drawing.Point(28, 164)
-        Me.Label75.Name = "Label75"
-        Me.Label75.Size = New System.Drawing.Size(46, 17)
-        Me.Label75.TabIndex = 2
-        Me.Label75.Text = "Label2"
-        '
-        'Label171
-        '
-        Me.Label171.AutoSize = True
-        Me.Label171.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label171.ForeColor = System.Drawing.Color.Silver
-        Me.Label171.Location = New System.Drawing.Point(28, 147)
-        Me.Label171.Name = "Label171"
-        Me.Label171.Size = New System.Drawing.Size(45, 17)
-        Me.Label171.TabIndex = 2
-        Me.Label171.Text = "Speed"
-        '
-        'Label172
-        '
-        Me.Label172.AutoSize = True
-        Me.Label172.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label172.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.Label172.Location = New System.Drawing.Point(157, 164)
-        Me.Label172.Name = "Label172"
-        Me.Label172.Size = New System.Drawing.Size(46, 17)
-        Me.Label172.TabIndex = 2
-        Me.Label172.Text = "Label2"
-        '
-        'Label173
-        '
-        Me.Label173.AutoSize = True
-        Me.Label173.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label173.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.Label173.Location = New System.Drawing.Point(157, 182)
-        Me.Label173.Name = "Label173"
-        Me.Label173.Size = New System.Drawing.Size(46, 17)
-        Me.Label173.TabIndex = 2
-        Me.Label173.Text = "Label2"
-        '
-        'Label174
-        '
-        Me.Label174.AutoSize = True
-        Me.Label174.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label174.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.Label174.Location = New System.Drawing.Point(157, 201)
-        Me.Label174.Name = "Label174"
-        Me.Label174.Size = New System.Drawing.Size(46, 17)
-        Me.Label174.TabIndex = 2
-        Me.Label174.Text = "Label2"
-        '
-        'Label175
-        '
-        Me.Label175.AutoSize = True
-        Me.Label175.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label175.ForeColor = System.Drawing.Color.Silver
-        Me.Label175.Location = New System.Drawing.Point(28, 236)
-        Me.Label175.Name = "Label175"
-        Me.Label175.Size = New System.Drawing.Size(46, 17)
-        Me.Label175.TabIndex = 2
-        Me.Label175.Text = "Label2"
-        '
-        'Label176
-        '
-        Me.Label176.AutoSize = True
-        Me.Label176.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label176.ForeColor = System.Drawing.Color.Silver
-        Me.Label176.Location = New System.Drawing.Point(28, 218)
-        Me.Label176.Name = "Label176"
-        Me.Label176.Size = New System.Drawing.Size(46, 17)
-        Me.Label176.TabIndex = 2
-        Me.Label176.Text = "Label2"
-        '
-        'Label177
-        '
-        Me.Label177.AutoSize = True
-        Me.Label177.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label177.ForeColor = System.Drawing.Color.Silver
-        Me.Label177.Location = New System.Drawing.Point(28, 201)
-        Me.Label177.Name = "Label177"
-        Me.Label177.Size = New System.Drawing.Size(45, 17)
-        Me.Label177.TabIndex = 2
-        Me.Label177.Text = "Speed"
-        '
-        'Label178
-        '
-        Me.Label178.AutoSize = True
-        Me.Label178.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label178.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.Label178.Location = New System.Drawing.Point(157, 218)
-        Me.Label178.Name = "Label178"
-        Me.Label178.Size = New System.Drawing.Size(46, 17)
-        Me.Label178.TabIndex = 2
-        Me.Label178.Text = "Label2"
-        '
-        'Label179
-        '
-        Me.Label179.AutoSize = True
-        Me.Label179.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label179.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.Label179.Location = New System.Drawing.Point(157, 236)
-        Me.Label179.Name = "Label179"
-        Me.Label179.Size = New System.Drawing.Size(46, 17)
-        Me.Label179.TabIndex = 2
-        Me.Label179.Text = "Label2"
-        '
-        'Label180
-        '
-        Me.Label180.AutoSize = True
-        Me.Label180.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label180.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.Label180.Location = New System.Drawing.Point(157, 252)
-        Me.Label180.Name = "Label180"
-        Me.Label180.Size = New System.Drawing.Size(46, 17)
-        Me.Label180.TabIndex = 2
-        Me.Label180.Text = "Label2"
-        '
-        'Label181
-        '
-        Me.Label181.AutoSize = True
-        Me.Label181.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label181.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.Label181.Location = New System.Drawing.Point(157, 306)
-        Me.Label181.Name = "Label181"
-        Me.Label181.Size = New System.Drawing.Size(46, 17)
-        Me.Label181.TabIndex = 2
-        Me.Label181.Text = "Label2"
-        '
-        'Label182
-        '
-        Me.Label182.AutoSize = True
-        Me.Label182.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label182.ForeColor = System.Drawing.Color.Silver
-        Me.Label182.Location = New System.Drawing.Point(28, 287)
-        Me.Label182.Name = "Label182"
-        Me.Label182.Size = New System.Drawing.Size(46, 17)
-        Me.Label182.TabIndex = 2
-        Me.Label182.Text = "Label2"
-        '
-        'Label183
-        '
-        Me.Label183.AutoSize = True
-        Me.Label183.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label183.ForeColor = System.Drawing.Color.Silver
-        Me.Label183.Location = New System.Drawing.Point(28, 341)
-        Me.Label183.Name = "Label183"
-        Me.Label183.Size = New System.Drawing.Size(46, 17)
-        Me.Label183.TabIndex = 2
-        Me.Label183.Text = "Label2"
-        '
-        'Label184
-        '
-        Me.Label184.AutoSize = True
-        Me.Label184.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label184.ForeColor = System.Drawing.Color.Silver
-        Me.Label184.Location = New System.Drawing.Point(28, 269)
-        Me.Label184.Name = "Label184"
-        Me.Label184.Size = New System.Drawing.Size(46, 17)
-        Me.Label184.TabIndex = 2
-        Me.Label184.Text = "Label2"
-        '
-        'Label185
-        '
-        Me.Label185.AutoSize = True
-        Me.Label185.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label185.ForeColor = System.Drawing.Color.Silver
-        Me.Label185.Location = New System.Drawing.Point(28, 252)
-        Me.Label185.Name = "Label185"
-        Me.Label185.Size = New System.Drawing.Size(45, 17)
-        Me.Label185.TabIndex = 2
-        Me.Label185.Text = "Speed"
-        '
-        'Label186
-        '
-        Me.Label186.AutoSize = True
-        Me.Label186.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label186.ForeColor = System.Drawing.Color.Silver
-        Me.Label186.Location = New System.Drawing.Point(28, 323)
-        Me.Label186.Name = "Label186"
-        Me.Label186.Size = New System.Drawing.Size(46, 17)
-        Me.Label186.TabIndex = 2
-        Me.Label186.Text = "Label2"
-        '
-        'Label187
-        '
-        Me.Label187.AutoSize = True
-        Me.Label187.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label187.ForeColor = System.Drawing.Color.Silver
-        Me.Label187.Location = New System.Drawing.Point(28, 306)
-        Me.Label187.Name = "Label187"
-        Me.Label187.Size = New System.Drawing.Size(45, 17)
-        Me.Label187.TabIndex = 2
-        Me.Label187.Text = "Speed"
-        '
-        'Label188
-        '
-        Me.Label188.AutoSize = True
-        Me.Label188.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label188.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.Label188.Location = New System.Drawing.Point(157, 269)
-        Me.Label188.Name = "Label188"
-        Me.Label188.Size = New System.Drawing.Size(46, 17)
-        Me.Label188.TabIndex = 2
-        Me.Label188.Text = "Label2"
-        '
-        'Label189
-        '
-        Me.Label189.AutoSize = True
-        Me.Label189.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label189.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.Label189.Location = New System.Drawing.Point(157, 323)
-        Me.Label189.Name = "Label189"
-        Me.Label189.Size = New System.Drawing.Size(46, 17)
-        Me.Label189.TabIndex = 2
-        Me.Label189.Text = "Label2"
-        '
-        'Label190
-        '
-        Me.Label190.AutoSize = True
-        Me.Label190.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label190.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.Label190.Location = New System.Drawing.Point(157, 287)
-        Me.Label190.Name = "Label190"
-        Me.Label190.Size = New System.Drawing.Size(46, 17)
-        Me.Label190.TabIndex = 2
-        Me.Label190.Text = "Label2"
-        '
-        'Label191
-        '
-        Me.Label191.AutoSize = True
-        Me.Label191.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label191.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.Label191.Location = New System.Drawing.Point(157, 341)
-        Me.Label191.Name = "Label191"
-        Me.Label191.Size = New System.Drawing.Size(46, 17)
-        Me.Label191.TabIndex = 2
-        Me.Label191.Text = "Label2"
-        '
         'Home
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -3730,7 +3731,6 @@ Partial Class Home
         Me.Controls.Add(Me.PictureBox11)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Pnl_User)
-        Me.Controls.Add(Me.PanelNetwork)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.PanelLiveStats)
         Me.Controls.Add(Me.Pnl_Windows)
@@ -3784,12 +3784,12 @@ Partial Class Home
         Me.PanelRam.PerformLayout()
         Me.PanelGpu.ResumeLayout(False)
         Me.PanelGpu.PerformLayout()
-        Me.PanelNetwork.ResumeLayout(False)
-        Me.PanelNetwork.PerformLayout()
         Me.PanelDisk.ResumeLayout(False)
         Me.PanelDisk.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.PanelNetwork.ResumeLayout(False)
+        Me.PanelNetwork.PerformLayout()
         CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

@@ -26,8 +26,9 @@ Partial Class Frame
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Frame))
         Me.ImageList_ExpandLeftMenuBtn = New System.Windows.Forms.ImageList(Me.components)
         Me.PnlMenu = New System.Windows.Forms.Panel()
-        Me.Btn_Browser = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.ImgList_MenuLeft = New System.Windows.Forms.ImageList(Me.components)
+        Me.Btn_Browser = New System.Windows.Forms.Button()
         Me.Btn_VirusScan = New System.Windows.Forms.Button()
         Me.Btn_Commands = New System.Windows.Forms.Button()
         Me.Btn_Ticket = New System.Windows.Forms.Button()
@@ -68,8 +69,8 @@ Partial Class Frame
         Me.PixBox_Top = New System.Windows.Forms.PictureBox()
         Me.Lbl_NotifyCount = New System.Windows.Forms.Label()
         Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.ExpandLeftMenuCooldown = New System.Windows.Forms.Timer(Me.components)
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.ExpandLeftMenuCooldown = New System.Windows.Forms.Timer(Me.components)
         Me.PnlMenu.SuspendLayout()
         Me.PnlMain.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -94,6 +95,7 @@ Partial Class Frame
         'PnlMenu
         '
         Me.PnlMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.PnlMenu.Controls.Add(Me.Button1)
         Me.PnlMenu.Controls.Add(Me.Btn_Browser)
         Me.PnlMenu.Controls.Add(Me.Btn_VirusScan)
         Me.PnlMenu.Controls.Add(Me.Btn_Commands)
@@ -104,6 +106,41 @@ Partial Class Frame
         Me.PnlMenu.Name = "PnlMenu"
         Me.PnlMenu.Size = New System.Drawing.Size(64, 663)
         Me.PnlMenu.TabIndex = 19
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(140, Byte), Integer), CType(CType(163, Byte), Integer))
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(140, Byte), Integer), CType(CType(163, Byte), Integer))
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Microsoft PhagsPa", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.Button1.ImageIndex = 8
+        Me.Button1.ImageList = Me.ImgList_MenuLeft
+        Me.Button1.Location = New System.Drawing.Point(4, 48)
+        Me.Button1.MaximumSize = New System.Drawing.Size(162, 47)
+        Me.Button1.MinimumSize = New System.Drawing.Size(57, 47)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(57, 47)
+        Me.Button1.TabIndex = 22
+        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'ImgList_MenuLeft
+        '
+        Me.ImgList_MenuLeft.ImageStream = CType(resources.GetObject("ImgList_MenuLeft.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.ImgList_MenuLeft.TransparentColor = System.Drawing.Color.Transparent
+        Me.ImgList_MenuLeft.Images.SetKeyName(0, "help.png")
+        Me.ImgList_MenuLeft.Images.SetKeyName(1, "help-desk.png")
+        Me.ImgList_MenuLeft.Images.SetKeyName(2, "coding (1).png")
+        Me.ImgList_MenuLeft.Images.SetKeyName(3, "setting.png")
+        Me.ImgList_MenuLeft.Images.SetKeyName(4, "Load-Animation2.gif")
+        Me.ImgList_MenuLeft.Images.SetKeyName(5, "search.png")
+        Me.ImgList_MenuLeft.Images.SetKeyName(6, "help-desk (1).png")
+        Me.ImgList_MenuLeft.Images.SetKeyName(7, "browser.png")
+        Me.ImgList_MenuLeft.Images.SetKeyName(8, "class.ico")
         '
         'Btn_Browser
         '
@@ -126,19 +163,6 @@ Partial Class Frame
         Me.Btn_Browser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Btn_Browser.UseVisualStyleBackColor = False
         '
-        'ImgList_MenuLeft
-        '
-        Me.ImgList_MenuLeft.ImageStream = CType(resources.GetObject("ImgList_MenuLeft.ImageStream"), System.Windows.Forms.ImageListStreamer)
-        Me.ImgList_MenuLeft.TransparentColor = System.Drawing.Color.Transparent
-        Me.ImgList_MenuLeft.Images.SetKeyName(0, "help.png")
-        Me.ImgList_MenuLeft.Images.SetKeyName(1, "help-desk.png")
-        Me.ImgList_MenuLeft.Images.SetKeyName(2, "coding (1).png")
-        Me.ImgList_MenuLeft.Images.SetKeyName(3, "setting.png")
-        Me.ImgList_MenuLeft.Images.SetKeyName(4, "Load-Animation2.gif")
-        Me.ImgList_MenuLeft.Images.SetKeyName(5, "search.png")
-        Me.ImgList_MenuLeft.Images.SetKeyName(6, "help-desk (1).png")
-        Me.ImgList_MenuLeft.Images.SetKeyName(7, "browser.png")
-        '
         'Btn_VirusScan
         '
         Me.Btn_VirusScan.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
@@ -151,7 +175,7 @@ Partial Class Frame
         Me.Btn_VirusScan.ForeColor = System.Drawing.SystemColors.ControlLight
         Me.Btn_VirusScan.ImageIndex = 5
         Me.Btn_VirusScan.ImageList = Me.ImgList_MenuLeft
-        Me.Btn_VirusScan.Location = New System.Drawing.Point(3, 110)
+        Me.Btn_VirusScan.Location = New System.Drawing.Point(4, 153)
         Me.Btn_VirusScan.MaximumSize = New System.Drawing.Size(162, 47)
         Me.Btn_VirusScan.MinimumSize = New System.Drawing.Size(57, 47)
         Me.Btn_VirusScan.Name = "Btn_VirusScan"
@@ -172,7 +196,7 @@ Partial Class Frame
         Me.Btn_Commands.ForeColor = System.Drawing.SystemColors.ControlLight
         Me.Btn_Commands.ImageIndex = 2
         Me.Btn_Commands.ImageList = Me.ImgList_MenuLeft
-        Me.Btn_Commands.Location = New System.Drawing.Point(3, 57)
+        Me.Btn_Commands.Location = New System.Drawing.Point(4, 100)
         Me.Btn_Commands.MaximumSize = New System.Drawing.Size(162, 47)
         Me.Btn_Commands.MinimumSize = New System.Drawing.Size(57, 47)
         Me.Btn_Commands.Name = "Btn_Commands"
@@ -193,7 +217,7 @@ Partial Class Frame
         Me.Btn_Ticket.ForeColor = System.Drawing.SystemColors.ControlLight
         Me.Btn_Ticket.ImageIndex = 6
         Me.Btn_Ticket.ImageList = Me.ImgList_MenuLeft
-        Me.Btn_Ticket.Location = New System.Drawing.Point(3, 4)
+        Me.Btn_Ticket.Location = New System.Drawing.Point(4, 386)
         Me.Btn_Ticket.MaximumSize = New System.Drawing.Size(162, 47)
         Me.Btn_Ticket.MinimumSize = New System.Drawing.Size(57, 47)
         Me.Btn_Ticket.Name = "Btn_Ticket"
@@ -601,11 +625,6 @@ Partial Class Frame
         Me.Panel6.Size = New System.Drawing.Size(113, 33)
         Me.Panel6.TabIndex = 23
         '
-        'ExpandLeftMenuCooldown
-        '
-        Me.ExpandLeftMenuCooldown.Enabled = True
-        Me.ExpandLeftMenuCooldown.Interval = 6000
-        '
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.Color.Gray
@@ -613,6 +632,11 @@ Partial Class Frame
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(1, 25)
         Me.Panel5.TabIndex = 33
+        '
+        'ExpandLeftMenuCooldown
+        '
+        Me.ExpandLeftMenuCooldown.Enabled = True
+        Me.ExpandLeftMenuCooldown.Interval = 6000
         '
         'Frame
         '
@@ -706,4 +730,5 @@ Partial Class Frame
     Friend WithEvents Btn_Browser As Button
     Friend WithEvents ExpandLeftMenuCooldown As Timer
     Friend WithEvents Panel5 As Panel
+    Friend WithEvents Button1 As Button
 End Class

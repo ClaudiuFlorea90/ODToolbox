@@ -114,7 +114,7 @@ Public Class Frame
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Btn_Ticket.Click
+    Private Sub Btn_Ticket1_Click(sender As Object, e As EventArgs) Handles Btn_Ticket.Click
 
         Dim btn As Button = CType(sender, Button)
 
@@ -478,7 +478,6 @@ Public Class Frame
 
     Private Sub Btn_Browser_Click(sender As Object, e As EventArgs) Handles Btn_Browser.Click
 
-
         Dim Str As String = "Browser"
         Dim btn As Button = CType(sender, Button)
 
@@ -497,6 +496,18 @@ Public Class Frame
             ExpandLeftMenu.Start()
         End If
 
+
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+
+        Dim Str As String = "ToolBox"
+        Dim btn As Button = CType(sender, Button)
+
+
+        SwitchMainPanel(ToolBox, Str, btn)
 
 
     End Sub

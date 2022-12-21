@@ -1292,6 +1292,10 @@ Public Class Home
 
     End Sub
 
+    Private Sub PanelDisk_Paint(sender As Object, e As PaintEventArgs) Handles PanelDisk.Paint
+
+    End Sub
+
     Private Sub WebBrowser1_DocumentCompleted(sender As Object, e As WebBrowserDocumentCompletedEventArgs)
 
     End Sub
