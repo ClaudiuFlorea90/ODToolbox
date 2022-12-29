@@ -78,15 +78,16 @@ Public Class Frame
 
 
         PnlMain.Size = PnlMain.MaximumSize
-        PnlMain.Location = New Point(67, 71)
+        PnlMain.Location = New Point(67, 38)
 
 
 
         PnlMenu.Size = PnlMenu.MinimumSize
         PnlMenu.Location = New Point(0, 71)
 
-        Panel6.Location = New Point(612, 38)
+        ' Panel6.Location = New Point(612, 38)
 
+        TopMenu(PanelTopMenu_Home, Label7)
 
 
 
@@ -94,12 +95,61 @@ Public Class Frame
 
 
 
-
+        'PictureBox1.Show()
 
 
 
 
     End Sub
+
+
+    Sub TopMenu(pnl As Panel, lbl As Label)
+
+        If lbl IsNot Nothing Then
+
+            For Each item As Control In PnlSmallToolbox.Controls
+
+                item.ForeColor = Color.LightGray
+
+            Next
+
+            For Each item As Control In PnlSmallVirusScan.Controls
+
+                item.ForeColor = Color.LightGray
+            Next
+
+
+            For Each item As Control In PanelTopMenu_Home.Controls
+
+                item.ForeColor = Color.LightGray
+
+            Next
+
+            lbl.ForeColor = Color.Chartreuse
+
+
+
+        End If
+
+
+        If pnl IsNot Nothing Then
+
+            pnl.Location = New Point(201, 6)
+            pnl.Show()
+            pnl.BringToFront()
+
+        End If
+
+
+
+        'PnlSmallToolbox.Hide()
+        'PnlSmallVirusScan.Hide()
+        'PnlSmallToolbox.Show()
+
+
+    End Sub
+
+
 
 
     'Here Logger 
@@ -189,7 +239,7 @@ Public Class Frame
 
 
         SwitchMainPanel(VirusScanForm, Str, btn)
-
+        TopMenu(PnlSmallVirusScan, Lbl_Scanner)
 
     End Sub
 
@@ -206,14 +256,26 @@ Public Class Frame
 
                 PnlMain.Size = PnlMain.MinimumSize
                 PnlMain.Location = New Point(175, 71)
+
+
+
+
+
+
+                Button1.Image = Nothing
+
+
+
                 Btn_Ticket.Text = "Support"
                 Btn_Commands.Text = "Commands"
                 Btn_VirusScan.Text = "Virus Scan"
                 Btn_Browser.Text = "Browser"
+                Button1.Text = "Toolbox"
                 Btn_Ticket.Size = Btn_Ticket.MaximumSize
                 Btn_Commands.Size = Btn_Commands.MaximumSize
                 Btn_VirusScan.Size = Btn_VirusScan.MaximumSize
                 Btn_Browser.Size = Btn_Browser.MaximumSize
+                Button1.Size = Button1.MaximumSize
                 PnlMenu.BringToFront()
                 PnlMain.SendToBack()
                 ExpandLeftMenu.Stop()
@@ -221,14 +283,14 @@ Public Class Frame
 
                 'Set Form Size +105
                 Me.Size = Me.MaximumSize
-                Panel1.Size = Panel1.MaximumSize
+                '  Panel1.Size = Panel1.MaximumSize
 
 
-                Btn_Minimize.Location = New Point(713, 3)
+                'Btn_Minimize.Location = New Point(713, 3)
 
-                Btn_Exit.Location = New Point(754, 3)
+                'Btn_Exit.Location = New Point(754, 3)
 
-                Panel6.Location = New Point(736, 38)
+                ' Panel6.Location = New Point(736, 38)
 
             End If
         Else
@@ -242,13 +304,15 @@ Public Class Frame
                 Btn_Commands.Size = Btn_Commands.MinimumSize
                 Btn_VirusScan.Size = Btn_VirusScan.MinimumSize
                 Btn_Browser.Size = Btn_Browser.MinimumSize
+                Button1.Size = Button1.MinimumSize
+
 
 
                 Btn_Ticket.Text = ""
                 Btn_Commands.Text = ""
                 Btn_VirusScan.Text = ""
                 Btn_Browser.Text = ""
-
+                Button1.Text = ""
 
                 PnlMain.Size = PnlMain.MaximumSize
                 PnlMain.Location = New Point(67, 71)
@@ -260,11 +324,11 @@ Public Class Frame
                 isCollapsed = True
 
                 Me.Size = Me.MinimumSize
-                Panel1.Size = Panel1.MinimumSize
+                '  Panel1.Size = Panel1.MinimumSize
 
-                Btn_Minimize.Location = New Point(602, 3)
-                Btn_Exit.Location = New Point(643, 3)
-                Panel6.Location = New Point(612, 38)
+                'Btn_Minimize.Location = New Point(602, 3)
+                'Btn_Exit.Location = New Point(643, 3)
+                ' Panel6.Location = New Point(612, 38)
 
 
             End If
@@ -435,18 +499,18 @@ Public Class Frame
     End Sub
 
     Private Sub PictureBoxAccount_Click(sender As Object, e As EventArgs) Handles PictureBoxAccount.Click
-        ExpandAccount.Start()
+        '   ExpandAccount.Start()
 
     End Sub
 
     Private Sub PictureBoxNotifications_Click(sender As Object, e As EventArgs) Handles PictureBoxNotifications.Click
-        ExpandNotifications.Start()
+        ' ExpandNotifications.Start()
 
 
     End Sub
 
     Private Sub Lbl_NotifyCount_Click(sender As Object, e As EventArgs) Handles Lbl_NotifyCount.Click
-        ExpandNotifications.Start()
+        ' ExpandNotifications.Start()
 
     End Sub
 
@@ -508,6 +572,23 @@ Public Class Frame
 
 
         SwitchMainPanel(ToolBox, Str, btn)
+        TopMenu(PnlSmallToolbox, Label42342)
+
+
+
+    End Sub
+
+    Private Sub Label42342_Click(sender As Object, e As EventArgs) Handles Label42342.Click
+
+    End Sub
+
+    Private Sub Lbl_432_Click(sender As Object, e As EventArgs) Handles Lbl_432.Click
+
+        ' ToolBox.ChangeOverViewPnl(ToolBox.Panel_ED)
+
+        TopMenu(Nothing, Lbl_432)
+
+
 
 
     End Sub
@@ -567,7 +648,10 @@ Public Class Frame
 
     End Sub
 
-    Private Sub Pnl_Top_MouseDown(sender As Object, e As MouseEventArgs) Handles Lbl_TopLabel.MouseDown, PixBox_Top.MouseDown, PB_Logo.MouseDown, Panel1.MouseDown, Label1.MouseDown
+
+
+
+    Private Sub Pnl_Top_MouseDown(sender As Object, e As MouseEventArgs) Handles PixBox_Top.MouseDown, PB_Logo.MouseDown, Panel1.MouseDown, Label1.MouseDown
 
 
         draggable = True
@@ -579,7 +663,7 @@ Public Class Frame
 
     End Sub
 
-    Private Sub Pnl_Top_MouseMove(sender As Object, e As MouseEventArgs) Handles Lbl_TopLabel.MouseMove, PixBox_Top.MouseMove, PB_Logo.MouseMove, Panel1.MouseMove, Label1.MouseMove
+    Private Sub Pnl_Top_MouseMove(sender As Object, e As MouseEventArgs) Handles PixBox_Top.MouseMove, PB_Logo.MouseMove, Panel1.MouseMove, Label1.MouseMove
 
         If draggable Then
             Me.Top = Cursor.Position.Y - mouseY
@@ -588,7 +672,7 @@ Public Class Frame
 
     End Sub
 
-    Private Sub Pnl_Top_MouseUp(sender As Object, e As MouseEventArgs) Handles Lbl_TopLabel.MouseUp, PixBox_Top.MouseUp, PB_Logo.MouseUp, Panel1.MouseUp, Label1.MouseUp
+    Private Sub Pnl_Top_MouseUp(sender As Object, e As MouseEventArgs) Handles PixBox_Top.MouseUp, PB_Logo.MouseUp, Panel1.MouseUp, Label1.MouseUp
 
 
         draggable = False

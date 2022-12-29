@@ -1129,7 +1129,7 @@ Public Class cmdPnl
 
 
             'Frame.Lbl_CmdStatus.Text = "Last command runned " & cmdName & " at " & DateTime.Now
-
+        Catch ex As Exception
             LblMoreBtn.Show()
             isCmdRunning = False
 

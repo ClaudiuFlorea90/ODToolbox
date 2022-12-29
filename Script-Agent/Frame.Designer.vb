@@ -34,7 +34,6 @@ Partial Class Frame
         Me.Btn_Ticket = New System.Windows.Forms.Button()
         Me.ImageList_Buttons = New System.Windows.Forms.ImageList(Me.components)
         Me.ImageList_Expand = New System.Windows.Forms.ImageList(Me.components)
-        Me.Lbl_TopLabel = New System.Windows.Forms.Label()
         Me.ImageList_FrameControl = New System.Windows.Forms.ImageList(Me.components)
         Me.ImageList_CommandButton = New System.Windows.Forms.ImageList(Me.components)
         Me.PnlMain = New System.Windows.Forms.Panel()
@@ -43,8 +42,27 @@ Partial Class Frame
         Me.ExpandLeftMenu = New System.Windows.Forms.Timer(Me.components)
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Lbl_TopLabel = New System.Windows.Forms.TextBox()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.Lbl_NotifyCount = New System.Windows.Forms.Label()
+        Me.PictureBoxNotifications = New System.Windows.Forms.PictureBox()
+        Me.PictureBoxAccount = New System.Windows.Forms.PictureBox()
+        Me.PictureBoxSettings = New System.Windows.Forms.PictureBox()
+        Me.PnlSmallVirusScan = New System.Windows.Forms.Panel()
+        Me.Lbl_Scanner = New System.Windows.Forms.Label()
+        Me.Lbl_Reports = New System.Windows.Forms.Label()
+        Me.Lbl_Scheduler = New System.Windows.Forms.Label()
+        Me.Panel10 = New System.Windows.Forms.Panel()
+        Me.Panel9 = New System.Windows.Forms.Panel()
         Me.Btn_Exit = New System.Windows.Forms.Button()
+        Me.PnlSmallToolbox = New System.Windows.Forms.Panel()
+        Me.Label42342 = New System.Windows.Forms.Label()
+        Me.Lbl_432 = New System.Windows.Forms.Label()
+        Me.Lbl_43178 = New System.Windows.Forms.Label()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Btn_Minimize = New System.Windows.Forms.Button()
+        Me.PixBox_Top = New System.Windows.Forms.PictureBox()
         Me.PanelExpandNotifications = New System.Windows.Forms.Panel()
         Me.Btn_NotifyOptions = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -58,31 +76,32 @@ Partial Class Frame
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.ExpandAccount = New System.Windows.Forms.Timer(Me.components)
-        Me.Panel4 = New System.Windows.Forms.Panel()
         Me.ContextMenuNotify = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PictureBoxSettings = New System.Windows.Forms.PictureBox()
-        Me.PictureBoxAccount = New System.Windows.Forms.PictureBox()
-        Me.PB_Logo = New System.Windows.Forms.PictureBox()
-        Me.PictureBoxNotifications = New System.Windows.Forms.PictureBox()
-        Me.PixBox_Top = New System.Windows.Forms.PictureBox()
-        Me.Lbl_NotifyCount = New System.Windows.Forms.Label()
-        Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.Panel5 = New System.Windows.Forms.Panel()
         Me.ExpandLeftMenuCooldown = New System.Windows.Forms.Timer(Me.components)
+        Me.PB_Logo = New System.Windows.Forms.PictureBox()
+        Me.PanelTopMenu_Home = New System.Windows.Forms.Panel()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.Panel11 = New System.Windows.Forms.Panel()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.PnlMenu.SuspendLayout()
         Me.PnlMain.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        Me.Panel6.SuspendLayout()
+        CType(Me.PictureBoxNotifications, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBoxAccount, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBoxSettings, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PnlSmallVirusScan.SuspendLayout()
+        Me.PnlSmallToolbox.SuspendLayout()
+        CType(Me.PixBox_Top, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelExpandNotifications.SuspendLayout()
         Me.PanelExpandAccount.SuspendLayout()
         Me.ContextMenuNotify.SuspendLayout()
-        CType(Me.PictureBoxSettings, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBoxAccount, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PB_Logo, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBoxNotifications, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PixBox_Top, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel6.SuspendLayout()
+        Me.PanelTopMenu_Home.SuspendLayout()
         Me.SuspendLayout()
         '
         'ImageList_ExpandLeftMenuBtn
@@ -98,10 +117,11 @@ Partial Class Frame
         Me.PnlMenu.Controls.Add(Me.Button1)
         Me.PnlMenu.Controls.Add(Me.Btn_Browser)
         Me.PnlMenu.Controls.Add(Me.Btn_VirusScan)
+        Me.PnlMenu.Controls.Add(Me.PictureBoxSettings)
         Me.PnlMenu.Controls.Add(Me.Btn_Commands)
         Me.PnlMenu.Controls.Add(Me.Btn_Ticket)
         Me.PnlMenu.Location = New System.Drawing.Point(0, 71)
-        Me.PnlMenu.MaximumSize = New System.Drawing.Size(169, 663)
+        Me.PnlMenu.MaximumSize = New System.Drawing.Size(132, 663)
         Me.PnlMenu.MinimumSize = New System.Drawing.Size(64, 663)
         Me.PnlMenu.Name = "PnlMenu"
         Me.PnlMenu.Size = New System.Drawing.Size(64, 663)
@@ -115,12 +135,12 @@ Partial Class Frame
         Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(140, Byte), Integer), CType(CType(163, Byte), Integer))
         Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(140, Byte), Integer), CType(CType(163, Byte), Integer))
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Microsoft PhagsPa", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Button1.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLight
         Me.Button1.ImageIndex = 8
         Me.Button1.ImageList = Me.ImgList_MenuLeft
         Me.Button1.Location = New System.Drawing.Point(4, 48)
-        Me.Button1.MaximumSize = New System.Drawing.Size(162, 47)
+        Me.Button1.MaximumSize = New System.Drawing.Size(122, 47)
         Me.Button1.MinimumSize = New System.Drawing.Size(57, 47)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(57, 47)
@@ -155,7 +175,7 @@ Partial Class Frame
         Me.Btn_Browser.ImageIndex = 7
         Me.Btn_Browser.ImageList = Me.ImgList_MenuLeft
         Me.Btn_Browser.Location = New System.Drawing.Point(4, 333)
-        Me.Btn_Browser.MaximumSize = New System.Drawing.Size(162, 47)
+        Me.Btn_Browser.MaximumSize = New System.Drawing.Size(122, 47)
         Me.Btn_Browser.MinimumSize = New System.Drawing.Size(57, 47)
         Me.Btn_Browser.Name = "Btn_Browser"
         Me.Btn_Browser.Size = New System.Drawing.Size(57, 47)
@@ -176,7 +196,7 @@ Partial Class Frame
         Me.Btn_VirusScan.ImageIndex = 5
         Me.Btn_VirusScan.ImageList = Me.ImgList_MenuLeft
         Me.Btn_VirusScan.Location = New System.Drawing.Point(4, 153)
-        Me.Btn_VirusScan.MaximumSize = New System.Drawing.Size(162, 47)
+        Me.Btn_VirusScan.MaximumSize = New System.Drawing.Size(122, 47)
         Me.Btn_VirusScan.MinimumSize = New System.Drawing.Size(57, 47)
         Me.Btn_VirusScan.Name = "Btn_VirusScan"
         Me.Btn_VirusScan.Size = New System.Drawing.Size(57, 47)
@@ -192,12 +212,12 @@ Partial Class Frame
         Me.Btn_Commands.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(140, Byte), Integer), CType(CType(163, Byte), Integer))
         Me.Btn_Commands.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(140, Byte), Integer), CType(CType(163, Byte), Integer))
         Me.Btn_Commands.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_Commands.Font = New System.Drawing.Font("Microsoft PhagsPa", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Btn_Commands.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Commands.ForeColor = System.Drawing.SystemColors.ControlLight
         Me.Btn_Commands.ImageIndex = 2
         Me.Btn_Commands.ImageList = Me.ImgList_MenuLeft
         Me.Btn_Commands.Location = New System.Drawing.Point(4, 100)
-        Me.Btn_Commands.MaximumSize = New System.Drawing.Size(162, 47)
+        Me.Btn_Commands.MaximumSize = New System.Drawing.Size(122, 47)
         Me.Btn_Commands.MinimumSize = New System.Drawing.Size(57, 47)
         Me.Btn_Commands.Name = "Btn_Commands"
         Me.Btn_Commands.Size = New System.Drawing.Size(57, 47)
@@ -218,7 +238,7 @@ Partial Class Frame
         Me.Btn_Ticket.ImageIndex = 6
         Me.Btn_Ticket.ImageList = Me.ImgList_MenuLeft
         Me.Btn_Ticket.Location = New System.Drawing.Point(4, 386)
-        Me.Btn_Ticket.MaximumSize = New System.Drawing.Size(162, 47)
+        Me.Btn_Ticket.MaximumSize = New System.Drawing.Size(122, 47)
         Me.Btn_Ticket.MinimumSize = New System.Drawing.Size(57, 47)
         Me.Btn_Ticket.Name = "Btn_Ticket"
         Me.Btn_Ticket.Size = New System.Drawing.Size(57, 47)
@@ -251,17 +271,6 @@ Partial Class Frame
         Me.ImageList_Expand.Images.SetKeyName(0, "left-chevron.png")
         Me.ImageList_Expand.Images.SetKeyName(1, "right-chevron.png")
         '
-        'Lbl_TopLabel
-        '
-        Me.Lbl_TopLabel.AutoSize = True
-        Me.Lbl_TopLabel.Font = New System.Drawing.Font("Microsoft PhagsPa", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Lbl_TopLabel.ForeColor = System.Drawing.SystemColors.InactiveCaption
-        Me.Lbl_TopLabel.Location = New System.Drawing.Point(121, 40)
-        Me.Lbl_TopLabel.Name = "Lbl_TopLabel"
-        Me.Lbl_TopLabel.Size = New System.Drawing.Size(81, 21)
-        Me.Lbl_TopLabel.TabIndex = 14
-        Me.Lbl_TopLabel.Text = "Windows"
-        '
         'ImageList_FrameControl
         '
         Me.ImageList_FrameControl.ImageStream = CType(resources.GetObject("ImageList_FrameControl.ImageStream"), System.Windows.Forms.ImageListStreamer)
@@ -286,11 +295,11 @@ Partial Class Frame
         Me.PnlMain.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
         Me.PnlMain.Controls.Add(Me.Btn_home)
         Me.PnlMain.Controls.Add(Me.Btn_Settings)
-        Me.PnlMain.Location = New System.Drawing.Point(67, 71)
-        Me.PnlMain.MaximumSize = New System.Drawing.Size(686, 663)
-        Me.PnlMain.MinimumSize = New System.Drawing.Size(686, 663)
+        Me.PnlMain.Location = New System.Drawing.Point(67, 38)
+        Me.PnlMain.MaximumSize = New System.Drawing.Size(1189, 696)
+        Me.PnlMain.MinimumSize = New System.Drawing.Size(1189, 696)
         Me.PnlMain.Name = "PnlMain"
-        Me.PnlMain.Size = New System.Drawing.Size(686, 663)
+        Me.PnlMain.Size = New System.Drawing.Size(1189, 696)
         Me.PnlMain.TabIndex = 31
         '
         'Btn_home
@@ -316,7 +325,7 @@ Partial Class Frame
         Me.Btn_Settings.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Settings.ImageIndex = 4
         Me.Btn_Settings.ImageList = Me.ImgList_MenuLeft
-        Me.Btn_Settings.Location = New System.Drawing.Point(41, 469)
+        Me.Btn_Settings.Location = New System.Drawing.Point(108, 539)
         Me.Btn_Settings.Name = "Btn_Settings"
         Me.Btn_Settings.Size = New System.Drawing.Size(61, 40)
         Me.Btn_Settings.TabIndex = 22
@@ -330,26 +339,163 @@ Partial Class Frame
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Lucida Console", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Lucida Console", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label1.Location = New System.Drawing.Point(3, 10)
+        Me.Label1.Location = New System.Drawing.Point(1305, 345)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(117, 16)
+        Me.Label1.Size = New System.Drawing.Size(141, 20)
         Me.Label1.TabIndex = 32
         Me.Label1.Text = "OptimumDesk"
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Controls.Add(Me.PanelTopMenu_Home)
+        Me.Panel1.Controls.Add(Me.Lbl_TopLabel)
+        Me.Panel1.Controls.Add(Me.Panel6)
+        Me.Panel1.Controls.Add(Me.PnlSmallVirusScan)
         Me.Panel1.Controls.Add(Me.Btn_Exit)
+        Me.Panel1.Controls.Add(Me.PnlSmallToolbox)
         Me.Panel1.Controls.Add(Me.Btn_Minimize)
+        Me.Panel1.Controls.Add(Me.PixBox_Top)
         Me.Panel1.Location = New System.Drawing.Point(67, -1)
-        Me.Panel1.MaximumSize = New System.Drawing.Size(794, 36)
-        Me.Panel1.MinimumSize = New System.Drawing.Size(686, 36)
+        Me.Panel1.MinimumSize = New System.Drawing.Size(1189, 36)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(794, 36)
+        Me.Panel1.Size = New System.Drawing.Size(1189, 36)
         Me.Panel1.TabIndex = 23
+        '
+        'Lbl_TopLabel
+        '
+        Me.Lbl_TopLabel.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Lbl_TopLabel.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.Lbl_TopLabel.Cursor = System.Windows.Forms.Cursors.NoMove2D
+        Me.Lbl_TopLabel.Font = New System.Drawing.Font("Microsoft PhagsPa", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl_TopLabel.ForeColor = System.Drawing.Color.Orange
+        Me.Lbl_TopLabel.Location = New System.Drawing.Point(54, 8)
+        Me.Lbl_TopLabel.Name = "Lbl_TopLabel"
+        Me.Lbl_TopLabel.ReadOnly = True
+        Me.Lbl_TopLabel.Size = New System.Drawing.Size(130, 20)
+        Me.Lbl_TopLabel.TabIndex = 35
+        Me.Lbl_TopLabel.Text = "OptimumDesk"
+        '
+        'Panel6
+        '
+        Me.Panel6.Controls.Add(Me.Lbl_NotifyCount)
+        Me.Panel6.Controls.Add(Me.PictureBoxNotifications)
+        Me.Panel6.Controls.Add(Me.PictureBoxAccount)
+        Me.Panel6.Location = New System.Drawing.Point(1006, 7)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(92, 42)
+        Me.Panel6.TabIndex = 23
+        '
+        'Lbl_NotifyCount
+        '
+        Me.Lbl_NotifyCount.AutoSize = True
+        Me.Lbl_NotifyCount.BackColor = System.Drawing.Color.Red
+        Me.Lbl_NotifyCount.ForeColor = System.Drawing.SystemColors.Control
+        Me.Lbl_NotifyCount.Location = New System.Drawing.Point(26, 20)
+        Me.Lbl_NotifyCount.Name = "Lbl_NotifyCount"
+        Me.Lbl_NotifyCount.Size = New System.Drawing.Size(13, 13)
+        Me.Lbl_NotifyCount.TabIndex = 23
+        Me.Lbl_NotifyCount.Text = "2"
+        '
+        'PictureBoxNotifications
+        '
+        Me.PictureBoxNotifications.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBoxNotifications.Image = Global.Script_Agent.My.Resources.Resources.bell
+        Me.PictureBoxNotifications.Location = New System.Drawing.Point(3, 3)
+        Me.PictureBoxNotifications.Name = "PictureBoxNotifications"
+        Me.PictureBoxNotifications.Size = New System.Drawing.Size(24, 20)
+        Me.PictureBoxNotifications.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBoxNotifications.TabIndex = 16
+        Me.PictureBoxNotifications.TabStop = False
+        '
+        'PictureBoxAccount
+        '
+        Me.PictureBoxAccount.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBoxAccount.Image = Global.Script_Agent.My.Resources.Resources.user
+        Me.PictureBoxAccount.Location = New System.Drawing.Point(33, 3)
+        Me.PictureBoxAccount.Name = "PictureBoxAccount"
+        Me.PictureBoxAccount.Size = New System.Drawing.Size(24, 20)
+        Me.PictureBoxAccount.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBoxAccount.TabIndex = 16
+        Me.PictureBoxAccount.TabStop = False
+        '
+        'PictureBoxSettings
+        '
+        Me.PictureBoxSettings.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBoxSettings.Image = Global.Script_Agent.My.Resources.Resources.settings__1_
+        Me.PictureBoxSettings.Location = New System.Drawing.Point(4, 629)
+        Me.PictureBoxSettings.Name = "PictureBoxSettings"
+        Me.PictureBoxSettings.Size = New System.Drawing.Size(34, 26)
+        Me.PictureBoxSettings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBoxSettings.TabIndex = 17
+        Me.PictureBoxSettings.TabStop = False
+        '
+        'PnlSmallVirusScan
+        '
+        Me.PnlSmallVirusScan.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.PnlSmallVirusScan.Controls.Add(Me.Lbl_Scanner)
+        Me.PnlSmallVirusScan.Controls.Add(Me.Lbl_Reports)
+        Me.PnlSmallVirusScan.Controls.Add(Me.Lbl_Scheduler)
+        Me.PnlSmallVirusScan.Controls.Add(Me.Panel10)
+        Me.PnlSmallVirusScan.Controls.Add(Me.Panel9)
+        Me.PnlSmallVirusScan.Location = New System.Drawing.Point(556, 91)
+        Me.PnlSmallVirusScan.Name = "PnlSmallVirusScan"
+        Me.PnlSmallVirusScan.Size = New System.Drawing.Size(322, 27)
+        Me.PnlSmallVirusScan.TabIndex = 34
+        '
+        'Lbl_Scanner
+        '
+        Me.Lbl_Scanner.AutoSize = True
+        Me.Lbl_Scanner.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Lbl_Scanner.ForeColor = System.Drawing.Color.Chartreuse
+        Me.Lbl_Scanner.Location = New System.Drawing.Point(20, 5)
+        Me.Lbl_Scanner.Name = "Lbl_Scanner"
+        Me.Lbl_Scanner.Size = New System.Drawing.Size(52, 16)
+        Me.Lbl_Scanner.TabIndex = 35
+        Me.Lbl_Scanner.Text = "Scanner"
+        Me.Lbl_Scanner.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Lbl_Reports
+        '
+        Me.Lbl_Reports.AutoSize = True
+        Me.Lbl_Reports.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Lbl_Reports.ForeColor = System.Drawing.Color.LightGray
+        Me.Lbl_Reports.Location = New System.Drawing.Point(222, 5)
+        Me.Lbl_Reports.Name = "Lbl_Reports"
+        Me.Lbl_Reports.Size = New System.Drawing.Size(51, 16)
+        Me.Lbl_Reports.TabIndex = 36
+        Me.Lbl_Reports.Text = "Reports"
+        Me.Lbl_Reports.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Lbl_Scheduler
+        '
+        Me.Lbl_Scheduler.AutoSize = True
+        Me.Lbl_Scheduler.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Lbl_Scheduler.ForeColor = System.Drawing.Color.LightGray
+        Me.Lbl_Scheduler.Location = New System.Drawing.Point(110, 5)
+        Me.Lbl_Scheduler.Name = "Lbl_Scheduler"
+        Me.Lbl_Scheduler.Size = New System.Drawing.Size(63, 16)
+        Me.Lbl_Scheduler.TabIndex = 37
+        Me.Lbl_Scheduler.Text = "Scheduler"
+        Me.Lbl_Scheduler.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Panel10
+        '
+        Me.Panel10.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.Panel10.Location = New System.Drawing.Point(94, 2)
+        Me.Panel10.Name = "Panel10"
+        Me.Panel10.Size = New System.Drawing.Size(3, 30)
+        Me.Panel10.TabIndex = 31
+        '
+        'Panel9
+        '
+        Me.Panel9.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Panel9.Location = New System.Drawing.Point(188, 2)
+        Me.Panel9.Name = "Panel9"
+        Me.Panel9.Size = New System.Drawing.Size(3, 30)
+        Me.Panel9.TabIndex = 30
         '
         'Btn_Exit
         '
@@ -358,12 +504,80 @@ Partial Class Frame
         Me.Btn_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btn_Exit.ImageIndex = 2
         Me.Btn_Exit.ImageList = Me.ImageList_FrameControl
-        Me.Btn_Exit.Location = New System.Drawing.Point(643, 3)
+        Me.Btn_Exit.Location = New System.Drawing.Point(1145, 3)
         Me.Btn_Exit.Name = "Btn_Exit"
         Me.Btn_Exit.Size = New System.Drawing.Size(37, 30)
         Me.Btn_Exit.TabIndex = 15
         Me.Btn_Exit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.Btn_Exit.UseVisualStyleBackColor = False
+        '
+        'PnlSmallToolbox
+        '
+        Me.PnlSmallToolbox.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.PnlSmallToolbox.Controls.Add(Me.Label42342)
+        Me.PnlSmallToolbox.Controls.Add(Me.Lbl_432)
+        Me.PnlSmallToolbox.Controls.Add(Me.Lbl_43178)
+        Me.PnlSmallToolbox.Controls.Add(Me.Panel4)
+        Me.PnlSmallToolbox.Controls.Add(Me.Panel7)
+        Me.PnlSmallToolbox.Location = New System.Drawing.Point(201, 6)
+        Me.PnlSmallToolbox.Name = "PnlSmallToolbox"
+        Me.PnlSmallToolbox.Size = New System.Drawing.Size(322, 27)
+        Me.PnlSmallToolbox.TabIndex = 33
+        '
+        'Label42342
+        '
+        Me.Label42342.AutoSize = True
+        Me.Label42342.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label42342.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label42342.ForeColor = System.Drawing.Color.Chartreuse
+        Me.Label42342.Location = New System.Drawing.Point(20, 5)
+        Me.Label42342.Name = "Label42342"
+        Me.Label42342.Size = New System.Drawing.Size(62, 16)
+        Me.Label42342.TabIndex = 27
+        Me.Label42342.Text = "Overview"
+        Me.Label42342.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Lbl_432
+        '
+        Me.Lbl_432.AutoSize = True
+        Me.Lbl_432.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Lbl_432.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl_432.ForeColor = System.Drawing.Color.LightGray
+        Me.Lbl_432.Location = New System.Drawing.Point(196, 6)
+        Me.Lbl_432.Name = "Lbl_432"
+        Me.Lbl_432.Size = New System.Drawing.Size(105, 16)
+        Me.Lbl_432.TabIndex = 29
+        Me.Lbl_432.Text = "Encrypt / Decrypt"
+        Me.Lbl_432.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Lbl_43178
+        '
+        Me.Lbl_43178.AutoSize = True
+        Me.Lbl_43178.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Lbl_43178.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl_43178.ForeColor = System.Drawing.Color.LightGray
+        Me.Lbl_43178.Location = New System.Drawing.Point(120, 6)
+        Me.Lbl_43178.Name = "Lbl_43178"
+        Me.Lbl_43178.Size = New System.Drawing.Size(32, 16)
+        Me.Lbl_43178.TabIndex = 28
+        Me.Lbl_43178.Text = "Logs"
+        Me.Lbl_43178.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Panel4
+        '
+        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Panel4.Location = New System.Drawing.Point(94, 0)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(3, 30)
+        Me.Panel4.TabIndex = 31
+        '
+        'Panel7
+        '
+        Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Panel7.Location = New System.Drawing.Point(170, 0)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.Size = New System.Drawing.Size(3, 30)
+        Me.Panel7.TabIndex = 30
         '
         'Btn_Minimize
         '
@@ -372,12 +586,21 @@ Partial Class Frame
         Me.Btn_Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btn_Minimize.ImageIndex = 3
         Me.Btn_Minimize.ImageList = Me.ImageList_FrameControl
-        Me.Btn_Minimize.Location = New System.Drawing.Point(602, 3)
+        Me.Btn_Minimize.Location = New System.Drawing.Point(1104, 3)
         Me.Btn_Minimize.Name = "Btn_Minimize"
         Me.Btn_Minimize.Size = New System.Drawing.Size(37, 30)
         Me.Btn_Minimize.TabIndex = 15
         Me.Btn_Minimize.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.Btn_Minimize.UseVisualStyleBackColor = False
+        '
+        'PixBox_Top
+        '
+        Me.PixBox_Top.Location = New System.Drawing.Point(3, 6)
+        Me.PixBox_Top.Name = "PixBox_Top"
+        Me.PixBox_Top.Size = New System.Drawing.Size(45, 25)
+        Me.PixBox_Top.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PixBox_Top.TabIndex = 13
+        Me.PixBox_Top.TabStop = False
         '
         'PanelExpandNotifications
         '
@@ -388,7 +611,7 @@ Partial Class Frame
         Me.PanelExpandNotifications.Controls.Add(Me.Label5)
         Me.PanelExpandNotifications.Controls.Add(Me.Label14)
         Me.PanelExpandNotifications.Controls.Add(Me.Label2)
-        Me.PanelExpandNotifications.Location = New System.Drawing.Point(822, 160)
+        Me.PanelExpandNotifications.Location = New System.Drawing.Point(1340, 589)
         Me.PanelExpandNotifications.MaximumSize = New System.Drawing.Size(225, 295)
         Me.PanelExpandNotifications.Name = "PanelExpandNotifications"
         Me.PanelExpandNotifications.Size = New System.Drawing.Size(225, 295)
@@ -459,7 +682,7 @@ Partial Class Frame
         Me.PanelExpandAccount.Controls.Add(Me.Panel3)
         Me.PanelExpandAccount.Controls.Add(Me.Label3)
         Me.PanelExpandAccount.Controls.Add(Me.Label6)
-        Me.PanelExpandAccount.Location = New System.Drawing.Point(1031, 56)
+        Me.PanelExpandAccount.Location = New System.Drawing.Point(1450, 488)
         Me.PanelExpandAccount.MaximumSize = New System.Drawing.Size(225, 295)
         Me.PanelExpandAccount.Name = "PanelExpandAccount"
         Me.PanelExpandAccount.Size = New System.Drawing.Size(225, 295)
@@ -509,14 +732,6 @@ Partial Class Frame
         '
         Me.ExpandAccount.Interval = 15
         '
-        'Panel4
-        '
-        Me.Panel4.BackColor = System.Drawing.Color.Gray
-        Me.Panel4.Location = New System.Drawing.Point(30, 3)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(1, 25)
-        Me.Panel4.TabIndex = 33
-        '
         'ContextMenuNotify
         '
         Me.ContextMenuNotify.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
@@ -547,27 +762,10 @@ Partial Class Frame
         Me.ToolStripMenuItem2.Size = New System.Drawing.Size(163, 26)
         Me.ToolStripMenuItem2.Text = "Clear all"
         '
-        'PictureBoxSettings
+        'ExpandLeftMenuCooldown
         '
-        Me.PictureBoxSettings.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBoxSettings.Image = Global.Script_Agent.My.Resources.Resources.settings__1_
-        Me.PictureBoxSettings.Location = New System.Drawing.Point(82, 3)
-        Me.PictureBoxSettings.Name = "PictureBoxSettings"
-        Me.PictureBoxSettings.Size = New System.Drawing.Size(28, 24)
-        Me.PictureBoxSettings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBoxSettings.TabIndex = 17
-        Me.PictureBoxSettings.TabStop = False
-        '
-        'PictureBoxAccount
-        '
-        Me.PictureBoxAccount.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBoxAccount.Image = Global.Script_Agent.My.Resources.Resources.user
-        Me.PictureBoxAccount.Location = New System.Drawing.Point(41, 3)
-        Me.PictureBoxAccount.Name = "PictureBoxAccount"
-        Me.PictureBoxAccount.Size = New System.Drawing.Size(28, 24)
-        Me.PictureBoxAccount.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBoxAccount.TabIndex = 16
-        Me.PictureBoxAccount.TabStop = False
+        Me.ExpandLeftMenuCooldown.Enabled = True
+        Me.ExpandLeftMenuCooldown.Interval = 6000
         '
         'PB_Logo
         '
@@ -581,62 +779,67 @@ Partial Class Frame
         Me.PB_Logo.TabIndex = 13
         Me.PB_Logo.TabStop = False
         '
-        'PictureBoxNotifications
+        'PanelTopMenu_Home
         '
-        Me.PictureBoxNotifications.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBoxNotifications.Image = Global.Script_Agent.My.Resources.Resources.bell
-        Me.PictureBoxNotifications.Location = New System.Drawing.Point(5, 3)
-        Me.PictureBoxNotifications.Name = "PictureBoxNotifications"
-        Me.PictureBoxNotifications.Size = New System.Drawing.Size(28, 24)
-        Me.PictureBoxNotifications.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBoxNotifications.TabIndex = 16
-        Me.PictureBoxNotifications.TabStop = False
+        Me.PanelTopMenu_Home.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.PanelTopMenu_Home.Controls.Add(Me.Label9)
+        Me.PanelTopMenu_Home.Controls.Add(Me.Label8)
+        Me.PanelTopMenu_Home.Controls.Add(Me.Label7)
+        Me.PanelTopMenu_Home.Controls.Add(Me.Panel8)
+        Me.PanelTopMenu_Home.Controls.Add(Me.Panel11)
+        Me.PanelTopMenu_Home.Location = New System.Drawing.Point(201, 91)
+        Me.PanelTopMenu_Home.Name = "PanelTopMenu_Home"
+        Me.PanelTopMenu_Home.Size = New System.Drawing.Size(322, 27)
+        Me.PanelTopMenu_Home.TabIndex = 36
         '
-        'PixBox_Top
+        'Label7
         '
-        Me.PixBox_Top.Location = New System.Drawing.Point(70, 40)
-        Me.PixBox_Top.Name = "PixBox_Top"
-        Me.PixBox_Top.Size = New System.Drawing.Size(45, 25)
-        Me.PixBox_Top.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PixBox_Top.TabIndex = 13
-        Me.PixBox_Top.TabStop = False
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label7.ForeColor = System.Drawing.Color.Chartreuse
+        Me.Label7.Location = New System.Drawing.Point(20, 5)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(66, 16)
+        Me.Label7.TabIndex = 0
+        Me.Label7.Text = "Live status"
         '
-        'Lbl_NotifyCount
+        'Panel8
         '
-        Me.Lbl_NotifyCount.AutoSize = True
-        Me.Lbl_NotifyCount.BackColor = System.Drawing.Color.Red
-        Me.Lbl_NotifyCount.ForeColor = System.Drawing.SystemColors.Control
-        Me.Lbl_NotifyCount.Location = New System.Drawing.Point(26, 20)
-        Me.Lbl_NotifyCount.Name = "Lbl_NotifyCount"
-        Me.Lbl_NotifyCount.Size = New System.Drawing.Size(13, 13)
-        Me.Lbl_NotifyCount.TabIndex = 23
-        Me.Lbl_NotifyCount.Text = "2"
+        Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Panel8.Location = New System.Drawing.Point(188, 0)
+        Me.Panel8.Name = "Panel8"
+        Me.Panel8.Size = New System.Drawing.Size(3, 30)
+        Me.Panel8.TabIndex = 30
         '
-        'Panel6
+        'Panel11
         '
-        Me.Panel6.Controls.Add(Me.Lbl_NotifyCount)
-        Me.Panel6.Controls.Add(Me.PictureBoxNotifications)
-        Me.Panel6.Controls.Add(Me.Panel5)
-        Me.Panel6.Controls.Add(Me.PictureBoxAccount)
-        Me.Panel6.Controls.Add(Me.Panel4)
-        Me.Panel6.Controls.Add(Me.PictureBoxSettings)
-        Me.Panel6.Location = New System.Drawing.Point(612, 38)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(113, 33)
-        Me.Panel6.TabIndex = 23
+        Me.Panel11.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.Panel11.Location = New System.Drawing.Point(94, 0)
+        Me.Panel11.Name = "Panel11"
+        Me.Panel11.Size = New System.Drawing.Size(3, 30)
+        Me.Panel11.TabIndex = 31
         '
-        'Panel5
+        'Label8
         '
-        Me.Panel5.BackColor = System.Drawing.Color.Gray
-        Me.Panel5.Location = New System.Drawing.Point(75, 3)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(1, 25)
-        Me.Panel5.TabIndex = 33
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label8.ForeColor = System.Drawing.Color.LightGray
+        Me.Label8.Location = New System.Drawing.Point(120, 5)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(43, 16)
+        Me.Label8.TabIndex = 0
+        Me.Label8.Text = "Label7"
         '
-        'ExpandLeftMenuCooldown
+        'Label9
         '
-        Me.ExpandLeftMenuCooldown.Enabled = True
-        Me.ExpandLeftMenuCooldown.Interval = 6000
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label9.ForeColor = System.Drawing.Color.LightGray
+        Me.Label9.Location = New System.Drawing.Point(230, 5)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(43, 16)
+        Me.Label9.TabIndex = 0
+        Me.Label9.Text = "Label7"
         '
         'Frame
         '
@@ -644,22 +847,19 @@ Partial Class Frame
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(861, 738)
+        Me.ClientSize = New System.Drawing.Size(1872, 738)
+        Me.Controls.Add(Me.PnlMenu)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PanelExpandAccount)
         Me.Controls.Add(Me.PanelExpandNotifications)
-        Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.PB_Logo)
-        Me.Controls.Add(Me.Lbl_TopLabel)
-        Me.Controls.Add(Me.PixBox_Top)
         Me.Controls.Add(Me.PnlMain)
-        Me.Controls.Add(Me.PnlMenu)
         Me.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.MaximumSize = New System.Drawing.Size(861, 738)
         Me.MinimizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(753, 738)
+        Me.MinimumSize = New System.Drawing.Size(1261, 738)
         Me.Name = "Frame"
         Me.Opacity = 0.99R
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -668,18 +868,24 @@ Partial Class Frame
         Me.PnlMain.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.Panel6.ResumeLayout(False)
+        Me.Panel6.PerformLayout()
+        CType(Me.PictureBoxNotifications, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBoxAccount, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBoxSettings, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PnlSmallVirusScan.ResumeLayout(False)
+        Me.PnlSmallVirusScan.PerformLayout()
+        Me.PnlSmallToolbox.ResumeLayout(False)
+        Me.PnlSmallToolbox.PerformLayout()
+        CType(Me.PixBox_Top, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelExpandNotifications.ResumeLayout(False)
         Me.PanelExpandNotifications.PerformLayout()
         Me.PanelExpandAccount.ResumeLayout(False)
         Me.PanelExpandAccount.PerformLayout()
         Me.ContextMenuNotify.ResumeLayout(False)
-        CType(Me.PictureBoxSettings, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBoxAccount, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PB_Logo, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBoxNotifications, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PixBox_Top, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel6.ResumeLayout(False)
-        Me.Panel6.PerformLayout()
+        Me.PanelTopMenu_Home.ResumeLayout(False)
+        Me.PanelTopMenu_Home.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -691,7 +897,6 @@ Partial Class Frame
     Friend WithEvents PixBox_Top As PictureBox
     Friend WithEvents ImageList_Expand As ImageList
     Friend WithEvents ImageList_CommandButton As ImageList
-    Friend WithEvents Lbl_TopLabel As Label
     Friend WithEvents Btn_Settings As Button
     Friend WithEvents Btn_Ticket As Button
     Friend WithEvents Btn_Commands As Button
@@ -720,7 +925,6 @@ Partial Class Frame
     Friend WithEvents ExpandAccount As Timer
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Label6 As Label
-    Friend WithEvents Panel4 As Panel
     Friend WithEvents Btn_NotifyOptions As Button
     Friend WithEvents ContextMenuNotify As ContextMenuStrip
     Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
@@ -729,6 +933,24 @@ Partial Class Frame
     Friend WithEvents Panel6 As Panel
     Friend WithEvents Btn_Browser As Button
     Friend WithEvents ExpandLeftMenuCooldown As Timer
-    Friend WithEvents Panel5 As Panel
     Friend WithEvents Button1 As Button
+    Friend WithEvents Label42342 As Label
+    Friend WithEvents Lbl_43178 As Label
+    Friend WithEvents Lbl_432 As Label
+    Friend WithEvents Panel7 As Panel
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents PnlSmallToolbox As Panel
+    Friend WithEvents PnlSmallVirusScan As Panel
+    Friend WithEvents Lbl_Scanner As Label
+    Friend WithEvents Lbl_Reports As Label
+    Friend WithEvents Lbl_Scheduler As Label
+    Friend WithEvents Panel10 As Panel
+    Friend WithEvents Panel9 As Panel
+    Friend WithEvents Lbl_TopLabel As TextBox
+    Friend WithEvents PanelTopMenu_Home As Panel
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Panel8 As Panel
+    Friend WithEvents Panel11 As Panel
 End Class

@@ -128,7 +128,11 @@ Partial Class VirusScanForm
         Me.Label57 = New System.Windows.Forms.Label()
         Me.Panel_Protection = New System.Windows.Forms.Panel()
         Me.Label55 = New System.Windows.Forms.Label()
+        Me.ToggleAntiRansom = New Script_Agent.Toggle()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.ToggleAntispy = New Script_Agent.Toggle()
+        Me.ToggleRealTime = New Script_Agent.Toggle()
+        Me.ToggleWebProtection = New Script_Agent.Toggle()
         Me.Label69 = New System.Windows.Forms.Label()
         Me.Label66 = New System.Windows.Forms.Label()
         Me.Label68 = New System.Windows.Forms.Label()
@@ -171,6 +175,8 @@ Partial Class VirusScanForm
         Me.Label25 = New System.Windows.Forms.Label()
         Me.ComboBox_ScanType = New System.Windows.Forms.ComboBox()
         Me.Label52 = New System.Windows.Forms.Label()
+        Me.Toggle6 = New Script_Agent.Toggle()
+        Me.Toggle2 = New Script_Agent.Toggle()
         Me.Label48 = New System.Windows.Forms.Label()
         Me.Label51 = New System.Windows.Forms.Label()
         Me.Btn_StartScan = New System.Windows.Forms.Button()
@@ -253,12 +259,6 @@ Partial Class VirusScanForm
         Me.Label75 = New System.Windows.Forms.Label()
         Me.Label40 = New System.Windows.Forms.Label()
         Me.Label39 = New System.Windows.Forms.Label()
-        Me.Toggle6 = New Script_Agent.Toggle()
-        Me.Toggle2 = New Script_Agent.Toggle()
-        Me.ToggleAntiRansom = New Script_Agent.Toggle()
-        Me.ToggleAntispy = New Script_Agent.Toggle()
-        Me.ToggleRealTime = New Script_Agent.Toggle()
-        Me.ToggleWebProtection = New Script_Agent.Toggle()
         Me.Panel_Scheduler.SuspendLayout()
         Me.Panel9.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1440,6 +1440,16 @@ Partial Class VirusScanForm
         Me.Label55.Text = "Protection"
         Me.Label55.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'ToggleAntiRansom
+        '
+        Me.ToggleAntiRansom.Checked = True
+        Me.ToggleAntiRansom.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ToggleAntiRansom.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.ToggleAntiRansom.Location = New System.Drawing.Point(7, 235)
+        Me.ToggleAntiRansom.Name = "ToggleAntiRansom"
+        Me.ToggleAntiRansom.Size = New System.Drawing.Size(31, 17)
+        Me.ToggleAntiRansom.TabIndex = 17
+        '
         'PictureBox3
         '
         Me.PictureBox3.Image = Global.Script_Agent.My.Resources.Resources.secure
@@ -1449,6 +1459,36 @@ Partial Class VirusScanForm
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox3.TabIndex = 0
         Me.PictureBox3.TabStop = False
+        '
+        'ToggleAntispy
+        '
+        Me.ToggleAntispy.Checked = False
+        Me.ToggleAntispy.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ToggleAntispy.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(130, Byte), Integer))
+        Me.ToggleAntispy.Location = New System.Drawing.Point(7, 171)
+        Me.ToggleAntispy.Name = "ToggleAntispy"
+        Me.ToggleAntispy.Size = New System.Drawing.Size(31, 17)
+        Me.ToggleAntispy.TabIndex = 17
+        '
+        'ToggleRealTime
+        '
+        Me.ToggleRealTime.Checked = False
+        Me.ToggleRealTime.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ToggleRealTime.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.ToggleRealTime.Location = New System.Drawing.Point(7, 193)
+        Me.ToggleRealTime.Name = "ToggleRealTime"
+        Me.ToggleRealTime.Size = New System.Drawing.Size(31, 17)
+        Me.ToggleRealTime.TabIndex = 17
+        '
+        'ToggleWebProtection
+        '
+        Me.ToggleWebProtection.Checked = False
+        Me.ToggleWebProtection.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ToggleWebProtection.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.ToggleWebProtection.Location = New System.Drawing.Point(7, 214)
+        Me.ToggleWebProtection.Name = "ToggleWebProtection"
+        Me.ToggleWebProtection.Size = New System.Drawing.Size(31, 17)
+        Me.ToggleWebProtection.TabIndex = 17
         '
         'Label69
         '
@@ -1954,6 +1994,28 @@ Partial Class VirusScanForm
         Me.Label52.Size = New System.Drawing.Size(66, 13)
         Me.Label52.TabIndex = 1
         Me.Label52.Text = "Scan options"
+        '
+        'Toggle6
+        '
+        Me.Toggle6.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Toggle6.Checked = False
+        Me.Toggle6.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Toggle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
+        Me.Toggle6.Location = New System.Drawing.Point(16, 148)
+        Me.Toggle6.Name = "Toggle6"
+        Me.Toggle6.Size = New System.Drawing.Size(25, 14)
+        Me.Toggle6.TabIndex = 17
+        '
+        'Toggle2
+        '
+        Me.Toggle2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Toggle2.Checked = False
+        Me.Toggle2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Toggle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
+        Me.Toggle2.Location = New System.Drawing.Point(16, 124)
+        Me.Toggle2.Name = "Toggle2"
+        Me.Toggle2.Size = New System.Drawing.Size(25, 14)
+        Me.Toggle2.TabIndex = 17
         '
         'Label48
         '
@@ -2580,7 +2642,7 @@ Partial Class VirusScanForm
         Me.Panel5.Controls.Add(Me.Panel_2)
         Me.Panel5.Controls.Add(Me.Panel_3)
         Me.Panel5.Controls.Add(Me.Panel_1)
-        Me.Panel5.Location = New System.Drawing.Point(2, 1)
+        Me.Panel5.Location = New System.Drawing.Point(51, 727)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(669, 33)
         Me.Panel5.TabIndex = 20
@@ -2863,68 +2925,6 @@ Partial Class VirusScanForm
         Me.Label39.TabIndex = 1
         Me.Label39.Text = "View  Report"
         Me.Label39.Visible = False
-        '
-        'Toggle6
-        '
-        Me.Toggle6.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Toggle6.Checked = False
-        Me.Toggle6.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Toggle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.Toggle6.Location = New System.Drawing.Point(16, 148)
-        Me.Toggle6.Name = "Toggle6"
-        Me.Toggle6.Size = New System.Drawing.Size(25, 14)
-        Me.Toggle6.TabIndex = 17
-        '
-        'Toggle2
-        '
-        Me.Toggle2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Toggle2.Checked = False
-        Me.Toggle2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Toggle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.Toggle2.Location = New System.Drawing.Point(16, 124)
-        Me.Toggle2.Name = "Toggle2"
-        Me.Toggle2.Size = New System.Drawing.Size(25, 14)
-        Me.Toggle2.TabIndex = 17
-        '
-        'ToggleAntiRansom
-        '
-        Me.ToggleAntiRansom.Checked = True
-        Me.ToggleAntiRansom.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ToggleAntiRansom.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        Me.ToggleAntiRansom.Location = New System.Drawing.Point(7, 235)
-        Me.ToggleAntiRansom.Name = "ToggleAntiRansom"
-        Me.ToggleAntiRansom.Size = New System.Drawing.Size(31, 17)
-        Me.ToggleAntiRansom.TabIndex = 17
-        '
-        'ToggleAntispy
-        '
-        Me.ToggleAntispy.Checked = False
-        Me.ToggleAntispy.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ToggleAntispy.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(130, Byte), Integer))
-        Me.ToggleAntispy.Location = New System.Drawing.Point(7, 171)
-        Me.ToggleAntispy.Name = "ToggleAntispy"
-        Me.ToggleAntispy.Size = New System.Drawing.Size(31, 17)
-        Me.ToggleAntispy.TabIndex = 17
-        '
-        'ToggleRealTime
-        '
-        Me.ToggleRealTime.Checked = False
-        Me.ToggleRealTime.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ToggleRealTime.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        Me.ToggleRealTime.Location = New System.Drawing.Point(7, 193)
-        Me.ToggleRealTime.Name = "ToggleRealTime"
-        Me.ToggleRealTime.Size = New System.Drawing.Size(31, 17)
-        Me.ToggleRealTime.TabIndex = 17
-        '
-        'ToggleWebProtection
-        '
-        Me.ToggleWebProtection.Checked = False
-        Me.ToggleWebProtection.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ToggleWebProtection.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        Me.ToggleWebProtection.Location = New System.Drawing.Point(7, 214)
-        Me.ToggleWebProtection.Name = "ToggleWebProtection"
-        Me.ToggleWebProtection.Size = New System.Drawing.Size(31, 17)
-        Me.ToggleWebProtection.TabIndex = 17
         '
         'VirusScanForm
         '

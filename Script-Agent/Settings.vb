@@ -3,15 +3,24 @@
 Public Class Settings
 
 
+    Dim log As String = My.Application.Info.DirectoryPath + "\log.log"
+
 
 
 
     Private Sub Settings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        RunAtStartup()
+        '  RunAtStartup()
 
 
     End Sub
+
+
+
+
+
+
+
 
     Sub RunAtStartup()
 
@@ -32,5 +41,23 @@ Public Class Settings
 
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
+
+        If System.IO.File.Exists(log) = True Then
+            Process.Start(log)
+        Else
+            MsgBox("Log does not exist")
+        End If
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+
+        If System.IO.File.Exists(log) = True Then
+            My.Computer.FileSystem.DeleteFile(log)
+
+        End If
+
+    End Sub
 End Class

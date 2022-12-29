@@ -455,6 +455,11 @@ Public Class Home
 
         Me.Show()
 
+
+        'Pnl_Network.ra
+
+
+
     End Sub
 
 

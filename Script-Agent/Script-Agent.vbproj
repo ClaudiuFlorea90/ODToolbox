@@ -72,6 +72,9 @@
   <PropertyGroup>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Papirus-Team-Papirus-Apps-Jetbrains-toolbox.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="CefSharp, Version=107.1.90.0, Culture=neutral, PublicKeyToken=40c4b6fc221f4138, processorArchitecture=MSIL">
       <HintPath>..\packages\CefSharp.Common.107.1.90\lib\net452\CefSharp.dll</HintPath>
@@ -195,6 +198,7 @@
     <Compile Include="Home.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Module1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -744,6 +748,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\refresh %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinegiftools %282%292.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wrench.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rotation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\not-applicable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\na.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Papirus-Team-Papirus-Apps-Jetbrains-toolbox.ico" />
+    <None Include="Resources\TrueLogo.png" />
+    <None Include="Resources\stapleslogo.png" />
+    <None Include="Resources\pcmaticlogo.png" />
+    <None Include="Resources\newegglogo.png" />
+    <None Include="Resources\logoTech.png" />
+    <None Include="Resources\techServicesLogo.png" />
+    <None Include="Resources\true-solutions-logo.png" />
+    <None Include="Resources\staples-logo.png" />
+    <None Include="Resources\log-file.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
