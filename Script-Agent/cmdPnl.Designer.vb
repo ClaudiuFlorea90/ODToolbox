@@ -229,7 +229,6 @@ Partial Class cmdPnl
         Me.Btn_Browser = New System.Windows.Forms.Button()
         Me.Btn_Software = New System.Windows.Forms.Button()
         Me.Btn_Security = New System.Windows.Forms.Button()
-        Me.Btn_Office = New System.Windows.Forms.Button()
         Me.Btn_Antivirus = New System.Windows.Forms.Button()
         Me.Btn_Network = New System.Windows.Forms.Button()
         Me.Btn_Windows = New System.Windows.Forms.Button()
@@ -314,6 +313,8 @@ Partial Class cmdPnl
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Btn_Test = New System.Windows.Forms.Button()
+        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
+        Me.IconButton2 = New FontAwesome.Sharp.IconButton()
         Me.Pnl_CommandAnimation.SuspendLayout()
         CType(Me.PicBox_CmdRun, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Pb1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -387,7 +388,7 @@ Partial Class cmdPnl
         Me.Pnl_CommandAnimation.Controls.Add(Me.PB_Cmd)
         Me.Pnl_CommandAnimation.Controls.Add(Me.Lbl_Procent)
         Me.Pnl_CommandAnimation.Controls.Add(Me.Pb1)
-        Me.Pnl_CommandAnimation.Location = New System.Drawing.Point(9, 5)
+        Me.Pnl_CommandAnimation.Location = New System.Drawing.Point(12, 40)
         Me.Pnl_CommandAnimation.Name = "Pnl_CommandAnimation"
         Me.Pnl_CommandAnimation.Size = New System.Drawing.Size(665, 290)
         Me.Pnl_CommandAnimation.TabIndex = 15
@@ -528,7 +529,7 @@ Partial Class cmdPnl
         Me.Pnl_Windows.Controls.Add(Me.Panel1)
         Me.Pnl_Windows.Controls.Add(Me.Panel8)
         Me.Pnl_Windows.Controls.Add(Me.Panel6)
-        Me.Pnl_Windows.Location = New System.Drawing.Point(6, 351)
+        Me.Pnl_Windows.Location = New System.Drawing.Point(9, 386)
         Me.Pnl_Windows.Name = "Pnl_Windows"
         Me.Pnl_Windows.Size = New System.Drawing.Size(703, 279)
         Me.Pnl_Windows.TabIndex = 23
@@ -2957,7 +2958,7 @@ Partial Class cmdPnl
         Me.Button29.ForeColor = System.Drawing.SystemColors.ActiveCaption
         Me.Button29.ImageIndex = 0
         Me.Button29.ImageList = Me.ImageList_Events
-        Me.Button29.Location = New System.Drawing.Point(593, 634)
+        Me.Button29.Location = New System.Drawing.Point(596, 669)
         Me.Button29.Name = "Button29"
         Me.Button29.Size = New System.Drawing.Size(81, 22)
         Me.Button29.TabIndex = 34
@@ -2984,7 +2985,7 @@ Partial Class cmdPnl
         Me.Btn_Browser.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Btn_Browser.ImageIndex = 2
         Me.Btn_Browser.ImageList = Me.Btn_Icon
-        Me.Btn_Browser.Location = New System.Drawing.Point(566, 297)
+        Me.Btn_Browser.Location = New System.Drawing.Point(569, 332)
         Me.Btn_Browser.Name = "Btn_Browser"
         Me.Btn_Browser.Size = New System.Drawing.Size(63, 51)
         Me.Btn_Browser.TabIndex = 22
@@ -3006,7 +3007,7 @@ Partial Class cmdPnl
         Me.Btn_Software.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Btn_Software.ImageIndex = 5
         Me.Btn_Software.ImageList = Me.Btn_Icon
-        Me.Btn_Software.Location = New System.Drawing.Point(338, 295)
+        Me.Btn_Software.Location = New System.Drawing.Point(341, 330)
         Me.Btn_Software.Name = "Btn_Software"
         Me.Btn_Software.Size = New System.Drawing.Size(63, 51)
         Me.Btn_Software.TabIndex = 22
@@ -3028,7 +3029,7 @@ Partial Class cmdPnl
         Me.Btn_Security.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Btn_Security.ImageIndex = 6
         Me.Btn_Security.ImageList = Me.Btn_Icon
-        Me.Btn_Security.Location = New System.Drawing.Point(263, 295)
+        Me.Btn_Security.Location = New System.Drawing.Point(266, 330)
         Me.Btn_Security.Name = "Btn_Security"
         Me.Btn_Security.Size = New System.Drawing.Size(63, 51)
         Me.Btn_Security.TabIndex = 22
@@ -3036,28 +3037,6 @@ Partial Class cmdPnl
         Me.Btn_Security.Text = "Security"
         Me.Btn_Security.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.Btn_Security.UseVisualStyleBackColor = False
-        '
-        'Btn_Office
-        '
-        Me.Btn_Office.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
-        Me.Btn_Office.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Btn_Office.FlatAppearance.BorderSize = 0
-        Me.Btn_Office.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(140, Byte), Integer), CType(CType(163, Byte), Integer))
-        Me.Btn_Office.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(140, Byte), Integer), CType(CType(163, Byte), Integer))
-        Me.Btn_Office.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_Office.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn_Office.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.Btn_Office.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Btn_Office.ImageIndex = 3
-        Me.Btn_Office.ImageList = Me.Btn_Icon
-        Me.Btn_Office.Location = New System.Drawing.Point(488, 295)
-        Me.Btn_Office.Name = "Btn_Office"
-        Me.Btn_Office.Size = New System.Drawing.Size(63, 51)
-        Me.Btn_Office.TabIndex = 22
-        Me.Btn_Office.Tag = "OKK"
-        Me.Btn_Office.Text = "Office"
-        Me.Btn_Office.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.Btn_Office.UseVisualStyleBackColor = False
         '
         'Btn_Antivirus
         '
@@ -3072,7 +3051,7 @@ Partial Class cmdPnl
         Me.Btn_Antivirus.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Btn_Antivirus.ImageIndex = 7
         Me.Btn_Antivirus.ImageList = Me.Btn_Icon
-        Me.Btn_Antivirus.Location = New System.Drawing.Point(188, 295)
+        Me.Btn_Antivirus.Location = New System.Drawing.Point(191, 330)
         Me.Btn_Antivirus.Name = "Btn_Antivirus"
         Me.Btn_Antivirus.Size = New System.Drawing.Size(63, 51)
         Me.Btn_Antivirus.TabIndex = 22
@@ -3094,7 +3073,7 @@ Partial Class cmdPnl
         Me.Btn_Network.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Btn_Network.ImageIndex = 0
         Me.Btn_Network.ImageList = Me.Btn_Icon
-        Me.Btn_Network.Location = New System.Drawing.Point(104, 295)
+        Me.Btn_Network.Location = New System.Drawing.Point(107, 330)
         Me.Btn_Network.Name = "Btn_Network"
         Me.Btn_Network.Size = New System.Drawing.Size(63, 51)
         Me.Btn_Network.TabIndex = 22
@@ -3116,7 +3095,7 @@ Partial Class cmdPnl
         Me.Btn_Windows.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Btn_Windows.ImageIndex = 8
         Me.Btn_Windows.ImageList = Me.Btn_Icon
-        Me.Btn_Windows.Location = New System.Drawing.Point(29, 295)
+        Me.Btn_Windows.Location = New System.Drawing.Point(32, 330)
         Me.Btn_Windows.Name = "Btn_Windows"
         Me.Btn_Windows.Size = New System.Drawing.Size(63, 51)
         Me.Btn_Windows.TabIndex = 22
@@ -3138,7 +3117,7 @@ Partial Class cmdPnl
         Me.Btn_Privacy.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Btn_Privacy.ImageIndex = 4
         Me.Btn_Privacy.ImageList = Me.Btn_Icon
-        Me.Btn_Privacy.Location = New System.Drawing.Point(413, 295)
+        Me.Btn_Privacy.Location = New System.Drawing.Point(416, 330)
         Me.Btn_Privacy.Name = "Btn_Privacy"
         Me.Btn_Privacy.Size = New System.Drawing.Size(63, 51)
         Me.Btn_Privacy.TabIndex = 22
@@ -4166,7 +4145,7 @@ Partial Class cmdPnl
         Me.TextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox1.ForeColor = System.Drawing.SystemColors.Control
-        Me.TextBox1.Location = New System.Drawing.Point(6, 633)
+        Me.TextBox1.Location = New System.Drawing.Point(9, 668)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(121, 22)
@@ -4183,12 +4162,46 @@ Partial Class cmdPnl
         Me.Btn_Test.Text = "Button1"
         Me.Btn_Test.UseVisualStyleBackColor = True
         '
+        'IconButton1
+        '
+        Me.IconButton1.FlatAppearance.BorderSize = 0
+        Me.IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton1.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.IconButton1.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.None
+        Me.IconButton1.IconColor = System.Drawing.Color.Black
+        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton1.Location = New System.Drawing.Point(8, 11)
+        Me.IconButton1.Name = "IconButton1"
+        Me.IconButton1.Size = New System.Drawing.Size(90, 23)
+        Me.IconButton1.TabIndex = 38
+        Me.IconButton1.Text = "IconButton1"
+        Me.IconButton1.UseVisualStyleBackColor = True
+        '
+        'IconButton2
+        '
+        Me.IconButton2.FlatAppearance.BorderSize = 0
+        Me.IconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton2.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.IconButton2.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.IconButton2.IconChar = FontAwesome.Sharp.IconChar.None
+        Me.IconButton2.IconColor = System.Drawing.Color.Black
+        Me.IconButton2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton2.Location = New System.Drawing.Point(107, 11)
+        Me.IconButton2.Name = "IconButton2"
+        Me.IconButton2.Size = New System.Drawing.Size(90, 23)
+        Me.IconButton2.TabIndex = 39
+        Me.IconButton2.Text = "IconButton2"
+        Me.IconButton2.UseVisualStyleBackColor = True
+        '
         'cmdPnl
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(994, 663)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(1002, 693)
+        Me.Controls.Add(Me.IconButton2)
+        Me.Controls.Add(Me.IconButton1)
         Me.Controls.Add(Me.ListView_Cmd)
         Me.Controls.Add(Me.Btn_Test)
         Me.Controls.Add(Me.TextBox1)
@@ -4199,7 +4212,6 @@ Partial Class cmdPnl
         Me.Controls.Add(Me.Btn_Browser)
         Me.Controls.Add(Me.Btn_Software)
         Me.Controls.Add(Me.Btn_Security)
-        Me.Controls.Add(Me.Btn_Office)
         Me.Controls.Add(Me.Btn_Antivirus)
         Me.Controls.Add(Me.Btn_Network)
         Me.Controls.Add(Me.Btn_Windows)
@@ -4314,7 +4326,6 @@ Partial Class cmdPnl
     Friend WithEvents Pb1 As PictureBox
     Friend WithEvents Btn_Browser As Button
     Friend WithEvents Btn_Software As Button
-    Friend WithEvents Btn_Office As Button
     Friend WithEvents Btn_Network As Button
     Friend WithEvents Btn_Privacy As Button
     Friend WithEvents Pnl_Windows As Panel
@@ -4595,4 +4606,6 @@ Partial Class cmdPnl
     Friend WithEvents Label29 As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Btn_Test As Button
+    Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
+    Friend WithEvents IconButton2 As FontAwesome.Sharp.IconButton
 End Class

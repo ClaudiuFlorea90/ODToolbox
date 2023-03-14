@@ -20,7 +20,8 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <PublishUrl>publish\</PublishUrl>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Claudiu\Desktop\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -32,8 +33,8 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -69,11 +70,24 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
-  </PropertyGroup>
+  <PropertyGroup />
   <PropertyGroup>
     <ApplicationIcon>Papirus-Team-Papirus-Apps-Jetbrains-toolbox.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>D9EB8A45457123A6705019D1293877AAEB783FCC</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Script-Agent_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CefSharp, Version=107.1.90.0, Culture=neutral, PublicKeyToken=40c4b6fc221f4138, processorArchitecture=MSIL">
@@ -90,6 +104,10 @@
     </Reference>
     <Reference Include="FontAwesome.Sharp, Version=6.1.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.1.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DirectX, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2902.0\Microsoft.DirectX.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -121,6 +139,11 @@
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Management.Automation, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Management.Automation\v4.0_3.0.0.0__31bf3856ad364e35\System.Management.Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management.Instrumentation" />
     <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
     </Reference>
@@ -181,10 +204,14 @@
     <Compile Include="cmdPnl.Designer.vb">
       <DependentUpon>cmdPnl.vb</DependentUpon>
     </Compile>
-    <Compile Include="cmdPnl.vb">
+    <Compile Include="cmdPnl.vb" />
+    <Compile Include="Command.vb" />
+    <Compile Include="EventView.Designer.vb">
+      <DependentUpon>EventView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EventView.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Command.vb" />
     <Compile Include="Frame.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -215,17 +242,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="ScanOptions.Designer.vb">
-      <DependentUpon>ScanOptions.vb</DependentUpon>
-    </Compile>
-    <Compile Include="ScanOptions.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ScanSteps.Designer.vb">
-      <DependentUpon>ScanSteps.vb</DependentUpon>
-    </Compile>
-    <Compile Include="ScanSteps.vb">
-      <SubType>Form</SubType>
+    <Compile Include="RoundedButton.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Settings.Designer.vb">
       <DependentUpon>Settings.vb</DependentUpon>
@@ -233,12 +251,7 @@
     <Compile Include="Settings.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SplashScreen.Designer.vb">
-      <DependentUpon>SplashScreen.vb</DependentUpon>
-    </Compile>
-    <Compile Include="SplashScreen.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="StructuresModule.vb" />
     <Compile Include="Ticket.Designer.vb">
       <DependentUpon>Ticket.vb</DependentUpon>
     </Compile>
@@ -270,6 +283,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="cmdPnl.resx">
       <DependentUpon>cmdPnl.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventView.resx">
+      <DependentUpon>EventView.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frame.resx">
       <DependentUpon>Frame.vb</DependentUpon>
@@ -284,17 +301,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="ScanOptions.resx">
-      <DependentUpon>ScanOptions.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ScanSteps.resx">
-      <DependentUpon>ScanSteps.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Settings.resx">
       <DependentUpon>Settings.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SplashScreen.resx">
-      <DependentUpon>SplashScreen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ticket.resx">
       <DependentUpon>Ticket.vb</DependentUpon>
@@ -322,6 +330,7 @@
     </None>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Script-Agent_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\NoCommandRunning.png" />
@@ -775,6 +784,44 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Papirus-Team-Papirus-Apps-Jetbrains-toolbox.ico" />
+    <None Include="Resources\left-arrow.png" />
+    <None Include="Resources\right-arrow.png" />
+    <None Include="Resources\C4uoTDRNc80zT3O0MMmtyi1xCyvXL7e1tdK1apT_E-MR77Jw_2zGTRd38osAAA.jpg" />
+    <None Include="Resources\easeeControlLogo.png" />
+    <None Include="Resources\SynnexLogo.png" />
+    <None Include="Resources\y6kMKc719C2udApKKzOMcMtwdXX0CrS1tdK1Yiv4X_ucz4h3qVy9rHD1gi0A.png" />
+    <None Include="Resources\agilant-logo.png" />
+    <None Include="Resources\output-onlinepngtools.png" />
+    <None Include="Resources\Screenshot 2023-03-15 090936.png" />
+    <None Include="Resources\company.com.png" />
+    <None Include="Resources\clipboard-list-check.png" />
+    <None Include="Resources\cancel.png" />
+    <None Include="Resources\delete %281%29.png" />
+    <None Include="Resources\delete2.png" />
+    <None Include="Resources\swap1.png" />
+    <None Include="Resources\switch.png" />
+    <None Include="Resources\paperclip.png" />
+    <None Include="Resources\european-union.png" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\TrueLogoWhite2.png" />
+    <None Include="Resources\TrueLogoWhite.png" />
+    <None Include="Resources\left-arrowheads.png" />
+    <None Include="Resources\left %281%291.png" />
+    <None Include="Resources\left %281%29.png" />
+    <None Include="Resources\united-states.png" />
+    <None Include="Resources\v748-toon-131.jpg" />
+    <None Include="Resources\copy.png" />
+    <None Include="Resources\sort.png" />
+    <None Include="Resources\swap.png" />
+    <None Include="Resources\Papirus-Team-Papirus-Apps-Jetbrains-toolbox.ico" />
+    <None Include="Resources\optimumdesk-logo.png" />
+    <None Include="Resources\logo-trust.png" />
+    <None Include="Resources\SupportUnlimited_logo.png" />
+    <None Include="Resources\puls_logo.png" />
+    <None Include="Resources\walmartLogo.png" />
+    <None Include="Resources\pcmaticlogo2.png" />
+    <None Include="Resources\jjHLAR0.jpg" />
+    <None Include="Resources\shuffle.png" />
     <None Include="Resources\TrueLogo.png" />
     <None Include="Resources\stapleslogo.png" />
     <None Include="Resources\pcmaticlogo.png" />

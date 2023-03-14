@@ -22,2187 +22,4043 @@ Partial Class ToolBox
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label36 = New System.Windows.Forms.Label()
-        Me.Label56 = New System.Windows.Forms.Label()
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.Label35 = New System.Windows.Forms.Label()
-        Me.Label54 = New System.Windows.Forms.Label()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.Label34 = New System.Windows.Forms.Label()
-        Me.Label51 = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.Label33 = New System.Windows.Forms.Label()
-        Me.Label49 = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.Label68 = New System.Windows.Forms.Label()
-        Me.Label32 = New System.Windows.Forms.Label()
-        Me.Label47 = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.Label67 = New System.Windows.Forms.Label()
-        Me.Label31 = New System.Windows.Forms.Label()
-        Me.Label45 = New System.Windows.Forms.Label()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label66 = New System.Windows.Forms.Label()
-        Me.Label30 = New System.Windows.Forms.Label()
-        Me.Label43 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.Label65 = New System.Windows.Forms.Label()
-        Me.Label29 = New System.Windows.Forms.Label()
-        Me.Label41 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label40 = New System.Windows.Forms.Label()
-        Me.Label64 = New System.Windows.Forms.Label()
-        Me.Label28 = New System.Windows.Forms.Label()
-        Me.Label39 = New System.Windows.Forms.Label()
-        Me.Label63 = New System.Windows.Forms.Label()
-        Me.Label27 = New System.Windows.Forms.Label()
-        Me.Label61 = New System.Windows.Forms.Label()
-        Me.Label38 = New System.Windows.Forms.Label()
-        Me.Label60 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label59 = New System.Windows.Forms.Label()
-        Me.Label58 = New System.Windows.Forms.Label()
-        Me.Label37 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label26 = New System.Windows.Forms.Label()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.Label42342 = New System.Windows.Forms.Label()
-        Me.Lbl_43178 = New System.Windows.Forms.Label()
-        Me.Lbl_432 = New System.Windows.Forms.Label()
-        Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ToolBox))
+        Me.PanelMainBox = New System.Windows.Forms.Panel()
+        Me.Panel_INFO = New System.Windows.Forms.Panel()
+        Me.PictureBox41 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox40 = New System.Windows.Forms.PictureBox()
+        Me.Panel16 = New System.Windows.Forms.Panel()
+        Me.TextBox52 = New System.Windows.Forms.TextBox()
+        Me.TextBox17 = New System.Windows.Forms.TextBox()
+        Me.TextBox51 = New System.Windows.Forms.TextBox()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.PictureBox37 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
+        Me.TextBox50 = New System.Windows.Forms.TextBox()
+        Me.TextBox19 = New System.Windows.Forms.TextBox()
+        Me.PictureBox39 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox36 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox16 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox35 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox10 = New System.Windows.Forms.PictureBox()
+        Me.TextBox49 = New System.Windows.Forms.TextBox()
+        Me.TextBox13 = New System.Windows.Forms.TextBox()
+        Me.PictureBox38 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox34 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox15 = New System.Windows.Forms.PictureBox()
+        Me.TextBox56 = New System.Windows.Forms.TextBox()
+        Me.TextBox48 = New System.Windows.Forms.TextBox()
+        Me.TextBox10 = New System.Windows.Forms.TextBox()
+        Me.PictureBox33 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
+        Me.TextBox47 = New System.Windows.Forms.TextBox()
+        Me.TextBox21 = New System.Windows.Forms.TextBox()
+        Me.TextBox46 = New System.Windows.Forms.TextBox()
+        Me.TextBox20 = New System.Windows.Forms.TextBox()
+        Me.PictureBox32 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox14 = New System.Windows.Forms.PictureBox()
+        Me.TextBox55 = New System.Windows.Forms.TextBox()
+        Me.TextBox45 = New System.Windows.Forms.TextBox()
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.TextBox44 = New System.Windows.Forms.TextBox()
+        Me.TextBox15 = New System.Windows.Forms.TextBox()
+        Me.PictureBox31 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox12 = New System.Windows.Forms.PictureBox()
+        Me.TextBox43 = New System.Windows.Forms.TextBox()
+        Me.TextBox16 = New System.Windows.Forms.TextBox()
+        Me.TextBox54 = New System.Windows.Forms.TextBox()
+        Me.TextBox42 = New System.Windows.Forms.TextBox()
+        Me.TextBox23 = New System.Windows.Forms.TextBox()
+        Me.TextBox41 = New System.Windows.Forms.TextBox()
+        Me.TextBox53 = New System.Windows.Forms.TextBox()
+        Me.TextBox18 = New System.Windows.Forms.TextBox()
+        Me.TextBox40 = New System.Windows.Forms.TextBox()
+        Me.TextBox39 = New System.Windows.Forms.TextBox()
+        Me.TextBox24 = New System.Windows.Forms.TextBox()
+        Me.TextBox36 = New System.Windows.Forms.TextBox()
+        Me.TextBox22 = New System.Windows.Forms.TextBox()
+        Me.PictureBox30 = New System.Windows.Forms.PictureBox()
+        Me.TextBox14 = New System.Windows.Forms.TextBox()
+        Me.TextBox34 = New System.Windows.Forms.TextBox()
+        Me.PictureBox13 = New System.Windows.Forms.PictureBox()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label46 = New System.Windows.Forms.Label()
-        Me.Label44 = New System.Windows.Forms.Label()
-        Me.Label42 = New System.Windows.Forms.Label()
-        Me.Label70 = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Panel9 = New System.Windows.Forms.Panel()
-        Me.Label104 = New System.Windows.Forms.Label()
-        Me.Label103 = New System.Windows.Forms.Label()
-        Me.Label102 = New System.Windows.Forms.Label()
-        Me.Label101 = New System.Windows.Forms.Label()
-        Me.Label100 = New System.Windows.Forms.Label()
-        Me.Label99 = New System.Windows.Forms.Label()
-        Me.Label98 = New System.Windows.Forms.Label()
-        Me.Label97 = New System.Windows.Forms.Label()
-        Me.Label96 = New System.Windows.Forms.Label()
-        Me.Label95 = New System.Windows.Forms.Label()
-        Me.Label94 = New System.Windows.Forms.Label()
-        Me.Label93 = New System.Windows.Forms.Label()
-        Me.Label92 = New System.Windows.Forms.Label()
-        Me.Label91 = New System.Windows.Forms.Label()
-        Me.Label90 = New System.Windows.Forms.Label()
-        Me.Label89 = New System.Windows.Forms.Label()
-        Me.Label88 = New System.Windows.Forms.Label()
-        Me.Label87 = New System.Windows.Forms.Label()
-        Me.Label86 = New System.Windows.Forms.Label()
-        Me.Label85 = New System.Windows.Forms.Label()
-        Me.Label84 = New System.Windows.Forms.Label()
-        Me.Label62 = New System.Windows.Forms.Label()
-        Me.Label57 = New System.Windows.Forms.Label()
-        Me.Label55 = New System.Windows.Forms.Label()
-        Me.Label53 = New System.Windows.Forms.Label()
-        Me.Label50 = New System.Windows.Forms.Label()
-        Me.Label48 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Button25 = New System.Windows.Forms.Button()
+        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
+        Me.Button11 = New System.Windows.Forms.Button()
+        Me.Button9 = New System.Windows.Forms.Button()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.Button24 = New System.Windows.Forms.Button()
+        Me.TextBox25 = New System.Windows.Forms.TextBox()
+        Me.TextBox29 = New System.Windows.Forms.TextBox()
+        Me.TextBox27 = New System.Windows.Forms.TextBox()
+        Me.TextBox26 = New System.Windows.Forms.TextBox()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Label22 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Label83 = New System.Windows.Forms.Label()
-        Me.Label82 = New System.Windows.Forms.Label()
-        Me.Label81 = New System.Windows.Forms.Label()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label80 = New System.Windows.Forms.Label()
-        Me.Label79 = New System.Windows.Forms.Label()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.Label78 = New System.Windows.Forms.Label()
-        Me.Label77 = New System.Windows.Forms.Label()
-        Me.Label76 = New System.Windows.Forms.Label()
-        Me.Label75 = New System.Windows.Forms.Label()
-        Me.Label74 = New System.Windows.Forms.Label()
-        Me.Label73 = New System.Windows.Forms.Label()
-        Me.Label71 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.ComboBoxCompany = New System.Windows.Forms.ComboBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label52 = New System.Windows.Forms.Label()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Panel10 = New System.Windows.Forms.Panel()
-        Me.Label121 = New System.Windows.Forms.Label()
-        Me.Label120 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label119 = New System.Windows.Forms.Label()
-        Me.Label72 = New System.Windows.Forms.Label()
-        Me.Label118 = New System.Windows.Forms.Label()
-        Me.Label69 = New System.Windows.Forms.Label()
-        Me.Label117 = New System.Windows.Forms.Label()
-        Me.Label109 = New System.Windows.Forms.Label()
-        Me.Label116 = New System.Windows.Forms.Label()
-        Me.Label115 = New System.Windows.Forms.Label()
-        Me.Label114 = New System.Windows.Forms.Label()
-        Me.Label106 = New System.Windows.Forms.Label()
-        Me.Label113 = New System.Windows.Forms.Label()
-        Me.Label112 = New System.Windows.Forms.Label()
-        Me.Label108 = New System.Windows.Forms.Label()
-        Me.Label111 = New System.Windows.Forms.Label()
-        Me.Label110 = New System.Windows.Forms.Label()
-        Me.Label107 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Label105 = New System.Windows.Forms.Label()
-        Me.Panel_ED = New System.Windows.Forms.Panel()
+        Me.Button7 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.Label7 = New System.Windows.Forms.TextBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.tbName = New System.Windows.Forms.TextBox()
+        Me.tbEmail = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.PnlLogs = New System.Windows.Forms.Panel()
+        Me.TextBox57 = New System.Windows.Forms.TextBox()
+        Me.TextBox28 = New System.Windows.Forms.TextBox()
+        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
+        Me.Button14 = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button16 = New System.Windows.Forms.Button()
+        Me.Button21 = New System.Windows.Forms.Button()
+        Me.Button18 = New System.Windows.Forms.Button()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.Button12 = New System.Windows.Forms.Button()
+        Me.Button17 = New System.Windows.Forms.Button()
+        Me.btn_ReadOdLog = New System.Windows.Forms.Button()
+        Me.btnDecryptRegistry = New System.Windows.Forms.Button()
+        Me.PanelMultiAgent = New System.Windows.Forms.Panel()
+        Me.Label56 = New System.Windows.Forms.Label()
         Me.Panel11 = New System.Windows.Forms.Panel()
-        Me.Panel5.SuspendLayout()
-        Me.Panel8.SuspendLayout()
+        Me.PictureBox_MiniFlag1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox24 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox21 = New System.Windows.Forms.PictureBox()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.Label59 = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label43 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label58 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Panel10 = New System.Windows.Forms.Panel()
+        Me.PictureBox_MiniFlag2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox25 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox23 = New System.Windows.Forms.PictureBox()
+        Me.Label39 = New System.Windows.Forms.Label()
+        Me.Label41 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.PictureBox20 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox18 = New System.Windows.Forms.PictureBox()
+        Me.Label60 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.TextBox38 = New System.Windows.Forms.TextBox()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.PictureBox17 = New System.Windows.Forms.PictureBox()
+        Me.IconButton6 = New FontAwesome.Sharp.IconButton()
+        Me.IconButton3 = New FontAwesome.Sharp.IconButton()
+        Me.tbCName = New System.Windows.Forms.TextBox()
+        Me.IconButton4 = New FontAwesome.Sharp.IconButton()
+        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
+        Me.ImageList_LineForBtn = New System.Windows.Forms.ImageList(Me.components)
+        Me.Label42 = New System.Windows.Forms.Label()
+        Me.Panel13 = New System.Windows.Forms.Panel()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.TextBox37 = New System.Windows.Forms.TextBox()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.PictureBox19 = New System.Windows.Forms.PictureBox()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.IconButton5 = New FontAwesome.Sharp.IconButton()
+        Me.Label38 = New System.Windows.Forms.Label()
+        Me.Pnl_Button1 = New System.Windows.Forms.Panel()
+        Me.Label126 = New System.Windows.Forms.Label()
+        Me.Pnl_Button2 = New System.Windows.Forms.Panel()
+        Me.Button15 = New System.Windows.Forms.Button()
+        Me.Label128 = New System.Windows.Forms.Label()
+        Me.Label129 = New System.Windows.Forms.Label()
+        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
+        Me.PanelInstallNewAgent = New System.Windows.Forms.Panel()
+        Me.TextBox35 = New System.Windows.Forms.Label()
+        Me.CheckBoxEU2 = New System.Windows.Forms.CheckBox()
+        Me.Button_US_Agent = New System.Windows.Forms.Button()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.CheckBoxUS2 = New System.Windows.Forms.CheckBox()
+        Me.Label36 = New System.Windows.Forms.Label()
+        Me.TextBox11 = New System.Windows.Forms.TextBox()
+        Me.Button_EU_Agent = New System.Windows.Forms.Button()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
+        Me.Btn_StartInstall = New System.Windows.Forms.Button()
+        Me.TextBox31 = New System.Windows.Forms.TextBox()
+        Me.ComboBox_FrameWork = New System.Windows.Forms.ComboBox()
+        Me.Label72 = New System.Windows.Forms.Label()
+        Me.ComboBoxCompany = New System.Windows.Forms.ComboBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Label52 = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.Panel15 = New System.Windows.Forms.Panel()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.PictureBox26 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox29 = New System.Windows.Forms.PictureBox()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.TextBox_AgentFrameWork = New System.Windows.Forms.TextBox()
+        Me.TextBox32 = New System.Windows.Forms.TextBox()
+        Me.TextBox_AgentVersion = New System.Windows.Forms.TextBox()
+        Me.TextBox30 = New System.Windows.Forms.TextBox()
+        Me.TextBox_CompanyID = New System.Windows.Forms.TextBox()
+        Me.TextBox12 = New System.Windows.Forms.TextBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Panel14 = New System.Windows.Forms.Panel()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.TextBox_Server = New System.Windows.Forms.TextBox()
+        Me.Panel12 = New System.Windows.Forms.Panel()
+        Me.Panel9 = New System.Windows.Forms.Panel()
+        Me.PictureBox27 = New System.Windows.Forms.PictureBox()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.PictureBox28 = New System.Windows.Forms.PictureBox()
+        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.PanelDecryptor = New System.Windows.Forms.Panel()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
+        Me.RichTextBox_Output = New System.Windows.Forms.RichTextBox()
+        Me.RichTextBox_Input = New System.Windows.Forms.RichTextBox()
+        Me.Label123 = New System.Windows.Forms.Label()
+        Me.Button8 = New System.Windows.Forms.Button()
+        Me.Button13 = New System.Windows.Forms.Button()
+        Me.Label125 = New System.Windows.Forms.Label()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.PanelLoading = New System.Windows.Forms.Panel()
+        Me.Button22 = New System.Windows.Forms.Button()
+        Me.PictureBox22 = New System.Windows.Forms.PictureBox()
+        Me.TextBoxCName = New System.Windows.Forms.TextBox()
+        Me.TextBox_InstallStep = New System.Windows.Forms.TextBox()
+        Me.CircularProgressBar2 = New CircularProgressBar.CircularProgressBar()
+        Me.PanelEventViewer = New System.Windows.Forms.Panel()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.Label105 = New System.Windows.Forms.Label()
+        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.CH_Number = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.CH_AppName = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.CH_ErrorType = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.CH_DateTime = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.CH_ErrMessage = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.CH_Source = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.CopyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClearToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Button20 = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
+        Me.TimerAdvancedSettings = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer_MultiAgentDropDown = New System.Windows.Forms.Timer(Me.components)
+        Me.ImageList_FLAGS = New System.Windows.Forms.ImageList(Me.components)
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Button19 = New System.Windows.Forms.Button()
+        Me.Timer_MoreDetails = New System.Windows.Forms.Timer(Me.components)
+        Me.Toggle1 = New Script_Agent.Toggle()
+        Me.PictureBox42 = New System.Windows.Forms.PictureBox()
+        Me.PanelMainBox.SuspendLayout()
+        Me.Panel_INFO.SuspendLayout()
+        CType(Me.PictureBox41, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox40, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel16.SuspendLayout()
+        CType(Me.PictureBox37, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox39, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox36, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox35, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox38, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox34, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox33, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox32, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox31, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox30, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
-        Me.Panel9.SuspendLayout()
-        Me.Panel10.SuspendLayout()
-        Me.Panel_ED.SuspendLayout()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel3.SuspendLayout()
+        Me.Panel6.SuspendLayout()
+        Me.Panel4.SuspendLayout()
+        Me.Panel5.SuspendLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PnlLogs.SuspendLayout()
+        Me.PanelMultiAgent.SuspendLayout()
         Me.Panel11.SuspendLayout()
+        CType(Me.PictureBox_MiniFlag1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox24, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel10.SuspendLayout()
+        CType(Me.PictureBox_MiniFlag2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox25, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel13.SuspendLayout()
+        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Pnl_Button1.SuspendLayout()
+        Me.Pnl_Button2.SuspendLayout()
+        Me.PanelInstallNewAgent.SuspendLayout()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
+        Me.Panel8.SuspendLayout()
+        Me.Panel15.SuspendLayout()
+        CType(Me.PictureBox26, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox29, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel7.SuspendLayout()
+        Me.Panel14.SuspendLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel12.SuspendLayout()
+        Me.Panel9.SuspendLayout()
+        CType(Me.PictureBox27, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox28, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelDecryptor.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelLoading.SuspendLayout()
+        CType(Me.PictureBox22, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelEventViewer.SuspendLayout()
+        Me.ContextMenuStrip1.SuspendLayout()
+        CType(Me.PictureBox42, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Panel4
+        'PanelMainBox
         '
-        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        Me.Panel4.Location = New System.Drawing.Point(200, 263)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(1, 30)
-        Me.Panel4.TabIndex = 26
+        Me.PanelMainBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.PanelMainBox.Controls.Add(Me.Panel_INFO)
+        Me.PanelMainBox.Controls.Add(Me.PnlLogs)
+        Me.PanelMainBox.Controls.Add(Me.PanelMultiAgent)
+        Me.PanelMainBox.Controls.Add(Me.Pnl_Button1)
+        Me.PanelMainBox.Controls.Add(Me.Pnl_Button2)
+        Me.PanelMainBox.Location = New System.Drawing.Point(12, 12)
+        Me.PanelMainBox.MaximumSize = New System.Drawing.Size(1017, 698)
+        Me.PanelMainBox.Name = "PanelMainBox"
+        Me.PanelMainBox.Size = New System.Drawing.Size(1017, 698)
+        Me.PanelMainBox.TabIndex = 28
+        '
+        'Panel_INFO
+        '
+        Me.Panel_INFO.Controls.Add(Me.PictureBox41)
+        Me.Panel_INFO.Controls.Add(Me.PictureBox40)
+        Me.Panel_INFO.Controls.Add(Me.Panel16)
+        Me.Panel_INFO.Controls.Add(Me.Panel1)
+        Me.Panel_INFO.Controls.Add(Me.Label7)
+        Me.Panel_INFO.Controls.Add(Me.PictureBox4)
+        Me.Panel_INFO.Controls.Add(Me.tbName)
+        Me.Panel_INFO.Controls.Add(Me.tbEmail)
+        Me.Panel_INFO.Controls.Add(Me.Label6)
+        Me.Panel_INFO.Location = New System.Drawing.Point(1, 60)
+        Me.Panel_INFO.MaximumSize = New System.Drawing.Size(1017, 633)
+        Me.Panel_INFO.Name = "Panel_INFO"
+        Me.Panel_INFO.Size = New System.Drawing.Size(1017, 633)
+        Me.Panel_INFO.TabIndex = 32
+        '
+        'PictureBox41
+        '
+        Me.PictureBox41.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox41.Image = Global.Script_Agent.My.Resources.Resources.right_arrow
+        Me.PictureBox41.Location = New System.Drawing.Point(540, 177)
+        Me.PictureBox41.Name = "PictureBox41"
+        Me.PictureBox41.Size = New System.Drawing.Size(31, 28)
+        Me.PictureBox41.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox41.TabIndex = 44
+        Me.PictureBox41.TabStop = False
+        '
+        'PictureBox40
+        '
+        Me.PictureBox40.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox40.Image = Global.Script_Agent.My.Resources.Resources.left_arrow
+        Me.PictureBox40.Location = New System.Drawing.Point(206, 177)
+        Me.PictureBox40.Name = "PictureBox40"
+        Me.PictureBox40.Size = New System.Drawing.Size(31, 28)
+        Me.PictureBox40.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox40.TabIndex = 43
+        Me.PictureBox40.TabStop = False
+        '
+        'Panel16
+        '
+        Me.Panel16.Controls.Add(Me.TextBox52)
+        Me.Panel16.Controls.Add(Me.TextBox17)
+        Me.Panel16.Controls.Add(Me.TextBox51)
+        Me.Panel16.Controls.Add(Me.TextBox7)
+        Me.Panel16.Controls.Add(Me.PictureBox37)
+        Me.Panel16.Controls.Add(Me.PictureBox9)
+        Me.Panel16.Controls.Add(Me.TextBox50)
+        Me.Panel16.Controls.Add(Me.TextBox19)
+        Me.Panel16.Controls.Add(Me.PictureBox39)
+        Me.Panel16.Controls.Add(Me.PictureBox36)
+        Me.Panel16.Controls.Add(Me.PictureBox16)
+        Me.Panel16.Controls.Add(Me.PictureBox35)
+        Me.Panel16.Controls.Add(Me.PictureBox10)
+        Me.Panel16.Controls.Add(Me.TextBox49)
+        Me.Panel16.Controls.Add(Me.TextBox13)
+        Me.Panel16.Controls.Add(Me.PictureBox38)
+        Me.Panel16.Controls.Add(Me.PictureBox34)
+        Me.Panel16.Controls.Add(Me.PictureBox15)
+        Me.Panel16.Controls.Add(Me.TextBox56)
+        Me.Panel16.Controls.Add(Me.TextBox48)
+        Me.Panel16.Controls.Add(Me.TextBox10)
+        Me.Panel16.Controls.Add(Me.PictureBox33)
+        Me.Panel16.Controls.Add(Me.PictureBox11)
+        Me.Panel16.Controls.Add(Me.TextBox47)
+        Me.Panel16.Controls.Add(Me.TextBox21)
+        Me.Panel16.Controls.Add(Me.TextBox46)
+        Me.Panel16.Controls.Add(Me.TextBox20)
+        Me.Panel16.Controls.Add(Me.PictureBox32)
+        Me.Panel16.Controls.Add(Me.PictureBox14)
+        Me.Panel16.Controls.Add(Me.TextBox55)
+        Me.Panel16.Controls.Add(Me.TextBox45)
+        Me.Panel16.Controls.Add(Me.TextBox9)
+        Me.Panel16.Controls.Add(Me.TextBox44)
+        Me.Panel16.Controls.Add(Me.TextBox15)
+        Me.Panel16.Controls.Add(Me.PictureBox31)
+        Me.Panel16.Controls.Add(Me.PictureBox12)
+        Me.Panel16.Controls.Add(Me.TextBox43)
+        Me.Panel16.Controls.Add(Me.TextBox16)
+        Me.Panel16.Controls.Add(Me.TextBox54)
+        Me.Panel16.Controls.Add(Me.TextBox42)
+        Me.Panel16.Controls.Add(Me.TextBox23)
+        Me.Panel16.Controls.Add(Me.TextBox41)
+        Me.Panel16.Controls.Add(Me.TextBox53)
+        Me.Panel16.Controls.Add(Me.TextBox18)
+        Me.Panel16.Controls.Add(Me.TextBox40)
+        Me.Panel16.Controls.Add(Me.TextBox39)
+        Me.Panel16.Controls.Add(Me.TextBox24)
+        Me.Panel16.Controls.Add(Me.TextBox36)
+        Me.Panel16.Controls.Add(Me.TextBox22)
+        Me.Panel16.Controls.Add(Me.PictureBox30)
+        Me.Panel16.Controls.Add(Me.TextBox14)
+        Me.Panel16.Controls.Add(Me.TextBox34)
+        Me.Panel16.Controls.Add(Me.PictureBox13)
+        Me.Panel16.Controls.Add(Me.TextBox8)
+        Me.Panel16.Location = New System.Drawing.Point(52, 253)
+        Me.Panel16.MaximumSize = New System.Drawing.Size(666, 554)
+        Me.Panel16.MinimumSize = New System.Drawing.Size(666, 320)
+        Me.Panel16.Name = "Panel16"
+        Me.Panel16.Size = New System.Drawing.Size(666, 320)
+        Me.Panel16.TabIndex = 42
+        '
+        'TextBox52
+        '
+        Me.TextBox52.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.TextBox52.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox52.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.TextBox52.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox52.ForeColor = System.Drawing.Color.LightGray
+        Me.TextBox52.Location = New System.Drawing.Point(41, 263)
+        Me.TextBox52.Name = "TextBox52"
+        Me.TextBox52.ReadOnly = True
+        Me.TextBox52.Size = New System.Drawing.Size(133, 15)
+        Me.TextBox52.TabIndex = 37
+        Me.TextBox52.Text = "Client ID"
+        '
+        'TextBox17
+        '
+        Me.TextBox17.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.TextBox17.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox17.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.TextBox17.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox17.ForeColor = System.Drawing.Color.LightGray
+        Me.TextBox17.Location = New System.Drawing.Point(39, 24)
+        Me.TextBox17.Name = "TextBox17"
+        Me.TextBox17.ReadOnly = True
+        Me.TextBox17.Size = New System.Drawing.Size(133, 15)
+        Me.TextBox17.TabIndex = 37
+        Me.TextBox17.Text = "Client ID"
+        '
+        'TextBox51
+        '
+        Me.TextBox51.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBox51.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox51.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox51.ForeColor = System.Drawing.Color.SandyBrown
+        Me.TextBox51.Location = New System.Drawing.Point(180, 379)
+        Me.TextBox51.Name = "TextBox51"
+        Me.TextBox51.ReadOnly = True
+        Me.TextBox51.Size = New System.Drawing.Size(434, 24)
+        Me.TextBox51.TabIndex = 4
+        Me.TextBox51.Text = "Text text text text"
+        '
+        'TextBox7
+        '
+        Me.TextBox7.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox7.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox7.ForeColor = System.Drawing.Color.SandyBrown
+        Me.TextBox7.Location = New System.Drawing.Point(178, 140)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.ReadOnly = True
+        Me.TextBox7.Size = New System.Drawing.Size(434, 24)
+        Me.TextBox7.TabIndex = 4
+        Me.TextBox7.Text = "Text text text text"
+        '
+        'PictureBox37
+        '
+        Me.PictureBox37.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox37.Image = Global.Script_Agent.My.Resources.Resources.copy
+        Me.PictureBox37.Location = New System.Drawing.Point(623, 263)
+        Me.PictureBox37.Name = "PictureBox37"
+        Me.PictureBox37.Size = New System.Drawing.Size(17, 17)
+        Me.PictureBox37.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox37.TabIndex = 38
+        Me.PictureBox37.TabStop = False
+        '
+        'PictureBox9
+        '
+        Me.PictureBox9.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox9.Image = Global.Script_Agent.My.Resources.Resources.copy
+        Me.PictureBox9.Location = New System.Drawing.Point(621, 24)
+        Me.PictureBox9.Name = "PictureBox9"
+        Me.PictureBox9.Size = New System.Drawing.Size(17, 17)
+        Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox9.TabIndex = 38
+        Me.PictureBox9.TabStop = False
+        '
+        'TextBox50
+        '
+        Me.TextBox50.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.TextBox50.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox50.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.TextBox50.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox50.ForeColor = System.Drawing.Color.LightGray
+        Me.TextBox50.Location = New System.Drawing.Point(41, 318)
+        Me.TextBox50.Name = "TextBox50"
+        Me.TextBox50.ReadOnly = True
+        Me.TextBox50.Size = New System.Drawing.Size(133, 15)
+        Me.TextBox50.TabIndex = 37
+        Me.TextBox50.Text = "Device ID"
+        '
+        'TextBox19
+        '
+        Me.TextBox19.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.TextBox19.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox19.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.TextBox19.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox19.ForeColor = System.Drawing.Color.LightGray
+        Me.TextBox19.Location = New System.Drawing.Point(39, 79)
+        Me.TextBox19.Name = "TextBox19"
+        Me.TextBox19.ReadOnly = True
+        Me.TextBox19.Size = New System.Drawing.Size(133, 15)
+        Me.TextBox19.TabIndex = 37
+        Me.TextBox19.Text = "Device ID"
+        '
+        'PictureBox39
+        '
+        Me.PictureBox39.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox39.Image = Global.Script_Agent.My.Resources.Resources.copy
+        Me.PictureBox39.Location = New System.Drawing.Point(623, 526)
+        Me.PictureBox39.Name = "PictureBox39"
+        Me.PictureBox39.Size = New System.Drawing.Size(17, 17)
+        Me.PictureBox39.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox39.TabIndex = 38
+        Me.PictureBox39.TabStop = False
+        '
+        'PictureBox36
+        '
+        Me.PictureBox36.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox36.Image = Global.Script_Agent.My.Resources.Resources.copy
+        Me.PictureBox36.Location = New System.Drawing.Point(623, 471)
+        Me.PictureBox36.Name = "PictureBox36"
+        Me.PictureBox36.Size = New System.Drawing.Size(17, 17)
+        Me.PictureBox36.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox36.TabIndex = 38
+        Me.PictureBox36.TabStop = False
+        '
+        'PictureBox16
+        '
+        Me.PictureBox16.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox16.Image = Global.Script_Agent.My.Resources.Resources.copy
+        Me.PictureBox16.Location = New System.Drawing.Point(621, 232)
+        Me.PictureBox16.Name = "PictureBox16"
+        Me.PictureBox16.Size = New System.Drawing.Size(17, 17)
+        Me.PictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox16.TabIndex = 38
+        Me.PictureBox16.TabStop = False
+        '
+        'PictureBox35
+        '
+        Me.PictureBox35.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox35.Image = Global.Script_Agent.My.Resources.Resources.copy
+        Me.PictureBox35.Location = New System.Drawing.Point(623, 292)
+        Me.PictureBox35.Name = "PictureBox35"
+        Me.PictureBox35.Size = New System.Drawing.Size(17, 17)
+        Me.PictureBox35.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox35.TabIndex = 38
+        Me.PictureBox35.TabStop = False
+        '
+        'PictureBox10
+        '
+        Me.PictureBox10.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox10.Image = Global.Script_Agent.My.Resources.Resources.copy
+        Me.PictureBox10.Location = New System.Drawing.Point(621, 53)
+        Me.PictureBox10.Name = "PictureBox10"
+        Me.PictureBox10.Size = New System.Drawing.Size(17, 17)
+        Me.PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox10.TabIndex = 38
+        Me.PictureBox10.TabStop = False
+        '
+        'TextBox49
+        '
+        Me.TextBox49.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBox49.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox49.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox49.ForeColor = System.Drawing.Color.SandyBrown
+        Me.TextBox49.Location = New System.Drawing.Point(180, 260)
+        Me.TextBox49.Name = "TextBox49"
+        Me.TextBox49.ReadOnly = True
+        Me.TextBox49.Size = New System.Drawing.Size(434, 24)
+        Me.TextBox49.TabIndex = 4
+        Me.TextBox49.Text = "Text text text text"
+        '
+        'TextBox13
+        '
+        Me.TextBox13.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBox13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox13.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox13.ForeColor = System.Drawing.Color.SandyBrown
+        Me.TextBox13.Location = New System.Drawing.Point(178, 21)
+        Me.TextBox13.Name = "TextBox13"
+        Me.TextBox13.ReadOnly = True
+        Me.TextBox13.Size = New System.Drawing.Size(434, 24)
+        Me.TextBox13.TabIndex = 4
+        Me.TextBox13.Text = "Text text text text"
+        '
+        'PictureBox38
+        '
+        Me.PictureBox38.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox38.Image = Global.Script_Agent.My.Resources.Resources.copy
+        Me.PictureBox38.Location = New System.Drawing.Point(623, 497)
+        Me.PictureBox38.Name = "PictureBox38"
+        Me.PictureBox38.Size = New System.Drawing.Size(17, 17)
+        Me.PictureBox38.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox38.TabIndex = 38
+        Me.PictureBox38.TabStop = False
+        '
+        'PictureBox34
+        '
+        Me.PictureBox34.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox34.Image = Global.Script_Agent.My.Resources.Resources.copy
+        Me.PictureBox34.Location = New System.Drawing.Point(623, 442)
+        Me.PictureBox34.Name = "PictureBox34"
+        Me.PictureBox34.Size = New System.Drawing.Size(17, 17)
+        Me.PictureBox34.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox34.TabIndex = 38
+        Me.PictureBox34.TabStop = False
+        '
+        'PictureBox15
+        '
+        Me.PictureBox15.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox15.Image = Global.Script_Agent.My.Resources.Resources.copy
+        Me.PictureBox15.Location = New System.Drawing.Point(621, 203)
+        Me.PictureBox15.Name = "PictureBox15"
+        Me.PictureBox15.Size = New System.Drawing.Size(17, 17)
+        Me.PictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox15.TabIndex = 38
+        Me.PictureBox15.TabStop = False
+        '
+        'TextBox56
+        '
+        Me.TextBox56.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBox56.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox56.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox56.ForeColor = System.Drawing.Color.SandyBrown
+        Me.TextBox56.Location = New System.Drawing.Point(180, 523)
+        Me.TextBox56.Name = "TextBox56"
+        Me.TextBox56.ReadOnly = True
+        Me.TextBox56.Size = New System.Drawing.Size(434, 24)
+        Me.TextBox56.TabIndex = 4
+        Me.TextBox56.Text = "Text text text text"
+        '
+        'TextBox48
+        '
+        Me.TextBox48.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBox48.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox48.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox48.ForeColor = System.Drawing.Color.SandyBrown
+        Me.TextBox48.Location = New System.Drawing.Point(180, 468)
+        Me.TextBox48.Name = "TextBox48"
+        Me.TextBox48.ReadOnly = True
+        Me.TextBox48.Size = New System.Drawing.Size(434, 24)
+        Me.TextBox48.TabIndex = 4
+        Me.TextBox48.Text = "Text text text text"
+        '
+        'TextBox10
+        '
+        Me.TextBox10.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox10.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox10.ForeColor = System.Drawing.Color.SandyBrown
+        Me.TextBox10.Location = New System.Drawing.Point(178, 229)
+        Me.TextBox10.Name = "TextBox10"
+        Me.TextBox10.ReadOnly = True
+        Me.TextBox10.Size = New System.Drawing.Size(434, 24)
+        Me.TextBox10.TabIndex = 4
+        Me.TextBox10.Text = "Text text text text"
+        '
+        'PictureBox33
+        '
+        Me.PictureBox33.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox33.Image = Global.Script_Agent.My.Resources.Resources.copy
+        Me.PictureBox33.Location = New System.Drawing.Point(623, 325)
+        Me.PictureBox33.Name = "PictureBox33"
+        Me.PictureBox33.Size = New System.Drawing.Size(17, 17)
+        Me.PictureBox33.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox33.TabIndex = 38
+        Me.PictureBox33.TabStop = False
+        '
+        'PictureBox11
+        '
+        Me.PictureBox11.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox11.Image = Global.Script_Agent.My.Resources.Resources.copy
+        Me.PictureBox11.Location = New System.Drawing.Point(621, 86)
+        Me.PictureBox11.Name = "PictureBox11"
+        Me.PictureBox11.Size = New System.Drawing.Size(17, 17)
+        Me.PictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox11.TabIndex = 38
+        Me.PictureBox11.TabStop = False
+        '
+        'TextBox47
+        '
+        Me.TextBox47.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.TextBox47.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox47.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.TextBox47.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox47.ForeColor = System.Drawing.Color.LightGray
+        Me.TextBox47.Location = New System.Drawing.Point(41, 379)
+        Me.TextBox47.Name = "TextBox47"
+        Me.TextBox47.ReadOnly = True
+        Me.TextBox47.Size = New System.Drawing.Size(133, 15)
+        Me.TextBox47.TabIndex = 37
+        Me.TextBox47.Text = "API Server"
+        '
+        'TextBox21
+        '
+        Me.TextBox21.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.TextBox21.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox21.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.TextBox21.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox21.ForeColor = System.Drawing.Color.LightGray
+        Me.TextBox21.Location = New System.Drawing.Point(39, 140)
+        Me.TextBox21.Name = "TextBox21"
+        Me.TextBox21.ReadOnly = True
+        Me.TextBox21.Size = New System.Drawing.Size(133, 15)
+        Me.TextBox21.TabIndex = 37
+        Me.TextBox21.Text = "API Server"
+        '
+        'TextBox46
+        '
+        Me.TextBox46.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.TextBox46.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox46.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.TextBox46.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox46.ForeColor = System.Drawing.Color.LightGray
+        Me.TextBox46.Location = New System.Drawing.Point(41, 350)
+        Me.TextBox46.Name = "TextBox46"
+        Me.TextBox46.ReadOnly = True
+        Me.TextBox46.Size = New System.Drawing.Size(133, 15)
+        Me.TextBox46.TabIndex = 37
+        Me.TextBox46.Text = "Version"
+        '
+        'TextBox20
+        '
+        Me.TextBox20.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.TextBox20.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox20.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.TextBox20.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox20.ForeColor = System.Drawing.Color.LightGray
+        Me.TextBox20.Location = New System.Drawing.Point(39, 111)
+        Me.TextBox20.Name = "TextBox20"
+        Me.TextBox20.ReadOnly = True
+        Me.TextBox20.Size = New System.Drawing.Size(133, 15)
+        Me.TextBox20.TabIndex = 37
+        Me.TextBox20.Text = "Version"
+        '
+        'PictureBox32
+        '
+        Me.PictureBox32.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox32.Image = Global.Script_Agent.My.Resources.Resources.copy
+        Me.PictureBox32.Location = New System.Drawing.Point(623, 409)
+        Me.PictureBox32.Name = "PictureBox32"
+        Me.PictureBox32.Size = New System.Drawing.Size(17, 17)
+        Me.PictureBox32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox32.TabIndex = 38
+        Me.PictureBox32.TabStop = False
+        '
+        'PictureBox14
+        '
+        Me.PictureBox14.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox14.Image = Global.Script_Agent.My.Resources.Resources.copy
+        Me.PictureBox14.Location = New System.Drawing.Point(621, 170)
+        Me.PictureBox14.Name = "PictureBox14"
+        Me.PictureBox14.Size = New System.Drawing.Size(17, 17)
+        Me.PictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox14.TabIndex = 38
+        Me.PictureBox14.TabStop = False
+        '
+        'TextBox55
+        '
+        Me.TextBox55.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBox55.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox55.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox55.ForeColor = System.Drawing.Color.SandyBrown
+        Me.TextBox55.Location = New System.Drawing.Point(180, 494)
+        Me.TextBox55.Name = "TextBox55"
+        Me.TextBox55.ReadOnly = True
+        Me.TextBox55.Size = New System.Drawing.Size(434, 24)
+        Me.TextBox55.TabIndex = 4
+        Me.TextBox55.Text = "Text text text text"
+        '
+        'TextBox45
+        '
+        Me.TextBox45.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBox45.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox45.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox45.ForeColor = System.Drawing.Color.SandyBrown
+        Me.TextBox45.Location = New System.Drawing.Point(180, 439)
+        Me.TextBox45.Name = "TextBox45"
+        Me.TextBox45.ReadOnly = True
+        Me.TextBox45.Size = New System.Drawing.Size(434, 24)
+        Me.TextBox45.TabIndex = 4
+        Me.TextBox45.Text = "Text text text text"
+        '
+        'TextBox9
+        '
+        Me.TextBox9.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox9.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox9.ForeColor = System.Drawing.Color.SandyBrown
+        Me.TextBox9.Location = New System.Drawing.Point(178, 200)
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.ReadOnly = True
+        Me.TextBox9.Size = New System.Drawing.Size(434, 24)
+        Me.TextBox9.TabIndex = 4
+        Me.TextBox9.Text = "Text text text text"
+        '
+        'TextBox44
+        '
+        Me.TextBox44.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBox44.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox44.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox44.ForeColor = System.Drawing.Color.SandyBrown
+        Me.TextBox44.Location = New System.Drawing.Point(180, 349)
+        Me.TextBox44.Name = "TextBox44"
+        Me.TextBox44.ReadOnly = True
+        Me.TextBox44.Size = New System.Drawing.Size(434, 24)
+        Me.TextBox44.TabIndex = 4
+        Me.TextBox44.Text = "Text text text text"
+        '
+        'TextBox15
+        '
+        Me.TextBox15.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBox15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox15.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox15.ForeColor = System.Drawing.Color.SandyBrown
+        Me.TextBox15.Location = New System.Drawing.Point(178, 110)
+        Me.TextBox15.Name = "TextBox15"
+        Me.TextBox15.ReadOnly = True
+        Me.TextBox15.Size = New System.Drawing.Size(434, 24)
+        Me.TextBox15.TabIndex = 4
+        Me.TextBox15.Text = "Text text text text"
+        '
+        'PictureBox31
+        '
+        Me.PictureBox31.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox31.Image = Global.Script_Agent.My.Resources.Resources.copy
+        Me.PictureBox31.Location = New System.Drawing.Point(623, 354)
+        Me.PictureBox31.Name = "PictureBox31"
+        Me.PictureBox31.Size = New System.Drawing.Size(17, 17)
+        Me.PictureBox31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox31.TabIndex = 38
+        Me.PictureBox31.TabStop = False
+        '
+        'PictureBox12
+        '
+        Me.PictureBox12.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox12.Image = Global.Script_Agent.My.Resources.Resources.copy
+        Me.PictureBox12.Location = New System.Drawing.Point(621, 115)
+        Me.PictureBox12.Name = "PictureBox12"
+        Me.PictureBox12.Size = New System.Drawing.Size(17, 17)
+        Me.PictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox12.TabIndex = 38
+        Me.PictureBox12.TabStop = False
+        '
+        'TextBox43
+        '
+        Me.TextBox43.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBox43.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox43.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox43.ForeColor = System.Drawing.Color.SandyBrown
+        Me.TextBox43.Location = New System.Drawing.Point(180, 320)
+        Me.TextBox43.Name = "TextBox43"
+        Me.TextBox43.ReadOnly = True
+        Me.TextBox43.Size = New System.Drawing.Size(434, 24)
+        Me.TextBox43.TabIndex = 4
+        Me.TextBox43.Text = "Text text text text"
+        '
+        'TextBox16
+        '
+        Me.TextBox16.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBox16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox16.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox16.ForeColor = System.Drawing.Color.SandyBrown
+        Me.TextBox16.Location = New System.Drawing.Point(178, 81)
+        Me.TextBox16.Name = "TextBox16"
+        Me.TextBox16.ReadOnly = True
+        Me.TextBox16.Size = New System.Drawing.Size(434, 24)
+        Me.TextBox16.TabIndex = 4
+        Me.TextBox16.Text = "Text text text text"
+        '
+        'TextBox54
+        '
+        Me.TextBox54.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.TextBox54.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox54.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.TextBox54.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox54.ForeColor = System.Drawing.Color.LightGray
+        Me.TextBox54.Location = New System.Drawing.Point(41, 497)
+        Me.TextBox54.Name = "TextBox54"
+        Me.TextBox54.ReadOnly = True
+        Me.TextBox54.Size = New System.Drawing.Size(133, 15)
+        Me.TextBox54.TabIndex = 37
+        Me.TextBox54.Text = "Socket Server"
+        '
+        'TextBox42
+        '
+        Me.TextBox42.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.TextBox42.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox42.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.TextBox42.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox42.ForeColor = System.Drawing.Color.LightGray
+        Me.TextBox42.Location = New System.Drawing.Point(41, 442)
+        Me.TextBox42.Name = "TextBox42"
+        Me.TextBox42.ReadOnly = True
+        Me.TextBox42.Size = New System.Drawing.Size(133, 15)
+        Me.TextBox42.TabIndex = 37
+        Me.TextBox42.Text = "Socket Server"
+        '
+        'TextBox23
+        '
+        Me.TextBox23.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.TextBox23.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox23.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.TextBox23.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox23.ForeColor = System.Drawing.Color.LightGray
+        Me.TextBox23.Location = New System.Drawing.Point(39, 203)
+        Me.TextBox23.Name = "TextBox23"
+        Me.TextBox23.ReadOnly = True
+        Me.TextBox23.Size = New System.Drawing.Size(133, 15)
+        Me.TextBox23.TabIndex = 37
+        Me.TextBox23.Text = "Socket Server"
+        '
+        'TextBox41
+        '
+        Me.TextBox41.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.TextBox41.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox41.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.TextBox41.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox41.ForeColor = System.Drawing.Color.LightGray
+        Me.TextBox41.Location = New System.Drawing.Point(41, 292)
+        Me.TextBox41.Name = "TextBox41"
+        Me.TextBox41.ReadOnly = True
+        Me.TextBox41.Size = New System.Drawing.Size(133, 15)
+        Me.TextBox41.TabIndex = 37
+        Me.TextBox41.Text = "GUID"
+        '
+        'TextBox53
+        '
+        Me.TextBox53.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.TextBox53.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox53.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.TextBox53.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox53.ForeColor = System.Drawing.Color.LightGray
+        Me.TextBox53.Location = New System.Drawing.Point(41, 526)
+        Me.TextBox53.Name = "TextBox53"
+        Me.TextBox53.ReadOnly = True
+        Me.TextBox53.Size = New System.Drawing.Size(133, 15)
+        Me.TextBox53.TabIndex = 37
+        Me.TextBox53.Text = "Socket Server Port"
+        '
+        'TextBox18
+        '
+        Me.TextBox18.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.TextBox18.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox18.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.TextBox18.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox18.ForeColor = System.Drawing.Color.LightGray
+        Me.TextBox18.Location = New System.Drawing.Point(39, 53)
+        Me.TextBox18.Name = "TextBox18"
+        Me.TextBox18.ReadOnly = True
+        Me.TextBox18.Size = New System.Drawing.Size(133, 15)
+        Me.TextBox18.TabIndex = 37
+        Me.TextBox18.Text = "GUID"
+        '
+        'TextBox40
+        '
+        Me.TextBox40.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.TextBox40.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox40.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.TextBox40.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox40.ForeColor = System.Drawing.Color.LightGray
+        Me.TextBox40.Location = New System.Drawing.Point(41, 471)
+        Me.TextBox40.Name = "TextBox40"
+        Me.TextBox40.ReadOnly = True
+        Me.TextBox40.Size = New System.Drawing.Size(133, 15)
+        Me.TextBox40.TabIndex = 37
+        Me.TextBox40.Text = "Socket Server Port"
+        '
+        'TextBox39
+        '
+        Me.TextBox39.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.TextBox39.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox39.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.TextBox39.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox39.ForeColor = System.Drawing.Color.LightGray
+        Me.TextBox39.Location = New System.Drawing.Point(41, 409)
+        Me.TextBox39.Name = "TextBox39"
+        Me.TextBox39.ReadOnly = True
+        Me.TextBox39.Size = New System.Drawing.Size(133, 15)
+        Me.TextBox39.TabIndex = 37
+        Me.TextBox39.Text = "Download Server"
+        '
+        'TextBox24
+        '
+        Me.TextBox24.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.TextBox24.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox24.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.TextBox24.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox24.ForeColor = System.Drawing.Color.LightGray
+        Me.TextBox24.Location = New System.Drawing.Point(39, 232)
+        Me.TextBox24.Name = "TextBox24"
+        Me.TextBox24.ReadOnly = True
+        Me.TextBox24.Size = New System.Drawing.Size(133, 15)
+        Me.TextBox24.TabIndex = 37
+        Me.TextBox24.Text = "Socket Server Port"
+        '
+        'TextBox36
+        '
+        Me.TextBox36.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBox36.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox36.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox36.ForeColor = System.Drawing.Color.SandyBrown
+        Me.TextBox36.Location = New System.Drawing.Point(180, 290)
+        Me.TextBox36.Name = "TextBox36"
+        Me.TextBox36.ReadOnly = True
+        Me.TextBox36.Size = New System.Drawing.Size(434, 24)
+        Me.TextBox36.TabIndex = 4
+        Me.TextBox36.Text = "Text text text text"
+        '
+        'TextBox22
+        '
+        Me.TextBox22.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.TextBox22.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox22.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.TextBox22.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox22.ForeColor = System.Drawing.Color.LightGray
+        Me.TextBox22.Location = New System.Drawing.Point(39, 170)
+        Me.TextBox22.Name = "TextBox22"
+        Me.TextBox22.ReadOnly = True
+        Me.TextBox22.Size = New System.Drawing.Size(133, 15)
+        Me.TextBox22.TabIndex = 37
+        Me.TextBox22.Text = "Download Server"
+        '
+        'PictureBox30
+        '
+        Me.PictureBox30.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox30.Image = Global.Script_Agent.My.Resources.Resources.copy
+        Me.PictureBox30.Location = New System.Drawing.Point(623, 380)
+        Me.PictureBox30.Name = "PictureBox30"
+        Me.PictureBox30.Size = New System.Drawing.Size(17, 17)
+        Me.PictureBox30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox30.TabIndex = 38
+        Me.PictureBox30.TabStop = False
+        '
+        'TextBox14
+        '
+        Me.TextBox14.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBox14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox14.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox14.ForeColor = System.Drawing.Color.SandyBrown
+        Me.TextBox14.Location = New System.Drawing.Point(178, 51)
+        Me.TextBox14.Name = "TextBox14"
+        Me.TextBox14.ReadOnly = True
+        Me.TextBox14.Size = New System.Drawing.Size(434, 24)
+        Me.TextBox14.TabIndex = 4
+        Me.TextBox14.Text = "Text text text text"
+        '
+        'TextBox34
+        '
+        Me.TextBox34.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBox34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox34.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox34.ForeColor = System.Drawing.Color.SandyBrown
+        Me.TextBox34.Location = New System.Drawing.Point(180, 409)
+        Me.TextBox34.Name = "TextBox34"
+        Me.TextBox34.ReadOnly = True
+        Me.TextBox34.Size = New System.Drawing.Size(434, 24)
+        Me.TextBox34.TabIndex = 4
+        Me.TextBox34.Text = "Text text text text"
+        '
+        'PictureBox13
+        '
+        Me.PictureBox13.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox13.Image = Global.Script_Agent.My.Resources.Resources.copy
+        Me.PictureBox13.Location = New System.Drawing.Point(621, 141)
+        Me.PictureBox13.Name = "PictureBox13"
+        Me.PictureBox13.Size = New System.Drawing.Size(17, 17)
+        Me.PictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox13.TabIndex = 38
+        Me.PictureBox13.TabStop = False
+        '
+        'TextBox8
+        '
+        Me.TextBox8.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox8.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox8.ForeColor = System.Drawing.Color.SandyBrown
+        Me.TextBox8.Location = New System.Drawing.Point(178, 170)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.ReadOnly = True
+        Me.TextBox8.Size = New System.Drawing.Size(434, 24)
+        Me.TextBox8.TabIndex = 4
+        Me.TextBox8.Text = "Text text text text"
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.Panel3)
+        Me.Panel1.Controls.Add(Me.Panel6)
+        Me.Panel1.Controls.Add(Me.Panel4)
+        Me.Panel1.Controls.Add(Me.Panel5)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Panel1.Location = New System.Drawing.Point(767, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(250, 633)
+        Me.Panel1.TabIndex = 41
         '
         'Panel3
         '
-        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        Me.Panel3.Location = New System.Drawing.Point(140, 263)
+        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Panel3.Controls.Add(Me.Button25)
+        Me.Panel3.Controls.Add(Me.CheckBox4)
+        Me.Panel3.Controls.Add(Me.Button11)
+        Me.Panel3.Controls.Add(Me.Button9)
+        Me.Panel3.Location = New System.Drawing.Point(0, 470)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1, 30)
-        Me.Panel3.TabIndex = 26
+        Me.Panel3.Size = New System.Drawing.Size(250, 156)
+        Me.Panel3.TabIndex = 42
         '
-        'Label7
+        'Button25
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft PhagsPa", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label7.Location = New System.Drawing.Point(137, 181)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(159, 32)
-        Me.Label7.TabIndex = 0
-        Me.Label7.Text = "TechServices"
+        Me.Button25.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.Button25.FlatAppearance.BorderSize = 0
+        Me.Button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button25.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button25.ForeColor = System.Drawing.Color.Black
+        Me.Button25.Image = CType(resources.GetObject("Button25.Image"), System.Drawing.Image)
+        Me.Button25.Location = New System.Drawing.Point(38, 49)
+        Me.Button25.Name = "Button25"
+        Me.Button25.Size = New System.Drawing.Size(110, 26)
+        Me.Button25.TabIndex = 30
+        Me.Button25.Text = "Restart Agent"
+        Me.Button25.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button25.UseVisualStyleBackColor = False
         '
-        'Label36
+        'CheckBox4
         '
-        Me.Label36.AutoSize = True
-        Me.Label36.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label36.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label36.Location = New System.Drawing.Point(428, 241)
-        Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(24, 16)
-        Me.Label36.TabIndex = 23
-        Me.Label36.Text = "txt"
+        Me.CheckBox4.AutoSize = True
+        Me.CheckBox4.Checked = True
+        Me.CheckBox4.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBox4.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.CheckBox4.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox4.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.CheckBox4.Location = New System.Drawing.Point(34, 83)
+        Me.CheckBox4.Name = "CheckBox4"
+        Me.CheckBox4.Size = New System.Drawing.Size(100, 20)
+        Me.CheckBox4.TabIndex = 42
+        Me.CheckBox4.Text = "Clear registry"
+        Me.CheckBox4.UseVisualStyleBackColor = True
         '
-        'Label56
+        'Button11
         '
-        Me.Label56.AutoSize = True
-        Me.Label56.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label56.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label56.Location = New System.Drawing.Point(428, 157)
-        Me.Label56.Name = "Label56"
-        Me.Label56.Size = New System.Drawing.Size(46, 16)
-        Me.Label56.TabIndex = 23
-        Me.Label56.Text = "txt_txt"
+        Me.Button11.BackColor = System.Drawing.Color.Crimson
+        Me.Button11.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button11.FlatAppearance.BorderSize = 0
+        Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button11.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Button11.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Button11.Location = New System.Drawing.Point(140, 81)
+        Me.Button11.Name = "Button11"
+        Me.Button11.Size = New System.Drawing.Size(80, 26)
+        Me.Button11.TabIndex = 31
+        Me.Button11.Text = "Uninstall OD"
+        Me.Button11.UseVisualStyleBackColor = False
         '
-        'Label23
+        'Button9
         '
-        Me.Label23.AutoSize = True
-        Me.Label23.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label23.Location = New System.Drawing.Point(154, 185)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(24, 16)
-        Me.Label23.TabIndex = 23
-        Me.Label23.Text = "txt"
+        Me.Button9.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.Button9.FlatAppearance.BorderSize = 0
+        Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button9.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button9.ForeColor = System.Drawing.Color.Black
+        Me.Button9.Image = CType(resources.GetObject("Button9.Image"), System.Drawing.Image)
+        Me.Button9.Location = New System.Drawing.Point(154, 49)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(66, 26)
+        Me.Button9.TabIndex = 30
+        Me.Button9.Text = "HOST"
+        Me.Button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button9.UseVisualStyleBackColor = False
         '
-        'Label35
+        'Panel6
         '
-        Me.Label35.AutoSize = True
-        Me.Label35.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label35.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label35.Location = New System.Drawing.Point(298, 241)
-        Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(96, 16)
-        Me.Label35.TabIndex = 23
-        Me.Label35.Text = "Download Server"
+        Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Panel6.Controls.Add(Me.Button24)
+        Me.Panel6.Controls.Add(Me.TextBox25)
+        Me.Panel6.Controls.Add(Me.TextBox29)
+        Me.Panel6.Controls.Add(Me.TextBox27)
+        Me.Panel6.Controls.Add(Me.TextBox26)
+        Me.Panel6.Location = New System.Drawing.Point(0, 304)
+        Me.Panel6.MaximumSize = New System.Drawing.Size(250, 160)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(250, 160)
+        Me.Panel6.TabIndex = 41
         '
-        'Label54
+        'Button24
         '
-        Me.Label54.AutoSize = True
-        Me.Label54.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label54.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label54.Location = New System.Drawing.Point(298, 157)
-        Me.Label54.Name = "Label54"
-        Me.Label54.Size = New System.Drawing.Size(81, 16)
-        Me.Label54.TabIndex = 23
-        Me.Label54.Text = "Agent Version"
+        Me.Button24.BackColor = System.Drawing.Color.OliveDrab
+        Me.Button24.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button24.FlatAppearance.BorderSize = 0
+        Me.Button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button24.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Button24.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Button24.Location = New System.Drawing.Point(94, 126)
+        Me.Button24.Name = "Button24"
+        Me.Button24.Size = New System.Drawing.Size(77, 23)
+        Me.Button24.TabIndex = 0
+        Me.Button24.Text = "Save"
+        Me.Button24.UseVisualStyleBackColor = False
+        '
+        'TextBox25
+        '
+        Me.TextBox25.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.TextBox25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox25.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox25.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
+        Me.TextBox25.Location = New System.Drawing.Point(23, 30)
+        Me.TextBox25.Name = "TextBox25"
+        Me.TextBox25.Size = New System.Drawing.Size(210, 24)
+        Me.TextBox25.TabIndex = 1
+        Me.TextBox25.Text = "First name"
+        Me.TextBox25.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TextBox29
+        '
+        Me.TextBox29.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBox29.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox29.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.TextBox29.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.TextBox29.ForeColor = System.Drawing.Color.DarkGray
+        Me.TextBox29.Location = New System.Drawing.Point(3, 5)
+        Me.TextBox29.Name = "TextBox29"
+        Me.TextBox29.ReadOnly = True
+        Me.TextBox29.Size = New System.Drawing.Size(240, 15)
+        Me.TextBox29.TabIndex = 33
+        Me.TextBox29.Text = "Edit client info"
+        Me.TextBox29.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TextBox27
+        '
+        Me.TextBox27.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.TextBox27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox27.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox27.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
+        Me.TextBox27.Location = New System.Drawing.Point(23, 87)
+        Me.TextBox27.Name = "TextBox27"
+        Me.TextBox27.Size = New System.Drawing.Size(209, 24)
+        Me.TextBox27.TabIndex = 1
+        Me.TextBox27.Text = "Email address"
+        Me.TextBox27.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TextBox26
+        '
+        Me.TextBox26.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.TextBox26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox26.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox26.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
+        Me.TextBox26.Location = New System.Drawing.Point(23, 58)
+        Me.TextBox26.Name = "TextBox26"
+        Me.TextBox26.Size = New System.Drawing.Size(209, 24)
+        Me.TextBox26.TabIndex = 1
+        Me.TextBox26.Text = "Last name"
+        Me.TextBox26.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Panel4
+        '
+        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.Panel4.Controls.Add(Me.Label22)
+        Me.Panel4.Controls.Add(Me.Button2)
+        Me.Panel4.Controls.Add(Me.Label31)
+        Me.Panel4.Location = New System.Drawing.Point(0, 0)
+        Me.Panel4.MaximumSize = New System.Drawing.Size(250, 165)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(250, 165)
+        Me.Panel4.TabIndex = 41
         '
         'Label22
         '
         Me.Label22.AutoSize = True
-        Me.Label22.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label22.Location = New System.Drawing.Point(24, 185)
+        Me.Label22.BackColor = System.Drawing.Color.Transparent
+        Me.Label22.Font = New System.Drawing.Font("Microsoft PhagsPa", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.ForeColor = System.Drawing.Color.OrangeRed
+        Me.Label22.Location = New System.Drawing.Point(113, 41)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(81, 16)
-        Me.Label22.TabIndex = 23
-        Me.Label22.Text = "Agent Version"
+        Me.Label22.Size = New System.Drawing.Size(36, 42)
+        Me.Label22.TabIndex = 2
+        Me.Label22.Text = "0"
         '
-        'Label34
+        'Button2
         '
-        Me.Label34.AutoSize = True
-        Me.Label34.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label34.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label34.Location = New System.Drawing.Point(154, 289)
-        Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(24, 16)
-        Me.Label34.TabIndex = 23
-        Me.Label34.Text = "txt"
-        '
-        'Label51
-        '
-        Me.Label51.AutoSize = True
-        Me.Label51.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label51.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label51.Location = New System.Drawing.Point(428, 129)
-        Me.Label51.Name = "Label51"
-        Me.Label51.Size = New System.Drawing.Size(46, 16)
-        Me.Label51.TabIndex = 23
-        Me.Label51.Text = "txt_txt"
-        '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label21.Location = New System.Drawing.Point(154, 157)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(24, 16)
-        Me.Label21.TabIndex = 23
-        Me.Label21.Text = "txt"
-        '
-        'Label33
-        '
-        Me.Label33.AutoSize = True
-        Me.Label33.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label33.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label33.Location = New System.Drawing.Point(24, 289)
-        Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(101, 16)
-        Me.Label33.TabIndex = 23
-        Me.Label33.Text = "Workorder Server "
-        '
-        'Label49
-        '
-        Me.Label49.AutoSize = True
-        Me.Label49.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label49.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label49.Location = New System.Drawing.Point(298, 129)
-        Me.Label49.Name = "Label49"
-        Me.Label49.Size = New System.Drawing.Size(98, 16)
-        Me.Label49.TabIndex = 23
-        Me.Label49.Text = "WorkorderServer "
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label20.Location = New System.Drawing.Point(24, 157)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(92, 16)
-        Me.Label20.TabIndex = 23
-        Me.Label20.Text = "Screen Connect "
-        '
-        'Label68
-        '
-        Me.Label68.AutoSize = True
-        Me.Label68.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label68.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label68.Location = New System.Drawing.Point(428, 216)
-        Me.Label68.Name = "Label68"
-        Me.Label68.Size = New System.Drawing.Size(24, 16)
-        Me.Label68.TabIndex = 23
-        Me.Label68.Text = "txt"
-        '
-        'Label32
-        '
-        Me.Label32.AutoSize = True
-        Me.Label32.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label32.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label32.Location = New System.Drawing.Point(154, 262)
-        Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(24, 16)
-        Me.Label32.TabIndex = 23
-        Me.Label32.Text = "txt"
-        '
-        'Label47
-        '
-        Me.Label47.AutoSize = True
-        Me.Label47.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label47.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label47.Location = New System.Drawing.Point(428, 102)
-        Me.Label47.Name = "Label47"
-        Me.Label47.Size = New System.Drawing.Size(46, 16)
-        Me.Label47.TabIndex = 23
-        Me.Label47.Text = "txt_txt"
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label19.Location = New System.Drawing.Point(154, 130)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(24, 16)
-        Me.Label19.TabIndex = 23
-        Me.Label19.Text = "txt"
-        '
-        'Label67
-        '
-        Me.Label67.AutoSize = True
-        Me.Label67.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label67.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label67.Location = New System.Drawing.Point(298, 216)
-        Me.Label67.Name = "Label67"
-        Me.Label67.Size = New System.Drawing.Size(34, 16)
-        Me.Label67.TabIndex = 23
-        Me.Label67.Text = "GUID"
+        Me.Button2.BackColor = System.Drawing.Color.OliveDrab
+        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Button2.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Button2.Location = New System.Drawing.Point(86, 108)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(91, 23)
+        Me.Button2.TabIndex = 0
+        Me.Button2.Text = "View details"
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'Label31
         '
         Me.Label31.AutoSize = True
-        Me.Label31.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label31.BackColor = System.Drawing.Color.Transparent
+        Me.Label31.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label31.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label31.Location = New System.Drawing.Point(24, 262)
+        Me.Label31.Location = New System.Drawing.Point(75, 6)
         Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(107, 16)
-        Me.Label31.TabIndex = 23
-        Me.Label31.Text = "Proactivitee Server "
-        '
-        'Label45
-        '
-        Me.Label45.AutoSize = True
-        Me.Label45.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label45.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label45.Location = New System.Drawing.Point(298, 102)
-        Me.Label45.Name = "Label45"
-        Me.Label45.Size = New System.Drawing.Size(75, 16)
-        Me.Label45.TabIndex = 23
-        Me.Label45.Text = "assign Server"
-        '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label18.Location = New System.Drawing.Point(24, 130)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(77, 16)
-        Me.Label18.TabIndex = 23
-        Me.Label18.Text = "Assign Server"
-        '
-        'Label66
-        '
-        Me.Label66.AutoSize = True
-        Me.Label66.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label66.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label66.Location = New System.Drawing.Point(428, 290)
-        Me.Label66.Name = "Label66"
-        Me.Label66.Size = New System.Drawing.Size(24, 16)
-        Me.Label66.TabIndex = 23
-        Me.Label66.Text = "txt"
-        '
-        'Label30
-        '
-        Me.Label30.AutoSize = True
-        Me.Label30.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label30.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label30.Location = New System.Drawing.Point(154, 234)
-        Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(24, 16)
-        Me.Label30.TabIndex = 23
-        Me.Label30.Text = "txt"
-        '
-        'Label43
-        '
-        Me.Label43.AutoSize = True
-        Me.Label43.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label43.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label43.Location = New System.Drawing.Point(428, 74)
-        Me.Label43.Name = "Label43"
-        Me.Label43.Size = New System.Drawing.Size(46, 16)
-        Me.Label43.TabIndex = 23
-        Me.Label43.Text = "txt_txt"
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label17.Location = New System.Drawing.Point(154, 102)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(24, 16)
-        Me.Label17.TabIndex = 23
-        Me.Label17.Text = "txt"
-        '
-        'Label65
-        '
-        Me.Label65.AutoSize = True
-        Me.Label65.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label65.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label65.Location = New System.Drawing.Point(298, 290)
-        Me.Label65.Name = "Label65"
-        Me.Label65.Size = New System.Drawing.Size(80, 16)
-        Me.Label65.TabIndex = 23
-        Me.Label65.Text = "Socket Server "
-        '
-        'Label29
-        '
-        Me.Label29.AutoSize = True
-        Me.Label29.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label29.Location = New System.Drawing.Point(24, 234)
-        Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(90, 16)
-        Me.Label29.TabIndex = 23
-        Me.Label29.Text = "SpeedtestServer"
-        '
-        'Label41
-        '
-        Me.Label41.AutoSize = True
-        Me.Label41.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label41.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label41.Location = New System.Drawing.Point(298, 74)
-        Me.Label41.Name = "Label41"
-        Me.Label41.Size = New System.Drawing.Size(63, 16)
-        Me.Label41.TabIndex = 23
-        Me.Label41.Text = "framework"
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label16.Location = New System.Drawing.Point(24, 102)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(81, 16)
-        Me.Label16.TabIndex = 23
-        Me.Label16.Text = "DeliveryServer"
-        '
-        'Label40
-        '
-        Me.Label40.AutoSize = True
-        Me.Label40.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label40.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label40.Location = New System.Drawing.Point(428, 184)
-        Me.Label40.Name = "Label40"
-        Me.Label40.Size = New System.Drawing.Size(46, 16)
-        Me.Label40.TabIndex = 23
-        Me.Label40.Text = "txt_txt"
-        '
-        'Label64
-        '
-        Me.Label64.AutoSize = True
-        Me.Label64.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label64.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label64.Location = New System.Drawing.Point(428, 268)
-        Me.Label64.Name = "Label64"
-        Me.Label64.Size = New System.Drawing.Size(24, 16)
-        Me.Label64.TabIndex = 23
-        Me.Label64.Text = "txt"
-        '
-        'Label28
-        '
-        Me.Label28.AutoSize = True
-        Me.Label28.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label28.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label28.Location = New System.Drawing.Point(154, 212)
-        Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(24, 16)
-        Me.Label28.TabIndex = 23
-        Me.Label28.Text = "txt"
-        '
-        'Label39
-        '
-        Me.Label39.AutoSize = True
-        Me.Label39.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label39.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label39.Location = New System.Drawing.Point(298, 184)
-        Me.Label39.Name = "Label39"
-        Me.Label39.Size = New System.Drawing.Size(45, 16)
-        Me.Label39.TabIndex = 23
-        Me.Label39.Text = "version"
-        '
-        'Label63
-        '
-        Me.Label63.AutoSize = True
-        Me.Label63.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label63.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label63.Location = New System.Drawing.Point(298, 268)
-        Me.Label63.Name = "Label63"
-        Me.Label63.Size = New System.Drawing.Size(67, 16)
-        Me.Label63.TabIndex = 23
-        Me.Label63.Text = "Scan Server"
-        '
-        'Label27
-        '
-        Me.Label27.AutoSize = True
-        Me.Label27.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label27.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label27.Location = New System.Drawing.Point(24, 212)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(67, 16)
-        Me.Label27.TabIndex = 23
-        Me.Label27.Text = "Scan Server"
-        '
-        'Label61
-        '
-        Me.Label61.AutoSize = True
-        Me.Label61.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label61.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label61.Location = New System.Drawing.Point(428, 24)
-        Me.Label61.Name = "Label61"
-        Me.Label61.Size = New System.Drawing.Size(46, 16)
-        Me.Label61.TabIndex = 23
-        Me.Label61.Text = "txt_txt"
-        '
-        'Label38
-        '
-        Me.Label38.AutoSize = True
-        Me.Label38.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label38.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label38.Location = New System.Drawing.Point(428, 52)
-        Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(46, 16)
-        Me.Label38.TabIndex = 23
-        Me.Label38.Text = "txt_txt"
-        '
-        'Label60
-        '
-        Me.Label60.AutoSize = True
-        Me.Label60.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label60.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label60.Location = New System.Drawing.Point(154, 52)
-        Me.Label60.Name = "Label60"
-        Me.Label60.Size = New System.Drawing.Size(24, 16)
-        Me.Label60.TabIndex = 23
-        Me.Label60.Text = "txt"
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label15.Location = New System.Drawing.Point(154, 80)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(24, 16)
-        Me.Label15.TabIndex = 23
-        Me.Label15.Text = "txt"
-        '
-        'Label59
-        '
-        Me.Label59.AutoSize = True
-        Me.Label59.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label59.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label59.Location = New System.Drawing.Point(298, 24)
-        Me.Label59.Name = "Label59"
-        Me.Label59.Size = New System.Drawing.Size(45, 16)
-        Me.Label59.TabIndex = 23
-        Me.Label59.Text = "version"
-        '
-        'Label58
-        '
-        Me.Label58.AutoSize = True
-        Me.Label58.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label58.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label58.Location = New System.Drawing.Point(24, 52)
-        Me.Label58.Name = "Label58"
-        Me.Label58.Size = New System.Drawing.Size(50, 16)
-        Me.Label58.TabIndex = 23
-        Me.Label58.Text = "Client id"
-        '
-        'Label37
-        '
-        Me.Label37.AutoSize = True
-        Me.Label37.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label37.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label37.Location = New System.Drawing.Point(298, 52)
-        Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(45, 16)
-        Me.Label37.TabIndex = 23
-        Me.Label37.Text = "version"
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label14.Location = New System.Drawing.Point(24, 80)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(62, 16)
-        Me.Label14.TabIndex = 23
-        Me.Label14.Text = "API_Server"
-        '
-        'Label26
-        '
-        Me.Label26.AutoSize = True
-        Me.Label26.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label26.Font = New System.Drawing.Font("Calibri", 8.0!)
-        Me.Label26.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.Label26.Location = New System.Drawing.Point(216, 296)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(26, 13)
-        Me.Label26.TabIndex = 23
-        Me.Label26.Text = "logs"
-        '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label25.Font = New System.Drawing.Font("Calibri", 8.0!)
-        Me.Label25.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.Label25.Location = New System.Drawing.Point(147, 296)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(47, 13)
-        Me.Label25.TabIndex = 23
-        Me.Label25.Text = "reinstall"
-        '
-        'Label24
-        '
-        Me.Label24.AutoSize = True
-        Me.Label24.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label24.Font = New System.Drawing.Font("Calibri", 8.0!)
-        Me.Label24.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.Label24.Location = New System.Drawing.Point(88, 296)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(41, 13)
-        Me.Label24.TabIndex = 23
-        Me.Label24.Text = "update"
+        Me.Label31.Size = New System.Drawing.Size(107, 15)
+        Me.Label31.TabIndex = 2
+        Me.Label31.Text = "Event Viewer Errors"
         '
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
-        Me.Panel5.Controls.Add(Me.Label42342)
-        Me.Panel5.Controls.Add(Me.Lbl_43178)
-        Me.Panel5.Controls.Add(Me.Lbl_432)
-        Me.Panel5.Controls.Add(Me.Panel7)
-        Me.Panel5.Controls.Add(Me.Panel6)
-        Me.Panel5.Location = New System.Drawing.Point(69, 721)
+        Me.Panel5.Controls.Add(Me.Button1)
+        Me.Panel5.Controls.Add(Me.Button7)
+        Me.Panel5.Controls.Add(Me.Label5)
+        Me.Panel5.Location = New System.Drawing.Point(0, 171)
+        Me.Panel5.MaximumSize = New System.Drawing.Size(250, 124)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(1175, 33)
-        Me.Panel5.TabIndex = 21
-        '
-        'Label42342
-        '
-        Me.Label42342.AutoSize = True
-        Me.Label42342.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label42342.Font = New System.Drawing.Font("Trebuchet MS", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label42342.ForeColor = System.Drawing.Color.Chartreuse
-        Me.Label42342.Location = New System.Drawing.Point(17, 6)
-        Me.Label42342.Name = "Label42342"
-        Me.Label42342.Size = New System.Drawing.Size(87, 23)
-        Me.Label42342.TabIndex = 3
-        Me.Label42342.Text = "Overview"
-        Me.Label42342.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Lbl_43178
-        '
-        Me.Lbl_43178.AutoSize = True
-        Me.Lbl_43178.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Lbl_43178.Font = New System.Drawing.Font("Trebuchet MS", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lbl_43178.ForeColor = System.Drawing.Color.LightGray
-        Me.Lbl_43178.Location = New System.Drawing.Point(147, 6)
-        Me.Lbl_43178.Name = "Lbl_43178"
-        Me.Lbl_43178.Size = New System.Drawing.Size(45, 23)
-        Me.Lbl_43178.TabIndex = 3
-        Me.Lbl_43178.Text = "Logs"
-        Me.Lbl_43178.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Lbl_432
-        '
-        Me.Lbl_432.AutoSize = True
-        Me.Lbl_432.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Lbl_432.Font = New System.Drawing.Font("Trebuchet MS", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lbl_432.ForeColor = System.Drawing.Color.LightGray
-        Me.Lbl_432.Location = New System.Drawing.Point(236, 6)
-        Me.Lbl_432.Name = "Lbl_432"
-        Me.Lbl_432.Size = New System.Drawing.Size(144, 23)
-        Me.Lbl_432.TabIndex = 3
-        Me.Lbl_432.Text = "Encrypt / Decrypt"
-        Me.Lbl_432.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Panel7
-        '
-        Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        Me.Panel7.Location = New System.Drawing.Point(215, 3)
-        Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(1, 30)
-        Me.Panel7.TabIndex = 26
-        '
-        'Panel6
-        '
-        Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        Me.Panel6.Location = New System.Drawing.Point(132, 3)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(1, 30)
-        Me.Panel6.TabIndex = 26
-        '
-        'Panel8
-        '
-        Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        Me.Panel8.Controls.Add(Me.Panel1)
-        Me.Panel8.Controls.Add(Me.Panel9)
-        Me.Panel8.Controls.Add(Me.Button2)
-        Me.Panel8.Controls.Add(Me.Label83)
-        Me.Panel8.Controls.Add(Me.Label82)
-        Me.Panel8.Controls.Add(Me.Label81)
-        Me.Panel8.Controls.Add(Me.CheckBox2)
-        Me.Panel8.Controls.Add(Me.Label6)
-        Me.Panel8.Controls.Add(Me.Label80)
-        Me.Panel8.Controls.Add(Me.Label79)
-        Me.Panel8.Controls.Add(Me.ComboBox3)
-        Me.Panel8.Controls.Add(Me.ComboBox2)
-        Me.Panel8.Controls.Add(Me.Label78)
-        Me.Panel8.Controls.Add(Me.Label77)
-        Me.Panel8.Controls.Add(Me.Label76)
-        Me.Panel8.Controls.Add(Me.Label75)
-        Me.Panel8.Controls.Add(Me.Label74)
-        Me.Panel8.Controls.Add(Me.Label73)
-        Me.Panel8.Controls.Add(Me.Label71)
-        Me.Panel8.Location = New System.Drawing.Point(727, 15)
-        Me.Panel8.MaximumSize = New System.Drawing.Size(1169, 573)
-        Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(963, 573)
-        Me.Panel8.TabIndex = 28
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.Label46)
-        Me.Panel1.Controls.Add(Me.PictureBox5)
-        Me.Panel1.Controls.Add(Me.Label7)
-        Me.Panel1.Controls.Add(Me.PictureBox6)
-        Me.Panel1.Controls.Add(Me.Label44)
-        Me.Panel1.Controls.Add(Me.Label42)
-        Me.Panel1.Controls.Add(Me.Panel3)
-        Me.Panel1.Controls.Add(Me.PictureBox4)
-        Me.Panel1.Controls.Add(Me.Label26)
-        Me.Panel1.Controls.Add(Me.Label70)
-        Me.Panel1.Controls.Add(Me.PictureBox1)
-        Me.Panel1.Controls.Add(Me.Panel4)
-        Me.Panel1.Controls.Add(Me.Panel2)
-        Me.Panel1.Controls.Add(Me.PictureBox3)
-        Me.Panel1.Controls.Add(Me.Label25)
-        Me.Panel1.Controls.Add(Me.PictureBox2)
-        Me.Panel1.Controls.Add(Me.Label24)
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(458, 317)
-        Me.Panel1.TabIndex = 30
-        '
-        'Label46
-        '
-        Me.Label46.AutoSize = True
-        Me.Label46.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label46.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label46.Location = New System.Drawing.Point(262, 229)
-        Me.Label46.Name = "Label46"
-        Me.Label46.Size = New System.Drawing.Size(24, 16)
-        Me.Label46.TabIndex = 23
-        Me.Label46.Text = "txt"
-        '
-        'Label44
-        '
-        Me.Label44.AutoSize = True
-        Me.Label44.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label44.ForeColor = System.Drawing.Color.NavajoWhite
-        Me.Label44.Location = New System.Drawing.Point(262, 213)
-        Me.Label44.Name = "Label44"
-        Me.Label44.Size = New System.Drawing.Size(85, 16)
-        Me.Label44.TabIndex = 0
-        Me.Label44.Text = "mail@txt.com"
-        '
-        'Label42
-        '
-        Me.Label42.AutoSize = True
-        Me.Label42.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label42.ForeColor = System.Drawing.Color.NavajoWhite
-        Me.Label42.Location = New System.Drawing.Point(216, 222)
-        Me.Label42.Name = "Label42"
-        Me.Label42.Size = New System.Drawing.Size(31, 16)
-        Me.Label42.TabIndex = 0
-        Me.Label42.Text = "LIVE"
-        '
-        'Label70
-        '
-        Me.Label70.AutoSize = True
-        Me.Label70.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label70.Font = New System.Drawing.Font("Calibri", 8.0!)
-        Me.Label70.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.Label70.Location = New System.Drawing.Point(280, 296)
-        Me.Label70.Name = "Label70"
-        Me.Label70.Size = New System.Drawing.Size(43, 13)
-        Me.Label70.TabIndex = 23
-        Me.Label70.Text = "remove"
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        Me.Panel2.Location = New System.Drawing.Point(265, 263)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1, 30)
-        Me.Panel2.TabIndex = 26
-        '
-        'Panel9
-        '
-        Me.Panel9.AutoScroll = True
-        Me.Panel9.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
-        Me.Panel9.Controls.Add(Me.Label61)
-        Me.Panel9.Controls.Add(Me.Label47)
-        Me.Panel9.Controls.Add(Me.Label104)
-        Me.Panel9.Controls.Add(Me.Label32)
-        Me.Panel9.Controls.Add(Me.Label103)
-        Me.Panel9.Controls.Add(Me.Label19)
-        Me.Panel9.Controls.Add(Me.Label102)
-        Me.Panel9.Controls.Add(Me.Label68)
-        Me.Panel9.Controls.Add(Me.Label101)
-        Me.Panel9.Controls.Add(Me.Label67)
-        Me.Panel9.Controls.Add(Me.Label100)
-        Me.Panel9.Controls.Add(Me.Label31)
-        Me.Panel9.Controls.Add(Me.Label99)
-        Me.Panel9.Controls.Add(Me.Label20)
-        Me.Panel9.Controls.Add(Me.Label45)
-        Me.Panel9.Controls.Add(Me.Label98)
-        Me.Panel9.Controls.Add(Me.Label49)
-        Me.Panel9.Controls.Add(Me.Label97)
-        Me.Panel9.Controls.Add(Me.Label96)
-        Me.Panel9.Controls.Add(Me.Label18)
-        Me.Panel9.Controls.Add(Me.Label95)
-        Me.Panel9.Controls.Add(Me.Label33)
-        Me.Panel9.Controls.Add(Me.Label66)
-        Me.Panel9.Controls.Add(Me.Label94)
-        Me.Panel9.Controls.Add(Me.Label14)
-        Me.Panel9.Controls.Add(Me.Label93)
-        Me.Panel9.Controls.Add(Me.Label30)
-        Me.Panel9.Controls.Add(Me.Label21)
-        Me.Panel9.Controls.Add(Me.Label37)
-        Me.Panel9.Controls.Add(Me.Label92)
-        Me.Panel9.Controls.Add(Me.Label43)
-        Me.Panel9.Controls.Add(Me.Label51)
-        Me.Panel9.Controls.Add(Me.Label58)
-        Me.Panel9.Controls.Add(Me.Label91)
-        Me.Panel9.Controls.Add(Me.Label17)
-        Me.Panel9.Controls.Add(Me.Label34)
-        Me.Panel9.Controls.Add(Me.Label90)
-        Me.Panel9.Controls.Add(Me.Label59)
-        Me.Panel9.Controls.Add(Me.Label65)
-        Me.Panel9.Controls.Add(Me.Label89)
-        Me.Panel9.Controls.Add(Me.Label15)
-        Me.Panel9.Controls.Add(Me.Label29)
-        Me.Panel9.Controls.Add(Me.Label88)
-        Me.Panel9.Controls.Add(Me.Label60)
-        Me.Panel9.Controls.Add(Me.Label22)
-        Me.Panel9.Controls.Add(Me.Label38)
-        Me.Panel9.Controls.Add(Me.Label87)
-        Me.Panel9.Controls.Add(Me.Label41)
-        Me.Panel9.Controls.Add(Me.Label86)
-        Me.Panel9.Controls.Add(Me.Label54)
-        Me.Panel9.Controls.Add(Me.Label27)
-        Me.Panel9.Controls.Add(Me.Label85)
-        Me.Panel9.Controls.Add(Me.Label16)
-        Me.Panel9.Controls.Add(Me.Label84)
-        Me.Panel9.Controls.Add(Me.Label36)
-        Me.Panel9.Controls.Add(Me.Label62)
-        Me.Panel9.Controls.Add(Me.Label35)
-        Me.Panel9.Controls.Add(Me.Label57)
-        Me.Panel9.Controls.Add(Me.Label63)
-        Me.Panel9.Controls.Add(Me.Label55)
-        Me.Panel9.Controls.Add(Me.Label40)
-        Me.Panel9.Controls.Add(Me.Label53)
-        Me.Panel9.Controls.Add(Me.Label56)
-        Me.Panel9.Controls.Add(Me.Label50)
-        Me.Panel9.Controls.Add(Me.Label64)
-        Me.Panel9.Controls.Add(Me.Label48)
-        Me.Panel9.Controls.Add(Me.Label39)
-        Me.Panel9.Controls.Add(Me.Label8)
-        Me.Panel9.Controls.Add(Me.Label28)
-        Me.Panel9.Controls.Add(Me.Label23)
-        Me.Panel9.Location = New System.Drawing.Point(3, 323)
-        Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(1211, 240)
-        Me.Panel9.TabIndex = 31
-        '
-        'Label104
-        '
-        Me.Label104.AutoSize = True
-        Me.Label104.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label104.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label104.Location = New System.Drawing.Point(158, 447)
-        Me.Label104.Name = "Label104"
-        Me.Label104.Size = New System.Drawing.Size(24, 16)
-        Me.Label104.TabIndex = 23
-        Me.Label104.Text = "txt"
-        '
-        'Label103
-        '
-        Me.Label103.AutoSize = True
-        Me.Label103.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label103.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label103.Location = New System.Drawing.Point(158, 315)
-        Me.Label103.Name = "Label103"
-        Me.Label103.Size = New System.Drawing.Size(24, 16)
-        Me.Label103.TabIndex = 23
-        Me.Label103.Text = "txt"
-        '
-        'Label102
-        '
-        Me.Label102.AutoSize = True
-        Me.Label102.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label102.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label102.Location = New System.Drawing.Point(432, 401)
-        Me.Label102.Name = "Label102"
-        Me.Label102.Size = New System.Drawing.Size(24, 16)
-        Me.Label102.TabIndex = 23
-        Me.Label102.Text = "txt"
-        '
-        'Label101
-        '
-        Me.Label101.AutoSize = True
-        Me.Label101.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label101.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label101.Location = New System.Drawing.Point(302, 401)
-        Me.Label101.Name = "Label101"
-        Me.Label101.Size = New System.Drawing.Size(34, 16)
-        Me.Label101.TabIndex = 23
-        Me.Label101.Text = "GUID"
-        '
-        'Label100
-        '
-        Me.Label100.AutoSize = True
-        Me.Label100.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label100.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label100.Location = New System.Drawing.Point(28, 447)
-        Me.Label100.Name = "Label100"
-        Me.Label100.Size = New System.Drawing.Size(107, 16)
-        Me.Label100.TabIndex = 23
-        Me.Label100.Text = "Proactivitee Server "
-        '
-        'Label99
-        '
-        Me.Label99.AutoSize = True
-        Me.Label99.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label99.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label99.Location = New System.Drawing.Point(28, 342)
-        Me.Label99.Name = "Label99"
-        Me.Label99.Size = New System.Drawing.Size(92, 16)
-        Me.Label99.TabIndex = 23
-        Me.Label99.Text = "Screen Connect "
-        '
-        'Label98
-        '
-        Me.Label98.AutoSize = True
-        Me.Label98.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label98.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label98.Location = New System.Drawing.Point(302, 314)
-        Me.Label98.Name = "Label98"
-        Me.Label98.Size = New System.Drawing.Size(98, 16)
-        Me.Label98.TabIndex = 23
-        Me.Label98.Text = "WorkorderServer "
-        '
-        'Label97
-        '
-        Me.Label97.AutoSize = True
-        Me.Label97.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label97.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label97.Location = New System.Drawing.Point(28, 315)
-        Me.Label97.Name = "Label97"
-        Me.Label97.Size = New System.Drawing.Size(77, 16)
-        Me.Label97.TabIndex = 23
-        Me.Label97.Text = "Assign Server"
-        '
-        'Label96
-        '
-        Me.Label96.AutoSize = True
-        Me.Label96.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label96.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label96.Location = New System.Drawing.Point(28, 474)
-        Me.Label96.Name = "Label96"
-        Me.Label96.Size = New System.Drawing.Size(101, 16)
-        Me.Label96.TabIndex = 23
-        Me.Label96.Text = "Workorder Server "
-        '
-        'Label95
-        '
-        Me.Label95.AutoSize = True
-        Me.Label95.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label95.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label95.Location = New System.Drawing.Point(432, 475)
-        Me.Label95.Name = "Label95"
-        Me.Label95.Size = New System.Drawing.Size(24, 16)
-        Me.Label95.TabIndex = 23
-        Me.Label95.Text = "txt"
-        '
-        'Label94
-        '
-        Me.Label94.AutoSize = True
-        Me.Label94.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label94.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label94.Location = New System.Drawing.Point(158, 419)
-        Me.Label94.Name = "Label94"
-        Me.Label94.Size = New System.Drawing.Size(24, 16)
-        Me.Label94.TabIndex = 23
-        Me.Label94.Text = "txt"
-        '
-        'Label93
-        '
-        Me.Label93.AutoSize = True
-        Me.Label93.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label93.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label93.Location = New System.Drawing.Point(158, 342)
-        Me.Label93.Name = "Label93"
-        Me.Label93.Size = New System.Drawing.Size(24, 16)
-        Me.Label93.TabIndex = 23
-        Me.Label93.Text = "txt"
-        '
-        'Label92
-        '
-        Me.Label92.AutoSize = True
-        Me.Label92.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label92.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label92.Location = New System.Drawing.Point(432, 314)
-        Me.Label92.Name = "Label92"
-        Me.Label92.Size = New System.Drawing.Size(46, 16)
-        Me.Label92.TabIndex = 23
-        Me.Label92.Text = "txt_txt"
-        '
-        'Label91
-        '
-        Me.Label91.AutoSize = True
-        Me.Label91.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label91.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label91.Location = New System.Drawing.Point(158, 474)
-        Me.Label91.Name = "Label91"
-        Me.Label91.Size = New System.Drawing.Size(24, 16)
-        Me.Label91.TabIndex = 23
-        Me.Label91.Text = "txt"
-        '
-        'Label90
-        '
-        Me.Label90.AutoSize = True
-        Me.Label90.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label90.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label90.Location = New System.Drawing.Point(302, 475)
-        Me.Label90.Name = "Label90"
-        Me.Label90.Size = New System.Drawing.Size(80, 16)
-        Me.Label90.TabIndex = 23
-        Me.Label90.Text = "Socket Server "
-        '
-        'Label89
-        '
-        Me.Label89.AutoSize = True
-        Me.Label89.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label89.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label89.Location = New System.Drawing.Point(28, 419)
-        Me.Label89.Name = "Label89"
-        Me.Label89.Size = New System.Drawing.Size(90, 16)
-        Me.Label89.TabIndex = 23
-        Me.Label89.Text = "SpeedtestServer"
-        '
-        'Label88
-        '
-        Me.Label88.AutoSize = True
-        Me.Label88.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label88.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label88.Location = New System.Drawing.Point(28, 370)
-        Me.Label88.Name = "Label88"
-        Me.Label88.Size = New System.Drawing.Size(81, 16)
-        Me.Label88.TabIndex = 23
-        Me.Label88.Text = "Agent Version"
-        '
-        'Label87
-        '
-        Me.Label87.AutoSize = True
-        Me.Label87.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label87.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label87.Location = New System.Drawing.Point(302, 342)
-        Me.Label87.Name = "Label87"
-        Me.Label87.Size = New System.Drawing.Size(81, 16)
-        Me.Label87.TabIndex = 23
-        Me.Label87.Text = "Agent Version"
-        '
-        'Label86
-        '
-        Me.Label86.AutoSize = True
-        Me.Label86.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label86.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label86.Location = New System.Drawing.Point(28, 397)
-        Me.Label86.Name = "Label86"
-        Me.Label86.Size = New System.Drawing.Size(67, 16)
-        Me.Label86.TabIndex = 23
-        Me.Label86.Text = "Scan Server"
-        '
-        'Label85
-        '
-        Me.Label85.AutoSize = True
-        Me.Label85.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label85.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label85.Location = New System.Drawing.Point(432, 426)
-        Me.Label85.Name = "Label85"
-        Me.Label85.Size = New System.Drawing.Size(24, 16)
-        Me.Label85.TabIndex = 23
-        Me.Label85.Text = "txt"
-        '
-        'Label84
-        '
-        Me.Label84.AutoSize = True
-        Me.Label84.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label84.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label84.Location = New System.Drawing.Point(302, 426)
-        Me.Label84.Name = "Label84"
-        Me.Label84.Size = New System.Drawing.Size(96, 16)
-        Me.Label84.TabIndex = 23
-        Me.Label84.Text = "Download Server"
-        '
-        'Label62
-        '
-        Me.Label62.AutoSize = True
-        Me.Label62.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label62.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label62.Location = New System.Drawing.Point(302, 453)
-        Me.Label62.Name = "Label62"
-        Me.Label62.Size = New System.Drawing.Size(67, 16)
-        Me.Label62.TabIndex = 23
-        Me.Label62.Text = "Scan Server"
-        '
-        'Label57
-        '
-        Me.Label57.AutoSize = True
-        Me.Label57.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label57.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label57.Location = New System.Drawing.Point(432, 369)
-        Me.Label57.Name = "Label57"
-        Me.Label57.Size = New System.Drawing.Size(46, 16)
-        Me.Label57.TabIndex = 23
-        Me.Label57.Text = "txt_txt"
-        '
-        'Label55
-        '
-        Me.Label55.AutoSize = True
-        Me.Label55.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label55.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label55.Location = New System.Drawing.Point(432, 342)
-        Me.Label55.Name = "Label55"
-        Me.Label55.Size = New System.Drawing.Size(46, 16)
-        Me.Label55.TabIndex = 23
-        Me.Label55.Text = "txt_txt"
-        '
-        'Label53
-        '
-        Me.Label53.AutoSize = True
-        Me.Label53.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label53.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label53.Location = New System.Drawing.Point(432, 453)
-        Me.Label53.Name = "Label53"
-        Me.Label53.Size = New System.Drawing.Size(24, 16)
-        Me.Label53.TabIndex = 23
-        Me.Label53.Text = "txt"
-        '
-        'Label50
-        '
-        Me.Label50.AutoSize = True
-        Me.Label50.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label50.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label50.Location = New System.Drawing.Point(302, 369)
-        Me.Label50.Name = "Label50"
-        Me.Label50.Size = New System.Drawing.Size(45, 16)
-        Me.Label50.TabIndex = 23
-        Me.Label50.Text = "version"
-        '
-        'Label48
-        '
-        Me.Label48.AutoSize = True
-        Me.Label48.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label48.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label48.Location = New System.Drawing.Point(158, 397)
-        Me.Label48.Name = "Label48"
-        Me.Label48.Size = New System.Drawing.Size(24, 16)
-        Me.Label48.TabIndex = 23
-        Me.Label48.Text = "txt"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label8.Location = New System.Drawing.Point(158, 370)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(24, 16)
-        Me.Label8.TabIndex = 23
-        Me.Label8.Text = "txt"
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.Gainsboro
-        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray
-        Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue
-        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue
-        Me.Button2.Font = New System.Drawing.Font("Trebuchet MS", 12.75!, System.Drawing.FontStyle.Bold)
-        Me.Button2.ForeColor = System.Drawing.Color.Black
-        Me.Button2.Location = New System.Drawing.Point(824, 73)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(136, 42)
-        Me.Button2.TabIndex = 22
-        Me.Button2.Text = "Change"
-        Me.Button2.UseVisualStyleBackColor = False
-        '
-        'Label83
-        '
-        Me.Label83.AutoSize = True
-        Me.Label83.Font = New System.Drawing.Font("Calibri", 8.0!)
-        Me.Label83.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.Label83.Location = New System.Drawing.Point(610, 65)
-        Me.Label83.Name = "Label83"
-        Me.Label83.Size = New System.Drawing.Size(58, 13)
-        Me.Label83.TabIndex = 23
-        Me.Label83.Text = "framework"
-        '
-        'Label82
-        '
-        Me.Label82.AutoSize = True
-        Me.Label82.Font = New System.Drawing.Font("Calibri", 8.0!)
-        Me.Label82.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.Label82.Location = New System.Drawing.Point(475, 65)
-        Me.Label82.Name = "Label82"
-        Me.Label82.Size = New System.Drawing.Size(42, 13)
-        Me.Label82.TabIndex = 23
-        Me.Label82.Text = "version"
-        '
-        'Label81
-        '
-        Me.Label81.AutoSize = True
-        Me.Label81.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label81.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label81.Location = New System.Drawing.Point(472, 168)
-        Me.Label81.Name = "Label81"
-        Me.Label81.Size = New System.Drawing.Size(34, 16)
-        Me.Label81.TabIndex = 23
-        Me.Label81.Text = "Build"
-        '
-        'CheckBox2
-        '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox2.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.CheckBox2.Location = New System.Drawing.Point(743, 86)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(51, 19)
-        Me.CheckBox2.TabIndex = 25
-        Me.CheckBox2.Text = "Beta"
-        Me.CheckBox2.UseVisualStyleBackColor = True
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft PhagsPa", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label6.Location = New System.Drawing.Point(461, 17)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(166, 25)
-        Me.Label6.TabIndex = 23
-        Me.Label6.Text = "Change company"
-        '
-        'Label80
-        '
-        Me.Label80.AutoSize = True
-        Me.Label80.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Label80.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label80.Location = New System.Drawing.Point(602, 168)
-        Me.Label80.Name = "Label80"
-        Me.Label80.Size = New System.Drawing.Size(86, 16)
-        Me.Label80.TabIndex = 23
-        Me.Label80.Text = "Agent Version"
-        '
-        'Label79
-        '
-        Me.Label79.AutoSize = True
-        Me.Label79.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label79.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label79.Location = New System.Drawing.Point(472, 190)
-        Me.Label79.Name = "Label79"
-        Me.Label79.Size = New System.Drawing.Size(81, 16)
-        Me.Label79.TabIndex = 23
-        Me.Label79.Text = "Agent Version"
-        '
-        'ComboBox3
-        '
-        Me.ComboBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
-        Me.ComboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(600, 81)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(125, 28)
-        Me.ComboBox3.TabIndex = 24
-        Me.ComboBox3.Text = "Easeecontrol"
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
-        Me.ComboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"ClassIT", "Plus", "Staples", "Staples Retail", "TechServices", "True", "Walmart"})
-        Me.ComboBox2.Location = New System.Drawing.Point(464, 81)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(125, 28)
-        Me.ComboBox2.TabIndex = 24
-        Me.ComboBox2.Text = "ClassIT"
-        '
-        'Label78
-        '
-        Me.Label78.AutoSize = True
-        Me.Label78.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Label78.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label78.Location = New System.Drawing.Point(602, 190)
-        Me.Label78.Name = "Label78"
-        Me.Label78.Size = New System.Drawing.Size(86, 16)
-        Me.Label78.TabIndex = 23
-        Me.Label78.Text = "Agent Version"
-        '
-        'Label77
-        '
-        Me.Label77.AutoSize = True
-        Me.Label77.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label77.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label77.Location = New System.Drawing.Point(472, 218)
-        Me.Label77.Name = "Label77"
-        Me.Label77.Size = New System.Drawing.Size(81, 16)
-        Me.Label77.TabIndex = 23
-        Me.Label77.Text = "Agent Version"
-        '
-        'Label76
-        '
-        Me.Label76.AutoSize = True
-        Me.Label76.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Label76.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label76.Location = New System.Drawing.Point(602, 273)
-        Me.Label76.Name = "Label76"
-        Me.Label76.Size = New System.Drawing.Size(30, 16)
-        Me.Label76.TabIndex = 23
-        Me.Label76.Text = "Live"
-        '
-        'Label75
-        '
-        Me.Label75.AutoSize = True
-        Me.Label75.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Label75.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label75.Location = New System.Drawing.Point(602, 218)
-        Me.Label75.Name = "Label75"
-        Me.Label75.Size = New System.Drawing.Size(86, 16)
-        Me.Label75.TabIndex = 23
-        Me.Label75.Text = "Agent Version"
-        '
-        'Label74
-        '
-        Me.Label74.AutoSize = True
-        Me.Label74.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label74.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label74.Location = New System.Drawing.Point(472, 273)
-        Me.Label74.Name = "Label74"
-        Me.Label74.Size = New System.Drawing.Size(39, 16)
-        Me.Label74.TabIndex = 23
-        Me.Label74.Text = "Server"
-        '
-        'Label73
-        '
-        Me.Label73.AutoSize = True
-        Me.Label73.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label73.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label73.Location = New System.Drawing.Point(472, 245)
-        Me.Label73.Name = "Label73"
-        Me.Label73.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.Label73.Size = New System.Drawing.Size(100, 16)
-        Me.Label73.TabIndex = 23
-        Me.Label73.Text = "Agent Framework"
-        '
-        'Label71
-        '
-        Me.Label71.AutoSize = True
-        Me.Label71.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Label71.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label71.Location = New System.Drawing.Point(602, 245)
-        Me.Label71.Name = "Label71"
-        Me.Label71.Size = New System.Drawing.Size(86, 16)
-        Me.Label71.TabIndex = 23
-        Me.Label71.Text = "Agent Version"
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label12.Location = New System.Drawing.Point(195, 97)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(25, 17)
-        Me.Label12.TabIndex = 23
-        Me.Label12.Text = "txt"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label4.Location = New System.Drawing.Point(65, 97)
-        Me.Label4.Name = "Label4"
-        Me.Label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.Label4.Size = New System.Drawing.Size(110, 17)
-        Me.Label4.TabIndex = 23
-        Me.Label4.Text = "Agent Framework"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label11.Location = New System.Drawing.Point(195, 70)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(25, 17)
-        Me.Label11.TabIndex = 23
-        Me.Label11.Text = "txt"
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Microsoft PhagsPa", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label13.Location = New System.Drawing.Point(120, 11)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(40, 20)
-        Me.Label13.TabIndex = 23
-        Me.Label13.Text = "LIVE"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label3.Location = New System.Drawing.Point(65, 70)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(90, 17)
-        Me.Label3.TabIndex = 23
-        Me.Label3.Text = "Agent Version"
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label10.Location = New System.Drawing.Point(450, 14)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(96, 17)
-        Me.Label10.TabIndex = 23
-        Me.Label10.Text = "Agent Version"
-        '
-        'ComboBoxCompany
-        '
-        Me.ComboBoxCompany.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
-        Me.ComboBoxCompany.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBoxCompany.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBoxCompany.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.ComboBoxCompany.FormattingEnabled = True
-        Me.ComboBoxCompany.Items.AddRange(New Object() {"ClassIT", "Plus", "Staples", "Staples Retail", "TechServices", "True Solutions", "Walmart"})
-        Me.ComboBoxCompany.Location = New System.Drawing.Point(165, 278)
-        Me.ComboBoxCompany.Name = "ComboBoxCompany"
-        Me.ComboBoxCompany.Size = New System.Drawing.Size(170, 28)
-        Me.ComboBoxCompany.TabIndex = 24
-        Me.ComboBoxCompany.Text = "ClassIT"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label9.Location = New System.Drawing.Point(195, 44)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(25, 17)
-        Me.Label9.TabIndex = 23
-        Me.Label9.Text = "txt"
-        '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox1.ForeColor = System.Drawing.SystemColors.ActiveCaption
-        Me.CheckBox1.Location = New System.Drawing.Point(548, 283)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(51, 19)
-        Me.CheckBox1.TabIndex = 25
-        Me.CheckBox1.Text = "Beta"
-        Me.CheckBox1.UseVisualStyleBackColor = True
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label1.Location = New System.Drawing.Point(65, 44)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(36, 17)
-        Me.Label1.TabIndex = 23
-        Me.Label1.Text = "Build"
-        '
-        'Label52
-        '
-        Me.Label52.AutoSize = True
-        Me.Label52.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label52.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.Label52.Location = New System.Drawing.Point(167, 261)
-        Me.Label52.Name = "Label52"
-        Me.Label52.Size = New System.Drawing.Size(52, 14)
-        Me.Label52.TabIndex = 23
-        Me.Label52.Text = "company"
+        Me.Panel5.Size = New System.Drawing.Size(250, 124)
+        Me.Panel5.TabIndex = 41
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.Color.ForestGreen
+        Me.Button1.BackColor = System.Drawing.Color.OliveDrab
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.MenuHighlight
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuHighlight
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Button1.Location = New System.Drawing.Point(264, 323)
+        Me.Button1.Location = New System.Drawing.Point(117, 78)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(170, 42)
-        Me.Button1.TabIndex = 22
-        Me.Button1.Text = "Install Agent"
+        Me.Button1.Size = New System.Drawing.Size(77, 23)
+        Me.Button1.TabIndex = 0
+        Me.Button1.Text = "Update"
         Me.Button1.UseVisualStyleBackColor = False
         '
-        'Panel10
+        'Button7
         '
-        Me.Panel10.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        Me.Panel10.Controls.Add(Me.Panel11)
-        Me.Panel10.Controls.Add(Me.PictureBox8)
-        Me.Panel10.Controls.Add(Me.Button1)
-        Me.Panel10.Controls.Add(Me.Label72)
-        Me.Panel10.Controls.Add(Me.Label52)
-        Me.Panel10.Controls.Add(Me.CheckBox1)
-        Me.Panel10.Controls.Add(Me.ComboBox1)
-        Me.Panel10.Controls.Add(Me.Label105)
-        Me.Panel10.Controls.Add(Me.ComboBoxCompany)
-        Me.Panel10.Location = New System.Drawing.Point(2, 1)
-        Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(675, 667)
-        Me.Panel10.TabIndex = 30
-        '
-        'Label121
-        '
-        Me.Label121.AutoSize = True
-        Me.Label121.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label121.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label121.Location = New System.Drawing.Point(544, 98)
-        Me.Label121.Name = "Label121"
-        Me.Label121.Size = New System.Drawing.Size(25, 17)
-        Me.Label121.TabIndex = 23
-        Me.Label121.Text = "txt"
-        '
-        'Label120
-        '
-        Me.Label120.AutoSize = True
-        Me.Label120.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label120.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label120.Location = New System.Drawing.Point(544, 185)
-        Me.Label120.Name = "Label120"
-        Me.Label120.Size = New System.Drawing.Size(25, 17)
-        Me.Label120.TabIndex = 23
-        Me.Label120.Text = "txt"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label2.Location = New System.Drawing.Point(195, 184)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(25, 17)
-        Me.Label2.TabIndex = 23
-        Me.Label2.Text = "txt"
-        '
-        'Label119
-        '
-        Me.Label119.AutoSize = True
-        Me.Label119.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label119.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label119.Location = New System.Drawing.Point(414, 98)
-        Me.Label119.Name = "Label119"
-        Me.Label119.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.Label119.Size = New System.Drawing.Size(110, 17)
-        Me.Label119.TabIndex = 23
-        Me.Label119.Text = "Agent Framework"
-        '
-        'Label72
-        '
-        Me.Label72.AutoSize = True
-        Me.Label72.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label72.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.Label72.Location = New System.Drawing.Point(363, 261)
-        Me.Label72.Name = "Label72"
-        Me.Label72.Size = New System.Drawing.Size(43, 14)
-        Me.Label72.TabIndex = 23
-        Me.Label72.Text = "version"
-        '
-        'Label118
-        '
-        Me.Label118.AutoSize = True
-        Me.Label118.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label118.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label118.Location = New System.Drawing.Point(414, 185)
-        Me.Label118.Name = "Label118"
-        Me.Label118.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.Label118.Size = New System.Drawing.Size(110, 17)
-        Me.Label118.TabIndex = 23
-        Me.Label118.Text = "Agent Framework"
-        '
-        'Label69
-        '
-        Me.Label69.AutoSize = True
-        Me.Label69.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label69.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label69.Location = New System.Drawing.Point(65, 184)
-        Me.Label69.Name = "Label69"
-        Me.Label69.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.Label69.Size = New System.Drawing.Size(110, 17)
-        Me.Label69.TabIndex = 23
-        Me.Label69.Text = "Agent Framework"
-        '
-        'Label117
-        '
-        Me.Label117.AutoSize = True
-        Me.Label117.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label117.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label117.Location = New System.Drawing.Point(414, 132)
-        Me.Label117.Name = "Label117"
-        Me.Label117.Size = New System.Drawing.Size(36, 17)
-        Me.Label117.TabIndex = 23
-        Me.Label117.Text = "Build"
-        '
-        'Label109
-        '
-        Me.Label109.AutoSize = True
-        Me.Label109.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label109.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label109.Location = New System.Drawing.Point(65, 131)
-        Me.Label109.Name = "Label109"
-        Me.Label109.Size = New System.Drawing.Size(36, 17)
-        Me.Label109.TabIndex = 23
-        Me.Label109.Text = "Build"
-        '
-        'Label116
-        '
-        Me.Label116.AutoSize = True
-        Me.Label116.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label116.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label116.Location = New System.Drawing.Point(544, 71)
-        Me.Label116.Name = "Label116"
-        Me.Label116.Size = New System.Drawing.Size(25, 17)
-        Me.Label116.TabIndex = 23
-        Me.Label116.Text = "txt"
-        '
-        'Label115
-        '
-        Me.Label115.AutoSize = True
-        Me.Label115.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label115.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label115.Location = New System.Drawing.Point(414, 45)
-        Me.Label115.Name = "Label115"
-        Me.Label115.Size = New System.Drawing.Size(36, 17)
-        Me.Label115.TabIndex = 23
-        Me.Label115.Text = "Build"
-        '
-        'Label114
-        '
-        Me.Label114.AutoSize = True
-        Me.Label114.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label114.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label114.Location = New System.Drawing.Point(544, 158)
-        Me.Label114.Name = "Label114"
-        Me.Label114.Size = New System.Drawing.Size(25, 17)
-        Me.Label114.TabIndex = 23
-        Me.Label114.Text = "txt"
-        '
-        'Label106
-        '
-        Me.Label106.AutoSize = True
-        Me.Label106.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label106.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label106.Location = New System.Drawing.Point(195, 157)
-        Me.Label106.Name = "Label106"
-        Me.Label106.Size = New System.Drawing.Size(25, 17)
-        Me.Label106.TabIndex = 23
-        Me.Label106.Text = "txt"
-        '
-        'Label113
-        '
-        Me.Label113.AutoSize = True
-        Me.Label113.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label113.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label113.Location = New System.Drawing.Point(544, 132)
-        Me.Label113.Name = "Label113"
-        Me.Label113.Size = New System.Drawing.Size(25, 17)
-        Me.Label113.TabIndex = 23
-        Me.Label113.Text = "txt"
-        '
-        'Label112
-        '
-        Me.Label112.AutoSize = True
-        Me.Label112.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label112.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label112.Location = New System.Drawing.Point(414, 71)
-        Me.Label112.Name = "Label112"
-        Me.Label112.Size = New System.Drawing.Size(90, 17)
-        Me.Label112.TabIndex = 23
-        Me.Label112.Text = "Agent Version"
-        '
-        'Label108
-        '
-        Me.Label108.AutoSize = True
-        Me.Label108.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label108.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label108.Location = New System.Drawing.Point(195, 131)
-        Me.Label108.Name = "Label108"
-        Me.Label108.Size = New System.Drawing.Size(25, 17)
-        Me.Label108.TabIndex = 23
-        Me.Label108.Text = "txt"
-        '
-        'Label111
-        '
-        Me.Label111.AutoSize = True
-        Me.Label111.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label111.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label111.Location = New System.Drawing.Point(544, 45)
-        Me.Label111.Name = "Label111"
-        Me.Label111.Size = New System.Drawing.Size(25, 17)
-        Me.Label111.TabIndex = 23
-        Me.Label111.Text = "txt"
-        '
-        'Label110
-        '
-        Me.Label110.AutoSize = True
-        Me.Label110.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label110.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label110.Location = New System.Drawing.Point(414, 158)
-        Me.Label110.Name = "Label110"
-        Me.Label110.Size = New System.Drawing.Size(90, 17)
-        Me.Label110.TabIndex = 23
-        Me.Label110.Text = "Agent Version"
-        '
-        'Label107
-        '
-        Me.Label107.AutoSize = True
-        Me.Label107.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label107.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label107.Location = New System.Drawing.Point(65, 157)
-        Me.Label107.Name = "Label107"
-        Me.Label107.Size = New System.Drawing.Size(90, 17)
-        Me.Label107.TabIndex = 23
-        Me.Label107.Text = "Agent Version"
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
-        Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"EaseeControl", "OptimumDesk"})
-        Me.ComboBox1.Location = New System.Drawing.Point(357, 278)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(170, 28)
-        Me.ComboBox1.TabIndex = 24
-        Me.ComboBox1.Text = "EaseeControl"
-        '
-        'Label105
-        '
-        Me.Label105.AutoSize = True
-        Me.Label105.Font = New System.Drawing.Font("Microsoft PhagsPa", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label105.ForeColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Label105.Location = New System.Drawing.Point(88, 281)
-        Me.Label105.Name = "Label105"
-        Me.Label105.Size = New System.Drawing.Size(57, 21)
-        Me.Label105.TabIndex = 0
-        Me.Label105.Text = "Install"
-        '
-        'Panel_ED
-        '
-        Me.Panel_ED.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        Me.Panel_ED.Controls.Add(Me.Label5)
-        Me.Panel_ED.Location = New System.Drawing.Point(727, 606)
-        Me.Panel_ED.MaximumSize = New System.Drawing.Size(1169, 573)
-        Me.Panel_ED.Name = "Panel_ED"
-        Me.Panel_ED.Size = New System.Drawing.Size(1169, 573)
-        Me.Panel_ED.TabIndex = 29
+        Me.Button7.BackColor = System.Drawing.Color.OliveDrab
+        Me.Button7.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button7.FlatAppearance.BorderSize = 0
+        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button7.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Button7.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Button7.Location = New System.Drawing.Point(73, 52)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(123, 23)
+        Me.Button7.TabIndex = 0
+        Me.Button7.Text = "Reveal password"
+        Me.Button7.UseVisualStyleBackColor = False
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label5.Location = New System.Drawing.Point(501, 541)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label5.ForeColor = System.Drawing.Color.DarkGray
+        Me.Label5.Location = New System.Drawing.Point(39, 82)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(116, 17)
-        Me.Label5.TabIndex = 0
-        Me.Label5.Text = "Encrypt / Decrypt"
+        Me.Label5.Size = New System.Drawing.Size(72, 16)
+        Me.Label5.TabIndex = 2
+        Me.Label5.Text = "8.9.50.1003"
         '
-        'PictureBox8
+        'Label7
         '
-        Me.PictureBox8.Image = Global.Script_Agent.My.Resources.Resources.na
-        Me.PictureBox8.Location = New System.Drawing.Point(162, 51)
-        Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(365, 176)
-        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox8.TabIndex = 0
-        Me.PictureBox8.TabStop = False
+        Me.Label7.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.Label7.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.Label7.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.Label7.Font = New System.Drawing.Font("Microsoft PhagsPa", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.FloralWhite
+        Me.Label7.Location = New System.Drawing.Point(243, 172)
+        Me.Label7.Name = "Label7"
+        Me.Label7.ReadOnly = True
+        Me.Label7.Size = New System.Drawing.Size(291, 27)
+        Me.Label7.TabIndex = 36
+        Me.Label7.Text = "Company name 2"
+        Me.Label7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'PictureBox7
+        'PictureBox4
         '
-        Me.PictureBox7.Image = Global.Script_Agent.My.Resources.Resources.green2
-        Me.PictureBox7.Location = New System.Drawing.Point(100, 14)
-        Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(14, 14)
-        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox7.TabIndex = 28
-        Me.PictureBox7.TabStop = False
+        Me.PictureBox4.Location = New System.Drawing.Point(243, 45)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(291, 123)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox4.TabIndex = 35
+        Me.PictureBox4.TabStop = False
         '
-        'PictureBox5
+        'tbName
         '
-        Me.PictureBox5.Image = Global.Script_Agent.My.Resources.Resources.green2
-        Me.PictureBox5.Location = New System.Drawing.Point(190, 218)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(20, 20)
-        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox5.TabIndex = 28
-        Me.PictureBox5.TabStop = False
+        Me.tbName.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.tbName.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.tbName.Cursor = System.Windows.Forms.Cursors.Default
+        Me.tbName.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbName.ForeColor = System.Drawing.Color.AntiqueWhite
+        Me.tbName.Location = New System.Drawing.Point(272, 230)
+        Me.tbName.Name = "tbName"
+        Me.tbName.ReadOnly = True
+        Me.tbName.Size = New System.Drawing.Size(236, 17)
+        Me.tbName.TabIndex = 34
+        Me.tbName.Text = "n/a"
+        Me.tbName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'tbEmail
+        '
+        Me.tbEmail.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.tbEmail.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.tbEmail.Cursor = System.Windows.Forms.Cursors.Default
+        Me.tbEmail.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbEmail.ForeColor = System.Drawing.Color.SandyBrown
+        Me.tbEmail.Location = New System.Drawing.Point(272, 208)
+        Me.tbEmail.Name = "tbEmail"
+        Me.tbEmail.ReadOnly = True
+        Me.tbEmail.Size = New System.Drawing.Size(235, 17)
+        Me.tbEmail.TabIndex = 34
+        Me.tbEmail.Text = "n/a"
+        Me.tbEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label6.Font = New System.Drawing.Font("Leelawadee UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.LightGreen
+        Me.Label6.Location = New System.Drawing.Point(72, 577)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(68, 15)
+        Me.Label6.TabIndex = 2
+        Me.Label6.Text = "View more"
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'PnlLogs
+        '
+        Me.PnlLogs.Controls.Add(Me.TextBox57)
+        Me.PnlLogs.Controls.Add(Me.TextBox28)
+        Me.PnlLogs.Controls.Add(Me.RichTextBox2)
+        Me.PnlLogs.Controls.Add(Me.Button14)
+        Me.PnlLogs.Controls.Add(Me.Label1)
+        Me.PnlLogs.Controls.Add(Me.Button16)
+        Me.PnlLogs.Controls.Add(Me.Button21)
+        Me.PnlLogs.Controls.Add(Me.Button18)
+        Me.PnlLogs.Controls.Add(Me.ComboBox3)
+        Me.PnlLogs.Controls.Add(Me.Button12)
+        Me.PnlLogs.Controls.Add(Me.Button17)
+        Me.PnlLogs.Controls.Add(Me.btn_ReadOdLog)
+        Me.PnlLogs.Controls.Add(Me.btnDecryptRegistry)
+        Me.PnlLogs.Location = New System.Drawing.Point(634, 192)
+        Me.PnlLogs.MaximumSize = New System.Drawing.Size(1017, 633)
+        Me.PnlLogs.Name = "PnlLogs"
+        Me.PnlLogs.Size = New System.Drawing.Size(325, 381)
+        Me.PnlLogs.TabIndex = 31
+        '
+        'TextBox57
+        '
+        Me.TextBox57.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox57.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox57.Location = New System.Drawing.Point(46, 91)
+        Me.TextBox57.Name = "TextBox57"
+        Me.TextBox57.Size = New System.Drawing.Size(171, 25)
+        Me.TextBox57.TabIndex = 36
+        Me.TextBox57.Text = "Mail Address"
+        '
+        'TextBox28
+        '
+        Me.TextBox28.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBox28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox28.Font = New System.Drawing.Font("Microsoft PhagsPa", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.TextBox28.ForeColor = System.Drawing.SystemColors.ScrollBar
+        Me.TextBox28.Location = New System.Drawing.Point(840, 146)
+        Me.TextBox28.Name = "TextBox28"
+        Me.TextBox28.Size = New System.Drawing.Size(174, 28)
+        Me.TextBox28.TabIndex = 34
+        Me.TextBox28.Text = "Search"
+        Me.TextBox28.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'RichTextBox2
+        '
+        Me.RichTextBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.RichTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.RichTextBox2.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.RichTextBox2.Font = New System.Drawing.Font("Leelawadee UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RichTextBox2.ForeColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.RichTextBox2.Location = New System.Drawing.Point(0, -72)
+        Me.RichTextBox2.Name = "RichTextBox2"
+        Me.RichTextBox2.Size = New System.Drawing.Size(325, 453)
+        Me.RichTextBox2.TabIndex = 33
+        Me.RichTextBox2.Text = "Output"
+        '
+        'Button14
+        '
+        Me.Button14.BackColor = System.Drawing.Color.OliveDrab
+        Me.Button14.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button14.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray
+        Me.Button14.FlatAppearance.BorderSize = 0
+        Me.Button14.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button14.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Button14.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Button14.Location = New System.Drawing.Point(673, 46)
+        Me.Button14.Name = "Button14"
+        Me.Button14.Size = New System.Drawing.Size(102, 32)
+        Me.Button14.TabIndex = 22
+        Me.Button14.Text = "Modules log"
+        Me.Button14.UseVisualStyleBackColor = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(53, 29)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(43, 15)
+        Me.Label1.TabIndex = 23
+        Me.Label1.Text = "log file"
+        '
+        'Button16
+        '
+        Me.Button16.BackColor = System.Drawing.Color.OliveDrab
+        Me.Button16.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button16.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray
+        Me.Button16.FlatAppearance.BorderSize = 0
+        Me.Button16.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button16.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button16.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Button16.Location = New System.Drawing.Point(235, 86)
+        Me.Button16.Name = "Button16"
+        Me.Button16.Size = New System.Drawing.Size(102, 32)
+        Me.Button16.TabIndex = 22
+        Me.Button16.Text = "Send Logs"
+        Me.Button16.UseVisualStyleBackColor = False
+        '
+        'Button21
+        '
+        Me.Button21.BackColor = System.Drawing.Color.OliveDrab
+        Me.Button21.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button21.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray
+        Me.Button21.FlatAppearance.BorderSize = 0
+        Me.Button21.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button21.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button21.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Button21.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Button21.Location = New System.Drawing.Point(235, 45)
+        Me.Button21.Name = "Button21"
+        Me.Button21.Size = New System.Drawing.Size(102, 32)
+        Me.Button21.TabIndex = 22
+        Me.Button21.Text = "Open Log"
+        Me.Button21.UseVisualStyleBackColor = False
+        '
+        'Button18
+        '
+        Me.Button18.BackColor = System.Drawing.Color.OliveDrab
+        Me.Button18.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button18.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray
+        Me.Button18.FlatAppearance.BorderSize = 0
+        Me.Button18.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button18.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button18.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Button18.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Button18.Location = New System.Drawing.Point(781, 46)
+        Me.Button18.Name = "Button18"
+        Me.Button18.Size = New System.Drawing.Size(102, 32)
+        Me.Button18.TabIndex = 22
+        Me.Button18.Text = "Modules log"
+        Me.Button18.UseVisualStyleBackColor = False
+        '
+        'ComboBox3
+        '
+        Me.ComboBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.ComboBox3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ComboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.ComboBox3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
+        Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Items.AddRange(New Object() {"Local Registry", "EaseeControl", "OptimumDesk", "ModulesLog", "All(4)"})
+        Me.ComboBox3.Location = New System.Drawing.Point(46, 47)
+        Me.ComboBox3.Name = "ComboBox3"
+        Me.ComboBox3.Size = New System.Drawing.Size(171, 28)
+        Me.ComboBox3.TabIndex = 24
+        Me.ComboBox3.Text = "Local Registry"
+        '
+        'Button12
+        '
+        Me.Button12.BackColor = System.Drawing.Color.OliveDrab
+        Me.Button12.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button12.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray
+        Me.Button12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button12.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Button12.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Button12.Location = New System.Drawing.Point(570, 46)
+        Me.Button12.Name = "Button12"
+        Me.Button12.Size = New System.Drawing.Size(97, 32)
+        Me.Button12.TabIndex = 22
+        Me.Button12.Text = "Service log"
+        Me.Button12.UseVisualStyleBackColor = False
+        '
+        'Button17
+        '
+        Me.Button17.BackColor = System.Drawing.Color.OliveDrab
+        Me.Button17.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button17.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray
+        Me.Button17.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button17.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button17.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Button17.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Button17.Location = New System.Drawing.Point(894, 8)
+        Me.Button17.Name = "Button17"
+        Me.Button17.Size = New System.Drawing.Size(119, 32)
+        Me.Button17.TabIndex = 22
+        Me.Button17.Text = "ODService.log"
+        Me.Button17.UseVisualStyleBackColor = False
+        '
+        'btn_ReadOdLog
+        '
+        Me.btn_ReadOdLog.BackColor = System.Drawing.Color.OliveDrab
+        Me.btn_ReadOdLog.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_ReadOdLog.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray
+        Me.btn_ReadOdLog.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.btn_ReadOdLog.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.btn_ReadOdLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_ReadOdLog.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.btn_ReadOdLog.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.btn_ReadOdLog.Location = New System.Drawing.Point(735, 8)
+        Me.btn_ReadOdLog.Name = "btn_ReadOdLog"
+        Me.btn_ReadOdLog.Size = New System.Drawing.Size(153, 32)
+        Me.btn_ReadOdLog.TabIndex = 22
+        Me.btn_ReadOdLog.Text = "OptimumDesk.log"
+        Me.btn_ReadOdLog.UseVisualStyleBackColor = False
+        '
+        'btnDecryptRegistry
+        '
+        Me.btnDecryptRegistry.BackColor = System.Drawing.Color.OliveDrab
+        Me.btnDecryptRegistry.FlatAppearance.BorderSize = 0
+        Me.btnDecryptRegistry.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnDecryptRegistry.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.btnDecryptRegistry.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.btnDecryptRegistry.Location = New System.Drawing.Point(570, 8)
+        Me.btnDecryptRegistry.Name = "btnDecryptRegistry"
+        Me.btnDecryptRegistry.Size = New System.Drawing.Size(159, 32)
+        Me.btnDecryptRegistry.TabIndex = 26
+        Me.btnDecryptRegistry.Text = "Decrypt local registry"
+        Me.btnDecryptRegistry.UseVisualStyleBackColor = False
+        '
+        'PanelMultiAgent
+        '
+        Me.PanelMultiAgent.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.PanelMultiAgent.Controls.Add(Me.Label56)
+        Me.PanelMultiAgent.Controls.Add(Me.Panel11)
+        Me.PanelMultiAgent.Controls.Add(Me.PictureBox1)
+        Me.PanelMultiAgent.Controls.Add(Me.Panel10)
+        Me.PanelMultiAgent.Controls.Add(Me.PictureBox17)
+        Me.PanelMultiAgent.Controls.Add(Me.IconButton6)
+        Me.PanelMultiAgent.Controls.Add(Me.IconButton3)
+        Me.PanelMultiAgent.Controls.Add(Me.tbCName)
+        Me.PanelMultiAgent.Controls.Add(Me.IconButton4)
+        Me.PanelMultiAgent.Controls.Add(Me.IconButton1)
+        Me.PanelMultiAgent.Controls.Add(Me.Label42)
+        Me.PanelMultiAgent.Controls.Add(Me.Panel13)
+        Me.PanelMultiAgent.Controls.Add(Me.IconButton5)
+        Me.PanelMultiAgent.Controls.Add(Me.Label38)
+        Me.PanelMultiAgent.Cursor = System.Windows.Forms.Cursors.Default
+        Me.PanelMultiAgent.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PanelMultiAgent.Location = New System.Drawing.Point(0, 0)
+        Me.PanelMultiAgent.MaximumSize = New System.Drawing.Size(1017, 175)
+        Me.PanelMultiAgent.MinimumSize = New System.Drawing.Size(1017, 60)
+        Me.PanelMultiAgent.Name = "PanelMultiAgent"
+        Me.PanelMultiAgent.Size = New System.Drawing.Size(1017, 60)
+        Me.PanelMultiAgent.TabIndex = 29
+        '
+        'Label56
+        '
+        Me.Label56.AutoSize = True
+        Me.Label56.BackColor = System.Drawing.Color.OliveDrab
+        Me.Label56.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label56.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label56.ForeColor = System.Drawing.Color.Ivory
+        Me.Label56.Location = New System.Drawing.Point(-4, 40)
+        Me.Label56.Name = "Label56"
+        Me.Label56.Size = New System.Drawing.Size(36, 16)
+        Me.Label56.TabIndex = 33
+        Me.Label56.Text = "+unu"
+        '
+        'Panel11
+        '
+        Me.Panel11.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.Panel11.Controls.Add(Me.PictureBox_MiniFlag1)
+        Me.Panel11.Controls.Add(Me.PictureBox24)
+        Me.Panel11.Controls.Add(Me.PictureBox21)
+        Me.Panel11.Controls.Add(Me.Label37)
+        Me.Panel11.Controls.Add(Me.Label28)
+        Me.Panel11.Controls.Add(Me.Label59)
+        Me.Panel11.Controls.Add(Me.PictureBox2)
+        Me.Panel11.Controls.Add(Me.Label3)
+        Me.Panel11.Controls.Add(Me.Label43)
+        Me.Panel11.Controls.Add(Me.Label13)
+        Me.Panel11.Controls.Add(Me.Label58)
+        Me.Panel11.Controls.Add(Me.TextBox2)
+        Me.Panel11.Controls.Add(Me.Label12)
+        Me.Panel11.Controls.Add(Me.Label14)
+        Me.Panel11.Controls.Add(Me.PictureBox6)
+        Me.Panel11.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Panel11.ForeColor = System.Drawing.SystemColors.Control
+        Me.Panel11.Location = New System.Drawing.Point(3, 62)
+        Me.Panel11.Name = "Panel11"
+        Me.Panel11.Size = New System.Drawing.Size(1011, 53)
+        Me.Panel11.TabIndex = 36
+        '
+        'PictureBox_MiniFlag1
+        '
+        Me.PictureBox_MiniFlag1.Location = New System.Drawing.Point(631, 26)
+        Me.PictureBox_MiniFlag1.Name = "PictureBox_MiniFlag1"
+        Me.PictureBox_MiniFlag1.Size = New System.Drawing.Size(24, 17)
+        Me.PictureBox_MiniFlag1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox_MiniFlag1.TabIndex = 46
+        Me.PictureBox_MiniFlag1.TabStop = False
+        '
+        'PictureBox24
+        '
+        Me.PictureBox24.Image = Global.Script_Agent.My.Resources.Resources.delete2
+        Me.PictureBox24.Location = New System.Drawing.Point(925, 25)
+        Me.PictureBox24.Name = "PictureBox24"
+        Me.PictureBox24.Size = New System.Drawing.Size(18, 18)
+        Me.PictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox24.TabIndex = 45
+        Me.PictureBox24.TabStop = False
+        '
+        'PictureBox21
+        '
+        Me.PictureBox21.Image = Global.Script_Agent.My.Resources.Resources.swap1
+        Me.PictureBox21.Location = New System.Drawing.Point(861, 25)
+        Me.PictureBox21.Name = "PictureBox21"
+        Me.PictureBox21.Size = New System.Drawing.Size(18, 18)
+        Me.PictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox21.TabIndex = 45
+        Me.PictureBox21.TabStop = False
+        '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label37.ForeColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Label37.Location = New System.Drawing.Point(217, 28)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(63, 16)
+        Me.Label37.TabIndex = 37
+        Me.Label37.Text = "00110100"
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.BackColor = System.Drawing.Color.Transparent
+        Me.Label28.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.Label28.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label28.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label28.Location = New System.Drawing.Point(769, 26)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(58, 17)
+        Me.Label28.TabIndex = 2
+        Me.Label28.Text = "10.42.90"
+        '
+        'Label59
+        '
+        Me.Label59.AutoSize = True
+        Me.Label59.BackColor = System.Drawing.Color.Transparent
+        Me.Label59.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.Label59.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label59.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label59.Location = New System.Drawing.Point(702, 26)
+        Me.Label59.Name = "Label59"
+        Me.Label59.Size = New System.Drawing.Size(23, 17)
+        Me.Label59.TabIndex = 2
+        Me.Label59.Text = "EC"
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox2.Image = Global.Script_Agent.My.Resources.Resources.green2
+        Me.PictureBox2.Location = New System.Drawing.Point(154, 26)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(20, 20)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 42
+        Me.PictureBox2.TabStop = False
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.Label3.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.NavajoWhite
+        Me.Label3.Location = New System.Drawing.Point(175, 27)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(36, 16)
+        Me.Label3.TabIndex = 41
+        Me.Label3.Text = "BETA"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label43
+        '
+        Me.Label43.AutoSize = True
+        Me.Label43.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.Label43.ForeColor = System.Drawing.Color.OliveDrab
+        Me.Label43.Location = New System.Drawing.Point(622, 5)
+        Me.Label43.Name = "Label43"
+        Me.Label43.Size = New System.Drawing.Size(44, 15)
+        Me.Label43.TabIndex = 37
+        Me.Label43.Text = "Region"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.Label13.ForeColor = System.Drawing.Color.OliveDrab
+        Me.Label13.Location = New System.Drawing.Point(774, 5)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(46, 15)
+        Me.Label13.TabIndex = 37
+        Me.Label13.Text = "Version"
+        '
+        'Label58
+        '
+        Me.Label58.AutoSize = True
+        Me.Label58.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.Label58.ForeColor = System.Drawing.Color.OliveDrab
+        Me.Label58.Location = New System.Drawing.Point(683, 5)
+        Me.Label58.Name = "Label58"
+        Me.Label58.Size = New System.Drawing.Size(65, 15)
+        Me.Label58.TabIndex = 37
+        Me.Label58.Text = "Framework"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.TextBox2.Font = New System.Drawing.Font("Microsoft PhagsPa", 12.75!, System.Drawing.FontStyle.Bold)
+        Me.TextBox2.ForeColor = System.Drawing.SystemColors.Control
+        Me.TextBox2.Location = New System.Drawing.Point(154, 2)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(202, 22)
+        Me.TextBox2.TabIndex = 3
+        Me.TextBox2.Text = "AlterCompanyName"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.BackColor = System.Drawing.Color.Transparent
+        Me.Label12.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.Label12.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.Label12.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label12.Location = New System.Drawing.Point(913, 5)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(53, 15)
+        Me.Label12.TabIndex = 2
+        Me.Label12.Text = "Uninstall"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.BackColor = System.Drawing.Color.Transparent
+        Me.Label14.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.Label14.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.Label14.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label14.Location = New System.Drawing.Point(843, 5)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(55, 15)
+        Me.Label14.TabIndex = 2
+        Me.Label14.Text = "Switch to"
         '
         'PictureBox6
         '
         Me.PictureBox6.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox6.Image = Global.Script_Agent.My.Resources.Resources.log_file
-        Me.PictureBox6.Location = New System.Drawing.Point(210, 258)
+        Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
+        Me.PictureBox6.Location = New System.Drawing.Point(23, 3)
         Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(40, 35)
+        Me.PictureBox6.Size = New System.Drawing.Size(124, 46)
         Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox6.TabIndex = 27
+        Me.PictureBox6.TabIndex = 0
         Me.PictureBox6.TabStop = False
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox4.Image = Global.Script_Agent.My.Resources.Resources.trash1
-        Me.PictureBox4.Location = New System.Drawing.Point(283, 258)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(40, 35)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox4.TabIndex = 27
-        Me.PictureBox4.TabStop = False
         '
         'PictureBox1
         '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox1.Image = Global.Script_Agent.My.Resources.Resources.na
-        Me.PictureBox1.Location = New System.Drawing.Point(135, 3)
+        Me.PictureBox1.Location = New System.Drawing.Point(26, 7)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(161, 175)
+        Me.PictureBox1.Size = New System.Drawing.Size(124, 46)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
+        'Panel10
+        '
+        Me.Panel10.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.Panel10.Controls.Add(Me.PictureBox_MiniFlag2)
+        Me.Panel10.Controls.Add(Me.PictureBox25)
+        Me.Panel10.Controls.Add(Me.PictureBox23)
+        Me.Panel10.Controls.Add(Me.Label39)
+        Me.Panel10.Controls.Add(Me.Label41)
+        Me.Panel10.Controls.Add(Me.Label10)
+        Me.Panel10.Controls.Add(Me.PictureBox20)
+        Me.Panel10.Controls.Add(Me.PictureBox18)
+        Me.Panel10.Controls.Add(Me.Label60)
+        Me.Panel10.Controls.Add(Me.Label20)
+        Me.Panel10.Controls.Add(Me.Label4)
+        Me.Panel10.Controls.Add(Me.Label9)
+        Me.Panel10.Controls.Add(Me.TextBox38)
+        Me.Panel10.Controls.Add(Me.Label21)
+        Me.Panel10.Controls.Add(Me.Label25)
+        Me.Panel10.Location = New System.Drawing.Point(3, 118)
+        Me.Panel10.Name = "Panel10"
+        Me.Panel10.Size = New System.Drawing.Size(1011, 53)
+        Me.Panel10.TabIndex = 36
+        '
+        'PictureBox_MiniFlag2
+        '
+        Me.PictureBox_MiniFlag2.Location = New System.Drawing.Point(631, 26)
+        Me.PictureBox_MiniFlag2.Name = "PictureBox_MiniFlag2"
+        Me.PictureBox_MiniFlag2.Size = New System.Drawing.Size(24, 17)
+        Me.PictureBox_MiniFlag2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox_MiniFlag2.TabIndex = 46
+        Me.PictureBox_MiniFlag2.TabStop = False
+        '
+        'PictureBox25
+        '
+        Me.PictureBox25.Image = Global.Script_Agent.My.Resources.Resources.delete2
+        Me.PictureBox25.Location = New System.Drawing.Point(925, 25)
+        Me.PictureBox25.Name = "PictureBox25"
+        Me.PictureBox25.Size = New System.Drawing.Size(18, 18)
+        Me.PictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox25.TabIndex = 45
+        Me.PictureBox25.TabStop = False
+        '
+        'PictureBox23
+        '
+        Me.PictureBox23.Image = Global.Script_Agent.My.Resources.Resources.swap1
+        Me.PictureBox23.Location = New System.Drawing.Point(861, 25)
+        Me.PictureBox23.Name = "PictureBox23"
+        Me.PictureBox23.Size = New System.Drawing.Size(18, 18)
+        Me.PictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox23.TabIndex = 45
+        Me.PictureBox23.TabStop = False
+        '
+        'Label39
+        '
+        Me.Label39.AutoSize = True
+        Me.Label39.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label39.ForeColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Label39.Location = New System.Drawing.Point(217, 28)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(63, 16)
+        Me.Label39.TabIndex = 37
+        Me.Label39.Text = "00110100"
+        '
+        'Label41
+        '
+        Me.Label41.AutoSize = True
+        Me.Label41.BackColor = System.Drawing.Color.Transparent
+        Me.Label41.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.Label41.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label41.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label41.Location = New System.Drawing.Point(769, 26)
+        Me.Label41.Name = "Label41"
+        Me.Label41.Size = New System.Drawing.Size(58, 17)
+        Me.Label41.TabIndex = 2
+        Me.Label41.Text = "10.42.90"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.Color.Transparent
+        Me.Label10.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.Label10.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label10.Location = New System.Drawing.Point(702, 26)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(23, 17)
+        Me.Label10.TabIndex = 2
+        Me.Label10.Text = "EC"
+        '
+        'PictureBox20
+        '
+        Me.PictureBox20.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox20.Image = Global.Script_Agent.My.Resources.Resources.green2
+        Me.PictureBox20.Location = New System.Drawing.Point(154, 25)
+        Me.PictureBox20.Name = "PictureBox20"
+        Me.PictureBox20.Size = New System.Drawing.Size(20, 20)
+        Me.PictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox20.TabIndex = 42
+        Me.PictureBox20.TabStop = False
+        '
+        'PictureBox18
+        '
+        Me.PictureBox18.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox18.Image = CType(resources.GetObject("PictureBox18.Image"), System.Drawing.Image)
+        Me.PictureBox18.Location = New System.Drawing.Point(23, 3)
+        Me.PictureBox18.Name = "PictureBox18"
+        Me.PictureBox18.Size = New System.Drawing.Size(124, 46)
+        Me.PictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox18.TabIndex = 0
+        Me.PictureBox18.TabStop = False
+        '
+        'Label60
+        '
+        Me.Label60.AutoSize = True
+        Me.Label60.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.Label60.ForeColor = System.Drawing.Color.OliveDrab
+        Me.Label60.Location = New System.Drawing.Point(622, 5)
+        Me.Label60.Name = "Label60"
+        Me.Label60.Size = New System.Drawing.Size(44, 15)
+        Me.Label60.TabIndex = 37
+        Me.Label60.Text = "Region"
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.Label20.ForeColor = System.Drawing.Color.OliveDrab
+        Me.Label20.Location = New System.Drawing.Point(774, 5)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(46, 15)
+        Me.Label20.TabIndex = 37
+        Me.Label20.Text = "Version"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.Label4.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.NavajoWhite
+        Me.Label4.Location = New System.Drawing.Point(175, 27)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(31, 16)
+        Me.Label4.TabIndex = 41
+        Me.Label4.Text = "LIVE"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.Label9.ForeColor = System.Drawing.Color.OliveDrab
+        Me.Label9.Location = New System.Drawing.Point(683, 5)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(65, 15)
+        Me.Label9.TabIndex = 37
+        Me.Label9.Text = "Framework"
+        '
+        'TextBox38
+        '
+        Me.TextBox38.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.TextBox38.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox38.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.TextBox38.Font = New System.Drawing.Font("Microsoft PhagsPa", 12.75!, System.Drawing.FontStyle.Bold)
+        Me.TextBox38.ForeColor = System.Drawing.SystemColors.Control
+        Me.TextBox38.Location = New System.Drawing.Point(154, 2)
+        Me.TextBox38.Name = "TextBox38"
+        Me.TextBox38.Size = New System.Drawing.Size(202, 22)
+        Me.TextBox38.TabIndex = 3
+        Me.TextBox38.Text = "AlterCompanyName"
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.BackColor = System.Drawing.Color.Transparent
+        Me.Label21.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.Label21.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.Label21.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label21.Location = New System.Drawing.Point(913, 5)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(53, 15)
+        Me.Label21.TabIndex = 2
+        Me.Label21.Text = "Uninstall"
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.BackColor = System.Drawing.Color.Transparent
+        Me.Label25.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.Label25.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.Label25.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label25.Location = New System.Drawing.Point(843, 5)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(55, 15)
+        Me.Label25.TabIndex = 2
+        Me.Label25.Text = "Switch to"
+        '
+        'PictureBox17
+        '
+        Me.PictureBox17.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox17.Image = Global.Script_Agent.My.Resources.Resources.green2
+        Me.PictureBox17.Location = New System.Drawing.Point(159, 30)
+        Me.PictureBox17.Name = "PictureBox17"
+        Me.PictureBox17.Size = New System.Drawing.Size(20, 20)
+        Me.PictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox17.TabIndex = 42
+        Me.PictureBox17.TabStop = False
+        '
+        'IconButton6
+        '
+        Me.IconButton6.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.IconButton6.FlatAppearance.BorderSize = 0
+        Me.IconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton6.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IconButton6.ForeColor = System.Drawing.SystemColors.AppWorkspace
+        Me.IconButton6.IconChar = FontAwesome.Sharp.IconChar.None
+        Me.IconButton6.IconColor = System.Drawing.Color.Black
+        Me.IconButton6.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton6.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.IconButton6.Location = New System.Drawing.Point(936, 13)
+        Me.IconButton6.Name = "IconButton6"
+        Me.IconButton6.Size = New System.Drawing.Size(78, 35)
+        Me.IconButton6.TabIndex = 32
+        Me.IconButton6.Text = "uninstall"
+        Me.IconButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
+        Me.IconButton6.UseVisualStyleBackColor = True
+        '
+        'IconButton3
+        '
+        Me.IconButton3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.IconButton3.FlatAppearance.BorderSize = 0
+        Me.IconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton3.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IconButton3.ForeColor = System.Drawing.SystemColors.AppWorkspace
+        Me.IconButton3.IconChar = FontAwesome.Sharp.IconChar.None
+        Me.IconButton3.IconColor = System.Drawing.Color.Black
+        Me.IconButton3.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton3.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.IconButton3.Location = New System.Drawing.Point(684, 13)
+        Me.IconButton3.Name = "IconButton3"
+        Me.IconButton3.Size = New System.Drawing.Size(78, 35)
+        Me.IconButton3.TabIndex = 32
+        Me.IconButton3.Text = "reinstall"
+        Me.IconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
+        Me.IconButton3.UseVisualStyleBackColor = True
+        '
+        'tbCName
+        '
+        Me.tbCName.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.tbCName.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.tbCName.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.tbCName.Font = New System.Drawing.Font("Microsoft PhagsPa", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbCName.ForeColor = System.Drawing.SystemColors.Control
+        Me.tbCName.Location = New System.Drawing.Point(156, 7)
+        Me.tbCName.Name = "tbCName"
+        Me.tbCName.ReadOnly = True
+        Me.tbCName.Size = New System.Drawing.Size(235, 22)
+        Me.tbCName.TabIndex = 34
+        Me.tbCName.Text = "Company Name Title"
+        '
+        'IconButton4
+        '
+        Me.IconButton4.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.IconButton4.FlatAppearance.BorderSize = 0
+        Me.IconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton4.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IconButton4.ForeColor = System.Drawing.SystemColors.AppWorkspace
+        Me.IconButton4.IconChar = FontAwesome.Sharp.IconChar.None
+        Me.IconButton4.IconColor = System.Drawing.Color.Black
+        Me.IconButton4.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton4.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.IconButton4.Location = New System.Drawing.Point(768, 13)
+        Me.IconButton4.Name = "IconButton4"
+        Me.IconButton4.Size = New System.Drawing.Size(78, 35)
+        Me.IconButton4.TabIndex = 32
+        Me.IconButton4.Text = "logs"
+        Me.IconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
+        Me.IconButton4.UseVisualStyleBackColor = True
+        '
+        'IconButton1
+        '
+        Me.IconButton1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.IconButton1.FlatAppearance.BorderSize = 0
+        Me.IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton1.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IconButton1.ForeColor = System.Drawing.SystemColors.AppWorkspace
+        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.None
+        Me.IconButton1.IconColor = System.Drawing.Color.Black
+        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.IconButton1.ImageIndex = 0
+        Me.IconButton1.ImageList = Me.ImageList_LineForBtn
+        Me.IconButton1.Location = New System.Drawing.Point(600, 13)
+        Me.IconButton1.Name = "IconButton1"
+        Me.IconButton1.Size = New System.Drawing.Size(78, 35)
+        Me.IconButton1.TabIndex = 32
+        Me.IconButton1.Text = "info"
+        Me.IconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
+        Me.IconButton1.UseVisualStyleBackColor = True
+        '
+        'ImageList_LineForBtn
+        '
+        Me.ImageList_LineForBtn.ImageStream = CType(resources.GetObject("ImageList_LineForBtn.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.ImageList_LineForBtn.TransparentColor = System.Drawing.Color.Transparent
+        Me.ImageList_LineForBtn.Images.SetKeyName(0, "minus.png")
+        Me.ImageList_LineForBtn.Images.SetKeyName(1, "minus (1).png")
+        '
+        'Label42
+        '
+        Me.Label42.AutoSize = True
+        Me.Label42.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.Label42.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label42.ForeColor = System.Drawing.Color.NavajoWhite
+        Me.Label42.Location = New System.Drawing.Point(180, 32)
+        Me.Label42.Name = "Label42"
+        Me.Label42.Size = New System.Drawing.Size(31, 16)
+        Me.Label42.TabIndex = 41
+        Me.Label42.Text = "LIVE"
+        Me.Label42.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Panel13
+        '
+        Me.Panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel13.Controls.Add(Me.Label35)
+        Me.Panel13.Controls.Add(Me.Label34)
+        Me.Panel13.Controls.Add(Me.TextBox37)
+        Me.Panel13.Controls.Add(Me.Label30)
+        Me.Panel13.Controls.Add(Me.Label33)
+        Me.Panel13.Controls.Add(Me.PictureBox19)
+        Me.Panel13.Controls.Add(Me.Label29)
+        Me.Panel13.Location = New System.Drawing.Point(-1, 204)
+        Me.Panel13.Name = "Panel13"
+        Me.Panel13.Size = New System.Drawing.Size(1017, 70)
+        Me.Panel13.TabIndex = 36
+        '
+        'Label35
+        '
+        Me.Label35.AutoSize = True
+        Me.Label35.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label35.ForeColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Label35.Location = New System.Drawing.Point(143, 28)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(63, 16)
+        Me.Label35.TabIndex = 37
+        Me.Label35.Text = "00110100"
+        '
+        'Label34
+        '
+        Me.Label34.AutoSize = True
+        Me.Label34.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label34.ForeColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Label34.Location = New System.Drawing.Point(742, 23)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(50, 16)
+        Me.Label34.TabIndex = 37
+        Me.Label34.Text = "Label31"
+        '
+        'TextBox37
+        '
+        Me.TextBox37.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBox37.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox37.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.TextBox37.Font = New System.Drawing.Font("Microsoft PhagsPa", 12.75!, System.Drawing.FontStyle.Bold)
+        Me.TextBox37.ForeColor = System.Drawing.SystemColors.AppWorkspace
+        Me.TextBox37.Location = New System.Drawing.Point(148, 10)
+        Me.TextBox37.Name = "TextBox37"
+        Me.TextBox37.Size = New System.Drawing.Size(202, 22)
+        Me.TextBox37.TabIndex = 3
+        Me.TextBox37.Text = "AlterCompanyName"
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.Label30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label30.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label30.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label30.ForeColor = System.Drawing.Color.LimeGreen
+        Me.Label30.Location = New System.Drawing.Point(431, 23)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(62, 18)
+        Me.Label30.TabIndex = 2
+        Me.Label30.Text = "Switch to"
+        '
+        'Label33
+        '
+        Me.Label33.AutoSize = True
+        Me.Label33.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label33.ForeColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Label33.Location = New System.Drawing.Point(620, 23)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(49, 16)
+        Me.Label33.TabIndex = 37
+        Me.Label33.Text = "Version"
+        '
+        'PictureBox19
+        '
+        Me.PictureBox19.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox19.Image = CType(resources.GetObject("PictureBox19.Image"), System.Drawing.Image)
+        Me.PictureBox19.Location = New System.Drawing.Point(10, 10)
+        Me.PictureBox19.Name = "PictureBox19"
+        Me.PictureBox19.Size = New System.Drawing.Size(125, 50)
+        Me.PictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox19.TabIndex = 0
+        Me.PictureBox19.TabStop = False
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.Label29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label29.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label29.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label29.ForeColor = System.Drawing.Color.OrangeRed
+        Me.Label29.Location = New System.Drawing.Point(894, 23)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(56, 18)
+        Me.Label29.TabIndex = 2
+        Me.Label29.Text = "Remove"
+        '
+        'IconButton5
+        '
+        Me.IconButton5.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.IconButton5.FlatAppearance.BorderSize = 0
+        Me.IconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton5.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IconButton5.ForeColor = System.Drawing.SystemColors.AppWorkspace
+        Me.IconButton5.IconChar = FontAwesome.Sharp.IconChar.None
+        Me.IconButton5.IconColor = System.Drawing.Color.Black
+        Me.IconButton5.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton5.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.IconButton5.Location = New System.Drawing.Point(852, 13)
+        Me.IconButton5.Name = "IconButton5"
+        Me.IconButton5.Size = New System.Drawing.Size(78, 35)
+        Me.IconButton5.TabIndex = 32
+        Me.IconButton5.Text = "change"
+        Me.IconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
+        Me.IconButton5.UseVisualStyleBackColor = True
+        '
+        'Label38
+        '
+        Me.Label38.AutoSize = True
+        Me.Label38.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Label38.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label38.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label38.ForeColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Label38.Location = New System.Drawing.Point(222, 32)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(56, 16)
+        Me.Label38.TabIndex = 37
+        Me.Label38.Text = "0011010"
+        Me.Label38.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Pnl_Button1
+        '
+        Me.Pnl_Button1.Controls.Add(Me.Label126)
+        Me.Pnl_Button1.Location = New System.Drawing.Point(431, 150)
+        Me.Pnl_Button1.MaximumSize = New System.Drawing.Size(1017, 633)
+        Me.Pnl_Button1.Name = "Pnl_Button1"
+        Me.Pnl_Button1.Size = New System.Drawing.Size(196, 139)
+        Me.Pnl_Button1.TabIndex = 31
+        '
+        'Label126
+        '
+        Me.Label126.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label126.AutoSize = True
+        Me.Label126.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label126.ForeColor = System.Drawing.Color.SandyBrown
+        Me.Label126.Location = New System.Drawing.Point(11, 14)
+        Me.Label126.Name = "Label126"
+        Me.Label126.Size = New System.Drawing.Size(89, 16)
+        Me.Label126.TabIndex = 23
+        Me.Label126.Text = "Remove agent"
+        '
+        'Pnl_Button2
+        '
+        Me.Pnl_Button2.Controls.Add(Me.Button15)
+        Me.Pnl_Button2.Controls.Add(Me.Label128)
+        Me.Pnl_Button2.Controls.Add(Me.Label129)
+        Me.Pnl_Button2.Location = New System.Drawing.Point(364, 474)
+        Me.Pnl_Button2.MaximumSize = New System.Drawing.Size(1017, 633)
+        Me.Pnl_Button2.Name = "Pnl_Button2"
+        Me.Pnl_Button2.Size = New System.Drawing.Size(167, 170)
+        Me.Pnl_Button2.TabIndex = 31
+        '
+        'Button15
+        '
+        Me.Button15.BackColor = System.Drawing.Color.Gainsboro
+        Me.Button15.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button15.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray
+        Me.Button15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button15.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button15.ForeColor = System.Drawing.Color.Black
+        Me.Button15.Location = New System.Drawing.Point(70, 91)
+        Me.Button15.Name = "Button15"
+        Me.Button15.Size = New System.Drawing.Size(160, 32)
+        Me.Button15.TabIndex = 22
+        Me.Button15.Text = "reinstall"
+        Me.Button15.UseVisualStyleBackColor = False
+        '
+        'Label128
+        '
+        Me.Label128.AutoSize = True
+        Me.Label128.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label128.ForeColor = System.Drawing.Color.DarkGray
+        Me.Label128.Location = New System.Drawing.Point(67, 72)
+        Me.Label128.Name = "Label128"
+        Me.Label128.Size = New System.Drawing.Size(45, 16)
+        Me.Label128.TabIndex = 23
+        Me.Label128.Text = "version"
+        '
+        'Label129
+        '
+        Me.Label129.AutoSize = True
+        Me.Label129.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label129.ForeColor = System.Drawing.Color.SandyBrown
+        Me.Label129.Location = New System.Drawing.Point(118, 72)
+        Me.Label129.Name = "Label129"
+        Me.Label129.Size = New System.Drawing.Size(86, 16)
+        Me.Label129.TabIndex = 23
+        Me.Label129.Text = "Agent Version"
+        '
+        'ImageList1
+        '
+        Me.ImageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit
+        Me.ImageList1.ImageSize = New System.Drawing.Size(16, 16)
+        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
+        '
+        'PanelInstallNewAgent
+        '
+        Me.PanelInstallNewAgent.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.PanelInstallNewAgent.Controls.Add(Me.TextBox35)
+        Me.PanelInstallNewAgent.Controls.Add(Me.CheckBoxEU2)
+        Me.PanelInstallNewAgent.Controls.Add(Me.Button_US_Agent)
+        Me.PanelInstallNewAgent.Controls.Add(Me.Label23)
+        Me.PanelInstallNewAgent.Controls.Add(Me.CheckBoxUS2)
+        Me.PanelInstallNewAgent.Controls.Add(Me.Label36)
+        Me.PanelInstallNewAgent.Controls.Add(Me.TextBox11)
+        Me.PanelInstallNewAgent.Controls.Add(Me.Button_EU_Agent)
+        Me.PanelInstallNewAgent.Controls.Add(Me.CheckBox1)
+        Me.PanelInstallNewAgent.Controls.Add(Me.PictureBox7)
+        Me.PanelInstallNewAgent.Controls.Add(Me.PictureBox8)
+        Me.PanelInstallNewAgent.Controls.Add(Me.Btn_StartInstall)
+        Me.PanelInstallNewAgent.Controls.Add(Me.TextBox31)
+        Me.PanelInstallNewAgent.Controls.Add(Me.ComboBox_FrameWork)
+        Me.PanelInstallNewAgent.Controls.Add(Me.Label72)
+        Me.PanelInstallNewAgent.Controls.Add(Me.ComboBoxCompany)
+        Me.PanelInstallNewAgent.Controls.Add(Me.TextBox3)
+        Me.PanelInstallNewAgent.Controls.Add(Me.Label52)
+        Me.PanelInstallNewAgent.Controls.Add(Me.Panel2)
+        Me.PanelInstallNewAgent.Location = New System.Drawing.Point(1107, 19)
+        Me.PanelInstallNewAgent.MaximumSize = New System.Drawing.Size(1017, 698)
+        Me.PanelInstallNewAgent.Name = "PanelInstallNewAgent"
+        Me.PanelInstallNewAgent.Size = New System.Drawing.Size(1017, 698)
+        Me.PanelInstallNewAgent.TabIndex = 30
+        '
+        'TextBox35
+        '
+        Me.TextBox35.AutoSize = True
+        Me.TextBox35.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.TextBox35.Font = New System.Drawing.Font("Leelawadee UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox35.ForeColor = System.Drawing.Color.LightSlateGray
+        Me.TextBox35.Location = New System.Drawing.Point(446, 282)
+        Me.TextBox35.Name = "TextBox35"
+        Me.TextBox35.Size = New System.Drawing.Size(128, 13)
+        Me.TextBox35.TabIndex = 39
+        Me.TextBox35.Text = "Hide advanced settings"
+        '
+        'CheckBoxEU2
+        '
+        Me.CheckBoxEU2.AutoSize = True
+        Me.CheckBoxEU2.Font = New System.Drawing.Font("Microsoft PhagsPa", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.CheckBoxEU2.ForeColor = System.Drawing.SystemColors.ActiveCaption
+        Me.CheckBoxEU2.Location = New System.Drawing.Point(935, 11)
+        Me.CheckBoxEU2.Name = "CheckBoxEU2"
+        Me.CheckBoxEU2.Size = New System.Drawing.Size(50, 25)
+        Me.CheckBoxEU2.TabIndex = 38
+        Me.CheckBoxEU2.Text = "EU"
+        Me.CheckBoxEU2.UseVisualStyleBackColor = True
+        '
+        'Button_US_Agent
+        '
+        Me.Button_US_Agent.BackgroundImage = Global.Script_Agent.My.Resources.Resources.united_states
+        Me.Button_US_Agent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button_US_Agent.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button_US_Agent.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.Button_US_Agent.FlatAppearance.BorderSize = 0
+        Me.Button_US_Agent.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.Button_US_Agent.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.Button_US_Agent.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button_US_Agent.Font = New System.Drawing.Font("Microsoft PhagsPa", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.Button_US_Agent.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Button_US_Agent.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Button_US_Agent.ImageIndex = 0
+        Me.Button_US_Agent.Location = New System.Drawing.Point(908, 13)
+        Me.Button_US_Agent.MaximumSize = New System.Drawing.Size(20, 20)
+        Me.Button_US_Agent.MinimumSize = New System.Drawing.Size(20, 20)
+        Me.Button_US_Agent.Name = "Button_US_Agent"
+        Me.Button_US_Agent.Size = New System.Drawing.Size(20, 20)
+        Me.Button_US_Agent.TabIndex = 36
+        Me.Button_US_Agent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.Button_US_Agent.UseVisualStyleBackColor = True
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label23.ForeColor = System.Drawing.SystemColors.Menu
+        Me.Label23.Location = New System.Drawing.Point(334, 176)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(22, 17)
+        Me.Label23.TabIndex = 23
+        Me.Label23.Text = "ID"
+        '
+        'CheckBoxUS2
+        '
+        Me.CheckBoxUS2.AutoSize = True
+        Me.CheckBoxUS2.Checked = True
+        Me.CheckBoxUS2.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBoxUS2.Font = New System.Drawing.Font("Microsoft PhagsPa", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.CheckBoxUS2.ForeColor = System.Drawing.Color.Tan
+        Me.CheckBoxUS2.Location = New System.Drawing.Point(860, 11)
+        Me.CheckBoxUS2.Name = "CheckBoxUS2"
+        Me.CheckBoxUS2.Size = New System.Drawing.Size(50, 25)
+        Me.CheckBoxUS2.TabIndex = 38
+        Me.CheckBoxUS2.Text = "US"
+        Me.CheckBoxUS2.UseVisualStyleBackColor = True
+        '
+        'Label36
+        '
+        Me.Label36.AutoSize = True
+        Me.Label36.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label36.ForeColor = System.Drawing.SystemColors.Menu
+        Me.Label36.Location = New System.Drawing.Point(644, 176)
+        Me.Label36.Name = "Label36"
+        Me.Label36.Size = New System.Drawing.Size(31, 17)
+        Me.Label36.TabIndex = 23
+        Me.Label36.Text = "ver:"
+        '
+        'TextBox11
+        '
+        Me.TextBox11.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.TextBox11.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox11.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.TextBox11.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox11.ForeColor = System.Drawing.Color.Tan
+        Me.TextBox11.Location = New System.Drawing.Point(679, 176)
+        Me.TextBox11.Name = "TextBox11"
+        Me.TextBox11.ReadOnly = True
+        Me.TextBox11.Size = New System.Drawing.Size(86, 17)
+        Me.TextBox11.TabIndex = 33
+        Me.TextBox11.Text = "9.10.12"
+        '
+        'Button_EU_Agent
+        '
+        Me.Button_EU_Agent.BackgroundImage = CType(resources.GetObject("Button_EU_Agent.BackgroundImage"), System.Drawing.Image)
+        Me.Button_EU_Agent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button_EU_Agent.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button_EU_Agent.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.Button_EU_Agent.FlatAppearance.BorderSize = 0
+        Me.Button_EU_Agent.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.Button_EU_Agent.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.Button_EU_Agent.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button_EU_Agent.Font = New System.Drawing.Font("Microsoft PhagsPa", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button_EU_Agent.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Button_EU_Agent.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Button_EU_Agent.ImageIndex = 1
+        Me.Button_EU_Agent.Location = New System.Drawing.Point(985, 13)
+        Me.Button_EU_Agent.MaximumSize = New System.Drawing.Size(20, 20)
+        Me.Button_EU_Agent.MinimumSize = New System.Drawing.Size(20, 20)
+        Me.Button_EU_Agent.Name = "Button_EU_Agent"
+        Me.Button_EU_Agent.Size = New System.Drawing.Size(20, 20)
+        Me.Button_EU_Agent.TabIndex = 36
+        Me.Button_EU_Agent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.Button_EU_Agent.UseVisualStyleBackColor = True
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.CheckBox1.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.CheckBox1.ForeColor = System.Drawing.SystemColors.Menu
+        Me.CheckBox1.Location = New System.Drawing.Point(482, 206)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(54, 21)
+        Me.CheckBox1.TabIndex = 25
+        Me.CheckBox1.Text = "Beta"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'PictureBox7
+        '
+        Me.PictureBox7.Image = Global.Script_Agent.My.Resources.Resources.green2
+        Me.PictureBox7.Location = New System.Drawing.Point(532, 207)
+        Me.PictureBox7.Name = "PictureBox7"
+        Me.PictureBox7.Size = New System.Drawing.Size(23, 20)
+        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox7.TabIndex = 28
+        Me.PictureBox7.TabStop = False
+        '
+        'PictureBox8
+        '
+        Me.PictureBox8.Image = Global.Script_Agent.My.Resources.Resources.na
+        Me.PictureBox8.Location = New System.Drawing.Point(340, 64)
+        Me.PictureBox8.Name = "PictureBox8"
+        Me.PictureBox8.Size = New System.Drawing.Size(338, 66)
+        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox8.TabIndex = 0
+        Me.PictureBox8.TabStop = False
+        '
+        'Btn_StartInstall
+        '
+        Me.Btn_StartInstall.BackColor = System.Drawing.Color.OliveDrab
+        Me.Btn_StartInstall.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Btn_StartInstall.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.Btn_StartInstall.FlatAppearance.BorderSize = 0
+        Me.Btn_StartInstall.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.Btn_StartInstall.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.Btn_StartInstall.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_StartInstall.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_StartInstall.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Btn_StartInstall.Location = New System.Drawing.Point(457, 243)
+        Me.Btn_StartInstall.Name = "Btn_StartInstall"
+        Me.Btn_StartInstall.Size = New System.Drawing.Size(118, 32)
+        Me.Btn_StartInstall.TabIndex = 22
+        Me.Btn_StartInstall.Text = "Install"
+        Me.Btn_StartInstall.UseVisualStyleBackColor = False
+        '
+        'TextBox31
+        '
+        Me.TextBox31.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.TextBox31.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox31.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.TextBox31.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox31.ForeColor = System.Drawing.Color.Tan
+        Me.TextBox31.Location = New System.Drawing.Point(360, 176)
+        Me.TextBox31.Name = "TextBox31"
+        Me.TextBox31.ReadOnly = True
+        Me.TextBox31.Size = New System.Drawing.Size(91, 17)
+        Me.TextBox31.TabIndex = 33
+        Me.TextBox31.Text = "TEXT"
+        '
+        'ComboBox_FrameWork
+        '
+        Me.ComboBox_FrameWork.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.ComboBox_FrameWork.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ComboBox_FrameWork.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox_FrameWork.Font = New System.Drawing.Font("Leelawadee UI", 12.75!)
+        Me.ComboBox_FrameWork.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
+        Me.ComboBox_FrameWork.FormattingEnabled = True
+        Me.ComboBox_FrameWork.Items.AddRange(New Object() {"EaseeControl", "OptimumDesk"})
+        Me.ComboBox_FrameWork.Location = New System.Drawing.Point(570, 199)
+        Me.ComboBox_FrameWork.Name = "ComboBox_FrameWork"
+        Me.ComboBox_FrameWork.Size = New System.Drawing.Size(178, 31)
+        Me.ComboBox_FrameWork.TabIndex = 24
+        Me.ComboBox_FrameWork.Text = "EaseeControl"
+        '
+        'Label72
+        '
+        Me.Label72.AutoSize = True
+        Me.Label72.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label72.ForeColor = System.Drawing.Color.MediumSeaGreen
+        Me.Label72.Location = New System.Drawing.Point(569, 176)
+        Me.Label72.Name = "Label72"
+        Me.Label72.Size = New System.Drawing.Size(74, 17)
+        Me.Label72.TabIndex = 23
+        Me.Label72.Text = "framework"
+        '
+        'ComboBoxCompany
+        '
+        Me.ComboBoxCompany.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.ComboBoxCompany.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ComboBoxCompany.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.ComboBoxCompany.Font = New System.Drawing.Font("Leelawadee UI", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBoxCompany.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
+        Me.ComboBoxCompany.FormattingEnabled = True
+        Me.ComboBoxCompany.Items.AddRange(New Object() {"NewEgg", "PcMatic", "Plus", "Staples", "Staples Retail", "TechServices", "True Solutions", "Walmart Online", "Walmart.com", "Your Help Desk HQ"})
+        Me.ComboBoxCompany.Location = New System.Drawing.Point(264, 199)
+        Me.ComboBoxCompany.Name = "ComboBoxCompany"
+        Me.ComboBoxCompany.Size = New System.Drawing.Size(199, 31)
+        Me.ComboBoxCompany.TabIndex = 24
+        Me.ComboBoxCompany.Text = "TechServices"
+        '
+        'TextBox3
+        '
+        Me.TextBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox3.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.TextBox3.Font = New System.Drawing.Font("Leelawadee UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox3.ForeColor = System.Drawing.SystemColors.Menu
+        Me.TextBox3.Location = New System.Drawing.Point(267, 141)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.ReadOnly = True
+        Me.TextBox3.Size = New System.Drawing.Size(484, 32)
+        Me.TextBox3.TabIndex = 32
+        Me.TextBox3.Text = "Company Name"
+        Me.TextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label52
+        '
+        Me.Label52.AutoSize = True
+        Me.Label52.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label52.ForeColor = System.Drawing.Color.MediumSeaGreen
+        Me.Label52.Location = New System.Drawing.Point(264, 176)
+        Me.Label52.Name = "Label52"
+        Me.Label52.Size = New System.Drawing.Size(64, 17)
+        Me.Label52.TabIndex = 23
+        Me.Label52.Text = "company"
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.Panel8)
+        Me.Panel2.Controls.Add(Me.Panel7)
+        Me.Panel2.Controls.Add(Me.Panel12)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel2.Location = New System.Drawing.Point(0, 298)
+        Me.Panel2.MaximumSize = New System.Drawing.Size(1017, 400)
+        Me.Panel2.MinimumSize = New System.Drawing.Size(1017, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(1017, 400)
+        Me.Panel2.TabIndex = 3
+        '
+        'Panel8
+        '
+        Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Panel8.Controls.Add(Me.Panel15)
+        Me.Panel8.Controls.Add(Me.PictureBox29)
+        Me.Panel8.Controls.Add(Me.Toggle1)
+        Me.Panel8.Controls.Add(Me.TextBox6)
+        Me.Panel8.Controls.Add(Me.TextBox5)
+        Me.Panel8.Controls.Add(Me.TextBox4)
+        Me.Panel8.Controls.Add(Me.Label8)
+        Me.Panel8.Location = New System.Drawing.Point(659, 12)
+        Me.Panel8.Name = "Panel8"
+        Me.Panel8.Size = New System.Drawing.Size(298, 310)
+        Me.Panel8.TabIndex = 40
+        '
+        'Panel15
+        '
+        Me.Panel15.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Panel15.Controls.Add(Me.Label15)
+        Me.Panel15.Controls.Add(Me.PictureBox26)
+        Me.Panel15.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel15.Location = New System.Drawing.Point(0, 0)
+        Me.Panel15.Name = "Panel15"
+        Me.Panel15.Size = New System.Drawing.Size(298, 36)
+        Me.Panel15.TabIndex = 40
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Leelawadee UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.ForeColor = System.Drawing.Color.White
+        Me.Label15.Location = New System.Drawing.Point(120, 4)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(105, 20)
+        Me.Label15.TabIndex = 23
+        Me.Label15.Text = "Edit client info"
+        '
+        'PictureBox26
+        '
+        Me.PictureBox26.Image = CType(resources.GetObject("PictureBox26.Image"), System.Drawing.Image)
+        Me.PictureBox26.Location = New System.Drawing.Point(92, 3)
+        Me.PictureBox26.Name = "PictureBox26"
+        Me.PictureBox26.Size = New System.Drawing.Size(22, 22)
+        Me.PictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox26.TabIndex = 37
+        Me.PictureBox26.TabStop = False
+        '
+        'PictureBox29
+        '
+        Me.PictureBox29.Cursor = System.Windows.Forms.Cursors.Help
+        Me.PictureBox29.Image = Global.Script_Agent.My.Resources.Resources.information
+        Me.PictureBox29.Location = New System.Drawing.Point(238, 211)
+        Me.PictureBox29.Name = "PictureBox29"
+        Me.PictureBox29.Size = New System.Drawing.Size(20, 21)
+        Me.PictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox29.TabIndex = 38
+        Me.PictureBox29.TabStop = False
+        '
+        'TextBox6
+        '
+        Me.TextBox6.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.TextBox6.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox6.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
+        Me.TextBox6.Location = New System.Drawing.Point(30, 164)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(242, 22)
+        Me.TextBox6.TabIndex = 1
+        Me.TextBox6.Text = "Email address"
+        Me.TextBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TextBox5
+        '
+        Me.TextBox5.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.TextBox5.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox5.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
+        Me.TextBox5.Location = New System.Drawing.Point(30, 131)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(242, 22)
+        Me.TextBox5.TabIndex = 1
+        Me.TextBox5.Text = "Last name"
+        Me.TextBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TextBox4
+        '
+        Me.TextBox4.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.TextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox4.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
+        Me.TextBox4.Location = New System.Drawing.Point(29, 98)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(243, 22)
+        Me.TextBox4.TabIndex = 1
+        Me.TextBox4.Text = "First name"
+        Me.TextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Label8.Location = New System.Drawing.Point(57, 211)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(134, 17)
+        Me.Label8.TabIndex = 23
+        Me.Label8.Text = "Apply customer info"
+        '
+        'Panel7
+        '
+        Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Panel7.Controls.Add(Me.TextBox_AgentFrameWork)
+        Me.Panel7.Controls.Add(Me.TextBox32)
+        Me.Panel7.Controls.Add(Me.TextBox_AgentVersion)
+        Me.Panel7.Controls.Add(Me.TextBox30)
+        Me.Panel7.Controls.Add(Me.TextBox_CompanyID)
+        Me.Panel7.Controls.Add(Me.TextBox12)
+        Me.Panel7.Controls.Add(Me.TextBox1)
+        Me.Panel7.Controls.Add(Me.Panel14)
+        Me.Panel7.Controls.Add(Me.TextBox_Server)
+        Me.Panel7.Controls.Add(Me.PictureBox42)
+        Me.Panel7.Location = New System.Drawing.Point(355, 12)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.Size = New System.Drawing.Size(298, 310)
+        Me.Panel7.TabIndex = 40
+        '
+        'TextBox_AgentFrameWork
+        '
+        Me.TextBox_AgentFrameWork.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBox_AgentFrameWork.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox_AgentFrameWork.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox_AgentFrameWork.ForeColor = System.Drawing.SystemColors.ActiveCaption
+        Me.TextBox_AgentFrameWork.Location = New System.Drawing.Point(9, 225)
+        Me.TextBox_AgentFrameWork.Name = "TextBox_AgentFrameWork"
+        Me.TextBox_AgentFrameWork.ReadOnly = True
+        Me.TextBox_AgentFrameWork.Size = New System.Drawing.Size(279, 18)
+        Me.TextBox_AgentFrameWork.TabIndex = 41
+        Me.TextBox_AgentFrameWork.Text = "Agent Framework"
+        Me.TextBox_AgentFrameWork.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TextBox32
+        '
+        Me.TextBox32.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBox32.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox32.Cursor = System.Windows.Forms.Cursors.Default
+        Me.TextBox32.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox32.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.TextBox32.Location = New System.Drawing.Point(9, 202)
+        Me.TextBox32.Name = "TextBox32"
+        Me.TextBox32.Size = New System.Drawing.Size(279, 18)
+        Me.TextBox32.TabIndex = 42
+        Me.TextBox32.Text = "Framework"
+        Me.TextBox32.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TextBox_AgentVersion
+        '
+        Me.TextBox_AgentVersion.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBox_AgentVersion.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox_AgentVersion.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox_AgentVersion.ForeColor = System.Drawing.SystemColors.ActiveCaption
+        Me.TextBox_AgentVersion.Location = New System.Drawing.Point(9, 171)
+        Me.TextBox_AgentVersion.Name = "TextBox_AgentVersion"
+        Me.TextBox_AgentVersion.ReadOnly = True
+        Me.TextBox_AgentVersion.Size = New System.Drawing.Size(279, 18)
+        Me.TextBox_AgentVersion.TabIndex = 41
+        Me.TextBox_AgentVersion.Text = "Agent Version  -  034"
+        Me.TextBox_AgentVersion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TextBox30
+        '
+        Me.TextBox30.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBox30.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox30.Cursor = System.Windows.Forms.Cursors.Default
+        Me.TextBox30.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox30.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.TextBox30.Location = New System.Drawing.Point(9, 148)
+        Me.TextBox30.Name = "TextBox30"
+        Me.TextBox30.Size = New System.Drawing.Size(279, 18)
+        Me.TextBox30.TabIndex = 42
+        Me.TextBox30.Text = "Version"
+        Me.TextBox30.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TextBox_CompanyID
+        '
+        Me.TextBox_CompanyID.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBox_CompanyID.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox_CompanyID.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox_CompanyID.ForeColor = System.Drawing.SystemColors.ActiveCaption
+        Me.TextBox_CompanyID.Location = New System.Drawing.Point(9, 124)
+        Me.TextBox_CompanyID.Name = "TextBox_CompanyID"
+        Me.TextBox_CompanyID.ReadOnly = True
+        Me.TextBox_CompanyID.Size = New System.Drawing.Size(283, 18)
+        Me.TextBox_CompanyID.TabIndex = 41
+        Me.TextBox_CompanyID.Text = "Company Id  -  001"
+        Me.TextBox_CompanyID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TextBox12
+        '
+        Me.TextBox12.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBox12.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox12.Cursor = System.Windows.Forms.Cursors.Default
+        Me.TextBox12.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox12.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.TextBox12.Location = New System.Drawing.Point(9, 101)
+        Me.TextBox12.Name = "TextBox12"
+        Me.TextBox12.Size = New System.Drawing.Size(283, 18)
+        Me.TextBox12.TabIndex = 42
+        Me.TextBox12.Text = "Company Id"
+        Me.TextBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TextBox1
+        '
+        Me.TextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox1.Cursor = System.Windows.Forms.Cursors.Default
+        Me.TextBox1.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.TextBox1.Location = New System.Drawing.Point(9, 49)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(281, 18)
+        Me.TextBox1.TabIndex = 42
+        Me.TextBox1.Text = "Server"
+        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Panel14
+        '
+        Me.Panel14.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Panel14.Controls.Add(Me.Label16)
+        Me.Panel14.Controls.Add(Me.PictureBox5)
+        Me.Panel14.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel14.Location = New System.Drawing.Point(0, 0)
+        Me.Panel14.Name = "Panel14"
+        Me.Panel14.Size = New System.Drawing.Size(298, 36)
+        Me.Panel14.TabIndex = 40
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Leelawadee UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.ForeColor = System.Drawing.Color.White
+        Me.Label16.Location = New System.Drawing.Point(114, 6)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(112, 20)
+        Me.Label16.TabIndex = 23
+        Me.Label16.Text = "Installation info"
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
+        Me.PictureBox5.Location = New System.Drawing.Point(87, 6)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(22, 22)
+        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox5.TabIndex = 37
+        Me.PictureBox5.TabStop = False
+        '
+        'TextBox_Server
+        '
+        Me.TextBox_Server.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBox_Server.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox_Server.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox_Server.ForeColor = System.Drawing.SystemColors.ActiveCaption
+        Me.TextBox_Server.Location = New System.Drawing.Point(127, 72)
+        Me.TextBox_Server.Name = "TextBox_Server"
+        Me.TextBox_Server.ReadOnly = True
+        Me.TextBox_Server.Size = New System.Drawing.Size(45, 18)
+        Me.TextBox_Server.TabIndex = 41
+        Me.TextBox_Server.Text = "LIVE"
+        Me.TextBox_Server.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Panel12
+        '
+        Me.Panel12.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Panel12.Controls.Add(Me.Panel9)
+        Me.Panel12.Controls.Add(Me.PictureBox28)
+        Me.Panel12.Controls.Add(Me.CheckBox3)
+        Me.Panel12.Location = New System.Drawing.Point(51, 12)
+        Me.Panel12.Name = "Panel12"
+        Me.Panel12.Size = New System.Drawing.Size(298, 310)
+        Me.Panel12.TabIndex = 40
+        '
+        'Panel9
+        '
+        Me.Panel9.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Panel9.Controls.Add(Me.PictureBox27)
+        Me.Panel9.Controls.Add(Me.Label17)
+        Me.Panel9.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel9.Location = New System.Drawing.Point(0, 0)
+        Me.Panel9.Name = "Panel9"
+        Me.Panel9.Size = New System.Drawing.Size(298, 36)
+        Me.Panel9.TabIndex = 40
+        '
+        'PictureBox27
+        '
+        Me.PictureBox27.Image = CType(resources.GetObject("PictureBox27.Image"), System.Drawing.Image)
+        Me.PictureBox27.Location = New System.Drawing.Point(107, 3)
+        Me.PictureBox27.Name = "PictureBox27"
+        Me.PictureBox27.Size = New System.Drawing.Size(22, 22)
+        Me.PictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox27.TabIndex = 37
+        Me.PictureBox27.TabStop = False
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Leelawadee UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.ForeColor = System.Drawing.Color.White
+        Me.Label17.Location = New System.Drawing.Point(135, 3)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(55, 20)
+        Me.Label17.TabIndex = 23
+        Me.Label17.Text = "Option"
+        '
+        'PictureBox28
+        '
+        Me.PictureBox28.Cursor = System.Windows.Forms.Cursors.Help
+        Me.PictureBox28.Image = Global.Script_Agent.My.Resources.Resources.information
+        Me.PictureBox28.Location = New System.Drawing.Point(204, 150)
+        Me.PictureBox28.Name = "PictureBox28"
+        Me.PictureBox28.Size = New System.Drawing.Size(20, 21)
+        Me.PictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox28.TabIndex = 38
+        Me.PictureBox28.TabStop = False
+        '
+        'CheckBox3
+        '
+        Me.CheckBox3.AutoSize = True
+        Me.CheckBox3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.CheckBox3.Font = New System.Drawing.Font("Leelawadee UI", 12.0!)
+        Me.CheckBox3.ForeColor = System.Drawing.SystemColors.ActiveCaption
+        Me.CheckBox3.Location = New System.Drawing.Point(96, 150)
+        Me.CheckBox3.Name = "CheckBox3"
+        Me.CheckBox3.Size = New System.Drawing.Size(113, 25)
+        Me.CheckBox3.TabIndex = 33
+        Me.CheckBox3.Text = "Clean install"
+        Me.CheckBox3.UseVisualStyleBackColor = True
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label24.ForeColor = System.Drawing.Color.DarkGray
+        Me.Label24.Location = New System.Drawing.Point(1450, 614)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(86, 16)
+        Me.Label24.TabIndex = 2
+        Me.Label24.Text = "Agent Version"
+        '
+        'PanelDecryptor
+        '
+        Me.PanelDecryptor.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.PanelDecryptor.Controls.Add(Me.PictureBox3)
+        Me.PanelDecryptor.Controls.Add(Me.Label19)
+        Me.PanelDecryptor.Controls.Add(Me.Label18)
+        Me.PanelDecryptor.Controls.Add(Me.ComboBox4)
+        Me.PanelDecryptor.Controls.Add(Me.RichTextBox_Output)
+        Me.PanelDecryptor.Controls.Add(Me.RichTextBox_Input)
+        Me.PanelDecryptor.Controls.Add(Me.Label123)
+        Me.PanelDecryptor.Controls.Add(Me.Button8)
+        Me.PanelDecryptor.Controls.Add(Me.Button13)
+        Me.PanelDecryptor.Controls.Add(Me.Label125)
+        Me.PanelDecryptor.Controls.Add(Me.Button6)
+        Me.PanelDecryptor.Controls.Add(Me.Button5)
+        Me.PanelDecryptor.Controls.Add(Me.Button4)
+        Me.PanelDecryptor.Controls.Add(Me.Button3)
+        Me.PanelDecryptor.Location = New System.Drawing.Point(1074, 112)
+        Me.PanelDecryptor.MaximumSize = New System.Drawing.Size(1002, 693)
+        Me.PanelDecryptor.Name = "PanelDecryptor"
+        Me.PanelDecryptor.Size = New System.Drawing.Size(1002, 693)
+        Me.PanelDecryptor.TabIndex = 29
+        '
         'PictureBox3
         '
         Me.PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox3.Image = Global.Script_Agent.My.Resources.Resources.wrench
-        Me.PictureBox3.Location = New System.Drawing.Point(150, 258)
+        Me.PictureBox3.Image = Global.Script_Agent.My.Resources.Resources.sort
+        Me.PictureBox3.Location = New System.Drawing.Point(292, 323)
+        Me.PictureBox3.MaximumSize = New System.Drawing.Size(36, 33)
+        Me.PictureBox3.MinimumSize = New System.Drawing.Size(36, 30)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(40, 35)
+        Me.PictureBox3.Size = New System.Drawing.Size(36, 30)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox3.TabIndex = 27
+        Me.PictureBox3.TabIndex = 37
         Me.PictureBox3.TabStop = False
         '
-        'PictureBox2
+        'Label19
         '
-        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox2.Image = Global.Script_Agent.My.Resources.Resources.rotation
-        Me.PictureBox2.Location = New System.Drawing.Point(89, 258)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(40, 35)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 27
-        Me.PictureBox2.TabStop = False
+        Me.Label19.AutoSize = True
+        Me.Label19.Font = New System.Drawing.Font("Microsoft PhagsPa", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.Label19.Location = New System.Drawing.Point(963, 350)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(36, 12)
+        Me.Label19.TabIndex = 36
+        Me.Label19.Text = "Output"
         '
-        'Panel11
+        'Label18
         '
-        Me.Panel11.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
-        Me.Panel11.Controls.Add(Me.Label13)
-        Me.Panel11.Controls.Add(Me.Label121)
-        Me.Panel11.Controls.Add(Me.Label10)
-        Me.Panel11.Controls.Add(Me.Label12)
-        Me.Panel11.Controls.Add(Me.Label107)
-        Me.Panel11.Controls.Add(Me.Label9)
-        Me.Panel11.Controls.Add(Me.Label120)
-        Me.Panel11.Controls.Add(Me.Label110)
-        Me.Panel11.Controls.Add(Me.Label2)
-        Me.Panel11.Controls.Add(Me.Label3)
-        Me.Panel11.Controls.Add(Me.PictureBox7)
-        Me.Panel11.Controls.Add(Me.Label111)
-        Me.Panel11.Controls.Add(Me.Label119)
-        Me.Panel11.Controls.Add(Me.Label108)
-        Me.Panel11.Controls.Add(Me.Label4)
-        Me.Panel11.Controls.Add(Me.Label112)
-        Me.Panel11.Controls.Add(Me.Label113)
-        Me.Panel11.Controls.Add(Me.Label118)
-        Me.Panel11.Controls.Add(Me.Label106)
-        Me.Panel11.Controls.Add(Me.Label69)
-        Me.Panel11.Controls.Add(Me.Label1)
-        Me.Panel11.Controls.Add(Me.Label114)
-        Me.Panel11.Controls.Add(Me.Label117)
-        Me.Panel11.Controls.Add(Me.Label115)
-        Me.Panel11.Controls.Add(Me.Label109)
-        Me.Panel11.Controls.Add(Me.Label11)
-        Me.Panel11.Controls.Add(Me.Label116)
-        Me.Panel11.Location = New System.Drawing.Point(3, 383)
-        Me.Panel11.Name = "Panel11"
-        Me.Panel11.Size = New System.Drawing.Size(672, 281)
-        Me.Panel11.TabIndex = 31
+        Me.Label18.AutoSize = True
+        Me.Label18.Font = New System.Drawing.Font("Microsoft PhagsPa", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.Label18.Location = New System.Drawing.Point(971, 98)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(28, 12)
+        Me.Label18.TabIndex = 36
+        Me.Label18.Text = "Input"
+        '
+        'ComboBox4
+        '
+        Me.ComboBox4.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.ComboBox4.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ComboBox4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.ComboBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
+        Me.ComboBox4.FormattingEnabled = True
+        Me.ComboBox4.Items.AddRange(New Object() {"Double (WEB)", "Simple (WEB)", "Internal (agent)"})
+        Me.ComboBox4.Location = New System.Drawing.Point(225, 40)
+        Me.ComboBox4.Name = "ComboBox4"
+        Me.ComboBox4.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.ComboBox4.Size = New System.Drawing.Size(170, 28)
+        Me.ComboBox4.TabIndex = 35
+        Me.ComboBox4.Text = "Double (WEB)"
+        '
+        'RichTextBox_Output
+        '
+        Me.RichTextBox_Output.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.RichTextBox_Output.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.RichTextBox_Output.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.RichTextBox_Output.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.RichTextBox_Output.ForeColor = System.Drawing.Color.SeaShell
+        Me.RichTextBox_Output.Location = New System.Drawing.Point(0, 365)
+        Me.RichTextBox_Output.Name = "RichTextBox_Output"
+        Me.RichTextBox_Output.ReadOnly = True
+        Me.RichTextBox_Output.Size = New System.Drawing.Size(1002, 328)
+        Me.RichTextBox_Output.TabIndex = 34
+        Me.RichTextBox_Output.Text = ""
+        '
+        'RichTextBox_Input
+        '
+        Me.RichTextBox_Input.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.RichTextBox_Input.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.RichTextBox_Input.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RichTextBox_Input.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.RichTextBox_Input.Location = New System.Drawing.Point(0, 113)
+        Me.RichTextBox_Input.MaximumSize = New System.Drawing.Size(1002, 200)
+        Me.RichTextBox_Input.Name = "RichTextBox_Input"
+        Me.RichTextBox_Input.Size = New System.Drawing.Size(1002, 200)
+        Me.RichTextBox_Input.TabIndex = 34
+        Me.RichTextBox_Input.Text = "Your text here"
+        '
+        'Label123
+        '
+        Me.Label123.AutoSize = True
+        Me.Label123.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label123.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
+        Me.Label123.Location = New System.Drawing.Point(234, 20)
+        Me.Label123.Name = "Label123"
+        Me.Label123.Size = New System.Drawing.Size(120, 15)
+        Me.Label123.TabIndex = 32
+        Me.Label123.Text = "Encryption algorithm:"
+        '
+        'Button8
+        '
+        Me.Button8.BackColor = System.Drawing.Color.OliveDrab
+        Me.Button8.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button8.FlatAppearance.BorderSize = 0
+        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button8.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button8.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Button8.Location = New System.Drawing.Point(12, 323)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(134, 32)
+        Me.Button8.TabIndex = 28
+        Me.Button8.Text = "Decrypt db file"
+        Me.Button8.UseVisualStyleBackColor = False
+        '
+        'Button13
+        '
+        Me.Button13.BackColor = System.Drawing.Color.OliveDrab
+        Me.Button13.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button13.FlatAppearance.BorderSize = 0
+        Me.Button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button13.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button13.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Button13.Location = New System.Drawing.Point(152, 323)
+        Me.Button13.Name = "Button13"
+        Me.Button13.Size = New System.Drawing.Size(134, 32)
+        Me.Button13.TabIndex = 25
+        Me.Button13.Text = "Decrypt log file"
+        Me.Button13.UseVisualStyleBackColor = False
+        '
+        'Label125
+        '
+        Me.Label125.AutoSize = True
+        Me.Label125.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.Label125.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label125.Location = New System.Drawing.Point(12, 72)
+        Me.Label125.Name = "Label125"
+        Me.Label125.Size = New System.Drawing.Size(0, 13)
+        Me.Label125.TabIndex = 24
+        '
+        'Button6
+        '
+        Me.Button6.BackColor = System.Drawing.Color.OliveDrab
+        Me.Button6.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button6.FlatAppearance.BorderSize = 0
+        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button6.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button6.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Button6.Location = New System.Drawing.Point(647, 37)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(161, 32)
+        Me.Button6.TabIndex = 1
+        Me.Button6.Text = "Open file to decrypt"
+        Me.Button6.UseVisualStyleBackColor = False
+        '
+        'Button5
+        '
+        Me.Button5.BackColor = System.Drawing.Color.OliveDrab
+        Me.Button5.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button5.FlatAppearance.BorderSize = 0
+        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button5.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button5.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Button5.Location = New System.Drawing.Point(814, 37)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(161, 32)
+        Me.Button5.TabIndex = 1
+        Me.Button5.Text = "Open file to encrypt"
+        Me.Button5.UseVisualStyleBackColor = False
+        '
+        'Button4
+        '
+        Me.Button4.BackColor = System.Drawing.Color.OliveDrab
+        Me.Button4.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button4.FlatAppearance.BorderSize = 0
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Button4.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Button4.Location = New System.Drawing.Point(108, 37)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(104, 32)
+        Me.Button4.TabIndex = 1
+        Me.Button4.Text = "Decrypt"
+        Me.Button4.UseVisualStyleBackColor = False
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.OliveDrab
+        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Button3.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Button3.Location = New System.Drawing.Point(15, 37)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(87, 32)
+        Me.Button3.TabIndex = 1
+        Me.Button3.Text = "Encrypt"
+        Me.Button3.UseVisualStyleBackColor = False
+        '
+        'PanelLoading
+        '
+        Me.PanelLoading.Controls.Add(Me.Button22)
+        Me.PanelLoading.Controls.Add(Me.PictureBox22)
+        Me.PanelLoading.Controls.Add(Me.TextBoxCName)
+        Me.PanelLoading.Controls.Add(Me.TextBox_InstallStep)
+        Me.PanelLoading.Controls.Add(Me.CircularProgressBar2)
+        Me.PanelLoading.Location = New System.Drawing.Point(38, 771)
+        Me.PanelLoading.MaximumSize = New System.Drawing.Size(1017, 698)
+        Me.PanelLoading.Name = "PanelLoading"
+        Me.PanelLoading.Size = New System.Drawing.Size(1017, 698)
+        Me.PanelLoading.TabIndex = 31
+        '
+        'Button22
+        '
+        Me.Button22.BackColor = System.Drawing.Color.Lavender
+        Me.Button22.FlatAppearance.BorderSize = 0
+        Me.Button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button22.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button22.Location = New System.Drawing.Point(922, 659)
+        Me.Button22.Name = "Button22"
+        Me.Button22.Size = New System.Drawing.Size(75, 26)
+        Me.Button22.TabIndex = 35
+        Me.Button22.Text = "Cancel"
+        Me.Button22.UseVisualStyleBackColor = False
+        '
+        'PictureBox22
+        '
+        Me.PictureBox22.Image = Global.Script_Agent.My.Resources.Resources.loading1
+        Me.PictureBox22.Location = New System.Drawing.Point(359, 453)
+        Me.PictureBox22.Name = "PictureBox22"
+        Me.PictureBox22.Size = New System.Drawing.Size(135, 135)
+        Me.PictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox22.TabIndex = 34
+        Me.PictureBox22.TabStop = False
+        '
+        'TextBoxCName
+        '
+        Me.TextBoxCName.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.TextBoxCName.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBoxCName.Cursor = System.Windows.Forms.Cursors.Default
+        Me.TextBoxCName.Font = New System.Drawing.Font("Microsoft PhagsPa", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxCName.ForeColor = System.Drawing.SystemColors.InactiveCaption
+        Me.TextBoxCName.Location = New System.Drawing.Point(9, 313)
+        Me.TextBoxCName.Name = "TextBoxCName"
+        Me.TextBoxCName.ReadOnly = True
+        Me.TextBoxCName.Size = New System.Drawing.Size(996, 35)
+        Me.TextBoxCName.TabIndex = 33
+        Me.TextBoxCName.Text = "Installing [Company Name]..."
+        Me.TextBoxCName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TextBox_InstallStep
+        '
+        Me.TextBox_InstallStep.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.TextBox_InstallStep.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox_InstallStep.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.TextBox_InstallStep.Font = New System.Drawing.Font("Microsoft PhagsPa", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox_InstallStep.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.TextBox_InstallStep.Location = New System.Drawing.Point(9, 363)
+        Me.TextBox_InstallStep.Name = "TextBox_InstallStep"
+        Me.TextBox_InstallStep.ReadOnly = True
+        Me.TextBox_InstallStep.Size = New System.Drawing.Size(996, 27)
+        Me.TextBox_InstallStep.TabIndex = 27
+        Me.TextBox_InstallStep.Text = "Step 1. Downloading agent."
+        Me.TextBox_InstallStep.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'CircularProgressBar2
+        '
+        Me.CircularProgressBar2.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner
+        Me.CircularProgressBar2.AnimationSpeed = 500
+        Me.CircularProgressBar2.BackColor = System.Drawing.Color.Transparent
+        Me.CircularProgressBar2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CircularProgressBar2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.CircularProgressBar2.InnerColor = System.Drawing.Color.Silver
+        Me.CircularProgressBar2.InnerMargin = 2
+        Me.CircularProgressBar2.InnerWidth = -1
+        Me.CircularProgressBar2.Location = New System.Drawing.Point(442, 158)
+        Me.CircularProgressBar2.MarqueeAnimationSpeed = 2000
+        Me.CircularProgressBar2.Name = "CircularProgressBar2"
+        Me.CircularProgressBar2.OuterColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.CircularProgressBar2.OuterMargin = -25
+        Me.CircularProgressBar2.OuterWidth = 26
+        Me.CircularProgressBar2.ProgressColor = System.Drawing.Color.Green
+        Me.CircularProgressBar2.ProgressWidth = 25
+        Me.CircularProgressBar2.SecondaryFont = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Bold)
+        Me.CircularProgressBar2.Size = New System.Drawing.Size(135, 135)
+        Me.CircularProgressBar2.StartAngle = 270
+        Me.CircularProgressBar2.Style = System.Windows.Forms.ProgressBarStyle.Continuous
+        Me.CircularProgressBar2.SubscriptColor = System.Drawing.Color.DimGray
+        Me.CircularProgressBar2.SubscriptMargin = New System.Windows.Forms.Padding(-23, 0, 0, 0)
+        Me.CircularProgressBar2.SubscriptText = ""
+        Me.CircularProgressBar2.SuperscriptColor = System.Drawing.Color.FromArgb(CType(CType(166, Byte), Integer), CType(CType(166, Byte), Integer), CType(CType(166, Byte), Integer))
+        Me.CircularProgressBar2.SuperscriptMargin = New System.Windows.Forms.Padding(10, 35, 0, 0)
+        Me.CircularProgressBar2.SuperscriptText = ""
+        Me.CircularProgressBar2.TabIndex = 24
+        Me.CircularProgressBar2.TextMargin = New System.Windows.Forms.Padding(9, 0, 0, 0)
+        Me.CircularProgressBar2.Value = 68
+        '
+        'PanelEventViewer
+        '
+        Me.PanelEventViewer.Controls.Add(Me.ComboBox2)
+        Me.PanelEventViewer.Controls.Add(Me.Label105)
+        Me.PanelEventViewer.Controls.Add(Me.ListView1)
+        Me.PanelEventViewer.Controls.Add(Me.Button20)
+        Me.PanelEventViewer.Controls.Add(Me.Label2)
+        Me.PanelEventViewer.Controls.Add(Me.Label27)
+        Me.PanelEventViewer.Controls.Add(Me.ComboBox5)
+        Me.PanelEventViewer.Location = New System.Drawing.Point(773, 27)
+        Me.PanelEventViewer.MaximumSize = New System.Drawing.Size(1017, 698)
+        Me.PanelEventViewer.Name = "PanelEventViewer"
+        Me.PanelEventViewer.Size = New System.Drawing.Size(256, 197)
+        Me.PanelEventViewer.TabIndex = 32
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.ComboBox2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ComboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.ComboBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Items.AddRange(New Object() {"Application Error", "Any"})
+        Me.ComboBox2.Location = New System.Drawing.Point(334, 37)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(156, 28)
+        Me.ComboBox2.TabIndex = 27
+        Me.ComboBox2.Text = "Application Error"
+        '
+        'Label105
+        '
+        Me.Label105.AutoSize = True
+        Me.Label105.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.Label105.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
+        Me.Label105.Location = New System.Drawing.Point(498, 45)
+        Me.Label105.Name = "Label105"
+        Me.Label105.Size = New System.Drawing.Size(88, 15)
+        Me.Label105.TabIndex = 4
+        Me.Label105.Text = "Events found: 0"
+        '
+        'ListView1
+        '
+        Me.ListView1.Alignment = System.Windows.Forms.ListViewAlignment.Left
+        Me.ListView1.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.ListView1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.CH_Number, Me.CH_AppName, Me.CH_ErrorType, Me.CH_DateTime, Me.CH_ErrMessage, Me.CH_Source, Me.ColumnHeader5, Me.ColumnHeader7, Me.ColumnHeader8})
+        Me.ListView1.ContextMenuStrip = Me.ContextMenuStrip1
+        Me.ListView1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.ListView1.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListView1.ForeColor = System.Drawing.Color.AntiqueWhite
+        Me.ListView1.FullRowSelect = True
+        Me.ListView1.HideSelection = False
+        Me.ListView1.Location = New System.Drawing.Point(0, -387)
+        Me.ListView1.MaximumSize = New System.Drawing.Size(1017, 584)
+        Me.ListView1.Name = "ListView1"
+        Me.ListView1.Size = New System.Drawing.Size(256, 584)
+        Me.ListView1.TabIndex = 3
+        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.ListView1.View = System.Windows.Forms.View.Details
+        '
+        'CH_Number
+        '
+        Me.CH_Number.Text = "#"
+        Me.CH_Number.Width = 30
+        '
+        'CH_AppName
+        '
+        Me.CH_AppName.Text = "App Name"
+        Me.CH_AppName.Width = 169
+        '
+        'CH_ErrorType
+        '
+        Me.CH_ErrorType.Text = "Type"
+        Me.CH_ErrorType.Width = 136
+        '
+        'CH_DateTime
+        '
+        Me.CH_DateTime.Text = "Date&Time"
+        Me.CH_DateTime.Width = 110
+        '
+        'CH_ErrMessage
+        '
+        Me.CH_ErrMessage.Text = "Message"
+        Me.CH_ErrMessage.Width = 150
+        '
+        'CH_Source
+        '
+        Me.CH_Source.Text = "Source"
+        Me.CH_Source.Width = 100
+        '
+        'ColumnHeader5
+        '
+        Me.ColumnHeader5.Text = "Machine"
+        Me.ColumnHeader5.Width = 100
+        '
+        'ColumnHeader7
+        '
+        Me.ColumnHeader7.Text = "User"
+        '
+        'ColumnHeader8
+        '
+        Me.ColumnHeader8.Text = "EventID"
+        Me.ColumnHeader8.Width = 103
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.ContextMenuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.ContextMenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CopyToolStripMenuItem, Me.ClearToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.ShowImageMargin = False
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(78, 48)
+        '
+        'CopyToolStripMenuItem
+        '
+        Me.CopyToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control
+        Me.CopyToolStripMenuItem.Name = "CopyToolStripMenuItem"
+        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(77, 22)
+        Me.CopyToolStripMenuItem.Text = "Copy"
+        '
+        'ClearToolStripMenuItem
+        '
+        Me.ClearToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control
+        Me.ClearToolStripMenuItem.Name = "ClearToolStripMenuItem"
+        Me.ClearToolStripMenuItem.Size = New System.Drawing.Size(77, 22)
+        Me.ClearToolStripMenuItem.Text = "Clear"
+        '
+        'Button20
+        '
+        Me.Button20.BackColor = System.Drawing.Color.OliveDrab
+        Me.Button20.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button20.FlatAppearance.BorderSize = 0
+        Me.Button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button20.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Button20.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Button20.Location = New System.Drawing.Point(15, 37)
+        Me.Button20.Name = "Button20"
+        Me.Button20.Size = New System.Drawing.Size(150, 32)
+        Me.Button20.TabIndex = 0
+        Me.Button20.Text = "Search Event Viwer"
+        Me.Button20.UseVisualStyleBackColor = False
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(184, 19)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(53, 15)
+        Me.Label2.TabIndex = 23
+        Me.Label2.Text = "search in"
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.Label27.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
+        Me.Label27.Location = New System.Drawing.Point(342, 18)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(41, 15)
+        Me.Label27.TabIndex = 23
+        Me.Label27.Text = "source"
+        '
+        'ComboBox5
+        '
+        Me.ComboBox5.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.ComboBox5.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ComboBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.ComboBox5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
+        Me.ComboBox5.FormattingEnabled = True
+        Me.ComboBox5.Items.AddRange(New Object() {"Application", "Security", "Setup", "System"})
+        Me.ComboBox5.Location = New System.Drawing.Point(177, 37)
+        Me.ComboBox5.Name = "ComboBox5"
+        Me.ComboBox5.Size = New System.Drawing.Size(138, 28)
+        Me.ComboBox5.TabIndex = 24
+        Me.ComboBox5.Text = "Application"
+        '
+        'TimerAdvancedSettings
+        '
+        Me.TimerAdvancedSettings.Interval = 10
+        '
+        'Timer_MultiAgentDropDown
+        '
+        Me.Timer_MultiAgentDropDown.Interval = 4
+        '
+        'ImageList_FLAGS
+        '
+        Me.ImageList_FLAGS.ImageStream = CType(resources.GetObject("ImageList_FLAGS.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.ImageList_FLAGS.TransparentColor = System.Drawing.Color.Transparent
+        Me.ImageList_FLAGS.Images.SetKeyName(0, "united-states.png")
+        Me.ImageList_FLAGS.Images.SetKeyName(1, "european-union.png")
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label11.ForeColor = System.Drawing.Color.DarkGray
+        Me.Label11.Location = New System.Drawing.Point(1537, 614)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(86, 16)
+        Me.Label11.TabIndex = 2
+        Me.Label11.Text = "Agent Version"
+        '
+        'Button19
+        '
+        Me.Button19.BackColor = System.Drawing.Color.OliveDrab
+        Me.Button19.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button19.FlatAppearance.BorderSize = 0
+        Me.Button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button19.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Button19.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Button19.Location = New System.Drawing.Point(1451, 633)
+        Me.Button19.Name = "Button19"
+        Me.Button19.Size = New System.Drawing.Size(123, 23)
+        Me.Button19.TabIndex = 0
+        Me.Button19.Text = "Reveal password"
+        Me.Button19.UseVisualStyleBackColor = False
+        '
+        'Timer_MoreDetails
+        '
+        Me.Timer_MoreDetails.Interval = 15
+        '
+        'Toggle1
+        '
+        Me.Toggle1.Checked = False
+        Me.Toggle1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Toggle1.Location = New System.Drawing.Point(197, 211)
+        Me.Toggle1.Margin = New System.Windows.Forms.Padding(6)
+        Me.Toggle1.Name = "Toggle1"
+        Me.Toggle1.Size = New System.Drawing.Size(32, 19)
+        Me.Toggle1.TabIndex = 35
+        '
+        'PictureBox42
+        '
+        Me.PictureBox42.Image = Global.Script_Agent.My.Resources.Resources.green2
+        Me.PictureBox42.Location = New System.Drawing.Point(102, 70)
+        Me.PictureBox42.Name = "PictureBox42"
+        Me.PictureBox42.Size = New System.Drawing.Size(23, 20)
+        Me.PictureBox42.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox42.TabIndex = 28
+        Me.PictureBox42.TabStop = False
         '
         'ToolBox
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1940, 1077)
-        Me.Controls.Add(Me.Panel10)
-        Me.Controls.Add(Me.Panel_ED)
-        Me.Controls.Add(Me.Panel8)
-        Me.Controls.Add(Me.Panel5)
+        Me.ClientSize = New System.Drawing.Size(1940, 894)
+        Me.Controls.Add(Me.PanelMainBox)
+        Me.Controls.Add(Me.PanelLoading)
+        Me.Controls.Add(Me.PanelInstallNewAgent)
+        Me.Controls.Add(Me.PanelEventViewer)
+        Me.Controls.Add(Me.PanelDecryptor)
+        Me.Controls.Add(Me.Button19)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.Label24)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.MinimumSize = New System.Drawing.Size(1189, 663)
+        Me.MinimumSize = New System.Drawing.Size(959, 536)
         Me.Name = "ToolBox"
         Me.Text = "ToolBox"
+        Me.PanelMainBox.ResumeLayout(False)
+        Me.Panel_INFO.ResumeLayout(False)
+        Me.Panel_INFO.PerformLayout()
+        CType(Me.PictureBox41, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox40, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel16.ResumeLayout(False)
+        Me.Panel16.PerformLayout()
+        CType(Me.PictureBox37, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox39, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox36, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox35, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox38, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox34, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox33, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox32, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox31, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox30, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
+        Me.Panel6.ResumeLayout(False)
+        Me.Panel6.PerformLayout()
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
-        Me.Panel8.ResumeLayout(False)
-        Me.Panel8.PerformLayout()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        Me.Panel9.ResumeLayout(False)
-        Me.Panel9.PerformLayout()
-        Me.Panel10.ResumeLayout(False)
-        Me.Panel10.PerformLayout()
-        Me.Panel_ED.ResumeLayout(False)
-        Me.Panel_ED.PerformLayout()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PnlLogs.ResumeLayout(False)
+        Me.PnlLogs.PerformLayout()
+        Me.PanelMultiAgent.ResumeLayout(False)
+        Me.PanelMultiAgent.PerformLayout()
         Me.Panel11.ResumeLayout(False)
         Me.Panel11.PerformLayout()
+        CType(Me.PictureBox_MiniFlag1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox24, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel10.ResumeLayout(False)
+        Me.Panel10.PerformLayout()
+        CType(Me.PictureBox_MiniFlag2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox25, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel13.ResumeLayout(False)
+        Me.Panel13.PerformLayout()
+        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Pnl_Button1.ResumeLayout(False)
+        Me.Pnl_Button1.PerformLayout()
+        Me.Pnl_Button2.ResumeLayout(False)
+        Me.Pnl_Button2.PerformLayout()
+        Me.PanelInstallNewAgent.ResumeLayout(False)
+        Me.PanelInstallNewAgent.PerformLayout()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel8.ResumeLayout(False)
+        Me.Panel8.PerformLayout()
+        Me.Panel15.ResumeLayout(False)
+        Me.Panel15.PerformLayout()
+        CType(Me.PictureBox26, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox29, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel7.ResumeLayout(False)
+        Me.Panel7.PerformLayout()
+        Me.Panel14.ResumeLayout(False)
+        Me.Panel14.PerformLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel12.ResumeLayout(False)
+        Me.Panel12.PerformLayout()
+        Me.Panel9.ResumeLayout(False)
+        Me.Panel9.PerformLayout()
+        CType(Me.PictureBox27, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox28, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelDecryptor.ResumeLayout(False)
+        Me.PanelDecryptor.PerformLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelLoading.ResumeLayout(False)
+        Me.PanelLoading.PerformLayout()
+        CType(Me.PictureBox22, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelEventViewer.ResumeLayout(False)
+        Me.PanelEventViewer.PerformLayout()
+        Me.ContextMenuStrip1.ResumeLayout(False)
+        CType(Me.PictureBox42, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Panel5 As Panel
-    Friend WithEvents Label42342 As Label
-    Friend WithEvents Lbl_43178 As Label
-    Friend WithEvents Lbl_432 As Label
+    Friend WithEvents PanelMainBox As Panel
+    Friend WithEvents Btn_StartInstall As Button
+    Friend WithEvents Label52 As Label
+    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents ComboBoxCompany As ComboBox
+    Friend WithEvents PanelDecryptor As Panel
+    Friend WithEvents Label72 As Label
+    Friend WithEvents ComboBox_FrameWork As ComboBox
+    Friend WithEvents PictureBox7 As PictureBox
+    Friend WithEvents PictureBox8 As PictureBox
+    Friend WithEvents PanelInstallNewAgent As Panel
+    Friend WithEvents Button6 As Button
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Label123 As Label
+    Friend WithEvents Button11 As Button
+    Friend WithEvents Button9 As Button
+    Friend WithEvents Button8 As Button
+    Friend WithEvents btnDecryptRegistry As Button
+    Friend WithEvents Button13 As Button
+    Friend WithEvents Label125 As Label
+    Friend WithEvents Pnl_Button1 As Panel
+    Friend WithEvents Label126 As Label
+    Friend WithEvents Pnl_Button2 As Panel
+    Friend WithEvents Button15 As Button
+    Friend WithEvents Label128 As Label
+    Friend WithEvents Label129 As Label
+    Friend WithEvents PnlLogs As Panel
+    Friend WithEvents btn_ReadOdLog As Button
+    Friend WithEvents Button17 As Button
+    Friend WithEvents PanelMultiAgent As Panel
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label23 As Label
-    Friend WithEvents Label22 As Label
-    Friend WithEvents Label21 As Label
-    Friend WithEvents Label20 As Label
+    Friend WithEvents ImageList1 As ImageList
+    Friend WithEvents IconButton5 As FontAwesome.Sharp.IconButton
+    Friend WithEvents IconButton4 As FontAwesome.Sharp.IconButton
+    Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
+    Friend WithEvents RichTextBox_Input As RichTextBox
+    Friend WithEvents Button18 As Button
+    Friend WithEvents RichTextBox2 As RichTextBox
+    Friend WithEvents PanelLoading As Panel
+    Friend WithEvents CircularProgressBar2 As CircularProgressBar.CircularProgressBar
+    Friend WithEvents PanelEventViewer As Panel
+    Friend WithEvents Button20 As Button
+    Friend WithEvents ListView1 As ListView
+    Friend WithEvents CH_Number As ColumnHeader
+    Friend WithEvents CH_ErrorType As ColumnHeader
+    Friend WithEvents CH_DateTime As ColumnHeader
+    Friend WithEvents CH_Source As ColumnHeader
+    Friend WithEvents ColumnHeader5 As ColumnHeader
+    Friend WithEvents CH_ErrMessage As ColumnHeader
+    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
+    Friend WithEvents CopyToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ClearToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents TextBox_InstallStep As TextBox
+    Friend WithEvents ComboBox4 As ComboBox
+    Friend WithEvents TextBoxCName As TextBox
+    Friend WithEvents tbName As TextBox
+    Friend WithEvents tbEmail As TextBox
+    Public WithEvents tbCName As TextBox
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents RichTextBox_Output As RichTextBox
+    Friend WithEvents Panel_INFO As Panel
+    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label24 As Label
+    Friend WithEvents Button7 As Button
+    Friend WithEvents TextBox15 As TextBox
+    Friend WithEvents TextBox14 As TextBox
+    Friend WithEvents TextBox13 As TextBox
+    Friend WithEvents TextBox10 As TextBox
+    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents TextBox16 As TextBox
+    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents Label105 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents CheckBox3 As CheckBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents TimerAdvancedSettings As Timer
+    Friend WithEvents Toggle1 As Toggle
+    Friend WithEvents Label16 As Label
+    Friend WithEvents Label17 As Label
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Label7 As TextBox
+    Friend WithEvents TextBox24 As TextBox
+    Friend WithEvents TextBox22 As TextBox
+    Friend WithEvents TextBox21 As TextBox
+    Friend WithEvents TextBox23 As TextBox
+    Friend WithEvents TextBox19 As TextBox
+    Friend WithEvents TextBox20 As TextBox
+    Friend WithEvents TextBox18 As TextBox
+    Friend WithEvents TextBox17 As TextBox
     Friend WithEvents Label19 As Label
     Friend WithEvents Label18 As Label
-    Friend WithEvents Label17 As Label
-    Friend WithEvents Label16 As Label
-    Friend WithEvents Label15 As Label
-    Friend WithEvents Label14 As Label
-    Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents Label26 As Label
-    Friend WithEvents Label25 As Label
-    Friend WithEvents Label24 As Label
-    Friend WithEvents Panel4 As Panel
-    Friend WithEvents Panel3 As Panel
-    Friend WithEvents Panel7 As Panel
-    Friend WithEvents Panel6 As Panel
-    Friend WithEvents Label36 As Label
-    Friend WithEvents Label56 As Label
-    Friend WithEvents Label35 As Label
-    Friend WithEvents Label54 As Label
-    Friend WithEvents Label34 As Label
-    Friend WithEvents Label51 As Label
-    Friend WithEvents Label33 As Label
-    Friend WithEvents Label49 As Label
-    Friend WithEvents Label32 As Label
-    Friend WithEvents Label47 As Label
-    Friend WithEvents Label31 As Label
-    Friend WithEvents Label45 As Label
-    Friend WithEvents Label30 As Label
-    Friend WithEvents Label43 As Label
-    Friend WithEvents Label29 As Label
-    Friend WithEvents Label41 As Label
-    Friend WithEvents Label40 As Label
-    Friend WithEvents Label28 As Label
-    Friend WithEvents Label39 As Label
-    Friend WithEvents Label27 As Label
-    Friend WithEvents Label38 As Label
-    Friend WithEvents Label37 As Label
-    Friend WithEvents Label68 As Label
-    Friend WithEvents Label67 As Label
-    Friend WithEvents Label66 As Label
-    Friend WithEvents Label65 As Label
-    Friend WithEvents Label64 As Label
-    Friend WithEvents Label63 As Label
-    Friend WithEvents Label61 As Label
-    Friend WithEvents Label60 As Label
-    Friend WithEvents Label59 As Label
-    Friend WithEvents Label58 As Label
-    Friend WithEvents Panel8 As Panel
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Label52 As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents Label9 As Label
-    Friend WithEvents ComboBoxCompany As ComboBox
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label13 As Label
-    Friend WithEvents Label11 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label12 As Label
-    Friend WithEvents PictureBox6 As PictureBox
-    Friend WithEvents Panel2 As Panel
-    Friend WithEvents Label70 As Label
-    Friend WithEvents Panel_ED As Panel
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label72 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Label22 As Label
     Friend WithEvents Button2 As Button
-    Friend WithEvents Label83 As Label
-    Friend WithEvents Label82 As Label
-    Friend WithEvents Label81 As Label
-    Friend WithEvents CheckBox2 As CheckBox
-    Friend WithEvents Label80 As Label
-    Friend WithEvents Label79 As Label
-    Friend WithEvents ComboBox3 As ComboBox
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents Label78 As Label
-    Friend WithEvents Label77 As Label
-    Friend WithEvents Label76 As Label
-    Friend WithEvents Label75 As Label
-    Friend WithEvents Label74 As Label
-    Friend WithEvents Label73 As Label
-    Friend WithEvents Label71 As Label
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents Label46 As Label
-    Friend WithEvents PictureBox5 As PictureBox
-    Friend WithEvents Label44 As Label
-    Friend WithEvents Label42 As Label
-    Friend WithEvents Panel9 As Panel
-    Friend WithEvents Label104 As Label
-    Friend WithEvents Label103 As Label
-    Friend WithEvents Label102 As Label
-    Friend WithEvents Label101 As Label
-    Friend WithEvents Label100 As Label
-    Friend WithEvents Label99 As Label
-    Friend WithEvents Label98 As Label
-    Friend WithEvents Label97 As Label
-    Friend WithEvents Label96 As Label
-    Friend WithEvents Label95 As Label
-    Friend WithEvents Label94 As Label
-    Friend WithEvents Label93 As Label
-    Friend WithEvents Label92 As Label
-    Friend WithEvents Label91 As Label
-    Friend WithEvents Label90 As Label
-    Friend WithEvents Label89 As Label
-    Friend WithEvents Label88 As Label
-    Friend WithEvents Label87 As Label
-    Friend WithEvents Label86 As Label
-    Friend WithEvents Label85 As Label
-    Friend WithEvents Label84 As Label
-    Friend WithEvents Label62 As Label
-    Friend WithEvents Label57 As Label
-    Friend WithEvents Label55 As Label
-    Friend WithEvents Label53 As Label
-    Friend WithEvents Label50 As Label
-    Friend WithEvents Label48 As Label
-    Friend WithEvents Label8 As Label
-    Friend WithEvents PictureBox7 As PictureBox
-    Friend WithEvents Label105 As Label
-    Friend WithEvents PictureBox8 As PictureBox
-    Friend WithEvents Label109 As Label
-    Friend WithEvents Label108 As Label
-    Friend WithEvents Label107 As Label
-    Friend WithEvents Label106 As Label
-    Friend WithEvents Label69 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Panel10 As Panel
-    Friend WithEvents Label121 As Label
-    Friend WithEvents Label120 As Label
-    Friend WithEvents Label119 As Label
-    Friend WithEvents Label118 As Label
-    Friend WithEvents Label117 As Label
-    Friend WithEvents Label116 As Label
-    Friend WithEvents Label115 As Label
-    Friend WithEvents Label114 As Label
-    Friend WithEvents Label113 As Label
-    Friend WithEvents Label112 As Label
-    Friend WithEvents Label111 As Label
-    Friend WithEvents Label110 As Label
-    Friend WithEvents Label6 As Label
+    Friend WithEvents PictureBox9 As PictureBox
+    Friend WithEvents PictureBox16 As PictureBox
+    Friend WithEvents PictureBox15 As PictureBox
+    Friend WithEvents PictureBox14 As PictureBox
+    Friend WithEvents PictureBox13 As PictureBox
+    Friend WithEvents PictureBox12 As PictureBox
+    Friend WithEvents PictureBox11 As PictureBox
+    Friend WithEvents PictureBox10 As PictureBox
+    Friend WithEvents Panel5 As Panel
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Panel6 As Panel
+    Friend WithEvents TextBox25 As TextBox
+    Friend WithEvents TextBox26 As TextBox
+    Friend WithEvents TextBox27 As TextBox
+    Friend WithEvents Label27 As Label
+    Friend WithEvents ComboBox5 As ComboBox
+    Friend WithEvents CheckBox4 As CheckBox
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents TextBox29 As TextBox
+    Friend WithEvents IconButton6 As FontAwesome.Sharp.IconButton
+    Friend WithEvents IconButton3 As FontAwesome.Sharp.IconButton
+    Friend WithEvents TextBox31 As TextBox
+    Friend WithEvents Timer_MultiAgentDropDown As Timer
     Friend WithEvents Panel11 As Panel
+    Friend WithEvents PictureBox6 As PictureBox
+    Friend WithEvents Panel13 As Panel
+    Friend WithEvents PictureBox19 As PictureBox
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Label30 As Label
+    Friend WithEvents Label29 As Label
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextBox37 As TextBox
+    Friend WithEvents Label34 As Label
+    Friend WithEvents Label33 As Label
+    Friend WithEvents Label35 As Label
+    Friend WithEvents Label37 As Label
+    Friend WithEvents Label38 As Label
+    Friend WithEvents Panel10 As Panel
+    Friend WithEvents Label39 As Label
+    Friend WithEvents PictureBox18 As PictureBox
+    Friend WithEvents TextBox38 As TextBox
+    Friend WithEvents Label25 As Label
+    Friend WithEvents PictureBox17 As PictureBox
+    Friend WithEvents Label42 As Label
+    Friend WithEvents Label31 As Label
+    Friend WithEvents Button_EU_Agent As Button
+    Friend WithEvents Button_US_Agent As Button
+    Friend WithEvents ImageList_FLAGS As ImageList
+    Friend WithEvents PictureBox22 As PictureBox
+    Friend WithEvents Label56 As Label
+    Friend WithEvents Button24 As Button
+    Friend WithEvents Label58 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Button19 As Button
+    Friend WithEvents Label59 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents TextBox28 As TextBox
+    Friend WithEvents Label60 As Label
+    Friend WithEvents CheckBoxEU2 As CheckBox
+    Friend WithEvents CheckBoxUS2 As CheckBox
+    Friend WithEvents Label36 As Label
+    Friend WithEvents TextBox11 As TextBox
+    Friend WithEvents Label23 As Label
+    Friend WithEvents Button14 As Button
+    Friend WithEvents Button12 As Button
+    Friend WithEvents ColumnHeader7 As ColumnHeader
+    Friend WithEvents ColumnHeader8 As ColumnHeader
+    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents PictureBox20 As PictureBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label28 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Label41 As Label
+    Friend WithEvents Label20 As Label
+    Friend WithEvents PictureBox21 As PictureBox
+    Friend WithEvents PictureBox23 As PictureBox
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label21 As Label
+    Friend WithEvents PictureBox24 As PictureBox
+    Friend WithEvents PictureBox25 As PictureBox
+    Friend WithEvents TextBox35 As Label
+    Friend WithEvents Panel8 As Panel
+    Friend WithEvents Panel7 As Panel
+    Friend WithEvents Panel12 As Panel
+    Friend WithEvents PictureBox29 As PictureBox
+    Friend WithEvents PictureBox28 As PictureBox
+    Friend WithEvents Panel15 As Panel
+    Friend WithEvents Panel14 As Panel
+    Friend WithEvents Panel9 As Panel
+    Friend WithEvents TextBox_AgentFrameWork As TextBox
+    Friend WithEvents TextBox_AgentVersion As TextBox
+    Friend WithEvents TextBox_CompanyID As TextBox
+    Friend WithEvents TextBox_Server As TextBox
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents TextBox32 As TextBox
+    Friend WithEvents TextBox30 As TextBox
+    Friend WithEvents TextBox12 As TextBox
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label43 As Label
+    Friend WithEvents PictureBox_MiniFlag2 As PictureBox
+    Friend WithEvents PictureBox_MiniFlag1 As PictureBox
+    Friend WithEvents CH_AppName As ColumnHeader
+    Friend WithEvents Panel16 As Panel
+    Friend WithEvents TextBox52 As TextBox
+    Friend WithEvents TextBox51 As TextBox
+    Friend WithEvents PictureBox37 As PictureBox
+    Friend WithEvents TextBox50 As TextBox
+    Friend WithEvents PictureBox39 As PictureBox
+    Friend WithEvents PictureBox36 As PictureBox
+    Friend WithEvents PictureBox35 As PictureBox
+    Friend WithEvents TextBox49 As TextBox
+    Friend WithEvents PictureBox38 As PictureBox
+    Friend WithEvents PictureBox34 As PictureBox
+    Friend WithEvents TextBox56 As TextBox
+    Friend WithEvents TextBox48 As TextBox
+    Friend WithEvents PictureBox33 As PictureBox
+    Friend WithEvents TextBox47 As TextBox
+    Friend WithEvents TextBox46 As TextBox
+    Friend WithEvents PictureBox32 As PictureBox
+    Friend WithEvents TextBox55 As TextBox
+    Friend WithEvents TextBox45 As TextBox
+    Friend WithEvents TextBox44 As TextBox
+    Friend WithEvents PictureBox31 As PictureBox
+    Friend WithEvents TextBox43 As TextBox
+    Friend WithEvents TextBox54 As TextBox
+    Friend WithEvents TextBox42 As TextBox
+    Friend WithEvents TextBox41 As TextBox
+    Friend WithEvents TextBox53 As TextBox
+    Friend WithEvents TextBox40 As TextBox
+    Friend WithEvents TextBox39 As TextBox
+    Friend WithEvents TextBox36 As TextBox
+    Friend WithEvents PictureBox30 As PictureBox
+    Friend WithEvents TextBox34 As TextBox
+    Friend WithEvents Timer_MoreDetails As Timer
+    Friend WithEvents TextBox57 As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Button16 As Button
+    Friend WithEvents Button21 As Button
+    Friend WithEvents ComboBox3 As ComboBox
+    Friend WithEvents Button22 As Button
+    Friend WithEvents PictureBox26 As PictureBox
+    Friend WithEvents PictureBox5 As PictureBox
+    Friend WithEvents PictureBox27 As PictureBox
+    Friend WithEvents Button25 As Button
+    Friend WithEvents ImageList_LineForBtn As ImageList
+    Friend WithEvents PictureBox41 As PictureBox
+    Friend WithEvents PictureBox40 As PictureBox
+    Friend WithEvents PictureBox42 As PictureBox
 End Class
