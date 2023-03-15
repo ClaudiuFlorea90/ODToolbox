@@ -43,7 +43,7 @@ Public Class VirusScanForm
     Public VS_Detection_Removed As Integer
     Public virusScanType As String
     Dim isScanning As Boolean = False
-    Dim isScanCompleted As Boolean = False
+    Public isScanCompleted As Boolean = False
     Dim FakeScannedFiles As Integer = 0
 
 
@@ -107,7 +107,7 @@ Public Class VirusScanForm
     Private Sub VirusScanForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         'Me.Hide()
-
+        Me.Size = Frame.PnlMain.MaximumSize
 
 
         Panel11.Hide()
@@ -155,7 +155,7 @@ Public Class VirusScanForm
 
 
 
-        virusScanType = ScanOptions.ComboBox_ScanType.Text
+        ' virusScanType = ScanOptions.ComboBox_ScanType.Text
 
 
 
@@ -546,50 +546,22 @@ Public Class VirusScanForm
     Function swichPanel(Pnl As Panel, PnlBtn As Panel, lbl As Label)
 
 
-        'Hide Under button pnl
-        Panel_1.Hide()
-        Panel_2.Hide()
-        Panel_3.Hide()
-
-        'Pnl_IsScanning.SendToBack()
-        'Pnl_ScanCompleted.SendToBack()
-        'Pnl_beginScan.SendToBack()
-
-        Lbl_Scanner.ForeColor = Color.LightGray
-        Lbl_Scheduler.ForeColor = Color.LightGray
-        Lbl_Reports.ForeColor = Color.LightGray
-
-        Lbl_Scanner.Font = New Font("Trebuchet MS", 13.0F, FontStyle.Regular)
-        Lbl_Scheduler.Font = New Font("Trebuchet MS", 13.0F, FontStyle.Regular)
-        Lbl_Reports.Font = New Font("Trebuchet MS", 13.0F, FontStyle.Regular)
-
-
-        lbl.ForeColor = Color.DarkOrange
-        'lbl.ForeColor = ColorTranslator.FromHtml("240, 147, 43")
-        lbl.Font = New Font("Trebuchet MS", 13.5F, FontStyle.Bold)
-
-        'Trebuchet MS, 12.75pt, Style = Bold
-
-
-
         Pnl.Location = New Point(12, 41)
-
         Pnl.Show()
         Pnl.BringToFront()
-        PnlBtn.Show()
 
 
-        If lbl.Name = Lbl_Scanner.Name Then
+        'If lbl.Name = Lbl_Scanner.Name Then
 
 
-            If isScanning = True Then
+        '    If isScanning = True Then
 
-                If Panel_Expand_Scanner.Size = Panel_Expand_Scanner.MaximumSize Then
-                    Command.ChangeScanningPanel(Pnl_IsScanning)
-                End If
-            End If
+        '        If Panel_Expand_Scanner.Size = Panel_Expand_Scanner.MaximumSize Then
+        '            Command.ChangeScanningPanel(Pnl_IsScanning)
+        '        End If
+        '    End If
 
-        End If
+        'End If
 
 
         Return Nothing
@@ -874,6 +846,7 @@ Public Class VirusScanForm
 
 
         'First sub panel HISTORY
+        Panel_history.MaximumSize = Panel_Scanner.MaximumSize
 
 
         If isPnlExpanded1 = False Then
@@ -887,7 +860,8 @@ Public Class VirusScanForm
             Panel_history.BorderStyle = BorderStyle.None
 
             If Panel_history.Size = Panel_history.MaximumSize Then
-                Panel_history.Location = New Point(10, 10)
+                ' Panel_history.Location = New Point(2, 2)
+                Panel_history.Location = Panel_Scanner.Location
                 Panel_history.Show()
                 isPnlExpanded1 = True
                 Timer_Expand_History.Stop()
@@ -1286,15 +1260,15 @@ Public Class VirusScanForm
 
     Private Sub ToggleAntispy_Click(sender As Object, e As EventArgs) Handles ToggleAntispy.Click
 
-        If ToggleAntispy.Checked = True Then
+        'If ToggleAntispy.Checked = True Then
 
-            Command.PowerShell("echo ok")
+        '    Command.PowerShell("echo ok")
 
 
-        Else
-            MsgBox("Enable This")
+        'Else
+        '    MsgBox("Enable This")
 
-        End If
+        'End If
 
 
     End Sub

@@ -1,15 +1,95 @@
-﻿
+﻿Imports System.IO
+Imports System.Runtime.CompilerServices
 Imports System.Threading
+Imports System.Windows.Interop
+Imports CefSharp
+Imports CircularProgressBar
+Imports Microsoft.Win32
+Imports Xamarin.Essentials
+Imports System.Diagnostics.Eventing.Reader
+Imports System.Text
+Imports System.ComponentModel
+Imports System.Net
+Imports System.Windows.Documents
+Imports CefSharp.Web
+Imports Newtonsoft.Json
+Imports CefSharp.DevTools.CSS
+Imports System.Web.Script.Serialization
+
+
 
 Module Command
 
     Public isScanning As Boolean
 
 
+
+
+    Function decryptKey(keyLocation As String, KeyValue As String)
+
+
+
+        Dim key As RegistryKey
+        key = Registry.LocalMachine.OpenSubKey(keyLocation)
+
+        Dim data As String = Module1.Decrypt(key.GetValue(KeyValue).ToString())
+
+        Return data
+
+        '        Dim json As New JavaScriptSerializer
+        '        json.MaxJsonLength = 2147483644
+        '        Dim dic As StructuresModule.SignUpRegistrationData = json.Deserialize(Of StructuresModule.SignUpRegistrationData)(Module1.Decrypt(data)
+        ')
+
+
+
+
+    End Function
+
+
+    Public Sub SetMainPanel(Pnl As Panel)
+
+        'Pnl.Size = Pnl.MaximumSize
+
+        If Pnl.Name = ToolBox.PanelInstallNewAgent.Name Then
+            Pnl.Location = New Point(0, 70)
+        Else
+            Pnl.Location = New Point(0, 0)
+        End If
+
+        Pnl.Size = Frame.PnlMain.Size
+        Pnl.Location = New Point(0, 0)
+        Pnl.Show()
+        Pnl.BringToFront()
+
+    End Sub
+
+    Public Sub SetMainForm(Form As Form, btn As Button)
+
+        For Each item As Control In Frame.PnlMenu.Controls
+            If item.GetType = GetType(Button) Then
+                item.BackColor = ColorTranslator.FromHtml("30, 39, 46")
+            End If
+        Next
+
+        btn.BackColor = ColorTranslator.FromHtml("109, 33, 79")
+        Frame.Lbl_TopLabel.Text = btn.Text
+        Frame.PnlMain.Controls.Clear()
+        Form.TopLevel = False
+        Frame.PnlMain.Controls.Add(Form)
+        Form.Show()
+
+        '    'To show ticket title as Top label if ticket was created for
+        If btn.Name = "Btn_Ticket" Then
+            If Ticket.Is_Ticket_Created Then
+                Frame.Lbl_TopLabel.Text = Ticket.Ticket_Title
+            End If
+
+        End If
+
+    End Sub
+
     'Switch Virus Scan sub panel
-
-
-
     Public Sub ChangeScanningPanel(ByVal panel As Panel)
 
 
@@ -21,19 +101,11 @@ Module Command
         panel.BringToFront()
         'panel.Location = VirusScanForm.PanelDefaultLocation1.Location
 
-
-
-
-
         If panel.Name = VirusScanForm.Panel6.Name Then
             panel.Location = New Point(217, 4)
         Else
             panel.Location = New Point(28, 55)
         End If
-
-
-
-
 
     End Sub
 
@@ -41,60 +113,49 @@ Module Command
 
     Sub Settings()
 
-        VirusScanForm.Label45.Text = PowerShell("(Get-MpComputerStatus).AntispywareSignatureLastUpdated")
-        VirusScanForm.LblAntispyware.Text = PowerShell("(Get-MpComputerStatus).AntispywareEnabled")
-        VirusScanForm.LabelRealTimeProtection.Text = PowerShell("(Get-MpComputerStatus).RealTimeProtectionEnabled")
-
+        'VirusScanForm.Label45.Text = PowerShell("(Get-MpComputerStatus).AntispywareSignatureLastUpdated")
+        'VirusScanForm.LblAntispyware.Text = PowerShell("(Get-MpComputerStatus).AntispywareEnabled")
+        'VirusScanForm.LabelRealTimeProtection.Text = PowerShell("(Get-MpComputerStatus).RealTimeProtectionEnabled")
 
     End Sub
 
 
     Sub Protection()
 
-
-        'Anti-Spy
-        Dim antiSpyware As String = Command.PowerShell("(Get-MpComputerStatus).AntispywareEnabled").Replace(vbCrLf, "")
-
-
-        If antiSpyware = "True" Then
-            VirusScanForm.ToggleAntispy.Checked = True
-
-        Else
-            VirusScanForm.ToggleAntispy.Checked = False
-        End If
+        ''Anti-Spy
+        'Dim antiSpyware As String = Command.PowerShell("(Get-MpComputerStatus).AntispywareEnabled").Replace(vbCrLf, "")
 
 
-        ''Real-Time
-        Dim realTime As String = Command.PowerShell("(Get-MpComputerStatus).RealTimeProtectionEnabled").Replace(vbCrLf, "")
+        'If antiSpyware = "True" Then
+        '    VirusScanForm.ToggleAntispy.Checked = True
+
+        'Else
+        '    VirusScanForm.ToggleAntispy.Checked = False
+        'End If
 
 
-        If realTime = "True" Then
-            VirusScanForm.ToggleRealTime.Checked = True
-
-        Else
-
-            VirusScanForm.ToggleRealTime.Checked = False
-        End If
+        '''Real-Time
+        'Dim realTime As String = Command.PowerShell("(Get-MpComputerStatus).RealTimeProtectionEnabled").Replace(vbCrLf, "")
 
 
+        'If realTime = "True" Then
+        '    VirusScanForm.ToggleRealTime.Checked = True
 
-        ''Web-Protection
-        'ToggleWebProtection
+        'Else
 
+        '    VirusScanForm.ToggleRealTime.Checked = False
+        'End If
 
+        '''Web-Protection
+        ''ToggleWebProtection
 
-
-        ''Anti ransom
+        '''Anti ransom
         'ToggleAntiRansom
-
-
-
-
     End Sub
 
 
 
-    Public Function PowerShell(Cmdlet As String)
+    Public Function PowerShellCmd(Cmdlet As String)
 
 
         Dim p As Process = New Process()

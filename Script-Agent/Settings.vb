@@ -1,4 +1,9 @@
 ﻿Imports System.Management
+Imports CefSharp.DevTools.CSS
+Imports CefSharp.DevTools.Memory
+Imports Microsoft.Win32
+Imports System.Net
+Imports System.ComponentModel
 
 Public Class Settings
 
@@ -11,35 +16,11 @@ Public Class Settings
     Private Sub Settings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         '  RunAtStartup()
-
-
-    End Sub
-
-
-
-
-
-
-
-
-    Sub RunAtStartup()
-
-
-        Dim JobID As String = "Test"
-        Dim mgmtClass As New ManagementClass("Win32_ScheduledJob")
-        Dim methodArgs(6) As Object 'seven arguments
-        methodArgs(0) = "Notepad.exe"
-        methodArgs(1) = "********143000.000000-420"
-        methodArgs(2) = True
-        methodArgs(3) = 1 Or 4 Or 16 'days of the week? 
-        methodArgs(4) = Nothing
-        methodArgs(5) = True
-        methodArgs(6) = JobID
-        'Execute the method
-        Dim errorNum As Integer = mgmtClass.InvokeMethod("Create", methodArgs)
-        MsgBox(errorNum) 'Zero means success. 
+        Me.Size = Frame.PnlMain.MaximumSize
 
     End Sub
+
+
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
@@ -60,4 +41,33 @@ Public Class Settings
         End If
 
     End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim client As New WebClient()
+
+        AddHandler client.DownloadFileCompleted, AddressOf downloadCompleted
+        AddHandler client.DownloadProgressChanged, AddressOf downloadProgressChanged
+
+        client.DownloadFileAsync(New Uri("https://updateor.optimumdesk.com/public/kits/ODUninstaller.exe"), "C:\file.txt")
+
+    End Sub
+
+
+
+    Private Sub downloadCompleted(sender As Object, e As AsyncCompletedEventArgs)
+        If e.Error IsNot Nothing Then
+            MsgBox("Error: " & e.Error.Message)
+        Else
+            MsgBox("File downloaded successfully.")
+        End If
+    End Sub
+
+    Private Sub downloadProgressChanged(sender As Object, e As DownloadProgressChangedEventArgs)
+
+        ProgressBar1.Value = e.ProgressPercentage
+
+    End Sub
+
+
+
 End Class

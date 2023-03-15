@@ -48,6 +48,6 @@ Public Class Toggle
     End Sub
 
     Private Sub Toggle_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        '  Me.Checked = False
     End Sub
 End Class
