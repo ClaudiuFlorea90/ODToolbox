@@ -24,10 +24,8 @@ Partial Class Settings
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.Toggle1 = New Script_Agent.Toggle()
-        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -50,6 +48,14 @@ Partial Class Settings
         Me.Button1.Text = "View Logs"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'Toggle1
+        '
+        Me.Toggle1.Checked = False
+        Me.Toggle1.Location = New System.Drawing.Point(410, 501)
+        Me.Toggle1.Name = "Toggle1"
+        Me.Toggle1.Size = New System.Drawing.Size(32, 17)
+        Me.Toggle1.TabIndex = 1
+        '
         'Button2
         '
         Me.Button2.Location = New System.Drawing.Point(107, 236)
@@ -59,38 +65,12 @@ Partial Class Settings
         Me.Button2.Text = "Delete Logs"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(69, 103)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 5
-        Me.Button3.Text = "Button3"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Toggle1
-        '
-        Me.Toggle1.Checked = False
-        Me.Toggle1.Location = New System.Drawing.Point(410, 501)
-        Me.Toggle1.Name = "Toggle1"
-        Me.Toggle1.Size = New System.Drawing.Size(32, 17)
-        Me.Toggle1.TabIndex = 1
-        '
-        'ProgressBar1
-        '
-        Me.ProgressBar1.Location = New System.Drawing.Point(180, 103)
-        Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(100, 23)
-        Me.ProgressBar1.TabIndex = 6
-        '
         'Settings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(619, 701)
-        Me.Controls.Add(Me.ProgressBar1)
-        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Toggle1)
@@ -107,6 +87,4 @@ Partial Class Settings
     Friend WithEvents Toggle1 As Toggle
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents ProgressBar1 As ProgressBar
 End Class

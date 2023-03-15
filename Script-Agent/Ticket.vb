@@ -207,7 +207,7 @@ Public Class Ticket
         Panel_2.Hide()
         Panel_3.Hide()
 
-        Me.Size = Frame.PnlMain.MaximumSize
+
 
 
     End Sub

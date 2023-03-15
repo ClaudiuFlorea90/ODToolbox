@@ -27,15 +27,6 @@ Imports System.Runtime.InteropServices
 Imports System.Drawing
 Imports System.Windows.Documents
 Imports CefSharp.DevTools.CSS
-Imports System.Net.NetworkInformation
-Imports CircularProgressBar
-Imports Microsoft.DirectX
-Imports System.Net
-Imports Newtonsoft.Json.Linq
-Imports System.Collections.ObjectModel
-Imports System.Management.Automation
-Imports System.Text.RegularExpressions
-
 
 Public Class Home
     Dim T1, T2, T3, T4, T5, T6, T7, T8, T9, tw As System.Threading.Thread
@@ -59,129 +50,100 @@ Public Class Home
     Sub JustCpuLoad()
 
         Do
-            Try
-                Dim cpuCounter As New PerformanceCounter("Processor", "% Processor Time", "_Total")
-                Dim cpuUsage As Single = cpuCounter.NextValue()
-                System.Threading.Thread.Sleep(1000)
-                cpuUsage = cpuCounter.NextValue()
+
+            'CPU
+            Dim CpuLoad As Integer
+            Dim _nameSpace$ = "root\CIMV2"
+            Dim wql = "SELECT * FROM WIN32_Processor"
+            Dim _strBuilder As New StringBuilder
+            Using _moSearcher As New ManagementObjectSearcher(_nameSpace, wql)
+
+                For Each _mobject As ManagementObject In _moSearcher.Get
+
+                    Try
+                        CpuLoad = ($"{_mobject("LoadPercentage")}")
 
 
-                Label24.Text = Math.Round(cpuUsage) & " %"
-                Chart3.ChartAreas("ChartArea1").AxisY.Maximum = 100
-                Chart3.Series(0).Points.AddY(Math.Round(cpuUsage))
+                        CircularProgressBar1.Maximum = 100
+                        CircularProgressBar1.Value = CpuLoad
+                        CircularProgressBar1.Text = CpuLoad & "%"
 
-                ' Remove the major grid lines
-                Chart3.ChartAreas(0).AxisX.MajorGrid.Enabled = False
-                Chart3.ChartAreas(0).AxisY.MajorGrid.Enabled = False
+                        If CpuLoad >= 0 Then
+                            CircularProgressBar1.ProgressColor = Color.Green
+                        End If
+                        If CpuLoad > 10 Then
+                            CircularProgressBar1.ProgressColor = Color.Yellow
+                        End If
+                        If CpuLoad > 25 Then
+                            CircularProgressBar1.ProgressColor = Color.Orange
+                        End If
 
-                ' Remove the minor grid lines
-                Chart3.ChartAreas(0).AxisX.MinorGrid.Enabled = False
-                Chart3.ChartAreas(0).AxisY.MinorGrid.Enabled = False
-                Chart3.ChartAreas(0).AxisX.LabelStyle.ForeColor = Color.WhiteSmoke
-                Chart3.ChartAreas(0).AxisY.LabelStyle.ForeColor = Color.MediumSeaGreen
-                ' Chart3.ChartAreas(0).AxisX.LabelStyle.Enabled = False
-                'Chart3.ChartAreas(0).AxisY.LabelStyle.Enabled = False
+                        If CpuLoad > 40 Then
+                            CircularProgressBar1.ProgressColor = Color.OrangeRed
+                        End If
 
-            Catch ex As Exception
-                MsgBox("Error: " & ex.Message)
-            End Try
+                        If CpuLoad > 60 Then
+                            CircularProgressBar1.ProgressColor = Color.Red
+                        End If
 
+                    Catch ex As Exception
+                        Frame.logger(ex.Message, "Error. Cpu Load")
+                    End Try
 
-            Thread.Sleep(1000)
+                    Thread.Sleep(1000)
+                Next
+            End Using
         Loop
 
     End Sub
 
 
     Sub Thermal()
+
         Do
-            Try
-                While True
-                    Dim CpuTemp As Integer
-                    Dim GpuTemp As Integer
+            'CPU amd GPU TEMP
 
-                    Dim computer As New Computer()
-                    computer.Open()
-                    computer.CPUEnabled = True
-                    computer.GPUEnabled = True
+            Dim CpuTemp As Integer
+            Dim GpuTemp As Integer
 
-                    Dim cpuT = computer.Hardware.FirstOrDefault(Function(h) h.HardwareType = HardwareType.CPU)
-                    Dim gpuT = computer.Hardware.FirstOrDefault(Function(h) h.HardwareType = HardwareType.GpuAti)
-
-                    If cpuT IsNot Nothing Then
-                        cpuT.Update()
-                        CpuTemp = cpuT.Sensors.Where(Function(s) s.SensorType = SensorType.Temperature).FirstOrDefault().Value
+            Dim computer As New Computer()
+            computer.Open()
+            computer.CPUEnabled = True
+            computer.GPUEnabled = True
+            Dim cpuT = computer.Hardware.Where(Function(h) h.HardwareType = HardwareType.CPU).FirstOrDefault()
+            Dim gpuT = computer.Hardware.Where(Function(h) h.HardwareType = HardwareType.GpuAti).FirstOrDefault()
 
 
-                        Chart2.ChartAreas("ChartArea1").AxisY.Maximum = 100
-                        Chart2.Series(0).Points.AddY(CpuTemp)
-                        Label26.Text = CpuTemp & " c'"
+            If cpuT IsNot Nothing Then
+                cpuT.Update()
 
-                        ' Remove the major grid lines
-                        Chart2.ChartAreas(0).AxisX.MajorGrid.Enabled = False
-                        Chart2.ChartAreas(0).AxisY.MajorGrid.Enabled = False
+                Dim tempSensors = cpuT.Sensors.Where(Function(s) s.SensorType = SensorType.Temperature)
+                'tempSensors.ToList.ForEach(Sub(s) Console.WriteLine(s.Value))
+                tempSensors.ToList.ForEach(Sub(s) CpuTemp = (s.Value))
 
-                        ' Remove the minor grid lines
-                        Chart2.ChartAreas(0).AxisX.MinorGrid.Enabled = False
-                        Chart2.ChartAreas(0).AxisY.MinorGrid.Enabled = False
-                        Chart2.ChartAreas(0).AxisX.LabelStyle.ForeColor = Color.MediumSeaGreen
-                        Chart2.ChartAreas(0).AxisY.LabelStyle.ForeColor = Color.WhiteSmoke
-                        'Chart2.ChartAreas(0).AxisX.LabelStyle.Enabled = False
-                        'Chart2.ChartAreas(0).AxisY.LabelStyle.Enabled = False
-
-
-                    End If
-
-                    Thread.Sleep(1000)
-                End While
-            Catch ex As Exception
-
-            End Try
-
-
-            '    'CPU amd GPU TEMP
-
-            '    Dim CpuTemp As Integer
-            '    Dim GpuTemp As Integer
-
-            '    Dim computer As New Computer()
-            '    computer.Open()
-            '    computer.CPUEnabled = True
-            '    computer.GPUEnabled = True
-            '    Dim cpuT = computer.Hardware.Where(Function(h) h.HardwareType = HardwareType.CPU).FirstOrDefault()
-            '    Dim gpuT = computer.Hardware.Where(Function(h) h.HardwareType = HardwareType.GpuAti).FirstOrDefault()
-
-
-            '    If cpuT IsNot Nothing Then
-            '        cpuT.Update()
-
-            '        Dim tempSensors = cpuT.Sensors.Where(Function(s) s.SensorType = SensorType.Temperature)
-            '        'tempSensors.ToList.ForEach(Sub(s) Console.WriteLine(s.Value))
-            '        tempSensors.ToList.ForEach(Sub(s) CpuTemp = (s.Value))
-
-            '        CircularProgressBar4.Maximum = 100
-            '        CircularProgressBar4.Value = CpuTemp
-            '        CircularProgressBar4.Text = CpuTemp & "c'"
+                CircularProgressBar4.Maximum = 100
+                CircularProgressBar4.Value = CpuTemp
+                CircularProgressBar4.Text = CpuTemp & "c'"
 
 
 
-            '        If CpuTemp >= 0 Then
-            '            CircularProgressBar4.ProgressColor = Color.Blue
-            '        End If
-            '        If CpuTemp > 40 Then
-            '            CircularProgressBar4.ProgressColor = Color.Green
-            '        End If
-            '        If CpuTemp > 55 Then
-            '            CircularProgressBar4.ProgressColor = Color.Orange
-            '        End If
-            '        If CpuTemp > 65 Then
-            '            CircularProgressBar4.ProgressColor = Color.Red
-            '        End If
+                If CpuTemp >= 0 Then
+                    CircularProgressBar4.ProgressColor = Color.Blue
+                End If
+                If CpuTemp > 40 Then
+                    CircularProgressBar4.ProgressColor = Color.Green
+                End If
+                If CpuTemp > 55 Then
+                    CircularProgressBar4.ProgressColor = Color.Orange
+                End If
+                If CpuTemp > 65 Then
+                    CircularProgressBar4.ProgressColor = Color.Red
+                End If
 
-            '    End If
+            End If
 
 
-            '    Thread.Sleep(1000)
+            Thread.Sleep(1000)
         Loop
 
     End Sub
@@ -191,29 +153,35 @@ Public Class Home
 
     Sub CpuData()
 
-        Try
-            Dim mSearcher As New ManagementObjectSearcher("SELECT * FROM Win32_Processor")
-            For Each item In mSearcher.Get
-                Lbl_CPU.Text = item.Properties("Name").Value
-                Label31.Text = item.Properties("SocketDesignation").Value
-                Label71.Text = item.Properties("MaxClockSpeed").Value & " GHz"
-                Label3.Text = item.Properties("NumberOfCores").Value
-                Label7.Text = item.Properties("NumberOfLogicalProcessors").Value
-                Label94.Text = item.Properties("L2CacheSize").Value
-                Label97.Text = item.Properties("L3CacheSize").Value
-                Label93.Text = item.Properties("Status").Value
-                Label96.Text = item.Properties("CurrentVoltage").Value
-                Label98.Text = item.Properties("ProcessorId").Value
-                Label102.Text = item.Properties("DeviceID").Value
-                Label104.Text = item.Properties("AddressWidth").Value
-                Label108.Text = item.Properties("DataWidth").Value
-                Label112.Text = item.Properties("ExtClock").Value
-                Label106.Text = item.Properties("PowerManagementSupported").Value
-                Label110.Text = item.Properties("Version").Value
-            Next
-        Catch ex As Exception
 
-        End Try
+        Dim mSearcher As New ManagementObjectSearcher("SELECT * FROM Win32_Processor")
+
+        For Each item In mSearcher.Get
+            Lbl_CPU.Text = item.Properties("Name").Value
+            Label31.Text = item.Properties("SocketDesignation").Value
+            Label71.Text = item.Properties("MaxClockSpeed").Value & " GHz"
+            Label3.Text = item.Properties("NumberOfCores").Value
+            Label7.Text = item.Properties("NumberOfLogicalProcessors").Value
+            Label90.Text = item.Properties("Manufacturer").Value
+            Try
+                Label91.Text = item.Properties("Virtualization").Value
+            Catch ex As Exception
+            End Try
+
+            Label94.Text = item.Properties("L2CacheSize").Value
+            Label97.Text = item.Properties("L3CacheSize").Value
+            Label93.Text = item.Properties("Status").Value
+            Label96.Text = item.Properties("CurrentVoltage").Value
+            Label98.Text = item.Properties("ProcessorId").Value
+            Label99.Text = item.Properties("LastErrorCode").Value
+            Label102.Text = item.Properties("DeviceID").Value
+            Label104.Text = item.Properties("AddressWidth").Value
+            Label108.Text = item.Properties("DataWidth").Value
+            Label112.Text = item.Properties("ExtClock").Value
+            Label106.Text = item.Properties("PowerManagementSupported").Value
+            Label110.Text = item.Properties("Version").Value
+        Next
+
     End Sub
 
 
@@ -227,7 +195,7 @@ Public Class Home
 
 
             If item.Properties("Index").Value = 0 Then
-
+                Panel1.Hide()
 
                 Label169.Text = item.Properties("Caption").Value
                 Label114.Text = item.Properties("Status").Value
@@ -248,6 +216,7 @@ Public Class Home
 
 
             ElseIf item.Properties("Index").Value = 1 Then
+                Panel1.Show()
 
                 Label170.Text = item.Properties("Caption").Value
                 Label154.Text = item.Properties("Status").Value
@@ -291,22 +260,11 @@ Public Class Home
                 Label40.Text = curDrive.Name
 
 
+                CircularProgressBar5.Maximum = TotalSize
+                CircularProgressBar5.SubscriptText = curDrive.Name
+                CircularProgressBar5.Text = Procent & "%"
 
-                Chart4.ChartAreas("ChartArea1").AxisY.Maximum = TotalSize
-                Chart4.Series("Series1").Points.AddXY("Free " & FreeSpace & " gb", FreeSpace)
-                Chart4.Series("Series1").Points.AddXY("Used " & UsedSpace & " gb", UsedSpace)
-
-
-                ' Create a new TextAnnotation object
-                Dim textAnnotation As New DataVisualization.Charting.TextAnnotation()
-                textAnnotation.Text = curDrive.Name & " " & Procent & "%"
-                textAnnotation.Font = New Font("Microsoft PhagsPa", 9.7, FontStyle.Bold)
-                textAnnotation.ForeColor = Color.WhiteSmoke
-                textAnnotation.X = 35
-                textAnnotation.Y = 50
-                Chart4.Annotations.Add(textAnnotation)
-                'Chart4.Series("Series1").ChartType = DataVisualization.Charting.SeriesChartType.Doughnut
-
+                Me.Invoke(Sub() CircularProgressBar5.Value = UsedSpace)
 
 
             Else
@@ -318,19 +276,11 @@ Public Class Home
 
                 Dim Procent2 As Integer = UsedSpace2 / TotalSize2 * 100
 
+                CircularProgressBar6.Maximum = TotalSize2
+                CircularProgressBar6.SubscriptText = curDrive.Name
+                Me.Invoke(Sub() CircularProgressBar6.Text = Procent2 & "%")
+                Me.Invoke(Sub() CircularProgressBar6.Value = UsedSpace2)
 
-
-                Chart5.ChartAreas("ChartArea1").AxisY.Maximum = TotalSize2
-                Chart5.Series("Series1").Points.AddXY("Free " & FreeSpace2 & " gb", FreeSpace2)
-                Chart5.Series("Series1").Points.AddXY("Used " & UsedSpace2 & " gb", UsedSpace2)
-
-                Dim textAnnotation As New DataVisualization.Charting.TextAnnotation()
-                textAnnotation.Text = curDrive.Name & " " & Procent2 & "%"
-                textAnnotation.Font = New Font("Microsoft PhagsPa", 9.7, FontStyle.Bold)
-                textAnnotation.ForeColor = Color.WhiteSmoke
-                textAnnotation.X = 35
-                textAnnotation.Y = 50
-                Chart5.Annotations.Add(textAnnotation)
 
             End If
         Next
@@ -346,7 +296,6 @@ Public Class Home
         Dim objprintjob
         Dim objWMIService = GetObject("winmgmts:{impersonationLevel=impersonate}!\\.\root\cimv2")
         Dim colPrintJobs
-
         Try
             colPrintJobs = objWMIService.ExecQuery("Select MemoryDevices from Win32_PhysicalMemoryArray")
             For Each objprintjob In colPrintJobs
@@ -354,14 +303,19 @@ Public Class Home
                 Exit For
             Next
         Catch
-            ' Exception handling code
         End Try
+        colPrintJobs = Nothing
+        objprintjob = Nothing
 
         colPrintJobs = objWMIService.ExecQuery("Select * from Win32_PhysicalMemory")
         For Each objprintjob In colPrintJobs
+
+
             TotalCapacity = CLng(TotalCapacity + objprintjob.Capacity)
             UsedSlots = UsedSlots + 1
+
         Next
+
 
         Dim mSearcher As New ManagementObjectSearcher("SELECT * FROM Win32_PhysicalMemory")
 
@@ -378,178 +332,61 @@ Public Class Home
             Label141.Text = item.Properties("Manufacturer").Value
             Label129.Text = item.Properties("SerialNumber").Value
             Label137.Text = item.Properties("Tag").Value
-            Exit For ' only retrieve the first memory device info
+
         Next
+
 
         Label18.Text = TotalSlots
         Label17.Text = UsedSlots
         Label116.Text = "Total ram slots used " & UsedSlots & " out of " & TotalSlots
 
+
     End Sub
 
 
-    Sub NetworkData(lblNetworkActivity As Label)
+    Sub NetworkData()
 
-        Dim computerIPv4 As String = System.Net.Dns.GetHostEntry(System.Net.Dns.GetHostName()).AddressList.FirstOrDefault(Function(i) i.AddressFamily = System.Net.Sockets.AddressFamily.InterNetwork).ToString()
-        Dim computerIPv6 As String = System.Net.Dns.GetHostEntry(System.Net.Dns.GetHostName()).AddressList.FirstOrDefault(Function(i) i.AddressFamily = System.Net.Sockets.AddressFamily.InterNetworkV6).ToString()
-        Label191.Text = "IpV4 Address: " & computerIPv4
-        Label188.Text = "IpV6 Address: " & computerIPv6
+        Dim mSearcher As New ManagementObjectSearcher("SELECT * FROM Win32_NetworkAdapterConfiguration")
+
+        For Each item In mSearcher.Get
 
 
-        Dim interfaces As NetworkInterface() = NetworkInterface.GetAllNetworkInterfaces()
-        For Each intf As NetworkInterface In interfaces
-            If intf.OperationalStatus = OperationalStatus.Up AndAlso intf.NetworkInterfaceType <> NetworkInterfaceType.Loopback Then
 
-                Label36.Text = intf.Name & " - " & intf.Description 'Name and description
-                Exit For
+            If item.Properties("IPEnabled").Value = "True" Then
+
+                Label68.Text = item.Properties("Description").Value
+
             End If
+
+
         Next
 
-
-
-        Try
-            Label68.Text = "Send Speed: 0 Kbps"
-            Label77.Text = "Receive Speed: 0 Kbps"
-
-            Dim loopChart As Integer = 0
-            Do
-                loopChart = loopChart + 1
-                Dim adapters As NetworkInterface() = NetworkInterface.GetAllNetworkInterfaces()
-                For Each adapter As NetworkInterface In adapters
-                    If adapter.NetworkInterfaceType = NetworkInterfaceType.Ethernet AndAlso adapter.OperationalStatus = OperationalStatus.Up Then
-                        Dim statistics As IPInterfaceStatistics = adapter.GetIPStatistics
-
-                        'Calculate Send Speed
-                        Dim sendSpeed As Double = (statistics.BytesSent / 1024) * 8
-                        'Calculate Receive Speed
-                        Dim receiveSpeed As Double = (statistics.BytesReceived / 1024) * 8
-
-
-
-                        'Chart1.ChartAreas(0).AxisX.MajorGrid.Enabled = False
-                        'Chart1.ChartAreas(0).AxisY.MajorGrid.Enabled = False
-
-                        ''' Remove the minor grid lines
-                        'Chart1.ChartAreas(0).AxisX.MinorGrid.Enabled = False
-                        'Chart1.ChartAreas(0).AxisY.MinorGrid.Enabled = False
-                        '' Chart1.ChartAreas(0).AxisX.LabelStyle.Enabled = False
-                        ''Chart1.ChartAreas(0).AxisY.LabelStyle.Enabled = False
-
-
-                        'Chart1.ChartAreas(0).AxisY.Maximum = sendSpeed + receiveSpeed
-                        'Chart1.Series(0).Points.AddY((sendSpeed))
-                        ''Chart1.Series(1).Points.AddXY((loopChart, receiveSpeed))
-
-
-
-
-
-
-
-                        If sendSpeed > 1000 Then
-                            sendSpeed /= 1000
-                            Label68.Text = "Send Speed: " & sendSpeed.ToString("0.00") & " Mbps"
-                        Else
-                            Label68.Text = "Send Speed: " & sendSpeed.ToString("0.00") & " Kbps"
-                        End If
-
-
-                        If receiveSpeed > 1000 Then
-                            receiveSpeed /= 1000
-                            Label77.Text = "Receive Speed: " & receiveSpeed.ToString("0.00") & " Mbps"
-                        Else
-                            Label77.Text = "Receive Speed: " & receiveSpeed.ToString("0.00") & " Kbps"
-                        End If
-
-
-                    End If
-                Next
-                Thread.Sleep(1000)
-            Loop
-        Catch ex As Exception
-
-        End Try
-
-
-
-
-
-
-
     End Sub
 
 
-    Sub LiveStatsPnl_Default()
 
-        'For Each control As Panel In PanelLiveStats.Controls
-        '    ToolBox.RoundedCorner(control, 20)
 
-        'Next
+
+    Sub LiveStatsPnl()
 
         PanelLiveStats.Size = PanelLiveStats.MinimumSize
-        PanelLiveStats.Location = New Point(4, 303)
+        PanelLiveStats.Location = New Point(3, 130)
 
-
-        ''Sub Panels
+        'Sub Panels
         PanelCPU.Size = PanelCPU.MinimumSize
-        PanelCPU.Location = New Point(3, 3)
-        ToolBox.RoundedCorner(PanelCPU, 10)
-
+        PanelCPU.Location = New Point(3, 2)
 
         PanelRam.Size = PanelRam.MinimumSize
-        PanelRam.Location = New Point(320, 3)
+        PanelRam.Location = New Point(3, 132)
 
         PanelDisk.Size = PanelDisk.MinimumSize
-        PanelDisk.Location = New Point(4, 109)
+        PanelDisk.Location = New Point(3, 263)
 
         PanelNetwork.Size = PanelNetwork.MinimumSize
-        PanelNetwork.Location = New Point(521, 109)
+        PanelNetwork.Location = New Point(3, 393)
 
         PanelGpu.Size = PanelGpu.MinimumSize
-        PanelGpu.Location = New Point(727, 3)
-
-        Pnl_Windows.Size = Pnl_Windows.MinimumSize
-        Pnl_Computer.Size = Pnl_Computer.MinimumSize
-
-    End Sub
-
-
-    Sub Main6Pnl(pnl As Panel)
-
-        If pnl.Size = pnl.MinimumSize Then
-            Do Until pnl.Size = MaximumSize
-                pnl.Width = pnl.Width + 25
-                pnl.Height = pnl.Height + 25
-
-            Loop
-
-
-            For Each control As Control In pnl.Controls
-                control.Show()
-
-            Next
-
-            pnl.BackgroundImage = My.Resources.Resources.eye
-            pnl.Location = New Point(459, 252)
-        Else
-            Do Until pnl.Size = MinimumSize
-                pnl.Width = pnl.Width - 25
-                pnl.Height = pnl.Height - 25
-
-            Loop
-
-            For Each control As Control In pnl.Controls
-                control.Hide()
-            Next
-            pnl.BackgroundImage = Nothing
-            pnl.Location = New Point(0, 0)
-        End If
-
-
-
-
-
-        pnl.BringToFront()
+        PanelGpu.Location = New Point(348, 393)
 
     End Sub
 
@@ -557,19 +394,40 @@ Public Class Home
 
     Private Sub Home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        Me.Size = Frame.PnlMain.MaximumSize
-
-
-
+        Me.Hide()
 
         System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls = False
 
+        Me.Size = Frame.PnlMain.MaximumSize
+        Pnl_Windows.Size = Pnl_Windows.MinimumSize
+        Pnl_Computer.Size = Pnl_Computer.MinimumSize
+        Pnl_Network.Size = Pnl_Network.MinimumSize
+        Pnl_Processes.Size = Pnl_Processes.MinimumSize
+        Pnl_User.Size = Pnl_User.MinimumSize
+
         PictureBox6.Image = GetUserTile(System.Security.Principal.WindowsIdentity.GetCurrent().Name)
+        Label5.Text = "Live stats"
+
+
+        Pnl_Windows.Location = New Point(3, 266)
+        Pnl_Network.Location = New Point(331, 266)
+        Pnl_Processes.Location = New Point(517, 266)
+        Pnl_Computer.Location = New Point(3, 309)
+        Pnl_User.Location = New Point(242, 309)
+
+        Pnl_Windows.Size = Pnl_Windows.MinimumSize
+        Pnl_Network.Size = Pnl_Network.MinimumSize
+        Pnl_Processes.Size = Pnl_Processes.MinimumSize
+        Pnl_Computer.Size = Pnl_Computer.MinimumSize
+        Pnl_User.Size = Pnl_User.MinimumSize
+
+        LiveStatsPnl()
 
 
 
 
-        LiveStatsPnl_Default()
+
+
 
 
         T1 = New System.Threading.Thread(AddressOf DeviceInfo)
@@ -593,6 +451,13 @@ Public Class Home
         T6.Start()
         T7.Start()
         T8.Start()
+
+
+        Me.Show()
+
+
+        'Pnl_Network.ra
+
 
 
     End Sub
@@ -629,7 +494,25 @@ Public Class Home
             Me.Invoke(Sub() Lbl_RamInUse.Text = sanalyer.ToString("##.# GB"))
             Me.Invoke(Sub() Lbl_Available.Text = Ram_Available)
             Me.Invoke(Sub() Lbl_TotalRam.Text = Total_Ram)
+
+            Me.Invoke(Sub() CircularProgressBar2.Maximum = total)
+            Me.Invoke(Sub() CircularProgressBar2.Value = sanalyer)
+            Me.Invoke(Sub() CircularProgressBar2.Text = test & "%")
             Label2.Text = "Total ram used: " & sanalyer.ToString("N") & "/" & Total_Ram
+
+
+            If test >= 0 Then
+                CircularProgressBar2.ProgressColor = Color.Green
+            End If
+            If test > 30 Then
+                CircularProgressBar2.ProgressColor = Color.Orange
+            End If
+            If test > 60 Then
+                CircularProgressBar2.ProgressColor = Color.Red
+            End If
+            If test > 90 Then
+                CircularProgressBar2.ProgressColor = Color.DarkRed
+            End If
 
 
             Dim _nameSpace$ = "root\CIMV2"
@@ -644,74 +527,120 @@ Public Class Home
                     'Lbl_FormFactor.Text = $"{_mobject("FormFactor")}"
                 Next
 
-
-                ' Add data points to the chart
-
-
             End Using
 
 
             Dim RamForUse As Integer = Total_Ram2 - sanalyer
             Dim TotalRamWTF As Integer = Total_Ram2
-            'CircularProgressBarRam2.Maximum = TotalRamWTF
-            'CircularProgressBarRam2.Value = RamForUse
+            CircularProgressBarRam2.Maximum = TotalRamWTF
+            CircularProgressBarRam2.Value = RamForUse
             Dim FreeMemProcent As Integer
             FreeMemProcent = RamForUse / TotalRamWTF * 100
-            'CircularProgressBarRam2.Text = FreeMemProcent & "%"
+
+            'Ia vezi aici mai jos!
+
+            'Label2555.Text = FreeMemProcent
+            CircularProgressBarRam2.Text = FreeMemProcent & "%"
 
 
-
-            Dim textAnnotation As New DataVisualization.Charting.TextAnnotation()
-            textAnnotation.Text = Total_Ram
-            textAnnotation.Font = New Font("Microsoft PhagsPa", 9.7, FontStyle.Bold)
-            textAnnotation.ForeColor = Color.Gray
-            textAnnotation.X = 24
-            textAnnotation.Y = 44
-            ChartRam.Annotations.Add(textAnnotation)
-
-
-
-            ChartRam.Series("Series1").Points.Clear()
-            'ChartRam.Series("Series1").Points.AddXY("Total " & Total_Ram, total)
-            ChartRam.Series("Series1").Points.AddXY("Used " & test & "% ", sanalyer)
-            ChartRam.Series("Series1").Points.AddXY("Available " & FreeMemProcent & "% ", RamForUse)
-            ' Set the chart type to Doughnut
-            ChartRam.Series("Series1").ChartType = DataVisualization.Charting.SeriesChartType.Doughnut
-
-
-
-
-            'GPU DATA LOOP
-
-            Dim query As New SelectQuery("Win32_VideoController")
-            Dim searcher As New ManagementObjectSearcher(query)
-
-
-            For Each obj As ManagementObject In searcher.Get()
-                Dim totalMemory As ULong = ULong.Parse(obj("AdapterRAM").ToString())
-                ' Dim usedMemory As ULong = ULong.Parse(obj("AdapterRAM").ToString()) - ULong.Parse(obj("AdapterFreeMemory").ToString())
-                Lbl_GpuTotalMemory.Text = "GPU total memory: " & (totalMemory / 1024 / 1024).ToString("N0") & " MB"
-                'Console.WriteLine("GPU total memory: " & (totalMemory / 1024 / 1024).ToString("N0") & " MB")
-                'Console.WriteLine("GPU used memory: " & (usedMemory / 1024 / 1024).ToString("N0") & " MB")
-            Next
+            If test >= 0 Then
+                CircularProgressBarRam2.ProgressColor = Color.Green
+            End If
+            If test > 30 Then
+                CircularProgressBarRam2.ProgressColor = Color.Orange
+            End If
+            If test > 60 Then
+                CircularProgressBarRam2.ProgressColor = Color.Red
+            End If
+            If test > 90 Then
+                CircularProgressBarRam2.ProgressColor = Color.DarkRed
+            End If
 
 
 
 
 
 
+            'Using _moSearcher As New ManagementObjectSearcher(_nameSpace, wql)
+
+            '            For Each _mobject As ManagementObject In _moSearcher.Get
+
+            '                LabelCpuClockSpeed.Text = Convert.ToDouble($"{_mobject("CurrentClockSpeed")}") / 1000.0 & " GHz"
+            '                Label71.Text = Convert.ToDouble($"{_mobject("MaxClockSpeed")}") / 1000.0 & " GHz"
+
+
+            '                Try
+
+            '                    Dim UsageValue As Integer = $"{_mobject("LoadPercentage")}"
+            '                    CircularProgressBar1.Value = UsageValue
+            '                    CircularProgressBar1.Text = UsageValue & "%"
+            '                    'Label24234324293534.Text = UsageValue & "%"
+
+            '                    If UsageValue >= 0 Then
+            '                        CircularProgressBar1.ProgressColor = Color.Green
+            '                    End If
+            '                    If UsageValue > 10 Then
+            '                        CircularProgressBar1.ProgressColor = Color.Yellow
+            '                    End If
+            '                    If UsageValue > 25 Then
+            '                        CircularProgressBar1.ProgressColor = Color.Orange
+            '                    End If
+
+            '                    If UsageValue > 40 Then
+            '                        CircularProgressBar1.ProgressColor = Color.OrangeRed
+            '                    End If
+
+            '                    If UsageValue > 60 Then
+            '                        CircularProgressBar1.ProgressColor = Color.Red
+            '                    End If
+
+            '                Catch ex As Exception
+
+            '                    Frame.logger(ex.Message, "Error")
+            '                End Try
+
+
+            '            Next
+
+            '        End Using
+
+            ''CPU USAGE
 
 
 
 
 
+            Dim GpuTotalMemory As Double = Command.PowerShell("(Get-WmiObject Win32_VideoController | select @{Expression={$_.adapterram/1GB};label='GB'}).GB")
+            Dim GpuMemoryUsed As Double = Command.PowerShell("$GpuMemTotal = (((Get-Counter '\GPU Process Memory(*)\Local Usage').CounterSamples | where CookedValue).CookedValue | measure -sum).sum; Write-Output ($GpuMemTotal/1GB)")
+            Dim GpuUsage As Double = Command.PowerShell("$GpuUseTotal = (((Get-Counter '\GPU Engine(*engtype_3D)\Utilization Percentage').CounterSamples | where CookedValue).CookedValue | measure -sum).sum; Write-Output $GpuUseTotal")
 
 
 
 
+            Lbl_GpuTotalMemory.Text = Math.Round(GpuTotalMemory) & " Gb"
+            LabelGpuMemoryUsed.Text = Format(GpuMemoryUsed, "##.##") & " GB"
+            LblGpuUsage.Text = Math.Round(GpuUsage) & " %"
 
 
 
+
+            CircularProgressBar7.Maximum = 100
+            CircularProgressBar7.Value = Math.Round(GpuUsage)
+            CircularProgressBar7.Text = Math.Round(GpuUsage) & "%"
+
+
+            If GpuUsage >= 0 Then
+                CircularProgressBar7.ProgressColor = Color.Green
+            End If
+            If GpuUsage > 30 Then
+                CircularProgressBar7.ProgressColor = Color.Orange
+            End If
+            If GpuUsage > 60 Then
+                CircularProgressBar7.ProgressColor = Color.Red
+            End If
+            If GpuUsage > 90 Then
+                CircularProgressBar7.ProgressColor = Color.DarkRed
+            End If
 
 
 
@@ -721,11 +650,10 @@ Public Class Home
             strResult &= (Environment.TickCount / 3600000 Mod 24).ToString("n0") + " hours, "
             strResult &= (Environment.TickCount / 120000 Mod 60).ToString("n0") + " minutes, "
 
-            Lbl_UpTime.Text = "uptime : " & strResult
+            Lbl_UpTime.Text = strResult
 
 
-
-            Thread.Sleep(2000)
+            Thread.Sleep(1000)
         Loop
 
 
@@ -752,6 +680,9 @@ Public Class Home
 
         Next
         Thread.Sleep(1000)
+
+
+
 
         'UInt16 AddressWidth;
         'UInt16 Architecture;
@@ -804,6 +735,12 @@ Public Class Home
 
 
 
+
+
+
+
+
+
         Dim _nameSpace$ = "root\CIMV2"
 
         Dim wql = "SELECT * FROM WIN32_Processor"
@@ -834,13 +771,21 @@ Public Class Home
 
 
 
+        Lbl_RAM.Text = (CDbl(My.Computer.Info.TotalPhysicalMemory) / 1024 / 1024 / 1024).ToString("##.# GB")
+
+
+
         'USER INFO
 
-        Lbl_User.Text = "Welcome " & My.Computer.Registry.GetValue("HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion", "RegisteredOwner", Nothing)
+        Lbl_User.Text = My.Computer.Registry.GetValue("HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion", "RegisteredOwner", Nothing)
+
+
+
 
 
 
         'OS Info
+
 
         Lbl_OS.Text = "        " & My.Computer.Info.OSFullName
         lbl_os_build.Text = My.Computer.Registry.GetValue("HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion", "CurrentBuild", Nothing)
@@ -855,40 +800,78 @@ Public Class Home
         Next
         Label13.Text = dtmInstallDate
 
-        ''IS WINDOWS ACTIVATED?
-        'Dim searcher As New ManagementObjectSearcher(
-        '  "root\CIMV2",
-        '     "SELECT * FROM SoftwareLicensingProduct WHERE LicenseStatus = 1")
-        'Dim myCollection As ManagementObjectCollection
-        'Dim myObject As ManagementObject
-        'myCollection = searcher.Get()
-        'If myCollection.Count = 0 Then
+        'IS WINDOWS ACTIVATED?
+        Dim searcher As New ManagementObjectSearcher(
+          "root\CIMV2",
+             "SELECT * FROM SoftwareLicensingProduct WHERE LicenseStatus = 1")
+        Dim myCollection As ManagementObjectCollection
+        Dim myObject As ManagementObject
+        myCollection = searcher.Get()
+        If myCollection.Count = 0 Then
 
-        '    Label4.Text = "Yes"
+            Label4.Text = "Yes"
 
-        'Else
-        '    Label4.Text = "No"
+        Else
+            Label4.Text = "No"
 
-        'End If
+        End If
 
 
         'GPU
+        Dim query As New System.Management.SelectQuery("Win32_VideoController")
+        Dim search As New System.Management.ManagementObjectSearcher(query)
+        Dim info As System.Management.ManagementObject
+        For Each info In search.Get()
+            Lbl_GPU_WTF.Text = info("Caption").ToString
+            'Lbl_GPU2.Text = info("VideoProcessor").ToString
 
-        Dim query As New SelectQuery("Win32_VideoController")
-        Dim searcher As New ManagementObjectSearcher(query)
-        For Each obj As ManagementObject In searcher.Get()
-            Dim driverVersion As String = obj("DriverVersion").ToString()
-            Dim driverDate As String = obj("DriverDate").ToString()
-            Dim gpuName As String = obj("Name").ToString()
-            Label20.Text = driverVersion
-            Label30.Text = driverDate
-            Lbl_GPU_WTF.Text = gpuName
         Next
 
-        'Lbl_GPU_WTF.Text = info("Caption").ToString
-        ''Lbl_GPU2.Text = info("VideoProcessor").ToString
+
+
+
+
+        '    Lbl_OS.Text = "        " & My.Computer.Info.OSFullName
+        '    lbl_os_build.Text = My.Computer.Registry.GetValue("HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion", "CurrentBuild", Nothing)
+        '    Label9.Text = My.Computer.Registry.GetValue("HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion", "DisplayVersion", Nothing)
+
+        '    Dim dtmInstallDate As DateTime
+        '    Dim oSearcher As New ManagementObjectSearcher("SELECT * FROM Win32_OperatingSystem")
+        '    For Each oMgmtObj As ManagementObject In oSearcher.Get
+        '        dtmInstallDate = ManagementDateTimeConverter.ToDateTime(CStr(oMgmtObj("InstallDate")))
+
+
+        '    Next
+        '    Label13.Text = dtmInstallDate
+
+        '    'IS WINDOWS ACTIVATED?
+        '    Dim searcher As New ManagementObjectSearcher(
+        '      "root\CIMV2",
+        '         "SELECT * FROM SoftwareLicensingProduct WHERE LicenseStatus = 1")
+        '    Dim myCollection As ManagementObjectCollection
+        '    Dim myObject As ManagementObject
+        '    myCollection = searcher.Get()
+        '    If myCollection.Count = 0 Then
+
+        '        Label4.Text = "Yes"
+
+        '    Else
+        '        Label4.Text = "No"
+
+        '    End If
+
+
+
+
+
 
     End Sub
+
+
+
+
+
+
 
 
     <DllImport("shell32", EntryPoint:="#261", CharSet:=CharSet.Unicode, PreserveSig:=False)>
@@ -911,7 +894,71 @@ Public Class Home
 
 
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Pnl_Windows.Click, Lbl_OS.Click
+    'Private Sub GPUInfo()
+
+
+
+
+
+    '    Dim query As New System.Management.SelectQuery("Win32_VideoController")
+    '    Dim search As New System.Management.ManagementObjectSearcher(query)
+    '    Dim info As System.Management.ManagementObject
+    '    For Each info In search.Get()
+    '        Lbl_GPU_WTF.Text = info("Caption").ToString
+    '        'Lbl_GPU2.Text = info("VideoProcessor").ToString
+
+    '    Next
+
+
+    '    Do
+
+    '        Dim GpuTotalMemory As Double = Command.PowerShell("(Get-WmiObject Win32_VideoController | select @{Expression={$_.adapterram/1GB};label='GB'}).GB")
+    '        Dim GpuMemoryUsed As Double = Command.PowerShell("$GpuMemTotal = (((Get-Counter '\GPU Process Memory(*)\Local Usage').CounterSamples | where CookedValue).CookedValue | measure -sum).sum; Write-Output ($GpuMemTotal/1GB)")
+    '        Dim GpuUsage As Double = Command.PowerShell("$GpuUseTotal = (((Get-Counter '\GPU Engine(*engtype_3D)\Utilization Percentage').CounterSamples | where CookedValue).CookedValue | measure -sum).sum; Write-Output $GpuUseTotal")
+
+
+
+
+    '        Lbl_GpuTotalMemory.Text = Math.Round(GpuTotalMemory) & " Gb"
+    '        LabelGpuMemoryUsed.Text = Format(GpuMemoryUsed, "##.##") & " GB"
+    '        LblGpuUsage.Text = Math.Round(GpuUsage) & " %"
+
+
+
+
+    '        CircularProgressBar7.Maximum = 100
+    '        CircularProgressBar7.Value = Math.Round(GpuUsage)
+    '        CircularProgressBar7.Text = Math.Round(GpuUsage) & "%"
+
+
+    '        If GpuUsage >= 0 Then
+    '            CircularProgressBar7.ProgressColor = Color.Green
+    '        End If
+    '        If GpuUsage > 30 Then
+    '            CircularProgressBar7.ProgressColor = Color.Orange
+    '        End If
+    '        If GpuUsage > 60 Then
+    '            CircularProgressBar7.ProgressColor = Color.Red
+    '        End If
+    '        If GpuUsage > 90 Then
+    '            CircularProgressBar7.ProgressColor = Color.DarkRed
+    '        End If
+
+
+
+
+
+
+
+
+
+    '        Thread.Sleep(1000)
+    '    Loop
+
+
+
+    'End Sub
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Btn_Windows.Click, Pnl_Windows.Click, Lbl_OS.Click
 
 
         Timer_Windows.Start()
@@ -919,7 +966,7 @@ Public Class Home
 
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Pnl_Computer.Click, Lbl_PC.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Btn_Computer.Click, Pnl_Computer.Click, Lbl_PC.Click
         Timer_Computer.Start()
 
 
@@ -930,6 +977,13 @@ Public Class Home
     End Sub
 
     Private Sub Timer_ExpandLiveStatus_Tick(sender As Object, e As EventArgs) Handles Timer_ExpandLiveStatus.Tick
+
+        Pnl_Windows.SendToBack()
+        Pnl_Computer.SendToBack()
+        Pnl_Network.SendToBack()
+        Pnl_Processes.SendToBack()
+        Pnl_User.SendToBack()
+
 
 
         If isCollapsed6 Then
@@ -968,18 +1022,20 @@ Public Class Home
 
 
 
+
     End Sub
 
 
     Sub ExpandCpu()
 
-        ' PanelCPU.Location = New Point(3, 2)
+        PanelCPU.Location = New Point(3, 2)
 
         If PanelCPU.Size = PanelCPU.MinimumSize Then
-            PanelCPU.Size = PanelLiveStats.Size
+
             PanelCPU.BringToFront()
+            PanelCPU.Size = PanelCPU.MaximumSize
         Else
-            LiveStatsPnl_Default()
+            PanelCPU.Size = PanelCPU.MinimumSize
 
         End If
 
@@ -991,13 +1047,14 @@ Public Class Home
 
         If PanelRam.Size = PanelRam.MinimumSize Then
 
-            PanelRam.Size = PanelLiveStats.Size
+            PanelRam.Size = PanelRam.MaximumSize
             PanelRam.Location = PanelCPU.Location
             PanelRam.BringToFront()
 
 
         Else
-            LiveStatsPnl_Default()
+            PanelRam.Size = PanelRam.MinimumSize
+            PanelRam.Location = New Point(3, 132)
         End If
 
 
@@ -1007,12 +1064,15 @@ Public Class Home
     Sub ExpandDisk()
 
         If PanelDisk.Size = PanelDisk.MinimumSize Then
+
             PanelDisk.Location = PanelCPU.Location
-            PanelDisk.Size = PanelLiveStats.Size
+            PanelDisk.Size = PanelDisk.MaximumSize
             PanelDisk.BringToFront()
 
         Else
-            LiveStatsPnl_Default()
+            PanelDisk.Size = PanelDisk.MinimumSize
+            PanelDisk.Location = New Point(3, 263)
+
         End If
 
 
@@ -1024,12 +1084,17 @@ Public Class Home
     Sub ExpandNetwork()
 
         If PanelNetwork.Size = PanelNetwork.MinimumSize Then
+
             PanelNetwork.Location = PanelCPU.Location
-            PanelNetwork.Size = PanelLiveStats.Size
+            PanelNetwork.Size = PanelNetwork.MaximumSize
+            CircularProgressBar3.Location = New Point(555, 13)
+
             PanelNetwork.BringToFront()
 
         Else
-            LiveStatsPnl_Default()
+            PanelNetwork.Size = PanelNetwork.MinimumSize
+            PanelNetwork.Location = New Point(3, 393)
+            CircularProgressBar3.Location = New Point(230, 12)
         End If
 
 
@@ -1043,189 +1108,180 @@ Public Class Home
         If PanelGpu.Size = PanelGpu.MinimumSize Then
 
             PanelGpu.Location = PanelCPU.Location
-            PanelGpu.Size = PanelLiveStats.Size
+            PanelGpu.Size = PanelGpu.MaximumSize
+            CircularProgressBar7.Location = New Point(555, 13)
 
             PanelGpu.BringToFront()
 
         Else
-            LiveStatsPnl_Default()
+            PanelGpu.Size = PanelGpu.MinimumSize
+            PanelGpu.Location = New Point(348, 393)
+
+            CircularProgressBar7.Location = New Point(230, 12)
+
         End If
 
 
 
     End Sub
 
-    Private Sub Lbl_CPU_Click(sender As Object, e As EventArgs) Handles Lbl_CPU.Click, PanelCPU.Click
-        ExpandCpu()
+
+
+
+    Private Sub PanelLiveStats_Click(sender As Object, e As EventArgs) Handles PanelLiveStats.Click, PanelCPU.Click, CircularProgressBar4.Click, CircularProgressBar1.Click
+
+
+        Timer_ExpandLiveStatus.Start()
+
+
     End Sub
 
 
 
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click, PanelRam.Click
+    Private Sub Lbl_CPU_Click(sender As Object, e As EventArgs) Handles Lbl_CPU.Click
+
+        If PanelLiveStats.Size = PanelLiveStats.MinimumSize Then
+
+            Timer_ExpandLiveStatus.Start()
+
+        Else
+
+            ExpandCpu()
+
+        End If
+
+
+
+
+
+
+    End Sub
+
+    Private Sub PanelCPU_Hover(sender As Object, e As EventArgs) Handles PanelCPU.MouseEnter
+
+        If PanelCPU.Size = PanelCPU.MinimumSize Then
+            PanelCPU.BorderStyle = BorderStyle.FixedSingle
+        End If
+
+
+
+
+
+
+    End Sub
+
+    Private Sub PanelCPU_Leave(sender As Object, e As EventArgs) Handles PanelCPU.MouseLeave
+
+        PanelCPU.BorderStyle = BorderStyle.None
+
+    End Sub
+
+    Private Sub PanelRam_Hover(sender As Object, e As EventArgs) Handles PanelRam.MouseEnter
+
+        If PanelRam.Size = PanelRam.MinimumSize Then
+
+            PanelRam.BorderStyle = BorderStyle.FixedSingle
+
+        End If
+
+    End Sub
+
+    Private Sub PanelRam_Leave(sender As Object, e As EventArgs) Handles PanelRam.MouseLeave
+
+        PanelRam.BorderStyle = BorderStyle.None
+
+    End Sub
+
+    Private Sub PanelDisk_Enter(sender As Object, e As EventArgs) Handles PanelDisk.MouseEnter
+
+        If PanelDisk.Size = PanelDisk.MinimumSize Then
+
+            PanelDisk.BorderStyle = BorderStyle.FixedSingle
+
+        End If
+
+
+
+    End Sub
+
+    Private Sub PanelDisk_Leave(sender As Object, e As EventArgs) Handles PanelDisk.MouseLeave
+
+        PanelDisk.BorderStyle = BorderStyle.None
+
+    End Sub
+
+
+    Private Sub PanelNetwork_Enter(sender As Object, e As EventArgs) Handles PanelNetwork.MouseEnter
+
+        If PanelNetwork.Size = PanelNetwork.MinimumSize Then
+            PanelNetwork.BorderStyle = BorderStyle.FixedSingle
+        End If
+
+
+    End Sub
+
+
+    Private Sub PanelNetwork_Leave(sender As Object, e As EventArgs) Handles PanelNetwork.MouseLeave
+        PanelNetwork.BorderStyle = BorderStyle.None
+
+    End Sub
+
+
+
+    Private Sub PanelGPU_Enter(sender As Object, e As EventArgs) Handles PanelGpu.MouseEnter
+
+        If PanelGpu.Size = PanelGpu.MinimumSize Then
+
+            PanelGpu.BorderStyle = BorderStyle.FixedSingle
+        End If
+
+
+    End Sub
+
+
+    Private Sub PanelGPU_Leave(sender As Object, e As EventArgs) Handles PanelGpu.MouseLeave
+
+        PanelGpu.BorderStyle = BorderStyle.None
+    End Sub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
 
         ExpandRam()
 
     End Sub
 
-    Private Sub Timer_User_Tick(sender As Object, e As EventArgs) Handles Timer_User.Tick
+    Private Sub Lbl_Disk_Click(sender As Object, e As EventArgs) Handles Lbl_Disk.Click
+
+        ExpandDisk()
 
     End Sub
 
-    Private Sub Chart5_Click(sender As Object, e As EventArgs) Handles Chart5.Click, Chart4.Click
+
+    Private Sub Lbl_GPU_WTF_Click(sender As Object, e As EventArgs) Handles Lbl_GPU_WTF.Click
+
+        ExpandGPU()
 
     End Sub
 
-    Private Sub Label110_Click(sender As Object, e As EventArgs) Handles Label110.Click
-
-    End Sub
-
-    Private Sub PanelRam_Paint(sender As Object, e As PaintEventArgs) Handles PanelRam.Paint
-        Dim rect As New Rectangle(0, 0, PanelRam.Width - 1, PanelRam.Height - 1)
-        Dim path As New Drawing2D.GraphicsPath()
-        Dim radius As Integer = 20
-
-        path.StartFigure()
-        path.AddArc(rect.X, rect.Y, radius, radius, 180, 90)
-        path.AddLine(rect.X + radius, rect.Y, rect.Width - radius, rect.Y)
-        path.AddArc(rect.X + rect.Width - radius, rect.Y, radius, radius, 270, 90)
-        path.AddLine(rect.Width, rect.Y + radius, rect.Width, rect.Height - radius)
-        path.AddArc(rect.X + rect.Width - radius, rect.Y + rect.Height - radius, radius, radius, 0, 90)
-        path.AddLine(rect.Width - radius, rect.Height, rect.X + radius, rect.Height)
-        path.AddArc(rect.X, rect.Y + rect.Height - radius, radius, radius, 90, 90)
-        path.CloseFigure()
-
-        PanelRam.Region = New Region(path)
-    End Sub
+    Private Sub Label68_Click(sender As Object, e As EventArgs) Handles Label68.Click
 
 
+        ExpandNetwork()
 
-    Private Sub PanelDisk_Paint(sender As Object, e As PaintEventArgs) Handles PanelDisk.Paint
-
-        Dim rect As New Rectangle(0, 0, PanelDisk.Width - 1, PanelDisk.Height - 1)
-        Dim path As New Drawing2D.GraphicsPath()
-        Dim radius As Integer = 20
-
-        path.StartFigure()
-        path.AddArc(rect.X, rect.Y, radius, radius, 180, 90)
-        path.AddLine(rect.X + radius, rect.Y, rect.Width - radius, rect.Y)
-        path.AddArc(rect.X + rect.Width - radius, rect.Y, radius, radius, 270, 90)
-        path.AddLine(rect.Width, rect.Y + radius, rect.Width, rect.Height - radius)
-        path.AddArc(rect.X + rect.Width - radius, rect.Y + rect.Height - radius, radius, radius, 0, 90)
-        path.AddLine(rect.Width - radius, rect.Height, rect.X + radius, rect.Height)
-        path.AddArc(rect.X, rect.Y + rect.Height - radius, radius, radius, 90, 90)
-        path.CloseFigure()
-
-        PanelDisk.Region = New Region(path)
-
-    End Sub
-
-    Private Sub PanelGpu_Paint(sender As Object, e As PaintEventArgs) Handles PanelGpu.Paint
-        Dim rect As New Rectangle(0, 0, PanelGpu.Width - 1, PanelGpu.Height - 1)
-        Dim path As New Drawing2D.GraphicsPath()
-        Dim radius As Integer = 20
-
-        path.StartFigure()
-        path.AddArc(rect.X, rect.Y, radius, radius, 180, 90)
-        path.AddLine(rect.X + radius, rect.Y, rect.Width - radius, rect.Y)
-        path.AddArc(rect.X + rect.Width - radius, rect.Y, radius, radius, 270, 90)
-        path.AddLine(rect.Width, rect.Y + radius, rect.Width, rect.Height - radius)
-        path.AddArc(rect.X + rect.Width - radius, rect.Y + rect.Height - radius, radius, radius, 0, 90)
-        path.AddLine(rect.Width - radius, rect.Height, rect.X + radius, rect.Height)
-        path.AddArc(rect.X, rect.Y + rect.Height - radius, radius, radius, 90, 90)
-        path.CloseFigure()
-
-        PanelGpu.Region = New Region(path)
-    End Sub
-
-    Private Sub PanelNetwork_Paint(sender As Object, e As PaintEventArgs) Handles PanelNetwork.Paint
-        Dim rect As New Rectangle(0, 0, PanelNetwork.Width - 1, PanelNetwork.Height - 1)
-        Dim path As New Drawing2D.GraphicsPath()
-        Dim radius As Integer = 20
-
-        path.StartFigure()
-        path.AddArc(rect.X, rect.Y, radius, radius, 180, 90)
-        path.AddLine(rect.X + radius, rect.Y, rect.Width - radius, rect.Y)
-        path.AddArc(rect.X + rect.Width - radius, rect.Y, radius, radius, 270, 90)
-        path.AddLine(rect.Width, rect.Y + radius, rect.Width, rect.Height - radius)
-        path.AddArc(rect.X + rect.Width - radius, rect.Y + rect.Height - radius, radius, radius, 0, 90)
-        path.AddLine(rect.Width - radius, rect.Height, rect.X + radius, rect.Height)
-        path.AddArc(rect.X, rect.Y + rect.Height - radius, radius, radius, 90, 90)
-        path.CloseFigure()
-
-        PanelNetwork.Region = New Region(path)
-    End Sub
-
-    Private Sub Pnl_Windows_Paint(sender As Object, e As PaintEventArgs) Handles Pnl_Windows.Paint
-        Dim rect As New Rectangle(0, 0, Pnl_Windows.Width - 1, Pnl_Windows.Height - 1)
-        Dim path As New Drawing2D.GraphicsPath()
-        Dim radius As Integer = 20
-
-        path.StartFigure()
-        path.AddArc(rect.X, rect.Y, radius, radius, 180, 90)
-        path.AddLine(rect.X + radius, rect.Y, rect.Width - radius, rect.Y)
-        path.AddArc(rect.X + rect.Width - radius, rect.Y, radius, radius, 270, 90)
-        path.AddLine(rect.Width, rect.Y + radius, rect.Width, rect.Height - radius)
-        path.AddArc(rect.X + rect.Width - radius, rect.Y + rect.Height - radius, radius, radius, 0, 90)
-        path.AddLine(rect.Width - radius, rect.Height, rect.X + radius, rect.Height)
-        path.AddArc(rect.X, rect.Y + rect.Height - radius, radius, radius, 90, 90)
-        path.CloseFigure()
-
-        Pnl_Windows.Region = New Region(path)
-    End Sub
-
-    Private Sub Pnl_Computer_Paint(sender As Object, e As PaintEventArgs) Handles Pnl_Computer.Paint
-        Dim rect As New Rectangle(0, 0, Pnl_Computer.Width - 1, Pnl_Computer.Height - 1)
-        Dim path As New Drawing2D.GraphicsPath()
-        Dim radius As Integer = 20
-
-        path.StartFigure()
-        path.AddArc(rect.X, rect.Y, radius, radius, 180, 90)
-        path.AddLine(rect.X + radius, rect.Y, rect.Width - radius, rect.Y)
-        path.AddArc(rect.X + rect.Width - radius, rect.Y, radius, radius, 270, 90)
-        path.AddLine(rect.Width, rect.Y + radius, rect.Width, rect.Height - radius)
-        path.AddArc(rect.X + rect.Width - radius, rect.Y + rect.Height - radius, radius, radius, 0, 90)
-        path.AddLine(rect.Width - radius, rect.Height, rect.X + radius, rect.Height)
-        path.AddArc(rect.X, rect.Y + rect.Height - radius, radius, radius, 90, 90)
-        path.CloseFigure()
-
-        Pnl_Computer.Region = New Region(path)
-    End Sub
-
-    Private Sub RoundedButton2_Click(sender As Object, e As EventArgs) Handles RoundedButton2.Click
-
-        Dim CheckAppUpdates As New System.Threading.Thread(AddressOf CheckForUpdates)
-        CheckAppUpdates.Start()
-
-    End Sub
-    Private Sub CheckForUpdates()
-        ' Create a new process to run the winget command
-        Dim process As New Process()
-        process.StartInfo.FileName = "winget"
-        process.StartInfo.Arguments = "upgrade"
-        process.StartInfo.UseShellExecute = False
-        process.StartInfo.RedirectStandardOutput = True
-        process.Start()
-
-        ' Read the output of the winget command
-        Dim output As String = process.StandardOutput.ReadToEnd()
-
-
-        ' Split the output into lines and add them to the ListView control
-        Dim lines() As String = output.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries)
-        For Each line As String In lines
-            Dim parts() As String = line.Split(vbTab)
-            If parts.Length = 2 Then
-                Dim item As New ListViewItem(parts)
-                ListView1.Items.Add(item)
-            End If
-        Next
-
-        ' Set the column headers
-        ListView1.Columns.Add("Package", 100)
-        ListView1.Columns.Add("Installed", 100)
-        ListView1.Columns.Add("Available", 100)
-        ListView1.Columns.Add("Publisher", 100)
-        process.WaitForExit()
 
     End Sub
 
@@ -1233,79 +1289,23 @@ Public Class Home
 
     End Sub
 
-    Private Sub Lbl_Disk_Click(sender As Object, e As EventArgs) Handles Lbl_Disk.Click, PanelDisk.Click
-        ExpandDisk()
-    End Sub
-
-
-    Private Sub Lbl_GPU_WTF_Click(sender As Object, e As EventArgs) Handles Lbl_GPU_WTF.Click, PanelGpu.Click
-
-        ExpandGPU()
+    Private Sub Label119_Click(sender As Object, e As EventArgs) Handles Label119.Click, Label111.Click
 
     End Sub
 
-    Private Sub Label68_Click(sender As Object, e As EventArgs) Handles Label68.Click, PanelNetwork.Click
-        ExpandNetwork()
+    Private Sub PanelNetwork_Paint(sender As Object, e As PaintEventArgs) Handles PanelNetwork.Paint
+
     End Sub
 
+    Private Sub PanelDisk_Paint(sender As Object, e As PaintEventArgs) Handles PanelDisk.Paint
 
-    Private Sub Panel7_Click(sender As Object, e As EventArgs)
-        'Main6Pnl(Panel7)
     End Sub
-
-    'Private Sub TimerTEST_Tick(sender As Object, e As EventArgs) Handles TimerTEST.Tick
-
-    '    Expand(Panel7)
-
-    'End Sub
-
-
-    'Sub Expand(pnl As Panel)
-    '    If pnl.Size = pnl.MinimumSize Then
-    '        Do Until pnl.Size = MaximumSize
-    '            pnl.Width = pnl.Width + 25
-    '            pnl.Height = pnl.Height + 25
-
-    '        Loop
-
-
-    '        For Each control As Control In pnl.Controls
-    '            control.Show()
-
-    '        Next
-
-    '        pnl.BackgroundImage = My.Resources.Resources.eye
-    '        pnl.Location = New Point(459, 252)
-    '    Else
-    '        Do Until pnl.Size = MinimumSize
-    '            pnl.Width = pnl.Width - 25
-    '            pnl.Height = pnl.Height - 25
-
-    '        Loop
-
-    '        For Each control As Control In pnl.Controls
-    '            control.Hide()
-    '        Next
-    '        pnl.BackgroundImage = Nothing
-    '        pnl.Location = New Point(0, 0)
-    '    End If
-
-
-
-
-    '    TimerTEST.Stop()
-    '    pnl.BringToFront()
-
-    'End Sub
-
-
-
 
     Private Sub WebBrowser1_DocumentCompleted(sender As Object, e As WebBrowserDocumentCompletedEventArgs)
 
     End Sub
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Lbl_User.Click
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Btn_User.Click, Pnl_User.Click, Lbl_User.Click
 
         Timer_User.Start()
 
@@ -1313,22 +1313,46 @@ Public Class Home
 
     End Sub
 
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Btn_Network.Click, Pnl_Network.Click, Lbl_Network.Click
 
+        Timer_Network.Start()
+
+    End Sub
+
+    Private Sub Btn_Processes_Click(sender As Object, e As EventArgs) Handles Btn_Processes.Click, Pnl_Processes.Click, Lbl_Process.Click
+
+
+        Timer_Processes.Start()
+
+
+    End Sub
 
     Private Sub Timer_Windows_Tick(sender As Object, e As EventArgs) Handles Timer_Windows.Tick
 
         If isCollapsed2 = False Then
             isCollapsed2 = True
             Pnl_Computer.Size = Pnl_Computer.MinimumSize
-
+            Btn_Computer.Image = ImageList_ExpandBtn.Images(1)
         End If
 
 
+        If isCollapsed3 = False Then
+            isCollapsed3 = True
+            Pnl_Network.Size = Pnl_Network.MinimumSize
+            Btn_Network.Image = ImageList_ExpandBtn.Images(1)
+        End If
 
+        If isCollapsed4 = False Then
+            isCollapsed4 = True
+            Pnl_Processes.Size = Pnl_Processes.MinimumSize
+            Btn_Processes.Image = ImageList_ExpandBtn.Images(1)
+        End If
 
-
-
-
+        If isCollapsed5 = False Then
+            isCollapsed5 = True
+            Pnl_User.Size = Pnl_User.MinimumSize
+            Btn_User.Image = ImageList_ExpandBtn.Images(1)
+        End If
 
         ''''
         If isCollapsed1 Then
@@ -1338,7 +1362,7 @@ Public Class Home
 
 
 
-
+            Btn_Windows.Image = ImageList_ExpandBtn.Images(0)
             If Pnl_Windows.Size = Pnl_Windows.MaximumSize Then
 
                 isCollapsed1 = False
@@ -1350,6 +1374,7 @@ Public Class Home
 
             Pnl_Windows.Height -= 222
             Pnl_Windows.Width -= 222
+            Btn_Windows.Image = ImageList_ExpandBtn.Images(1)
 
 
             If Pnl_Windows.Size = Pnl_Windows.MinimumSize Then
@@ -1373,9 +1398,26 @@ Public Class Home
         If isCollapsed1 = False Then
             isCollapsed1 = True
             Pnl_Windows.Size = Pnl_Windows.MinimumSize
-
+            Btn_Windows.Image = ImageList_ExpandBtn.Images(1)
         End If
 
+        If isCollapsed3 = False Then
+            isCollapsed3 = True
+            Pnl_Network.Size = Pnl_Network.MinimumSize
+            Btn_Network.Image = ImageList_ExpandBtn.Images(1)
+        End If
+
+        If isCollapsed4 = False Then
+            isCollapsed4 = True
+            Pnl_Processes.Size = Pnl_Processes.MinimumSize
+            Btn_Processes.Image = ImageList_ExpandBtn.Images(1)
+        End If
+
+        If isCollapsed5 = False Then
+            isCollapsed5 = True
+            Pnl_User.Size = Pnl_User.MinimumSize
+            Btn_User.Image = ImageList_ExpandBtn.Images(1)
+        End If
 
         ''''
 
@@ -1385,6 +1427,8 @@ Public Class Home
             Pnl_Computer.Width += 222
 
 
+
+            Btn_Computer.Image = ImageList_ExpandBtn.Images(0)
 
 
             If Pnl_Computer.Size = Pnl_Computer.MaximumSize Then
@@ -1399,7 +1443,7 @@ Public Class Home
             Pnl_Computer.Height -= 222
             Pnl_Computer.Width -= 222
 
-
+            Btn_Computer.Image = ImageList_ExpandBtn.Images(1)
 
             If Pnl_Computer.Size = Pnl_Computer.MinimumSize Then
 
@@ -1417,27 +1461,210 @@ Public Class Home
 
     End Sub
 
-    Private Sub Timer_Processes_Tick(sender As Object, e As EventArgs)
+    Private Sub Timer_Network_Tick(sender As Object, e As EventArgs) Handles Timer_Network.Tick
 
         If isCollapsed1 = False Then
             isCollapsed1 = True
             Pnl_Windows.Size = Pnl_Windows.MinimumSize
-
+            Btn_Windows.Image = ImageList_ExpandBtn.Images(1)
         End If
 
         If isCollapsed2 = False Then
             isCollapsed2 = True
             Pnl_Computer.Size = Pnl_Computer.MinimumSize
+            Btn_Computer.Image = ImageList_ExpandBtn.Images(1)
+        End If
+
+        If isCollapsed4 = False Then
+            isCollapsed4 = True
+            Pnl_Processes.Size = Pnl_Processes.MinimumSize
+            Btn_Processes.Image = ImageList_ExpandBtn.Images(1)
+        End If
+
+        If isCollapsed5 = False Then
+            isCollapsed5 = True
+            Pnl_User.Size = Pnl_User.MinimumSize
+            Btn_User.Image = ImageList_ExpandBtn.Images(1)
+        End If
+
+        ''''
+
+        If isCollapsed3 Then
+
+
+            Pnl_Network.Height += 222
+            Pnl_Network.Width += 222
+            Pnl_Network.Location = Pnl_Windows.Location
+
+
+            Btn_Network.Image = ImageList_ExpandBtn.Images(0)
+
+            If Pnl_Network.Size = Pnl_Network.MaximumSize Then
+
+                isCollapsed3 = False
+                PnlExp = True
+                Timer_Network.Stop()
+
+
+            End If
+        Else
+
+            Pnl_Network.Height -= 222
+            Pnl_Network.Width -= 222
+            Btn_Network.Image = ImageList_ExpandBtn.Images(1)
+
+            If Pnl_Network.Size = Pnl_Network.MinimumSize Then
+
+                Pnl_Network.Location = New Point(331, 266)
+                isCollapsed3 = True
+                PnlExp = False
+                Timer_Network.Stop()
+            End If
+
+        End If
+
+        LastExpPnl = Pnl_Network
+        Pnl_Network.BringToFront()
+
+    End Sub
+
+    Private Sub Timer_Processes_Tick(sender As Object, e As EventArgs) Handles Timer_Processes.Tick
+
+        If isCollapsed1 = False Then
+            isCollapsed1 = True
+            Pnl_Windows.Size = Pnl_Windows.MinimumSize
+            Btn_Windows.Image = ImageList_ExpandBtn.Images(1)
+        End If
+
+        If isCollapsed2 = False Then
+            isCollapsed2 = True
+            Pnl_Computer.Size = Pnl_Computer.MinimumSize
+            Btn_Computer.Image = ImageList_ExpandBtn.Images(1)
+        End If
+
+        If isCollapsed3 = False Then
+            isCollapsed3 = True
+            Pnl_Network.Size = Pnl_Network.MinimumSize
+            Btn_Network.Image = ImageList_ExpandBtn.Images(1)
+        End If
+
+        If isCollapsed5 = False Then
+            isCollapsed5 = True
+            Pnl_User.Size = Pnl_User.MinimumSize
+            Btn_User.Image = ImageList_ExpandBtn.Images(1)
+        End If
+
+        ''''
+
+        If isCollapsed4 Then
+
+            Pnl_Processes.Height += 222
+            Pnl_Processes.Width += 222
+            Pnl_Processes.Location = Pnl_Windows.Location
+
+
+            Btn_Processes.Image = ImageList_ExpandBtn.Images(0)
+
+            If Pnl_Processes.Size = Pnl_Processes.MaximumSize Then
+
+                isCollapsed4 = False
+                PnlExp = True
+                Timer_Processes.Stop()
+            End If
+        Else
+
+            Pnl_Processes.Height -= 222
+            Pnl_Processes.Width -= 222
+            Pnl_Processes.Location = New Point(517, 266)
+
+            Btn_Processes.Image = ImageList_ExpandBtn.Images(1)
+
+            If Pnl_Processes.Size = Pnl_Processes.MinimumSize Then
+
+
+                isCollapsed4 = True
+                PnlExp = False
+                Timer_Processes.Stop()
+            End If
+
         End If
 
 
-
-
+        LastExpPnl = Pnl_Processes
+        Pnl_Processes.BringToFront()
 
 
 
     End Sub
 
+    Private Sub Timer_User_Tick(sender As Object, e As EventArgs) Handles Timer_User.Tick
+
+
+        If isCollapsed1 = False Then
+            isCollapsed1 = True
+            Pnl_Windows.Size = Pnl_Windows.MinimumSize
+            Btn_Windows.Image = ImageList_ExpandBtn.Images(1)
+        End If
+
+        If isCollapsed2 = False Then
+            isCollapsed2 = True
+            Pnl_Computer.Size = Pnl_Computer.MinimumSize
+            Btn_Computer.Image = ImageList_ExpandBtn.Images(1)
+        End If
+
+
+        If isCollapsed3 = False Then
+            isCollapsed3 = True
+            Pnl_Network.Size = Pnl_Network.MinimumSize
+            Btn_Network.Image = ImageList_ExpandBtn.Images(1)
+        End If
+
+        If isCollapsed4 = False Then
+            isCollapsed5 = True
+            Pnl_Processes.Size = Pnl_Processes.MinimumSize
+            Btn_Processes.Image = ImageList_ExpandBtn.Images(1)
+        End If
+
+        ''''
+
+
+        If isCollapsed5 Then
+
+            Btn_User.Image = ImageList_ExpandBtn.Images(0)
+            Pnl_User.Height += 222
+            Pnl_User.Width += 222
+            Pnl_User.Location = Pnl_Computer.Location
+
+
+            If Pnl_User.Size = Pnl_User.MaximumSize Then
+                Timer_User.Stop()
+                isCollapsed5 = False
+                PnlExp = True
+            End If
+        Else
+
+            Pnl_User.Height -= 222
+            Pnl_User.Width -= 222
+            Btn_User.Image = ImageList_ExpandBtn.Images(1)
+
+
+
+            If Pnl_User.Size = Pnl_User.MinimumSize Then
+
+                Pnl_User.Location = New Point(242, 309)
+                Timer_User.Stop()
+                isCollapsed5 = True
+                PnlExp = False
+            End If
+
+        End If
+
+
+        LastExpPnl = Pnl_User
+        Pnl_User.BringToFront()
+
+
+    End Sub
 
 
 

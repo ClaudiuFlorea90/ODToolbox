@@ -24,10 +24,10 @@ Partial Class Ticket
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Ticket))
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.TbTitleES = New System.Windows.Forms.TextBox()
         Me.Panel_1 = New System.Windows.Forms.Panel()
@@ -37,13 +37,21 @@ Partial Class Ticket
         Me.Panel_3 = New System.Windows.Forms.Panel()
         Me.Panel_2 = New System.Windows.Forms.Panel()
         Me.Pnl_ExpertTicket = New System.Windows.Forms.Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.TbDescriptionES = New System.Windows.Forms.TextBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.iL_UploadBtns = New System.Windows.Forms.ImageList(Me.components)
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Pnl_AdamChat = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.ImageList2 = New System.Windows.Forms.ImageList(Me.components)
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Tb_AdamChat = New System.Windows.Forms.TextBox()
@@ -52,6 +60,7 @@ Partial Class Ticket
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Edit = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Panel_No_History = New System.Windows.Forms.Panel()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -61,9 +70,12 @@ Partial Class Ticket
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.Pnl_Hostory = New System.Windows.Forms.Label()
         Me.Panel_TicketCreated = New System.Windows.Forms.Panel()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -71,34 +83,22 @@ Partial Class Ticket
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.Button8 = New System.Windows.Forms.Button()
         Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.Edit = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
-        Me.Button9 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Pnl_ExpertTicket.SuspendLayout()
+        Me.Panel2.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Pnl_AdamChat.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Pnl_History.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel_No_History.SuspendLayout()
         Me.Panel_Yes_History.SuspendLayout()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel_TicketCreated.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ImageList1
@@ -119,10 +119,10 @@ Partial Class Ticket
         Me.TbTitleES.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TbTitleES.Font = New System.Drawing.Font("Microsoft PhagsPa", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TbTitleES.ForeColor = System.Drawing.SystemColors.Control
-        Me.TbTitleES.Location = New System.Drawing.Point(4, 63)
+        Me.TbTitleES.Location = New System.Drawing.Point(3, 5)
         Me.TbTitleES.Multiline = True
         Me.TbTitleES.Name = "TbTitleES"
-        Me.TbTitleES.Size = New System.Drawing.Size(491, 44)
+        Me.TbTitleES.Size = New System.Drawing.Size(345, 44)
         Me.TbTitleES.TabIndex = 3
         Me.TbTitleES.Text = "Title"
         '
@@ -192,21 +192,26 @@ Partial Class Ticket
         'Pnl_ExpertTicket
         '
         Me.Pnl_ExpertTicket.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
-        Me.Pnl_ExpertTicket.Controls.Add(Me.Button9)
-        Me.Pnl_ExpertTicket.Controls.Add(Me.Button8)
-        Me.Pnl_ExpertTicket.Controls.Add(Me.TbDescriptionES)
-        Me.Pnl_ExpertTicket.Controls.Add(Me.Button1)
+        Me.Pnl_ExpertTicket.Controls.Add(Me.Panel2)
         Me.Pnl_ExpertTicket.Controls.Add(Me.PictureBox2)
-        Me.Pnl_ExpertTicket.Controls.Add(Me.Button2)
         Me.Pnl_ExpertTicket.Controls.Add(Me.Label3)
-        Me.Pnl_ExpertTicket.Controls.Add(Me.Button3)
-        Me.Pnl_ExpertTicket.Controls.Add(Me.TbTitleES)
-        Me.Pnl_ExpertTicket.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.Pnl_ExpertTicket.Location = New System.Drawing.Point(12, 56)
-        Me.Pnl_ExpertTicket.MaximumSize = New System.Drawing.Size(1011, 650)
+        Me.Pnl_ExpertTicket.Location = New System.Drawing.Point(1688, 94)
         Me.Pnl_ExpertTicket.Name = "Pnl_ExpertTicket"
-        Me.Pnl_ExpertTicket.Size = New System.Drawing.Size(1011, 650)
+        Me.Pnl_ExpertTicket.Size = New System.Drawing.Size(670, 603)
         Me.Pnl_ExpertTicket.TabIndex = 5
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.TbDescriptionES)
+        Me.Panel2.Controls.Add(Me.Button1)
+        Me.Panel2.Controls.Add(Me.Button2)
+        Me.Panel2.Controls.Add(Me.Button3)
+        Me.Panel2.Controls.Add(Me.TbTitleES)
+        Me.Panel2.Location = New System.Drawing.Point(6, 64)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(652, 533)
+        Me.Panel2.TabIndex = 7
         '
         'TbDescriptionES
         '
@@ -214,12 +219,48 @@ Partial Class Ticket
         Me.TbDescriptionES.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TbDescriptionES.Font = New System.Drawing.Font("Microsoft PhagsPa", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TbDescriptionES.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.TbDescriptionES.Location = New System.Drawing.Point(4, 113)
+        Me.TbDescriptionES.Location = New System.Drawing.Point(3, 55)
         Me.TbDescriptionES.Multiline = True
         Me.TbDescriptionES.Name = "TbDescriptionES"
-        Me.TbDescriptionES.Size = New System.Drawing.Size(992, 250)
+        Me.TbDescriptionES.Size = New System.Drawing.Size(642, 250)
         Me.TbDescriptionES.TabIndex = 3
         Me.TbDescriptionES.Text = "Description"
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.DodgerBlue
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Microsoft PhagsPa", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.Control
+        Me.Button1.ImageIndex = 3
+        Me.Button1.ImageList = Me.ImageList1
+        Me.Button1.Location = New System.Drawing.Point(3, 311)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(166, 56)
+        Me.Button1.TabIndex = 2
+        Me.Button1.Text = "Sent Ticket"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.Green
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Microsoft PhagsPa", 11.25!)
+        Me.Button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button2.ImageIndex = 1
+        Me.Button2.ImageList = Me.iL_UploadBtns
+        Me.Button2.Location = New System.Drawing.Point(354, 6)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(136, 43)
+        Me.Button2.TabIndex = 2
+        Me.Button2.Text = "Add Files"
+        Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'iL_UploadBtns
         '
@@ -227,16 +268,41 @@ Partial Class Ticket
         Me.iL_UploadBtns.TransparentColor = System.Drawing.Color.Transparent
         Me.iL_UploadBtns.Images.SetKeyName(0, "camera.png")
         Me.iL_UploadBtns.Images.SetKeyName(1, "document.png")
-        Me.iL_UploadBtns.Images.SetKeyName(2, "paperclip.png")
-        Me.iL_UploadBtns.Images.SetKeyName(3, "dslr-camera.png")
-        Me.iL_UploadBtns.Images.SetKeyName(4, "paperclip (1).png")
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.Green
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Microsoft PhagsPa", 11.25!)
+        Me.Button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button3.ImageIndex = 0
+        Me.Button3.ImageList = Me.iL_UploadBtns
+        Me.Button3.Location = New System.Drawing.Point(496, 6)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(149, 43)
+        Me.Button3.TabIndex = 2
+        Me.Button3.Text = "Take Pictures"
+        Me.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button3.UseVisualStyleBackColor = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.Script_Agent.My.Resources.Resources.customer_service
+        Me.PictureBox2.Location = New System.Drawing.Point(3, 3)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(62, 54)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 5
+        Me.PictureBox2.TabStop = False
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft PhagsPa", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label3.Location = New System.Drawing.Point(71, 16)
+        Me.Label3.Location = New System.Drawing.Point(71, 27)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(124, 21)
         Me.Label3.TabIndex = 6
@@ -251,10 +317,9 @@ Partial Class Ticket
         Me.Pnl_AdamChat.Controls.Add(Me.Label1)
         Me.Pnl_AdamChat.Controls.Add(Me.Label2)
         Me.Pnl_AdamChat.Controls.Add(Me.Tb_AdamChat)
-        Me.Pnl_AdamChat.Location = New System.Drawing.Point(1212, 32)
-        Me.Pnl_AdamChat.MaximumSize = New System.Drawing.Size(1011, 650)
+        Me.Pnl_AdamChat.Location = New System.Drawing.Point(8, 48)
         Me.Pnl_AdamChat.Name = "Pnl_AdamChat"
-        Me.Pnl_AdamChat.Size = New System.Drawing.Size(1011, 650)
+        Me.Pnl_AdamChat.Size = New System.Drawing.Size(670, 603)
         Me.Pnl_AdamChat.TabIndex = 5
         '
         'Panel1
@@ -280,18 +345,56 @@ Partial Class Ticket
         Me.TextBox1.TabIndex = 3
         Me.TextBox1.Text = "Message"
         '
+        'Button4
+        '
+        Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.Button4.FlatAppearance.BorderSize = 0
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.Font = New System.Drawing.Font("Microsoft PhagsPa", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button4.ImageIndex = 0
+        Me.Button4.ImageList = Me.ImageList2
+        Me.Button4.Location = New System.Drawing.Point(441, 3)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(217, 89)
+        Me.Button4.TabIndex = 2
+        Me.Button4.Text = "Send"
+        Me.Button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.Button4.UseVisualStyleBackColor = False
+        '
         'ImageList2
         '
         Me.ImageList2.ImageStream = CType(resources.GetObject("ImageList2.ImageStream"), System.Windows.Forms.ImageListStreamer)
         Me.ImageList2.TransparentColor = System.Drawing.Color.Transparent
         Me.ImageList2.Images.SetKeyName(0, "send-message.png")
         '
+        'PictureBox5
+        '
+        Me.PictureBox5.Image = Global.Script_Agent.My.Resources.Resources.green2
+        Me.PictureBox5.Location = New System.Drawing.Point(74, 34)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(22, 22)
+        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox5.TabIndex = 5
+        Me.PictureBox5.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Script_Agent.My.Resources.Resources.ai
+        Me.PictureBox1.Location = New System.Drawing.Point(6, 3)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(62, 54)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 5
+        Me.PictureBox1.TabStop = False
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft PhagsPa", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label1.Location = New System.Drawing.Point(71, 13)
+        Me.Label1.Location = New System.Drawing.Point(74, 13)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(100, 21)
         Me.Label1.TabIndex = 4
@@ -302,7 +405,7 @@ Partial Class Ticket
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label2.Location = New System.Drawing.Point(99, 34)
+        Me.Label2.Location = New System.Drawing.Point(102, 34)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(43, 16)
         Me.Label2.TabIndex = 4
@@ -319,7 +422,7 @@ Partial Class Ticket
         Me.Tb_AdamChat.Name = "Tb_AdamChat"
         Me.Tb_AdamChat.ReadOnly = True
         Me.Tb_AdamChat.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Tb_AdamChat.Size = New System.Drawing.Size(991, 395)
+        Me.Tb_AdamChat.Size = New System.Drawing.Size(660, 395)
         Me.Tb_AdamChat.TabIndex = 3
         Me.Tb_AdamChat.Text = "  Adam Intop: Hello how are you?"
         '
@@ -331,10 +434,9 @@ Partial Class Ticket
         Me.Pnl_History.Controls.Add(Me.Panel_Yes_History)
         Me.Pnl_History.Controls.Add(Me.PictureBox6)
         Me.Pnl_History.Controls.Add(Me.Pnl_Hostory)
-        Me.Pnl_History.Location = New System.Drawing.Point(1483, 9)
-        Me.Pnl_History.MaximumSize = New System.Drawing.Size(1011, 650)
+        Me.Pnl_History.Location = New System.Drawing.Point(737, 52)
         Me.Pnl_History.Name = "Pnl_History"
-        Me.Pnl_History.Size = New System.Drawing.Size(1011, 650)
+        Me.Pnl_History.Size = New System.Drawing.Size(670, 603)
         Me.Pnl_History.TabIndex = 5
         '
         'DataGridView1
@@ -345,45 +447,45 @@ Partial Class Ticket
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.Menu
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.IndianRed
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        DataGridViewCellStyle13.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.Menu
+        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.IndianRed
+        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle13
         Me.DataGridView1.ColumnHeadersHeight = 35
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Edit})
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.DarkOrange
-        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.DarkOrange
+        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle14
         Me.DataGridView1.EnableHeadersVisualStyles = False
         Me.DataGridView1.GridColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
         Me.DataGridView1.Location = New System.Drawing.Point(3, 397)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle11
-        DataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        DataGridViewCellStyle15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle15
+        DataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        DataGridViewCellStyle16.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle16.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle16
         Me.DataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.DataGridView1.Size = New System.Drawing.Size(1008, 219)
+        Me.DataGridView1.Size = New System.Drawing.Size(662, 219)
         Me.DataGridView1.TabIndex = 12
         '
         'Column1
@@ -407,13 +509,23 @@ Partial Class Ticket
         Me.Column3.ReadOnly = True
         Me.Column3.Width = 120
         '
+        'Edit
+        '
+        Me.Edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.Edit.HeaderText = ""
+        Me.Edit.Image = CType(resources.GetObject("Edit.Image"), System.Drawing.Image)
+        Me.Edit.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
+        Me.Edit.Name = "Edit"
+        Me.Edit.ReadOnly = True
+        Me.Edit.Width = 5
+        '
         'Panel_No_History
         '
         Me.Panel_No_History.Controls.Add(Me.Button6)
         Me.Panel_No_History.Controls.Add(Me.Label6)
         Me.Panel_No_History.Location = New System.Drawing.Point(3, 63)
         Me.Panel_No_History.Name = "Panel_No_History"
-        Me.Panel_No_History.Size = New System.Drawing.Size(1005, 157)
+        Me.Panel_No_History.Size = New System.Drawing.Size(662, 157)
         Me.Panel_No_History.TabIndex = 6
         '
         'Button6
@@ -445,7 +557,7 @@ Partial Class Ticket
         Me.Panel_Yes_History.Controls.Add(Me.Label9)
         Me.Panel_Yes_History.Location = New System.Drawing.Point(3, 226)
         Me.Panel_Yes_History.Name = "Panel_Yes_History"
-        Me.Panel_Yes_History.Size = New System.Drawing.Size(1005, 152)
+        Me.Panel_Yes_History.Size = New System.Drawing.Size(662, 152)
         Me.Panel_Yes_History.TabIndex = 6
         '
         'Button7
@@ -501,6 +613,16 @@ Partial Class Ticket
         Me.Label9.TabIndex = 0
         Me.Label9.Text = "Ticket Title:"
         '
+        'PictureBox6
+        '
+        Me.PictureBox6.Image = Global.Script_Agent.My.Resources.Resources.history
+        Me.PictureBox6.Location = New System.Drawing.Point(3, 3)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(62, 54)
+        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox6.TabIndex = 5
+        Me.PictureBox6.TabStop = False
+        '
         'Pnl_Hostory
         '
         Me.Pnl_Hostory.AutoSize = True
@@ -526,11 +648,20 @@ Partial Class Ticket
         Me.Panel_TicketCreated.Controls.Add(Me.Label8)
         Me.Panel_TicketCreated.Controls.Add(Me.Label10)
         Me.Panel_TicketCreated.Controls.Add(Me.Label12)
-        Me.Panel_TicketCreated.Location = New System.Drawing.Point(477, 711)
-        Me.Panel_TicketCreated.MaximumSize = New System.Drawing.Size(1011, 650)
+        Me.Panel_TicketCreated.Location = New System.Drawing.Point(8, 674)
         Me.Panel_TicketCreated.Name = "Panel_TicketCreated"
-        Me.Panel_TicketCreated.Size = New System.Drawing.Size(1011, 650)
+        Me.Panel_TicketCreated.Size = New System.Drawing.Size(670, 603)
         Me.Panel_TicketCreated.TabIndex = 5
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = Global.Script_Agent.My.Resources.Resources.green2
+        Me.PictureBox3.Location = New System.Drawing.Point(69, 35)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(22, 22)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox3.TabIndex = 5
+        Me.PictureBox3.TabStop = False
         '
         'TextBox3
         '
@@ -540,9 +671,19 @@ Partial Class Ticket
         Me.TextBox3.Location = New System.Drawing.Point(16, 434)
         Me.TextBox3.Multiline = True
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(990, 108)
+        Me.TextBox3.Size = New System.Drawing.Size(341, 108)
         Me.TextBox3.TabIndex = 8
         Me.TextBox3.Text = "Message"
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Image = Global.Script_Agent.My.Resources.Resources.man
+        Me.PictureBox4.Location = New System.Drawing.Point(4, 3)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(62, 54)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox4.TabIndex = 5
+        Me.PictureBox4.TabStop = False
         '
         'Label13
         '
@@ -550,7 +691,7 @@ Partial Class Ticket
         Me.Label13.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label13.Location = New System.Drawing.Point(907, 8)
+        Me.Label13.Location = New System.Drawing.Point(563, 8)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(89, 15)
         Me.Label13.TabIndex = 4
@@ -560,7 +701,7 @@ Partial Class Ticket
         '
         Me.Button5.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(16, 548)
+        Me.Button5.Location = New System.Drawing.Point(363, 434)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(175, 66)
         Me.Button5.TabIndex = 7
@@ -586,7 +727,7 @@ Partial Class Ticket
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(990, 363)
+        Me.TextBox2.Size = New System.Drawing.Size(636, 363)
         Me.TextBox2.TabIndex = 6
         '
         'Label8
@@ -604,7 +745,7 @@ Partial Class Ticket
         '
         Me.Label10.AutoSize = True
         Me.Label10.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label10.Location = New System.Drawing.Point(864, 35)
+        Me.Label10.Location = New System.Drawing.Point(472, 39)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(79, 13)
         Me.Label10.TabIndex = 4
@@ -614,28 +755,11 @@ Partial Class Ticket
         '
         Me.Label12.AutoSize = True
         Me.Label12.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label12.Location = New System.Drawing.Point(940, 35)
+        Me.Label12.Location = New System.Drawing.Point(548, 39)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(56, 13)
         Me.Label12.TabIndex = 4
         Me.Label12.Text = "0 seconds"
-        '
-        'Button8
-        '
-        Me.Button8.BackColor = System.Drawing.Color.LightCoral
-        Me.Button8.FlatAppearance.BorderSize = 0
-        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button8.Font = New System.Drawing.Font("Microsoft PhagsPa", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button8.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Button8.ImageIndex = 3
-        Me.Button8.ImageList = Me.iL_UploadBtns
-        Me.Button8.Location = New System.Drawing.Point(505, 63)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(194, 40)
-        Me.Button8.TabIndex = 7
-        Me.Button8.Text = "Take screenshoot"
-        Me.Button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button8.UseVisualStyleBackColor = False
         '
         'DataGridViewImageColumn1
         '
@@ -644,166 +768,6 @@ Partial Class Ticket
         Me.DataGridViewImageColumn1.Image = CType(resources.GetObject("DataGridViewImageColumn1.Image"), System.Drawing.Image)
         Me.DataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
         Me.DataGridViewImageColumn1.Name = "DataGridViewImageColumn1"
-        Me.DataGridViewImageColumn1.Width = 5
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = Global.Script_Agent.My.Resources.Resources.green2
-        Me.PictureBox3.Location = New System.Drawing.Point(69, 35)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(22, 22)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox3.TabIndex = 5
-        Me.PictureBox3.TabStop = False
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.Image = Global.Script_Agent.My.Resources.Resources.man
-        Me.PictureBox4.Location = New System.Drawing.Point(4, 3)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(62, 54)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox4.TabIndex = 5
-        Me.PictureBox4.TabStop = False
-        '
-        'Edit
-        '
-        Me.Edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.Edit.HeaderText = ""
-        Me.Edit.Image = CType(resources.GetObject("Edit.Image"), System.Drawing.Image)
-        Me.Edit.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
-        Me.Edit.Name = "Edit"
-        Me.Edit.ReadOnly = True
-        Me.Edit.Width = 5
-        '
-        'PictureBox6
-        '
-        Me.PictureBox6.Image = Global.Script_Agent.My.Resources.Resources.history
-        Me.PictureBox6.Location = New System.Drawing.Point(3, 3)
-        Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(62, 54)
-        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox6.TabIndex = 5
-        Me.PictureBox6.TabStop = False
-        '
-        'Button9
-        '
-        Me.Button9.BackColor = System.Drawing.Color.DodgerBlue
-        Me.Button9.FlatAppearance.BorderSize = 0
-        Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button9.Font = New System.Drawing.Font("Microsoft PhagsPa", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button9.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Button9.ImageIndex = 4
-        Me.Button9.ImageList = Me.iL_UploadBtns
-        Me.Button9.Location = New System.Drawing.Point(705, 63)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(124, 40)
-        Me.Button9.TabIndex = 7
-        Me.Button9.Text = "Add files"
-        Me.Button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button9.UseVisualStyleBackColor = False
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.OliveDrab
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Microsoft PhagsPa", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Button1.ImageIndex = 3
-        Me.Button1.ImageList = Me.ImageList1
-        Me.Button1.Location = New System.Drawing.Point(4, 369)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(170, 44)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Sent Ticket"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.Script_Agent.My.Resources.Resources.customer_service
-        Me.PictureBox2.Location = New System.Drawing.Point(3, 3)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(62, 54)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 5
-        Me.PictureBox2.TabStop = False
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.Green
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Microsoft PhagsPa", 11.25!)
-        Me.Button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button2.ImageIndex = 1
-        Me.Button2.ImageList = Me.iL_UploadBtns
-        Me.Button2.Location = New System.Drawing.Point(1155, 187)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(136, 43)
-        Me.Button2.TabIndex = 2
-        Me.Button2.Text = "Add Files"
-        Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button2.UseVisualStyleBackColor = False
-        '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.Color.Green
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Microsoft PhagsPa", 11.25!)
-        Me.Button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button3.ImageIndex = 0
-        Me.Button3.ImageList = Me.iL_UploadBtns
-        Me.Button3.Location = New System.Drawing.Point(1297, 187)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(149, 43)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Text = "Take Pictures"
-        Me.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button3.UseVisualStyleBackColor = False
-        '
-        'Button4
-        '
-        Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        Me.Button4.FlatAppearance.BorderSize = 0
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Font = New System.Drawing.Font("Microsoft PhagsPa", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button4.ImageIndex = 0
-        Me.Button4.ImageList = Me.ImageList2
-        Me.Button4.Location = New System.Drawing.Point(441, 3)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(217, 89)
-        Me.Button4.TabIndex = 2
-        Me.Button4.Text = "Send"
-        Me.Button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.Button4.UseVisualStyleBackColor = False
-        '
-        'PictureBox5
-        '
-        Me.PictureBox5.Image = Global.Script_Agent.My.Resources.Resources.green2
-        Me.PictureBox5.Location = New System.Drawing.Point(71, 34)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(22, 22)
-        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox5.TabIndex = 5
-        Me.PictureBox5.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.Script_Agent.My.Resources.Resources.ai
-        Me.PictureBox1.Location = New System.Drawing.Point(3, 3)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(62, 54)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 5
-        Me.PictureBox1.TabStop = False
         '
         'Ticket
         '
@@ -817,20 +781,24 @@ Partial Class Ticket
         Me.Controls.Add(Me.Pnl_History)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Pnl_ExpertTicket)
         Me.Controls.Add(Me.Panel_3)
         Me.Controls.Add(Me.Pnl_AdamChat)
         Me.Controls.Add(Me.Panel_2)
+        Me.Controls.Add(Me.Pnl_ExpertTicket)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.MinimumSize = New System.Drawing.Size(1017, 698)
         Me.Name = "Ticket"
         Me.Text = "Ticket"
         Me.Pnl_ExpertTicket.ResumeLayout(False)
         Me.Pnl_ExpertTicket.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Pnl_AdamChat.ResumeLayout(False)
         Me.Pnl_AdamChat.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Pnl_History.ResumeLayout(False)
         Me.Pnl_History.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -838,14 +806,11 @@ Partial Class Ticket
         Me.Panel_No_History.PerformLayout()
         Me.Panel_Yes_History.ResumeLayout(False)
         Me.Panel_Yes_History.PerformLayout()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel_TicketCreated.ResumeLayout(False)
         Me.Panel_TicketCreated.PerformLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -905,6 +870,5 @@ Partial Class Ticket
     Friend WithEvents Edit As DataGridViewImageColumn
     Friend WithEvents DataGridViewImageColumn1 As DataGridViewImageColumn
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Button9 As Button
-    Friend WithEvents Button8 As Button
+    Friend WithEvents Panel2 As Panel
 End Class
