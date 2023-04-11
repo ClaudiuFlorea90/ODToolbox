@@ -18,6 +18,7 @@ Imports System.Linq.Expressions
 Imports System.Windows.Documents
 Imports FontAwesome.Sharp
 Imports Script_Agent.ToolBox
+Imports CefSharp.WinForms
 
 Public Class Frame
 
@@ -29,7 +30,7 @@ Public Class Frame
     Dim isNotifyCollapsed As Boolean = True
     Dim isAccCollapsed As Boolean = True
 
-
+    Public LastUrl As String
 
 
     'Public isCmdRunning As Boolean
@@ -93,7 +94,7 @@ Public Class Frame
 
 
         If ToolBox.isAgentInstalled = True Then
-            ToolBox.getCustomerInfo()
+            getUserFromAgent()
             'ToolBox.ChangeOverViewPnl(ToolBox.PanelMainBox)
             Command.SetMainPanel(ToolBox.PanelMainBox)
             ToolBox.SetBannerPanel(ToolBox.Panel_INFO, ToolBox.IconButton1)
@@ -123,6 +124,24 @@ Public Class Frame
 
 
     End Sub
+
+
+
+    Public Sub ChromeBrowser(url As String, Pnl As Panel)
+
+
+
+        Pnl.Controls.Clear()
+
+        Dim Chrome As New ChromiumWebBrowser(url)
+        Pnl.Controls.Add(Chrome)
+        Chrome.Dock = DockStyle.Fill
+        Chrome.BackColor = Color.Black
+        LastUrl = Chrome.Address
+        Chrome.Refresh()
+    End Sub
+
+
 
     Private Sub Form1_Paint(sender As Object, e As PaintEventArgs) Handles Me.Paint
         Dim path As New Drawing2D.GraphicsPath()
@@ -155,7 +174,7 @@ Public Class Frame
             pnl.BringToFront()
 
             For Each item As Button In pnl.Controls.OfType(Of Button)()
-                ToolBox.RoundedCorner(item, 5)
+                RoundedCorner(item, 5)
                 item.ForeColor = Color.White
                 item.BackColor = ColorTranslator.FromHtml("#2D98DA")
                 item.Font = New Font("Microsoft PhagsPa", 9, FontStyle.Regular)
@@ -317,6 +336,14 @@ Public Class Frame
                 ExpandLeftMenu.Stop()
             End If
         End If
+
+
+        For Each item As Button In PnlMenu.Controls
+            If item.GetType = GetType(Button) Then
+                RoundedCorner(item, 5)
+            End If
+
+        Next
     End Sub
 
     Private Sub ExpandNotifications_Tick(sender As Object, e As EventArgs) Handles ExpandNotifications.Tick
@@ -511,10 +538,16 @@ Public Class Frame
     End Sub
 
 
+    'Private Sub Buttton_Paint(sender As Object, e As PaintEventArgs) Handles Btn_ToolBoxLeft.Paint, Btn_Commands.Paint, Btn_VirusScan.Paint, Btn_Browser.Paint, Btn_Ticket.Paint, Btn_Settings.Paint
+
+    '    ToolBox.RoundedCorner(sender, 9)
+
+    'End Sub
+
+
+
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Btn_ToolBoxLeft.Click
-
-
 
 
         For Each thing As Control In ToolBox.Controls
@@ -539,8 +572,7 @@ Public Class Frame
 
 
         If ToolBox.isAgentInstalled = True Then
-            ToolBox.getCustomerInfo()
-            'ToolBox.ChangeOverViewPnl(ToolBox.PanelMainBox)
+            getUserFromAgent()
             Command.SetMainPanel(ToolBox.PanelMainBox)
             ToolBox.SetBannerPanel(ToolBox.Panel_INFO, ToolBox.IconButton1)
         End If
@@ -548,10 +580,6 @@ Public Class Frame
         If ToolBox.isAgentInstalled = False Then
             'To install agent
             Command.SetMainPanel(ToolBox.PanelInstallNewAgent)
-            ' ToolBox.PictureBox8.Image = ToolBox.agentToInstall.company_logo
-            'ToolBox.TextBox3.Text = ToolBox.agentToInstall.company_name
-            'ToolBox.TextBox31.Text = ToolBox.agentToInstall.company_id
-            'ToolBox.TextBox_AgentFrameWork.Text = ToolBox.ComboBox1.Text
         End If
 
         If ToolBox.isInstallRunning = True Then

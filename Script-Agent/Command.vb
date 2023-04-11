@@ -15,12 +15,443 @@ Imports CefSharp.Web
 Imports Newtonsoft.Json
 Imports CefSharp.DevTools.CSS
 Imports System.Web.Script.Serialization
-
-
-
 Module Command
 
     Public isScanning As Boolean
+
+
+
+
+    Public Sub LoadUserInfo()
+        If getUserFromAgent() = False Then
+            Dim x = getUserFromRegedit()
+            If x.companyId IsNot Nothing Then
+                ToolBox.customer_name = x.firstname
+                ToolBox.customer_lastname = x.lastname
+                ToolBox.customer_email = x.email
+                ToolBox.TB_MailToAddress.Text = x.email
+            End If
+        End If
+    End Sub
+
+    Public Function getUserFromRegedit() As SignUpRegistrationData
+
+        Dim RegKey As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.LocalMachine.OpenSubKey("SOFTWARE\ODToolbox")
+        If RegKey IsNot Nothing AndAlso RegKey.GetValue("4SmT/pypiUiAOJnVV3zvrw==") IsNot Nothing Then
+            Dim data As String = RegKey.GetValue("4SmT/pypiUiAOJnVV3zvrw==").ToString()
+            Dim json As New JavaScriptSerializer
+            json.MaxJsonLength = 2147483644
+            Dim User = json.Deserialize(Of StructuresModule.SignUpRegistrationData)(Module1.Decrypt(data))
+            Return User
+        Else
+            Return Nothing
+        End If
+    End Function
+
+
+
+
+    Public Function getUserFromAgent() As Boolean
+
+        Try
+            Dim dic As StructuresModule.SignUpRegistrationData = Nothing
+            Dim key1 As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.LocalMachine.OpenSubKey("SOFTWARE\OptimumDesk\Account")
+            Dim key2 As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.LocalMachine.OpenSubKey("SOFTWARE\Class IT\OD")
+            Dim key3 As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.LocalMachine.OpenSubKey("SOFTWARE\PCMatic\Account")
+
+            If key1 IsNot Nothing AndAlso key1.GetValue("NCne5NUp41ltZ+S8rPJxIg==") IsNot Nothing Then
+                Dim data As String = key1.GetValue("NCne5NUp41ltZ+S8rPJxIg==").ToString()
+                Dim json As New JavaScriptSerializer
+                json.MaxJsonLength = 2147483644
+                dic = json.Deserialize(Of StructuresModule.SignUpRegistrationData)(Module1.Decrypt(data))
+            ElseIf key2 IsNot Nothing AndAlso key2.GetValue("9tetZAYnyZixCW721LyyoA==") IsNot Nothing Then
+                dic = New StructuresModule.SignUpRegistrationData()
+                dic.firstname = Module1.Decrypt(key2.GetValue("9tetZAYnyZixCW721LyyoA==").ToString())
+                dic.lastname = Module1.Decrypt(key2.GetValue("yi6tK32jAfVY4fcS9Nj5tw==").ToString())
+                dic.email = Module1.Decrypt(key2.GetValue("SR3KCHzp11pUpTrd88mOOA==").ToString())
+            ElseIf key3 IsNot Nothing AndAlso key3.GetValue("NCne5NUp41ltZ+S8rPJxIg==") IsNot Nothing Then
+                Dim data As String = key3.GetValue("NCne5NUp41ltZ+S8rPJxIg==").ToString()
+                Dim json As New JavaScriptSerializer
+                json.MaxJsonLength = 2147483644
+                dic = json.Deserialize(Of StructuresModule.SignUpRegistrationData)(Module1.Decrypt(data))
+            End If
+
+            If dic.email IsNot Nothing And dic.firstname IsNot Nothing And dic.lastname IsNot Nothing Then
+
+
+                ToolBox.customer_name = dic.firstname
+                ToolBox.customer_lastname = dic.lastname
+                ToolBox.customer_email = dic.email
+                ToolBox.TB_MailToAddress.Text = dic.email
+
+                Return True
+            Else
+                Return False
+            End If
+
+        Catch ex As Exception
+            ' MsgBox(ex.Message & ".")
+        End Try
+
+
+    End Function
+
+
+    Public Sub InsertCustomerInfo(ID As String, email As String, firstName As String, lastname As String, password As String)
+
+        Dim RegKeyLocation As String
+
+        If ID = Module1.PCMaticID Then
+            RegKeyLocation = "Software\PCMATIC\Account"
+        Else
+            RegKeyLocation = "Software\OptimumDesk\Account"
+        End If
+
+        Dim info As New StructuresModule.SignUpRegistrationData()
+        Dim json As New JavaScriptSerializer
+        json.MaxJsonLength = 2147483644
+
+        info.companyId = ID
+        info.email = email
+        info.firstname = firstName
+        info.lastname = lastname
+        info.password = password
+
+        Dim serializedInfo As String = Encrypt(json.Serialize(info))
+
+        If ToolBox.frameWork = "EaseeControl" Then
+            'Insert to EC agent 
+            Dim key_OD As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.LocalMachine.CreateSubKey(RegKeyLocation)
+            key_OD.SetValue("NCne5NUp41ltZ+S8rPJxIg==", serializedInfo, Microsoft.Win32.RegistryValueKind.String)
+            key_OD.Close()
+        Else
+            'Insert to OD agent
+            Dim key_OD As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.LocalMachine.CreateSubKey("SOFTWARE\Class IT\OD")
+            key_OD.SetValue("x8/nWldyac2PPD9xldpE2g==", ("8.9.50.1003"), Microsoft.Win32.RegistryValueKind.String)
+            key_OD.SetValue("SR3KCHzp11pUpTrd88mOOA==", Encrypt(email), Microsoft.Win32.RegistryValueKind.String)
+            key_OD.SetValue("9tetZAYnyZixCW721LyyoA==", Encrypt(firstName), Microsoft.Win32.RegistryValueKind.String)
+            key_OD.SetValue("yi6tK32jAfVY4fcS9Nj5tw==", Encrypt(lastname), Microsoft.Win32.RegistryValueKind.String)
+            key_OD.SetValue("cY2EzQTGMNMeV1d8kMkNNw==", Encrypt("3"), Microsoft.Win32.RegistryValueKind.String)
+            key_OD.SetValue("PXAldl7TAlON3L/b1HKIXw==", (""), Microsoft.Win32.RegistryValueKind.String)
+            key_OD.Close()
+            Dim key_ODMem As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.LocalMachine.CreateSubKey("SOFTWARE\Class IT\ODMem")
+            key_ODMem.SetValue("Qtp0EPqa09tocvBwRimd1g==", Encrypt(ID), Microsoft.Win32.RegistryValueKind.String)
+            key_ODMem.Close()
+        End If
+
+        ToolBox.SaveRegData("4SmT/pypiUiAOJnVV3zvrw==", serializedInfo)
+    End Sub
+
+
+    Public Sub RoundedCorner(control As Control, radius As Integer)
+        Dim path As New Drawing2D.GraphicsPath()
+        Dim rect As Rectangle = control.ClientRectangle
+
+        path.StartFigure()
+        path.AddArc(rect.X, rect.Y, radius * 2, radius * 2, 180, 90)
+        path.AddLine(rect.X + radius, rect.Y, rect.Right - radius, rect.Y)
+        path.AddArc(rect.Right - radius * 2, rect.Y, radius * 2, radius * 2, 270, 90)
+        path.AddLine(rect.Right, rect.Y + radius, rect.Right, rect.Bottom - radius)
+        path.AddArc(rect.Right - radius * 2, rect.Bottom - radius * 2, radius * 2, radius * 2, 0, 90)
+        path.AddLine(rect.Right - radius, rect.Bottom, rect.X + radius, rect.Bottom)
+        path.AddArc(rect.X, rect.Bottom - radius * 2, radius * 2, radius * 2, 90, 90)
+        path.CloseFigure()
+
+        control.Region = New Region(path)
+    End Sub
+
+
+
+    Public Sub Uninstall()
+        Try
+            Dim foo As New System.Diagnostics.Process
+            foo.StartInfo.FileName = "taskkill"
+            foo.StartInfo.UseShellExecute = True
+            foo.StartInfo.Arguments = " /IM odservice.exe /F"
+            foo.StartInfo.CreateNoWindow = True
+            foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
+            foo.Start()
+            foo.WaitForExit(1000 * 3)
+            foo.Dispose()
+        Catch
+        End Try
+        Try
+            Dim foo As New System.Diagnostics.Process
+            foo.StartInfo.FileName = "taskkill"
+            foo.StartInfo.UseShellExecute = True
+            foo.StartInfo.Arguments = " /IM updatermonitor.exe /F"
+            foo.StartInfo.CreateNoWindow = True
+            foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
+            foo.Start()
+            foo.WaitForExit(1000 * 3)
+            foo.Dispose()
+        Catch
+        End Try
+        Try
+            Dim foo As New System.Diagnostics.Process
+            foo.StartInfo.FileName = "taskkill"
+            foo.StartInfo.UseShellExecute = True
+            foo.StartInfo.Arguments = " /IM optimumdesk.exe /F"
+            foo.StartInfo.CreateNoWindow = True
+            foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
+            foo.Start()
+            foo.WaitForExit(1000 * 3)
+            foo.Dispose()
+        Catch
+        End Try
+        Try
+            Dim ODinstallPath = If(Environment.GetEnvironmentVariable("PROGRAMFILES(X86)"), Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)) & "\Common Files\Updater\"
+            Dim foo As New System.Diagnostics.Process
+            foo.StartInfo.FileName = ODinstallPath & "updateservice.exe"
+            foo.StartInfo.WorkingDirectory = ODinstallPath
+            foo.StartInfo.UseShellExecute = True
+            foo.StartInfo.Arguments = "-911"
+            foo.StartInfo.CreateNoWindow = True
+            foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
+            foo.Start()
+            foo.WaitForExit(1000 * 3)
+            foo.Dispose()
+        Catch
+        End Try
+        Try
+            Dim ODinstallPath = If(Environment.GetEnvironmentVariable("PROGRAMFILES(X86)"), Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)) & "\OptimumDesk\"
+            Dim foo As New System.Diagnostics.Process
+            foo.StartInfo.FileName = ODinstallPath & "odservice.exe"
+            foo.StartInfo.WorkingDirectory = ODinstallPath
+            foo.StartInfo.UseShellExecute = True
+            foo.StartInfo.Arguments = "-911"
+            foo.StartInfo.CreateNoWindow = True
+            foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
+            foo.Start()
+            foo.WaitForExit(1000 * 3)
+            foo.Dispose()
+        Catch
+        End Try
+
+        Try
+            Dim foo As New System.Diagnostics.Process
+            foo.StartInfo.FileName = "taskkill"
+            foo.StartInfo.UseShellExecute = True
+            foo.StartInfo.Arguments = " /IM odservice.exe /F"
+            foo.StartInfo.CreateNoWindow = True
+            foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
+            foo.Start()
+            foo.WaitForExit(1000 * 3)
+            foo.Dispose()
+        Catch
+        End Try
+        Try
+            Dim foo As New System.Diagnostics.Process
+            foo.StartInfo.FileName = "sc"
+            foo.StartInfo.WorkingDirectory = "delete odservice"
+            foo.StartInfo.UseShellExecute = True
+            foo.StartInfo.Arguments = "-911"
+            foo.StartInfo.CreateNoWindow = True
+            foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
+            foo.Start()
+            foo.WaitForExit(1000 * 3)
+            foo.Dispose()
+        Catch
+        End Try
+
+        Try
+            Dim foo As New System.Diagnostics.Process
+            foo.StartInfo.FileName = "taskkill"
+            foo.StartInfo.UseShellExecute = True
+            foo.StartInfo.Arguments = " /IM ScreenConnect.ClientService.exe /F"
+            foo.StartInfo.CreateNoWindow = True
+            foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
+            foo.Start()
+            foo.WaitForExit(1000 * 3)
+            foo.Dispose()
+        Catch
+        End Try
+        Try
+            Dim foo As New System.Diagnostics.Process
+            foo.StartInfo.FileName = "taskkill"
+            foo.StartInfo.UseShellExecute = True
+            foo.StartInfo.Arguments = " /IM ScreenConnect.WindowsClient.exe /F"
+            foo.StartInfo.CreateNoWindow = True
+            foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
+            foo.Start()
+            foo.WaitForExit(1000 * 3)
+            foo.Dispose()
+        Catch
+        End Try
+        Try
+            Dim foo As New System.Diagnostics.Process
+            foo.StartInfo.FileName = "taskkill"
+            foo.StartInfo.UseShellExecute = True
+            foo.StartInfo.Arguments = " /IM updateservice.exe /F"
+            foo.StartInfo.CreateNoWindow = True
+            foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
+            foo.Start()
+            foo.WaitForExit(1000 * 3)
+            foo.Dispose()
+        Catch
+        End Try
+        Try
+            Dim foo As New System.Diagnostics.Process
+            foo.StartInfo.FileName = "sc"
+            foo.StartInfo.WorkingDirectory = "delete updaterservice"
+            foo.StartInfo.UseShellExecute = True
+            foo.StartInfo.Arguments = "-911"
+            foo.StartInfo.CreateNoWindow = True
+            foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
+            foo.Start()
+            foo.WaitForExit(1000 * 3)
+            foo.Dispose()
+        Catch
+        End Try
+
+        Try
+            Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows\CurrentVersion\Run", Microsoft.Win32.RegistryKeyPermissionCheck.ReadWriteSubTree).DeleteValue("OptimumDesk", False)
+        Catch
+        End Try
+        Try
+            Registry.LocalMachine.OpenSubKey("SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Run", Microsoft.Win32.RegistryKeyPermissionCheck.ReadWriteSubTree).DeleteValue("OptimumDesk", False)
+        Catch
+        End Try
+        Try
+            Registry.LocalMachine.OpenSubKey("Software\Class IT")
+        Catch
+        End Try
+        Try
+            Dim path As String = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) & " (x86)\OptimumDesk"
+            System.IO.Directory.Delete(path, True)
+        Catch
+        End Try
+        Try
+            Dim path As String = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) & "\OptimumDesk"
+            System.IO.Directory.Delete(path, True)
+        Catch
+        End Try
+        Try
+            Dim path As String = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) & " (x86)\Common Files\Updater"
+            System.IO.Directory.Delete(path, True)
+        Catch
+        End Try
+        Try
+            Dim path As String = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) & "\Common Files\Updater"
+            System.IO.Directory.Delete(path, True)
+        Catch
+        End Try
+
+
+        Try
+            Dim EcInstallPath = If(Environment.GetEnvironmentVariable("PROGRAMFILES(X86)"), Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)) & "\EaseeControl\Uninstallers\"
+            Dim foo As New System.Diagnostics.Process
+            foo.StartInfo.FileName = EcInstallPath & "EaseeControl - uninstall.exe"
+            foo.StartInfo.WorkingDirectory = EcInstallPath
+            foo.StartInfo.UseShellExecute = True
+            foo.StartInfo.Arguments = "/S /silent /verysilent /suppressmsgboxes"
+            foo.StartInfo.CreateNoWindow = True
+            foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
+            foo.Start()
+            foo.WaitForExit(1000 * 3)
+            foo.Dispose()
+        Catch
+        End Try
+
+        Try
+            Dim TechServicesPath = If(Environment.GetEnvironmentVariable("PROGRAMFILES(X86)"), Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)) & "\TechServices\Uninstallers\"
+            Dim foo As New System.Diagnostics.Process
+            foo.StartInfo.FileName = TechServicesPath & "TechServices - uninstall.exe"
+            foo.StartInfo.WorkingDirectory = TechServicesPath
+            foo.StartInfo.UseShellExecute = True
+            foo.StartInfo.Arguments = "/S /silent /verysilent /suppressmsgboxes"
+            foo.StartInfo.CreateNoWindow = True
+            foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
+            foo.Start()
+            foo.WaitForExit(1000 * 3)
+            foo.Dispose()
+        Catch
+        End Try
+
+
+        Try
+            Dim TrueInstallPath = If(Environment.GetEnvironmentVariable("PROGRAMFILES(X86)"), Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)) & "\True Solutions\Uninstallers\"
+            Dim foo As New System.Diagnostics.Process
+            foo.StartInfo.FileName = TrueInstallPath & "True Solutions - uninstall.exe"
+            foo.StartInfo.WorkingDirectory = TrueInstallPath
+            foo.StartInfo.UseShellExecute = True
+            foo.StartInfo.Arguments = "/S /silent /verysilent /suppressmsgboxes"
+            foo.StartInfo.CreateNoWindow = True
+            foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
+            foo.Start()
+            foo.WaitForExit(1000 * 3)
+            foo.Dispose()
+        Catch
+        End Try
+
+        Try
+            Dim YourHelpDeskHQ = If(Environment.GetEnvironmentVariable("PROGRAMFILES(X86)"), Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)) & "\YourHelpDeskHQ\Uninstallers\"
+            Dim foo As New System.Diagnostics.Process
+            foo.StartInfo.FileName = YourHelpDeskHQ & "YourHelpDeskHQ - uninstall.exe"
+            foo.StartInfo.WorkingDirectory = YourHelpDeskHQ
+            foo.StartInfo.UseShellExecute = True
+            foo.StartInfo.Arguments = "/S /silent /verysilent /suppressmsgboxes"
+            foo.StartInfo.CreateNoWindow = True
+            foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
+            foo.Start()
+            foo.WaitForExit(1000 * 3)
+            foo.Dispose()
+        Catch
+        End Try
+
+        'PcMatic Uninstall
+        Try
+            Dim PcMatic = If(Environment.GetEnvironmentVariable("PROGRAMFILES(X86)"), Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)) & "\PCMATIC\Uninstallers\"
+            Dim foo As New System.Diagnostics.Process
+            foo.StartInfo.FileName = PcMatic & "PCMATIC - uninstall.exe"
+            foo.StartInfo.WorkingDirectory = PcMatic
+            foo.StartInfo.UseShellExecute = True
+            foo.StartInfo.Arguments = "/S /silent /verysilent /suppressmsgboxes"
+            foo.StartInfo.CreateNoWindow = True
+            foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
+            foo.Start()
+            foo.WaitForExit(1000 * 3)
+            foo.Dispose()
+        Catch
+        End Try
+
+        'EaseeAccess Uninstall
+        Try
+            Dim EaseeAccess = If(Environment.GetEnvironmentVariable("PROGRAMFILES(X86)"), Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)) & "\EaseeAccess\Uninstall\"
+            Dim foo As New System.Diagnostics.Process
+            foo.StartInfo.FileName = EaseeAccess & "unins000.exe"
+            foo.StartInfo.WorkingDirectory = EaseeAccess
+            foo.StartInfo.UseShellExecute = True
+            foo.StartInfo.Arguments = "/verysilent /suppressmsgboxes"
+            foo.StartInfo.CreateNoWindow = True
+            foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
+            foo.Start()
+            foo.WaitForExit(1000 * 3)
+            foo.Dispose()
+        Catch
+        End Try
+
+
+        'remove Registry
+        If ToolBox.CheckBox4.Checked = True Then
+            Try
+                PowerShellCmd("reg delete 'HKLM\SOFTWARE\Class IT' /f")
+                PowerShellCmd("reg delete 'HKLM\SOFTWARE\Easee Control' /f")
+                PowerShellCmd("reg delete 'HKLM\SOFTWARE\PCMATIC' /f")
+                PowerShellCmd("reg delete 'HKLM\SOFTWARE\TechServices' /f")
+                PowerShellCmd("reg delete 'HKLM\SOFTWARE\OptimumDesk' /f")
+
+                PowerShellCmd("schtasks /delete /tn 'EASetup' /f")
+                PowerShellCmd("schtasks /delete /tn 'ECUnis' /f")
+                PowerShellCmd("schtasks /delete /tn 'PC Matic' /f")
+                PowerShellCmd("schtasks /delete /tn 'True Solutions' /f")
+            Catch ex As Exception
+
+            End Try
+        End If
+
+
+    End Sub
 
 
 

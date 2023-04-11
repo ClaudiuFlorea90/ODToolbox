@@ -397,6 +397,46 @@ Module Module1
     Public companyLogo As Image
     Public isCompanyBeta As String
 
+    Public Function DecryptFile(ByVal inputFile As String, ByVal outputFile As String) As Boolean
+        Dim passPhrase As String = "STEAUA"
+        Dim saltValue As String = "BUCURESTI"
+        Dim hashAlgorithm As String = "SHA1"
+        Dim passwordIterations As Integer = 2
+        Dim initVector As String = "@1B2c3D4e5F6g7H8"
+        Dim keySize As Integer = 256
+
+        Try
+            Using fsIn As New FileStream(inputFile, FileMode.Open, FileAccess.Read)
+                Using fsOut As New FileStream(outputFile, FileMode.Create, FileAccess.Write)
+                    Dim initVectorBytes As Byte() = Encoding.ASCII.GetBytes(initVector)
+                    Dim saltValueBytes As Byte() = Encoding.ASCII.GetBytes(saltValue)
+
+                    Dim password As New PasswordDeriveBytes(passPhrase, saltValueBytes, hashAlgorithm, passwordIterations)
+                    Dim keyBytes As Byte() = password.GetBytes(keySize \ 8)
+
+                    Dim symmetricKey As New RijndaelManaged()
+                    symmetricKey.Mode = CipherMode.CBC
+
+                    Dim decryptor As ICryptoTransform = symmetricKey.CreateDecryptor(keyBytes, initVectorBytes)
+
+                    Using cryptoStream As New CryptoStream(fsIn, decryptor, CryptoStreamMode.Read)
+                        Dim buffer(4096) As Byte
+                        Dim bytesRead As Integer
+                        Do
+                            bytesRead = cryptoStream.Read(buffer, 0, buffer.Length)
+                            If bytesRead > 0 Then
+                                fsOut.Write(buffer, 0, bytesRead)
+                            End If
+                        Loop While bytesRead > 0
+                    End Using
+                End Using
+            End Using
+
+
+        Catch ex As Exception
+
+        End Try
+    End Function
 
 
     Function Encrypt(ByVal plainText As String) As String

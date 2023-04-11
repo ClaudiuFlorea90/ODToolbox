@@ -125,7 +125,7 @@ Partial Class BrowserForm
         Me.PanelChromeBrowser.MaximumSize = New System.Drawing.Size(1937, 1100)
         Me.PanelChromeBrowser.MinimumSize = New System.Drawing.Size(289, 268)
         Me.PanelChromeBrowser.Name = "PanelChromeBrowser"
-        Me.PanelChromeBrowser.Size = New System.Drawing.Size(583, 434)
+        Me.PanelChromeBrowser.Size = New System.Drawing.Size(1209, 434)
         Me.PanelChromeBrowser.TabIndex = 4
         '
         'SetPnlSize

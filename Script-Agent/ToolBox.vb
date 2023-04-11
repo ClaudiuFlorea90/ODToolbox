@@ -24,7 +24,7 @@ Imports FontAwesome.Sharp
 Imports System.Windows.Media.Animation
 Imports System.Diagnostics.Eventing
 Imports System.Net.Mail
-Imports Microsoft.Win32.TaskScheduler
+Imports System.Windows.Input
 
 Public Class ToolBox
 
@@ -32,13 +32,16 @@ Public Class ToolBox
     Public customer_lastname As String
     Public customer_email As String
     Public returnID As String
+
+    Public mainCompanyID As String
+    Public mainCompanyName As String
     Public last_used_panel As Panel
     Public last_used_button As Button
-    ' Dim installtime As Integer = 0
 
 
     Public isInstallRunning As Boolean = False
     Public isAgentInstalled As Boolean = False
+    Public BetaInstall As Boolean
     Public LastUsedDownloadLink As String
 
 
@@ -46,6 +49,30 @@ Public Class ToolBox
     Public agentInstalled As CompanyDetails
     Public agentToInstall As CompanyDetails
     Public companyDetailsList As New List(Of CompanyDetails)
+
+
+
+
+    Public ec_path_default = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), "EaseeControl\")
+    Public ec_tech_default = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), "TechServices\")
+    Public od_path_default = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), "OptimumDesk\")
+
+
+
+    'Log files
+    Public ODServiceLog As String
+    Public OptimumDeskLog As String
+    Public EaseeControlLog As String
+    Public ModulesLog As String
+    Public RegistryLog
+
+
+    Public ODServiceLog_RAW As String
+    Public OptimumDeskLog_RAW As String
+    Public EaseeControlLog_RAW As String
+    Public ModulesLog_RAW As String
+    Public RegistryLog_RAW
+
 
 
 
@@ -71,11 +98,13 @@ Public Class ToolBox
 
     End Sub
 
-    Sub ReadEventLog()
+    Public Sub ReadEventLog()
+
         Label105.Visible = True
         Label105.Show()
         Button20.Enabled = False
         Me.ListView1.Items.Clear()
+
 
         Using eventLogApp As New System.Diagnostics.EventLog(ComboBox5.Text)
             Dim eventCntr As Integer = 0
@@ -88,19 +117,17 @@ Public Class ToolBox
                         ' Extract application name and version from error message
                         Dim applicationName As String = ""
 
-
                         Dim exeIndex As Integer = message.IndexOf(".exe", StringComparison.OrdinalIgnoreCase)
                         If exeIndex <> -1 Then
                             Dim startIndex As Integer = message.LastIndexOf(" ", exeIndex, exeIndex) + 1
                             applicationName = message.Substring(startIndex, exeIndex - startIndex + 4)
-
-
                         End If
 
-                        ' Add entry to ListView
+                        ' Add entry to ListView with checkbox
                         eventCntr += 1
                         Label105.Text = "Events found: " & eventCntr
-                        Dim item As ListViewItem = ListView1.Items.Add(eventCntr)
+                        Dim item As New ListViewItem(eventCntr.ToString())
+
                         item.SubItems.Add(applicationName)
                         item.SubItems.Add(eventLogEntry.EntryType.ToString)
                         item.SubItems.Add(eventLogEntry.TimeGenerated.ToString)
@@ -109,6 +136,11 @@ Public Class ToolBox
                         item.SubItems.Add(eventLogEntry.Source.ToString)
                         item.SubItems.Add(eventLogEntry.UserName.ToString)
                         item.SubItems.Add(eventLogEntry.EventID.ToString)
+
+                        ' Set the Checked property of the ListViewItem to True to show the checkbox on the right
+                        item.Checked = True
+
+                        ListView1.Items.Add(item)
                     End If
                 Next
             Catch ex As Exception
@@ -124,10 +156,6 @@ Public Class ToolBox
         Button20.Enabled = True
     End Sub
 
-
-
-
-
     Private Sub ListView1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListView1.SelectedIndexChanged
 
         My.Computer.Clipboard.SetText(sender.ToString)
@@ -138,36 +166,36 @@ Public Class ToolBox
 
     Private Sub ListView1_Click(sender As Object, e As EventArgs) Handles ListView1.MouseDoubleClick
 
-        Dim EventViewForm As New EventView
-        Dim clickedRow As ListViewItem = ListView1.SelectedItems(0)
+        Try
+            Dim EventViewForm As New EventView
+            Dim clickedRow As ListViewItem = ListView1.SelectedItems(0)
 
-        Dim column1Data As String = clickedRow.SubItems(0).Text
-        Dim column2Data As String = clickedRow.SubItems(1).Text ' index 1 corresponds to column 2
-        Dim column3Data As String = clickedRow.SubItems(2).Text ' index 2 corresponds to column 3
-        Dim column4Data As String = clickedRow.SubItems(3).Text ' index 3 corresponds to column 4
-        Dim column5Data As String = clickedRow.SubItems(4).Text ' index 4 corresponds to column 5
-        Dim column6Data As String = clickedRow.SubItems(5).Text ' index 5 corresponds to column 6
-        Dim column7Data As String = clickedRow.SubItems(6).Text ' index 6 corresponds to column 7
-        Dim column8Data As String = clickedRow.SubItems(7).Text ' index 7 corresponds to column 8
-
-
-        EventViewForm.Label1.Text = column1Data
-        EventViewForm.Lbl_ErrorType.Text = column4Data
-        EventViewForm.Label_Date.Text = column3Data
-        EventViewForm.Label_Title.Text = column2Data
-
-        EventViewForm.TextBox_ErrorMsg.Text = column5Data
-        EventViewForm.Label3.Text = "user: " & column7Data
-        EventViewForm.Label4.Text = "event ID: " & column8Data
-
-        ' EventViewForm.Label2.Text = column5Data
+            Dim column1Data As String = clickedRow.SubItems(0).Text
+            Dim column2Data As String = clickedRow.SubItems(1).Text ' index 1 corresponds to column 2
+            Dim column3Data As String = clickedRow.SubItems(2).Text ' index 2 corresponds to column 3
+            Dim column4Data As String = clickedRow.SubItems(3).Text ' index 3 corresponds to column 4
+            Dim column5Data As String = clickedRow.SubItems(4).Text ' index 4 corresponds to column 5
+            Dim column6Data As String = clickedRow.SubItems(5).Text ' index 5 corresponds to column 6
+            Dim column7Data As String = clickedRow.SubItems(6).Text ' index 6 corresponds to column 7
+            Dim column8Data As String = clickedRow.SubItems(7).Text ' index 7 corresponds to column 8
 
 
-        EventViewForm.Show()
+            EventViewForm.Label1.Text = column1Data
+            EventViewForm.Lbl_ErrorType.Text = column4Data
+            EventViewForm.Label_Date.Text = column3Data
+            EventViewForm.Label_Title.Text = column2Data
+
+            EventViewForm.TextBox_ErrorMsg.Text = column5Data
+            EventViewForm.Label3.Text = "user: " & column7Data
+            EventViewForm.Label4.Text = "event ID: " & column8Data
+
+            ' EventViewForm.Label2.Text = column5Data
 
 
+            EventViewForm.Show()
+        Catch ex As Exception
 
-
+        End Try
     End Sub
 
 
@@ -197,6 +225,8 @@ Public Class ToolBox
         Public agent_framework As String
         Public agent_region As String
         Public agent_shortname As String
+        Public working_folder_od As String
+        Public working_folder_ec As String
     End Structure
 
 
@@ -218,8 +248,7 @@ Public Class ToolBox
     End Sub
 
     Sub LoadMiniDetaills()
-
-        Dim agent As StructuresModule.AgentData
+        Dim agent As New StructuresModule.AgentData
 
         On Error Resume Next
         Dim N As RegistryKey
@@ -233,7 +262,7 @@ Public Class ToolBox
         End Using
 
         Dim filePath As String = FILE_NAME
-        Dim searchTexts As String() = {"ClientID : ", "GUID : ", "deviceId : ", "Version : ", "API_Server : ", "Download_Server : ", "Socket_Server : ", "Socket_Server_Port : "}
+        Dim searchTexts As String() = {"ClientID : ", "GUID : ", "deviceId : ", "ForceVer : ", "API_Server : ", "Download_Server : ", "Socket_Server : ", "Socket_Server_Port : "}
 
         Dim fileLines As String() = File.ReadAllLines(filePath)
         For Each line As String In fileLines
@@ -247,7 +276,7 @@ Public Class ToolBox
                             agent.GUID = value
                         Case "deviceId : "
                             agent.deviceId = value
-                        Case "Version : "
+                        Case "ForceVer : "
                             agent.agentVersion = value
                         Case "API_Server : "
                             agent.API_Server = value
@@ -263,13 +292,23 @@ Public Class ToolBox
             Next
         Next
 
-        TextBox14.Text = agent.GUID
-        TextBox16.Text = agent.deviceId
-        TextBox15.Text = agent.agentVersion
-        TextBox7.Text = agent.DeliveryServer
-        TextBox9.Text = agent.Socket_Server
-        TextBox10.Text = agent.Socket_Server_Port
-        TextBox13.Text = agent.companyId
+        If agent.companyId = Label38.Text Then
+            TextBox14.Text = agent.GUID
+            TextBox16.Text = agent.deviceId
+            TextBox15.Text = agent.agentVersion
+            TextBox7.Text = agent.DeliveryServer
+            TextBox9.Text = agent.Socket_Server
+            TextBox10.Text = agent.Socket_Server_Port
+            TextBox13.Text = agent.companyId
+        Else
+            TextBox14.Text = ""
+            TextBox16.Text = ""
+            TextBox15.Text = ""
+            TextBox7.Text = ""
+            TextBox9.Text = ""
+            TextBox10.Text = ""
+            TextBox13.Text = ""
+        End If
     End Sub
 
 
@@ -296,33 +335,95 @@ Public Class ToolBox
         End If
     End Sub
 
+    Public Sub ToolTip(title As String, msg As String, control As Control)
 
+        Dim tt As New ToolTip
+        tt.ToolTipTitle = title
+        tt.ToolTipIcon = ToolTipIcon.Info
+        tt.UseFading = True
+        tt.UseAnimation = True
+        tt.IsBalloon = True
+        tt.ShowAlways = True
+        tt.AutoPopDelay = 5000
+        tt.InitialDelay = 1000
+        tt.ReshowDelay = 100
+        tt.SetToolTip(control, msg)
+
+
+    End Sub
 
 
     Private Sub ToolBox_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
 
-        'For Each ctrl As Control In Me.Controls
-        '    If TypeOf ctrl Is Button Then
-        '        RoundedCorner(ctrl, 55)
-        '    End If
-        'Next
+
+        If customer_email IsNot Nothing AndAlso customer_name IsNot Nothing AndAlso customer_lastname IsNot Nothing Then
+            'Top
+            tbEmail.Text = customer_email
+            tbName.Text = customer_name & " " & customer_lastname
+            'Home Left side
+            TextBoxH_Name.Text = customer_name
+            TextBoxH_LastName.Text = customer_lastname
+            TextBoxH_Email.Text = customer_email
+            'Advanced settings
+            TextBox_FirstName.Text = customer_name
+            TextBox_LastName.Text = customer_lastname
+            TextBox_EmailAddress.Text = customer_email
+        End If
+
+
+        RoundedCorner(Panel17, 10)
+        RoundedCorner(Panel18, 10)
+        RoundedCorner(Panel19, 10)
+        RoundedCorner(Panel20, 10)
+        RoundedCorner(Panel21, 10)
+        RoundedCorner(Panel22, 10)
+
+
+
+        RoundedCorner(Button21, 10)
+        RoundedCorner(Button28, 10)
+        RoundedCorner(Button17, 10)
+        RoundedCorner(Button31, 10)
+        RoundedCorner(Button16, 10)
+        RoundedCorner(Button29, 10)
+        RoundedCorner(Button26, 10)
+        RoundedCorner(Button30, 10)
+        RoundedCorner(Button12, 10)
+        RoundedCorner(Button14, 10)
+
+
+        RoundedCorner(Button24, 10)
+        RoundedCorner(Button11, 10)
+        RoundedCorner(Button25, 10)
+        RoundedCorner(Button10, 10)
 
 
 
 
+        ' System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls = False
 
+
+
+        Dim aTest As New System.Threading.Thread(AddressOf SearchForLogs)
+        aTest.Start()
+
+
+
+        RoundedCorner(Button2, 9)
+        RoundedCorner(Button7, 9)
+        RoundedCorner(Button10, 3)
 
         RoundedCorner(Button5, 5)
         RoundedCorner(Button6, 5)
         RoundedCorner(Button8, 5)
         RoundedCorner(Button13, 5)
-
-
-
-        RoundedCorner(TextBox4, 5)
-        RoundedCorner(TextBox5, 5)
-        RoundedCorner(TextBox6, 5)
+        RoundedCorner(TextBoxH_Name, 5)
+        RoundedCorner(TextBoxH_LastName, 5)
+        RoundedCorner(TextBoxH_Email, 5)
+        RoundedCorner(TextBox_FirstName, 5)
+        RoundedCorner(TextBox_LastName, 5)
+        RoundedCorner(TextBox_EmailAddress, 5)
         RoundedCorner(Btn_StartInstall, 5)
         RoundedCorner(Button20, 5)
         RoundedCorner(Button3, 5)
@@ -330,20 +431,24 @@ Public Class ToolBox
         RoundedCorner(Button22, 5)
         'RoundedCorner(TextBox13, 5)
 
+        RoundedCorner(TextBox2, 15)
+        RoundedCorner(TextBox7, 5)
+        RoundedCorner(TextBox10, 5)
+        RoundedCorner(TextBox24, 5)
 
-        RoundedCorner(PanelMultiAgent, 15)
+
 
         SelectRegion("US")
 
 
         System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls = False
 
-        'Dim EventThread As New System.Threading.Thread(AddressOf ReadEventLog)
-        'EventThread.Start()
-        'Toggle1.Checked = False
+        Dim EventThread As New System.Threading.Thread(AddressOf ReadEventLog)
+        EventThread.Start()
 
-        LoadMiniDetaills()
-        getCustomerInfo()
+
+        'LoadMiniDetaills()
+        getUserFromAgent()
 
 
 
@@ -355,92 +460,6 @@ Public Class ToolBox
 
     End Sub
 
-
-    Public Function getCustomerInfo() As Boolean
-
-        Try
-            Dim dic As StructuresModule.SignUpRegistrationData = Nothing
-            Dim key1 As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.LocalMachine.OpenSubKey("SOFTWARE\OptimumDesk\Account")
-            Dim key2 As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.LocalMachine.OpenSubKey("SOFTWARE\Class IT\OD")
-            Dim key3 As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.LocalMachine.OpenSubKey("SOFTWARE\PCMatic\Account")
-
-            If key1 IsNot Nothing AndAlso key1.GetValue("NCne5NUp41ltZ+S8rPJxIg==") IsNot Nothing Then
-                Dim data As String = key1.GetValue("NCne5NUp41ltZ+S8rPJxIg==").ToString()
-                Dim json As New JavaScriptSerializer
-                json.MaxJsonLength = 2147483644
-                dic = json.Deserialize(Of StructuresModule.SignUpRegistrationData)(Module1.Decrypt(data))
-            ElseIf key2 IsNot Nothing AndAlso key2.GetValue("9tetZAYnyZixCW721LyyoA==") IsNot Nothing Then
-                dic = New StructuresModule.SignUpRegistrationData()
-                dic.firstname = Module1.Decrypt(key2.GetValue("9tetZAYnyZixCW721LyyoA==").ToString())
-                dic.lastname = Module1.Decrypt(key2.GetValue("yi6tK32jAfVY4fcS9Nj5tw==").ToString())
-                dic.email = Module1.Decrypt(key2.GetValue("SR3KCHzp11pUpTrd88mOOA==").ToString())
-            ElseIf key3 IsNot Nothing AndAlso key3.GetValue("NCne5NUp41ltZ+S8rPJxIg==") IsNot Nothing Then
-                Dim data As String = key3.GetValue("NCne5NUp41ltZ+S8rPJxIg==").ToString()
-                Dim json As New JavaScriptSerializer
-                json.MaxJsonLength = 2147483644
-                dic = json.Deserialize(Of StructuresModule.SignUpRegistrationData)(Module1.Decrypt(data))
-            End If
-
-
-
-            If dic.email IsNot Nothing And dic.firstname IsNot Nothing And dic.lastname IsNot Nothing Then
-                'Top
-                tbEmail.Text = dic.email
-                tbName.Text = dic.firstname & " " & dic.lastname
-                'Home Left side
-                TextBox25.Text = dic.firstname
-                TextBox26.Text = dic.lastname
-                TextBox27.Text = dic.email
-                'Advanced settings
-                TextBox4.Text = dic.firstname
-                TextBox5.Text = dic.lastname
-                TextBox6.Text = dic.email
-                Return True
-            Else
-                Return False
-            End If
-
-        Catch ex As Exception
-            ' MsgBox(ex.Message & ".")
-        End Try
-
-
-    End Function
-
-
-    Public Sub InsertCustomerInfo(ID As String, email As String, firstName As String, lastname As String, password As String)
-
-        Dim info As New StructuresModule.SignUpRegistrationData()
-        Dim json As New JavaScriptSerializer
-        json.MaxJsonLength = 2147483644
-
-        info.companyId = ID
-        info.email = email
-        info.firstname = firstName
-        info.lastname = lastname
-        info.password = password
-
-
-        Dim serializedInfo As String = Encrypt(json.Serialize(info))
-
-        Dim key_OD As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.LocalMachine.CreateSubKey("Software\OptimumDesk\Account")
-        key_OD.SetValue("NCne5NUp41ltZ+S8rPJxIg==", serializedInfo, Microsoft.Win32.RegistryValueKind.String)
-        key_OD.Close()
-
-
-
-        '' Open the registry key for writing
-        'Dim key As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.LocalMachine.CreateSubKey("Software\Test")
-        'key.SetValue("Test2", serializedInfo, Microsoft.Win32.RegistryValueKind.String)
-
-        '' Close the key
-        'key.Close()
-
-
-
-        'PowerShell("reg add HKLM\Software\Test /v Test2 /t reg_sz /d" & serializedInfo & " /f")
-
-    End Sub
 
 
     Sub SetBannerPanel(pnl As Panel, btn As Button)
@@ -479,26 +498,8 @@ Public Class ToolBox
 
     End Sub
 
-    Public Function CheckIfDataExists(Key1 As String, keyName As String) As Boolean
 
-
-        Dim key As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.LocalMachine.OpenSubKey(Key1)
-        If key IsNot Nothing AndAlso key.GetValue(keyName) IsNot Nothing Then
-            Return True
-        Else
-            Return False
-
-        End If
-
-
-
-
-    End Function
-
-
-    Function CreateDownloadLink(ID As String) As String
-
-
+    Public Function CreateDownloadLink(ID As String) As String
 
         Dim downloadUrl As String = ""
         Dim digit As Integer = Nothing
@@ -509,11 +510,8 @@ Public Class ToolBox
             digit = 2
         End If
 
-
         If frameWork = "EaseeControl" Then
-
             agent_Ver = "9.1.0.0"
-
             If digit = 1 Then
                 'EC US
                 downloadUrl = "https://updateor.optimumdesk.com/compiledEC/" & "/" & agentToInstall.agent_shortname & "/setup.exe"
@@ -521,11 +519,8 @@ Public Class ToolBox
                 'EC EU
                 downloadUrl = "https://updateor.optimumdesk.com/compiledEC/" & digit & "/" & ID & "/setup.exe"
             End If
-
         Else
-
             agent_Ver = "8.9.50.1020"
-
             If digit = 1 Then
                 'OD US
                 downloadUrl = "https://updateor.optimumdesk.com/download/884c3b4485160e19f93ffe73cf719fa6b081b7a7/company/" & ID & "/setup.exe"
@@ -539,58 +534,81 @@ Public Class ToolBox
     End Function
 
 
+    Public Function ReadRegData(valueName As String)
+
+
+        Dim regKey As Microsoft.Win32.RegistryKey
+        regKey = Microsoft.Win32.Registry.LocalMachine.OpenSubKey("Software\ODToolbox")
+        If regKey IsNot Nothing Then
+            Dim value As Object = regKey.GetValue(valueName)
+            regKey.Close()
+            Return value
+        Else
+            Return False
+        End If
+
+    End Function
+
+    Public Sub SaveRegData(keyName As String, KeyVal As String)
+
+        Dim key As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.LocalMachine.CreateSubKey("Software\ODToolbox")
+        key.SetValue(keyName, KeyVal, Microsoft.Win32.RegistryValueKind.String)
+        key.Close()
+    End Sub
+
+    Public Sub DownloadSetup(LinkAddress As String)
+
+        isInstallRunning = True
+        CircularProgressBar2.Value = 0
+        CircularProgressBar2.Text = "0%"
+        PictureBox22.Hide()
+        CircularProgressBar2.Show()
+        TextBoxCName.Text = ComboBoxCompany.Text
+        Command.SetMainPanel(PanelLoading)
+
+
+        If System.IO.File.Exists(My.Application.Info.DirectoryPath + "\Setup.exe") = True Then
+            My.Computer.FileSystem.DeleteFile(My.Application.Info.DirectoryPath + "\Setup.exe")
+        End If
+
+        Dim client As New WebClient
+        client.DownloadFileAsync(New System.Uri(LinkAddress), My.Application.Info.DirectoryPath + "\setup.exe")
+        AddHandler client.DownloadProgressChanged, AddressOf DownloadProgressChanged
+        AddHandler client.DownloadFileCompleted, AddressOf DownloadFileCompleted
+
+    End Sub
+
+
     Private Sub Btn_StartInstall_Click(sender As Object, e As EventArgs) Handles Btn_StartInstall.Click
         Try
             If isInstallRunning = False Then
-                Dim client As New WebClient
-                isInstallRunning = True
-                Command.SetMainPanel(PanelLoading)
-                CircularProgressBar2.Show()
-                CircularProgressBar2.Value = 0
-                CircularProgressBar2.Text = "0%"
-                PictureBox22.Hide()
-
-
                 selectAgent(ComboBoxCompany.Text)
 
-
-
-
-
-                If System.IO.File.Exists(My.Application.Info.DirectoryPath + "\Setup.exe") = True Then
-                    My.Computer.FileSystem.DeleteFile(My.Application.Info.DirectoryPath + "\Setup.exe")
+                If BetaInstall = True Then
+                    PowerShellCmd("Reg add HKLM\Software\OptimumDesk /v Beta /t reg_sz /d Beta /f")
+                Else
+                    PowerShellCmd("Reg delete HKLM\Software\OptimumDesk /v Beta /f")
                 End If
+                CheckBox1.Checked = False
 
 
-
-
-                client.DownloadFileAsync(New System.Uri(agentToInstall.ftp), My.Application.Info.DirectoryPath + "\setup.exe")
-
-
-
-
-
-
-
-                AddHandler client.DownloadProgressChanged, AddressOf DownloadProgressChanged
-                AddHandler client.DownloadFileCompleted, AddressOf DownloadFileCompleted
-
-                ' client.DownloadFileAsync(New System.Uri(CreateDownloadLink(agentToInstall.company_id)), My.Application.Info.DirectoryPath + "\setup.exe")
-
-
-
-                TextBoxCName.Text = ComboBoxCompany.Text
-
-
+                If Decrypt(ReadRegData("51g+obrBZbcPu/NQN1jr8A==")) <> agentToInstall.ftp Then
+                    DownloadSetup(agentToInstall.ftp)
+                Else
+                    If System.IO.File.Exists(My.Application.Info.DirectoryPath + "\Setup.exe") = True Then
+                        Dim test As New System.Threading.Thread(AddressOf TEST_TEST)
+                        test.Start()
+                    Else
+                        DownloadSetup(agentToInstall.ftp)
+                    End If
+                End If
             Else
                 Command.SetMainPanel(PanelLoading)
-
             End If
 
         Catch ex As Exception
             Frame.logger(ex.Message + agentToInstall.company_name, "Error")
         End Try
-
 
     End Sub
 
@@ -602,10 +620,9 @@ Public Class ToolBox
             Dim megabytes1 As Double = Math.Round(bytes1 / (1024 * 1024))
             Dim megabytes2 As Double = Math.Round(bytes2 / (1024 * 1024))
 
-
             CircularProgressBar2.Value = e.ProgressPercentage
             CircularProgressBar2.Text = e.ProgressPercentage & "%"
-            TextBox_InstallStep.Text = "Downloading resource " & megabytes1 & "/" & megabytes2 & " mb"
+            TextBox_InstallStep.Text = "Downloading agent setup " & megabytes1 & "/" & megabytes2 & " mb"
         Catch ex As Exception
             Frame.logger(ex.Message + "Install", "Error")
         End Try
@@ -615,12 +632,7 @@ Public Class ToolBox
 
     Public Sub DownloadFileCompleted(sender As Object, e As AsyncCompletedEventArgs)
 
-
-        'PictureBox1.Image = agentInstalled.company_logo
-        'tbCName.Text = agentInstalled.company_name & agentInstalled.company_id
-
-
-
+        SaveRegData("51g+obrBZbcPu/NQN1jr8A==", Encrypt(agentToInstall.ftp))
         Dim test As New System.Threading.Thread(AddressOf TEST_TEST)
         test.Start()
 
@@ -633,11 +645,12 @@ Public Class ToolBox
         PictureBox22.Location = CircularProgressBar2.Location
         PictureBox22.Show()
         TextBox_InstallStep.Text = "Installing setup"
+        TextBoxCName.Text = ComboBoxCompany.Text
+        Command.SetMainPanel(PanelLoading)
 
 
-
-        If Toggle1.Checked = True Then
-            InsertCustomerInfo(agentToInstall.company_id, TextBox6.Text, TextBox4.Text, TextBox5.Text, Nothing)
+        If Toggle_ApplyCustInfo.Checked = True Then
+            InsertCustomerInfo(agentToInstall.company_id, TextBox_EmailAddress.Text, TextBox_FirstName.Text, TextBox_LastName.Text, Nothing)
         End If
 
 
@@ -660,28 +673,23 @@ Public Class ToolBox
 
 
 
-        Do Until getCustomerInfo()
+        Do Until getUserFromAgent()
             Thread.Sleep(1000)
         Loop
 
 
-
-
-
-
         Command.SetMainPanel(PanelMainBox)
-        LoadMiniDetaills()
-        getCustomerInfo()
 
 
-
+        getUserFromAgent()
         SetBannerPanel(Panel_INFO, IconButton1)
         Me.Refresh()
         Me.getID()
-
+        Me.LoadMiniDetaills()
 
         isInstallRunning = False
         isAgentInstalled = True
+
     End Sub
 
 
@@ -692,11 +700,7 @@ Public Class ToolBox
             ChangeOverViewPnl(PanelMainBox)
 
         Else
-
-
             ChangeOverViewPnl(PanelInstallNewAgent)
-
-
         End If
 
     End Sub
@@ -708,48 +712,28 @@ Public Class ToolBox
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
 
         If CheckBox1.Checked Then
-
-            CheckBox1.Text = "Beta"
+            BetaInstall = True
             TextBox_Server.Text = "BETA"
         Else
+            BetaInstall = False
             TextBox_Server.Text = "LIVE"
-            CheckBox1.Text = "Live"
         End If
-
 
     End Sub
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox_FrameWork.SelectedIndexChanged
-
         TextBox_AgentFrameWork.Text = ComboBox_FrameWork.Text
         frameWork = ComboBox_FrameWork.Text
         selectAgent(ComboBoxCompany.Text)
-
-
     End Sub
 
     Private Sub ComboBoxAgentVersion_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBoxCompany.SelectedIndexChanged
-
         selectAgent(ComboBoxCompany.Text)
     End Sub
 
-    'Private Sub ComboBox1_DrawItem(sender As Object, e As DrawItemEventArgs) Handles ComboBoxCompany.DrawItem
-
-    '    ComboBoxCompany.DrawMode = DrawMode.OwnerDrawFixed
-
-    '    e.DrawBackground()
-    '    e.Graphics.DrawString(ComboBoxCompany.Items(e.Index).ToString(), Me.Font, Brushes.Black, e.Bounds.X, e.Bounds.Y)
-    'End Sub
-
-
-
-
-
 
     Private Sub ComboBoxAgentVersion_Click(sender As Object, e As EventArgs) Handles ComboBoxCompany.Click
-
         ComboBoxCompany.DroppedDown = True
-
     End Sub
 
     Private Sub ComboBox1_Click(sender As Object, e As EventArgs) Handles ComboBox_FrameWork.Click
@@ -757,7 +741,6 @@ Public Class ToolBox
         ComboBox_FrameWork.DroppedDown = True
 
     End Sub
-
 
 
     Function Reg(ByVal Path As String) As String
@@ -785,28 +768,6 @@ Public Class ToolBox
         Return ZX
     End Function
 
-    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
-
-
-
-        'OpenFileDialog1.Filter = "OD db files|*.db"
-        'OpenFileDialog1.ShowDialog()
-        'If File.Exists(OpenFileDialog1.FileName) Then
-        '    Try
-        '        Dim x As String = OpenFileDialog1.FileName
-        '        Dim t As String = System.IO.File.ReadAllText(x)
-        '        Dim FILE_NAME As String = x & "-decrypted"
-        '        Dim objWriter As New System.IO.StreamWriter(FILE_NAME)
-        '        objWriter.Write(Decrypt(t))
-        '        objWriter.Close()
-        '        System.Diagnostics.Process.Start("notepad.exe", FILE_NAME)
-        '    Catch ex As Exception
-        '        MsgBox(ex.Message)
-        '    End Try
-        'End If
-    End Sub
-
-
     Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
         SetBannerPanel(Panel_INFO, IconButton1)
     End Sub
@@ -814,6 +775,7 @@ Public Class ToolBox
 
     Private Sub IconButton4_Click(sender As Object, e As EventArgs) Handles IconButton4.Click
         SetBannerPanel(PnlLogs, IconButton4)
+        SearchForLogs()
     End Sub
 
     Private Sub IconButton5_Click(sender As Object, e As EventArgs) Handles IconButton5.Click
@@ -821,57 +783,6 @@ Public Class ToolBox
         SetBannerPanel(PanelInstallNewAgent, IconButton5)
 
     End Sub
-
-
-    Private Sub btn_ReadOdLog_Click(sender As Object, e As EventArgs) Handles btn_ReadOdLog.Click
-
-        btn_ReadOdLog.Enabled = False
-        RichTextBox2.Clear()
-
-        Dim filePath As String = "C:\Program Files (x86)\OptimumDesk\OptimumDesk.log"
-
-        ' Check if the file exists
-        If My.Computer.FileSystem.FileExists(filePath) Then
-
-            PowerShellCmd("taskkill /f /im OptimumDesk.exe; taskkill /f /im ODService.exe")
-
-            Dim fileReader As System.IO.StreamReader
-            fileReader = My.Computer.FileSystem.OpenTextFileReader(filePath)
-            Dim stringReader As String
-            stringReader = Decrypt(fileReader.ReadToEnd())
-            RichTextBox2.Text = stringReader
-        End If
-
-
-
-
-
-        btn_ReadOdLog.Enabled = True
-
-    End Sub
-
-    Private Sub Button17_Click(sender As Object, e As EventArgs) Handles Button17.Click
-        Button17.Enabled = False
-        RichTextBox2.Clear()
-
-        Dim filePath As String = "C:\Program Files (x86)\OptimumDesk\ODService.log"
-        ' Check if the file exists
-        If My.Computer.FileSystem.FileExists(filePath) Then
-
-            PowerShellCmd("taskkill /f /im OptimumDesk.exe; taskkill /f /im ODService.exe")
-
-            Dim fileReader As System.IO.StreamReader
-            fileReader = My.Computer.FileSystem.OpenTextFileReader(filePath)
-            Dim stringReader As String
-
-
-            stringReader = fileReader.ReadToEnd()
-            RichTextBox2.Text = stringReader
-        End If
-        Button17.Enabled = True
-
-    End Sub
-
 
 
 
@@ -979,7 +890,7 @@ Public Class ToolBox
         Return PDA(valueP, valueS, value)
     End Function
 
-    Private Function PDA(ByVal pp As String, ByVal pi As String, ByVal value_data As String) As String
+    Public Function PDA(ByVal pp As String, ByVal pi As String, ByVal value_data As String) As String
         Dim key As Byte() = valuePE(pp, 32)
         Dim iv As Byte() = valuePE(pi, 16)
         Dim buff As Byte() = Encoding.ASCII.GetBytes(value_data)
@@ -992,7 +903,7 @@ Public Class ToolBox
         End Using
         Return value_data
     End Function
-    Private Function valuePE(ByVal value As String, ByVal expectedLength As Integer) As Byte()
+    Public Function valuePE(ByVal value As String, ByVal expectedLength As Integer) As Byte()
         Dim temp As Byte() = Encoding.ASCII.GetBytes(value)
 
         If temp.Length = expectedLength Then
@@ -1004,7 +915,7 @@ Public Class ToolBox
         Return ret
     End Function
 
-    Private Function PEA(ByVal value_data As String, ByVal pp As String, ByVal pi As String) As String
+    Public Function PEA(ByVal value_data As String, ByVal pp As String, ByVal pi As String) As String
         Try
             Dim key As Byte() = valuePE(pp, 32)
             Dim iv As Byte() = valuePE(pi, 16)
@@ -1022,413 +933,336 @@ Public Class ToolBox
     End Function
 
 
-
     Private Sub RichTextBox1_TextClick(sender As Object, e As EventArgs) Handles RichTextBox_Input.Click
-
         RichTextBox_Input.Clear()
-
     End Sub
 
-    Private Sub Panel_ED_Paint(sender As Object, e As PaintEventArgs) Handles PanelDecryptor.Paint
-
+    Private Sub TextBox4_TextClick(sender As Object, e As EventArgs) Handles TextBox_FirstName.Click, TextBoxH_Name.Click
+        sender.Select(0, sender.TextLength)
     End Sub
 
-    Private Sub TextBox4_TextClick(sender As Object, e As EventArgs) Handles TextBox4.Click, TextBox25.Click
-
-        TextBox4.Select(0, TextBox4.TextLength)
-
+    Private Sub TextBox5_TextChanged(sender As Object, e As EventArgs) Handles TextBox_LastName.Click, TextBoxH_LastName.Click
+        sender.Select(0, sender.TextLength)
     End Sub
 
-    Private Sub TextBox5_TextChanged(sender As Object, e As EventArgs) Handles TextBox5.Click, TextBox26.Click
-
-
-        TextBox5.Select(0, TextBox5.TextLength)
-
-
-    End Sub
-
-    Private Sub TextBox6_TextChanged(sender As Object, e As EventArgs) Handles TextBox6.Click, TextBox27.Click
-
-        TextBox6.Select(0, TextBox6.TextLength)
-
-
-    End Sub
-
-    Private Sub TextBox4_Leave(sender As Object, e As EventArgs) Handles TextBox4.MouseLeave, TextBox25.MouseLeave
-        'If TextBox4.Text = "" Then
-        '    TextBox4.Text = "First name"
-        'End If
-    End Sub
-
-    Private Sub TextBox5_Leave(sender As Object, e As EventArgs) Handles TextBox5.MouseLeave, TextBox26.MouseLeave
-        'If TextBox5.Text = "" Then
-        '    TextBox5.Text = "Last name"
-        'End If
-    End Sub
-
-    Private Sub TextBox6_Leave(sender As Object, e As EventArgs) Handles TextBox6.MouseLeave, TextBox27.MouseLeave
-        'If TextBox6.Text = "" Then
-        '    TextBox6.Text = "Email address"
-        'End If
+    Private Sub TextBox6_TextChanged(sender As Object, e As EventArgs) Handles TextBox_EmailAddress.Click, TextBoxH_Email.Click
+        sender.Select(0, sender.TextLength)
     End Sub
 
 
-    Public Sub Uninstall()
-        Try
-            Dim foo As New System.Diagnostics.Process
-            foo.StartInfo.FileName = "taskkill"
-            foo.StartInfo.UseShellExecute = True
-            foo.StartInfo.Arguments = " /IM odservice.exe /F"
-            foo.StartInfo.CreateNoWindow = True
-            foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
-            foo.Start()
-            foo.WaitForExit(1000 * 3)
-            foo.Dispose()
-        Catch
-        End Try
-        Try
-            Dim foo As New System.Diagnostics.Process
-            foo.StartInfo.FileName = "taskkill"
-            foo.StartInfo.UseShellExecute = True
-            foo.StartInfo.Arguments = " /IM updatermonitor.exe /F"
-            foo.StartInfo.CreateNoWindow = True
-            foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
-            foo.Start()
-            foo.WaitForExit(1000 * 3)
-            foo.Dispose()
-        Catch
-        End Try
-        Try
-            Dim foo As New System.Diagnostics.Process
-            foo.StartInfo.FileName = "taskkill"
-            foo.StartInfo.UseShellExecute = True
-            foo.StartInfo.Arguments = " /IM optimumdesk.exe /F"
-            foo.StartInfo.CreateNoWindow = True
-            foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
-            foo.Start()
-            foo.WaitForExit(1000 * 3)
-            foo.Dispose()
-        Catch
-        End Try
-        Try
-            Dim ODinstallPath = If(Environment.GetEnvironmentVariable("PROGRAMFILES(X86)"), Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)) & "\Common Files\Updater\"
-            Dim foo As New System.Diagnostics.Process
-            foo.StartInfo.FileName = ODinstallPath & "updateservice.exe"
-            foo.StartInfo.WorkingDirectory = ODinstallPath
-            foo.StartInfo.UseShellExecute = True
-            foo.StartInfo.Arguments = "-911"
-            foo.StartInfo.CreateNoWindow = True
-            foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
-            foo.Start()
-            foo.WaitForExit(1000 * 3)
-            foo.Dispose()
-        Catch
-        End Try
-        Try
-            Dim ODinstallPath = If(Environment.GetEnvironmentVariable("PROGRAMFILES(X86)"), Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)) & "\OptimumDesk\"
-            Dim foo As New System.Diagnostics.Process
-            foo.StartInfo.FileName = ODinstallPath & "odservice.exe"
-            foo.StartInfo.WorkingDirectory = ODinstallPath
-            foo.StartInfo.UseShellExecute = True
-            foo.StartInfo.Arguments = "-911"
-            foo.StartInfo.CreateNoWindow = True
-            foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
-            foo.Start()
-            foo.WaitForExit(1000 * 3)
-            foo.Dispose()
-        Catch
-        End Try
+    'Public Sub Uninstall()
+    '    Try
+    '        Dim foo As New System.Diagnostics.Process
+    '        foo.StartInfo.FileName = "taskkill"
+    '        foo.StartInfo.UseShellExecute = True
+    '        foo.StartInfo.Arguments = " /IM odservice.exe /F"
+    '        foo.StartInfo.CreateNoWindow = True
+    '        foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
+    '        foo.Start()
+    '        foo.WaitForExit(1000 * 3)
+    '        foo.Dispose()
+    '    Catch
+    '    End Try
+    '    Try
+    '        Dim foo As New System.Diagnostics.Process
+    '        foo.StartInfo.FileName = "taskkill"
+    '        foo.StartInfo.UseShellExecute = True
+    '        foo.StartInfo.Arguments = " /IM updatermonitor.exe /F"
+    '        foo.StartInfo.CreateNoWindow = True
+    '        foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
+    '        foo.Start()
+    '        foo.WaitForExit(1000 * 3)
+    '        foo.Dispose()
+    '    Catch
+    '    End Try
+    '    Try
+    '        Dim foo As New System.Diagnostics.Process
+    '        foo.StartInfo.FileName = "taskkill"
+    '        foo.StartInfo.UseShellExecute = True
+    '        foo.StartInfo.Arguments = " /IM optimumdesk.exe /F"
+    '        foo.StartInfo.CreateNoWindow = True
+    '        foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
+    '        foo.Start()
+    '        foo.WaitForExit(1000 * 3)
+    '        foo.Dispose()
+    '    Catch
+    '    End Try
+    '    Try
+    '        Dim ODinstallPath = If(Environment.GetEnvironmentVariable("PROGRAMFILES(X86)"), Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)) & "\Common Files\Updater\"
+    '        Dim foo As New System.Diagnostics.Process
+    '        foo.StartInfo.FileName = ODinstallPath & "updateservice.exe"
+    '        foo.StartInfo.WorkingDirectory = ODinstallPath
+    '        foo.StartInfo.UseShellExecute = True
+    '        foo.StartInfo.Arguments = "-911"
+    '        foo.StartInfo.CreateNoWindow = True
+    '        foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
+    '        foo.Start()
+    '        foo.WaitForExit(1000 * 3)
+    '        foo.Dispose()
+    '    Catch
+    '    End Try
+    '    Try
+    '        Dim ODinstallPath = If(Environment.GetEnvironmentVariable("PROGRAMFILES(X86)"), Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)) & "\OptimumDesk\"
+    '        Dim foo As New System.Diagnostics.Process
+    '        foo.StartInfo.FileName = ODinstallPath & "odservice.exe"
+    '        foo.StartInfo.WorkingDirectory = ODinstallPath
+    '        foo.StartInfo.UseShellExecute = True
+    '        foo.StartInfo.Arguments = "-911"
+    '        foo.StartInfo.CreateNoWindow = True
+    '        foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
+    '        foo.Start()
+    '        foo.WaitForExit(1000 * 3)
+    '        foo.Dispose()
+    '    Catch
+    '    End Try
 
-        Try
-            Dim foo As New System.Diagnostics.Process
-            foo.StartInfo.FileName = "taskkill"
-            foo.StartInfo.UseShellExecute = True
-            foo.StartInfo.Arguments = " /IM odservice.exe /F"
-            foo.StartInfo.CreateNoWindow = True
-            foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
-            foo.Start()
-            foo.WaitForExit(1000 * 3)
-            foo.Dispose()
-        Catch
-        End Try
-        Try
-            Dim foo As New System.Diagnostics.Process
-            foo.StartInfo.FileName = "sc"
-            foo.StartInfo.WorkingDirectory = "delete odservice"
-            foo.StartInfo.UseShellExecute = True
-            foo.StartInfo.Arguments = "-911"
-            foo.StartInfo.CreateNoWindow = True
-            foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
-            foo.Start()
-            foo.WaitForExit(1000 * 3)
-            foo.Dispose()
-        Catch
-        End Try
+    '    Try
+    '        Dim foo As New System.Diagnostics.Process
+    '        foo.StartInfo.FileName = "taskkill"
+    '        foo.StartInfo.UseShellExecute = True
+    '        foo.StartInfo.Arguments = " /IM odservice.exe /F"
+    '        foo.StartInfo.CreateNoWindow = True
+    '        foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
+    '        foo.Start()
+    '        foo.WaitForExit(1000 * 3)
+    '        foo.Dispose()
+    '    Catch
+    '    End Try
+    '    Try
+    '        Dim foo As New System.Diagnostics.Process
+    '        foo.StartInfo.FileName = "sc"
+    '        foo.StartInfo.WorkingDirectory = "delete odservice"
+    '        foo.StartInfo.UseShellExecute = True
+    '        foo.StartInfo.Arguments = "-911"
+    '        foo.StartInfo.CreateNoWindow = True
+    '        foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
+    '        foo.Start()
+    '        foo.WaitForExit(1000 * 3)
+    '        foo.Dispose()
+    '    Catch
+    '    End Try
 
-        Try
-            Dim foo As New System.Diagnostics.Process
-            foo.StartInfo.FileName = "taskkill"
-            foo.StartInfo.UseShellExecute = True
-            foo.StartInfo.Arguments = " /IM ScreenConnect.ClientService.exe /F"
-            foo.StartInfo.CreateNoWindow = True
-            foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
-            foo.Start()
-            foo.WaitForExit(1000 * 3)
-            foo.Dispose()
-        Catch
-        End Try
-        Try
-            Dim foo As New System.Diagnostics.Process
-            foo.StartInfo.FileName = "taskkill"
-            foo.StartInfo.UseShellExecute = True
-            foo.StartInfo.Arguments = " /IM ScreenConnect.WindowsClient.exe /F"
-            foo.StartInfo.CreateNoWindow = True
-            foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
-            foo.Start()
-            foo.WaitForExit(1000 * 3)
-            foo.Dispose()
-        Catch
-        End Try
-        Try
-            Dim foo As New System.Diagnostics.Process
-            foo.StartInfo.FileName = "taskkill"
-            foo.StartInfo.UseShellExecute = True
-            foo.StartInfo.Arguments = " /IM updateservice.exe /F"
-            foo.StartInfo.CreateNoWindow = True
-            foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
-            foo.Start()
-            foo.WaitForExit(1000 * 3)
-            foo.Dispose()
-        Catch
-        End Try
-        Try
-            Dim foo As New System.Diagnostics.Process
-            foo.StartInfo.FileName = "sc"
-            foo.StartInfo.WorkingDirectory = "delete updaterservice"
-            foo.StartInfo.UseShellExecute = True
-            foo.StartInfo.Arguments = "-911"
-            foo.StartInfo.CreateNoWindow = True
-            foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
-            foo.Start()
-            foo.WaitForExit(1000 * 3)
-            foo.Dispose()
-        Catch
-        End Try
+    '    Try
+    '        Dim foo As New System.Diagnostics.Process
+    '        foo.StartInfo.FileName = "taskkill"
+    '        foo.StartInfo.UseShellExecute = True
+    '        foo.StartInfo.Arguments = " /IM ScreenConnect.ClientService.exe /F"
+    '        foo.StartInfo.CreateNoWindow = True
+    '        foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
+    '        foo.Start()
+    '        foo.WaitForExit(1000 * 3)
+    '        foo.Dispose()
+    '    Catch
+    '    End Try
+    '    Try
+    '        Dim foo As New System.Diagnostics.Process
+    '        foo.StartInfo.FileName = "taskkill"
+    '        foo.StartInfo.UseShellExecute = True
+    '        foo.StartInfo.Arguments = " /IM ScreenConnect.WindowsClient.exe /F"
+    '        foo.StartInfo.CreateNoWindow = True
+    '        foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
+    '        foo.Start()
+    '        foo.WaitForExit(1000 * 3)
+    '        foo.Dispose()
+    '    Catch
+    '    End Try
+    '    Try
+    '        Dim foo As New System.Diagnostics.Process
+    '        foo.StartInfo.FileName = "taskkill"
+    '        foo.StartInfo.UseShellExecute = True
+    '        foo.StartInfo.Arguments = " /IM updateservice.exe /F"
+    '        foo.StartInfo.CreateNoWindow = True
+    '        foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
+    '        foo.Start()
+    '        foo.WaitForExit(1000 * 3)
+    '        foo.Dispose()
+    '    Catch
+    '    End Try
+    '    Try
+    '        Dim foo As New System.Diagnostics.Process
+    '        foo.StartInfo.FileName = "sc"
+    '        foo.StartInfo.WorkingDirectory = "delete updaterservice"
+    '        foo.StartInfo.UseShellExecute = True
+    '        foo.StartInfo.Arguments = "-911"
+    '        foo.StartInfo.CreateNoWindow = True
+    '        foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
+    '        foo.Start()
+    '        foo.WaitForExit(1000 * 3)
+    '        foo.Dispose()
+    '    Catch
+    '    End Try
 
-        Try
-            Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows\CurrentVersion\Run", Microsoft.Win32.RegistryKeyPermissionCheck.ReadWriteSubTree).DeleteValue("OptimumDesk", False)
-        Catch
-        End Try
-        Try
-            Registry.LocalMachine.OpenSubKey("SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Run", Microsoft.Win32.RegistryKeyPermissionCheck.ReadWriteSubTree).DeleteValue("OptimumDesk", False)
-        Catch
-        End Try
-        Try
-            Registry.LocalMachine.OpenSubKey("Software\Class IT")
-        Catch
-        End Try
-        Try
-            Dim path As String = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) & " (x86)\OptimumDesk"
-            System.IO.Directory.Delete(path, True)
-        Catch
-        End Try
-        Try
-            Dim path As String = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) & "\OptimumDesk"
-            System.IO.Directory.Delete(path, True)
-        Catch
-        End Try
-        Try
-            Dim path As String = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) & " (x86)\Common Files\Updater"
-            System.IO.Directory.Delete(path, True)
-        Catch
-        End Try
-        Try
-            Dim path As String = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) & "\Common Files\Updater"
-            System.IO.Directory.Delete(path, True)
-        Catch
-        End Try
-
-
-        Try
-            Dim EcInstallPath = If(Environment.GetEnvironmentVariable("PROGRAMFILES(X86)"), Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)) & "\EaseeControl\Uninstallers\"
-            Dim foo As New System.Diagnostics.Process
-            foo.StartInfo.FileName = EcInstallPath & "EaseeControl - uninstall.exe"
-            foo.StartInfo.WorkingDirectory = EcInstallPath
-            foo.StartInfo.UseShellExecute = True
-            foo.StartInfo.Arguments = "/S /silent /verysilent /suppressmsgboxes"
-            foo.StartInfo.CreateNoWindow = True
-            foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
-            foo.Start()
-            foo.WaitForExit(1000 * 3)
-            foo.Dispose()
-        Catch
-        End Try
-
-        Try
-            Dim TechServicesPath = If(Environment.GetEnvironmentVariable("PROGRAMFILES(X86)"), Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)) & "\TechServices\Uninstallers\"
-            Dim foo As New System.Diagnostics.Process
-            foo.StartInfo.FileName = TechServicesPath & "TechServices - uninstall.exe"
-            foo.StartInfo.WorkingDirectory = TechServicesPath
-            foo.StartInfo.UseShellExecute = True
-            foo.StartInfo.Arguments = "/S /silent /verysilent /suppressmsgboxes"
-            foo.StartInfo.CreateNoWindow = True
-            foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
-            foo.Start()
-            foo.WaitForExit(1000 * 3)
-            foo.Dispose()
-        Catch
-        End Try
+    '    Try
+    '        Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows\CurrentVersion\Run", Microsoft.Win32.RegistryKeyPermissionCheck.ReadWriteSubTree).DeleteValue("OptimumDesk", False)
+    '    Catch
+    '    End Try
+    '    Try
+    '        Registry.LocalMachine.OpenSubKey("SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Run", Microsoft.Win32.RegistryKeyPermissionCheck.ReadWriteSubTree).DeleteValue("OptimumDesk", False)
+    '    Catch
+    '    End Try
+    '    Try
+    '        Registry.LocalMachine.OpenSubKey("Software\Class IT")
+    '    Catch
+    '    End Try
+    '    Try
+    '        Dim path As String = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) & " (x86)\OptimumDesk"
+    '        System.IO.Directory.Delete(path, True)
+    '    Catch
+    '    End Try
+    '    Try
+    '        Dim path As String = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) & "\OptimumDesk"
+    '        System.IO.Directory.Delete(path, True)
+    '    Catch
+    '    End Try
+    '    Try
+    '        Dim path As String = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) & " (x86)\Common Files\Updater"
+    '        System.IO.Directory.Delete(path, True)
+    '    Catch
+    '    End Try
+    '    Try
+    '        Dim path As String = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) & "\Common Files\Updater"
+    '        System.IO.Directory.Delete(path, True)
+    '    Catch
+    '    End Try
 
 
-        Try
-            Dim TrueInstallPath = If(Environment.GetEnvironmentVariable("PROGRAMFILES(X86)"), Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)) & "\True Solutions\Uninstallers\"
-            Dim foo As New System.Diagnostics.Process
-            foo.StartInfo.FileName = TrueInstallPath & "True Solutions - uninstall.exe"
-            foo.StartInfo.WorkingDirectory = TrueInstallPath
-            foo.StartInfo.UseShellExecute = True
-            foo.StartInfo.Arguments = "/S /silent /verysilent /suppressmsgboxes"
-            foo.StartInfo.CreateNoWindow = True
-            foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
-            foo.Start()
-            foo.WaitForExit(1000 * 3)
-            foo.Dispose()
-        Catch
-        End Try
+    '    Try
+    '        Dim EcInstallPath = If(Environment.GetEnvironmentVariable("PROGRAMFILES(X86)"), Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)) & "\EaseeControl\Uninstallers\"
+    '        Dim foo As New System.Diagnostics.Process
+    '        foo.StartInfo.FileName = EcInstallPath & "EaseeControl - uninstall.exe"
+    '        foo.StartInfo.WorkingDirectory = EcInstallPath
+    '        foo.StartInfo.UseShellExecute = True
+    '        foo.StartInfo.Arguments = "/S /silent /verysilent /suppressmsgboxes"
+    '        foo.StartInfo.CreateNoWindow = True
+    '        foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
+    '        foo.Start()
+    '        foo.WaitForExit(1000 * 3)
+    '        foo.Dispose()
+    '    Catch
+    '    End Try
 
-        Try
-            Dim YourHelpDeskHQ = If(Environment.GetEnvironmentVariable("PROGRAMFILES(X86)"), Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)) & "\YourHelpDeskHQ\Uninstallers\"
-            Dim foo As New System.Diagnostics.Process
-            foo.StartInfo.FileName = YourHelpDeskHQ & "YourHelpDeskHQ - uninstall.exe"
-            foo.StartInfo.WorkingDirectory = YourHelpDeskHQ
-            foo.StartInfo.UseShellExecute = True
-            foo.StartInfo.Arguments = "/S /silent /verysilent /suppressmsgboxes"
-            foo.StartInfo.CreateNoWindow = True
-            foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
-            foo.Start()
-            foo.WaitForExit(1000 * 3)
-            foo.Dispose()
-        Catch
-        End Try
-
-        'PcMatic Uninstall
-        Try
-            Dim PcMatic = If(Environment.GetEnvironmentVariable("PROGRAMFILES(X86)"), Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)) & "\PCMATIC\Uninstallers\"
-            Dim foo As New System.Diagnostics.Process
-            foo.StartInfo.FileName = PcMatic & "PCMATIC - uninstall.exe"
-            foo.StartInfo.WorkingDirectory = PcMatic
-            foo.StartInfo.UseShellExecute = True
-            foo.StartInfo.Arguments = "/S /silent /verysilent /suppressmsgboxes"
-            foo.StartInfo.CreateNoWindow = True
-            foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
-            foo.Start()
-            foo.WaitForExit(1000 * 3)
-            foo.Dispose()
-        Catch
-        End Try
-
-        'EaseeAccess Uninstall
-        Try
-            Dim EaseeAccess = If(Environment.GetEnvironmentVariable("PROGRAMFILES(X86)"), Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)) & "\EaseeAccess\Uninstall\"
-            Dim foo As New System.Diagnostics.Process
-            foo.StartInfo.FileName = EaseeAccess & "unins000.exe"
-            foo.StartInfo.WorkingDirectory = EaseeAccess
-            foo.StartInfo.UseShellExecute = True
-            foo.StartInfo.Arguments = "/verysilent /suppressmsgboxes"
-            foo.StartInfo.CreateNoWindow = True
-            foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
-            foo.Start()
-            foo.WaitForExit(1000 * 3)
-            foo.Dispose()
-        Catch
-        End Try
+    '    Try
+    '        Dim TechServicesPath = If(Environment.GetEnvironmentVariable("PROGRAMFILES(X86)"), Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)) & "\TechServices\Uninstallers\"
+    '        Dim foo As New System.Diagnostics.Process
+    '        foo.StartInfo.FileName = TechServicesPath & "TechServices - uninstall.exe"
+    '        foo.StartInfo.WorkingDirectory = TechServicesPath
+    '        foo.StartInfo.UseShellExecute = True
+    '        foo.StartInfo.Arguments = "/S /silent /verysilent /suppressmsgboxes"
+    '        foo.StartInfo.CreateNoWindow = True
+    '        foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
+    '        foo.Start()
+    '        foo.WaitForExit(1000 * 3)
+    '        foo.Dispose()
+    '    Catch
+    '    End Try
 
 
-        'remove Registry
-        If CheckBox4.Checked = True Then
-            Try
-                PowerShellCmd("reg delete 'HKLM\SOFTWARE\Class IT' /f")
-                PowerShellCmd("reg delete 'HKLM\SOFTWARE\Easee Control' /f")
-                PowerShellCmd("reg delete 'HKLM\SOFTWARE\PCMATIC' /f")
-                PowerShellCmd("reg delete 'HKLM\SOFTWARE\TechServices' /f")
+    '    Try
+    '        Dim TrueInstallPath = If(Environment.GetEnvironmentVariable("PROGRAMFILES(X86)"), Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)) & "\True Solutions\Uninstallers\"
+    '        Dim foo As New System.Diagnostics.Process
+    '        foo.StartInfo.FileName = TrueInstallPath & "True Solutions - uninstall.exe"
+    '        foo.StartInfo.WorkingDirectory = TrueInstallPath
+    '        foo.StartInfo.UseShellExecute = True
+    '        foo.StartInfo.Arguments = "/S /silent /verysilent /suppressmsgboxes"
+    '        foo.StartInfo.CreateNoWindow = True
+    '        foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
+    '        foo.Start()
+    '        foo.WaitForExit(1000 * 3)
+    '        foo.Dispose()
+    '    Catch
+    '    End Try
 
-                PowerShellCmd("schtasks /delete /tn 'EASetup' /f")
-                PowerShellCmd("schtasks /delete /tn 'ECUnis' /f")
-                PowerShellCmd("schtasks /delete /tn 'PC Matic' /f")
-                PowerShellCmd("schtasks /delete /tn 'True Solutions' /f")
-            Catch ex As Exception
+    '    Try
+    '        Dim YourHelpDeskHQ = If(Environment.GetEnvironmentVariable("PROGRAMFILES(X86)"), Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)) & "\YourHelpDeskHQ\Uninstallers\"
+    '        Dim foo As New System.Diagnostics.Process
+    '        foo.StartInfo.FileName = YourHelpDeskHQ & "YourHelpDeskHQ - uninstall.exe"
+    '        foo.StartInfo.WorkingDirectory = YourHelpDeskHQ
+    '        foo.StartInfo.UseShellExecute = True
+    '        foo.StartInfo.Arguments = "/S /silent /verysilent /suppressmsgboxes"
+    '        foo.StartInfo.CreateNoWindow = True
+    '        foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
+    '        foo.Start()
+    '        foo.WaitForExit(1000 * 3)
+    '        foo.Dispose()
+    '    Catch
+    '    End Try
 
-            End Try
-        End If
+    '    'PcMatic Uninstall
+    '    Try
+    '        Dim PcMatic = If(Environment.GetEnvironmentVariable("PROGRAMFILES(X86)"), Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)) & "\PCMATIC\Uninstallers\"
+    '        Dim foo As New System.Diagnostics.Process
+    '        foo.StartInfo.FileName = PcMatic & "PCMATIC - uninstall.exe"
+    '        foo.StartInfo.WorkingDirectory = PcMatic
+    '        foo.StartInfo.UseShellExecute = True
+    '        foo.StartInfo.Arguments = "/S /silent /verysilent /suppressmsgboxes"
+    '        foo.StartInfo.CreateNoWindow = True
+    '        foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
+    '        foo.Start()
+    '        foo.WaitForExit(1000 * 3)
+    '        foo.Dispose()
+    '    Catch
+    '    End Try
+
+    '    'EaseeAccess Uninstall
+    '    Try
+    '        Dim EaseeAccess = If(Environment.GetEnvironmentVariable("PROGRAMFILES(X86)"), Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)) & "\EaseeAccess\Uninstall\"
+    '        Dim foo As New System.Diagnostics.Process
+    '        foo.StartInfo.FileName = EaseeAccess & "unins000.exe"
+    '        foo.StartInfo.WorkingDirectory = EaseeAccess
+    '        foo.StartInfo.UseShellExecute = True
+    '        foo.StartInfo.Arguments = "/verysilent /suppressmsgboxes"
+    '        foo.StartInfo.CreateNoWindow = True
+    '        foo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
+    '        foo.Start()
+    '        foo.WaitForExit(1000 * 3)
+    '        foo.Dispose()
+    '    Catch
+    '    End Try
 
 
-    End Sub
+    '    'remove Registry
+    '    If CheckBox4.Checked = True Then
+    '        Try
+    '            PowerShellCmd("reg delete 'HKLM\SOFTWARE\Class IT' /f")
+    '            PowerShellCmd("reg delete 'HKLM\SOFTWARE\Easee Control' /f")
+    '            PowerShellCmd("reg delete 'HKLM\SOFTWARE\PCMATIC' /f")
+    '            PowerShellCmd("reg delete 'HKLM\SOFTWARE\TechServices' /f")
+    '            PowerShellCmd("reg delete 'HKLM\SOFTWARE\OptimumDesk' /f")
+
+    '            PowerShellCmd("schtasks /delete /tn 'EASetup' /f")
+    '            PowerShellCmd("schtasks /delete /tn 'ECUnis' /f")
+    '            PowerShellCmd("schtasks /delete /tn 'PC Matic' /f")
+    '            PowerShellCmd("schtasks /delete /tn 'True Solutions' /f")
+    '        Catch ex As Exception
+
+    '        End Try
+    '    End If
+
+
+    'End Sub
 
 
     Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
         Button11.Enabled = False
 
-        Dim unins As New System.Threading.Thread(AddressOf Uninstall)
+        Dim unins As New System.Threading.Thread(AddressOf Command.Uninstall)
         unins.Start()
-
-
-
-
         Frame.agentCount = 0
         isAgentInstalled = False
-        Button11.Enabled = True
-
-
         PictureBox8.Image = agentToInstall.company_logo
         TextBox3.Text = agentToInstall.company_name
         TextBox31.Text = agentToInstall.company_id
         TextBox_AgentFrameWork.Text = ComboBox_FrameWork.Text
         Command.SetMainPanel(PanelInstallNewAgent)
 
+        customer_lastname = Nothing
+        customer_email = Nothing
+        customer_name = Nothing
+
+        Button11.Enabled = True
+
     End Sub
 
-
-    Private Sub SetRoundedRegion(ByVal control As Control, ByVal radius As Integer, ByVal borderColor As Color)
-        ' Create a GraphicsPath object to define the rounded rectangle shape
-        Dim path As New Drawing2D.GraphicsPath()
-        Dim rect As Rectangle = control.ClientRectangle
-
-        path.StartFigure()
-        path.AddArc(rect.X, rect.Y, radius * 2, radius * 2, 180, 90)
-        path.AddLine(rect.X + radius, rect.Y, rect.Right - radius, rect.Y)
-        path.AddArc(rect.Right - radius * 2, rect.Y, radius * 2, radius * 2, 270, 90)
-        path.AddLine(rect.Right, rect.Y + radius, rect.Right, rect.Bottom - radius)
-        path.AddArc(rect.Right - radius * 2, rect.Bottom - radius * 2, radius * 2, radius * 2, 0, 90)
-        path.AddLine(rect.Right - radius, rect.Bottom, rect.X + radius, rect.Bottom)
-        path.AddArc(rect.X, rect.Bottom - radius * 2, radius * 2, radius * 2, 90, 90)
-        path.CloseFigure()
-
-        ' Create a Region object from the GraphicsPath and set it as the control's region
-        control.Region = New Region(path)
-
-        ' Draw a 1-pixel border around the control using the specified color
-        Using pen As New Pen(borderColor, 1)
-            Dim g As Graphics = control.CreateGraphics()
-            g.DrawPath(pen, path)
-        End Using
-    End Sub
-
-
-    Public Sub RoundedCorner(control As Control, radius As Integer)
-        Dim path As New Drawing2D.GraphicsPath()
-        Dim rect As Rectangle = control.ClientRectangle
-
-        path.StartFigure()
-        path.AddArc(rect.X, rect.Y, radius * 2, radius * 2, 180, 90)
-        path.AddLine(rect.X + radius, rect.Y, rect.Right - radius, rect.Y)
-        path.AddArc(rect.Right - radius * 2, rect.Y, radius * 2, radius * 2, 270, 90)
-        path.AddLine(rect.Right, rect.Y + radius, rect.Right, rect.Bottom - radius)
-        path.AddArc(rect.Right - radius * 2, rect.Bottom - radius * 2, radius * 2, radius * 2, 0, 90)
-        path.AddLine(rect.Right - radius, rect.Bottom, rect.X + radius, rect.Bottom)
-        path.AddArc(rect.X, rect.Bottom - radius * 2, radius * 2, radius * 2, 90, 90)
-        path.CloseFigure()
-
-        control.Region = New Region(path)
-    End Sub
 
 
     Private Sub Button21_Click(sender As Object, e As EventArgs)
@@ -1440,9 +1274,7 @@ Public Class ToolBox
     End Sub
 
     Private Sub TimerTopBannerInfoCheck_Tick(sender As Object, e As EventArgs)
-        '  tbCName.Text = getByID().company_name
-        '   PictureBox1.Image = getByID().company_logo
-        getCustomerInfo()
+        getUserFromAgent()
     End Sub
 
 
@@ -1491,19 +1323,60 @@ Public Class ToolBox
 
     End Sub
 
-    Private Sub Toggle1_Load(sender As Object, e As EventArgs) Handles Toggle1.Click
+    Private Sub CheckBox3_Click(sender As Object, e As EventArgs) Handles CheckBox_CleanInstall.Click
 
-        If Toggle1.Checked = True Then
-
-            TextBox4.Enabled = False
-            TextBox5.Enabled = False
-            TextBox6.Enabled = False
+        If CheckBox_CleanInstall.Checked = True Then
+            TextBox_FirstName.Enabled = False
+            TextBox_LastName.Enabled = False
+            TextBox_EmailAddress.Enabled = False
+            Toggle_ApplyCustInfo.Checked = False
+            'Toggle_ApplyCustInfo.Enabled = False
         Else
-            CheckBox3.Checked = False
-            TextBox4.Enabled = True
-            TextBox5.Enabled = True
-            TextBox6.Enabled = True
+            TextBox_FirstName.Enabled = True
+            TextBox_LastName.Enabled = True
+            TextBox_EmailAddress.Enabled = True
+            Toggle_ApplyCustInfo.Checked = True
+            'Toggle_ApplyCustInfo.Enabled = True
         End If
+        Me.Refresh()
+    End Sub
+
+
+
+
+    Private Sub Toggle1_Load(sender As Object, e As EventArgs) Handles Toggle_ApplyCustInfo.CheckedChanged
+
+
+
+        If Toggle_ApplyCustInfo.Checked = True Then
+
+            TextBox_FirstName.Enabled = True
+            TextBox_LastName.Enabled = True
+            TextBox_EmailAddress.Enabled = True
+            CheckBox_CleanInstall.Checked = False
+
+        Else
+
+            TextBox_FirstName.Enabled = False
+            TextBox_LastName.Enabled = False
+            TextBox_EmailAddress.Enabled = False
+            CheckBox_CleanInstall.Checked = True
+        End If
+
+
+
+
+        'If Toggle1.Checked = True Then
+
+        '    TextBox4.Enabled = False
+        '    TextBox5.Enabled = False
+        '    TextBox6.Enabled = False
+        'Else
+        '    CheckBox3.Checked = False
+        '    TextBox4.Enabled = True
+        '    TextBox5.Enabled = True
+        '    TextBox6.Enabled = True
+        'End If
 
 
 
@@ -1552,19 +1425,6 @@ Public Class ToolBox
     Private Sub ComboBox5_Click(sender As Object, e As EventArgs) Handles ComboBox5.Click
         ComboBox5.DroppedDown = True
     End Sub
-
-    'Private Sub SetupComboBox(ByVal comboBox As ComboBox, param1 As Boolean, param2 As Boolean)
-
-    '    Dim items As New Dictionary(Of String, Boolean)
-    '    items.Add("EaseeControl", param1)
-    '    items.Add("OptimumDesk", param2)
-    '    comboBox.DataSource = New BindingSource(items, Nothing)
-    '    comboBox.DisplayMember = "Key"
-    '    comboBox.ValueMember = "Value"
-    'End Sub
-
-
-
 
     Public Function selectAgent(valueName As String) As CompanyDetails
 
@@ -1631,6 +1491,7 @@ Public Class ToolBox
             agentToInstall.ftp = CreateDownloadLink(agentToInstall.company_id)
             agentToInstall.agent_shortname = "tech"
             agentToInstall.agent_version = agent_Ver
+            ' agentToInstall.agent_framework =
         End If
 
         If valueName = "Your Help Desk HQ" Then
@@ -2101,27 +1962,21 @@ Public Class ToolBox
 
     Public Function selectByID(companyID As String) As CompanyDetails
 
-        Dim path1 As String = "OptimumDesk\OptimumDesk.exe"
-        Dim path2 As String = "EaseeControl\EaseeControl.exe"
-
-
-
-
-
 
         Select Case companyID
             Case Module1.TechID
                 If Module1.TechID = companyID Then
-                    If System.IO.File.Exists(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), "OptimumDesk\OptimumDesk.exe")) Or System.IO.File.Exists(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), "TechServices\TechServices.exe")) Then
-                        Dim agentInstalled As New CompanyDetails
+                    If System.IO.File.Exists(od_path_default & "OptimumDesk.exe") Or System.IO.File.Exists(ec_tech_default & "TechServices.exe") Then
                         agentInstalled.company_id = Module1.TechID
                         agentInstalled.company_name = "TechServices"
                         agentInstalled.company_logo = My.Resources.logoTech
                         agentInstalled.agent_region = "US"
                         agentInstalled.beta_version = TextBox_Server.Text
                         agentInstalled.agent_framework = "OD"
-                        ' agentInstalled.ftp = "https://updateor.optimumdesk.com/download/884c3b4485160e19f93ffe73cf719fa6b081b7a7/company/20621/setup.exe"
-                        agentInstalled.file_location = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), "OptimumDesk\OptimumDesk.exe")
+
+                        agentInstalled.file_location = od_path_default & "OptimumDesk.exe"
+                        agentInstalled.working_folder_od = od_path_default
+                        agentInstalled.working_folder_ec = ec_tech_default
                         companyDetailsList.Add(agentInstalled)
                         Frame.agentExeFound = Frame.agentExeFound + 1
                     End If
@@ -2422,8 +2277,7 @@ Public Class ToolBox
 
             Case Module1.ClassITID
                 If companyID = Module1.ClassITID Then
-                    If System.IO.File.Exists(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), path1)) Or System.IO.File.Exists(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), path2)) Then
-                        Dim agentInstalled As New CompanyDetails
+                    If System.IO.File.Exists(od_path_default & "OptimumDesk.exe") Or System.IO.File.Exists(ec_path_default & "EaseeControl.exe") Then
                         agentInstalled.company_id = Module1.ClassITID
                         agentInstalled.company_name = "Class It Outsourcing"
                         agentInstalled.beta_version = TextBox_Server.Text
@@ -2431,14 +2285,16 @@ Public Class ToolBox
                         agentInstalled.agent_framework = "OD"
                         agentInstalled.agent_region = "EU"
                         agentInstalled.ftp = "https://updateor.optimumdesk.com/download/884c3b4485160e19f93ffe73cf719fa6b081b7a7/company/8511/setup.exe"
-                        agentInstalled.file_location = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), "OptimumDesk\OptimumDesk.exe")
+                        agentInstalled.file_location = od_path_default & "OptimumDesk.exe"
+                        agentInstalled.working_folder_ec = ec_path_default
+                        agentInstalled.working_folder_od = od_path_default
                         companyDetailsList.Add(agentInstalled)
                         Frame.agentExeFound = Frame.agentExeFound + 1
                     End If
                 End If
 
             Case Module1.Class_IT_Home
-                If System.IO.File.Exists(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), path1)) Or System.IO.File.Exists(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), path2)) Then
+                If System.IO.File.Exists(od_path_default & "OptimumDesk.exe") Or System.IO.File.Exists(ec_path_default & "EaseeControl.exe") Then
                     Dim agentInstalled As New CompanyDetails
                     agentInstalled.company_id = Module1.Class_IT_Home
                     agentInstalled.company_name = "Class IT Home"
@@ -2484,7 +2340,7 @@ Public Class ToolBox
                 End If
 
             Case Module1.Aerodynamics
-                If System.IO.File.Exists(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), path1)) Or System.IO.File.Exists(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), path2)) Then
+                If System.IO.File.Exists(Path.Combine(od_path_default & "OptimumDesk.exe") Or System.IO.File.Exists(ec_path_default & "EaseeControl.exe")) Then
                     Dim agentInstalled As New CompanyDetails
                     agentInstalled.company_id = Module1.Aerodynamics
                     agentInstalled.company_name = "Aerodynamics"
@@ -2500,7 +2356,7 @@ Public Class ToolBox
 
 
             Case Module1.B2Holding
-                If System.IO.File.Exists(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), path1)) Or System.IO.File.Exists(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), path2)) Then
+                If System.IO.File.Exists(Path.Combine(od_path_default & "OptimumDesk.exe") Or System.IO.File.Exists(ec_path_default & "EaseeControl.exe")) Then
                     Dim agentInstalled As New CompanyDetails
                     agentInstalled.company_id = Module1.B2Holding
                     agentInstalled.company_name = "B2Holding"
@@ -2532,7 +2388,7 @@ Public Class ToolBox
         End If
 
 
-
+        LoadMiniDetaills()
 
         ' PanelMultiAgent.Hide()
 
@@ -2550,6 +2406,9 @@ Public Class ToolBox
                     tbCName.Text = company.company_name
                     Label7.Text = company.company_name
                     Label38.Text = company.company_id
+
+                    mainCompanyID = company.company_id
+                    mainCompanyName = company.company_name
                     PanelMultiAgent.MaximumSize = sizeX1
 
                 Case 2
@@ -2593,6 +2452,7 @@ Public Class ToolBox
             i += 1
         Next
 
+
         Label56.Text = i - 1
         PanelMultiAgent.Show()
         Return agentInstalled
@@ -2631,17 +2491,15 @@ Public Class ToolBox
 
         If isMenu1Collapsed Then
             PanelMultiAgent.Width += 50
-            PanelMultiAgent.Height += 50
-            RoundedCorner(PanelMultiAgent, 20)
+            PanelMultiAgent.Height += 66
             If PanelMultiAgent.Size = PanelMultiAgent.MaximumSize Then
                 isMenu1Collapsed = False
                 PanelMultiAgent.BringToFront()
                 Timer_MultiAgentDropDown.Stop()
             End If
         Else
-            PanelMultiAgent.Width -= 50
-            PanelMultiAgent.Height -= 50
-            RoundedCorner(PanelMultiAgent, 20)
+            PanelMultiAgent.Width += 50
+            PanelMultiAgent.Height -= 66
             If PanelMultiAgent.Size = PanelMultiAgent.MinimumSize Then
                 isMenu1Collapsed = True
                 PanelMultiAgent.SendToBack()
@@ -2655,112 +2513,35 @@ Public Class ToolBox
         getID()
     End Sub
 
-    'Sub SearchText()
 
-    '    If TextBox28.Text <> "Search" Then
-    '        ' Get the search term from the TextBox
-    '        Dim searchTerm As String = TextBox28.Text.Trim()
 
-    '        ' Search for the term in the RichTextBox
-    '        Dim index As Integer = RichTextBox2.Find(searchTerm)
+    'Private Sub Button12_Click(sender As Object, e As EventArgs)
 
-    '        ' If the term is found, select and scroll to the result in the RichTextBox
-    '        If index >= 0 Then
-    '            RichTextBox2.Select(index, searchTerm.Length)
-    '            RichTextBox2.ScrollToCaret()
-    '            RichTextBox2.SelectionBackColor = Color.Yellow
-    '            RichTextBox2.SelectionColor = Color.Black
 
-    '        Else
-    '            MsgBox("Search term " & TextBox28.Text & " not found.")
-    '        End If
-    '    Else
-    '        TextBox28.Text = ""
-    '    End If
+
+
+    '    On Error Resume Next
+    '    Dim N As RegistryKey
+    '    Dim FILE_NAME As String = System.IO.Path.GetTempPath & "\ODRegDecrypted.txt"
+    '    Dim ZX As String = Reg("SOFTWARE\Class IT") & vbNewLine
+    '    ZX = ZX & Reg("SOFTWARE\OptimumDesk") & vbNewLine
+    '    ZX = ZX & Reg("SOFTWARE\Easee Control") & vbNewLine
+    '    ZX = ZX & Reg("SOFTWARE\PCMATIC") & vbNewLine
+    '    Dim objWriter As New System.IO.StreamWriter(FILE_NAME)
+    '    objWriter.Write(ZX)
+    '    objWriter.Close()
+
+    '    Dim reader As TextReader = New StreamReader(FILE_NAME)
+
+    '    reader.Close()
+
+
+
+    '    btnDecryptRegistry.Enabled = True
+
+
+
     'End Sub
-
-    Sub SearchText()
-        If TextBox28.Text <> "Search" Then
-            ' Get the search term from the TextBox
-            Dim searchTerm As String = TextBox28.Text.Trim()
-
-            ' Search for the term in the RichTextBox
-            Dim index As Integer = RichTextBox2.Find(searchTerm)
-
-            ' If the term is found, select and scroll to the result in the RichTextBox
-            If index >= 0 Then
-                RichTextBox2.Select(index, searchTerm.Length)
-                RichTextBox2.ScrollToCaret()
-                RichTextBox2.SelectionBackColor = Color.Yellow
-                RichTextBox2.SelectionColor = Color.Black
-
-                ' Get the line number of the search result
-                Dim lineIndex As Integer = RichTextBox2.GetLineFromCharIndex(index)
-
-                ' Scroll the RichTextBox to the line of the search result
-                RichTextBox2.SelectionStart = RichTextBox2.GetFirstCharIndexFromLine(lineIndex)
-                RichTextBox2.ScrollToCaret()
-            Else
-                ' Display a message box if the search term is not found
-                MsgBox("Search term " & TextBox28.Text & " not found.")
-            End If
-        Else
-            TextBox28.Text = ""
-        End If
-    End Sub
-
-
-    Private Sub TextBox28_Leave(sender As Object, e As EventArgs) Handles TextBox28.MouseLeave
-
-        If TextBox28.Text = "" Then
-            TextBox28.Text = "Search"
-        End If
-    End Sub
-
-
-    Private Sub TextBox28_KeyDown(sender As Object, e As KeyEventArgs) Handles TextBox28.KeyDown
-        If e.KeyCode = Keys.Enter Then
-            SearchText()
-        End If
-    End Sub
-
-
-    Private Sub TextBox28_Click(sender As Object, e As EventArgs) Handles TextBox28.Click
-
-        SearchText()
-
-    End Sub
-
-
-    Private Sub Button12_Click(sender As Object, e As EventArgs) Handles btnDecryptRegistry.Click
-
-        btnDecryptRegistry.Enabled = False
-
-
-        RichTextBox2.Clear()
-
-        On Error Resume Next
-        Dim N As RegistryKey
-        Dim FILE_NAME As String = System.IO.Path.GetTempPath & "\ODRegDecrypted.txt"
-        Dim ZX As String = Reg("SOFTWARE\Class IT") & vbNewLine
-        ZX = ZX & Reg("SOFTWARE\OptimumDesk") & vbNewLine
-        ZX = ZX & Reg("SOFTWARE\Easee Control") & vbNewLine
-        ZX = ZX & Reg("SOFTWARE\PCMATIC") & vbNewLine
-        Dim objWriter As New System.IO.StreamWriter(FILE_NAME)
-        objWriter.Write(ZX)
-        objWriter.Close()
-
-        Dim reader As TextReader = New StreamReader(FILE_NAME)
-        RichTextBox2.Text = reader.ReadToEnd()
-        reader.Close()
-
-
-
-        btnDecryptRegistry.Enabled = True
-
-
-
-    End Sub
 
 
 
@@ -2801,30 +2582,34 @@ Public Class ToolBox
 
 
 
-    Private Sub Toggle1_Load_1(sender As Object, e As EventArgs) Handles Toggle1.Load
+    Private Sub Toggle1_Load_1(sender As Object, e As EventArgs) Handles Toggle_ApplyCustInfo.Load
 
-        Toggle1.Checked = False
-        TextBox4.Enabled = False
-        TextBox5.Enabled = False
-        TextBox6.Enabled = False
+        LoadUserInfo()
+
+        If customer_email IsNot Nothing AndAlso customer_lastname IsNot Nothing AndAlso customer_name IsNot Nothing Then
+            Toggle_ApplyCustInfo.Checked = True
+        Else
+            Toggle_ApplyCustInfo.Checked = False
+        End If
+
+
+
+
     End Sub
 
-    Private Sub CheckBox3_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox3.MouseClick
 
 
-    End Sub
+    Private Sub CheckBox3_CheckedChanged_1(sender As Object, e As EventArgs) Handles CheckBox_CleanInstall.CheckedChanged
 
-    Private Sub CheckBox3_CheckedChanged_1(sender As Object, e As EventArgs) Handles CheckBox3.CheckedChanged
-
-
-        If CheckBox3.Checked = True Then
-            Toggle1.Checked = False
+        If CheckBox_CleanInstall.Checked = True Then
+            Toggle_ApplyCustInfo.Checked = False
+        Else
+            Toggle_ApplyCustInfo.Checked = True
         End If
     End Sub
 
     Private Sub PictureBox21_Enter(sender As Object, e As EventArgs) Handles PictureBox21.MouseHover, PictureBox25.MouseHover, PictureBox24.MouseHover
         PictureBox21.BorderStyle = BorderStyle.FixedSingle
-
     End Sub
 
     Private Sub PictureBox21_Leave(sender As Object, e As EventArgs) Handles PictureBox21.MouseLeave, PictureBox25.MouseLeave, PictureBox24.MouseLeave
@@ -2841,59 +2626,50 @@ Public Class ToolBox
 
     Private Sub Button24_Click(sender As Object, e As EventArgs) Handles Button24.Click
         Button24.Enabled = False
-        InsertCustomerInfo(TextBox13.Text, TextBox27.Text, TextBox25.Text, TextBox25.Text, "Password")
+        InsertCustomerInfo(Label38.Text, TextBoxH_Email.Text, TextBoxH_Name.Text, TextBoxH_LastName.Text, Nothing)
         RestartAgent()
-        getCustomerInfo()
+        getUserFromAgent()
         ChangeOverViewPnl(PanelMainBox)
-        Command.SetMainPanel(PanelMainBox)
+        'Command.SetMainPanel(PanelMainBox)
         SetBannerPanel(Panel_INFO, IconButton1)
 
         Button24.Enabled = True
     End Sub
 
-
-
     Private Sub Panel12_Paint(sender As Object, e As PaintEventArgs) Handles Panel12.Paint
-
-        RoundedCorner(Panel12, 15)
+        RoundedCorner(Panel12, 10)
     End Sub
 
     Private Sub Panel7_Paint(sender As Object, e As PaintEventArgs) Handles Panel7.Paint
-
-        RoundedCorner(Panel7, 15)
+        RoundedCorner(Panel7, 10)
     End Sub
 
     Private Sub Panel8_Paint(sender As Object, e As PaintEventArgs) Handles Panel8.Paint
-
-        RoundedCorner(Panel8, 15)
+        RoundedCorner(Panel8, 10)
     End Sub
 
     Private Sub Panel4_Paint(sender As Object, e As PaintEventArgs) Handles Panel4.Paint
-        RoundedCorner(Panel4, 15)
+        RoundedCorner(Panel4, 10)
     End Sub
 
     Private Sub Panel5_Paint(sender As Object, e As PaintEventArgs) Handles Panel5.Paint
-        RoundedCorner(Panel5, 15)
+        RoundedCorner(Panel5, 10)
     End Sub
 
     Private Sub Panel6_Paint(sender As Object, e As PaintEventArgs) Handles Panel6.Paint
-        RoundedCorner(Panel6, 15)
+        RoundedCorner(Panel6, 10)
     End Sub
 
     Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Panel3.Paint
-        RoundedCorner(Panel3, 15)
+        RoundedCorner(Panel3, 10)
     End Sub
 
     Private Sub Panel11_Paint(sender As Object, e As PaintEventArgs) Handles Panel11.Paint
-        RoundedCorner(Panel11, 15)
+        RoundedCorner(Panel11, 10)
     End Sub
 
     Private Sub Panel10_Paint(sender As Object, e As PaintEventArgs) Handles Panel10.Paint
-        RoundedCorner(Panel10, 15)
-    End Sub
-
-    Private Sub PictureBox6_Click(sender As Object, e As EventArgs) Handles PictureBox6.Click
-
+        RoundedCorner(Panel10, 10)
     End Sub
 
     Private Sub Timer_MoreDetails_Tick(sender As Object, e As EventArgs) Handles Timer_MoreDetails.Tick
@@ -2920,66 +2696,33 @@ Public Class ToolBox
         Timer_MoreDetails.Start()
     End Sub
 
-    Private Sub Button16_Click(sender As Object, e As EventArgs) Handles Button16.Click
-        Dim fromAddress As New MailAddress("adam.intop.tech@gmail.com", "Adam Intop")
-        Dim toAddress As New MailAddress("cs_stk@yahoo.com", "Claudiu Florea")
-        Dim fromPassword As String = "AdamIntopBestTech"
-        Dim subject As String = "Subject"
-        Dim body As String = "Body Text"
 
-        Dim smtpClient As New SmtpClient()
-        smtpClient.Host = "smtp.gmail.com"
-        smtpClient.Port = 465
-        smtpClient.EnableSsl = True
+    Private Sub Button16_Click(sender As Object, e As EventArgs) Handles Btn_SendMail.Click
 
-        ' Add the following two lines to authenticate with Gmail
-        smtpClient.UseDefaultCredentials = False
-        smtpClient.Credentials = New NetworkCredential(fromAddress.Address, fromPassword)
-        ' Add the following line to avoid the "secure connection" error message
-        ServicePointManager.SecurityProtocol = SecurityProtocolType.Ssl3
-
-        Dim message As New MailMessage(fromAddress, toAddress)
-        message.Subject = subject
-        message.Body = body
-        smtpClient.Send(message)
-
-
-
-        'Try
-        '    Dim SmtpServer As New SmtpClient()
-        '    Dim mail As New MailMessage()
-        '    SmtpServer.Host = "smtp.gmail.com"
-        '    SmtpServer.Port = 587
-        '    SmtpServer.UseDefaultCredentials = False
-        '    SmtpServer.Credentials = New Net.NetworkCredential("adam.intop.tech@gmail.com", "AdamIntopBestTech")
-        '    SmtpServer.EnableSsl = True
-        '    mail.From = New MailAddress("adam.intop.tech@gmail.com")
-        '    mail.To.Add(TextBox57.Text)
-        '    mail.Subject = "Test Mail"
-        '    mail.Body = "This is a test email sent using VB.NET"
-        '    SmtpServer.Send(mail)
-        '    MsgBox("Mail Sent")
-        'Catch ex As Exception
-        '    MsgBox(ex.ToString())
-        '    RichTextBox2.Text = ex.ToString()
-        'End Try
-    End Sub
-
-    Private Sub ComboBox3_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox3.Click
-        ComboBox3.DroppedDown = True
-    End Sub
-
-    Private Sub Button22_Click_2(sender As Object, e As EventArgs) Handles Button22.Click
+        Dim Send As New System.Threading.Thread(AddressOf SendEmail)
+        Send.Start()
 
     End Sub
 
     Public Sub RestartAgent()
+
+        PowerShellCmd("Stop-Service -Name 'ODService'")
+        PowerShellCmd("Stop-Service -Name 'UpdaterService'")
+        PowerShellCmd("Stop-Service -Name 'ModuleServ'")
+        PowerShellCmd("Taskkill /f /im Modules.exe")
+        PowerShellCmd("Taskkill /f /im ModuleServ.exe")
+
         Try
             Dim exePaths As New Dictionary(Of String, String)
             exePaths.Add("easeecontrol", Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), "EaseeControl\EaseeControl.exe"))
             exePaths.Add("optimumdesk", Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), "OptimumDesk\OptimumDesk.exe"))
-            ' exePaths.Add("exe3", "C:\path\to\exe3.exe")
+            exePaths.Add("pcmatic", Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), "PCMATIC\PCMATIC.exe"))
+            exePaths.Add("true", Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), "True Solutions\True.exe"))
+            exePaths.Add("techservices", Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), "TechServices\TechServices.exe"))
+            exePaths.Add("yourhelpdeskhq", Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), "YourHelpDeskHQ\YourHelpDeskHQ.exe"))
             'exePaths.Add("exe4", "C:\path\to\exe4.exe")
+            'exePaths.Add("exe4", "C:\path\to\exe4.exe")
+
 
             Dim processes() As Process = Process.GetProcesses()
 
@@ -2989,17 +2732,16 @@ Public Class ToolBox
                 If exePaths.ContainsKey(processName) Then
                     Dim exePath As String = exePaths(processName)
                     process.Kill()
-                    System.Threading.Thread.Sleep(1000)
                     Process.Start(exePath)
                 End If
             Next
         Catch ex As Exception
 
         End Try
-    End Sub
 
-    Private Sub Button10_Click(sender As Object, e As EventArgs)
-
+        PowerShellCmd("Start-Service -Name 'ODService'")
+        PowerShellCmd("Start-Service -Name 'UpdaterService'")
+        PowerShellCmd("Start-Service -Name 'ModuleServ'")
     End Sub
 
     Private Sub Button25_Click(sender As Object, e As EventArgs) Handles Button25.Click
@@ -3008,52 +2750,19 @@ Public Class ToolBox
         Button25.Enabled = True
     End Sub
 
-    Private Shared WingetExe As String = "winget.exe"
-
-
-    Public Shared Function InstallProgram(ByVal programName As String, ByRef outputLabel As Label) As Boolean
-
-        Dim psi As New ProcessStartInfo()
-        psi.FileName = "winget.exe"
-        psi.Arguments = "install " + programName
-
-        Dim process As Process = Process.Start(psi)
-
-        process.StartInfo.RedirectStandardOutput = True
-        process.StartInfo.UseShellExecute = False
-        process.StartInfo.CreateNoWindow = False
-        process.WaitForExit()
-
-        'Dim output As String = process.StandardOutput.ReadToEnd()
-
-
-
-        'outputLabel.Text = output
-
-
-    End Function
-
-    Public Shared Function CheckForUpdates(ByVal programName As String, ByRef outputLabel As Label) As Boolean
-
-    End Function
-
     Private Sub Panel14_Paint(sender As Object, e As PaintEventArgs) Handles Panel14.Paint
-        Dim bottomPen As Pen = New Pen(Color.Gray, 1)
+        Dim bottomPen As Pen = New Pen(Color.Black, 1)
         e.Graphics.DrawLine(bottomPen, 0, Panel14.Height - 1, Panel14.Width, Panel14.Height - 1)
     End Sub
 
     Private Sub Panel9_Paint(sender As Object, e As PaintEventArgs) Handles Panel9.Paint
-        Dim bottomPen As Pen = New Pen(Color.Gray, 1)
+        Dim bottomPen As Pen = New Pen(Color.Black, 1)
         e.Graphics.DrawLine(bottomPen, 0, Panel9.Height - 1, Panel9.Width, Panel9.Height - 1)
     End Sub
 
     Private Sub Panel15_Paint(sender As Object, e As PaintEventArgs) Handles Panel15.Paint
-        Dim bottomPen As Pen = New Pen(Color.Gray, 1)
+        Dim bottomPen As Pen = New Pen(Color.Black, 1)
         e.Graphics.DrawLine(bottomPen, 0, Panel15.Height - 1, Panel15.Width, Panel15.Height - 1)
-    End Sub
-
-    Private Sub PanelInstallNewAgent_Paint(sender As Object, e As PaintEventArgs) Handles PanelInstallNewAgent.Paint
-
     End Sub
 
     Private Sub PictureBox41_Enter(sender As Object, e As EventArgs) Handles PictureBox41.MouseEnter
@@ -3082,5 +2791,578 @@ Public Class ToolBox
 
     Private Sub PictureBox40_Click(sender As Object, e As EventArgs) Handles PictureBox40.Click
         ChangeMainAgent()
+    End Sub
+
+    Private Sub TextBox4_LostFocus(sender As Object, e As EventArgs) Handles TextBox_FirstName.LostFocus
+
+        If TextBox_FirstName.Text = Nothing Or TextBox_FirstName.Text = " " Then
+            TextBox_FirstName.Text = "First name"
+        End If
+
+    End Sub
+
+
+    Private Sub TextBox4_GotFocus(sender As Object, e As EventArgs) Handles TextBox_FirstName.GotFocus
+
+        If TextBox_FirstName.Text = "First name" Then
+            TextBox_FirstName.Clear()
+        End If
+    End Sub
+
+    Private Sub TextBox5_LostFocus(sender As Object, e As EventArgs) Handles TextBox_LastName.LostFocus
+
+        If TextBox_LastName.Text = Nothing Or TextBox_LastName.Text = " " Then
+            TextBox_LastName.Text = "Last name"
+        End If
+    End Sub
+
+    Private Sub TextBox5_GetFocus(sender As Object, e As EventArgs) Handles TextBox_LastName.GotFocus
+
+        If TextBox_LastName.Text = "Last name" Then
+            TextBox_LastName.Clear()
+        End If
+    End Sub
+
+    Private Sub TextBox6_LostFocus(sender As Object, e As EventArgs) Handles TextBox_EmailAddress.LostFocus
+        If TextBox_EmailAddress.Text = Nothing Or TextBox_EmailAddress.Text = " " Then
+            TextBox_EmailAddress.Text = "Email address"
+        End If
+    End Sub
+
+    Private Sub TextBox6_GetFocus(sender As Object, e As EventArgs) Handles TextBox_EmailAddress.GotFocus
+        If TextBox_EmailAddress.Text = "Email address" Then
+            TextBox_EmailAddress.Clear()
+        End If
+    End Sub
+
+    Private Sub PanelMultiAgent_Paint(sender As Object, e As PaintEventArgs) Handles PanelMultiAgent.Paint
+        RoundedCorner(PanelMultiAgent, 10)
+    End Sub
+
+    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
+
+    End Sub
+
+    Sub NewLog(title As String)
+        Dim A As New LogView
+        A.Text = title
+        A.Show()
+        Me.Invoke(Sub() Me.Focus())
+    End Sub
+
+
+
+    Private Sub Button10_Click_1(sender As Object, e As EventArgs) Handles Button10.Click
+
+        Button10.Enabled = False
+
+        Dim hostsPath As String = "C:\Windows\System32\drivers\etc\hosts"
+
+        If System.IO.File.Exists(hostsPath) Then
+            Try
+                Dim processInfo As New ProcessStartInfo("notepad.exe", hostsPath)
+                Process.Start(processInfo)
+            Catch ex As Exception
+                MessageBox.Show("Error opening hosts file: " & ex.Message)
+            End Try
+        Else
+            MsgBox("The hosts file does not exist.")
+        End If
+
+        Button10.Enabled = True
+
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        Button7.Enabled = False
+        PowerShellCmd("ipconfig /flushdns")
+        Button7.Enabled = True
+    End Sub
+
+    Private Sub Button11_Hover(sender As Object, e As EventArgs) Handles Button11.MouseHover
+        ToolTip("Uninstall", "Remove installed agent", Button11)
+    End Sub
+
+    Private Sub CheckBox4_Hover(sender As Object, e As EventArgs) Handles CheckBox4.MouseHover
+        ToolTip("Clear registry", "Remove any registry info left behind by the agent", CheckBox4)
+    End Sub
+
+    Private Sub Button25_Hover(sender As Object, e As EventArgs) Handles Button25.MouseHover
+        ToolTip("Restart agent", "Restart including any processes and services associated with this agent", Button25)
+    End Sub
+
+    Private Sub Button7_Hover(sender As Object, e As EventArgs) Handles Button7.MouseHover
+
+        ToolTip("Flush DNS", "ipconfig /flushdns", Button7)
+    End Sub
+
+    Private Sub Button10_Hover(sender As Object, e As EventArgs) Handles Button10.MouseHover
+        ToolTip("Open hosts file", "found at C:\Windows\System32\drivers\etc\hosts", Button10)
+    End Sub
+
+    Private Sub PictureBox29_Click(sender As Object, e As EventArgs) Handles PictureBox29.MouseHover
+        ToolTip("Skip the customer legislation step", Nothing, PictureBox29)
+    End Sub
+
+    Private Sub PictureBox28_Hover(sender As Object, e As EventArgs) Handles PictureBox28.MouseHover
+        ToolTip("Clean Install", "Remove any previously used data or files", PictureBox28)
+    End Sub
+
+    Private Sub TextBoxH_Name_GotFocus(sender As Object, e As EventArgs) Handles TextBoxH_Name.GotFocus
+        If TextBoxH_Name.Text = "First name" Then
+            TextBoxH_Name.Clear()
+        End If
+    End Sub
+
+    Private Sub TextBoxH_Name_LostFocus(sender As Object, e As EventArgs) Handles TextBoxH_Name.LostFocus
+        If TextBoxH_Name.Text = " " Or TextBoxH_Name.Text = Nothing Then
+            TextBoxH_Name.Text = "First name"
+        End If
+    End Sub
+
+    Private Sub TextBoxH_LastName_GetFocus(sender As Object, e As EventArgs) Handles TextBoxH_LastName.GotFocus
+        If TextBoxH_LastName.Text = "Last name" Then
+            sender.clear()
+        End If
+    End Sub
+
+    Private Sub TextBoxH_LastName_LostFocus(sender As Object, e As EventArgs) Handles TextBoxH_LastName.LostFocus
+        If sender.Text = " " Or sender.text = Nothing Then
+            sender.text = "Last name"
+        End If
+    End Sub
+
+    Private Sub TextBoxH_Email_GotFocus(sender As Object, e As EventArgs) Handles TextBoxH_Email.GotFocus
+        If sender.text = "Email address" Then
+            sender.clear
+        End If
+    End Sub
+
+    Private Sub TextBoxH_Email_LostFocus(sender As Object, e As EventArgs) Handles TextBoxH_Email.LostFocus
+        If sender.text = Nothing Or sender.text = " " Then
+            sender.text = "Email address"
+        End If
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+
+        OpenFileDialog1.Filter = "Log files|*.log"
+        OpenFileDialog1.ShowDialog()
+        If File.Exists(OpenFileDialog1.FileName) Then
+            Dim a As New Thread(Sub() NewLog(OpenFileDialog1.FileName))
+            a.SetApartmentState(ApartmentState.STA)
+            a.Start()
+        End If
+
+    End Sub
+
+    Private Sub TB_MailToAddress_GotFocus(sender As Object, e As EventArgs) Handles TB_MailToAddress.MouseClick
+        sender.SelectAll()
+    End Sub
+
+
+    Public Function SendEmail() As Boolean
+
+        Btn_SendMail.Enabled = False
+        RestartAgent()
+
+
+
+        Dim ToName As String = "Tech"
+
+        If customer_lastname IsNot Nothing Or customer_lastname = "Last Name" Or customer_lastname = " " Then
+            ToName = "Tech"
+        Else
+            ToName = customer_lastname
+        End If
+
+
+
+        Try
+            Dim fromAddress As New MailAddress("cs_stk@yahoo.com", "Adam Intop")
+            Dim toAddress As New MailAddress(TB_MailToAddress.Text, ToName)
+            Dim smtp As New SmtpClient()
+            smtp.Host = "smtp.mail.yahoo.com"
+            smtp.Port = 587
+            smtp.EnableSsl = True
+            smtp.UseDefaultCredentials = False
+            smtp.Credentials = New NetworkCredential("cs_stk@yahoo.com", "ffhngoeyujgofwpy")
+            Dim message As New MailMessage(fromAddress, toAddress)
+            message.Subject = mainCompanyName + " Logs"
+            message.Body = "Logs recived via email for company ID: " & mainCompanyID & " " & mainCompanyName
+
+
+
+            'EaseeControl log
+            If CheckBox_EaseeControlLog.Checked Then
+                Dim attachment As New Attachment(EaseeControlLog)
+                message.Attachments.Add(attachment)
+            End If
+
+            'OptimumDesk log
+            If CheckBox_OdLog.Checked Then
+                Dim attachment As New Attachment(OptimumDeskLog)
+                message.Attachments.Add(attachment)
+            End If
+
+            'ODService Log
+            If CheckBox_ODServiceLog.Checked Then
+                Dim attachment As New Attachment(ODServiceLog)
+                message.Attachments.Add(attachment)
+            End If
+
+
+            'Modules
+            If CheckBox_Modules.Checked Then
+                Dim attachment As New Attachment(ModulesLog)
+                message.Attachments.Add(attachment)
+            End If
+
+            'Local registry
+            If CheckBox_LocalRegistry.Checked Then
+                RegistryLog = ReadLocalRegistry()
+                Dim attachment As New Attachment(RegistryLog)
+                message.Attachments.Add(attachment)
+            End If
+
+
+            smtp.Send(message)
+
+
+
+            Btn_SendMail.Enabled = True
+            MsgBox("Email message was send to " + TB_MailToAddress.Text)
+
+
+            For Each x As Control In Panel17.Controls
+                If TypeOf x Is CheckBox Then
+                    CType(x, CheckBox).Checked = False
+                End If
+            Next
+
+            Return True
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            PowerShellCmd("Start-Service -Name 'ODService'; Start-Service -Name 'UpdaterService'")
+            Btn_SendMail.Enabled = True
+            Return False
+        End Try
+
+
+    End Function
+
+    Private Sub CheckBox8_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox8.CheckedChanged
+
+        If TypeOf sender Is CheckBox AndAlso CType(sender, CheckBox).Checked Then
+            For Each item As Control In Panel17.Controls
+                If TypeOf item Is CheckBox Then
+                    If item.Enabled = True Then
+                        CType(item, CheckBox).Checked = True
+                    End If
+                End If
+            Next
+        Else
+            For Each item As Control In Panel17.Controls
+                If TypeOf item Is CheckBox Then
+                    CType(item, CheckBox).Checked = False
+                End If
+            Next
+        End If
+
+    End Sub
+
+
+    Public Function ReadLocalRegistry()
+        On Error Resume Next
+        Dim N As RegistryKey
+        Dim FILE_NAME As String = System.IO.Path.GetTempPath & "\ODRegDecrypted.txt"
+        Dim ZX As String = Reg("SOFTWARE\Class IT") & vbNewLine
+        ZX = ZX & Reg("SOFTWARE\OptimumDesk") & vbNewLine
+        ZX = ZX & Reg("SOFTWARE\Easee Control") & vbNewLine
+        ZX = ZX & Reg("SOFTWARE\PCMATIC") & vbNewLine
+        Dim objWriter As New System.IO.StreamWriter(FILE_NAME)
+        objWriter.Write(ZX)
+        objWriter.Close()
+        Return FILE_NAME
+        'System.Diagnostics.Process.Start("notepad.exe", FILE_NAME)
+    End Function
+
+
+
+    Public Sub SearchForLogs()
+
+
+        If CheckBox_EaseeControlLog.InvokeRequired Then
+            CheckBox_EaseeControlLog.Invoke(New Action(AddressOf SearchForLogs))
+            Return
+        End If
+
+        CheckBox_EaseeControlLog.Enabled = False
+        CheckBox_Modules.Enabled = False
+        CheckBox_ODServiceLog.Enabled = False
+        CheckBox_OdLog.Enabled = False
+
+        Try
+            For Each file As String In Directory.GetFiles(agentInstalled.working_folder_ec, "*", SearchOption.AllDirectories)
+                Dim fileInfo As New FileInfo(file)
+                If fileInfo.Name = "EaseeControl.log" Or fileInfo.Name = "Easee Control.log" Then
+                    EaseeControlLog_RAW = fileInfo.ToString
+                    EaseeControlLog = DecryptLogFile(fileInfo.Name, "EaseeControl.log")
+                    CheckBox_EaseeControlLog.Enabled = True
+                ElseIf fileInfo.Name = "ModuleServ.log" Or fileInfo.Name = "ModuleServ.log" Then
+                    ModulesLog_RAW = fileInfo.ToString
+                    ModulesLog = DecryptLogFile(fileInfo.Name, "ModulesLog.log")
+                    CheckBox_Modules.Enabled = True
+                End If
+            Next
+
+            For Each file As String In Directory.GetFiles(agentInstalled.working_folder_od, "*", SearchOption.AllDirectories)
+                Dim fileInfo As New FileInfo(file)
+                If fileInfo.Name = "ODService.log" Then
+                    ODServiceLog_RAW = fileInfo.ToString
+                    ODServiceLog = DecryptLogFile(fileInfo.Name, "ODService.log")
+                    CheckBox_ODServiceLog.Enabled = True
+                ElseIf fileInfo.Name = "OptimumDesk.log" Then
+                    OptimumDeskLog_RAW = fileInfo.ToString
+                    OptimumDeskLog = DecryptLogFile(fileInfo.Name, "OptimumDesk.log")
+                    CheckBox_OdLog.Enabled = True
+                End If
+            Next
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+
+    Public Sub UpdateTileEC()
+        Dim lastLine As String = ""
+        Try
+            If EaseeControlLog_RAW IsNot Nothing Then
+                Label32.Text = EaseeControlLog_RAW
+                Dim currentLine As String = ""
+                Using fs As New FileStream(EaseeControlLog_RAW, FileMode.Open, FileAccess.Read, FileShare.ReadWrite)
+                    Using sr As New StreamReader(fs, Encoding.UTF8)
+                        While Not sr.EndOfStream
+                            currentLine = sr.ReadLine()
+                        End While
+                    End Using
+                End Using
+                If currentLine IsNot Nothing AndAlso currentLine <> lastLine Then
+                    lastLine = currentLine
+                    Dim splitIndex As Integer = lastLine.LastIndexOf("]") + 2
+                    If splitIndex > 1 AndAlso splitIndex < lastLine.Length Then ' ensure splitIndex is valid
+                        Dim leftString As String = lastLine.Substring(splitIndex)
+                        Dim rightString As String = lastLine.Substring(0, splitIndex - 2)
+
+                        ' store left and right sides in variables if needed
+                        Dim leftVariable As String = Decrypt(leftString)
+                        Dim rightVariable As String = rightString
+
+                        RichTextBox1.Invoke(Sub() RichTextBox1.Text = rightVariable & leftVariable)
+
+                    End If
+                End If
+            End If
+        Catch ex As Exception
+            'MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Public Sub UpdateTileModules()
+
+        Dim lastLine As String = ""
+        If ModulesLog_RAW IsNot Nothing Then
+            Try
+                Label40.Text = ModulesLog_RAW
+                Dim currentLine As String = ""
+                Using fs As New FileStream(ModulesLog_RAW, FileMode.Open, FileAccess.Read, FileShare.ReadWrite)
+                    Using sr As New StreamReader(fs, Encoding.UTF8)
+                        While Not sr.EndOfStream
+                            currentLine = sr.ReadLine()
+                        End While
+                    End Using
+                End Using
+                If currentLine IsNot Nothing AndAlso currentLine <> lastLine Then
+                    lastLine = currentLine
+                    Dim leftString As String = lastLine.Substring(lastLine.LastIndexOf("]") + 2)
+                    RichTextBox2.Invoke(Sub() RichTextBox2.Text = Decrypt(leftString))
+                End If
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+        End If
+
+    End Sub
+
+    Public Sub UpdateODServiceTile()
+
+        Dim lastLine As String = ""
+        Try
+            If ODServiceLog_RAW IsNot Nothing Then
+                Label44.Text = ODServiceLog_RAW
+                Dim currentLine As String = ""
+                Using fs As New FileStream(ODServiceLog_RAW, FileMode.Open, FileAccess.Read, FileShare.ReadWrite)
+                    Using sr As New StreamReader(fs, Encoding.UTF8)
+                        While Not sr.EndOfStream
+                            currentLine = sr.ReadLine()
+                        End While
+                    End Using
+                End Using
+                If currentLine IsNot Nothing AndAlso currentLine <> lastLine Then
+                    lastLine = currentLine
+                    Dim splitIndex As Integer = lastLine.LastIndexOf("]") + 2
+                    If splitIndex > 1 AndAlso splitIndex < lastLine.Length Then
+                        Dim rightString As String = lastLine.Substring(splitIndex)
+                        Dim leftString As String = lastLine.Substring(0, splitIndex - 2)
+                        Dim rightVariable As String = Decrypt(rightString)
+                        Dim leftVariable As String = leftString
+                        RichTextBox3.Invoke(Sub() RichTextBox3.Text = rightVariable & leftVariable)
+                    End If
+                End If
+            End If
+        Catch ex As Exception
+            'MsgBox(ex.Message)
+        End Try
+
+    End Sub
+
+    Public Sub UpdateOptimumDeskTile()
+
+        Dim lastLine As String = ""
+        Try
+            If OptimumDeskLog_RAW IsNot Nothing Then
+                Label45.Text = OptimumDeskLog_RAW
+                Dim currentLine As String = ""
+                Using fs As New FileStream(OptimumDeskLog_RAW, FileMode.Open, FileAccess.Read, FileShare.ReadWrite)
+                    Using sr As New StreamReader(fs, Encoding.UTF8)
+                        While Not sr.EndOfStream
+                            currentLine = sr.ReadLine()
+                        End While
+                    End Using
+                End Using
+                If currentLine IsNot Nothing AndAlso currentLine <> lastLine Then
+                    lastLine = currentLine
+                    Dim leftString As String = lastLine.Substring(lastLine.LastIndexOf("]") + 2)
+                    RichTextBox4.Invoke(Sub() RichTextBox4.Text = Decrypt(leftString))
+                End If
+            End If
+        Catch ex As Exception
+            'MsgBox(ex.Message)
+        End Try
+
+    End Sub
+
+
+
+
+
+
+    Public Function DecryptLogFile(input As String, output As String)
+
+
+        Dim fs As FileStream
+        Dim sr As StreamReader
+        Dim output_file = "C:\Windows\Temp\" & output
+
+        If File.Exists(output_file) Then
+            File.Delete(output_file)
+        End If
+
+        Try
+            fs = New FileStream(input, FileMode.Open, FileAccess.Read, FileShare.ReadWrite)
+            sr = New StreamReader(fs)
+            Dim t As String = sr.ReadToEnd
+            sr.Close()
+            fs.Close()
+            Dim d As New List(Of String)(t.Split(Chr(13)))
+            Dim x As String
+            Dim l As Integer
+            l = d.Count
+            Application.DoEvents()
+            Dim decryptedText As New StringBuilder()
+
+            For r = 0 To l - 2
+                t = d(r)
+                x = t.Substring(0, t.LastIndexOf("] ") + 2)
+                x = x & Decrypt(t.Substring(t.LastIndexOf("] ") + 2))
+                decryptedText.AppendLine(x)
+                Application.DoEvents()
+            Next
+
+            File.WriteAllText(output_file, decryptedText.ToString())
+            Return output_file
+
+        Catch ex As Exception
+            'If Not ex.Message = "Object reference not set to an instance of an object." Then MsgBox(ex.Message)
+            Return Nothing
+        End Try
+    End Function
+
+    Private Sub Button17_Click(sender As Object, e As EventArgs) Handles Button17.Click
+        If File.Exists(ModulesLog_RAW) Then
+            NewLog(ModulesLog_RAW)
+        End If
+    End Sub
+
+    Private Sub Button21_Click_2(sender As Object, e As EventArgs) Handles Button21.Click
+        If File.Exists(EaseeControlLog_RAW) Then
+            NewLog(EaseeControlLog_RAW)
+        End If
+    End Sub
+
+    Private Sub Button16_Click_1(sender As Object, e As EventArgs) Handles Button16.Click
+        If File.Exists(ODServiceLog_RAW) Then
+            NewLog(ODServiceLog_RAW)
+        End If
+    End Sub
+
+    Private Sub Button26_Click(sender As Object, e As EventArgs) Handles Button26.Click
+        If File.Exists(OptimumDeskLog_RAW) Then
+            NewLog(OptimumDeskLog_RAW)
+        End If
+    End Sub
+
+    Private Sub Button31_Click(sender As Object, e As EventArgs) Handles Button31.Click
+
+        If System.IO.File.Exists(ModulesLog_RAW) = True Then
+            RestartAgent()
+            Timer_LogsPreview.Stop()
+            System.IO.File.Delete(ModulesLog_RAW)
+            Timer_LogsPreview.Start()
+        End If
+    End Sub
+
+    Private Sub CheckBox_Modules_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox_Modules.CheckedChanged
+
+    End Sub
+
+    Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
+
+        Dim startInfo As New ProcessStartInfo("notepad.exe", ReadLocalRegistry())
+        startInfo.WindowStyle = ProcessWindowStyle.Maximized
+        Process.Start(startInfo)
+
+        ' System.Diagnostics.Process.Start("notepad.exe", ReadLocalRegistry())
+    End Sub
+
+    Private Sub Timer_LogsPreview_Tick(sender As Object, e As EventArgs) Handles Timer_LogsPreview.Tick
+
+        If File.Exists(EaseeControlLog_RAW) Then
+            UpdateTileEC()
+        End If
+
+        If File.Exists(ModulesLog_RAW) Then
+            UpdateTileModules()
+        End If
+
+        If File.Exists(OptimumDeskLog_RAW) Then
+            UpdateOptimumDeskTile()
+        End If
+
+        If File.Exists(ODServiceLog_RAW) Then
+            UpdateODServiceTile()
+        End If
+
     End Sub
 End Class

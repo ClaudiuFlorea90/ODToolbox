@@ -234,12 +234,8 @@ Partial Class Home
         Me.Lbl_User = New System.Windows.Forms.Label()
         Me.PanelStatus = New System.Windows.Forms.Panel()
         Me.PanelUpdater = New System.Windows.Forms.Panel()
-        Me.ListView1 = New System.Windows.Forms.ListView()
-        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.RoundedButton2 = New Script_Agent.RoundedButton()
         Me.RoundedButton1 = New Script_Agent.RoundedButton()
         Me.PanelLiveStats.SuspendLayout()
@@ -2636,7 +2632,7 @@ Partial Class Home
         '
         'PanelUpdater
         '
-        Me.PanelUpdater.Controls.Add(Me.ListView1)
+        Me.PanelUpdater.Controls.Add(Me.Panel1)
         Me.PanelUpdater.Controls.Add(Me.TextBox1)
         Me.PanelUpdater.Controls.Add(Me.RoundedButton2)
         Me.PanelUpdater.Controls.Add(Me.RoundedButton1)
@@ -2646,41 +2642,27 @@ Partial Class Home
         Me.PanelUpdater.Size = New System.Drawing.Size(1017, 698)
         Me.PanelUpdater.TabIndex = 25
         '
-        'ListView1
-        '
-        Me.ListView1.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
-        Me.ListView1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4})
-        Me.ListView1.ForeColor = System.Drawing.SystemColors.Window
-        Me.ListView1.HideSelection = False
-        Me.ListView1.Location = New System.Drawing.Point(11, 346)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(986, 321)
-        Me.ListView1.TabIndex = 7
-        Me.ListView1.UseCompatibleStateImageBehavior = False
-        Me.ListView1.View = System.Windows.Forms.View.Details
-        '
-        'ColumnHeader1
-        '
-        Me.ColumnHeader1.Text = "Name"
-        '
-        'ColumnHeader2
-        '
-        Me.ColumnHeader2.Text = "App version"
-        '
         'TextBox1
         '
         Me.TextBox1.Location = New System.Drawing.Point(331, 13)
         Me.TextBox1.MaxLength = 999999999
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(666, 223)
+        Me.TextBox1.Size = New System.Drawing.Size(666, 96)
         Me.TextBox1.TabIndex = 6
+        '
+        'Panel1
+        '
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel1.Location = New System.Drawing.Point(0, 128)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1017, 570)
+        Me.Panel1.TabIndex = 8
         '
         'RoundedButton2
         '
         Me.RoundedButton2.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RoundedButton2.Location = New System.Drawing.Point(216, 117)
+        Me.RoundedButton2.Location = New System.Drawing.Point(177, 23)
         Me.RoundedButton2.Name = "RoundedButton2"
         Me.RoundedButton2.Size = New System.Drawing.Size(100, 28)
         Me.RoundedButton2.TabIndex = 5
@@ -2690,7 +2672,7 @@ Partial Class Home
         'RoundedButton1
         '
         Me.RoundedButton1.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RoundedButton1.Location = New System.Drawing.Point(101, 117)
+        Me.RoundedButton1.Location = New System.Drawing.Point(62, 23)
         Me.RoundedButton1.Name = "RoundedButton1"
         Me.RoundedButton1.Size = New System.Drawing.Size(100, 28)
         Me.RoundedButton1.TabIndex = 5
@@ -2936,9 +2918,5 @@ Partial Class Home
     Friend WithEvents RoundedButton2 As RoundedButton
     Friend WithEvents RoundedButton1 As RoundedButton
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents ListView1 As ListView
-    Friend WithEvents ColumnHeader1 As ColumnHeader
-    Friend WithEvents ColumnHeader2 As ColumnHeader
-    Friend WithEvents ColumnHeader3 As ColumnHeader
-    Friend WithEvents ColumnHeader4 As ColumnHeader
+    Friend WithEvents Panel1 As Panel
 End Class

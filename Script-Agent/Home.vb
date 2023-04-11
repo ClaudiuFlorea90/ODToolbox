@@ -493,7 +493,7 @@ Public Class Home
         ''Sub Panels
         PanelCPU.Size = PanelCPU.MinimumSize
         PanelCPU.Location = New Point(3, 3)
-        ToolBox.RoundedCorner(PanelCPU, 10)
+        RoundedCorner(PanelCPU, 10)
 
 
         PanelRam.Size = PanelRam.MinimumSize
@@ -556,6 +556,9 @@ Public Class Home
 
 
     Private Sub Home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        Frame.ChromeBrowser("itworks.optimumdesk.com", Panel1)
+
 
         Me.Size = Frame.PnlMain.MaximumSize
 
@@ -1067,167 +1070,45 @@ Public Class Home
 
     End Sub
 
-    Private Sub Timer_User_Tick(sender As Object, e As EventArgs) Handles Timer_User.Tick
 
-    End Sub
-
-    Private Sub Chart5_Click(sender As Object, e As EventArgs) Handles Chart5.Click, Chart4.Click
-
-    End Sub
-
-    Private Sub Label110_Click(sender As Object, e As EventArgs) Handles Label110.Click
-
-    End Sub
-
-    Private Sub PanelRam_Paint(sender As Object, e As PaintEventArgs) Handles PanelRam.Paint
-        Dim rect As New Rectangle(0, 0, PanelRam.Width - 1, PanelRam.Height - 1)
-        Dim path As New Drawing2D.GraphicsPath()
-        Dim radius As Integer = 20
-
-        path.StartFigure()
-        path.AddArc(rect.X, rect.Y, radius, radius, 180, 90)
-        path.AddLine(rect.X + radius, rect.Y, rect.Width - radius, rect.Y)
-        path.AddArc(rect.X + rect.Width - radius, rect.Y, radius, radius, 270, 90)
-        path.AddLine(rect.Width, rect.Y + radius, rect.Width, rect.Height - radius)
-        path.AddArc(rect.X + rect.Width - radius, rect.Y + rect.Height - radius, radius, radius, 0, 90)
-        path.AddLine(rect.Width - radius, rect.Height, rect.X + radius, rect.Height)
-        path.AddArc(rect.X, rect.Y + rect.Height - radius, radius, radius, 90, 90)
-        path.CloseFigure()
-
-        PanelRam.Region = New Region(path)
-    End Sub
-
-
-
-    Private Sub PanelDisk_Paint(sender As Object, e As PaintEventArgs) Handles PanelDisk.Paint
-
-        Dim rect As New Rectangle(0, 0, PanelDisk.Width - 1, PanelDisk.Height - 1)
-        Dim path As New Drawing2D.GraphicsPath()
-        Dim radius As Integer = 20
-
-        path.StartFigure()
-        path.AddArc(rect.X, rect.Y, radius, radius, 180, 90)
-        path.AddLine(rect.X + radius, rect.Y, rect.Width - radius, rect.Y)
-        path.AddArc(rect.X + rect.Width - radius, rect.Y, radius, radius, 270, 90)
-        path.AddLine(rect.Width, rect.Y + radius, rect.Width, rect.Height - radius)
-        path.AddArc(rect.X + rect.Width - radius, rect.Y + rect.Height - radius, radius, radius, 0, 90)
-        path.AddLine(rect.Width - radius, rect.Height, rect.X + radius, rect.Height)
-        path.AddArc(rect.X, rect.Y + rect.Height - radius, radius, radius, 90, 90)
-        path.CloseFigure()
-
-        PanelDisk.Region = New Region(path)
-
-    End Sub
-
-    Private Sub PanelGpu_Paint(sender As Object, e As PaintEventArgs) Handles PanelGpu.Paint
-        Dim rect As New Rectangle(0, 0, PanelGpu.Width - 1, PanelGpu.Height - 1)
-        Dim path As New Drawing2D.GraphicsPath()
-        Dim radius As Integer = 20
-
-        path.StartFigure()
-        path.AddArc(rect.X, rect.Y, radius, radius, 180, 90)
-        path.AddLine(rect.X + radius, rect.Y, rect.Width - radius, rect.Y)
-        path.AddArc(rect.X + rect.Width - radius, rect.Y, radius, radius, 270, 90)
-        path.AddLine(rect.Width, rect.Y + radius, rect.Width, rect.Height - radius)
-        path.AddArc(rect.X + rect.Width - radius, rect.Y + rect.Height - radius, radius, radius, 0, 90)
-        path.AddLine(rect.Width - radius, rect.Height, rect.X + radius, rect.Height)
-        path.AddArc(rect.X, rect.Y + rect.Height - radius, radius, radius, 90, 90)
-        path.CloseFigure()
-
-        PanelGpu.Region = New Region(path)
-    End Sub
-
-    Private Sub PanelNetwork_Paint(sender As Object, e As PaintEventArgs) Handles PanelNetwork.Paint
-        Dim rect As New Rectangle(0, 0, PanelNetwork.Width - 1, PanelNetwork.Height - 1)
-        Dim path As New Drawing2D.GraphicsPath()
-        Dim radius As Integer = 20
-
-        path.StartFigure()
-        path.AddArc(rect.X, rect.Y, radius, radius, 180, 90)
-        path.AddLine(rect.X + radius, rect.Y, rect.Width - radius, rect.Y)
-        path.AddArc(rect.X + rect.Width - radius, rect.Y, radius, radius, 270, 90)
-        path.AddLine(rect.Width, rect.Y + radius, rect.Width, rect.Height - radius)
-        path.AddArc(rect.X + rect.Width - radius, rect.Y + rect.Height - radius, radius, radius, 0, 90)
-        path.AddLine(rect.Width - radius, rect.Height, rect.X + radius, rect.Height)
-        path.AddArc(rect.X, rect.Y + rect.Height - radius, radius, radius, 90, 90)
-        path.CloseFigure()
-
-        PanelNetwork.Region = New Region(path)
-    End Sub
-
-    Private Sub Pnl_Windows_Paint(sender As Object, e As PaintEventArgs) Handles Pnl_Windows.Paint
-        Dim rect As New Rectangle(0, 0, Pnl_Windows.Width - 1, Pnl_Windows.Height - 1)
-        Dim path As New Drawing2D.GraphicsPath()
-        Dim radius As Integer = 20
-
-        path.StartFigure()
-        path.AddArc(rect.X, rect.Y, radius, radius, 180, 90)
-        path.AddLine(rect.X + radius, rect.Y, rect.Width - radius, rect.Y)
-        path.AddArc(rect.X + rect.Width - radius, rect.Y, radius, radius, 270, 90)
-        path.AddLine(rect.Width, rect.Y + radius, rect.Width, rect.Height - radius)
-        path.AddArc(rect.X + rect.Width - radius, rect.Y + rect.Height - radius, radius, radius, 0, 90)
-        path.AddLine(rect.Width - radius, rect.Height, rect.X + radius, rect.Height)
-        path.AddArc(rect.X, rect.Y + rect.Height - radius, radius, radius, 90, 90)
-        path.CloseFigure()
-
-        Pnl_Windows.Region = New Region(path)
-    End Sub
-
-    Private Sub Pnl_Computer_Paint(sender As Object, e As PaintEventArgs) Handles Pnl_Computer.Paint
-        Dim rect As New Rectangle(0, 0, Pnl_Computer.Width - 1, Pnl_Computer.Height - 1)
-        Dim path As New Drawing2D.GraphicsPath()
-        Dim radius As Integer = 20
-
-        path.StartFigure()
-        path.AddArc(rect.X, rect.Y, radius, radius, 180, 90)
-        path.AddLine(rect.X + radius, rect.Y, rect.Width - radius, rect.Y)
-        path.AddArc(rect.X + rect.Width - radius, rect.Y, radius, radius, 270, 90)
-        path.AddLine(rect.Width, rect.Y + radius, rect.Width, rect.Height - radius)
-        path.AddArc(rect.X + rect.Width - radius, rect.Y + rect.Height - radius, radius, radius, 0, 90)
-        path.AddLine(rect.Width - radius, rect.Height, rect.X + radius, rect.Height)
-        path.AddArc(rect.X, rect.Y + rect.Height - radius, radius, radius, 90, 90)
-        path.CloseFigure()
-
-        Pnl_Computer.Region = New Region(path)
-    End Sub
 
     Private Sub RoundedButton2_Click(sender As Object, e As EventArgs) Handles RoundedButton2.Click
 
-        Dim CheckAppUpdates As New System.Threading.Thread(AddressOf CheckForUpdates)
-        CheckAppUpdates.Start()
+        '   Dim CheckAppUpdates As New System.Threading.Thread(AddressOf CheckForUpdates)
+        '  CheckAppUpdates.Start()
 
     End Sub
-    Private Sub CheckForUpdates()
-        ' Create a new process to run the winget command
-        Dim process As New Process()
-        process.StartInfo.FileName = "winget"
-        process.StartInfo.Arguments = "upgrade"
-        process.StartInfo.UseShellExecute = False
-        process.StartInfo.RedirectStandardOutput = True
-        process.Start()
+    'Private Sub CheckForUpdates()
+    '    ' Create a new process to run the winget command
+    '    Dim process As New Process()
+    '    process.StartInfo.FileName = "winget"
+    '    process.StartInfo.Arguments = "upgrade"
+    '    process.StartInfo.UseShellExecute = False
+    '    process.StartInfo.RedirectStandardOutput = True
+    '    process.Start()
 
-        ' Read the output of the winget command
-        Dim output As String = process.StandardOutput.ReadToEnd()
+    '    ' Read the output of the winget command
+    '    Dim output As String = process.StandardOutput.ReadToEnd()
 
 
-        ' Split the output into lines and add them to the ListView control
-        Dim lines() As String = output.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries)
-        For Each line As String In lines
-            Dim parts() As String = line.Split(vbTab)
-            If parts.Length = 2 Then
-                Dim item As New ListViewItem(parts)
-                ListView1.Items.Add(item)
-            End If
-        Next
+    '    ' Split the output into lines and add them to the ListView control
+    '    Dim lines() As String = output.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries)
+    '    For Each line As String In lines
+    '        Dim parts() As String = line.Split(vbTab)
+    '        If parts.Length = 2 Then
+    '            Dim item As New ListViewItem(parts)
+    '            ListView1.Items.Add(item)
+    '        End If
+    '    Next
 
-        ' Set the column headers
-        ListView1.Columns.Add("Package", 100)
-        ListView1.Columns.Add("Installed", 100)
-        ListView1.Columns.Add("Available", 100)
-        ListView1.Columns.Add("Publisher", 100)
-        process.WaitForExit()
+    '    ' Set the column headers
+    '    ListView1.Columns.Add("Package", 100)
+    '    ListView1.Columns.Add("Installed", 100)
+    '    ListView1.Columns.Add("Available", 100)
+    '    ListView1.Columns.Add("Publisher", 100)
+    '    process.WaitForExit()
 
-    End Sub
+    'End Sub
 
     Private Sub PanelCPU_Paint(sender As Object, e As PaintEventArgs) Handles PanelCPU.Paint
 

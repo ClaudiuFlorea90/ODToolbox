@@ -23,31 +23,19 @@
     End Sub
 
     Private Sub Pnl_Top_MouseUp(sender As Object, e As MouseEventArgs) Handles Panel1.MouseUp
-
         draggable = False
-
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
         Me.Close()
     End Sub
 
     Private Sub EventView_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim rect As New Rectangle(0, 0, Me.Width - 1, Me.Height - 1)
-        Dim path As New Drawing2D.GraphicsPath()
-        Dim radius As Integer = 20
+        RoundedCorner(Me, 9)
+        Btn_Exit.Image = Frame.Btn_Exit.Image
+    End Sub
 
-        path.StartFigure()
-        path.AddArc(rect.X, rect.Y, radius, radius, 180, 90)
-        path.AddLine(rect.X + radius, rect.Y, rect.Width - radius, rect.Y)
-        path.AddArc(rect.X + rect.Width - radius, rect.Y, radius, radius, 270, 90)
-        path.AddLine(rect.Width, rect.Y + radius, rect.Width, rect.Height - radius)
-        path.AddArc(rect.X + rect.Width - radius, rect.Y + rect.Height - radius, radius, radius, 0, 90)
-        path.AddLine(rect.Width - radius, rect.Height, rect.X + radius, rect.Height)
-        path.AddArc(rect.X, rect.Y + rect.Height - radius, radius, radius, 90, 90)
-        path.CloseFigure()
-
-        Me.Region = New Region(path)
-
+    Private Sub Btn_Exit_Click(sender As Object, e As EventArgs) Handles Btn_Exit.Click
+        Me.Close()
     End Sub
 End Class

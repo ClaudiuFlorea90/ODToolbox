@@ -27,7 +27,6 @@ Partial Class EventView
         Me.TextBox_ErrorMsg = New System.Windows.Forms.TextBox()
         Me.Label_Date = New System.Windows.Forms.Label()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Lbl_ErrorType = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -36,6 +35,7 @@ Partial Class EventView
         Me.Label4 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.Btn_Exit = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -45,7 +45,7 @@ Partial Class EventView
         Me.Label_Title.AutoSize = True
         Me.Label_Title.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label_Title.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Label_Title.Location = New System.Drawing.Point(29, 10)
+        Me.Label_Title.Location = New System.Drawing.Point(29, 7)
         Me.Label_Title.Name = "Label_Title"
         Me.Label_Title.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Label_Title.Size = New System.Drawing.Size(36, 17)
@@ -85,21 +85,6 @@ Partial Class EventView
         Me.ImageList1.ImageSize = New System.Drawing.Size(16, 16)
         Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
         '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Microsoft PhagsPa", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Button1.Location = New System.Drawing.Point(764, 0)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(36, 39)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "X"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
         'Lbl_ErrorType
         '
         Me.Lbl_ErrorType.AutoSize = True
@@ -117,7 +102,7 @@ Partial Class EventView
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label1.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Label1.Location = New System.Drawing.Point(8, 10)
+        Me.Label1.Location = New System.Drawing.Point(8, 7)
         Me.Label1.Name = "Label1"
         Me.Label1.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Label1.Size = New System.Drawing.Size(15, 17)
@@ -127,13 +112,13 @@ Partial Class EventView
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.Btn_Exit)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.Label_Title)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(800, 39)
+        Me.Panel1.Size = New System.Drawing.Size(800, 32)
         Me.Panel1.TabIndex = 3
         '
         'Label2
@@ -193,6 +178,20 @@ Partial Class EventView
         Me.Label5.TabIndex = 5
         Me.Label5.Text = "Error message"
         '
+        'Btn_Exit
+        '
+        Me.Btn_Exit.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Btn_Exit.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Btn_Exit.FlatAppearance.BorderSize = 0
+        Me.Btn_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_Exit.ImageIndex = 2
+        Me.Btn_Exit.Location = New System.Drawing.Point(760, 3)
+        Me.Btn_Exit.Name = "Btn_Exit"
+        Me.Btn_Exit.Size = New System.Drawing.Size(37, 24)
+        Me.Btn_Exit.TabIndex = 16
+        Me.Btn_Exit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.Btn_Exit.UseVisualStyleBackColor = False
+        '
         'EventView
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -224,7 +223,6 @@ Partial Class EventView
     Friend WithEvents TextBox_ErrorMsg As TextBox
     Friend WithEvents Label_Date As Label
     Friend WithEvents ImageList1 As ImageList
-    Friend WithEvents Button1 As Button
     Friend WithEvents Lbl_ErrorType As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel1 As Panel
@@ -233,4 +231,5 @@ Partial Class EventView
     Friend WithEvents Label4 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label5 As Label
+    Friend WithEvents Btn_Exit As Button
 End Class

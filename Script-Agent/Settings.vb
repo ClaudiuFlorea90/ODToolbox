@@ -16,7 +16,7 @@ Public Class Settings
     Private Sub Settings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         '  RunAtStartup()
-        Me.Size = Frame.PnlMain.MaximumSize
+        Me.Size = Frame.PnlMain.Size
 
     End Sub
 
@@ -42,16 +42,6 @@ Public Class Settings
 
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Dim client As New WebClient()
-
-        AddHandler client.DownloadFileCompleted, AddressOf downloadCompleted
-        AddHandler client.DownloadProgressChanged, AddressOf downloadProgressChanged
-
-        client.DownloadFileAsync(New Uri("https://updateor.optimumdesk.com/public/kits/ODUninstaller.exe"), "C:\file.txt")
-
-    End Sub
-
 
 
     Private Sub downloadCompleted(sender As Object, e As AsyncCompletedEventArgs)
@@ -61,13 +51,5 @@ Public Class Settings
             MsgBox("File downloaded successfully.")
         End If
     End Sub
-
-    Private Sub downloadProgressChanged(sender As Object, e As DownloadProgressChangedEventArgs)
-
-        ProgressBar1.Value = e.ProgressPercentage
-
-    End Sub
-
-
 
 End Class

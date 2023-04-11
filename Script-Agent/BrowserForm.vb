@@ -44,7 +44,7 @@ Public Class BrowserForm
 
 
 
-        ChromeBrowser("us.optimumdesk.com")
+        Frame.ChromeBrowser("us.optimumdesk.com", PanelChromeBrowser)
 
 
 
@@ -59,35 +59,6 @@ Public Class BrowserForm
     End Sub
 
 
-    Public Sub ChromeBrowser(url As String)
-
-
-
-
-
-        PanelChromeBrowser.Controls.Clear()
-
-        Dim Chrome As New ChromiumWebBrowser(url)
-        PanelChromeBrowser.Controls.Add(Chrome)
-        Chrome.Dock = DockStyle.Fill
-
-        LastUrl = Chrome.Address
-        Chrome.Refresh()
-
-
-
-
-
-        TextBoxUrl.Text = Chrome.Address
-
-
-
-    End Sub
-
-
-
-
-
 
     Private Sub TextBoxUrl_Keypress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBoxUrl.KeyPress
 
@@ -96,7 +67,7 @@ Public Class BrowserForm
             If e.KeyChar = Convert.ToChar(13) Then
 
 
-                ChromeBrowser(TextBoxUrl.Text)
+                Frame.ChromeBrowser(TextBoxUrl.Text, PanelChromeBrowser)
             End If
 
         End If
@@ -108,7 +79,7 @@ Public Class BrowserForm
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
 
         ' Chrome.Refresh()
-        ChromeBrowser(TextBoxUrl.Text)
+        Frame.ChromeBrowser(TextBoxUrl.Text, PanelChromeBrowser)
 
     End Sub
 
@@ -121,7 +92,7 @@ Public Class BrowserForm
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
 
-        ChromeBrowser(LastUrl)
+        Frame.ChromeBrowser(LastUrl, PanelChromeBrowser)
     End Sub
 
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
@@ -129,7 +100,7 @@ Public Class BrowserForm
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        ChromeBrowser(TextBoxUrl.Text)
+        Frame.ChromeBrowser(TextBoxUrl.Text, PanelChromeBrowser)
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles SetPnlSize.Tick

@@ -1,4 +1,4 @@
-﻿Module StructuresModule
+﻿Public Module StructuresModule
 
     Public Structure SignUpRegistrationData
         Public companyId As String

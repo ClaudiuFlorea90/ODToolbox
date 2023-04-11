@@ -126,7 +126,7 @@ Partial Class Frame
         Me.PnlMenu.Controls.Add(Me.Button11)
         Me.PnlMenu.Controls.Add(Me.Btn_Ticket)
         Me.PnlMenu.Dock = System.Windows.Forms.DockStyle.Left
-        Me.PnlMenu.Location = New System.Drawing.Point(0, 262)
+        Me.PnlMenu.Location = New System.Drawing.Point(0, 32)
         Me.PnlMenu.MaximumSize = New System.Drawing.Size(117, 710)
         Me.PnlMenu.MinimumSize = New System.Drawing.Size(50, 710)
         Me.PnlMenu.Name = "PnlMenu"
@@ -331,7 +331,7 @@ Partial Class Frame
         Me.PnlMain.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PnlMain.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.PnlMain.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.PnlMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PnlMain.Controls.Add(Me.Btn_home)
         Me.PnlMain.Controls.Add(Me.Btn_Settings)
@@ -403,7 +403,7 @@ Partial Class Frame
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.MinimumSize = New System.Drawing.Size(1073, 32)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1073, 262)
+        Me.Panel1.Size = New System.Drawing.Size(1073, 32)
         Me.Panel1.TabIndex = 23
         '
         'Panel5

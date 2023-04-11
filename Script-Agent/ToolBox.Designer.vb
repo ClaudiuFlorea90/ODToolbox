@@ -84,44 +84,31 @@ Partial Class ToolBox
         Me.PictureBox13 = New System.Windows.Forms.PictureBox()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.ImageList2 = New System.Windows.Forms.ImageList(Me.components)
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label31 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Button25 = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.CheckBox4 = New System.Windows.Forms.CheckBox()
         Me.Button11 = New System.Windows.Forms.Button()
-        Me.Button9 = New System.Windows.Forms.Button()
+        Me.Button25 = New System.Windows.Forms.Button()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Button24 = New System.Windows.Forms.Button()
-        Me.TextBox25 = New System.Windows.Forms.TextBox()
+        Me.TextBoxH_Name = New System.Windows.Forms.TextBox()
         Me.TextBox29 = New System.Windows.Forms.TextBox()
-        Me.TextBox27 = New System.Windows.Forms.TextBox()
-        Me.TextBox26 = New System.Windows.Forms.TextBox()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Label31 = New System.Windows.Forms.Label()
+        Me.TextBoxH_Email = New System.Windows.Forms.TextBox()
+        Me.TextBoxH_LastName = New System.Windows.Forms.TextBox()
         Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label46 = New System.Windows.Forms.Label()
+        Me.Button10 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.TextBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.tbName = New System.Windows.Forms.TextBox()
         Me.tbEmail = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.PnlLogs = New System.Windows.Forms.Panel()
-        Me.TextBox57 = New System.Windows.Forms.TextBox()
-        Me.TextBox28 = New System.Windows.Forms.TextBox()
-        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
-        Me.Button14 = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button16 = New System.Windows.Forms.Button()
-        Me.Button21 = New System.Windows.Forms.Button()
-        Me.Button18 = New System.Windows.Forms.Button()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.Button12 = New System.Windows.Forms.Button()
-        Me.Button17 = New System.Windows.Forms.Button()
-        Me.btn_ReadOdLog = New System.Windows.Forms.Button()
-        Me.btnDecryptRegistry = New System.Windows.Forms.Button()
         Me.PanelMultiAgent = New System.Windows.Forms.Panel()
         Me.Label56 = New System.Windows.Forms.Label()
         Me.Panel11 = New System.Windows.Forms.Panel()
@@ -158,8 +145,6 @@ Partial Class ToolBox
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label25 = New System.Windows.Forms.Label()
         Me.PictureBox17 = New System.Windows.Forms.PictureBox()
-        Me.IconButton6 = New FontAwesome.Sharp.IconButton()
-        Me.IconButton3 = New FontAwesome.Sharp.IconButton()
         Me.tbCName = New System.Windows.Forms.TextBox()
         Me.IconButton4 = New FontAwesome.Sharp.IconButton()
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
@@ -175,13 +160,41 @@ Partial Class ToolBox
         Me.Label29 = New System.Windows.Forms.Label()
         Me.IconButton5 = New FontAwesome.Sharp.IconButton()
         Me.Label38 = New System.Windows.Forms.Label()
-        Me.Pnl_Button1 = New System.Windows.Forms.Panel()
-        Me.Label126 = New System.Windows.Forms.Label()
-        Me.Pnl_Button2 = New System.Windows.Forms.Panel()
-        Me.Button15 = New System.Windows.Forms.Button()
-        Me.Label128 = New System.Windows.Forms.Label()
-        Me.Label129 = New System.Windows.Forms.Label()
-        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
+        Me.PnlLogs = New System.Windows.Forms.Panel()
+        Me.Panel22 = New System.Windows.Forms.Panel()
+        Me.Button14 = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button12 = New System.Windows.Forms.Button()
+        Me.Panel21 = New System.Windows.Forms.Panel()
+        Me.RichTextBox4 = New System.Windows.Forms.RichTextBox()
+        Me.Label45 = New System.Windows.Forms.Label()
+        Me.Button26 = New System.Windows.Forms.Button()
+        Me.Button30 = New System.Windows.Forms.Button()
+        Me.Panel19 = New System.Windows.Forms.Panel()
+        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
+        Me.Label40 = New System.Windows.Forms.Label()
+        Me.Button31 = New System.Windows.Forms.Button()
+        Me.Button17 = New System.Windows.Forms.Button()
+        Me.Panel20 = New System.Windows.Forms.Panel()
+        Me.RichTextBox3 = New System.Windows.Forms.RichTextBox()
+        Me.Label44 = New System.Windows.Forms.Label()
+        Me.Button16 = New System.Windows.Forms.Button()
+        Me.Button29 = New System.Windows.Forms.Button()
+        Me.Panel18 = New System.Windows.Forms.Panel()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.Label32 = New System.Windows.Forms.Label()
+        Me.Button21 = New System.Windows.Forms.Button()
+        Me.Button28 = New System.Windows.Forms.Button()
+        Me.Panel17 = New System.Windows.Forms.Panel()
+        Me.CheckBox8 = New System.Windows.Forms.CheckBox()
+        Me.Btn_SendMail = New System.Windows.Forms.Button()
+        Me.TB_MailToAddress = New System.Windows.Forms.TextBox()
+        Me.CheckBox_LocalRegistry = New System.Windows.Forms.CheckBox()
+        Me.CheckBox_ODServiceLog = New System.Windows.Forms.CheckBox()
+        Me.CheckBox_OdLog = New System.Windows.Forms.CheckBox()
+        Me.CheckBox_Modules = New System.Windows.Forms.CheckBox()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.CheckBox_EaseeControlLog = New System.Windows.Forms.CheckBox()
         Me.PanelInstallNewAgent = New System.Windows.Forms.Panel()
         Me.TextBox35 = New System.Windows.Forms.Label()
         Me.CheckBoxEU2 = New System.Windows.Forms.CheckBox()
@@ -207,9 +220,10 @@ Partial Class ToolBox
         Me.Label15 = New System.Windows.Forms.Label()
         Me.PictureBox26 = New System.Windows.Forms.PictureBox()
         Me.PictureBox29 = New System.Windows.Forms.PictureBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Toggle_ApplyCustInfo = New Script_Agent.Toggle()
+        Me.TextBox_EmailAddress = New System.Windows.Forms.TextBox()
+        Me.TextBox_LastName = New System.Windows.Forms.TextBox()
+        Me.TextBox_FirstName = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.TextBox_AgentFrameWork = New System.Windows.Forms.TextBox()
@@ -223,12 +237,13 @@ Partial Class ToolBox
         Me.Label16 = New System.Windows.Forms.Label()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.TextBox_Server = New System.Windows.Forms.TextBox()
+        Me.PictureBox42 = New System.Windows.Forms.PictureBox()
         Me.Panel12 = New System.Windows.Forms.Panel()
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.PictureBox27 = New System.Windows.Forms.PictureBox()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.PictureBox28 = New System.Windows.Forms.PictureBox()
-        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox_CleanInstall = New System.Windows.Forms.CheckBox()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.PanelDecryptor = New System.Windows.Forms.Panel()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
@@ -252,6 +267,8 @@ Partial Class ToolBox
         Me.TextBox_InstallStep = New System.Windows.Forms.TextBox()
         Me.CircularProgressBar2 = New CircularProgressBar.CircularProgressBar()
         Me.PanelEventViewer = New System.Windows.Forms.Panel()
+        Me.TextBox25 = New System.Windows.Forms.TextBox()
+        Me.Button15 = New System.Windows.Forms.Button()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.Label105 = New System.Windows.Forms.Label()
         Me.ListView1 = New System.Windows.Forms.ListView()
@@ -277,8 +294,8 @@ Partial Class ToolBox
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Button19 = New System.Windows.Forms.Button()
         Me.Timer_MoreDetails = New System.Windows.Forms.Timer(Me.components)
-        Me.Toggle1 = New Script_Agent.Toggle()
-        Me.PictureBox42 = New System.Windows.Forms.PictureBox()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.Timer_LogsPreview = New System.Windows.Forms.Timer(Me.components)
         Me.PanelMainBox.SuspendLayout()
         Me.Panel_INFO.SuspendLayout()
         CType(Me.PictureBox41, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -303,12 +320,11 @@ Partial Class ToolBox
         CType(Me.PictureBox30, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        Me.Panel4.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel6.SuspendLayout()
-        Me.Panel4.SuspendLayout()
         Me.Panel5.SuspendLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.PnlLogs.SuspendLayout()
         Me.PanelMultiAgent.SuspendLayout()
         Me.Panel11.SuspendLayout()
         CType(Me.PictureBox_MiniFlag1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -326,8 +342,13 @@ Partial Class ToolBox
         CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel13.SuspendLayout()
         CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Pnl_Button1.SuspendLayout()
-        Me.Pnl_Button2.SuspendLayout()
+        Me.PnlLogs.SuspendLayout()
+        Me.Panel22.SuspendLayout()
+        Me.Panel21.SuspendLayout()
+        Me.Panel19.SuspendLayout()
+        Me.Panel20.SuspendLayout()
+        Me.Panel18.SuspendLayout()
+        Me.Panel17.SuspendLayout()
         Me.PanelInstallNewAgent.SuspendLayout()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -339,6 +360,7 @@ Partial Class ToolBox
         Me.Panel7.SuspendLayout()
         Me.Panel14.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox42, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel12.SuspendLayout()
         Me.Panel9.SuspendLayout()
         CType(Me.PictureBox27, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -349,18 +371,14 @@ Partial Class ToolBox
         CType(Me.PictureBox22, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelEventViewer.SuspendLayout()
         Me.ContextMenuStrip1.SuspendLayout()
-        CType(Me.PictureBox42, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelMainBox
         '
         Me.PanelMainBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
         Me.PanelMainBox.Controls.Add(Me.Panel_INFO)
-        Me.PanelMainBox.Controls.Add(Me.PnlLogs)
         Me.PanelMainBox.Controls.Add(Me.PanelMultiAgent)
-        Me.PanelMainBox.Controls.Add(Me.Pnl_Button1)
-        Me.PanelMainBox.Controls.Add(Me.Pnl_Button2)
-        Me.PanelMainBox.Location = New System.Drawing.Point(12, 12)
+        Me.PanelMainBox.Location = New System.Drawing.Point(12, 9)
         Me.PanelMainBox.MaximumSize = New System.Drawing.Size(1017, 698)
         Me.PanelMainBox.Name = "PanelMainBox"
         Me.PanelMainBox.Size = New System.Drawing.Size(1017, 698)
@@ -377,10 +395,10 @@ Partial Class ToolBox
         Me.Panel_INFO.Controls.Add(Me.tbName)
         Me.Panel_INFO.Controls.Add(Me.tbEmail)
         Me.Panel_INFO.Controls.Add(Me.Label6)
-        Me.Panel_INFO.Location = New System.Drawing.Point(1, 60)
+        Me.Panel_INFO.Location = New System.Drawing.Point(6, 66)
         Me.Panel_INFO.MaximumSize = New System.Drawing.Size(1017, 633)
         Me.Panel_INFO.Name = "Panel_INFO"
-        Me.Panel_INFO.Size = New System.Drawing.Size(1017, 633)
+        Me.Panel_INFO.Size = New System.Drawing.Size(974, 633)
         Me.Panel_INFO.TabIndex = 32
         '
         'PictureBox41
@@ -801,7 +819,7 @@ Partial Class ToolBox
         Me.TextBox20.ReadOnly = True
         Me.TextBox20.Size = New System.Drawing.Size(133, 15)
         Me.TextBox20.TabIndex = 37
-        Me.TextBox20.Text = "Version"
+        Me.TextBox20.Text = "ForceVer"
         '
         'PictureBox32
         '
@@ -1154,185 +1172,71 @@ Partial Class ToolBox
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.Panel4)
         Me.Panel1.Controls.Add(Me.Panel3)
         Me.Panel1.Controls.Add(Me.Panel6)
-        Me.Panel1.Controls.Add(Me.Panel4)
         Me.Panel1.Controls.Add(Me.Panel5)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel1.Location = New System.Drawing.Point(767, 0)
+        Me.Panel1.Location = New System.Drawing.Point(724, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(250, 633)
         Me.Panel1.TabIndex = 41
         '
-        'Panel3
-        '
-        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
-        Me.Panel3.Controls.Add(Me.Button25)
-        Me.Panel3.Controls.Add(Me.CheckBox4)
-        Me.Panel3.Controls.Add(Me.Button11)
-        Me.Panel3.Controls.Add(Me.Button9)
-        Me.Panel3.Location = New System.Drawing.Point(0, 470)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(250, 156)
-        Me.Panel3.TabIndex = 42
-        '
-        'Button25
-        '
-        Me.Button25.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.Button25.FlatAppearance.BorderSize = 0
-        Me.Button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button25.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button25.ForeColor = System.Drawing.Color.Black
-        Me.Button25.Image = CType(resources.GetObject("Button25.Image"), System.Drawing.Image)
-        Me.Button25.Location = New System.Drawing.Point(38, 49)
-        Me.Button25.Name = "Button25"
-        Me.Button25.Size = New System.Drawing.Size(110, 26)
-        Me.Button25.TabIndex = 30
-        Me.Button25.Text = "Restart Agent"
-        Me.Button25.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button25.UseVisualStyleBackColor = False
-        '
-        'CheckBox4
-        '
-        Me.CheckBox4.AutoSize = True
-        Me.CheckBox4.Checked = True
-        Me.CheckBox4.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox4.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.CheckBox4.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox4.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.CheckBox4.Location = New System.Drawing.Point(34, 83)
-        Me.CheckBox4.Name = "CheckBox4"
-        Me.CheckBox4.Size = New System.Drawing.Size(100, 20)
-        Me.CheckBox4.TabIndex = 42
-        Me.CheckBox4.Text = "Clear registry"
-        Me.CheckBox4.UseVisualStyleBackColor = True
-        '
-        'Button11
-        '
-        Me.Button11.BackColor = System.Drawing.Color.Crimson
-        Me.Button11.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button11.FlatAppearance.BorderSize = 0
-        Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button11.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Button11.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Button11.Location = New System.Drawing.Point(140, 81)
-        Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(80, 26)
-        Me.Button11.TabIndex = 31
-        Me.Button11.Text = "Uninstall OD"
-        Me.Button11.UseVisualStyleBackColor = False
-        '
-        'Button9
-        '
-        Me.Button9.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.Button9.FlatAppearance.BorderSize = 0
-        Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button9.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button9.ForeColor = System.Drawing.Color.Black
-        Me.Button9.Image = CType(resources.GetObject("Button9.Image"), System.Drawing.Image)
-        Me.Button9.Location = New System.Drawing.Point(154, 49)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(66, 26)
-        Me.Button9.TabIndex = 30
-        Me.Button9.Text = "HOST"
-        Me.Button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button9.UseVisualStyleBackColor = False
-        '
-        'Panel6
-        '
-        Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
-        Me.Panel6.Controls.Add(Me.Button24)
-        Me.Panel6.Controls.Add(Me.TextBox25)
-        Me.Panel6.Controls.Add(Me.TextBox29)
-        Me.Panel6.Controls.Add(Me.TextBox27)
-        Me.Panel6.Controls.Add(Me.TextBox26)
-        Me.Panel6.Location = New System.Drawing.Point(0, 304)
-        Me.Panel6.MaximumSize = New System.Drawing.Size(250, 160)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(250, 160)
-        Me.Panel6.TabIndex = 41
-        '
-        'Button24
-        '
-        Me.Button24.BackColor = System.Drawing.Color.OliveDrab
-        Me.Button24.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button24.FlatAppearance.BorderSize = 0
-        Me.Button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button24.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Button24.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Button24.Location = New System.Drawing.Point(94, 126)
-        Me.Button24.Name = "Button24"
-        Me.Button24.Size = New System.Drawing.Size(77, 23)
-        Me.Button24.TabIndex = 0
-        Me.Button24.Text = "Save"
-        Me.Button24.UseVisualStyleBackColor = False
-        '
-        'TextBox25
-        '
-        Me.TextBox25.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        Me.TextBox25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox25.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox25.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.TextBox25.Location = New System.Drawing.Point(23, 30)
-        Me.TextBox25.Name = "TextBox25"
-        Me.TextBox25.Size = New System.Drawing.Size(210, 24)
-        Me.TextBox25.TabIndex = 1
-        Me.TextBox25.Text = "First name"
-        Me.TextBox25.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'TextBox29
-        '
-        Me.TextBox29.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
-        Me.TextBox29.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox29.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.TextBox29.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.TextBox29.ForeColor = System.Drawing.Color.DarkGray
-        Me.TextBox29.Location = New System.Drawing.Point(3, 5)
-        Me.TextBox29.Name = "TextBox29"
-        Me.TextBox29.ReadOnly = True
-        Me.TextBox29.Size = New System.Drawing.Size(240, 15)
-        Me.TextBox29.TabIndex = 33
-        Me.TextBox29.Text = "Edit client info"
-        Me.TextBox29.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'TextBox27
-        '
-        Me.TextBox27.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        Me.TextBox27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox27.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox27.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.TextBox27.Location = New System.Drawing.Point(23, 87)
-        Me.TextBox27.Name = "TextBox27"
-        Me.TextBox27.Size = New System.Drawing.Size(209, 24)
-        Me.TextBox27.TabIndex = 1
-        Me.TextBox27.Text = "Email address"
-        Me.TextBox27.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'TextBox26
-        '
-        Me.TextBox26.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        Me.TextBox26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox26.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox26.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.TextBox26.Location = New System.Drawing.Point(23, 58)
-        Me.TextBox26.Name = "TextBox26"
-        Me.TextBox26.Size = New System.Drawing.Size(209, 24)
-        Me.TextBox26.TabIndex = 1
-        Me.TextBox26.Text = "Last name"
-        Me.TextBox26.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
         'Panel4
         '
-        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.Panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.Panel4.Controls.Add(Me.Label22)
         Me.Panel4.Controls.Add(Me.Button2)
+        Me.Panel4.Controls.Add(Me.Label22)
         Me.Panel4.Controls.Add(Me.Label31)
         Me.Panel4.Location = New System.Drawing.Point(0, 0)
         Me.Panel4.MaximumSize = New System.Drawing.Size(250, 165)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(250, 165)
         Me.Panel4.TabIndex = 41
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Leelawadee UI", 11.25!)
+        Me.Button2.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Button2.ImageIndex = 6
+        Me.Button2.ImageList = Me.ImageList2
+        Me.Button2.Location = New System.Drawing.Point(69, 86)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(123, 32)
+        Me.Button2.TabIndex = 0
+        Me.Button2.Text = "View details"
+        Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'ImageList2
+        '
+        Me.ImageList2.ImageStream = CType(resources.GetObject("ImageList2.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.ImageList2.TransparentColor = System.Drawing.Color.Transparent
+        Me.ImageList2.Images.SetKeyName(0, "prohibited.png")
+        Me.ImageList2.Images.SetKeyName(1, "log.png")
+        Me.ImageList2.Images.SetKeyName(2, "eye.png")
+        Me.ImageList2.Images.SetKeyName(3, "trash.png")
+        Me.ImageList2.Images.SetKeyName(4, "send (1).png")
+        Me.ImageList2.Images.SetKeyName(5, "send.png")
+        Me.ImageList2.Images.SetKeyName(6, "eye (1).png")
+        Me.ImageList2.Images.SetKeyName(7, "save.png")
+        Me.ImageList2.Images.SetKeyName(8, "file.png")
+        Me.ImageList2.Images.SetKeyName(9, "synchronization.png")
+        Me.ImageList2.Images.SetKeyName(10, "dns.png")
+        Me.ImageList2.Images.SetKeyName(11, "arrow.png")
+        Me.ImageList2.Images.SetKeyName(12, "trash (1).png")
+        Me.ImageList2.Images.SetKeyName(13, "folder (1).png")
+        Me.ImageList2.Images.SetKeyName(14, "folder.png")
+        Me.ImageList2.Images.SetKeyName(15, "Registry_Editor_icon.png")
+        Me.ImageList2.Images.SetKeyName(16, "search.png")
+        Me.ImageList2.Images.SetKeyName(17, "share.png")
         '
         'Label22
         '
@@ -1346,21 +1250,6 @@ Partial Class ToolBox
         Me.Label22.TabIndex = 2
         Me.Label22.Text = "0"
         '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.OliveDrab
-        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Button2.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Button2.Location = New System.Drawing.Point(86, 108)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(91, 23)
-        Me.Button2.TabIndex = 0
-        Me.Button2.Text = "View details"
-        Me.Button2.UseVisualStyleBackColor = False
-        '
         'Label31
         '
         Me.Label31.AutoSize = True
@@ -1373,58 +1262,234 @@ Partial Class ToolBox
         Me.Label31.TabIndex = 2
         Me.Label31.Text = "Event Viewer Errors"
         '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.Panel3.Controls.Add(Me.Label5)
+        Me.Panel3.Controls.Add(Me.CheckBox4)
+        Me.Panel3.Controls.Add(Me.Button11)
+        Me.Panel3.Controls.Add(Me.Button25)
+        Me.Panel3.Location = New System.Drawing.Point(0, 470)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(250, 156)
+        Me.Panel3.TabIndex = 42
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.Label5.ForeColor = System.Drawing.Color.DarkGray
+        Me.Label5.Location = New System.Drawing.Point(95, 6)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(53, 15)
+        Me.Label5.TabIndex = 43
+        Me.Label5.Text = "Uninstall"
+        '
+        'CheckBox4
+        '
+        Me.CheckBox4.AutoSize = True
+        Me.CheckBox4.Checked = True
+        Me.CheckBox4.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBox4.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.CheckBox4.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox4.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.CheckBox4.Location = New System.Drawing.Point(133, 119)
+        Me.CheckBox4.Name = "CheckBox4"
+        Me.CheckBox4.Size = New System.Drawing.Size(100, 20)
+        Me.CheckBox4.TabIndex = 42
+        Me.CheckBox4.Text = "Clear registry"
+        Me.CheckBox4.UseVisualStyleBackColor = True
+        '
+        'Button11
+        '
+        Me.Button11.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Button11.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button11.FlatAppearance.BorderSize = 0
+        Me.Button11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button11.Font = New System.Drawing.Font("Leelawadee UI", 11.25!)
+        Me.Button11.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Button11.ImageIndex = 12
+        Me.Button11.ImageList = Me.ImageList2
+        Me.Button11.Location = New System.Drawing.Point(12, 111)
+        Me.Button11.Name = "Button11"
+        Me.Button11.Size = New System.Drawing.Size(116, 32)
+        Me.Button11.TabIndex = 31
+        Me.Button11.Text = "Uninstall"
+        Me.Button11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button11.UseVisualStyleBackColor = False
+        '
+        'Button25
+        '
+        Me.Button25.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Button25.FlatAppearance.BorderSize = 0
+        Me.Button25.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button25.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button25.Font = New System.Drawing.Font("Leelawadee UI", 11.25!)
+        Me.Button25.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Button25.ImageIndex = 11
+        Me.Button25.ImageList = Me.ImageList2
+        Me.Button25.Location = New System.Drawing.Point(10, 73)
+        Me.Button25.Name = "Button25"
+        Me.Button25.Size = New System.Drawing.Size(130, 32)
+        Me.Button25.TabIndex = 30
+        Me.Button25.Text = "Restart Agent"
+        Me.Button25.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button25.UseVisualStyleBackColor = False
+        '
+        'Panel6
+        '
+        Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.Panel6.Controls.Add(Me.Button24)
+        Me.Panel6.Controls.Add(Me.TextBoxH_Name)
+        Me.Panel6.Controls.Add(Me.TextBox29)
+        Me.Panel6.Controls.Add(Me.TextBoxH_Email)
+        Me.Panel6.Controls.Add(Me.TextBoxH_LastName)
+        Me.Panel6.Location = New System.Drawing.Point(0, 304)
+        Me.Panel6.MaximumSize = New System.Drawing.Size(250, 160)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(250, 160)
+        Me.Panel6.TabIndex = 41
+        '
+        'Button24
+        '
+        Me.Button24.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Button24.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button24.FlatAppearance.BorderSize = 0
+        Me.Button24.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button24.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button24.Font = New System.Drawing.Font("Leelawadee UI", 11.25!)
+        Me.Button24.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Button24.ImageIndex = 7
+        Me.Button24.Location = New System.Drawing.Point(97, 119)
+        Me.Button24.Name = "Button24"
+        Me.Button24.Size = New System.Drawing.Size(55, 32)
+        Me.Button24.TabIndex = 3
+        Me.Button24.Text = "Save"
+        Me.Button24.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button24.UseVisualStyleBackColor = False
+        '
+        'TextBoxH_Name
+        '
+        Me.TextBoxH_Name.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBoxH_Name.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBoxH_Name.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxH_Name.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
+        Me.TextBoxH_Name.Location = New System.Drawing.Point(23, 30)
+        Me.TextBoxH_Name.Name = "TextBoxH_Name"
+        Me.TextBoxH_Name.Size = New System.Drawing.Size(210, 22)
+        Me.TextBoxH_Name.TabIndex = 0
+        Me.TextBoxH_Name.Text = "First name"
+        Me.TextBoxH_Name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TextBox29
+        '
+        Me.TextBox29.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.TextBox29.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox29.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.TextBox29.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.TextBox29.ForeColor = System.Drawing.Color.DarkGray
+        Me.TextBox29.Location = New System.Drawing.Point(3, 5)
+        Me.TextBox29.Name = "TextBox29"
+        Me.TextBox29.ReadOnly = True
+        Me.TextBox29.Size = New System.Drawing.Size(240, 15)
+        Me.TextBox29.TabIndex = 33
+        Me.TextBox29.Text = "Change credentials"
+        Me.TextBox29.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TextBoxH_Email
+        '
+        Me.TextBoxH_Email.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBoxH_Email.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBoxH_Email.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxH_Email.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
+        Me.TextBoxH_Email.Location = New System.Drawing.Point(23, 87)
+        Me.TextBoxH_Email.Name = "TextBoxH_Email"
+        Me.TextBoxH_Email.Size = New System.Drawing.Size(209, 22)
+        Me.TextBoxH_Email.TabIndex = 2
+        Me.TextBoxH_Email.Text = "Email address"
+        Me.TextBoxH_Email.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TextBoxH_LastName
+        '
+        Me.TextBoxH_LastName.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBoxH_LastName.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBoxH_LastName.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxH_LastName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
+        Me.TextBoxH_LastName.Location = New System.Drawing.Point(23, 58)
+        Me.TextBoxH_LastName.Name = "TextBoxH_LastName"
+        Me.TextBoxH_LastName.Size = New System.Drawing.Size(209, 22)
+        Me.TextBoxH_LastName.TabIndex = 1
+        Me.TextBoxH_LastName.Text = "Last name"
+        Me.TextBoxH_LastName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
         'Panel5
         '
-        Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
-        Me.Panel5.Controls.Add(Me.Button1)
+        Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.Panel5.Controls.Add(Me.Label46)
+        Me.Panel5.Controls.Add(Me.Button10)
         Me.Panel5.Controls.Add(Me.Button7)
-        Me.Panel5.Controls.Add(Me.Label5)
         Me.Panel5.Location = New System.Drawing.Point(0, 171)
         Me.Panel5.MaximumSize = New System.Drawing.Size(250, 124)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(250, 124)
         Me.Panel5.TabIndex = 41
         '
-        'Button1
+        'Label46
         '
-        Me.Button1.BackColor = System.Drawing.Color.OliveDrab
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Button1.Location = New System.Drawing.Point(117, 78)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(77, 23)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Update"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.Label46.AutoSize = True
+        Me.Label46.BackColor = System.Drawing.Color.Transparent
+        Me.Label46.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.Label46.ForeColor = System.Drawing.Color.DarkGray
+        Me.Label46.Location = New System.Drawing.Point(105, 6)
+        Me.Label46.Name = "Label46"
+        Me.Label46.Size = New System.Drawing.Size(36, 15)
+        Me.Label46.TabIndex = 44
+        Me.Label46.Text = "Hosts"
+        '
+        'Button10
+        '
+        Me.Button10.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Button10.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button10.FlatAppearance.BorderSize = 0
+        Me.Button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button10.Font = New System.Drawing.Font("Leelawadee UI", 11.25!)
+        Me.Button10.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Button10.ImageIndex = 8
+        Me.Button10.ImageList = Me.ImageList2
+        Me.Button10.Location = New System.Drawing.Point(16, 80)
+        Me.Button10.Name = "Button10"
+        Me.Button10.Size = New System.Drawing.Size(124, 32)
+        Me.Button10.TabIndex = 0
+        Me.Button10.Text = "Open Host"
+        Me.Button10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button10.UseVisualStyleBackColor = False
         '
         'Button7
         '
-        Me.Button7.BackColor = System.Drawing.Color.OliveDrab
+        Me.Button7.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
         Me.Button7.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button7.FlatAppearance.BorderSize = 0
+        Me.Button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue
         Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button7.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Button7.Font = New System.Drawing.Font("Leelawadee UI", 11.25!)
         Me.Button7.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Button7.Location = New System.Drawing.Point(73, 52)
+        Me.Button7.ImageIndex = 9
+        Me.Button7.ImageList = Me.ImageList2
+        Me.Button7.Location = New System.Drawing.Point(16, 43)
         Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(123, 23)
+        Me.Button7.Size = New System.Drawing.Size(112, 32)
         Me.Button7.TabIndex = 0
-        Me.Button7.Text = "Reveal password"
+        Me.Button7.Text = "Flush DNS"
+        Me.Button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Button7.UseVisualStyleBackColor = False
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Label5.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label5.Location = New System.Drawing.Point(39, 82)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(72, 16)
-        Me.Label5.TabIndex = 2
-        Me.Label5.Text = "8.9.50.1003"
         '
         'Label7
         '
@@ -1493,226 +1558,6 @@ Partial Class ToolBox
         Me.Label6.Text = "View more"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'PnlLogs
-        '
-        Me.PnlLogs.Controls.Add(Me.TextBox57)
-        Me.PnlLogs.Controls.Add(Me.TextBox28)
-        Me.PnlLogs.Controls.Add(Me.RichTextBox2)
-        Me.PnlLogs.Controls.Add(Me.Button14)
-        Me.PnlLogs.Controls.Add(Me.Label1)
-        Me.PnlLogs.Controls.Add(Me.Button16)
-        Me.PnlLogs.Controls.Add(Me.Button21)
-        Me.PnlLogs.Controls.Add(Me.Button18)
-        Me.PnlLogs.Controls.Add(Me.ComboBox3)
-        Me.PnlLogs.Controls.Add(Me.Button12)
-        Me.PnlLogs.Controls.Add(Me.Button17)
-        Me.PnlLogs.Controls.Add(Me.btn_ReadOdLog)
-        Me.PnlLogs.Controls.Add(Me.btnDecryptRegistry)
-        Me.PnlLogs.Location = New System.Drawing.Point(634, 192)
-        Me.PnlLogs.MaximumSize = New System.Drawing.Size(1017, 633)
-        Me.PnlLogs.Name = "PnlLogs"
-        Me.PnlLogs.Size = New System.Drawing.Size(325, 381)
-        Me.PnlLogs.TabIndex = 31
-        '
-        'TextBox57
-        '
-        Me.TextBox57.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox57.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox57.Location = New System.Drawing.Point(46, 91)
-        Me.TextBox57.Name = "TextBox57"
-        Me.TextBox57.Size = New System.Drawing.Size(171, 25)
-        Me.TextBox57.TabIndex = 36
-        Me.TextBox57.Text = "Mail Address"
-        '
-        'TextBox28
-        '
-        Me.TextBox28.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
-        Me.TextBox28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox28.Font = New System.Drawing.Font("Microsoft PhagsPa", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.TextBox28.ForeColor = System.Drawing.SystemColors.ScrollBar
-        Me.TextBox28.Location = New System.Drawing.Point(840, 146)
-        Me.TextBox28.Name = "TextBox28"
-        Me.TextBox28.Size = New System.Drawing.Size(174, 28)
-        Me.TextBox28.TabIndex = 34
-        Me.TextBox28.Text = "Search"
-        Me.TextBox28.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'RichTextBox2
-        '
-        Me.RichTextBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
-        Me.RichTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.RichTextBox2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.RichTextBox2.Font = New System.Drawing.Font("Leelawadee UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBox2.ForeColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.RichTextBox2.Location = New System.Drawing.Point(0, -72)
-        Me.RichTextBox2.Name = "RichTextBox2"
-        Me.RichTextBox2.Size = New System.Drawing.Size(325, 453)
-        Me.RichTextBox2.TabIndex = 33
-        Me.RichTextBox2.Text = "Output"
-        '
-        'Button14
-        '
-        Me.Button14.BackColor = System.Drawing.Color.OliveDrab
-        Me.Button14.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button14.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray
-        Me.Button14.FlatAppearance.BorderSize = 0
-        Me.Button14.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue
-        Me.Button14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue
-        Me.Button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button14.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Button14.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Button14.Location = New System.Drawing.Point(673, 46)
-        Me.Button14.Name = "Button14"
-        Me.Button14.Size = New System.Drawing.Size(102, 32)
-        Me.Button14.TabIndex = 22
-        Me.Button14.Text = "Modules log"
-        Me.Button14.UseVisualStyleBackColor = False
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(53, 29)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(43, 15)
-        Me.Label1.TabIndex = 23
-        Me.Label1.Text = "log file"
-        '
-        'Button16
-        '
-        Me.Button16.BackColor = System.Drawing.Color.OliveDrab
-        Me.Button16.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button16.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray
-        Me.Button16.FlatAppearance.BorderSize = 0
-        Me.Button16.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue
-        Me.Button16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue
-        Me.Button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button16.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button16.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Button16.Location = New System.Drawing.Point(235, 86)
-        Me.Button16.Name = "Button16"
-        Me.Button16.Size = New System.Drawing.Size(102, 32)
-        Me.Button16.TabIndex = 22
-        Me.Button16.Text = "Send Logs"
-        Me.Button16.UseVisualStyleBackColor = False
-        '
-        'Button21
-        '
-        Me.Button21.BackColor = System.Drawing.Color.OliveDrab
-        Me.Button21.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button21.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray
-        Me.Button21.FlatAppearance.BorderSize = 0
-        Me.Button21.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue
-        Me.Button21.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue
-        Me.Button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button21.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Button21.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Button21.Location = New System.Drawing.Point(235, 45)
-        Me.Button21.Name = "Button21"
-        Me.Button21.Size = New System.Drawing.Size(102, 32)
-        Me.Button21.TabIndex = 22
-        Me.Button21.Text = "Open Log"
-        Me.Button21.UseVisualStyleBackColor = False
-        '
-        'Button18
-        '
-        Me.Button18.BackColor = System.Drawing.Color.OliveDrab
-        Me.Button18.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button18.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray
-        Me.Button18.FlatAppearance.BorderSize = 0
-        Me.Button18.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue
-        Me.Button18.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue
-        Me.Button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button18.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Button18.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Button18.Location = New System.Drawing.Point(781, 46)
-        Me.Button18.Name = "Button18"
-        Me.Button18.Size = New System.Drawing.Size(102, 32)
-        Me.Button18.TabIndex = 22
-        Me.Button18.Text = "Modules log"
-        Me.Button18.UseVisualStyleBackColor = False
-        '
-        'ComboBox3
-        '
-        Me.ComboBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
-        Me.ComboBox3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ComboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.ComboBox3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Items.AddRange(New Object() {"Local Registry", "EaseeControl", "OptimumDesk", "ModulesLog", "All(4)"})
-        Me.ComboBox3.Location = New System.Drawing.Point(46, 47)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(171, 28)
-        Me.ComboBox3.TabIndex = 24
-        Me.ComboBox3.Text = "Local Registry"
-        '
-        'Button12
-        '
-        Me.Button12.BackColor = System.Drawing.Color.OliveDrab
-        Me.Button12.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button12.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray
-        Me.Button12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue
-        Me.Button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue
-        Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button12.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Button12.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Button12.Location = New System.Drawing.Point(570, 46)
-        Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(97, 32)
-        Me.Button12.TabIndex = 22
-        Me.Button12.Text = "Service log"
-        Me.Button12.UseVisualStyleBackColor = False
-        '
-        'Button17
-        '
-        Me.Button17.BackColor = System.Drawing.Color.OliveDrab
-        Me.Button17.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button17.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray
-        Me.Button17.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue
-        Me.Button17.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue
-        Me.Button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button17.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Button17.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Button17.Location = New System.Drawing.Point(894, 8)
-        Me.Button17.Name = "Button17"
-        Me.Button17.Size = New System.Drawing.Size(119, 32)
-        Me.Button17.TabIndex = 22
-        Me.Button17.Text = "ODService.log"
-        Me.Button17.UseVisualStyleBackColor = False
-        '
-        'btn_ReadOdLog
-        '
-        Me.btn_ReadOdLog.BackColor = System.Drawing.Color.OliveDrab
-        Me.btn_ReadOdLog.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_ReadOdLog.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray
-        Me.btn_ReadOdLog.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue
-        Me.btn_ReadOdLog.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue
-        Me.btn_ReadOdLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_ReadOdLog.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.btn_ReadOdLog.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.btn_ReadOdLog.Location = New System.Drawing.Point(735, 8)
-        Me.btn_ReadOdLog.Name = "btn_ReadOdLog"
-        Me.btn_ReadOdLog.Size = New System.Drawing.Size(153, 32)
-        Me.btn_ReadOdLog.TabIndex = 22
-        Me.btn_ReadOdLog.Text = "OptimumDesk.log"
-        Me.btn_ReadOdLog.UseVisualStyleBackColor = False
-        '
-        'btnDecryptRegistry
-        '
-        Me.btnDecryptRegistry.BackColor = System.Drawing.Color.OliveDrab
-        Me.btnDecryptRegistry.FlatAppearance.BorderSize = 0
-        Me.btnDecryptRegistry.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnDecryptRegistry.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.btnDecryptRegistry.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.btnDecryptRegistry.Location = New System.Drawing.Point(570, 8)
-        Me.btnDecryptRegistry.Name = "btnDecryptRegistry"
-        Me.btnDecryptRegistry.Size = New System.Drawing.Size(159, 32)
-        Me.btnDecryptRegistry.TabIndex = 26
-        Me.btnDecryptRegistry.Text = "Decrypt local registry"
-        Me.btnDecryptRegistry.UseVisualStyleBackColor = False
-        '
         'PanelMultiAgent
         '
         Me.PanelMultiAgent.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
@@ -1721,8 +1566,6 @@ Partial Class ToolBox
         Me.PanelMultiAgent.Controls.Add(Me.PictureBox1)
         Me.PanelMultiAgent.Controls.Add(Me.Panel10)
         Me.PanelMultiAgent.Controls.Add(Me.PictureBox17)
-        Me.PanelMultiAgent.Controls.Add(Me.IconButton6)
-        Me.PanelMultiAgent.Controls.Add(Me.IconButton3)
         Me.PanelMultiAgent.Controls.Add(Me.tbCName)
         Me.PanelMultiAgent.Controls.Add(Me.IconButton4)
         Me.PanelMultiAgent.Controls.Add(Me.IconButton1)
@@ -1754,7 +1597,7 @@ Partial Class ToolBox
         '
         'Panel11
         '
-        Me.Panel11.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.Panel11.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.Panel11.Controls.Add(Me.PictureBox_MiniFlag1)
         Me.Panel11.Controls.Add(Me.PictureBox24)
         Me.Panel11.Controls.Add(Me.PictureBox21)
@@ -1809,6 +1652,7 @@ Partial Class ToolBox
         'Label37
         '
         Me.Label37.AutoSize = True
+        Me.Label37.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.Label37.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold)
         Me.Label37.ForeColor = System.Drawing.SystemColors.ActiveCaption
         Me.Label37.Location = New System.Drawing.Point(217, 28)
@@ -1871,7 +1715,7 @@ Partial Class ToolBox
         '
         Me.Label43.AutoSize = True
         Me.Label43.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.Label43.ForeColor = System.Drawing.Color.OliveDrab
+        Me.Label43.ForeColor = System.Drawing.Color.DarkGray
         Me.Label43.Location = New System.Drawing.Point(622, 5)
         Me.Label43.Name = "Label43"
         Me.Label43.Size = New System.Drawing.Size(44, 15)
@@ -1882,7 +1726,7 @@ Partial Class ToolBox
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.Label13.ForeColor = System.Drawing.Color.OliveDrab
+        Me.Label13.ForeColor = System.Drawing.Color.DarkGray
         Me.Label13.Location = New System.Drawing.Point(774, 5)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(46, 15)
@@ -1893,7 +1737,7 @@ Partial Class ToolBox
         '
         Me.Label58.AutoSize = True
         Me.Label58.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.Label58.ForeColor = System.Drawing.Color.OliveDrab
+        Me.Label58.ForeColor = System.Drawing.Color.DarkGray
         Me.Label58.Location = New System.Drawing.Point(683, 5)
         Me.Label58.Name = "Label58"
         Me.Label58.Size = New System.Drawing.Size(65, 15)
@@ -1902,7 +1746,7 @@ Partial Class ToolBox
         '
         'TextBox2
         '
-        Me.TextBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.TextBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft PhagsPa", 12.75!, System.Drawing.FontStyle.Bold)
@@ -1919,7 +1763,7 @@ Partial Class ToolBox
         Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.Label12.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.Label12.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label12.ForeColor = System.Drawing.Color.DarkGray
         Me.Label12.Location = New System.Drawing.Point(913, 5)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(53, 15)
@@ -1932,7 +1776,7 @@ Partial Class ToolBox
         Me.Label14.BackColor = System.Drawing.Color.Transparent
         Me.Label14.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.Label14.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.Label14.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label14.ForeColor = System.Drawing.Color.DarkGray
         Me.Label14.Location = New System.Drawing.Point(843, 5)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(55, 15)
@@ -1964,7 +1808,7 @@ Partial Class ToolBox
         '
         'Panel10
         '
-        Me.Panel10.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.Panel10.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.Panel10.Controls.Add(Me.PictureBox_MiniFlag2)
         Me.Panel10.Controls.Add(Me.PictureBox25)
         Me.Panel10.Controls.Add(Me.PictureBox23)
@@ -2017,6 +1861,7 @@ Partial Class ToolBox
         'Label39
         '
         Me.Label39.AutoSize = True
+        Me.Label39.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.Label39.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold)
         Me.Label39.ForeColor = System.Drawing.SystemColors.ActiveCaption
         Me.Label39.Location = New System.Drawing.Point(217, 28)
@@ -2077,7 +1922,7 @@ Partial Class ToolBox
         '
         Me.Label60.AutoSize = True
         Me.Label60.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.Label60.ForeColor = System.Drawing.Color.OliveDrab
+        Me.Label60.ForeColor = System.Drawing.Color.DarkGray
         Me.Label60.Location = New System.Drawing.Point(622, 5)
         Me.Label60.Name = "Label60"
         Me.Label60.Size = New System.Drawing.Size(44, 15)
@@ -2088,7 +1933,7 @@ Partial Class ToolBox
         '
         Me.Label20.AutoSize = True
         Me.Label20.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.Label20.ForeColor = System.Drawing.Color.OliveDrab
+        Me.Label20.ForeColor = System.Drawing.Color.DarkGray
         Me.Label20.Location = New System.Drawing.Point(774, 5)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(46, 15)
@@ -2112,7 +1957,7 @@ Partial Class ToolBox
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.Label9.ForeColor = System.Drawing.Color.OliveDrab
+        Me.Label9.ForeColor = System.Drawing.Color.DarkGray
         Me.Label9.Location = New System.Drawing.Point(683, 5)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(65, 15)
@@ -2121,7 +1966,7 @@ Partial Class ToolBox
         '
         'TextBox38
         '
-        Me.TextBox38.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.TextBox38.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.TextBox38.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox38.Cursor = System.Windows.Forms.Cursors.Hand
         Me.TextBox38.Font = New System.Drawing.Font("Microsoft PhagsPa", 12.75!, System.Drawing.FontStyle.Bold)
@@ -2138,7 +1983,7 @@ Partial Class ToolBox
         Me.Label21.BackColor = System.Drawing.Color.Transparent
         Me.Label21.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.Label21.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.Label21.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label21.ForeColor = System.Drawing.Color.DarkGray
         Me.Label21.Location = New System.Drawing.Point(913, 5)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(53, 15)
@@ -2151,7 +1996,7 @@ Partial Class ToolBox
         Me.Label25.BackColor = System.Drawing.Color.Transparent
         Me.Label25.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.Label25.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.Label25.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label25.ForeColor = System.Drawing.Color.DarkGray
         Me.Label25.Location = New System.Drawing.Point(843, 5)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(55, 15)
@@ -2168,44 +2013,6 @@ Partial Class ToolBox
         Me.PictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox17.TabIndex = 42
         Me.PictureBox17.TabStop = False
-        '
-        'IconButton6
-        '
-        Me.IconButton6.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.IconButton6.FlatAppearance.BorderSize = 0
-        Me.IconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconButton6.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.IconButton6.ForeColor = System.Drawing.SystemColors.AppWorkspace
-        Me.IconButton6.IconChar = FontAwesome.Sharp.IconChar.None
-        Me.IconButton6.IconColor = System.Drawing.Color.Black
-        Me.IconButton6.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton6.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.IconButton6.Location = New System.Drawing.Point(936, 13)
-        Me.IconButton6.Name = "IconButton6"
-        Me.IconButton6.Size = New System.Drawing.Size(78, 35)
-        Me.IconButton6.TabIndex = 32
-        Me.IconButton6.Text = "uninstall"
-        Me.IconButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
-        Me.IconButton6.UseVisualStyleBackColor = True
-        '
-        'IconButton3
-        '
-        Me.IconButton3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.IconButton3.FlatAppearance.BorderSize = 0
-        Me.IconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconButton3.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.IconButton3.ForeColor = System.Drawing.SystemColors.AppWorkspace
-        Me.IconButton3.IconChar = FontAwesome.Sharp.IconChar.None
-        Me.IconButton3.IconColor = System.Drawing.Color.Black
-        Me.IconButton3.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton3.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.IconButton3.Location = New System.Drawing.Point(684, 13)
-        Me.IconButton3.Name = "IconButton3"
-        Me.IconButton3.Size = New System.Drawing.Size(78, 35)
-        Me.IconButton3.TabIndex = 32
-        Me.IconButton3.Text = "reinstall"
-        Me.IconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
-        Me.IconButton3.UseVisualStyleBackColor = True
         '
         'tbCName
         '
@@ -2232,7 +2039,7 @@ Partial Class ToolBox
         Me.IconButton4.IconColor = System.Drawing.Color.Black
         Me.IconButton4.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton4.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.IconButton4.Location = New System.Drawing.Point(768, 13)
+        Me.IconButton4.Location = New System.Drawing.Point(844, 15)
         Me.IconButton4.Name = "IconButton4"
         Me.IconButton4.Size = New System.Drawing.Size(78, 35)
         Me.IconButton4.TabIndex = 32
@@ -2253,7 +2060,7 @@ Partial Class ToolBox
         Me.IconButton1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.IconButton1.ImageIndex = 0
         Me.IconButton1.ImageList = Me.ImageList_LineForBtn
-        Me.IconButton1.Location = New System.Drawing.Point(600, 13)
+        Me.IconButton1.Location = New System.Drawing.Point(760, 15)
         Me.IconButton1.Name = "IconButton1"
         Me.IconButton1.Size = New System.Drawing.Size(78, 35)
         Me.IconButton1.TabIndex = 32
@@ -2271,7 +2078,7 @@ Partial Class ToolBox
         'Label42
         '
         Me.Label42.AutoSize = True
-        Me.Label42.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.Label42.BackColor = System.Drawing.Color.Transparent
         Me.Label42.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label42.ForeColor = System.Drawing.Color.NavajoWhite
         Me.Label42.Location = New System.Drawing.Point(180, 32)
@@ -2392,7 +2199,7 @@ Partial Class ToolBox
         Me.IconButton5.IconColor = System.Drawing.Color.Black
         Me.IconButton5.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton5.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.IconButton5.Location = New System.Drawing.Point(852, 13)
+        Me.IconButton5.Location = New System.Drawing.Point(928, 13)
         Me.IconButton5.Name = "IconButton5"
         Me.IconButton5.Size = New System.Drawing.Size(78, 35)
         Me.IconButton5.TabIndex = 32
@@ -2414,83 +2221,574 @@ Partial Class ToolBox
         Me.Label38.Text = "0011010"
         Me.Label38.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'Pnl_Button1
+        'PnlLogs
         '
-        Me.Pnl_Button1.Controls.Add(Me.Label126)
-        Me.Pnl_Button1.Location = New System.Drawing.Point(431, 150)
-        Me.Pnl_Button1.MaximumSize = New System.Drawing.Size(1017, 633)
-        Me.Pnl_Button1.Name = "Pnl_Button1"
-        Me.Pnl_Button1.Size = New System.Drawing.Size(196, 139)
-        Me.Pnl_Button1.TabIndex = 31
+        Me.PnlLogs.Controls.Add(Me.Panel22)
+        Me.PnlLogs.Controls.Add(Me.Panel21)
+        Me.PnlLogs.Controls.Add(Me.Panel19)
+        Me.PnlLogs.Controls.Add(Me.Panel20)
+        Me.PnlLogs.Controls.Add(Me.Panel18)
+        Me.PnlLogs.Controls.Add(Me.Panel17)
+        Me.PnlLogs.Location = New System.Drawing.Point(1075, 138)
+        Me.PnlLogs.MaximumSize = New System.Drawing.Size(1017, 633)
+        Me.PnlLogs.Name = "PnlLogs"
+        Me.PnlLogs.Size = New System.Drawing.Size(1017, 633)
+        Me.PnlLogs.TabIndex = 31
         '
-        'Label126
+        'Panel22
         '
-        Me.Label126.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label126.AutoSize = True
-        Me.Label126.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Label126.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label126.Location = New System.Drawing.Point(11, 14)
-        Me.Label126.Name = "Label126"
-        Me.Label126.Size = New System.Drawing.Size(89, 16)
-        Me.Label126.TabIndex = 23
-        Me.Label126.Text = "Remove agent"
+        Me.Panel22.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.Panel22.Controls.Add(Me.Button14)
+        Me.Panel22.Controls.Add(Me.Label1)
+        Me.Panel22.Controls.Add(Me.Button12)
+        Me.Panel22.Location = New System.Drawing.Point(14, 9)
+        Me.Panel22.MinimumSize = New System.Drawing.Size(497, 167)
+        Me.Panel22.Name = "Panel22"
+        Me.Panel22.Size = New System.Drawing.Size(497, 167)
+        Me.Panel22.TabIndex = 33
         '
-        'Pnl_Button2
+        'Button14
         '
-        Me.Pnl_Button2.Controls.Add(Me.Button15)
-        Me.Pnl_Button2.Controls.Add(Me.Label128)
-        Me.Pnl_Button2.Controls.Add(Me.Label129)
-        Me.Pnl_Button2.Location = New System.Drawing.Point(364, 474)
-        Me.Pnl_Button2.MaximumSize = New System.Drawing.Size(1017, 633)
-        Me.Pnl_Button2.Name = "Pnl_Button2"
-        Me.Pnl_Button2.Size = New System.Drawing.Size(167, 170)
-        Me.Pnl_Button2.TabIndex = 31
+        Me.Button14.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Button14.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button14.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray
+        Me.Button14.FlatAppearance.BorderSize = 0
+        Me.Button14.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button14.Font = New System.Drawing.Font("Leelawadee UI", 11.25!)
+        Me.Button14.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Button14.ImageIndex = 16
+        Me.Button14.ImageList = Me.ImageList2
+        Me.Button14.Location = New System.Drawing.Point(6, 69)
+        Me.Button14.Name = "Button14"
+        Me.Button14.Size = New System.Drawing.Size(123, 32)
+        Me.Button14.TabIndex = 22
+        Me.Button14.Text = "Browse log"
+        Me.Button14.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button14.UseVisualStyleBackColor = False
         '
-        'Button15
+        'Label1
         '
-        Me.Button15.BackColor = System.Drawing.Color.Gainsboro
-        Me.Button15.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button15.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray
-        Me.Button15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue
-        Me.Button15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue
-        Me.Button15.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button15.ForeColor = System.Drawing.Color.Black
-        Me.Button15.Location = New System.Drawing.Point(70, 91)
-        Me.Button15.Name = "Button15"
-        Me.Button15.Size = New System.Drawing.Size(160, 32)
-        Me.Button15.TabIndex = 22
-        Me.Button15.Text = "reinstall"
-        Me.Button15.UseVisualStyleBackColor = False
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Lucida Console", 9.75!)
+        Me.Label1.ForeColor = System.Drawing.Color.DimGray
+        Me.Label1.Location = New System.Drawing.Point(3, 7)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(103, 13)
+        Me.Label1.TabIndex = 38
+        Me.Label1.Text = "Quick launch"
         '
-        'Label128
+        'Button12
         '
-        Me.Label128.AutoSize = True
-        Me.Label128.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label128.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label128.Location = New System.Drawing.Point(67, 72)
-        Me.Label128.Name = "Label128"
-        Me.Label128.Size = New System.Drawing.Size(45, 16)
-        Me.Label128.TabIndex = 23
-        Me.Label128.Text = "version"
+        Me.Button12.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Button12.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button12.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray
+        Me.Button12.FlatAppearance.BorderSize = 0
+        Me.Button12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button12.Font = New System.Drawing.Font("Leelawadee UI", 11.25!)
+        Me.Button12.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Button12.ImageIndex = 15
+        Me.Button12.ImageList = Me.ImageList2
+        Me.Button12.Location = New System.Drawing.Point(6, 31)
+        Me.Button12.Name = "Button12"
+        Me.Button12.Size = New System.Drawing.Size(167, 32)
+        Me.Button12.TabIndex = 22
+        Me.Button12.Text = "View local registry"
+        Me.Button12.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button12.UseVisualStyleBackColor = False
         '
-        'Label129
+        'Panel21
         '
-        Me.Label129.AutoSize = True
-        Me.Label129.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Label129.ForeColor = System.Drawing.Color.SandyBrown
-        Me.Label129.Location = New System.Drawing.Point(118, 72)
-        Me.Label129.Name = "Label129"
-        Me.Label129.Size = New System.Drawing.Size(86, 16)
-        Me.Label129.TabIndex = 23
-        Me.Label129.Text = "Agent Version"
+        Me.Panel21.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.Panel21.Controls.Add(Me.RichTextBox4)
+        Me.Panel21.Controls.Add(Me.Label45)
+        Me.Panel21.Controls.Add(Me.Button26)
+        Me.Panel21.Controls.Add(Me.Button30)
+        Me.Panel21.Location = New System.Drawing.Point(517, 355)
+        Me.Panel21.MaximumSize = New System.Drawing.Size(497, 167)
+        Me.Panel21.Name = "Panel21"
+        Me.Panel21.Size = New System.Drawing.Size(497, 167)
+        Me.Panel21.TabIndex = 40
         '
-        'ImageList1
+        'RichTextBox4
         '
-        Me.ImageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit
-        Me.ImageList1.ImageSize = New System.Drawing.Size(16, 16)
-        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
+        Me.RichTextBox4.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.RichTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.RichTextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RichTextBox4.ForeColor = System.Drawing.Color.DarkGray
+        Me.RichTextBox4.Location = New System.Drawing.Point(3, 30)
+        Me.RichTextBox4.Name = "RichTextBox4"
+        Me.RichTextBox4.ReadOnly = True
+        Me.RichTextBox4.Size = New System.Drawing.Size(491, 94)
+        Me.RichTextBox4.TabIndex = 0
+        Me.RichTextBox4.Text = "No data"
+        '
+        'Label45
+        '
+        Me.Label45.AutoSize = True
+        Me.Label45.Font = New System.Drawing.Font("Lucida Console", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label45.ForeColor = System.Drawing.Color.DimGray
+        Me.Label45.Location = New System.Drawing.Point(3, 7)
+        Me.Label45.Name = "Label45"
+        Me.Label45.Size = New System.Drawing.Size(127, 13)
+        Me.Label45.TabIndex = 39
+        Me.Label45.Text = "OptimumDesk log"
+        '
+        'Button26
+        '
+        Me.Button26.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Button26.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button26.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray
+        Me.Button26.FlatAppearance.BorderSize = 0
+        Me.Button26.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button26.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button26.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button26.Font = New System.Drawing.Font("Leelawadee UI", 11.25!)
+        Me.Button26.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Button26.ImageIndex = 2
+        Me.Button26.ImageList = Me.ImageList2
+        Me.Button26.Location = New System.Drawing.Point(6, 130)
+        Me.Button26.Name = "Button26"
+        Me.Button26.Size = New System.Drawing.Size(74, 32)
+        Me.Button26.TabIndex = 22
+        Me.Button26.Text = "View"
+        Me.Button26.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button26.UseVisualStyleBackColor = False
+        '
+        'Button30
+        '
+        Me.Button30.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Button30.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button30.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray
+        Me.Button30.FlatAppearance.BorderSize = 0
+        Me.Button30.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button30.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button30.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button30.Font = New System.Drawing.Font("Leelawadee UI", 11.25!)
+        Me.Button30.ForeColor = System.Drawing.Color.White
+        Me.Button30.ImageIndex = 3
+        Me.Button30.ImageList = Me.ImageList2
+        Me.Button30.Location = New System.Drawing.Point(86, 130)
+        Me.Button30.Name = "Button30"
+        Me.Button30.Size = New System.Drawing.Size(87, 32)
+        Me.Button30.TabIndex = 22
+        Me.Button30.Text = "Delete"
+        Me.Button30.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button30.UseVisualStyleBackColor = False
+        '
+        'Panel19
+        '
+        Me.Panel19.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.Panel19.Controls.Add(Me.RichTextBox2)
+        Me.Panel19.Controls.Add(Me.Label40)
+        Me.Panel19.Controls.Add(Me.Button31)
+        Me.Panel19.Controls.Add(Me.Button17)
+        Me.Panel19.Location = New System.Drawing.Point(517, 182)
+        Me.Panel19.MaximumSize = New System.Drawing.Size(497, 167)
+        Me.Panel19.Name = "Panel19"
+        Me.Panel19.Size = New System.Drawing.Size(497, 167)
+        Me.Panel19.TabIndex = 40
+        '
+        'RichTextBox2
+        '
+        Me.RichTextBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.RichTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.RichTextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RichTextBox2.ForeColor = System.Drawing.Color.DarkGray
+        Me.RichTextBox2.Location = New System.Drawing.Point(3, 30)
+        Me.RichTextBox2.Name = "RichTextBox2"
+        Me.RichTextBox2.ReadOnly = True
+        Me.RichTextBox2.Size = New System.Drawing.Size(491, 94)
+        Me.RichTextBox2.TabIndex = 0
+        Me.RichTextBox2.Text = "No data"
+        '
+        'Label40
+        '
+        Me.Label40.AutoSize = True
+        Me.Label40.Font = New System.Drawing.Font("Lucida Console", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label40.ForeColor = System.Drawing.Color.DimGray
+        Me.Label40.Location = New System.Drawing.Point(3, 7)
+        Me.Label40.Name = "Label40"
+        Me.Label40.Size = New System.Drawing.Size(95, 13)
+        Me.Label40.TabIndex = 39
+        Me.Label40.Text = "Modules log"
+        '
+        'Button31
+        '
+        Me.Button31.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Button31.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button31.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray
+        Me.Button31.FlatAppearance.BorderSize = 0
+        Me.Button31.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button31.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button31.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button31.Font = New System.Drawing.Font("Leelawadee UI", 11.25!)
+        Me.Button31.ForeColor = System.Drawing.Color.White
+        Me.Button31.ImageIndex = 3
+        Me.Button31.ImageList = Me.ImageList2
+        Me.Button31.Location = New System.Drawing.Point(86, 130)
+        Me.Button31.Name = "Button31"
+        Me.Button31.Size = New System.Drawing.Size(87, 32)
+        Me.Button31.TabIndex = 22
+        Me.Button31.Text = "Delete"
+        Me.Button31.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button31.UseVisualStyleBackColor = False
+        '
+        'Button17
+        '
+        Me.Button17.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Button17.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button17.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray
+        Me.Button17.FlatAppearance.BorderSize = 0
+        Me.Button17.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button17.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button17.Font = New System.Drawing.Font("Leelawadee UI", 11.25!)
+        Me.Button17.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Button17.ImageIndex = 2
+        Me.Button17.ImageList = Me.ImageList2
+        Me.Button17.Location = New System.Drawing.Point(6, 130)
+        Me.Button17.Name = "Button17"
+        Me.Button17.Size = New System.Drawing.Size(74, 32)
+        Me.Button17.TabIndex = 22
+        Me.Button17.Text = "View"
+        Me.Button17.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button17.UseVisualStyleBackColor = False
+        '
+        'Panel20
+        '
+        Me.Panel20.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.Panel20.Controls.Add(Me.RichTextBox3)
+        Me.Panel20.Controls.Add(Me.Label44)
+        Me.Panel20.Controls.Add(Me.Button16)
+        Me.Panel20.Controls.Add(Me.Button29)
+        Me.Panel20.Location = New System.Drawing.Point(14, 355)
+        Me.Panel20.MaximumSize = New System.Drawing.Size(497, 167)
+        Me.Panel20.Name = "Panel20"
+        Me.Panel20.Size = New System.Drawing.Size(497, 167)
+        Me.Panel20.TabIndex = 40
+        '
+        'RichTextBox3
+        '
+        Me.RichTextBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.RichTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.RichTextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RichTextBox3.ForeColor = System.Drawing.Color.DarkGray
+        Me.RichTextBox3.Location = New System.Drawing.Point(3, 30)
+        Me.RichTextBox3.Name = "RichTextBox3"
+        Me.RichTextBox3.ReadOnly = True
+        Me.RichTextBox3.Size = New System.Drawing.Size(491, 94)
+        Me.RichTextBox3.TabIndex = 0
+        Me.RichTextBox3.Text = "No data"
+        '
+        'Label44
+        '
+        Me.Label44.AutoSize = True
+        Me.Label44.Font = New System.Drawing.Font("Lucida Console", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label44.ForeColor = System.Drawing.Color.DimGray
+        Me.Label44.Location = New System.Drawing.Point(3, 7)
+        Me.Label44.Name = "Label44"
+        Me.Label44.Size = New System.Drawing.Size(111, 13)
+        Me.Label44.TabIndex = 39
+        Me.Label44.Text = "ODService log"
+        '
+        'Button16
+        '
+        Me.Button16.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Button16.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button16.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray
+        Me.Button16.FlatAppearance.BorderSize = 0
+        Me.Button16.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button16.Font = New System.Drawing.Font("Leelawadee UI", 11.25!)
+        Me.Button16.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Button16.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button16.ImageIndex = 2
+        Me.Button16.ImageList = Me.ImageList2
+        Me.Button16.Location = New System.Drawing.Point(6, 130)
+        Me.Button16.Name = "Button16"
+        Me.Button16.Size = New System.Drawing.Size(74, 32)
+        Me.Button16.TabIndex = 22
+        Me.Button16.Text = "View"
+        Me.Button16.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button16.UseVisualStyleBackColor = False
+        '
+        'Button29
+        '
+        Me.Button29.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Button29.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button29.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray
+        Me.Button29.FlatAppearance.BorderSize = 0
+        Me.Button29.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button29.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button29.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button29.Font = New System.Drawing.Font("Leelawadee UI", 11.25!)
+        Me.Button29.ForeColor = System.Drawing.Color.White
+        Me.Button29.ImageIndex = 3
+        Me.Button29.ImageList = Me.ImageList2
+        Me.Button29.Location = New System.Drawing.Point(86, 130)
+        Me.Button29.Name = "Button29"
+        Me.Button29.Size = New System.Drawing.Size(87, 32)
+        Me.Button29.TabIndex = 22
+        Me.Button29.Text = "Delete"
+        Me.Button29.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button29.UseVisualStyleBackColor = False
+        '
+        'Panel18
+        '
+        Me.Panel18.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.Panel18.Controls.Add(Me.RichTextBox1)
+        Me.Panel18.Controls.Add(Me.Label32)
+        Me.Panel18.Controls.Add(Me.Button21)
+        Me.Panel18.Controls.Add(Me.Button28)
+        Me.Panel18.Location = New System.Drawing.Point(14, 182)
+        Me.Panel18.MaximumSize = New System.Drawing.Size(497, 167)
+        Me.Panel18.Name = "Panel18"
+        Me.Panel18.Size = New System.Drawing.Size(497, 167)
+        Me.Panel18.TabIndex = 40
+        '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.RichTextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RichTextBox1.ForeColor = System.Drawing.Color.DarkGray
+        Me.RichTextBox1.Location = New System.Drawing.Point(3, 30)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.ReadOnly = True
+        Me.RichTextBox1.Size = New System.Drawing.Size(491, 94)
+        Me.RichTextBox1.TabIndex = 0
+        Me.RichTextBox1.Text = "No data"
+        '
+        'Label32
+        '
+        Me.Label32.AutoSize = True
+        Me.Label32.Font = New System.Drawing.Font("Lucida Console", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label32.ForeColor = System.Drawing.Color.DimGray
+        Me.Label32.Location = New System.Drawing.Point(3, 7)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(135, 13)
+        Me.Label32.TabIndex = 39
+        Me.Label32.Text = "EaseeControl log"
+        '
+        'Button21
+        '
+        Me.Button21.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Button21.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button21.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray
+        Me.Button21.FlatAppearance.BorderSize = 0
+        Me.Button21.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button21.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button21.Font = New System.Drawing.Font("Leelawadee UI", 11.25!)
+        Me.Button21.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Button21.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button21.ImageIndex = 2
+        Me.Button21.ImageList = Me.ImageList2
+        Me.Button21.Location = New System.Drawing.Point(6, 130)
+        Me.Button21.Name = "Button21"
+        Me.Button21.Size = New System.Drawing.Size(74, 32)
+        Me.Button21.TabIndex = 22
+        Me.Button21.Text = "View"
+        Me.Button21.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button21.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button21.UseVisualStyleBackColor = False
+        '
+        'Button28
+        '
+        Me.Button28.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Button28.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button28.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray
+        Me.Button28.FlatAppearance.BorderSize = 0
+        Me.Button28.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button28.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button28.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button28.Font = New System.Drawing.Font("Leelawadee UI", 11.25!)
+        Me.Button28.ForeColor = System.Drawing.Color.White
+        Me.Button28.ImageIndex = 3
+        Me.Button28.ImageList = Me.ImageList2
+        Me.Button28.Location = New System.Drawing.Point(86, 130)
+        Me.Button28.Name = "Button28"
+        Me.Button28.Size = New System.Drawing.Size(87, 32)
+        Me.Button28.TabIndex = 22
+        Me.Button28.Text = "Delete"
+        Me.Button28.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button28.UseVisualStyleBackColor = False
+        '
+        'Panel17
+        '
+        Me.Panel17.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.Panel17.Controls.Add(Me.CheckBox8)
+        Me.Panel17.Controls.Add(Me.Btn_SendMail)
+        Me.Panel17.Controls.Add(Me.TB_MailToAddress)
+        Me.Panel17.Controls.Add(Me.CheckBox_LocalRegistry)
+        Me.Panel17.Controls.Add(Me.CheckBox_ODServiceLog)
+        Me.Panel17.Controls.Add(Me.CheckBox_OdLog)
+        Me.Panel17.Controls.Add(Me.CheckBox_Modules)
+        Me.Panel17.Controls.Add(Me.Label26)
+        Me.Panel17.Controls.Add(Me.CheckBox_EaseeControlLog)
+        Me.Panel17.Location = New System.Drawing.Point(517, 9)
+        Me.Panel17.MinimumSize = New System.Drawing.Size(497, 167)
+        Me.Panel17.Name = "Panel17"
+        Me.Panel17.Size = New System.Drawing.Size(497, 167)
+        Me.Panel17.TabIndex = 37
+        '
+        'CheckBox8
+        '
+        Me.CheckBox8.AutoSize = True
+        Me.CheckBox8.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.CheckBox8.Font = New System.Drawing.Font("Leelawadee UI", 11.25!)
+        Me.CheckBox8.ForeColor = System.Drawing.Color.DarkGray
+        Me.CheckBox8.Location = New System.Drawing.Point(13, 36)
+        Me.CheckBox8.Name = "CheckBox8"
+        Me.CheckBox8.Size = New System.Drawing.Size(120, 24)
+        Me.CheckBox8.TabIndex = 39
+        Me.CheckBox8.Text = "Select all logs"
+        Me.CheckBox8.UseVisualStyleBackColor = True
+        '
+        'Btn_SendMail
+        '
+        Me.Btn_SendMail.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.Btn_SendMail.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Btn_SendMail.FlatAppearance.BorderColor = System.Drawing.Color.MediumSeaGreen
+        Me.Btn_SendMail.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Btn_SendMail.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Btn_SendMail.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_SendMail.Font = New System.Drawing.Font("Leelawadee UI", 11.25!)
+        Me.Btn_SendMail.ForeColor = System.Drawing.Color.DarkGray
+        Me.Btn_SendMail.ImageIndex = 5
+        Me.Btn_SendMail.ImageList = Me.ImageList2
+        Me.Btn_SendMail.Location = New System.Drawing.Point(354, 67)
+        Me.Btn_SendMail.Name = "Btn_SendMail"
+        Me.Btn_SendMail.Size = New System.Drawing.Size(122, 32)
+        Me.Btn_SendMail.TabIndex = 22
+        Me.Btn_SendMail.Text = "Send Logs"
+        Me.Btn_SendMail.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Btn_SendMail.UseVisualStyleBackColor = False
+        '
+        'TB_MailToAddress
+        '
+        Me.TB_MailToAddress.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TB_MailToAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TB_MailToAddress.Font = New System.Drawing.Font("Leelawadee UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TB_MailToAddress.ForeColor = System.Drawing.Color.DarkGray
+        Me.TB_MailToAddress.Location = New System.Drawing.Point(13, 71)
+        Me.TB_MailToAddress.Name = "TB_MailToAddress"
+        Me.TB_MailToAddress.Size = New System.Drawing.Size(339, 27)
+        Me.TB_MailToAddress.TabIndex = 36
+        Me.TB_MailToAddress.Text = "mail@address.com"
+        Me.TB_MailToAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'CheckBox_LocalRegistry
+        '
+        Me.CheckBox_LocalRegistry.AutoSize = True
+        Me.CheckBox_LocalRegistry.BackColor = System.Drawing.Color.Transparent
+        Me.CheckBox_LocalRegistry.CheckAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.CheckBox_LocalRegistry.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.CheckBox_LocalRegistry.FlatAppearance.BorderColor = System.Drawing.Color.Maroon
+        Me.CheckBox_LocalRegistry.Font = New System.Drawing.Font("Leelawadee UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox_LocalRegistry.ForeColor = System.Drawing.Color.DarkGray
+        Me.CheckBox_LocalRegistry.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.CheckBox_LocalRegistry.ImageIndex = 0
+        Me.CheckBox_LocalRegistry.Location = New System.Drawing.Point(388, 120)
+        Me.CheckBox_LocalRegistry.Name = "CheckBox_LocalRegistry"
+        Me.CheckBox_LocalRegistry.Size = New System.Drawing.Size(101, 38)
+        Me.CheckBox_LocalRegistry.TabIndex = 39
+        Me.CheckBox_LocalRegistry.Text = "Local registry"
+        Me.CheckBox_LocalRegistry.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.CheckBox_LocalRegistry.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.CheckBox_LocalRegistry.UseVisualStyleBackColor = False
+        '
+        'CheckBox_ODServiceLog
+        '
+        Me.CheckBox_ODServiceLog.AutoSize = True
+        Me.CheckBox_ODServiceLog.BackColor = System.Drawing.Color.Transparent
+        Me.CheckBox_ODServiceLog.CheckAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.CheckBox_ODServiceLog.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.CheckBox_ODServiceLog.FlatAppearance.BorderColor = System.Drawing.Color.Maroon
+        Me.CheckBox_ODServiceLog.Font = New System.Drawing.Font("Leelawadee UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox_ODServiceLog.ForeColor = System.Drawing.Color.DarkGray
+        Me.CheckBox_ODServiceLog.ImageIndex = 0
+        Me.CheckBox_ODServiceLog.Location = New System.Drawing.Point(6, 120)
+        Me.CheckBox_ODServiceLog.Name = "CheckBox_ODServiceLog"
+        Me.CheckBox_ODServiceLog.Size = New System.Drawing.Size(82, 38)
+        Me.CheckBox_ODServiceLog.TabIndex = 39
+        Me.CheckBox_ODServiceLog.Text = "ODService"
+        Me.CheckBox_ODServiceLog.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.CheckBox_ODServiceLog.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.CheckBox_ODServiceLog.UseVisualStyleBackColor = False
+        '
+        'CheckBox_OdLog
+        '
+        Me.CheckBox_OdLog.AutoSize = True
+        Me.CheckBox_OdLog.BackColor = System.Drawing.Color.Transparent
+        Me.CheckBox_OdLog.CheckAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.CheckBox_OdLog.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.CheckBox_OdLog.FlatAppearance.BorderColor = System.Drawing.Color.Maroon
+        Me.CheckBox_OdLog.Font = New System.Drawing.Font("Leelawadee UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox_OdLog.ForeColor = System.Drawing.Color.DarkGray
+        Me.CheckBox_OdLog.ImageIndex = 1
+        Me.CheckBox_OdLog.Location = New System.Drawing.Point(94, 120)
+        Me.CheckBox_OdLog.Name = "CheckBox_OdLog"
+        Me.CheckBox_OdLog.Size = New System.Drawing.Size(108, 38)
+        Me.CheckBox_OdLog.TabIndex = 39
+        Me.CheckBox_OdLog.Text = "OptimumDesk"
+        Me.CheckBox_OdLog.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.CheckBox_OdLog.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.CheckBox_OdLog.UseVisualStyleBackColor = False
+        '
+        'CheckBox_Modules
+        '
+        Me.CheckBox_Modules.AutoSize = True
+        Me.CheckBox_Modules.BackColor = System.Drawing.Color.Transparent
+        Me.CheckBox_Modules.CheckAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.CheckBox_Modules.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.CheckBox_Modules.FlatAppearance.BorderColor = System.Drawing.Color.Maroon
+        Me.CheckBox_Modules.Font = New System.Drawing.Font("Leelawadee UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox_Modules.ForeColor = System.Drawing.Color.DarkGray
+        Me.CheckBox_Modules.ImageIndex = 1
+        Me.CheckBox_Modules.Location = New System.Drawing.Point(312, 120)
+        Me.CheckBox_Modules.Name = "CheckBox_Modules"
+        Me.CheckBox_Modules.Size = New System.Drawing.Size(70, 38)
+        Me.CheckBox_Modules.TabIndex = 39
+        Me.CheckBox_Modules.Text = "Modules"
+        Me.CheckBox_Modules.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.CheckBox_Modules.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.CheckBox_Modules.UseVisualStyleBackColor = False
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Font = New System.Drawing.Font("Lucida Console", 9.75!)
+        Me.Label26.ForeColor = System.Drawing.Color.DimGray
+        Me.Label26.Location = New System.Drawing.Point(3, 7)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(183, 13)
+        Me.Label26.TabIndex = 38
+        Me.Label26.Text = "Retrieve log via email"
+        '
+        'CheckBox_EaseeControlLog
+        '
+        Me.CheckBox_EaseeControlLog.AutoSize = True
+        Me.CheckBox_EaseeControlLog.BackColor = System.Drawing.Color.Transparent
+        Me.CheckBox_EaseeControlLog.CheckAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.CheckBox_EaseeControlLog.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.CheckBox_EaseeControlLog.FlatAppearance.BorderColor = System.Drawing.Color.Maroon
+        Me.CheckBox_EaseeControlLog.Font = New System.Drawing.Font("Leelawadee UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox_EaseeControlLog.ForeColor = System.Drawing.Color.DarkGray
+        Me.CheckBox_EaseeControlLog.ImageIndex = 1
+        Me.CheckBox_EaseeControlLog.Location = New System.Drawing.Point(208, 120)
+        Me.CheckBox_EaseeControlLog.Name = "CheckBox_EaseeControlLog"
+        Me.CheckBox_EaseeControlLog.Size = New System.Drawing.Size(100, 38)
+        Me.CheckBox_EaseeControlLog.TabIndex = 39
+        Me.CheckBox_EaseeControlLog.Text = "EaseeControl"
+        Me.CheckBox_EaseeControlLog.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.CheckBox_EaseeControlLog.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.CheckBox_EaseeControlLog.UseVisualStyleBackColor = False
         '
         'PanelInstallNewAgent
         '
@@ -2514,7 +2812,7 @@ Partial Class ToolBox
         Me.PanelInstallNewAgent.Controls.Add(Me.TextBox3)
         Me.PanelInstallNewAgent.Controls.Add(Me.Label52)
         Me.PanelInstallNewAgent.Controls.Add(Me.Panel2)
-        Me.PanelInstallNewAgent.Location = New System.Drawing.Point(1107, 19)
+        Me.PanelInstallNewAgent.Location = New System.Drawing.Point(1069, 63)
         Me.PanelInstallNewAgent.MaximumSize = New System.Drawing.Size(1017, 698)
         Me.PanelInstallNewAgent.Name = "PanelInstallNewAgent"
         Me.PanelInstallNewAgent.Size = New System.Drawing.Size(1017, 698)
@@ -2526,21 +2824,22 @@ Partial Class ToolBox
         Me.TextBox35.Cursor = System.Windows.Forms.Cursors.Hand
         Me.TextBox35.Font = New System.Drawing.Font("Leelawadee UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox35.ForeColor = System.Drawing.Color.LightSlateGray
-        Me.TextBox35.Location = New System.Drawing.Point(446, 282)
+        Me.TextBox35.Location = New System.Drawing.Point(453, 271)
         Me.TextBox35.Name = "TextBox35"
         Me.TextBox35.Size = New System.Drawing.Size(128, 13)
-        Me.TextBox35.TabIndex = 39
+        Me.TextBox35.TabIndex = 5
         Me.TextBox35.Text = "Hide advanced settings"
         '
         'CheckBoxEU2
         '
         Me.CheckBoxEU2.AutoSize = True
+        Me.CheckBoxEU2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.CheckBoxEU2.Font = New System.Drawing.Font("Microsoft PhagsPa", 12.0!, System.Drawing.FontStyle.Bold)
         Me.CheckBoxEU2.ForeColor = System.Drawing.SystemColors.ActiveCaption
         Me.CheckBoxEU2.Location = New System.Drawing.Point(935, 11)
         Me.CheckBoxEU2.Name = "CheckBoxEU2"
         Me.CheckBoxEU2.Size = New System.Drawing.Size(50, 25)
-        Me.CheckBoxEU2.TabIndex = 38
+        Me.CheckBoxEU2.TabIndex = 7
         Me.CheckBoxEU2.Text = "EU"
         Me.CheckBoxEU2.UseVisualStyleBackColor = True
         '
@@ -2548,7 +2847,7 @@ Partial Class ToolBox
         '
         Me.Button_US_Agent.BackgroundImage = Global.Script_Agent.My.Resources.Resources.united_states
         Me.Button_US_Agent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button_US_Agent.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button_US_Agent.Cursor = System.Windows.Forms.Cursors.Default
         Me.Button_US_Agent.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
         Me.Button_US_Agent.FlatAppearance.BorderSize = 0
         Me.Button_US_Agent.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
@@ -2572,7 +2871,7 @@ Partial Class ToolBox
         Me.Label23.AutoSize = True
         Me.Label23.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label23.ForeColor = System.Drawing.SystemColors.Menu
-        Me.Label23.Location = New System.Drawing.Point(334, 176)
+        Me.Label23.Location = New System.Drawing.Point(337, 159)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(22, 17)
         Me.Label23.TabIndex = 23
@@ -2583,12 +2882,13 @@ Partial Class ToolBox
         Me.CheckBoxUS2.AutoSize = True
         Me.CheckBoxUS2.Checked = True
         Me.CheckBoxUS2.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBoxUS2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.CheckBoxUS2.Font = New System.Drawing.Font("Microsoft PhagsPa", 12.0!, System.Drawing.FontStyle.Bold)
         Me.CheckBoxUS2.ForeColor = System.Drawing.Color.Tan
         Me.CheckBoxUS2.Location = New System.Drawing.Point(860, 11)
         Me.CheckBoxUS2.Name = "CheckBoxUS2"
         Me.CheckBoxUS2.Size = New System.Drawing.Size(50, 25)
-        Me.CheckBoxUS2.TabIndex = 38
+        Me.CheckBoxUS2.TabIndex = 6
         Me.CheckBoxUS2.Text = "US"
         Me.CheckBoxUS2.UseVisualStyleBackColor = True
         '
@@ -2597,7 +2897,7 @@ Partial Class ToolBox
         Me.Label36.AutoSize = True
         Me.Label36.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label36.ForeColor = System.Drawing.SystemColors.Menu
-        Me.Label36.Location = New System.Drawing.Point(644, 176)
+        Me.Label36.Location = New System.Drawing.Point(647, 159)
         Me.Label36.Name = "Label36"
         Me.Label36.Size = New System.Drawing.Size(31, 17)
         Me.Label36.TabIndex = 23
@@ -2610,7 +2910,7 @@ Partial Class ToolBox
         Me.TextBox11.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.TextBox11.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox11.ForeColor = System.Drawing.Color.Tan
-        Me.TextBox11.Location = New System.Drawing.Point(679, 176)
+        Me.TextBox11.Location = New System.Drawing.Point(682, 159)
         Me.TextBox11.Name = "TextBox11"
         Me.TextBox11.ReadOnly = True
         Me.TextBox11.Size = New System.Drawing.Size(86, 17)
@@ -2621,7 +2921,7 @@ Partial Class ToolBox
         '
         Me.Button_EU_Agent.BackgroundImage = CType(resources.GetObject("Button_EU_Agent.BackgroundImage"), System.Drawing.Image)
         Me.Button_EU_Agent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button_EU_Agent.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button_EU_Agent.Cursor = System.Windows.Forms.Cursors.Default
         Me.Button_EU_Agent.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
         Me.Button_EU_Agent.FlatAppearance.BorderSize = 0
         Me.Button_EU_Agent.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
@@ -2646,17 +2946,17 @@ Partial Class ToolBox
         Me.CheckBox1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.CheckBox1.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Bold)
         Me.CheckBox1.ForeColor = System.Drawing.SystemColors.Menu
-        Me.CheckBox1.Location = New System.Drawing.Point(482, 206)
+        Me.CheckBox1.Location = New System.Drawing.Point(485, 189)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(54, 21)
-        Me.CheckBox1.TabIndex = 25
+        Me.CheckBox1.TabIndex = 2
         Me.CheckBox1.Text = "Beta"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'PictureBox7
         '
         Me.PictureBox7.Image = Global.Script_Agent.My.Resources.Resources.green2
-        Me.PictureBox7.Location = New System.Drawing.Point(532, 207)
+        Me.PictureBox7.Location = New System.Drawing.Point(535, 190)
         Me.PictureBox7.Name = "PictureBox7"
         Me.PictureBox7.Size = New System.Drawing.Size(23, 20)
         Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -2666,7 +2966,7 @@ Partial Class ToolBox
         'PictureBox8
         '
         Me.PictureBox8.Image = Global.Script_Agent.My.Resources.Resources.na
-        Me.PictureBox8.Location = New System.Drawing.Point(340, 64)
+        Me.PictureBox8.Location = New System.Drawing.Point(343, 47)
         Me.PictureBox8.Name = "PictureBox8"
         Me.PictureBox8.Size = New System.Drawing.Size(338, 66)
         Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -2684,10 +2984,10 @@ Partial Class ToolBox
         Me.Btn_StartInstall.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btn_StartInstall.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_StartInstall.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Btn_StartInstall.Location = New System.Drawing.Point(457, 243)
+        Me.Btn_StartInstall.Location = New System.Drawing.Point(460, 226)
         Me.Btn_StartInstall.Name = "Btn_StartInstall"
         Me.Btn_StartInstall.Size = New System.Drawing.Size(118, 32)
-        Me.Btn_StartInstall.TabIndex = 22
+        Me.Btn_StartInstall.TabIndex = 4
         Me.Btn_StartInstall.Text = "Install"
         Me.Btn_StartInstall.UseVisualStyleBackColor = False
         '
@@ -2698,7 +2998,7 @@ Partial Class ToolBox
         Me.TextBox31.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.TextBox31.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox31.ForeColor = System.Drawing.Color.Tan
-        Me.TextBox31.Location = New System.Drawing.Point(360, 176)
+        Me.TextBox31.Location = New System.Drawing.Point(363, 159)
         Me.TextBox31.Name = "TextBox31"
         Me.TextBox31.ReadOnly = True
         Me.TextBox31.Size = New System.Drawing.Size(91, 17)
@@ -2714,10 +3014,10 @@ Partial Class ToolBox
         Me.ComboBox_FrameWork.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
         Me.ComboBox_FrameWork.FormattingEnabled = True
         Me.ComboBox_FrameWork.Items.AddRange(New Object() {"EaseeControl", "OptimumDesk"})
-        Me.ComboBox_FrameWork.Location = New System.Drawing.Point(570, 199)
+        Me.ComboBox_FrameWork.Location = New System.Drawing.Point(573, 182)
         Me.ComboBox_FrameWork.Name = "ComboBox_FrameWork"
         Me.ComboBox_FrameWork.Size = New System.Drawing.Size(178, 31)
-        Me.ComboBox_FrameWork.TabIndex = 24
+        Me.ComboBox_FrameWork.TabIndex = 3
         Me.ComboBox_FrameWork.Text = "EaseeControl"
         '
         'Label72
@@ -2725,7 +3025,7 @@ Partial Class ToolBox
         Me.Label72.AutoSize = True
         Me.Label72.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label72.ForeColor = System.Drawing.Color.MediumSeaGreen
-        Me.Label72.Location = New System.Drawing.Point(569, 176)
+        Me.Label72.Location = New System.Drawing.Point(572, 159)
         Me.Label72.Name = "Label72"
         Me.Label72.Size = New System.Drawing.Size(74, 17)
         Me.Label72.TabIndex = 23
@@ -2740,10 +3040,10 @@ Partial Class ToolBox
         Me.ComboBoxCompany.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
         Me.ComboBoxCompany.FormattingEnabled = True
         Me.ComboBoxCompany.Items.AddRange(New Object() {"NewEgg", "PcMatic", "Plus", "Staples", "Staples Retail", "TechServices", "True Solutions", "Walmart Online", "Walmart.com", "Your Help Desk HQ"})
-        Me.ComboBoxCompany.Location = New System.Drawing.Point(264, 199)
+        Me.ComboBoxCompany.Location = New System.Drawing.Point(267, 182)
         Me.ComboBoxCompany.Name = "ComboBoxCompany"
         Me.ComboBoxCompany.Size = New System.Drawing.Size(199, 31)
-        Me.ComboBoxCompany.TabIndex = 24
+        Me.ComboBoxCompany.TabIndex = 1
         Me.ComboBoxCompany.Text = "TechServices"
         '
         'TextBox3
@@ -2753,7 +3053,7 @@ Partial Class ToolBox
         Me.TextBox3.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.TextBox3.Font = New System.Drawing.Font("Leelawadee UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox3.ForeColor = System.Drawing.SystemColors.Menu
-        Me.TextBox3.Location = New System.Drawing.Point(267, 141)
+        Me.TextBox3.Location = New System.Drawing.Point(270, 124)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.ReadOnly = True
         Me.TextBox3.Size = New System.Drawing.Size(484, 32)
@@ -2766,7 +3066,7 @@ Partial Class ToolBox
         Me.Label52.AutoSize = True
         Me.Label52.Font = New System.Drawing.Font("Microsoft PhagsPa", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label52.ForeColor = System.Drawing.Color.MediumSeaGreen
-        Me.Label52.Location = New System.Drawing.Point(264, 176)
+        Me.Label52.Location = New System.Drawing.Point(267, 159)
         Me.Label52.Name = "Label52"
         Me.Label52.Size = New System.Drawing.Size(64, 17)
         Me.Label52.TabIndex = 23
@@ -2788,28 +3088,28 @@ Partial Class ToolBox
         '
         'Panel8
         '
-        Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.Panel8.Controls.Add(Me.Panel15)
         Me.Panel8.Controls.Add(Me.PictureBox29)
-        Me.Panel8.Controls.Add(Me.Toggle1)
-        Me.Panel8.Controls.Add(Me.TextBox6)
-        Me.Panel8.Controls.Add(Me.TextBox5)
-        Me.Panel8.Controls.Add(Me.TextBox4)
+        Me.Panel8.Controls.Add(Me.Toggle_ApplyCustInfo)
+        Me.Panel8.Controls.Add(Me.TextBox_EmailAddress)
+        Me.Panel8.Controls.Add(Me.TextBox_LastName)
+        Me.Panel8.Controls.Add(Me.TextBox_FirstName)
         Me.Panel8.Controls.Add(Me.Label8)
-        Me.Panel8.Location = New System.Drawing.Point(659, 12)
+        Me.Panel8.Location = New System.Drawing.Point(663, 3)
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(298, 310)
         Me.Panel8.TabIndex = 40
         '
         'Panel15
         '
-        Me.Panel15.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Panel15.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
         Me.Panel15.Controls.Add(Me.Label15)
         Me.Panel15.Controls.Add(Me.PictureBox26)
         Me.Panel15.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel15.Location = New System.Drawing.Point(0, 0)
         Me.Panel15.Name = "Panel15"
-        Me.Panel15.Size = New System.Drawing.Size(298, 36)
+        Me.Panel15.Size = New System.Drawing.Size(298, 53)
         Me.Panel15.TabIndex = 40
         '
         'Label15
@@ -2817,7 +3117,7 @@ Partial Class ToolBox
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Leelawadee UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.Color.White
-        Me.Label15.Location = New System.Drawing.Point(120, 4)
+        Me.Label15.Location = New System.Drawing.Point(98, 28)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(105, 20)
         Me.Label15.TabIndex = 23
@@ -2826,7 +3126,7 @@ Partial Class ToolBox
         'PictureBox26
         '
         Me.PictureBox26.Image = CType(resources.GetObject("PictureBox26.Image"), System.Drawing.Image)
-        Me.PictureBox26.Location = New System.Drawing.Point(92, 3)
+        Me.PictureBox26.Location = New System.Drawing.Point(141, 3)
         Me.PictureBox26.Name = "PictureBox26"
         Me.PictureBox26.Size = New System.Drawing.Size(22, 22)
         Me.PictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -2844,44 +3144,54 @@ Partial Class ToolBox
         Me.PictureBox29.TabIndex = 38
         Me.PictureBox29.TabStop = False
         '
-        'TextBox6
+        'Toggle_ApplyCustInfo
         '
-        Me.TextBox6.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        Me.TextBox6.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox6.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.TextBox6.Location = New System.Drawing.Point(30, 164)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(242, 22)
-        Me.TextBox6.TabIndex = 1
-        Me.TextBox6.Text = "Email address"
-        Me.TextBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.Toggle_ApplyCustInfo.Checked = True
+        Me.Toggle_ApplyCustInfo.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Toggle_ApplyCustInfo.Location = New System.Drawing.Point(197, 211)
+        Me.Toggle_ApplyCustInfo.Margin = New System.Windows.Forms.Padding(6)
+        Me.Toggle_ApplyCustInfo.Name = "Toggle_ApplyCustInfo"
+        Me.Toggle_ApplyCustInfo.Size = New System.Drawing.Size(32, 19)
+        Me.Toggle_ApplyCustInfo.TabIndex = 4
         '
-        'TextBox5
+        'TextBox_EmailAddress
         '
-        Me.TextBox5.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        Me.TextBox5.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox5.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.TextBox5.Location = New System.Drawing.Point(30, 131)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(242, 22)
-        Me.TextBox5.TabIndex = 1
-        Me.TextBox5.Text = "Last name"
-        Me.TextBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TextBox_EmailAddress.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBox_EmailAddress.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox_EmailAddress.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox_EmailAddress.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
+        Me.TextBox_EmailAddress.Location = New System.Drawing.Point(30, 164)
+        Me.TextBox_EmailAddress.Name = "TextBox_EmailAddress"
+        Me.TextBox_EmailAddress.Size = New System.Drawing.Size(242, 22)
+        Me.TextBox_EmailAddress.TabIndex = 3
+        Me.TextBox_EmailAddress.Text = "Email address"
+        Me.TextBox_EmailAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'TextBox4
+        'TextBox_LastName
         '
-        Me.TextBox4.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        Me.TextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox4.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
-        Me.TextBox4.Location = New System.Drawing.Point(29, 98)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(243, 22)
-        Me.TextBox4.TabIndex = 1
-        Me.TextBox4.Text = "First name"
-        Me.TextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TextBox_LastName.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBox_LastName.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox_LastName.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox_LastName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
+        Me.TextBox_LastName.Location = New System.Drawing.Point(30, 131)
+        Me.TextBox_LastName.Name = "TextBox_LastName"
+        Me.TextBox_LastName.Size = New System.Drawing.Size(242, 22)
+        Me.TextBox_LastName.TabIndex = 2
+        Me.TextBox_LastName.Text = "Last name"
+        Me.TextBox_LastName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TextBox_FirstName
+        '
+        Me.TextBox_FirstName.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBox_FirstName.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox_FirstName.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox_FirstName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
+        Me.TextBox_FirstName.Location = New System.Drawing.Point(29, 98)
+        Me.TextBox_FirstName.Name = "TextBox_FirstName"
+        Me.TextBox_FirstName.Size = New System.Drawing.Size(243, 22)
+        Me.TextBox_FirstName.TabIndex = 1
+        Me.TextBox_FirstName.Text = "First name"
+        Me.TextBox_FirstName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label8
         '
@@ -2896,7 +3206,7 @@ Partial Class ToolBox
         '
         'Panel7
         '
-        Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.Panel7.Controls.Add(Me.TextBox_AgentFrameWork)
         Me.Panel7.Controls.Add(Me.TextBox32)
         Me.Panel7.Controls.Add(Me.TextBox_AgentVersion)
@@ -2907,18 +3217,18 @@ Partial Class ToolBox
         Me.Panel7.Controls.Add(Me.Panel14)
         Me.Panel7.Controls.Add(Me.TextBox_Server)
         Me.Panel7.Controls.Add(Me.PictureBox42)
-        Me.Panel7.Location = New System.Drawing.Point(355, 12)
+        Me.Panel7.Location = New System.Drawing.Point(359, 3)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(298, 310)
         Me.Panel7.TabIndex = 40
         '
         'TextBox_AgentFrameWork
         '
-        Me.TextBox_AgentFrameWork.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBox_AgentFrameWork.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.TextBox_AgentFrameWork.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox_AgentFrameWork.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox_AgentFrameWork.ForeColor = System.Drawing.SystemColors.ActiveCaption
-        Me.TextBox_AgentFrameWork.Location = New System.Drawing.Point(9, 225)
+        Me.TextBox_AgentFrameWork.Location = New System.Drawing.Point(7, 260)
         Me.TextBox_AgentFrameWork.Name = "TextBox_AgentFrameWork"
         Me.TextBox_AgentFrameWork.ReadOnly = True
         Me.TextBox_AgentFrameWork.Size = New System.Drawing.Size(279, 18)
@@ -2928,12 +3238,12 @@ Partial Class ToolBox
         '
         'TextBox32
         '
-        Me.TextBox32.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBox32.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.TextBox32.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox32.Cursor = System.Windows.Forms.Cursors.Default
         Me.TextBox32.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox32.ForeColor = System.Drawing.SystemColors.ControlDark
-        Me.TextBox32.Location = New System.Drawing.Point(9, 202)
+        Me.TextBox32.Location = New System.Drawing.Point(7, 237)
         Me.TextBox32.Name = "TextBox32"
         Me.TextBox32.Size = New System.Drawing.Size(279, 18)
         Me.TextBox32.TabIndex = 42
@@ -2942,11 +3252,11 @@ Partial Class ToolBox
         '
         'TextBox_AgentVersion
         '
-        Me.TextBox_AgentVersion.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBox_AgentVersion.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.TextBox_AgentVersion.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox_AgentVersion.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox_AgentVersion.ForeColor = System.Drawing.SystemColors.ActiveCaption
-        Me.TextBox_AgentVersion.Location = New System.Drawing.Point(9, 171)
+        Me.TextBox_AgentVersion.Location = New System.Drawing.Point(7, 206)
         Me.TextBox_AgentVersion.Name = "TextBox_AgentVersion"
         Me.TextBox_AgentVersion.ReadOnly = True
         Me.TextBox_AgentVersion.Size = New System.Drawing.Size(279, 18)
@@ -2956,12 +3266,12 @@ Partial Class ToolBox
         '
         'TextBox30
         '
-        Me.TextBox30.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBox30.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.TextBox30.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox30.Cursor = System.Windows.Forms.Cursors.Default
         Me.TextBox30.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox30.ForeColor = System.Drawing.SystemColors.ControlDark
-        Me.TextBox30.Location = New System.Drawing.Point(9, 148)
+        Me.TextBox30.Location = New System.Drawing.Point(7, 183)
         Me.TextBox30.Name = "TextBox30"
         Me.TextBox30.Size = New System.Drawing.Size(279, 18)
         Me.TextBox30.TabIndex = 42
@@ -2970,11 +3280,11 @@ Partial Class ToolBox
         '
         'TextBox_CompanyID
         '
-        Me.TextBox_CompanyID.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBox_CompanyID.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.TextBox_CompanyID.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox_CompanyID.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox_CompanyID.ForeColor = System.Drawing.SystemColors.ActiveCaption
-        Me.TextBox_CompanyID.Location = New System.Drawing.Point(9, 124)
+        Me.TextBox_CompanyID.Location = New System.Drawing.Point(7, 159)
         Me.TextBox_CompanyID.Name = "TextBox_CompanyID"
         Me.TextBox_CompanyID.ReadOnly = True
         Me.TextBox_CompanyID.Size = New System.Drawing.Size(283, 18)
@@ -2984,12 +3294,12 @@ Partial Class ToolBox
         '
         'TextBox12
         '
-        Me.TextBox12.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBox12.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.TextBox12.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox12.Cursor = System.Windows.Forms.Cursors.Default
         Me.TextBox12.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox12.ForeColor = System.Drawing.SystemColors.ControlDark
-        Me.TextBox12.Location = New System.Drawing.Point(9, 101)
+        Me.TextBox12.Location = New System.Drawing.Point(7, 136)
         Me.TextBox12.Name = "TextBox12"
         Me.TextBox12.Size = New System.Drawing.Size(283, 18)
         Me.TextBox12.TabIndex = 42
@@ -2998,12 +3308,12 @@ Partial Class ToolBox
         '
         'TextBox1
         '
-        Me.TextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox1.Cursor = System.Windows.Forms.Cursors.Default
         Me.TextBox1.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.ForeColor = System.Drawing.SystemColors.ControlDark
-        Me.TextBox1.Location = New System.Drawing.Point(9, 49)
+        Me.TextBox1.Location = New System.Drawing.Point(7, 84)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(281, 18)
         Me.TextBox1.TabIndex = 42
@@ -3012,13 +3322,13 @@ Partial Class ToolBox
         '
         'Panel14
         '
-        Me.Panel14.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Panel14.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
         Me.Panel14.Controls.Add(Me.Label16)
         Me.Panel14.Controls.Add(Me.PictureBox5)
         Me.Panel14.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel14.Location = New System.Drawing.Point(0, 0)
         Me.Panel14.Name = "Panel14"
-        Me.Panel14.Size = New System.Drawing.Size(298, 36)
+        Me.Panel14.Size = New System.Drawing.Size(298, 53)
         Me.Panel14.TabIndex = 40
         '
         'Label16
@@ -3026,7 +3336,7 @@ Partial Class ToolBox
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Leelawadee UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label16.ForeColor = System.Drawing.Color.White
-        Me.Label16.Location = New System.Drawing.Point(114, 6)
+        Me.Label16.Location = New System.Drawing.Point(99, 28)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(112, 20)
         Me.Label16.TabIndex = 23
@@ -3035,7 +3345,7 @@ Partial Class ToolBox
         'PictureBox5
         '
         Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
-        Me.PictureBox5.Location = New System.Drawing.Point(87, 6)
+        Me.PictureBox5.Location = New System.Drawing.Point(141, 3)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(22, 22)
         Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -3044,11 +3354,11 @@ Partial Class ToolBox
         '
         'TextBox_Server
         '
-        Me.TextBox_Server.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBox_Server.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.TextBox_Server.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox_Server.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox_Server.ForeColor = System.Drawing.SystemColors.ActiveCaption
-        Me.TextBox_Server.Location = New System.Drawing.Point(127, 72)
+        Me.TextBox_Server.Location = New System.Drawing.Point(125, 107)
         Me.TextBox_Server.Name = "TextBox_Server"
         Me.TextBox_Server.ReadOnly = True
         Me.TextBox_Server.Size = New System.Drawing.Size(45, 18)
@@ -3056,32 +3366,43 @@ Partial Class ToolBox
         Me.TextBox_Server.Text = "LIVE"
         Me.TextBox_Server.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
+        'PictureBox42
+        '
+        Me.PictureBox42.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.PictureBox42.Image = Global.Script_Agent.My.Resources.Resources.green2
+        Me.PictureBox42.Location = New System.Drawing.Point(100, 105)
+        Me.PictureBox42.Name = "PictureBox42"
+        Me.PictureBox42.Size = New System.Drawing.Size(23, 20)
+        Me.PictureBox42.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox42.TabIndex = 28
+        Me.PictureBox42.TabStop = False
+        '
         'Panel12
         '
-        Me.Panel12.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Panel12.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.Panel12.Controls.Add(Me.Panel9)
         Me.Panel12.Controls.Add(Me.PictureBox28)
-        Me.Panel12.Controls.Add(Me.CheckBox3)
-        Me.Panel12.Location = New System.Drawing.Point(51, 12)
+        Me.Panel12.Controls.Add(Me.CheckBox_CleanInstall)
+        Me.Panel12.Location = New System.Drawing.Point(55, 3)
         Me.Panel12.Name = "Panel12"
         Me.Panel12.Size = New System.Drawing.Size(298, 310)
         Me.Panel12.TabIndex = 40
         '
         'Panel9
         '
-        Me.Panel9.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.Panel9.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
         Me.Panel9.Controls.Add(Me.PictureBox27)
         Me.Panel9.Controls.Add(Me.Label17)
         Me.Panel9.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel9.Location = New System.Drawing.Point(0, 0)
         Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(298, 36)
+        Me.Panel9.Size = New System.Drawing.Size(298, 53)
         Me.Panel9.TabIndex = 40
         '
         'PictureBox27
         '
         Me.PictureBox27.Image = CType(resources.GetObject("PictureBox27.Image"), System.Drawing.Image)
-        Me.PictureBox27.Location = New System.Drawing.Point(107, 3)
+        Me.PictureBox27.Location = New System.Drawing.Point(141, 3)
         Me.PictureBox27.Name = "PictureBox27"
         Me.PictureBox27.Size = New System.Drawing.Size(22, 22)
         Me.PictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -3093,7 +3414,7 @@ Partial Class ToolBox
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Leelawadee UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.ForeColor = System.Drawing.Color.White
-        Me.Label17.Location = New System.Drawing.Point(135, 3)
+        Me.Label17.Location = New System.Drawing.Point(125, 28)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(55, 20)
         Me.Label17.TabIndex = 23
@@ -3110,18 +3431,18 @@ Partial Class ToolBox
         Me.PictureBox28.TabIndex = 38
         Me.PictureBox28.TabStop = False
         '
-        'CheckBox3
+        'CheckBox_CleanInstall
         '
-        Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.CheckBox3.Font = New System.Drawing.Font("Leelawadee UI", 12.0!)
-        Me.CheckBox3.ForeColor = System.Drawing.SystemColors.ActiveCaption
-        Me.CheckBox3.Location = New System.Drawing.Point(96, 150)
-        Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(113, 25)
-        Me.CheckBox3.TabIndex = 33
-        Me.CheckBox3.Text = "Clean install"
-        Me.CheckBox3.UseVisualStyleBackColor = True
+        Me.CheckBox_CleanInstall.AutoSize = True
+        Me.CheckBox_CleanInstall.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.CheckBox_CleanInstall.Font = New System.Drawing.Font("Leelawadee UI", 12.0!)
+        Me.CheckBox_CleanInstall.ForeColor = System.Drawing.SystemColors.ActiveCaption
+        Me.CheckBox_CleanInstall.Location = New System.Drawing.Point(96, 150)
+        Me.CheckBox_CleanInstall.Name = "CheckBox_CleanInstall"
+        Me.CheckBox_CleanInstall.Size = New System.Drawing.Size(113, 25)
+        Me.CheckBox_CleanInstall.TabIndex = 33
+        Me.CheckBox_CleanInstall.Text = "Clean install"
+        Me.CheckBox_CleanInstall.UseVisualStyleBackColor = True
         '
         'Label24
         '
@@ -3151,7 +3472,7 @@ Partial Class ToolBox
         Me.PanelDecryptor.Controls.Add(Me.Button5)
         Me.PanelDecryptor.Controls.Add(Me.Button4)
         Me.PanelDecryptor.Controls.Add(Me.Button3)
-        Me.PanelDecryptor.Location = New System.Drawing.Point(1074, 112)
+        Me.PanelDecryptor.Location = New System.Drawing.Point(1173, 42)
         Me.PanelDecryptor.MaximumSize = New System.Drawing.Size(1002, 693)
         Me.PanelDecryptor.Name = "PanelDecryptor"
         Me.PanelDecryptor.Size = New System.Drawing.Size(1002, 693)
@@ -3353,10 +3674,10 @@ Partial Class ToolBox
         Me.PanelLoading.Controls.Add(Me.TextBoxCName)
         Me.PanelLoading.Controls.Add(Me.TextBox_InstallStep)
         Me.PanelLoading.Controls.Add(Me.CircularProgressBar2)
-        Me.PanelLoading.Location = New System.Drawing.Point(38, 771)
+        Me.PanelLoading.Location = New System.Drawing.Point(1687, 60)
         Me.PanelLoading.MaximumSize = New System.Drawing.Size(1017, 698)
         Me.PanelLoading.Name = "PanelLoading"
-        Me.PanelLoading.Size = New System.Drawing.Size(1017, 698)
+        Me.PanelLoading.Size = New System.Drawing.Size(1017, 697)
         Me.PanelLoading.TabIndex = 31
         '
         'Button22
@@ -3375,7 +3696,7 @@ Partial Class ToolBox
         'PictureBox22
         '
         Me.PictureBox22.Image = Global.Script_Agent.My.Resources.Resources.loading1
-        Me.PictureBox22.Location = New System.Drawing.Point(359, 453)
+        Me.PictureBox22.Location = New System.Drawing.Point(195, 33)
         Me.PictureBox22.Name = "PictureBox22"
         Me.PictureBox22.Size = New System.Drawing.Size(135, 135)
         Me.PictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -3389,10 +3710,10 @@ Partial Class ToolBox
         Me.TextBoxCName.Cursor = System.Windows.Forms.Cursors.Default
         Me.TextBoxCName.Font = New System.Drawing.Font("Microsoft PhagsPa", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxCName.ForeColor = System.Drawing.SystemColors.InactiveCaption
-        Me.TextBoxCName.Location = New System.Drawing.Point(9, 313)
+        Me.TextBoxCName.Location = New System.Drawing.Point(12, 299)
         Me.TextBoxCName.Name = "TextBoxCName"
         Me.TextBoxCName.ReadOnly = True
-        Me.TextBoxCName.Size = New System.Drawing.Size(996, 35)
+        Me.TextBoxCName.Size = New System.Drawing.Size(995, 35)
         Me.TextBoxCName.TabIndex = 33
         Me.TextBoxCName.Text = "Installing [Company Name]..."
         Me.TextBoxCName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -3404,10 +3725,10 @@ Partial Class ToolBox
         Me.TextBox_InstallStep.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.TextBox_InstallStep.Font = New System.Drawing.Font("Microsoft PhagsPa", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox_InstallStep.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.TextBox_InstallStep.Location = New System.Drawing.Point(9, 363)
+        Me.TextBox_InstallStep.Location = New System.Drawing.Point(12, 348)
         Me.TextBox_InstallStep.Name = "TextBox_InstallStep"
         Me.TextBox_InstallStep.ReadOnly = True
-        Me.TextBox_InstallStep.Size = New System.Drawing.Size(996, 27)
+        Me.TextBox_InstallStep.Size = New System.Drawing.Size(995, 27)
         Me.TextBox_InstallStep.TabIndex = 27
         Me.TextBox_InstallStep.Text = "Step 1. Downloading agent."
         Me.TextBox_InstallStep.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -3446,6 +3767,8 @@ Partial Class ToolBox
         '
         'PanelEventViewer
         '
+        Me.PanelEventViewer.Controls.Add(Me.TextBox25)
+        Me.PanelEventViewer.Controls.Add(Me.Button15)
         Me.PanelEventViewer.Controls.Add(Me.ComboBox2)
         Me.PanelEventViewer.Controls.Add(Me.Label105)
         Me.PanelEventViewer.Controls.Add(Me.ListView1)
@@ -3453,11 +3776,31 @@ Partial Class ToolBox
         Me.PanelEventViewer.Controls.Add(Me.Label2)
         Me.PanelEventViewer.Controls.Add(Me.Label27)
         Me.PanelEventViewer.Controls.Add(Me.ComboBox5)
-        Me.PanelEventViewer.Location = New System.Drawing.Point(773, 27)
+        Me.PanelEventViewer.Location = New System.Drawing.Point(1323, 9)
         Me.PanelEventViewer.MaximumSize = New System.Drawing.Size(1017, 698)
         Me.PanelEventViewer.Name = "PanelEventViewer"
-        Me.PanelEventViewer.Size = New System.Drawing.Size(256, 197)
+        Me.PanelEventViewer.Size = New System.Drawing.Size(1017, 698)
         Me.PanelEventViewer.TabIndex = 32
+        '
+        'TextBox25
+        '
+        Me.TextBox25.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.TextBox25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox25.ForeColor = System.Drawing.SystemColors.Menu
+        Me.TextBox25.Location = New System.Drawing.Point(703, 8)
+        Me.TextBox25.Name = "TextBox25"
+        Me.TextBox25.Size = New System.Drawing.Size(222, 20)
+        Me.TextBox25.TabIndex = 29
+        Me.TextBox25.Text = "mail@address.com"
+        '
+        'Button15
+        '
+        Me.Button15.Location = New System.Drawing.Point(931, 8)
+        Me.Button15.Name = "Button15"
+        Me.Button15.Size = New System.Drawing.Size(75, 20)
+        Me.Button15.TabIndex = 28
+        Me.Button15.Text = "Send"
+        Me.Button15.UseVisualStyleBackColor = True
         '
         'ComboBox2
         '
@@ -3467,7 +3810,7 @@ Partial Class ToolBox
         Me.ComboBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.ComboBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(165, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(194, Byte), Integer))
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"Application Error", "Any"})
+        Me.ComboBox2.Items.AddRange(New Object() {"Application Error"})
         Me.ComboBox2.Location = New System.Drawing.Point(334, 37)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(156, 28)
@@ -3497,10 +3840,10 @@ Partial Class ToolBox
         Me.ListView1.ForeColor = System.Drawing.Color.AntiqueWhite
         Me.ListView1.FullRowSelect = True
         Me.ListView1.HideSelection = False
-        Me.ListView1.Location = New System.Drawing.Point(0, -387)
+        Me.ListView1.Location = New System.Drawing.Point(0, 114)
         Me.ListView1.MaximumSize = New System.Drawing.Size(1017, 584)
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(256, 584)
+        Me.ListView1.Size = New System.Drawing.Size(1017, 584)
         Me.ListView1.TabIndex = 3
         Me.ListView1.UseCompatibleStateImageBehavior = False
         Me.ListView1.View = System.Windows.Forms.View.Details
@@ -3631,7 +3974,7 @@ Partial Class ToolBox
         '
         'Timer_MultiAgentDropDown
         '
-        Me.Timer_MultiAgentDropDown.Interval = 4
+        Me.Timer_MultiAgentDropDown.Interval = 3
         '
         'ImageList_FLAGS
         '
@@ -3670,37 +4013,28 @@ Partial Class ToolBox
         '
         Me.Timer_MoreDetails.Interval = 15
         '
-        'Toggle1
+        'OpenFileDialog1
         '
-        Me.Toggle1.Checked = False
-        Me.Toggle1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Toggle1.Location = New System.Drawing.Point(197, 211)
-        Me.Toggle1.Margin = New System.Windows.Forms.Padding(6)
-        Me.Toggle1.Name = "Toggle1"
-        Me.Toggle1.Size = New System.Drawing.Size(32, 19)
-        Me.Toggle1.TabIndex = 35
+        Me.OpenFileDialog1.Filter = "Log files|*.log"
+        Me.OpenFileDialog1.Title = "Select log file"
         '
-        'PictureBox42
+        'Timer_LogsPreview
         '
-        Me.PictureBox42.Image = Global.Script_Agent.My.Resources.Resources.green2
-        Me.PictureBox42.Location = New System.Drawing.Point(102, 70)
-        Me.PictureBox42.Name = "PictureBox42"
-        Me.PictureBox42.Size = New System.Drawing.Size(23, 20)
-        Me.PictureBox42.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox42.TabIndex = 28
-        Me.PictureBox42.TabStop = False
+        Me.Timer_LogsPreview.Enabled = True
+        Me.Timer_LogsPreview.Interval = 1000
         '
         'ToolBox
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(71, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1940, 894)
-        Me.Controls.Add(Me.PanelMainBox)
-        Me.Controls.Add(Me.PanelLoading)
-        Me.Controls.Add(Me.PanelInstallNewAgent)
+        Me.ClientSize = New System.Drawing.Size(1940, 1100)
         Me.Controls.Add(Me.PanelEventViewer)
+        Me.Controls.Add(Me.PanelInstallNewAgent)
+        Me.Controls.Add(Me.PnlLogs)
+        Me.Controls.Add(Me.PanelMainBox)
         Me.Controls.Add(Me.PanelDecryptor)
+        Me.Controls.Add(Me.PanelLoading)
         Me.Controls.Add(Me.Button19)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label24)
@@ -3734,17 +4068,15 @@ Partial Class ToolBox
         CType(Me.PictureBox30, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.Panel6.ResumeLayout(False)
         Me.Panel6.PerformLayout()
-        Me.Panel4.ResumeLayout(False)
-        Me.Panel4.PerformLayout()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.PnlLogs.ResumeLayout(False)
-        Me.PnlLogs.PerformLayout()
         Me.PanelMultiAgent.ResumeLayout(False)
         Me.PanelMultiAgent.PerformLayout()
         Me.Panel11.ResumeLayout(False)
@@ -3766,10 +4098,19 @@ Partial Class ToolBox
         Me.Panel13.ResumeLayout(False)
         Me.Panel13.PerformLayout()
         CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Pnl_Button1.ResumeLayout(False)
-        Me.Pnl_Button1.PerformLayout()
-        Me.Pnl_Button2.ResumeLayout(False)
-        Me.Pnl_Button2.PerformLayout()
+        Me.PnlLogs.ResumeLayout(False)
+        Me.Panel22.ResumeLayout(False)
+        Me.Panel22.PerformLayout()
+        Me.Panel21.ResumeLayout(False)
+        Me.Panel21.PerformLayout()
+        Me.Panel19.ResumeLayout(False)
+        Me.Panel19.PerformLayout()
+        Me.Panel20.ResumeLayout(False)
+        Me.Panel20.PerformLayout()
+        Me.Panel18.ResumeLayout(False)
+        Me.Panel18.PerformLayout()
+        Me.Panel17.ResumeLayout(False)
+        Me.Panel17.PerformLayout()
         Me.PanelInstallNewAgent.ResumeLayout(False)
         Me.PanelInstallNewAgent.PerformLayout()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3786,6 +4127,7 @@ Partial Class ToolBox
         Me.Panel14.ResumeLayout(False)
         Me.Panel14.PerformLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox42, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel12.ResumeLayout(False)
         Me.Panel12.PerformLayout()
         Me.Panel9.ResumeLayout(False)
@@ -3801,7 +4143,6 @@ Partial Class ToolBox
         Me.PanelEventViewer.ResumeLayout(False)
         Me.PanelEventViewer.PerformLayout()
         Me.ContextMenuStrip1.ResumeLayout(False)
-        CType(Me.PictureBox42, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -3823,29 +4164,15 @@ Partial Class ToolBox
     Friend WithEvents Button3 As Button
     Friend WithEvents Label123 As Label
     Friend WithEvents Button11 As Button
-    Friend WithEvents Button9 As Button
     Friend WithEvents Button8 As Button
-    Friend WithEvents btnDecryptRegistry As Button
     Friend WithEvents Button13 As Button
     Friend WithEvents Label125 As Label
-    Friend WithEvents Pnl_Button1 As Panel
-    Friend WithEvents Label126 As Label
-    Friend WithEvents Pnl_Button2 As Panel
-    Friend WithEvents Button15 As Button
-    Friend WithEvents Label128 As Label
-    Friend WithEvents Label129 As Label
-    Friend WithEvents PnlLogs As Panel
-    Friend WithEvents btn_ReadOdLog As Button
-    Friend WithEvents Button17 As Button
     Friend WithEvents PanelMultiAgent As Panel
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents ImageList1 As ImageList
     Friend WithEvents IconButton5 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton4 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
     Friend WithEvents RichTextBox_Input As RichTextBox
-    Friend WithEvents Button18 As Button
-    Friend WithEvents RichTextBox2 As RichTextBox
     Friend WithEvents PanelLoading As Panel
     Friend WithEvents CircularProgressBar2 As CircularProgressBar.CircularProgressBar
     Friend WithEvents PanelEventViewer As Panel
@@ -3869,11 +4196,9 @@ Partial Class ToolBox
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents RichTextBox_Output As RichTextBox
     Friend WithEvents Panel_INFO As Panel
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Label5 As Label
+    Friend WithEvents TextBox_EmailAddress As TextBox
+    Friend WithEvents TextBox_LastName As TextBox
+    Friend WithEvents TextBox_FirstName As TextBox
     Friend WithEvents Label24 As Label
     Friend WithEvents Button7 As Button
     Friend WithEvents TextBox15 As TextBox
@@ -3888,10 +4213,10 @@ Partial Class ToolBox
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents Label105 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents CheckBox3 As CheckBox
+    Friend WithEvents CheckBox_CleanInstall As CheckBox
     Friend WithEvents Label8 As Label
     Friend WithEvents TimerAdvancedSettings As Timer
-    Friend WithEvents Toggle1 As Toggle
+    Friend WithEvents Toggle_ApplyCustInfo As Toggle
     Friend WithEvents Label16 As Label
     Friend WithEvents Label17 As Label
     Friend WithEvents Label15 As Label
@@ -3920,16 +4245,14 @@ Partial Class ToolBox
     Friend WithEvents Panel5 As Panel
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Panel6 As Panel
-    Friend WithEvents TextBox25 As TextBox
-    Friend WithEvents TextBox26 As TextBox
-    Friend WithEvents TextBox27 As TextBox
+    Friend WithEvents TextBoxH_Name As TextBox
+    Friend WithEvents TextBoxH_LastName As TextBox
+    Friend WithEvents TextBoxH_Email As TextBox
     Friend WithEvents Label27 As Label
     Friend WithEvents ComboBox5 As ComboBox
     Friend WithEvents CheckBox4 As CheckBox
     Friend WithEvents Panel3 As Panel
     Friend WithEvents TextBox29 As TextBox
-    Friend WithEvents IconButton6 As FontAwesome.Sharp.IconButton
-    Friend WithEvents IconButton3 As FontAwesome.Sharp.IconButton
     Friend WithEvents TextBox31 As TextBox
     Friend WithEvents Timer_MultiAgentDropDown As Timer
     Friend WithEvents Panel11 As Panel
@@ -3966,15 +4289,12 @@ Partial Class ToolBox
     Friend WithEvents Button19 As Button
     Friend WithEvents Label59 As Label
     Friend WithEvents Label10 As Label
-    Friend WithEvents TextBox28 As TextBox
     Friend WithEvents Label60 As Label
     Friend WithEvents CheckBoxEU2 As CheckBox
     Friend WithEvents CheckBoxUS2 As CheckBox
     Friend WithEvents Label36 As Label
     Friend WithEvents TextBox11 As TextBox
     Friend WithEvents Label23 As Label
-    Friend WithEvents Button14 As Button
-    Friend WithEvents Button12 As Button
     Friend WithEvents ColumnHeader7 As ColumnHeader
     Friend WithEvents ColumnHeader8 As ColumnHeader
     Friend WithEvents ComboBox2 As ComboBox
@@ -4047,11 +4367,6 @@ Partial Class ToolBox
     Friend WithEvents PictureBox30 As PictureBox
     Friend WithEvents TextBox34 As TextBox
     Friend WithEvents Timer_MoreDetails As Timer
-    Friend WithEvents TextBox57 As TextBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Button16 As Button
-    Friend WithEvents Button21 As Button
-    Friend WithEvents ComboBox3 As ComboBox
     Friend WithEvents Button22 As Button
     Friend WithEvents PictureBox26 As PictureBox
     Friend WithEvents PictureBox5 As PictureBox
@@ -4061,4 +4376,47 @@ Partial Class ToolBox
     Friend WithEvents PictureBox41 As PictureBox
     Friend WithEvents PictureBox40 As PictureBox
     Friend WithEvents PictureBox42 As PictureBox
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents Button10 As Button
+    Friend WithEvents PnlLogs As Panel
+    Friend WithEvents Panel17 As Panel
+    Friend WithEvents TB_MailToAddress As TextBox
+    Friend WithEvents Btn_SendMail As Button
+    Friend WithEvents Button21 As Button
+    Friend WithEvents Label26 As Label
+    Friend WithEvents CheckBox8 As CheckBox
+    Friend WithEvents CheckBox_LocalRegistry As CheckBox
+    Friend WithEvents CheckBox_Modules As CheckBox
+    Friend WithEvents CheckBox_EaseeControlLog As CheckBox
+    Friend WithEvents CheckBox_ODServiceLog As CheckBox
+    Friend WithEvents CheckBox_OdLog As CheckBox
+    Friend WithEvents Button15 As Button
+    Friend WithEvents TextBox25 As TextBox
+    Friend WithEvents Button14 As Button
+    Friend WithEvents ImageList2 As ImageList
+    Friend WithEvents Panel19 As Panel
+    Friend WithEvents RichTextBox2 As RichTextBox
+    Friend WithEvents Panel18 As Panel
+    Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents Panel21 As Panel
+    Friend WithEvents RichTextBox4 As RichTextBox
+    Friend WithEvents Label45 As Label
+    Friend WithEvents Button26 As Button
+    Friend WithEvents Label40 As Label
+    Friend WithEvents Panel20 As Panel
+    Friend WithEvents RichTextBox3 As RichTextBox
+    Friend WithEvents Label44 As Label
+    Friend WithEvents Button16 As Button
+    Friend WithEvents Label32 As Label
+    Friend WithEvents Button30 As Button
+    Friend WithEvents Button29 As Button
+    Friend WithEvents Button28 As Button
+    Friend WithEvents Button17 As Button
+    Friend WithEvents Button31 As Button
+    Friend WithEvents Button12 As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Panel22 As Panel
+    Friend WithEvents Timer_LogsPreview As Timer
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label46 As Label
 End Class
